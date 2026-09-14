@@ -792,3 +792,29 @@ El Journey Map representa visualmente las acciones, ideas y emociones que atravi
 <hr>
 
 
+#### 2.3.4. Empathy Mapping
+
+El mapa de empatía ayuda a comprender lo que cada usuario piensa, siente, observa y hace frente a una situación determinada. En esta sección se presentan los mapas desarrollados para cada User Persona.
+
+<hr>
+
+<img src="https://i.postimg.cc/xdzgXfct/ffsd.png"/>
+
+**Olivia Rodriguez**
+
+<hr>
+
+<img src="https://i.postimg.cc/pL9JSWYR/fsdfsdfsd.png"/>
+
+**Eduardo Gonzales**
+
+<hr>
+
+
+<img src="https://i.postimg.cc/59n5NYsf/Captura.png"/>
+
+**Alejandro Lopez**
+
+<hr>
+
+
