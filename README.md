@@ -151,3 +151,14 @@ HampCoders es una startup orientada a crear soluciones digitales basadas en arqu
 **Visión:** Consolidarnos como una organización referente en la creación de plataformas eficientes y escalables que acerquen a usuarios y empresas con especialistas confiables, contribuyendo a mejorar la calidad y seguridad de las instalaciones eléctricas.
 
 
+### 1.1.2. Perfiles de integrantes del equipo
+
+| Integrante | Código de estudiante | Fotografía | Descripción |
+|------------|----------------------|------------|-------------|
+| Leonardo Fabrizzio Junior Prieto Mantari | U202319949 | <img src="assets/img/team/leonardo-prieto.png" alt="Leonardo Fabrizzio Junior Prieto Mantari" width="140"> | Me considero una persona trabajadora, comprometida y colaborativa, siempre dispuesta a apoyar a mi equipo y contribuir al cumplimiento de los objetivos. Cuento con conocimientos en desarrollo frontend y backend para aplicaciones web y móviles, utilizando tecnologías como HTML, CSS, JavaScript, Python, C++, Java, Spring Boot, Vue.js, Angular, Kotlin y Flutter, además de nociones de C#. Busco aplicar estas habilidades para aportar valor al proyecto y contribuir activamente a lograr un resultado final sólido y exitoso. |
+|            |                      |            |             |
+|            |                      |            |             |
+|            |                      |            |             |
+
+<br> 
+
