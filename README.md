@@ -818,3 +818,140 @@ El mapa de empatía ayuda a comprender lo que cada usuario piensa, siente, obser
 <hr>
 
 
+### 2.3.5. As-is Scenario Mapping
+
+Un As-Is Scenario Map documenta la experiencia actual del usuario antes de introducir la solución, considerando sus acciones, pensamientos y emociones en cada etapa. Los mapas siguientes corresponden a los User Personas del proyecto.
+
+**Alejandro Lopez**
+<img src="https://i.postimg.cc/cLN7xCsY/imagen-2025-07-08-205115361.png"/>
+
+**Áreas Negativas** 
+
+Promoción de productos:
+- Frustración por la baja efectividad de la publicidad.
+- Sentimiento de que no alcanza a los clientes correctos.
+- Alto gasto en publicidad sin retorno claro.
+  
+Atención de consultas:
+- Agobio y ansiedad por la sobrecarga.
+- Dudas sobre su profesionalismo.
+- Falta de tiempo para responder con calidad.
+  
+Cotizaciones:
+- Estrés por cálculos manuales.
+- Ineficiencia y desorganización.
+- Percepción de poca escalabilidad y falta de optimización.
+  
+Entrega de productos:
+- Preocupación por los errores.
+- Falta de digitalización.
+- Sensación de sistema poco confiable y propenso a reclamos.
+
+**Áreas Positivas**
+
+Promoción de productos:
+- Esperanza cuando recibe contacto de un nuevo cliente.
+  
+Atención de consultas:
+- No se identifican ups, lo que revela una necesidad urgente de mejora.
+
+Cotizaciones:
+- Alivio al concretar una venta sin errores, aunque depende de factores externos.
+  
+Entrega de productos:
+- Satisfacción al cerrar una venta sin errores.
+- Tranquilidad una vez que el cliente confirma.
+  
+**Conclusión**
+
+El recorrido de Alejandro presenta dificultades en la promoción, la atención de consultas, la preparación manual de cotizaciones y el control de entregas. Estos procesos le generan frustración y muestran la necesidad de una herramienta digital que automatice tareas, mejore la organización y profesionalice su servicio.
+
+**Eduardo Gonzales**
+
+<img src="https://i.postimg.cc/LXZJML0j/imagen-2025-07-08-205223250.png"/>
+
+**Áreas negativas**
+
+Identificar una necesidad operativa o de mantenimiento:
+- Eduardo parte con incertidumbre al preguntarse si debe resolver el problema de inmediato o si puede esperar, lo que genera estrés.
+- Se siente preocupado y frustrado porque los problemas son frecuentes y no siempre encuentra soluciones rápidas, lo que podría acarrear riesgos operativos o pérdidas importantes para la empresa.
+
+Buscar proveedores adecuados:
+- Esta etapa está llena de desconfianza. Eduardo duda si los proveedores entienden realmente lo que necesita o si solo quieren cerrar una venta rápida.
+- Se siente inseguro e impaciente ante las respuestas lentas y poco claras, lo que afecta su percepción de profesionalismo y genera tensión en un momento clave para la toma de decisiones.
+  
+Solicitar cotización y evaluar propuestas:
+- Eduardo se enfrenta a la ansiedad de cometer errores al seleccionar proveedores, y sufre por tener que repetir procesos que no mejoran con el tiempo.
+- La sobrecarga de evaluar múltiples propuestas, sin estar seguro de si le responderán bien tras la compra, lo hace sentirse cansado, inseguro y con miedo a consecuencias graves.
+  
+Supervisar ejecución y validar resultados:
+- Aunque ya en una etapa avanzada, Eduardo aún siente incertidumbre y dudas sobre si tomó la mejor decisión o si dejó pasar una opción superior.
+- Esto lo hace sentirse dudoso, y aunque confía en algunos proveedores, no siempre puede validar si son la mejor opción a largo plazo.
+
+**Áreas positivas**
+
+Identificar una necesidad operativa o de mantenimiento:
+
+- Eduardo demuestra proactividad al realizar inspecciones periódicas y tomar nota del estado de los equipos, lo que le da visibilidad y control sobre su entorno operativo.
+- Se siente comprometido con su equipo y con la empresa, lo que impulsa su deseo de mejorar continuamente.
+  
+Buscar proveedores adecuados:
+- Aunque tiene dudas, Eduardo explora múltiples canales (web, catálogos, redes, recomendaciones) para encontrar proveedores, lo que muestra una búsqueda activa y estratégica.
+- Tiene un enfoque exigente y selectivo, no se conforma con la primera opción, lo que garantiza estándares de calidad más altos.
+
+Solicitar cotización y evaluar propuestas:
+- Filtra activamente a proveedores que no cumplen con aspectos técnicos o de confianza, lo que indica una evaluación rigurosa.
+- Esta etapa, aunque estresante, muestra que Eduardo sabe qué quiere y no acepta cualquier solución, buscando equilibrio entre precio, calidad y conocimiento técnico.
+
+Supervisar ejecución y validar resultados:
+- Finalmente, cuando logra decidir con seguridad, se siente aliviado por haber elegido correctamente pensando en el largo plazo.
+- Esta satisfacción final indica que, a pesar del proceso complejo, Eduardo valora las decisiones bien fundamentadas y aspira a establecer relaciones sostenibles con los proveedores.
+
+**Conclusión**
+
+Eduardo posee un perfil exigente y orientado a la prevención; prioriza la calidad y la confiabilidad durante la contratación y el mantenimiento. Aunque evalúa activamente las alternativas, la comunicación con proveedores le genera dudas y tensión. Una plataforma con información clara, respuestas oportunas y herramientas de comparación y validación podría simplificar sus decisiones y aumentar su seguridad.
+
+**Olivia Rodriguez**
+
+<img src="https://i.postimg.cc/gJR27dnD/imagen-2025-07-08-205305571.png"/>
+
+**Áreas negativas**
+
+Buscar proveedores confiables:
+- Olivia se enfrenta a una búsqueda larga, tediosa y desconfiada, lo que le genera cansancio y frustración.
+- No puede confiar en cualquier empresa, y siente que el proceso es muy desgastante, además de que nada le garantiza la calidad de los materiales.
+  
+Contactar y validar a los proveedores:
+- Se siente insegura sobre permitir el ingreso a su casa y teme contactar a proveedores sin garantías, lo que le genera nerviosismo y desconfianza.
+- Olivia percibe que hacer un proceso de descarte por su cuenta es ineficiente, lo que la hace sentir molesta cuando los proveedores son informales o poco claros.
+
+Solicitar cotizaciones y comparar:
+- Se ve obligada a comparar manualmente propuestas en hojas de cálculo, recibiendo cotizaciones en formatos poco intuitivos, lo que la abruma.
+- Siente que los precios no siempre son justos y se cansa de descartar opciones sin apoyo externo.
+
+Tomar la decisión y agendar el servicio:
+- Aun en la fase final, Olivia no siempre confía en la calidad de lo que va a recibir, ni en la relación entre el costo y el producto final.
+- Se siente inquieta, nerviosa y exhausta, especialmente si no tiene claridad sobre las garantías o si invirtió mucho tiempo en el proceso sin estar completamente segura.
+
+**Áreas positivas**
+
+Buscar proveedores confiables:
+- Olivia es proactiva, utiliza Google, páginas web y preguntas a familiares o amigos de confianza.
+- Guarda enlaces y captura información útil, y valora la idea de una plataforma donde todo ya esté validado, lo que indica apertura a soluciones digitales confiables.
+
+Contactar y validar a los proveedores:
+- Pide certificados, RUC o documentos de formalidad, mostrando una actitud responsable y detallista en su proceso de selección.
+- Aunque frustrada, busca garantías y seguridad, lo que refuerza su interés por soluciones formales y transparentes.
+
+Solicitar cotizaciones y comparar:
+- A pesar del cansancio, Olivia desea prevenir problemas a futuro, lo que muestra un enfoque de largo plazo.
+- Expresa que le gustaría tener una plataforma que la ayude a comparar todo más fácilmente, lo que es una oportunidad clara para digitalizar y simplificar su experiencia.
+
+Tomar la decisión y agendar el servicio:
+- Olivia valida documentos y garantías antes de cerrar un acuerdo, lo que muestra que se preocupa por protegerse.
+- Quiere asegurarse de que su elección evite problemas futuros, lo que revela una clara orientación hacia la prevención.
+
+**Conclusión**
+
+Olivia actúa con cautela y presta especial atención a la seguridad y la calidad, pero el proceso actual resulta desordenado, informal e incierto. Contar con proveedores verificados, cotizaciones uniformes y comparaciones automáticas reduciría el esfuerzo de búsqueda, optimizaría su tiempo y le permitiría contratar con mayor confianza.
+
