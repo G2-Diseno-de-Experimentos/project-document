@@ -5262,3 +5262,30 @@ El nivel de componentes detalla la API. Los controladores reciben solicitudes, l
 
 ![Diagrama C4 de componentes de ElectroLink](assets/img/cap4/c4/components.svg)
 
+## 4.9. Software Object-Oriented Design
+
+El diseño orientado a objetos representa las entidades y servicios necesarios para gestionar usuarios, propiedades, catálogo, solicitudes, asignaciones, ejecución, pagos y comunicaciones.
+
+### 4.9.1. Class Diagrams
+
+El modelo mantiene a `ServiceRequest` como eje del proceso de contratación. Una solicitud relaciona al cliente, la propiedad y el servicio; posteriormente puede originar una asignación, ejecución, pago y reseña.
+
+![Diagrama de clases de ElectroLink](assets/img/cap4/object-design/class-diagram.svg)
+
+### 4.9.2. Class Dictionary
+
+| Clase | Atributos principales | Responsabilidad y relaciones |
+|---|---|---|
+| `User` | id, name, email, role, status | Mantiene la identidad y credenciales; origina los perfiles de cliente o técnico. |
+| `ClientProfile` | phone, address, preferences | Completa los datos del cliente y agrupa sus propiedades y solicitudes. |
+| `ProviderProfile` | bio, rating, availability, verified | Describe al técnico, su reputación y disponibilidad. |
+| `Property` | address, type, description | Identifica el lugar donde se prestará el servicio; pertenece a un cliente. |
+| `ServiceCatalog` | name, category, basePrice | Define los servicios que pueden buscarse y contratarse. |
+| `ServiceRequest` | description, status, scheduledAt, address | Registra la necesidad del cliente y controla su ciclo de vida. |
+| `ServiceAssignment` | acceptedAt, assignmentStatus | Vincula una solicitud aceptada con el técnico responsable. |
+| `ServiceExecution` | startedAt, finishedAt, notes, evidence | Documenta el desarrollo y cierre del trabajo. |
+| `Review` | score, comment, createdAt | Conserva la valoración del cliente después de una atención. |
+| `Subscription` | plan, status, startedAt, expiresAt | Administra el plan y beneficios asociados al técnico. |
+| `PaymentRecord` | amount, currency, status, externalId | Registra el resultado de una operación de pago. |
+| `Notification` | channel, message, status, sentAt | Comunica eventos relevantes a clientes y técnicos. |
+
