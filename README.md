@@ -135,3 +135,19 @@
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo I: Introducción
+
+Este capítulo introduce el proyecto y explica el problema que busca resolver, los objetivos definidos, la motivación del equipo y el alcance de la propuesta. Asimismo, presenta el contexto que dio origen a ElectroLink y la importancia de la solución para sus públicos objetivo.
+
+<br>
+
+## 1.1. Startup Profile
+### 1.1.1. Descripción de la Startup
+
+HampCoders es una startup orientada a crear soluciones digitales basadas en arquitecturas de servicios y tecnologías de código abierto. A través de ElectroLink, busca facilitar el contacto entre proveedores del sector eléctrico y personas o empresas que requieren sus productos y servicios.
+
+**Misión:** Desarrollar una solución tecnológica que conecte a los usuarios con proveedores especializados del sector eléctrico, ayudándolos a prevenir o atender problemas en sus instalaciones de forma eficiente, segura y conforme a la normativa.
+
+**Visión:** Consolidarnos como una organización referente en la creación de plataformas eficientes y escalables que acerquen a usuarios y empresas con especialistas confiables, contribuyendo a mejorar la calidad y seguridad de las instalaciones eléctricas.
+
+
