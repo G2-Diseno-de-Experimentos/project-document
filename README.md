@@ -724,3 +724,20 @@ La disposición a pagar por soporte prioritario o asesoría especializada permit
 
 <br> 
 
+## 2.3. Needfinding
+
+El needfinding es un enfoque de diseño que busca descubrir necesidades reales mediante observación, entrevistas e investigación cualitativa. Su aplicación permite formular soluciones a partir de evidencia y no únicamente de supuestos. A continuación se presentan los artefactos elaborados durante este proceso.
+
+### 2.3.1. User Personas
+
+Los user personas representan los tres segmentos objetivo definidos para ElectroLink.
+
+**Segmento #1**
+<img src="https://i.postimg.cc/wjYCqGfK/Olivia-P-rez-4.png"/>
+
+**Segmento #2**
+<img src="https://i.postimg.cc/L5ZWRtj6/Eduardo-Gonzales.png"/>
+
+**Segmento #3**
+<img src="https://i.postimg.cc/85Tk7CZS/Alejandro-L-pez-9.png"/>
+
