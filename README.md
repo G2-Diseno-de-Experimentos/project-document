@@ -4999,3 +4999,60 @@ Un mapa de impacto es una técnica colaborativa y visual de planificación estra
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo IV: Product Design
+
+Este capítulo define la experiencia visual, la arquitectura de información y el diseño técnico de ElectroLink. El contenido fue reorganizado y adaptado a las necesidades actuales del proyecto, priorizando las aplicaciones web y móvil para conectar clientes con técnicos especializados.
+
+## 4.1. Style Guidelines
+
+Las pautas de estilo aseguran que todos los puntos de contacto de ElectroLink transmitan una identidad uniforme. Su aplicación abarca la landing page, la plataforma web y la aplicación móvil.
+
+### 4.1.1. General Style Guidelines
+
+La identidad visual busca comunicar confianza, claridad y cercanía. Se utiliza una composición limpia, con espacios amplios, jerarquías legibles y elementos gráficos asociados a la conexión entre clientes y especialistas.
+
+#### Logotipo
+
+El logotipo combina el nombre ElectroLink con un símbolo reconocible. La versión principal se utiliza sobre fondos claros; la versión invertida se reserva para superficies oscuras y el isotipo sirve como identificador compacto.
+
+![Logotipo principal de ElectroLink](assets/img/cap4/branding/logo-original.png)
+
+![Isotipo de ElectroLink](assets/img/cap4/branding/logo-icon.png)
+
+![Logotipo invertido de ElectroLink](assets/img/cap4/branding/logo-inverted.png)
+
+#### Paleta cromática
+
+| Color | Código | Aplicación principal |
+|---|---|---|
+| Azul institucional | `#0B5CAD` | Botones primarios, encabezados y navegación |
+| Celeste | `#3DADFF` | Acentos, enlaces y estados informativos |
+| Azul muy claro | `#E8EEF7` | Fondos secundarios y tarjetas |
+| Amarillo suave | `#FFE492` | Destacados y llamados de atención |
+| Azul grisáceo | `#2E3A59` | Texto principal e iconografía |
+| Blanco | `#FFFFFF` | Superficies y contraste |
+
+#### Tipografía e iconografía
+
+La tipografía Abel se conserva en títulos y piezas de marca por su apariencia moderna. Para textos extensos se emplea una fuente sans serif del sistema, que mejora la lectura en distintos dispositivos. Los íconos mantienen trazos simples y siempre se acompañan de etiquetas cuando su significado podría ser ambiguo.
+
+### 4.1.2. Web Style Guidelines
+
+La interfaz web sigue un patrón de lectura en forma de F: la información más importante aparece en la parte superior y las acciones se alinean con el recorrido visual del usuario. La cuadrícula se adapta al ancho disponible, limita la extensión de los textos y conserva separaciones constantes entre bloques.
+
+![Patrón de lectura aplicado a la interfaz web](assets/img/cap4/branding/f-pattern.png)
+
+Los botones primarios utilizan el azul institucional, mientras que los secundarios se presentan con fondo claro y borde visible. Los formularios incluyen etiquetas persistentes, mensajes de error cercanos al campo y estados de foco perceptibles mediante teclado.
+
+### 4.1.3. Mobile Style Guidelines
+
+La propuesta móvil prioriza tareas breves: encontrar un servicio, comparar técnicos, programar una atención y revisar su estado. La navegación principal permanece al alcance del pulgar y el contenido se distribuye en una sola columna. Las áreas táctiles son amplias, los formularios solicitan únicamente datos indispensables y cada acción importante ofrece confirmación visual.
+
+#### 4.1.3.1. iOS Mobile Style Guidelines
+
+En iOS se respetan las áreas seguras, la navegación jerárquica y los patrones habituales de retorno. Los controles adoptan la tipografía del sistema para el contenido funcional, mantienen áreas táctiles de al menos 44 puntos y permiten el uso de gestos sin ocultar alternativas visibles. Las hojas modales se reservan para decisiones acotadas, como escoger fecha o confirmar una solicitud.
+
+#### 4.1.3.2. Android Mobile Style Guidelines
+
+En Android se aplican convenciones de Material Design, tipografía Roboto para la interfaz funcional y áreas táctiles de al menos 48 dp. La barra superior contextualiza cada pantalla, la navegación inferior agrupa los destinos frecuentes y el botón Atrás conserva el historial esperado. Los estados, elevaciones y transiciones ayudan a distinguir acciones disponibles sin recargar la pantalla.
+
