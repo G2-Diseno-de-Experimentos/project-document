@@ -5289,3 +5289,12 @@ El modelo mantiene a `ServiceRequest` como eje del proceso de contratación. Una
 | `PaymentRecord` | amount, currency, status, externalId | Registra el resultado de una operación de pago. |
 | `Notification` | channel, message, status, sentAt | Comunica eventos relevantes a clientes y técnicos. |
 
+## 4.10. Database Design
+
+La persistencia principal sigue un modelo relacional sobre PostgreSQL. Las claves foráneas conservan la trazabilidad entre usuarios, solicitudes y resultados del servicio; los campos de estado permiten controlar la evolución del proceso sin eliminar su historial.
+
+### 4.10.1. Relational/Non-Relational Database Diagram
+
+Para el alcance actual se selecciona una base relacional, ya que las operaciones requieren consistencia entre contratación, asignación, ejecución y pago. El modelo puede complementarse en el futuro con almacenamiento especializado para archivos, sin alterar las relaciones centrales.
+
+![Diagrama de base de datos relacional de ElectroLink](assets/img/cap4/database-design/relational-model.svg)
