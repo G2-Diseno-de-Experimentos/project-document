@@ -783,3 +783,12 @@ La matriz organiza las actividades de los User Personas de **ElectroLink** segú
 
 <hr>
 
+### 2.3.3. User Journey Mapping
+
+El Journey Map representa visualmente las acciones, ideas y emociones que atraviesa una persona al relacionarse con un producto o servicio para cumplir un objetivo. El siguiente artefacto resume ese recorrido dentro del contexto de ElectroLink.
+
+<img src="https://i.postimg.cc/SxDbgGrw/xcvcvc.png"/>
+
+<hr>
+
+
