@@ -1071,3 +1071,3835 @@ Segmento 2
 Segmento 3
 <img src="https://i.postimg.cc/J00MLLhv/imagen-2025-07-08-205729249.png"/>
 
+## 3.2. User Stories
+En esta sección se organizan las épicas y las historias de usuario, cada una acompañada por sus criterios de aceptación.
+
+<hr>
+
+# Epics
+
+<table border="1">
+<tr>
+    <th>EpicId</th>
+    <th>Título</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>EP-01</td>
+    <td>Gestión de Acceso de Usuarios</td>
+    <td>Como usuario, quiero un sistema completo de acceso para registrarme, autenticarme y gestionar mis credenciales de manera segura según mi perfil específico.</td>
+  </tr>
+  <tr>
+    <td>EP-02</td>
+    <td>Experiencia de Usuario en Procesos de Autenticación</td>
+    <td>Como usuario, quiero tener una experiencia clara y asistida durante los procesos de registro y autenticación para completarlos con éxito y sin frustraciones.</td>
+  </tr>
+  <tr>
+    <td>EP-03</td>
+    <td>Personalización y Seguridad de la Cuenta</td>
+    <td>Como usuario, quiero tener control sobre la seguridad y la configuración de mi cuenta para proteger mi información y adaptarla a mis necesidades específicas.</td>
+  </tr>
+  <tr>
+    <td>EP-04</td>
+    <td>Contratación y Seguimiento de Servicios Eléctricos</td>
+    <td>Como propietario o PYME, quiero contratar servicios paso a paso y darles seguimiento, para resolver mis problemas eléctricos de manera estructurada y segura.</td>
+  </tr>
+  <tr>
+    <td>EP-05</td>
+    <td>Programación y Gestión de Servicios Preventivos</td>
+    <td>Como propietario o PYME, quiero programar mantenimientos preventivos y revisar mi historial de servicios, para garantizar un sistema eléctrico seguro y funcional.</td>
+  </tr>
+  <tr>
+    <td>EP-06</td>
+    <td>Gestión Operativa de los Proveedores</td>
+    <td>Como proveedor, quiero administrar mi agenda, servicios y pagos, para tener control sobre mis operaciones y oportunidades de negocio.</td>
+  </tr>
+  <tr>
+    <td>EP-07</td>
+    <td>Funcionalidades de Confianza y Transparencia en el Ecosistema</td>
+    <td>Como usuario, quiero interactuar con un entorno confiable, transparente y claro, para sentirme seguro al contratar servicios, comparar opciones y tomar decisiones informadas.</td>
+  </tr>
+  <tr>
+    <td>EP-08</td>
+    <td>Navegación en la Landing Page</td>
+    <td>Como visitante, quiero navegar en una Landing page que me brinde información necesaria para tomar una decisión informada.</td>
+  </tr>
+  <tr>
+    <td>EP-09</td>
+    <td>Gestión de Suscripciones y Pagos (Proveedores)</td>
+    <td>Como proveedor, quiero gestionar mis planes de suscripción, procesar pagos de forma segura y acceder a mi historial de facturación, para mantener mi cuenta activa y funcional.</td>
+  </tr>
+  <tr>
+    <td>EP-10</td>
+    <td>Gestión de Activos y Recursos</td>
+    <td>Como usuario (propietario o proveedor), quiero registrar y gestionar mis activos relevantes (propiedades, inventario de componentes) para facilitar la operativa del sistema.</td>
+  </tr>
+  <tr>
+    <td>EP-11</td>
+    <td>Gestión de Servicios Ofrecidos</td>
+    <td>Como técnico, quiero gestionar mi catálogo de servicios ofrecidos, para mantenerlo actualizado y mostrar claramente a los clientes mi oferta y especialidades.</td>
+  </tr>
+  <tr>
+    <td>EP-12</td>
+    <td>Gestión de Propiedades</td>
+    <td>Como desarrollador, quiero implementar endpoints para registrar, consultar y administrar propiedades de los propietarios, para permitir la selección de ubicación durante la solicitud.</td>
+  </tr>
+  <tr>
+    <td>EP-13</td>
+    <td>Gestión de Componentes Técnicos</td>
+    <td>Como desarrollador, quiero crear endpoints CRUD para administrar el inventario de componentes eléctricos de los técnicos, para garantizar el stock durante la asignación de servicios.</td>
+  </tr>
+  <tr>
+    <td>EP-14</td>
+    <td>Asistente de Solicitud de Servicio</td>
+    <td>Como desarrollador, quiero implementar la lógica escalonada del flujo de solicitud del propietario, para validar planes, verificar límites y facilitar la selección guiada.</td>
+  </tr>
+  <tr>
+    <td>EP-15</td>
+    <td>Evaluación de Servicios Completados</td>
+    <td>Como desarrollador, quiero permitir que los usuarios dejen evaluaciones tras completar un servicio, para alimentar las métricas del sistema y mejorar la calidad del servicio.</td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-01</td>
+    <td>visitante de la landing page</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de Características y Beneficios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante de la landing page</b>, quiero <b>ver claramente las características y beneficios de la plataforma</b>, para así <b>entender cómo puede ayudarme y decidir si registrarme</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización de beneficios para usuarios</b><br>
+          Dado que un visitante se encuentra explorando la plataforma informativa<br>
+          Cuando revisa la sección de propuestas de valor<br>
+          Entonces debe identificar claramente los beneficios específicos para Propietarios y Técnicos<br>
+          Y cada beneficio debe tener una descripción breve y clara.
+        </li>
+        <li><b>Escenario #2: Visualización de características principales</b><br>
+          Dado que un visitante se encuentra en la plataforma informativa<br>
+          Cuando explora la sección de características<br>
+          Entonces debe ver las funcionalidades destacadas de la plataforma<br>
+          Y cada característica debe tener un título descriptivo y una explicación concisa de su funcionamiento.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-02</td>
+    <td>visitante indeciso sobre la plataforma</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de Testimonios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante indeciso sobre la plataforma</b>, quiero <b>ver testimonios de usuarios reales</b>, para así <b>aumentar mi confianza en el servicio antes de registrarse</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización de testimonios diversos</b><br>
+          Dado que el visitante explora la plataforma informativa<br>
+          Cuando accede a la sección de testimonios<br>
+          Entonces debe ver al menos 3 testimonios diferentes<br>
+          Y cada testimonio debe mostrar: Nombre de usuario, tipo de usuario (Propietario/Técnico), calificación y comentario<br>
+          Y las calificaciones deben ser visualmente claras.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-03</td>
+    <td>visitante que accede desde diferentes dispositivos</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Adaptabilidad a Diferentes Dispositivos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante que accede desde diferentes dispositivos</b>, quiero <b>que la landing page se adapte correctamente a mi pantalla</b>, para así <b>tener una experiencia óptima independientemente del dispositivo que use</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Experiencia en dispositivo móvil</b><br>
+          Dado que un visitante accede a la plataforma informativa desde un dispositivo móvil<br>
+          Cuando la información es presentada<br>
+          Entonces todos los elementos se reorganizan para adaptarse a una pantalla vertical<br>
+          Y no requiere desplazamiento horizontal<br>
+          Y todos los textos son legibles sin necesidad de ampliar la vista.
+        </li>
+        <li><b>Escenario #2: Experiencia en tableta o escritorio</b><br>
+          Dado que un visitante accede a la plataforma informativa desde una tableta o un ordenador<br>
+          Cuando la información es presentada<br>
+          Entonces el diseño aprovecha el espacio horizontal adicional<br>
+          Y mantiene una experiencia de navegación fluida y atractiva.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-04</td>
+    <td>visitante de la página</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de una Sección Principal</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante de la página</b>, quiero <b>ver una sección principal atractiva que me presente un breve resumen de la idea del producto</b>, para así <b>entender rápidamente de qué se trata el servicio</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Presentación del propósito de la plataforma</b><br>
+          Dado que un visitante accede a la plataforma informativa<br>
+          Cuando la carga inicial se completa<br>
+          Entonces se muestra una sección principal con un título que explica el propósito del sistema<br>
+          Y se incluye un subtítulo que resume el valor principal del servicio<br>
+          Y se presenta una llamada a la acción principal para invitar al registro.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-05</td>
+    <td>visitante</td>
+    <td>Alta</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Navegación sin errores</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante</b>, quiero <b>navegar por la página web sin encontrar errores</b>, para así <b>tener una experiencia fluida que me anime a registrarme</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Carga completa de la plataforma</b><br>
+          Dado que un visitante accede a la plataforma informativa<br>
+          Cuando la carga de la página se completa<br>
+          Entonces todos los elementos visuales e informativos se muestran correctamente<br>
+          Y no existen enlaces que dirijan a destinos incorrectos o inexistentes.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-06</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Navegación mediante Encabezado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero un <b>menú de navegación claro en el encabezado</b>, para así <b>acceder fácilmente a las diferentes secciones de la página</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Acceso a secciones desde el encabezado</b><br>
+          Dado que que un visitante explora la plataforma informativa<br>
+          Cuando utiliza las opciones de navegación en el encabezado<br>
+          Entonces puede desplazarse a las diferentes secciones informativas<br>
+          Y el encabezado permanece accesible durante el desplazamiento.
+        </li>
+        <li><b>Escenario #2: Navegación en dispositivos de pantalla pequeña</b><br>
+          Dado que que un visitante accede desde un dispositivo móvil<br>
+          Cuando interactúa con la opción de menú principal<br>
+          Entonces se despliegan las opciones de navegación a las distintas secciones.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-07</td>
+    <td>visitante</td>
+    <td>Baja</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización del Pie de página</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante</b>, quiero <b>ver un pie de página organizado con accesos directos e información de contacto</b>, para así <b>encontrar información adicional rápidamente</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Contenido completo del pie de página</b><br>
+          Dado que que un visitante se desplaza hasta el final de la plataforma informativa<br>
+          Cuando llega al pie de página<br>
+          Entonces debe ver una sección con enlaces a Términos y Condiciones y Política de Privacidad<br>
+          Y debe encontrar información de contacto<br>
+          Y enlaces a las redes sociales de la empresa.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-08</td>
+    <td>potencial cliente</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Ver Información del Startup</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>potencial cliente</b>, quiero <b>conocer información sobre la empresa desarrolladora</b>, para así <b>evaluar su credibilidad y confiabilidad</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Acceso a información corporativa</b><br>
+          Dado que que un visitante navega por la plataforma informativa<br>
+          Cuando se desplaza a la sección sobre la empresa<br>
+          Entonces debe encontrar información clara sobre la startup y el equipo fundador<br>
+          Y la información debe transmitir profesionalidad y confianza.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-09</td>
+    <td>visitante interesado</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Conocer la Misión de la Startup</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante interesado</b>, quiero <b>conocer la misión de la empresa</b>, para así <b>entender sus valores y propósito</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visibilidad de la declaración de misión</b><br>
+          Dado que que un visitante navega por la sección sobre la empresa<br>
+          Cuando busca información sobre los propósitos de la empresa<br>
+          Entonces debe encontrar claramente destacada la declaración de misión<br>
+          Y esta debe estar redactada de forma concisa y comprensible.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-10</td>
+    <td>visitante interesado</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Conocer la Visión de la Startup</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante interesado</b>, quiero <b>conocer la visión de la empresa</b>, para así <b>entender sus objetivos a largo plazo y su proyección de futuro</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visibilidad de la declaración de visión</b><br>
+          Dado que que un visitante navega por la sección sobre la empresa<br>
+          Cuando busca información sobre las metas futuras de la empresa<br>
+          Entonces debe encontrar claramente destacada la declaración de visión<br>
+          Y esta debe estar redactada de forma inspiradora y orientada al futuro.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-11</td>
+    <td>visitante interesado</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Conocer más a fondo los servicios que ofrecen</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante interesado</b>, quiero <b>conocer de manera más específica los servicios que ofrecen por medio de capturas de pantallas</b>, para así <b>comprender su solución y decidir si optar por ella</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización de la solución en acción</b><br>
+          Dado que que un visitante se encuentra en la sección de características o servicios<br>
+          Cuando explora cómo funciona la plataforma<br>
+          Entonces visualiza representaciones gráficas o capturas de pantalla de la aplicación<br>
+          Y estas imágenes ilustran las funcionalidades clave del sistema.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-12</td>
+    <td>visitante interesado</td>
+    <td>Media</td>
+    <td>EP-08</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Ver planes de suscripción disponibles</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>visitante interesado</b>, quiero <b>ver una sección clara que me presente los planes de suscripción disponibles, separados por "Planes para Técnicos" y "Planes para Propietarios"</b>, para así <b>comparar fácilmente sus características y precios</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Comparación de planes para Propietarios</b><br>
+          Dado que que un visitante está interesado en los planes para Propietarios<br>
+          Cuando accede a la sección de planes<br>
+          Entonces visualiza una comparativa entre el plan Básico y el plan Premium<br>
+          Y puede identificar claramente los límites y beneficios de cada uno.
+        </li>
+        <li><b>Escenario #2: Visualización de planes para Técnicos</b><br>
+          Dado que que un visitante está interesado en los planes para Técnicos<br>
+          Cuando accede a la sección de planes<br>
+          Entonces visualiza la oferta de planes de suscripción para su rol<br>
+          Y comprende los beneficios asociados a cada nivel.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-13</td>
+    <td>dueño de hogar</td>
+    <td>Media</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de cuentas como Dueño de Hogar</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>dueño de hogar</b>, quiero <b>registrarme para tener una cuenta en la aplicación</b>, para así <b>gestionar los componentes eléctricos de mi vivienda</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Selección de rol de usuario</b><br>
+          Dado que que una persona no registrada accede a la funcionalidad de registro<br>
+          Cuando selecciona el rol "Dueño de Hogar"<br>
+          Entonces el sistema le presenta los campos requeridos para ese rol.
+        </li>
+        <li><b>Escenario #2: Registro exitoso con datos válidos</b><br>
+          Dado que que un futuro dueño de hogar ha completado todos los campos obligatorios con información válida<br>
+          Cuando solicita el registro de su cuenta<br>
+          Entonces el sistema crea una cuenta de usuario con el rol "Propietario"<br>
+          Y le informa que se ha enviado una comunicación para verificar su cuenta.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-14</td>
+    <td>dueño o representante de empresa</td>
+    <td>Media</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de cuentas como Dueño de Empresa</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>dueño o representante de empresa</b>, quiero <b>registrarme para tener una cuenta en la aplicación</b>, para así <b>gestionar los componentes eléctricos de mis instalaciones comerciales</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Selección de rol de usuario</b><br>
+          Dado que que una persona no registrada accede a la funcionalidad de registro<br>
+          Cuando selecciona el rol "Dueño de Empresa"<br>
+          Entonces el sistema le presenta los campos requeridos para ese rol, incluyendo el nombre de la empresa.
+        </li>
+        <li><b>Escenario #2: Registro exitoso con datos válidos</b><br>
+          Dado que que un futuro dueño de empresa ha completado todos los campos obligatorios con información válida<br>
+          Cuando solicita el registro de su cuenta<br>
+          Entonces el sistema crea una cuenta de usuario con el rol "Propietario" de tipo PYME<br>
+          Y le informa que se ha enviado una comunicación para verificar su cuenta.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-15</td>
+    <td>Técnico de componentes eléctricos y/o servicios</td>
+    <td>Media</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de cuentas para Técnicos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico de componentes eléctricos y/o servicios</b>, quiero <b>registrarme para tener una cuenta en la aplicación</b>, para así <b>ofrecer mis productos y servicios a los usuarios</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Selección de rol de usuario</b><br>
+          Dado que que una persona no registrada accede a la funcionalidad de registro<br>
+          Cuando selecciona el rol "Técnico"<br>
+          Entonces el sistema le presenta los campos requeridos para el perfil profesional.
+        </li>
+        <li><b>Escenario #2: Registro exitoso con datos válidos</b><br>
+          Dado que que un futuro técnico ha completado todos los campos obligatorios con información válida<br>
+          Cuando solicita el registro de su cuenta<br>
+          Entonces el sistema crea una cuenta de usuario con el rol "Técnico"<br>
+          Y le informa que se ha enviado una comunicación para verificar su cuenta.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-16</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Verificación de cuenta por correo electrónico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>verificar mi cuenta a través de un enlace enviado por correo electrónico</b>, para así <b>confirmar mi identidad</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Envío de comunicación de verificación</b><br>
+          Dado que que un usuario se ha registrado exitosamente<br>
+          Cuando el proceso de registro finaliza<br>
+          Entonces el sistema envía una comunicación electrónica a la dirección proporcionada<br>
+          Y la comunicación contiene una instrucción y un medio único para verificar la cuenta.
+        </li>
+        <li><b>Escenario #2: Verificación exitosa de cuenta</b><br>
+          Dado que que un usuario ha recibido la comunicación de verificación<br>
+          Cuando utiliza el medio de verificación proporcionado<br>
+          Entonces su cuenta es marcada como verificada en el sistema<br>
+          Y se le notifica que la verificación fue exitosa.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-17</td>
+    <td>usuario registrado</td>
+    <td>Baja</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Inicio de sesión de usuarios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario registrado</b>, quiero <b>iniciar sesión en la aplicación con mis credenciales</b>, para así <b>acceder a mi cuenta y utilizar las funcionalidades de la plataforma</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Inicio de sesión exitoso con credenciales válidas</b><br>
+          Dado que que un usuario registrado y verificado se encuentra en la funcionalidad de acceso<br>
+          Cuando ingresa sus credenciales correctas y solicita el acceso<br>
+          Entonces el sistema valida las credenciales<br>
+          Y le concede acceso a su panel personalizado según su rol.
+        </li>
+        <li><b>Escenario #2: Intento de inicio de sesión con credenciales inválidas</b><br>
+          Dado que que un usuario se encuentra en la funcionalidad de acceso<br>
+          Cuando ingresa un correo electrónico y/o contraseña incorrectos<br>
+          Entonces el sistema le niega el acceso<br>
+          Y le informa que las credenciales son inválidas.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-18</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Validación de datos de registro</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>recibir retroalimentación inmediata sobre la validez de los datos que ingresó durante el registro</b>, para así <b>corregir errores rápidamente</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Validación de formato de correo electrónico</b><br>
+          Dado que que un usuario está completando el formulario de registro<br>
+          Cuando ingresa un texto en el campo de correo electrónico que no tiene un formato válido<br>
+          Entonces el sistema le informa que el formato del correo no es válido.
+        </li>
+        <li><b>Escenario #2: Validación de correo electrónico ya registrado</b><br>
+          Dado que que un usuario está en el formulario de registro<br>
+          Cuando ingresa un correo electrónico que ya está registrado en el sistema<br>
+          Entonces el sistema le informa que la dirección de correo ya está en uso.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-19</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Mensajes de éxito retroalimentación de registro</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>recibir mensajes claros y accesibles al completar el registro sobre éxito</b>, para así <b>entender fácilmente el resultado de mis acciones</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Mensaje de éxito al completar el registro</b><br>
+          Dado que que el usuario ha completado correctamente el proceso de registro<br>
+          Cuando el sistema procesa la solicitud con éxito<br>
+          Entonces el sistema muestra un mensaje de confirmación<br>
+          Y informa sobre el siguiente paso (verificación de correo).
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-20</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Mensajes de error retroalimentación de registro</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>recibir mensajes claros y accesibles al completar el registro sobre cualquier error a la hora de completar el formulario</b>, para así <b>entender fácilmente el resultado de mis acciones y saber cómo proceder</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Mensaje de error por problemas del sistema</b><br>
+          Dado que que el usuario ha solicitado completar su registro<br>
+          Cuando ocurre un error del sistema durante el procesamiento<br>
+          Entonces el sistema muestra un mensaje de error genérico<br>
+          Y informa que puede intentarlo de nuevo<br>
+          Y los datos ingresados se conservan para facilitar un nuevo intento.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-21</td>
+    <td>usuario registrado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recuperación de Contraseña</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario registrado</b>, quiero <b>recuperar mi contraseña en caso de olvidarla</b>, para así <b>volver a acceder a mi cuenta de manera segura</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Solicitud de recuperación con correo válido</b><br>
+          Dado que que un usuario se encuentra en la página de recuperación de contraseña<br>
+          Cuando ingresa el correo electrónico asociado a su cuenta<br>
+          Entonces el sistema envía un correo con instrucciones y un enlace único de restablecimiento<br>
+          Y muestra un mensaje de confirmación indicando que revise su correo.
+        </li>
+        <li><b>Escenario #2: Finalización exitosa del restablecimiento</b><br>
+          Dado que que un usuario ha seguido el enlace de restablecimiento<br>
+          Cuando ingresa y confirma una nueva contraseña que cumple los requisitos de seguridad<br>
+          Entonces la contraseña es actualizada en el sistema<br>
+          Y recibe un mensaje de confirmación del cambio exitoso.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-22</td>
+    <td>usuario autenticado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cierre de Sesión</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario autenticado</b>, quiero <b>cerrar mi sesión de forma segura</b>, para así <b>proteger mi cuenta cuando termine de usar la aplicación</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Cierre de sesión voluntario</b><br>
+          Dado que que un usuario está autenticado en la aplicación<br>
+          Cuando selecciona la opción de cierre de sesión<br>
+          Entonces su sesión es terminada de forma segura<br>
+          Y es redirigido a una pantalla pública (inicio de sesión o landing page).
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-23</td>
+    <td>propietario registrado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de Perfil de Propietario</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario registrado</b>, quiero <b>visualizar mi perfil</b>, para así <b>revisar mi información personal y preferencias almacenadas en el sistema</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Acceso al perfil personal</b><br>
+          Dado que que un Propietario está autenticado en el sistema<br>
+          Cuando solicita visualizar su perfil<br>
+          Entonces se le presenta su información personal registrada, como nombre, correo y teléfono<br>
+          Y visualiza sus preferencias de notificación configuradas.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-24</td>
+    <td>propietario registrado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Edición de Perfil de Propietario</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario registrado</b>, quiero <b>editar mi información personal y preferencias</b>, para así <b>mantener mi perfil actualizado y tener más control sobre este</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Edición exitosa de información personal</b><br>
+          Dado que que un Propietario está en la funcionalidad de edición de perfil<br>
+          Cuando modifica su información personal (ej. teléfono) y guarda los cambios<br>
+          Entonces sus cambios se almacenan en el sistema<br>
+          Y observa un mensaje de confirmación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-25</td>
+    <td>Técnico registrado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de Perfil de Técnico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico registrado</b>, quiero <b>visualizar mi perfil profesional</b>, para así <b>revisar cómo se presenta mi información y servicios a los clientes potenciales</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Acceso al perfil profesional</b><br>
+          Dado que que un Técnico está autenticado en el sistema<br>
+          Cuando solicita visualizar su perfil<br>
+          Entonces se le presenta su información profesional tal como la verían los clientes<br>
+          Y puede revisar su descripción, certificaciones, portafolio y zonas de cobertura.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-26</td>
+    <td>Técnico registrado</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Edición de Perfil de Técnico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico registrado</b>, quiero <b>editar mi información profesional, certificaciones y servicios ofrecidos</b>, para así <b>mantener mi perfil actualizado y atractivo para los clientes</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Edición de información profesional</b><br>
+          Dado que que un Técnico está en la funcionalidad de edición de perfil<br>
+          Cuando modifica su descripción, información de contacto o especialidades y guarda los cambios<br>
+          Entonces sus cambios se almacenan y se reflejan en su perfil público.
+        </li>
+        <li><b>Escenario #2: Gestión de certificaciones</b><br>
+          Dado que que un Técnico está editando su perfil<br>
+          Cuando añade una nueva certificación con su respectivo documento<br>
+          Entonces la certificación se añade a su perfil y queda pendiente de validación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-27</td>
+    <td>usuario de la plataforma</td>
+    <td>Media</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Entrar a un dashboard Personalizado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario de la plataforma</b>, quiero <b>acceder a un dashboard personalizado al iniciar sesión</b>, para así <b>visualizar de forma inmediata la información relevante según mi rol y actividad reciente</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización del dashboard para Propietario</b><br>
+          Dado que que un Propietario inicia sesión<br>
+          Cuando accede a su panel principal<br>
+          Entonces visualiza un resumen de sus servicios activos, sus próximas citas y notificaciones recientes.
+        </li>
+        <li><b>Escenario #2: Visualización del dashboard para Técnico</b><br>
+          Dado que que un Técnico inicia sesión<br>
+          Cuando accede a su panel principal<br>
+          Entonces visualiza su agenda de servicios del día, solicitudes pendientes y un resumen de sus estadísticas recientes.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-28</td>
+    <td>Técnico de servicios eléctricos</td>
+    <td>Baja</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Crear Portafolio Digital con Evidencias de Trabajo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico de servicios eléctricos</b>, quiero <b>crear un portafolio digital dentro de mi perfil que incluya fotos, descripciones y referencias de trabajos anteriores</b>, para así <b>mostrar mi experiencia y generar mayor confianza en potenciales clientes</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Añadir un nuevo trabajo al portafolio</b><br>
+          Dado que que un Técnico está gestionando su perfil<br>
+          Cuando accede a la sección de Portafolio y añade un nuevo trabajo con imágenes y descripción<br>
+          Entonces el trabajo se guarda y se muestra en su perfil público.
+        </li>
+        <li><b>Escenario #2: Organización del portafolio</b><br>
+          Dado que que un Técnico tiene varios trabajos en su portafolio<br>
+          Cuando organiza sus trabajos por categorías<br>
+          Entonces los cambios se reflejan en la vista pública, permitiendo a los clientes filtrar por dichas categorías.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-29</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configuración de Zona de Cobertura Geográfica</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>configurar mi zona de cobertura geográfica especificando radio de acción y ubicaciones donde ofrezco servicios</b>, para así <b>recibir solicitudes solo de clientes dentro de mi área de trabajo</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Definición de una zona de cobertura</b><br>
+          Dado que que un Técnico está configurando su perfil operativo<br>
+          Cuando define una o más áreas geográficas donde presta servicios<br>
+          Entonces el sistema almacena estas zonas<br>
+          Y las utilizará para filtrar las solicitudes de servicio que puede recibir.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-30</td>
+    <td>usuario de la plataforma</td>
+    <td>Media</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configuración de Notificaciones Personalizadas</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario de la plataforma</b>, quiero <b>configurar mis preferencias de notificaciones (email, SMS, push) y frecuencia</b>, para así <b>recibir información relevante sin ser saturado de mensajes</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Ajuste de preferencias de notificación</b><br>
+          Dado que que un usuario (Propietario o Técnico) está en la configuración de su cuenta<br>
+          Cuando ajusta qué tipo de notificaciones desea recibir y por qué canal (ej. email)<br>
+          Entonces el sistema guarda sus preferencias<br>
+          Y las futuras notificaciones se enviarán de acuerdo a esta configuración.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-31</td>
+    <td>técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Crear Componente Eléctrico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico</b>, quiero <b>registrar nuevos componentes eléctricos en mi inventario</b>, para así <b>mantener un inventario completo de mi infraestructura eléctrica</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Registro de un nuevo componente</b><br>
+          Dado que que un Técnico está gestionando su inventario<br>
+          Cuando proporciona la información de un nuevo componente (nombre, marca, etc.)<br>
+          Entonces el sistema registra el nuevo componente en el inventario del técnico.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-32</td>
+    <td>técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Editar Componente Eléctrico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico</b>, quiero <b>modificar la información de los componentes eléctricos registrados</b>, para así <b>mantener actualizada la información técnica y de consumo</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Actualización de datos técnicos</b><br>
+          Dado que que un Técnico visualiza su inventario<br>
+          Cuando selecciona un componente y modifica sus características<br>
+          Entonces los cambios se guardan correctamente.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-33</td>
+    <td>técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Eliminar Componente Eléctrico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico</b>, quiero <b>eliminar componentes eléctricos de mi inventario</b>, para así <b>mantener actualizada mi configuración cuando retire o reemplace equipos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Eliminación de componente</b><br>
+          Dado que que un Técnico visualiza su inventario<br>
+          Cuando selecciona un componente y solicita su eliminación<br>
+          Entonces el sistema solicita confirmación<br>
+          Y elimina el componente del inventario activo tras la confirmación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-34</td>
+    <td>propietario</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de Propiedad (Propietario)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario</b>, quiero <b>registrar una nueva propiedad en el sistema, incluyendo su dirección y geolocalización</b>, para así <b>solicitar servicios para ella</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Añadir una nueva propiedad</b><br>
+          Dado que que un Propietario está gestionando sus activos<br>
+          Cuando proporciona la información de una nueva propiedad, incluyendo su dirección<br>
+          Entonces el sistema registra la propiedad y la asocia a su cuenta<br>
+          Y la propiedad queda disponible para solicitar servicios.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-35</td>
+    <td>propietario</td>
+    <td>Media</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Edición de Información de Propiedad (Propietario)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario</b>, quiero <b>editar la información de mis propiedades registradas (ej. dirección, características)</b>, para así <b>mantenerla actualizada</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Actualización de datos de una propiedad</b><br>
+          Dado que que un Propietario visualiza sus propiedades registradas<br>
+          Cuando selecciona una propiedad y modifica su información<br>
+          Entonces los cambios se guardan correctamente.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-36</td>
+    <td>propietario</td>
+    <td>Media</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Eliminación de Propiedad (Propietario)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario</b>, quiero <b>eliminar una propiedad de mi cuenta</b>, para así <b>registrar otra propiedad</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Eliminación de una propiedad</b><br>
+          Dado que que un Propietario visualiza sus propiedades registradas<br>
+          Cuando selecciona una propiedad y solicita su eliminación<br>
+          Entonces el sistema solicita confirmación<br>
+          Y elimina la propiedad de su cuenta tras la confirmación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-37</td>
+    <td>Técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de Inventario de Componentes (Técnico)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico</b>, quiero <b>registrar los componentes eléctricos que tengo en mi inventario, incluyendo cantidad y costo</b>, para así <b>controlar mi stock</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Añadir un componente al inventario con stock</b><br>
+          Dado que que un Técnico está gestionando su inventario<br>
+          Cuando registra un nuevo tipo de componente y especifica la cantidad inicial y el costo<br>
+          Entonces el componente se añade a su inventario con el stock correspondiente.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-38</td>
+    <td>Técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Actualización de Stock de Componentes (Técnico)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico</b>, quiero <b>actualizar las cantidades de mis componentes en inventario después de una compra o uso en un servicio</b>, para así <b>mantener la precisión del stock</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Ajuste manual de stock</b><br>
+          Dado que que un Técnico está gestionando su inventario<br>
+          Cuando selecciona un componente y ajusta la cantidad de stock manualmente (ej. por una nueva compra)<br>
+          Entonces la cantidad de stock del componente se actualiza.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-39</td>
+    <td>Técnico</td>
+    <td>Alta</td>
+    <td>EP-10</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configuración de Alertas de Stock Mínimo (Técnico)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico</b>, quiero <b>definir umbrales de stock mínimo para mis componentes y recibir alertas cuando el stock alcance ese nivel</b>, para así <b>planificar reposiciones</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Establecer un umbral de stock mínimo</b><br>
+          Dado que que un Técnico está gestionando un componente en su inventario<br>
+          Cuando establece un umbral numérico de stock mínimo para ese componente<br>
+          Entonces el sistema guarda esta configuración.
+        </li>
+        <li><b>Escenario #2: Recepción de alerta</b><br>
+          Dado que que un componente tiene un umbral de stock mínimo configurado<br>
+          Cuando el stock de ese componente baja hasta o por debajo del umbral<br>
+          Entonces el sistema envía una notificación al Técnico informando de la situación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-40</td>
+    <td>propietario de PyME</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Contratación de Servicios Eléctricos mediante Wizard</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario de PyME</b>, quiero <b>contar con un proceso guiado paso a paso para contratar servicios eléctricos</b>, para así <b>solucionar mis problemas de forma rápida y sin complicaciones</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Completar proceso guiado</b><br>
+          Dado que que un Propietario inicia el proceso de contratación<br>
+          Cuando completa todos los pasos requeridos en el asistente (selección de propiedad, servicio, etc.)<br>
+          Entonces el sistema genera una solicitud de servicio<br>
+          Y le confirma que la solicitud ha sido creada y está pendiente de asignación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-41</td>
+    <td>propietario con múltiples propiedades</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Selección de Propiedad</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario con múltiples propiedades</b>, quiero <b>seleccionar la propiedad específica donde necesito el servicio</b>, para así <b>que el sistema asigne al técnico más cercano a esa ubicación</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Selección de propiedad en la solicitud</b><br>
+          Dado que que un Propietario con más de una propiedad inicia una solicitud de servicio<br>
+          Cuando el sistema le solicita indicar para qué propiedad es el servicio<br>
+          Entonces puede seleccionar una de sus propiedades registradas<br>
+          Y la ubicación de esa propiedad será utilizada para la asignación del técnico.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-42</td>
+    <td>propietario solicitando un servicio</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Carga Manual de Datos de Recibos Eléctricos (3-6 recibos)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario solicitando un servicio</b>, quiero <b>ingresar manualmente los datos clave de mi último recibo eléctrico durante el proceso de solicitud</b>, para así <b>registrar mi historial de consumo y permitir análisis a largo plazo en mi panel de Analytics</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Ingreso de datos del recibo</b><br>
+          Dado que que un Propietario está en el proceso de solicitar un servicio<br>
+          Cuando ingresa los datos de consumo (kWh, monto, período) de su recibo eléctrico<br>
+          Entonces el sistema valida y asocia esta información a la solicitud<br>
+          Y los datos quedan almacenados para su futuro análisis de consumo.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-43</td>
+    <td>propietario que ya ha seleccionado un servicio</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Descripción Detallada del Problema Eléctrico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario que ya ha seleccionado un servicio</b>, quiero <b>añadir una descripción detallada de mi problema</b>, para así <b>que el técnico asignado conozca el contexto específico antes de su llegada</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Añadir detalles a la solicitud</b><br>
+          Dado que que un Propietario está creando una solicitud de servicio<br>
+          Cuando proporciona texto adicional describiendo el problema<br>
+          Entonces esta descripción se adjunta a la solicitud y será visible para el técnico que sea asignado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-44</td>
+    <td>propietario</td>
+    <td>Alta</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Selección de Servicio Específico del Catálogo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario</b>, después de seleccionar mi propiedad, quiero <b>ver una lista de servicios específicos disponibles en mi zona (ej: 'Instalación de tomacorriente', 'Diagnóstico General') y seleccionar el que necesito</b>, para así <b>que el sistema sepa exactamente qué trabajo solicitar y pueda automatizar la asignación</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Selección de un servicio del catálogo</b><br>
+          Dado que que un Propietario ha seleccionado la propiedad para el servicio<br>
+          Cuando el sistema le presenta el catálogo de servicios disponibles en su zona<br>
+          Entonces puede seleccionar un servicio específico de la lista<br>
+          Y la solicitud queda vinculada a ese servicio del catálogo.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-45</td>
+    <td>cliente</td>
+    <td>Alta</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cancelación de servicios programados</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>cliente</b>, quiero <b>cancelar un servicio programado con anticipación</b>, para así <b>evitar cargos innecesarios</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Cancelación dentro del plazo permitido</b><br>
+          Dado que que un Propietario tiene un servicio programado<br>
+          Cuando solicita cancelarlo dentro del plazo permitido por las políticas<br>
+          Entonces el sistema procesa la cancelación sin penalización<br>
+          Y notifica tanto al Propietario como al Técnico asignado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-46</td>
+    <td>propietario</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Notificación de Asignación Automática de Técnico (Propietario)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario</b>, después de que mi solicitud de servicio es asignada automáticamente, quiero <b>recibir una notificación con la información del técnico asignado</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Recepción de notificación de asignación</b><br>
+          Dado que que un Propietario ha creado una solicitud de servicio<br>
+          Cuando el sistema asigna automáticamente un Técnico al servicio<br>
+          Entonces el Propietario recibe una notificación<br>
+          Y la notificación contiene la información del perfil del Técnico asignado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-47</td>
+    <td>cliente</td>
+    <td>Alta</td>
+    <td>EP-05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Historial de servicios contratados</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>cliente</b>, quiero <b>ver un historial de los servicios que he contratado anteriormente</b>, para así <b>referencia futura</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización de historial de servicios</b><br>
+          Dado que que un Propietario accede a su historial de servicios<br>
+          Cuando no aplica ningún filtro<br>
+          Entonces visualiza todos los servicios contratados ordenados cronológicamente<br>
+          Y para cada servicio puede ver detalles como fecha, técnico y estado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-48</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configurar Horarios de Trabajo Semanales</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>configurar mis horarios de trabajo por día de la semana (ej: Lunes 8AM-6PM, Martes 10AM-4PM) y definir la duración promedio que me toma cada tipo de servicio</b>, para así <b>que el sistema pueda asignarme automáticamente trabajos solo en mis horarios laborales disponibles</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Establecer disponibilidad semanal</b><br>
+          Dado que que un Técnico está configurando su agenda<br>
+          Cuando define sus horas de trabajo para cada día de la semana<br>
+          Entonces el sistema guarda esta disponibilidad como su horario laboral estándar<br>
+          Y lo usará como criterio para la asignación automática de servicios.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-49</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Modificar Horarios de Trabajo Existentes</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>modificar mis horarios de trabajo ya configurados (cambiar horas de inicio/fin, días laborales)</b>, para así <b>ajustar mi disponibilidad según cambios en mi situación personal o comercial</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Ajustar disponibilidad semanal</b><br>
+          Dado que que un Técnico tiene un horario de trabajo configurado<br>
+          Cuando modifica las horas de inicio o fin de un día laboral y guarda los cambios<br>
+          Entonces el sistema actualiza su horario laboral estándar.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-50</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Bloquear Fechas y Horarios Específicos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>bloquear fechas específicas (vacaciones, emergencias) o horarios puntuales (citas médicas, otros compromisos) en mi calendario</b>, para así <b>evitar que el sistema me asigne trabajos durante esos períodos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Bloquear un período de tiempo</b><br>
+          Dado que que un Técnico está gestionando su agenda<br>
+          Cuando selecciona una fecha o un rango de horas y lo marca como no disponible<br>
+          Entonces el sistema registra este bloqueo<br>
+          Y no le asignará servicios durante ese período.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-51</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualizar Agenda de Trabajos Asignados Automáticamente</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>visualizar en un calendario todos los trabajos que el sistema me ha asignado automáticamente dentro de mis horarios disponibles</b>, para así <b>planificar mi día y ver mi carga de trabajo semanal</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Vista de agenda con trabajos asignados</b><br>
+          Dado que que un Técnico accede a su agenda<br>
+          Cuando tiene trabajos que le han sido asignados<br>
+          Entonces visualiza estos trabajos en una vista de calendario<br>
+          Y puede ver los detalles de cada servicio programado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-52</td>
+    <td>técnico registrado</td>
+    <td>Media</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configurar Tiempo de Traslado Entre Servicios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>configurar el tiempo promedio que necesito para trasladarme entre ubicaciones en mi zona de cobertura</b>, para así <b>que el sistema considere estos intervalos al asignarme trabajos consecutivos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Configurar buffer de traslado</b><br>
+          Dado que que un Técnico está configurando su agenda<br>
+          Cuando define un tiempo promedio de traslado (ej. 30 minutos)<br>
+          Entonces el sistema considerará este intervalo de tiempo entre servicios consecutivos al momento de la asignación automática.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-53</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-11</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Crear Servicios en Catálogo con Recetas de Componentes</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>crear nuevos servicios en mi catálogo especificando qué componentes eléctricos exactos necesito y en qué cantidades (receta)</b>, para así <b>que el sistema verifique automáticamente si tengo stock suficiente antes de asignarme ese tipo de trabajo</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Crear un servicio con receta</b><br>
+          Dado que que un Técnico está gestionando su catálogo<br>
+          Cuando crea un nuevo servicio y le asocia una "receta" (lista de componentes y cantidades de su inventario)<br>
+          Entonces el servicio se guarda con su receta de componentes asociada<br>
+          Y el sistema usará esta receta para validar el stock antes de la asignación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-54</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-11</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Modificar Servicios y sus Recetas de Componentes</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>modificar los servicios existentes en mi catálogo (precio, descripción, componentes necesarios)</b>, para así <b>mantener actualizada mi oferta y las recetas de materiales</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Actualizar una receta de servicio</b><br>
+          Dado que que un Técnico está editando un servicio existente con receta<br>
+          Cuando modifica la lista de componentes o sus cantidades<br>
+          Entonces la receta del servicio se actualiza.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-55</td>
+    <td>técnico registrado</td>
+    <td>Alta</td>
+    <td>EP-11</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Eliminar Servicios del Catálogo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>eliminar servicios que ya no ofrezco de mi catálogo</b>, para así <b>evitar que el sistema me asigne trabajos que no puedo realizar</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Eliminación de un servicio</b><br>
+          Dado que que un Técnico visualiza su catálogo de servicios<br>
+          Cuando selecciona un servicio y solicita su eliminación<br>
+          Entonces el servicio se elimina y ya no será ofrecido a los clientes.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-56</td>
+    <td>técnico registrado</td>
+    <td>Media</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Establecimiento Precios por Tipo de Servicio y Zona</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico registrado</b>, quiero <b>establecer precios diferenciados por tipo de servicio y opcionalmente por zona dentro de mi área de cobertura</b>, para así <b>tener una estructura tarifaria clara y rentable</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Definir precio de un servicio</b><br>
+          Dado que que un Técnico está creando o editando un servicio<br>
+          Cuando establece un precio base para dicho servicio<br>
+          Entonces ese precio se mostrará a los clientes como referencia.
+        </li>
+        <li><b>Escenario #2: Definir precio diferenciado por zona (opcional)</b><br>
+          Dado que que un Técnico ha definido múltiples zonas de cobertura<br>
+          Cuando edita un servicio<br>
+          Entonces puede opcionalmente establecer un precio diferente para una zona específica.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-57</td>
+    <td>propietario con suscripción Premium</td>
+    <td>Baja</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Beneficio de Solicitud Prioritaria</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario con suscripción Premium</b>, al crear una solicitud de servicio, quiero <b>tener disponible y activar la opción de "marcar como prioritaria"</b>, para así <b>que mi solicitud tenga preferencia en el sistema de asignación y así resolver mi problema más rápidamente</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Marcar solicitud como prioritaria</b><br>
+          Dado que que un Propietario con plan Premium está creando una solicitud<br>
+          Cuando activa la opción de solicitud prioritaria<br>
+          Entonces la solicitud es creada y marcada con alta prioridad para el proceso de asignación.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-58</td>
+    <td>propietario del plan Básico</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Notificación de Límite de Solicitudes Alcanzado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario del plan Básico</b>, al intentar crear una solicitud que excede mi límite mensual (2), quiero <b>ser notificado claramente por el sistema y ver una opción directa para mejorar mi plan a Premium</b>, para así <b>entender las reglas del plan gratuito y continuar usando el servicio si lo necesito</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Bloqueo por límite de solicitudes</b><br>
+          Dado que que un Propietario con plan Básico ya ha alcanzado su límite de solicitudes mensuales<br>
+          Cuando intenta crear una nueva solicitud de servicio<br>
+          Entonces el sistema le impide continuar<br>
+          Y le informa que ha alcanzado su límite<br>
+          Y le presenta la opción de actualizar a un plan superior.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-59</td>
+    <td>propietario y técnico</td>
+    <td>Media</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Seguimiento de Estados de Servicio en Tiempo Real</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>propietario y técnico</b>, quiero <b>ver el estado actual del servicio (programado, confirmado, en progreso, completado) actualizado en tiempo real</b>, para así <b>estar informado sobre el progreso del trabajo</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Visualización del estado del servicio</b><br>
+          Dado que que un servicio ha sido asignado<br>
+          Cuando el Propietario o el Técnico consultan los detalles del servicio<br>
+          Entonces visualizan el estado actual del mismo (ej. "Programado").
+        </li>
+        <li><b>Escenario #2: Actualización del estado</b><br>
+          Dado que que un Técnico está ejecutando un servicio<br>
+          Cuando actualiza el estado del servicio a "En Progreso"<br>
+          Entonces el nuevo estado es visible tanto para él como para el Propietario.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-60</td>
+    <td>técnico ejecutando un servicio</td>
+    <td>Media</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro Fotográfico de Trabajos (Antes/Después)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico ejecutando un servicio</b>, quiero <b>tomar y subir fotografías del área de trabajo antes y después de la intervención</b>, para así <b>documentar el trabajo realizado y protegerme ante reclamos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Adjuntar evidencia fotográfica</b><br>
+          Dado que que un Técnico está gestionando un servicio activo<br>
+          Cuando sube fotografías correspondientes al "antes" y "después" del trabajo<br>
+          Entonces las imágenes quedan asociadas al registro del servicio como evidencia.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-61</td>
+    <td>técnico completando un servicio</td>
+    <td>Media</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Generación de Reportes Técnicos Estructurados</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico completando un servicio</b>, quiero <b>generar un reporte técnico estructurado que incluya los componentes utilizados de la 'receta' original, los procedimientos realizados y recomendaciones</b>, para así <b>profesionalizar mi servicio y dejar constancia del trabajo</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Generar un reporte de servicio</b><br>
+          Dado que que un Técnico ha completado un servicio<br>
+          Cuando finaliza el trabajo y accede a la funcionalidad de reporte<br>
+          Entonces puede documentar los componentes utilizados, el trabajo realizado y las recomendaciones para el cliente<br>
+          Y este reporte queda asociado al historial del servicio.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-62</td>
+    <td>técnico que completa un servicio</td>
+    <td>Alta</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Actualización Automática de Inventario Post-Servicio</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>técnico que completa un servicio</b>, quiero <b>que el sistema descuente automáticamente del mi inventario los componentes que marqué como utilizados en el reporte técnico</b>, para así <b>mantener mi stock actualizado sin trabajo manual</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Descuento automático de stock</b><br>
+          Dado que que un Técnico ha completado un servicio que tenía una "receta" de componentes<br>
+          Cuando marca el servicio como "Completado" y confirma los componentes utilizados en el reporte<br>
+          Entonces el sistema descuenta automáticamente las cantidades de esos componentes de su inventario.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-63</td>
+    <td>Técnico</td>
+    <td>Media</td>
+    <td>EP-06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Historial de Clientes Atendidos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico</b>, quiero <b>acceder a un historial detallado de los clientes que he atendido</b>, para así <b>dar seguimiento a relaciones profesionales y mejorar mi servicio basado en experiencias previas</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Consulta de historial de clientes</b><br>
+          Dado que que un Técnico ha completado servicios<br>
+          Cuando accede a su historial de clientes<br>
+          Entonces puede visualizar un listado de todos los clientes atendidos<br>
+          Y para cada cliente, puede ver los servicios prestados.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-64</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Sistema de Calificación Post-Servicio</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>calificar y dejar reseñas sobre los servicios que he utilizado</b>, para así <b>compartir mi experiencia con otros usuarios y proporcionar retroalimentación a los Técnicos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Calificación del servicio</b><br>
+          Dado que que un Propietario ha recibido un servicio que ya fue marcado como "Completado"<br>
+          Cuando completa el formulario de calificación (puntuación y comentarios)<br>
+          Entonces el sistema registra su calificación y la asocia al servicio y al perfil del Técnico.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-65</td>
+    <td>usuario</td>
+    <td>Baja</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Visualización de Calificaciones y Reseñas</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>usuario</b>, quiero <b>ver las calificaciones y reseñas dejadas por otros usuarios</b>, para así <b>tomar decisiones informadas sobre qué servicios utilizar</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Consulta de la reputación de un técnico</b><br>
+          Dado que que un Propietario está explorando el perfil de un Técnico<br>
+          Cuando accede a la sección de reseñas<br>
+          Entonces visualiza la calificación promedio y los comentarios dejados por otros usuarios.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-66</td>
+    <td>Técnico</td>
+    <td>Baja</td>
+    <td>EP-07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Retroalimentación directa de servicios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>Técnico</b>, quiero <b>recibir retroalimentación directa sobre mis servicios</b>, para así <b>mejorar mi oferta</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario #1: Revisión de valoraciones recibidas</b><br>
+          Dado que que un Técnico ha recibido valoraciones por sus servicios<br>
+          Cuando accede a su sección de retroalimentación<br>
+          Entonces puede ver todas las valoraciones recibidas de sus clientes<br>
+          Y puede identificar los aspectos mejor y peor valorados.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-01</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-12</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar Propiedad</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint POST para registrar una propiedad asociada a un propietario</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Registro exitoso</b><br>
+          Dado que el usuario está autenticado<br>
+          Cuando envía un request POST con todos los datos válidos de su propiedad<br>
+          Entonces el sistema responde con un estado 201 Created<br>
+          Y el cuerpo de la respuesta incluye la propiedad recién creada.
+        </li>
+        <li><b>Escenario 2: Faltan datos obligatorios</b><br>
+          Dado que el usuario omite el campo "dirección"<br>
+          Cuando intenta registrar la propiedad<br>
+          Entonces el sistema responde con un error 400 Bad Request y un mensaje de validación.
+        </li>
+        <li><b>Escenario 3: Usuario no autenticado</b><br>
+          Dado que un usuario no autenticado intenta acceder al endpoint<br>
+          Cuando envía un request POST<br>
+          Entonces el sistema responde con un error 401 Unauthorized.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-02</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-12</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Obtener Propiedades por Propietario</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint GET para listar todas las propiedades registradas por un propietario</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Propietario con propiedades</b><br>
+          Dado que el propietario está autenticado y tiene propiedades registradas<br>
+          Cuando consulta el endpoint<br>
+          Entonces se devuelve un estado 200 OK y una lista con sus propiedades.
+        </li>
+        <li><b>Escenario 2: Propietario sin propiedades</b><br>
+          Dado que el propietario está autenticado pero no tiene propiedades registradas<br>
+          Cuando consulta el endpoint<br>
+          Entonces se devuelve un estado 200 OK y una lista vacía [].
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-03</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-13</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Crear Componente</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint POST para que el técnico registre un nuevo componente en su inventario</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Creación exitosa</b><br>
+          Dado que un técnico autenticado envía la información completa del componente<br>
+          Cuando se recibe el request POST<br>
+          Entonces el sistema responde con 201 Created y el nuevo componente.
+        </li>
+        <li><b>Escenario 2: Componente duplicado</b><br>
+          Dado que el técnico intenta crear un componente con un nombre que ya existe en su inventario<br>
+          Cuando envía el request<br>
+          Entonces el sistema responde con 409 Conflict y un mensaje de error.
+        </li>
+        <li><b>Escenario 3: Acceso no autorizado por rol</b><br>
+          Dado que un usuario con rol "Propietario" intenta crear un componente<br>
+          Cuando envía el request<br>
+          Entonces el sistema responde con un error 403 Forbidden.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-04</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-13</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Actualizar Stock de Componente</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint PATCH para actualizar el stock de un componente del inventario del técnico</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Actualización exitosa</b><br>
+          Dado que un técnico quiere modificar la cantidad de un componente existente<br>
+          Cuando envía un nuevo valor de stock<br>
+          Entonces se responde con 200 OK y se actualiza el stock en la base de datos.
+        </li>
+        <li><b>Escenario 2: Componente inexistente</b><br>
+          Dado que el técnico intenta actualizar un componente con un ID que no existe<br>
+          Cuando envía el request<br>
+          Entonces el sistema responde con un error 404 Not Found.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-05</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-13</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Crear Servicio de Técnico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint POST para que el técnico defina un nuevo servicio en su catálogo, incluyendo su "receta" de componentes</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Creación exitosa</b><br>
+          Dado que un técnico autenticado envía datos válidos para un nuevo servicio y su receta<br>
+          Cuando se recibe la solicitud POST<br>
+          Entonces el sistema responde con 201 Created y el nuevo servicio.
+        </li>
+        <li><b>Escenario 2: Faltan datos obligatorios</b><br>
+          Dado que el técnico envía los datos del servicio pero sin la "receta"<br>
+          Cuando se recibe la solicitud POST<br>
+          Entonces el sistema responde con 400 Bad Request y un error de validación.
+        </li>
+        <li><b>Escenario 3: Componente de la receta no existe</b><br>
+          Dado que el técnico incluye en la receta un ID de componente que no es válido<br>
+          Cuando se recibe la solicitud POST<br>
+          Entonces el sistema responde con 400 Bad Request y un error específico.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-06</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-14</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Obtener Servicios por Zona</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint GET que devuelva los servicios disponibles en una zona geográfica específica</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Servicios encontrados</b><br>
+          Dado que un propietario consulta una zona con cobertura de técnicos<br>
+          Cuando el frontend consulta con la ubicación de la propiedad<br>
+          Entonces el sistema devuelve 200 OK y una lista de servicios únicos.
+        </li>
+        <li><b>Escenario 2: Zona sin cobertura</b><br>
+          Dado que la ubicación de la propiedad no está en la zona de cobertura de ningún técnico<br>
+          Cuando se realiza la consulta<br>
+          Entonces el sistema responde con 200 OK y una lista vacía [].
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-07</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-14</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Iniciar Flujo de Solicitud</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint que valide el plan del propietario al iniciar una solicitud</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Usuario gratuito dentro del límite</b><br>
+          Dado que un propietario con plan gratuito ha hecho 1 solicitud este mes<br>
+          Cuando inicia una nueva solicitud<br>
+          Entonces el sistema responde 200 OK y le permite continuar.
+        </li>
+        <li><b>Escenario 2: Usuario gratuito alcanza el límite</b><br>
+          Dado que el propietario con plan gratuito ya ha hecho 2 solicitudes este mes<br>
+          Cuando inicia una nueva solicitud<br>
+          Entonces el sistema responde 403 Forbidden y sugiere actualizar a Premium.
+        </li>
+        <li><b>Escenario 3: Usuario Premium sin límites</b><br>
+          Dado que un propietario con plan Premium ha hecho 5 solicitudes este mes<br>
+          Cuando inicia una nueva solicitud<br>
+          Entonces el sistema responde 200 OK y le permite continuar.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-08</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-14</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Enviar Solicitud de Servicio</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint POST que registre los detalles de una solicitud de servicio</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Envío exitoso</b><br>
+          Dado que el propietario ha completado el asistente<br>
+          Cuando envía los datos finales de la solicitud<br>
+          Entonces el sistema responde 201 Created y guarda la solicitud.
+        </li>
+        <li><b>Escenario 2: Faltan datos de recibo</b><br>
+          Dado que se omiten datos obligatorios del recibo<br>
+          Cuando se envía la solicitud<br>
+          Entonces el sistema responde 400 Bad Request con un error de validación.
+        </li>
+        <li><b>Escenario 3: Usuario gratuito intenta usar prioridad</b><br>
+          Dado que un propietario con plan gratuito marca la solicitud como prioritaria<br>
+          Cuando envía la solicitud<br>
+          Entonces el sistema responde 403 Forbidden y un mensaje de error.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-09</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-14</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Asignar Técnico Automáticamente</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>implementar la lógica para asignar automáticamente un técnico a una solicitud</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Asignación exitosa</b><br>
+          Dado que hay una solicitud pendiente y un técnico compatible<br>
+          Cuando se activa el proceso de asignación<br>
+          Entonces se asigna el técnico a la solicitud y se actualiza su estado a "asignado".
+        </li>
+        <li><b>Escenario 2: Ningún técnico compatible</b><br>
+          Dado que ningún técnico cumple con los criterios de stock o agenda<br>
+          Cuando se intenta asignar<br>
+          Entonces la solicitud permanece en estado "pendiente" y se registra el fallo.
+        </li>
+        <li><b>Escenario 3: Asignación con prioridad</b><br>
+          Dado que hay una solicitud normal y una prioritaria, y un solo técnico disponible<br>
+          Cuando se activa la asignación<br>
+          Entonces el sistema asigna el técnico a la solicitud prioritaria primero.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-10</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-13</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Actualización Automática de Stock</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un listener que reaccione al evento "Servicio Completado" para descontar el stock</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Descuento exitoso</b><br>
+          Dado que un servicio es "Completado" y se publica el evento con los componentes usados<br>
+          Cuando el listener recibe el evento<br>
+          Entonces el sistema actualiza el inventario del técnico correctamente.
+        </li>
+        <li><b>Escenario 2: El evento no contiene componentes</b><br>
+          Dado que se recibe un evento "Servicio Completado" sin componentes listados<br>
+          Cuando el listener lo procesa<br>
+          Entonces el proceso termina exitosamente sin realizar cambios en el inventario.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-11</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-15</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Enviar Evaluación de Servicio</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint POST para registrar una evaluación</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Evaluación exitosa</b><br>
+          Dado que un servicio está "Completado"<br>
+          Cuando el usuario envía una evaluación válida<br>
+          Entonces se responde 201 Created y se guarda la evaluación.
+        </li>
+        <li><b>Escenario 2: Servicio no completado</b><br>
+          Dado que un usuario intenta evaluar un servicio "En progreso"<br>
+          Cuando se envía el request<br>
+          Entonces el sistema responde 403 Forbidden y un mensaje adecuado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-12</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-15</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Obtener Evaluaciones por Técnico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint GET para obtener las evaluaciones de un técnico</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Técnico con evaluaciones</b><br>
+          Dado que un técnico tiene evaluaciones registradas<br>
+          Cuando se hace la consulta<br>
+          Entonces el sistema responde 200 OK con la lista de evaluaciones.
+        </li>
+        <li><b>Escenario 2: Técnico sin evaluaciones</b><br>
+          Dado que el técnico aún no ha recibido evaluaciones<br>
+          Cuando se hace la consulta<br>
+          Entonces el sistema responde 200 OK con una lista vacía.
+        </li>
+      </ul>
+    </td>
+  </tr>
+<tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-13</td>
+    <td>desarrollador</td>
+    <td>Alta</td>
+    <td>EP-00</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Conectar a Base de Datos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>configurar la conexión a la base de datos PostgreSQL</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Conexión exitosa</b><br>
+          Dado que las credenciales de la base de datos son correctas<br>
+          Cuando se levanta el servidor<br>
+          Entonces la conexión se establece sin errores.
+        </li>
+        <li><b>Escenario 2: Credenciales incorrectas</b><br>
+          Dado que la contraseña de la base de datos es incorrecta<br>
+          Cuando el servidor intenta conectarse<br>
+          Entonces el sistema lanza un error de autenticación y detiene el arranque.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-14</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-09</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Listener de Webhook de Stripe</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint para recibir y procesar webhooks de Stripe</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Suscripción exitosa</b><br>
+          Dado que un usuario completa un pago en Stripe<br>
+          Cuando Stripe envía el evento "checkout.session.completed"<br>
+          Entonces el sistema valida la firma y actualiza el estado del usuario a "Premium".
+        </li>
+        <li><b>Escenario 2: Firma de Webhook inválida</b><br>
+          Dado que se recibe un request con una firma de Stripe incorrecta<br>
+          Cuando el sistema intenta validar el evento<br>
+          Entonces rechaza el request con un error 400 Bad Request.
+        </li>
+        <li><b>Escenario 3: Evento de cancelación de suscripción</b><br>
+          Dado que un usuario cancela su plan desde el portal de Stripe<br>
+          Cuando Stripe envía el evento "customer.subscription.deleted"<br>
+          Entonces el sistema actualiza el estado del usuario a "Básico".
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-15</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-09</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reinicio Mensual de Contador</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear una tarea programada (cron job) que se ejecute mensualmente</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Reseteo exitoso</b><br>
+          Dado que es el primer día del mes<br>
+          Cuando se ejecuta la tarea<br>
+          Entonces el sistema reinicia el contador de solicitudes de todos los usuarios del plan gratuito.
+        </li>
+        <li><b>Escenario 2: Tarea se ejecuta en día incorrecto</b><br>
+          Dado que no es el primer día del mes<br>
+          Cuando la tarea se ejecuta (por un error o test)<br>
+          Entonces el proceso termina sin realizar ninguna acción.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-16</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-09</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Sesión de Portal de Stripe</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint que genere una sesión para el Portal de Cliente de Stripe</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Generación exitosa</b><br>
+          Dado que un usuario Premium autenticado solicita gestionar su plan<br>
+          Cuando se consulta el endpoint<br>
+          Entonces se genera y devuelve una URL única para el portal de Stripe.
+        </li>
+        <li><b>Escenario 2: Usuario no suscrito</b><br>
+          Dado que un usuario del plan gratuito intenta acceder al portal<br>
+          Cuando se consulta el endpoint<br>
+          Entonces el sistema responde 403 Forbidden.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-17</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Endpoint de Autenticación JWT</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un endpoint de login que genere tokens JWT para permitir la autenticación segura de usuarios</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Login exitoso</b><br>
+          Dado que se envía POST /api/auth/login con email y password válidos<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna un token JWT<br>
+          Y el token incluye el rol del usuario<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 2: Credenciales inválidas</b><br>
+          Dado que se envía POST /api/auth/login con credenciales incorrectas<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna error 401<br>
+          Y retorna mensaje de error apropiado.
+        </li>
+        <li><b>Escenario 3: Validación de token</b><br>
+          Dado que se envía una petición con token JWT en header Authorization<br>
+          Cuando se valida el token<br>
+          Entonces el sistema verifica la firma del token<br>
+          Y retorna la información del usuario si es válido.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-18</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Endpoint de Registro de Usuarios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear endpoints de registro diferenciados para permitir el registro de propietarios y técnicos</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Registro exitoso de propietario</b><br>
+          Dado que se envía POST /api/auth/register/owner con datos válidos<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema crea el usuario con rol "owner"<br>
+          Y encripta la contraseña<br>
+          Y retorna código 201<br>
+          Y retorna el usuario creado (sin contraseña).
+        </li>
+        <li><b>Escenario 2: Registro exitoso de técnico</b><br>
+          Dado que se envía POST /api/auth/register/technician con datos válidos<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema crea el usuario con rol "technician"<br>
+          Y almacena las certificaciones básicas<br>
+          Y retorna código 201.
+        </li>
+        <li><b>Escenario 3: Email duplicado</b><br>
+          Dado que se intenta registrar con email ya existente<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna error 409<br>
+          Y retorna mensaje indicando email duplicado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-19</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Verificación de Email</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear endpoints para verificar emails de usuarios para completar el proceso de registro</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Generar token de verificación</b><br>
+          Dado que se registra un nuevo usuario<br>
+          Cuando se completa el registro<br>
+          Entonces el sistema genera un token de verificación<br>
+          Y almacena el token en base de datos<br>
+          Y marca el usuario como "no verificado".
+        </li>
+        <li><b>Escenario 2: Verificar email</b><br>
+          Dado que se envía GET /api/auth/verify/{token}<br>
+          Cuando se procesa la petición con token válido<br>
+          Entonces el sistema marca el usuario como verificado<br>
+          Y retorna código 200<br>
+          Y retorna mensaje de confirmación.
+        </li>
+        <li><b>Escenario 3: Token inválido</b><br>
+          Dado que se envía un token de verificación inválido<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna error 400<br>
+          Y retorna mensaje de token inválido.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-20</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Middleware de Autorización</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear middleware de autorización para controlar acceso a endpoints según roles de usuario</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Acceso autorizado</b><br>
+          Dado que un usuario con rol correcto accede a un endpoint protegido<br>
+          Cuando el middleware verifica los permisos<br>
+          Entonces el sistema permite continuar con la petición<br>
+          Y pasa al siguiente middleware o controlador.
+        </li>
+        <li><b>Escenario 2: Acceso denegado por rol</b><br>
+          Dado que un usuario sin permisos accede a endpoint restringido<br>
+          Cuando el middleware verifica los permisos<br>
+          Entonces el sistema retorna error 403<br>
+          Y retorna mensaje de acceso denegado.
+        </li>
+        <li><b>Escenario 3: Token faltante</b><br>
+          Dado que se accede a endpoint protegido sin token<br>
+          Cuando el middleware verifica autenticación<br>
+          Entonces el sistema retorna error 401<br>
+          Y retorna mensaje de token requerido.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-21</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recuperación de Contraseña</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear endpoints para recuperación de contraseña para permitir a usuarios restablecer sus credenciales</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Solicitar recuperación</b><br>
+          Dado que se envía POST /api/auth/forgot-password con email válido<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema genera un token de recuperación<br>
+          Y almacena el token con expiración<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 2: Restablecer contraseña</b><br>
+          Dado que se envía POST /api/auth/reset-password con token y nueva contraseña<br>
+          Cuando se procesa la petición con token válido<br>
+          Entonces el sistema actualiza la contraseña encriptada<br>
+          Y elimina el token de recuperación<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 3: Token expirado</b><br>
+          Dado que se intenta usar un token de recuperación expirado<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna error 400<br>
+          Y retorna mensaje de token expirado.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-22</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Endpoints de Gestión de Perfiles</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear endpoints CRUD para gestión de perfiles para permitir a usuarios actualizar su información personal</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Obtener perfil</b><br>
+          Dado que se envía GET /api/users/profile con token válido<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema retorna la información del usuario<br>
+          Y omite campos sensibles como contraseña<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 2: Actualizar perfil</b><br>
+          Dado que se envía PUT /api/users/profile con datos válidos<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema actualiza los campos permitidos<br>
+          Y retorna el perfil actualizado<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 3: Datos inválidos</b><br>
+          Dado que se envían datos inválidos en actualización<br>
+          Cuando se validan los datos<br>
+          Entonces el sistema retorna error 400<br>
+          Y retorna lista de errores de validación por campo.
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Story ID</th>
+    <th>Role</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-23</td>
+    <td>desarrollador</td>
+    <td>Baja</td>
+    <td>EP-04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Sistema de Notificaciones Básico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      Como un <b>desarrollador</b>, quiero <b>crear un servicio básico de notificaciones para enviar emails simples a los usuarios</b>.
+    </td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <ul>
+        <li><b>Escenario 1: Enviar email simple</b><br>
+          Dado que se requiere enviar un email<br>
+          Cuando se llama al servicio de notificaciones<br>
+          Entonces el sistema envía el email usando configuración SMTP<br>
+          Y registra el envío en logs<br>
+          Y retorna confirmación de envío.
+        </li>
+        <li><b>Escenario 2: Configurar preferencias</b><br>
+          Dado que se envía PUT /api/users/notifications con preferencias<br>
+          Cuando se procesa la petición<br>
+          Entonces el sistema actualiza las preferencias del usuario<br>
+          Y retorna código 200.
+        </li>
+        <li><b>Escenario 3: Error en envío</b><br>
+          Dado que falla el envío de email<br>
+          Cuando se detecta el error<br>
+          Entonces el sistema registra el error en logs<br>
+          Y retorna error apropiado al llamador.
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
