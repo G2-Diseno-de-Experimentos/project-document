@@ -955,3 +955,102 @@ Tomar la decisión y agendar el servicio:
 
 Olivia actúa con cautela y presta especial atención a la seguridad y la calidad, pero el proceso actual resulta desordenado, informal e incierto. Contar con proveedores verificados, cotizaciones uniformes y comparaciones automáticas reduciría el esfuerzo de búsqueda, optimizaría su tiempo y le permitiría contratar con mayor confianza.
 
+## 2.4. Ubiquitous Language
+
+El Lenguaje Ubicuo reúne los términos que el equipo técnico y los especialistas del negocio emplean de forma consistente en conversaciones, documentación y código. Su propósito es reducir ambigüedades y mantener una comprensión compartida del dominio.
+
+**Glosario del Dominio del Negocio - ElectroLink**
+
+El glosario recopila conceptos esenciales del dominio de ElectroLink. Cada término se presenta en inglés junto con su equivalente en español y una definición breve, facilitando la comunicación entre el equipo y los stakeholders.
+
+**1.  Stakeholders & Roles**
+
+* **Homeowner** (Propietario de vivienda)
+    * Persona que reside en un hogar y busca soluciones eléctricas confiables y certificadas para prevenir o resolver fallos.
+
+* **Business Owner** (Dueño de empresa)
+    * Responsable de una oficina o PYME que necesita mantener el sistema eléctrico eficiente, operativo y dentro del marco legal.
+
+* **Service Provider** (Proveedor de servicios)
+    * Técnico profesional con certificación que ofrece servicios de instalación, reparación o mantenimiento eléctrico.
+
+* **Component Supplier** (Proveedor de componentes)
+    * Empresa o persona encargada de la venta de dispositivos, piezas o insumos eléctricos certificados.
+
+* **Platform Administrator** (Administrador de plataforma)
+    * Miembro del equipo responsable de validar, gestionar y supervisar las actividades y registros dentro de ElectroLink.
+
+
+**2. Servicios y Mantenimiento**
+
+* **Preventive Maintenance** (Mantenimiento preventivo)
+    * Servicio programado que permite identificar y corregir posibles fallas eléctricas antes de que ocurran.
+
+* **Emergency Service** (Servicio de emergencia)
+    * Atención inmediata para resolver fallos eléctricos inesperados que comprometen la seguridad o funcionalidad.
+
+* **Electric Assessment** (Evaluación eléctrica)
+    * Diagnóstico que realiza un proveedor para determinar el estado de una instalación eléctrica.
+
+* **Installation Service** (Servicio de instalación)
+    * Proceso de conexión o implementación de componentes eléctricos en viviendas o negocios, cumpliendo estándares técnicos.
+
+* **Electrical Upgrade** (Actualización eléctrica)
+    * Mejora o sustitución de partes de una instalación para adaptarla a nuevas necesidades o normas de seguridad.
+
+
+**3. Funcionalidades de la Plataforma**
+
+* **Service Request** (Solicitud de servicio)
+    * Acción del usuario para iniciar una contratación de servicios desde la plataforma.
+
+* **Matchmaking** (Emparejamiento)
+    * Proceso automatizado para conectar a un usuario con el proveedor más adecuado según filtros como ubicación, calificación y disponibilidad.
+
+* **Real-Time Tracking** (Seguimiento en tiempo real)
+    * Visualización del estado y avance de un servicio solicitado a través de la plataforma.
+
+* **Verified Profile** (Perfil verificado)
+    * Estado de un proveedor que ha sido validado por la plataforma mediante documentación y procesos de control.
+
+* **Rating and Review** (Calificación y reseña)
+    * Sistema de puntuación y comentarios que permite evaluar la experiencia del usuario con un proveedor.
+
+* **Subscription Plan** (Plan de suscripción)
+    * Modalidad de pago por parte del proveedor para acceder a beneficios dentro de la plataforma (visibilidad, herramientas, clientes).
+
+* **Booking History** (Historial de contrataciones)
+    * Registro de todos los servicios contratados, realizados y evaluados por un usuario o proveedor.
+
+
+**4. Seguridad y Cumplimiento**
+
+* **Certified Technician** (Técnico certificado)
+    * Profesional acreditado por una entidad oficial para realizar trabajos eléctricos conforme a la ley.
+
+* **Legal Compliance** (Cumplimiento legal)
+    * Condición de operar dentro de los estándares establecidos por entidades regulatorias del sector eléctrico.
+
+* **Risk Prevention** (Prevención de riesgos)
+    * Estrategia para evitar accidentes, daños o fallos eléctricos mediante prácticas seguras y mantenimiento adecuado.
+
+* **Safety Assurance** (Garantía de seguridad)
+    * Compromiso de que los servicios ofrecidos cumplen con medidas de protección para personas, instalaciones y equipos.
+
+
+**5. Otros conceptos del dominio**
+
+* **Electric Incident** (Incidente eléctrico)
+    * Evento disruptivo como sobrecarga, cortocircuito o fallo en la instalación que requiere intervención técnica.
+
+* **Energy Optimization** (Optimización energética)
+    * Prácticas que buscan mejorar el uso de energía eléctrica, reduciendo costos y desperdicios.
+
+* **Informal Market** (Mercado informal)
+    * Entorno de prestación de servicios sin regulación, licencias ni garantías de seguridad.
+
+* **Digital Presence** (Presencia digital)
+    * Visibilidad que tiene un proveedor dentro de la plataforma, influyendo en su reputación y oportunidades de negocio.
+
+<div style="page-break-after: always;"></div>
+
