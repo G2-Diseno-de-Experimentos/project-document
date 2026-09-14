@@ -5108,3 +5108,25 @@ La landing page utiliza navegación superior y enlaces de pie de página. En la 
 
 ![Sistema de navegación de ElectroLink](assets/img/cap4/information-architecture/navigation-system.png)
 
+## 4.3. Landing Page UI Design
+
+La landing page comunica el valor de ElectroLink, explica su funcionamiento y dirige a clientes y técnicos hacia el registro. Su contenido progresa desde la propuesta principal hasta beneficios, categorías, testimonios y preguntas frecuentes.
+
+### 4.3.1. Landing Page Wireframe
+
+Los wireframes establecen la jerarquía y distribución antes de aplicar la identidad visual. La cabecera presenta el mensaje central y el llamado a la acción; las secciones siguientes explican el proceso y refuerzan la confianza.
+
+![Wireframe de la landing page, vista 1](assets/img/cap4/landing/wireframe-01.png)
+
+![Wireframe de la landing page, vista 2](assets/img/cap4/landing/wireframe-02.png)
+
+![Wireframe de la landing page, vista 3](assets/img/cap4/landing/wireframe-03.png)
+
+### 4.3.2. Landing Page Mock-up
+
+Los mock-ups incorporan colores, tipografías, imágenes y componentes finales. El azul concentra las acciones principales, mientras que los fondos claros separan contenidos sin interrumpir el recorrido.
+
+![Mock-up de la landing page, vista 1](assets/img/cap4/landing/mockup-01.png)
+
+![Mock-up de la landing page, vista 2](assets/img/cap4/landing/mockup-02.png)
+
