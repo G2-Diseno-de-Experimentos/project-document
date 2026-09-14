@@ -5174,3 +5174,67 @@ La variante iOS mantiene las áreas seguras, barras de navegación jerárquicas 
 
 ![Secuencia de prototipo para iOS](assets/img/cap4/mobile/wireflow.svg)
 
+## 4.6. Web Applications UX/UI Design
+
+La aplicación web ofrece mayor espacio para comparar información y administrar solicitudes. Su diseño responde a las necesidades de clientes, técnicos y administradores, manteniendo componentes consistentes con la landing page.
+
+### 4.6.1. Web Applications Wireframes
+
+Las vistas de baja fidelidad cubren acceso, panel principal, exploración de servicios, perfil profesional, solicitud, seguimiento y gestión de cuenta.
+
+![Wireframe web 1](assets/img/cap4/web/wireframe-01.png)
+
+![Wireframe web 2](assets/img/cap4/web/wireframe-02.png)
+
+![Wireframe web 3](assets/img/cap4/web/wireframe-03.png)
+
+![Wireframe web 4](assets/img/cap4/web/wireframe-04.png)
+
+![Wireframe web 5](assets/img/cap4/web/wireframe-05.png)
+
+![Wireframe web 6](assets/img/cap4/web/wireframe-06.png)
+
+![Wireframe web 7](assets/img/cap4/web/wireframe-07.png)
+
+### 4.6.2. Web Applications Wireflow Diagrams
+
+Los wireflows describen la conexión entre pantallas para las tareas de registro, contratación, seguimiento y administración del perfil.
+
+![Wireflow web 1](assets/img/cap4/web/wireflow-01.png)
+
+![Wireflow web 2](assets/img/cap4/web/wireflow-02.png)
+
+![Wireflow web 3](assets/img/cap4/web/wireflow-03.png)
+
+![Wireflow web 4](assets/img/cap4/web/wireflow-04.png)
+
+### 4.6.3. Web Applications Mock-ups
+
+Los mock-ups trasladan los wireframes a una interfaz de alta fidelidad. Se emplean tarjetas para resumir servicios, estados visibles para las solicitudes y acciones primarias claramente diferenciadas.
+
+![Mock-up web 1](assets/img/cap4/web/mockup-01.png)
+
+![Mock-up web 2](assets/img/cap4/web/mockup-02.png)
+
+![Mock-up web 3](assets/img/cap4/web/mockup-03.png)
+
+![Mock-up web 5](assets/img/cap4/web/mockup-05.png)
+
+![Mock-up web 6](assets/img/cap4/web/mockup-06.png)
+
+![Mock-up web 7](assets/img/cap4/web/mockup-07.png)
+
+### 4.6.4. Web Applications User Flow Diagrams
+
+El diagrama resume las decisiones del usuario desde el acceso hasta la confirmación y el seguimiento del servicio.
+
+![User flow de la aplicación web](assets/img/cap4/web/user-flow.png)
+
+## 4.7. Web Applications Prototyping
+
+El prototipo web permite recorrer las vistas principales y comprobar la claridad de la navegación antes de programar la solución. Incluye acceso, exploración, selección de técnico, solicitud y consulta de estado.
+
+![Vista general del prototipo web](assets/img/cap4/web/prototype.png)
+
+Prototipo de referencia: [ElectroLink en Figma](https://www.figma.com/design/sU4hpNItE2lZ88WrlTUKwy/Untitled?node-id=31-624&t=9AhvJafsRNaQO2cX-1).
+
