@@ -1054,3 +1054,20 @@ El glosario recopila conceptos esenciales del dominio de ElectroLink. Cada térm
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo III: Requirements Specification
+
+Este capítulo convierte las necesidades identificadas en requerimientos estructurados y verificables. Incluye escenarios futuros, historias de usuario y condiciones de aceptación que orientarán el desarrollo y permitirán validar el comportamiento esperado junto con los interesados.
+
+## 3.1. To-Be Scenario Mapping
+
+Los To-Be Scenario Maps muestran la experiencia esperada de los User Personas una vez incorporada la solución propuesta para cada segmento.
+
+Semgmento 1
+<img src="https://i.postimg.cc/QxR9064h/imagen-2025-07-08-205917558.png"/>
+
+Segmento 2
+<img src="https://i.postimg.cc/wjZt4ww9/imagen-2025-07-08-205645366.png"/>
+
+Segmento 3
+<img src="https://i.postimg.cc/J00MLLhv/imagen-2025-07-08-205729249.png"/>
+
