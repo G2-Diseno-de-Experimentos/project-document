@@ -28,12 +28,14 @@
   
 |             <div style="width:300px">Alumno</div>             | <div style="width:125px">Código</div> |
 |:-------------------------------------------------------------:|:-------------------------------------------:|
-|                 Ivo Marcelo Machado Bracamonte                |              U20231C368           |
-|                 (----------Nombre----------)                  |              (-Código-)           |
-|                 (----------Nombre----------)                  |              (-Código-)           |
-|                 (----------Nombre----------)                  |              (-Código-)           |             
+|   Ivo Marcelo Machado Bracamonte                                                            |   U20231C368                               |
+|   Leonardo Fabrizzio Junior Prieto Mantari                                                            |    U202319949                               |
+|                                                               |                                   |
+|                                                               |                                   |             
 |                                                               |                                   |
 
 </div>
 
 <div align="center"> Diciembre 2026 </div>
+
+---
