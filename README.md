@@ -4978,3 +4978,24 @@ El Product Backlog reúne y prioriza las historias de usuario identificadas para
 
 El [tablero de Product Backlog de ElectroLink en Trello](https://trello.com/b/vEA621A6/electrolink-product-backlog) refleja este mismo conjunto de historias y utiliza las columnas **Product Backlog**, **Sprint Backlog**, **En progreso**, **En revisión** y **Terminado**.
 
+## 3.4. Impact Mapping
+
+Un mapa de impacto es una técnica colaborativa y visual de planificación estratégica que alinea los objetivos de un proyecto con las acciones necesarias para alcanzarlos. En este sección , el equipo presenta los mapas de impacto realizados.
+
+<hr>
+
+<img src="https://i.postimg.cc/jjHPVLW0/asdasd.png"/>
+<hr>
+
+
+
+<img src="https://i.postimg.cc/Dz0060qP/rwerwetre.png"/>
+<hr>
+
+
+
+<img src="https://i.postimg.cc/8P7Z2mN2/asdasda.png"/>
+<hr>
+
+<div style="page-break-after: always;"></div>
+
