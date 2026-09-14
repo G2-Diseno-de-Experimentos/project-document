@@ -432,3 +432,102 @@ Aspectos psicográficos:
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo II: Requirements Elicitation & Analysis
+
+En este capítulo se desarrolla la obtención y evaluación de los requerimientos funcionales y no funcionales de ElectroLink. Se presentan las técnicas de investigación utilizadas, los perfiles identificados y las prioridades del negocio, procurando que las necesidades de los stakeholders puedan validarse y conservar su trazabilidad.
+
+<br>
+
+## 2.1. Competidores
+
+El mercado digital de contratación de servicios reúne distintas plataformas dedicadas a reparaciones, mantenimiento y labores domésticas. Para establecer referentes y oportunidades de diferenciación para ElectroLink se analizaron Thumbtack, Handy y TaskRabbit.
+
+* **Thumbtack:**
+
+Es un marketplace digital que pone en contacto a personas que necesitan servicios locales con profesionales de diferentes especialidades, como plomería o electricidad.
+
+Así es como funciona:
+
+1. El cliente publica un proyecto explicando qué necesita
+
+2. Los profesionales que están registrados en esa categoría y área geográfica reciben una notificación.
+
+3. Los profesionales interesados envían cotizaciones o propuestas al cliente.
+
+4. El cliente elige al profesional que mejor se adapte a su presupuesto y necesidades.
+
+Tiene una presencia importante en Estados Unidos y resulta especialmente útil para trabajadores independientes y pequeños negocios.
+
+* **Handy:**
+
+A diferencia de Thumbtack, Handy asigna al profesional en función de la ubicación y disponibilidad, en lugar de presentar varias alternativas para que el cliente elija.
+
+Especialidad: Servicios para el hogar (limpieza, montaje de muebles, plomería, electricidad, mudanzas, etc.).
+
+Cómo funciona: Los clientes reservan directamente desde la app o el sitio web, eligen fecha/hora y el servicio que necesitan, y Handy asigna automáticamente a un profesional disponible.
+
+Ubicación: Opera principalmente en EE. UU., Canadá y Reino Unido.
+
+* **TaskRabbit:**
+
+Es una plataforma de contratación de “taskers”, personas disponibles para resolver tareas puntuales según la demanda local. Entre los servicios que ofrece se encuentran:
+
+\+Montaje de muebles (especialmente de IKEA, ya que tienen una alianza).
+
+\+Mudanzas y cargado de cosas pesadas.
+
+\+Limpieza.
+
+\+Reparaciones menores en el hogar.
+
+\+Hacer compras o entregas.
+
+\+Colgar cuadros, instalar estanterías, etc.
+
+Cómo funciona TaskRabbit: 
+
+1. Buscas el tipo de tarea que necesitas hacer.
+
+2. Elige a un tasker basado en su perfil, tarifas por hora, y reseñas.
+
+3. Agendas el servicio directamente con esa persona, eligiendo la fecha y la hora.
+
+4. Pagas a través de la plataforma cuando el trabajo está completo.
+
+### 2.1.1. Análisis competitivo
+
+La siguiente matriz compara el posicionamiento de ElectroLink con los principales referentes identificados.
+
+| Competitive Analysis Landscape |  |  |  |  |  |
+| ----- | :---- | :---- | :---- | :---- | :---- |
+| ¿Por qué llevar a cabo este análisis |  | Porque  necesitamos identificar fortalezas, debilidades y diferenciadores clave frente a plataformas similares para definir la estrategia competitiva de ElectroLink. |  |  |  |
+|  |  |  Necesitamos Adaptarnos a las tendencias del mercado |  |  |  |
+|   |   | ElectroLink | Thumbtack | Handy | TaskRabbit |
+| Perfil | Overview |  Plataforma especializada en instalaciones y mantenimiento eléctrico legal y seguro. Conecta a clientes con proveedores certificados, ofreciendo asesoría técnica, prevención de riesgos y seguimiento en tiempo real.  |  Marketplace general de servicios donde los usuarios pueden encontrar profesionales para tareas como reparaciones |  Plataforma centrada en tareas del hogar como limpieza, montaje de muebles y algunas reparaciones menores |  Conecta personas con taskers para tareas del hogar como mudanzas, reparaciones menores, compras y más. |
+|  | Ventaja competitiva ¿Qué valor ofrece a los clientes? | Instalaciones y mantenimiento eléctrico general con proveedores certificados. Servicio legal, seguro y con asesoría técnica. | Ofrece una amplia variedad de servicios, pero sin enfoque especializado. | Servicios de hogar bajo demanda. Asignación automática. | Contratación rápida para tareas específicas, con perfiles seleccionables. |
+| Perfil de Marketing | Mercado objetivo | Hogares, oficinas, escuelas y PYMES urbanas que requieren instalaciones o mantenimiento eléctrico confiable. |  Clientes generales que necesitan servicios variados (hogar, eventos, clases, etc.). |  Personas que requieren limpieza, montaje o reparaciones domésticas. |  Hogares que requieren tareas prácticas como mudanza, limpieza, montaje, etc. |
+|  | Estrategias de marketing |  Alianzas con proveedores certificados, educación sobre mantenimiento eléctrico. |  Publicidad digital, visibilidad en buscadores, reviews de usuarios. |  Integración con IKEA, marketing por conveniencia y rapidez. |  Visibilidad en buscadores con una app amigable y con integración con IKEA |
+| Perfil de productos | Productos & Servicios | Instalación de componentes, mantenimiento general, diagnósticos técnicos y asesoría normativa. |  Servicios generales (fotografía, plomería, eventos, clases, etc.). |  Limpieza, fontanería, montaje, electricidad básica, mudanza. |  Montaje de muebles, limpieza, ayuda con tareas, mudanza. |
+|  | Precios y Costos |  Costos por servicio y suscripción mensual para monitoreo/prevención. | Los profesionales establecen precios. Thumbtack cobra parte de la comisión |  Precio fijo por servicio. Handy toma parte de la comisión. |  Costo por hora según la tarea deseada. Taskrabbit cobra una comisión al profesional. |
+|  | Canales de distribución (Web y/o Móvil) |  Plataforma web \+ app móvil (foco en experiencia técnica y educativa) |  Web \+ app móvil. |  Web \+ app móvil. |  Web \+ app móvil. |
+| Análisis SWOT | Fortalezas | Especialización en electricidad, asesoría legal, prevención de riesgos y red de técnicos certificados. |  Variedad de servicios, alta visibilidad, gran base de usuarios. |  Rapidez de reserva por sus procesos automatizados. |  Facilidad para elegir trabajadores, buena reputación por las tareas simples. |
+|  | Debilidades | Somos nuevos en el mercado y tenemos una dependencia de proveedores certificados: |  No tiene enfoque especializado, experiencia muy generalista. Puede ser complicado encontrar personal especializado. | Tiene poca personalización al ser todo generalmente automático |  Algunos trabajadores no están certificados. Esto puede variar la calidad de los servicios. |
+|  | Oportunidades |  Alianzas con aseguradoras, certificaciones oficiales, posible expansión a smart energy, estos servicios están poco atendidos. |  Ampliar a servicios técnicos más especializados. |  Mejorar procesos de selección de profesionales a través de una expansión hacia servicios técnicos especializados. |  TaskRabbit podría asociarse con marcas de smart home (como Google Nest, Philips Hue, etc.) para ofrecer instalación y soporte técnico |
+|  | Amenazas |  Falta de confianza inicial. Si no se mantiene un buen control o evaluación a los proveedores eléctricos puede afectar la experiencia del cliente. |  Tiene una gran saturación del mercado y competencia entre profesionales. |  Problemas con calidad inconsistente del servicio dado que los usuarios no eligen al profesional |  Cada vez más personas contratan técnicos y ayudantes directamente por redes como Facebook Marketplace. Lo que hace más difícil estar en el mercado. |
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+Para competir con Thumbtack, Handy y TaskRabbit, ElectroLink concentrará su estrategia en tres atributos: especialización técnica, confianza en los proveedores y calidad del servicio eléctrico y de mantenimiento.
+
+#### **1\. Estrategia de diferenciación especializandonos en sistemas eléctricos**
+
+Mientras Thumbtack y TaskRabbit cubren categorías muy diversas, ElectroLink se especializará en el mantenimiento preventivo y la reparación de sistemas eléctricos para viviendas y empresas. Este enfoque permitirá construir una propuesta más precisa y confiable para el sector.
+
+#### **2\. Garantía de seguridad y legalidad en todos los servicios**
+
+La plataforma incorporará un proceso de validación para comprobar que los proveedores cuenten con las certificaciones y licencias correspondientes. Asimismo, promoverá que los trabajos ofrecidos se ejecuten de acuerdo con las normas aplicables al sector eléctrico.
+
+#### **3\. Precios transparentes y competitivos**
+
+Frente al cobro por leads utilizado por Thumbtack, ElectroLink planteará costos visibles tanto para clientes como para proveedores. También se evaluarán suscripciones o tarifas planas para servicios preventivos, buscando brindar mayor previsibilidad al usuario.
+
