@@ -5130,3 +5130,47 @@ Los mock-ups incorporan colores, tipografías, imágenes y componentes finales. 
 
 ![Mock-up de la landing page, vista 2](assets/img/cap4/landing/mockup-02.png)
 
+## 4.4. Mobile Applications UX/UI Design
+
+La aplicación móvil adapta las funciones esenciales a un contexto de uso rápido. El flujo principal permite iniciar sesión, buscar una especialidad, revisar un perfil, programar el servicio y recibir confirmación.
+
+### 4.4.1. Mobile Applications Wireframes
+
+Los wireframes móviles representan las pantallas básicas y su jerarquía funcional sin depender todavía del acabado gráfico.
+
+![Wireframes de la aplicación móvil](assets/img/cap4/mobile/wireframes.svg)
+
+### 4.4.2. Mobile Applications Wireflow Diagrams
+
+El wireflow conecta las pantallas del proceso de contratación y muestra el regreso al listado cuando el usuario desea cambiar su selección.
+
+![Wireflow de la aplicación móvil](assets/img/cap4/mobile/wireflow.svg)
+
+### 4.4.3. Mobile Applications Mock-ups
+
+Los mock-ups aplican la identidad de ElectroLink a las vistas de acceso, inicio, resultados, perfil del técnico y confirmación.
+
+![Mock-ups de la aplicación móvil](assets/img/cap4/mobile/mockups.svg)
+
+### 4.4.4. Mobile Applications User Flow Diagrams
+
+El flujo contempla decisiones y rutas alternativas. Cuando no hay resultados se ajustan los filtros; si el usuario no confirma al técnico, vuelve al listado sin perder el criterio de búsqueda.
+
+![User flow de la aplicación móvil](assets/img/cap4/mobile/user-flow.svg)
+
+## 4.5. Mobile Applications Prototyping
+
+El prototipo móvil reúne las pantallas de alta fidelidad y valida la secuencia de contratación. Para esta etapa se documentan las transiciones principales, los estados de selección y las confirmaciones necesarias antes de iniciar el desarrollo nativo.
+
+### 4.5.1. Android Mobile Applications Prototyping
+
+La variante Android conserva la estructura visual general e incorpora navegación inferior, comportamiento estándar del botón Atrás y selectores de fecha propios de la plataforma. Los cambios de estado se comunican mediante indicadores visibles y mensajes breves.
+
+![Secuencia de prototipo para Android](assets/img/cap4/mobile/mockups.svg)
+
+### 4.5.2. iOS Mobile Applications Prototyping
+
+La variante iOS mantiene las áreas seguras, barras de navegación jerárquicas y controles familiares para selección y confirmación. Ambas variantes comparten lógica y contenido, pero respetan los patrones de interacción de cada sistema operativo.
+
+![Secuencia de prototipo para iOS](assets/img/cap4/mobile/wireflow.svg)
+
