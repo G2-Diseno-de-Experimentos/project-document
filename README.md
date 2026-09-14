@@ -5248,19 +5248,19 @@ Los diagramas siguientes utilizan la notación C4: primero muestran el entorno d
 
 El diagrama de contexto presenta a ElectroLink como un único sistema y señala a sus actores y servicios externos. Los clientes solicitan atenciones, los técnicos administran y ejecutan trabajos, y los administradores supervisan la operación.
 
-![Diagrama C4 de contexto de ElectroLink](assets/img/cap4/c4/context.svg)
+![Diagrama C4 de contexto de ElectroLink](assets/img/cap4/c4/Context-diagram.png)
 
 ### 4.8.2. Software Architecture Container Diagrams
 
 El nivel de contenedores distingue la landing page, la aplicación web, la aplicación móvil, la API REST y la base de datos PostgreSQL. La API concentra las reglas de negocio y se integra con pagos, mapas y notificaciones.
 
-![Diagrama C4 de contenedores de ElectroLink](assets/img/cap4/c4/container.svg)
+![Diagrama C4 de contenedores de ElectroLink](assets/img/cap4/c4/Diagrama-contenedores.png)
 
 ### 4.8.3. Software Architecture Components Diagrams
 
 El nivel de componentes detalla la API. Los controladores reciben solicitudes, los servicios de aplicación coordinan casos de uso, el dominio protege las reglas y los repositorios aíslan la persistencia y las integraciones externas.
 
-![Diagrama C4 de componentes de ElectroLink](assets/img/cap4/c4/components.svg)
+![Diagrama C4 de componentes de ElectroLink](assets/img/cap4/c4/Components-diagram.png)
 
 ## 4.9. Software Object-Oriented Design
 
@@ -5270,7 +5270,7 @@ El diseño orientado a objetos representa las entidades y servicios necesarios p
 
 El modelo mantiene a `ServiceRequest` como eje del proceso de contratación. Una solicitud relaciona al cliente, la propiedad y el servicio; posteriormente puede originar una asignación, ejecución, pago y reseña.
 
-![Diagrama de clases de ElectroLink](assets/img/cap4/object-design/class-diagram.svg)
+![Diagrama de clases de ElectroLink](assets/img/cap4/object-design/Diagrama-de-clases.png)
 
 ### 4.9.2. Class Dictionary
 
@@ -5297,4 +5297,4 @@ La persistencia principal sigue un modelo relacional sobre PostgreSQL. Las clave
 
 Para el alcance actual se selecciona una base relacional, ya que las operaciones requieren consistencia entre contratación, asignación, ejecución y pago. El modelo puede complementarse en el futuro con almacenamiento especializado para archivos, sin alterar las relaciones centrales.
 
-![Diagrama de base de datos relacional de ElectroLink](assets/img/cap4/database-design/relational-model.svg)
+![Diagrama de base de datos relacional de ElectroLink](assets/img/cap4/database-design/Database-design.png)
