@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1400" height="860" fill="#0f172a"/>
+  <text x="60" y="70" fill="#f8fafc" font-family="Arial" font-size="34" font-weight="700">C4 · System Context — ElectroLink</text>
+  <g font-family="Arial" text-anchor="middle">
+    <g fill="#0b5cad"><circle cx="170" cy="225" r="48"/><rect x="92" y="275" width="156" height="100" rx="28"/></g>
+    <text x="170" y="315" fill="white" font-size="23" font-weight="700">Propietario</text><text x="170" y="345" fill="#dbeafe" font-size="15">Solicita y evalúa servicios</text>
+    <g fill="#0b5cad"><circle cx="170" cy="535" r="48"/><rect x="92" y="585" width="156" height="100" rx="28"/></g>
+    <text x="170" y="625" fill="white" font-size="23" font-weight="700">Técnico</text><text x="170" y="655" fill="#dbeafe" font-size="15">Ofrece y ejecuta servicios</text>
+    <g fill="#0b5cad"><circle cx="1230" cy="225" r="48"/><rect x="1152" y="275" width="156" height="100" rx="28"/></g>
+    <text x="1230" y="315" fill="white" font-size="23" font-weight="700">Administrador</text><text x="1230" y="345" fill="#dbeafe" font-size="15">Supervisa la plataforma</text>
+    <rect x="500" y="250" width="400" height="260" rx="20" fill="#2563eb" stroke="#93c5fd" stroke-width="3"/>
+    <text x="700" y="335" fill="white" font-size="38" font-weight="700">ElectroLink</text><text x="700" y="380" fill="#dbeafe" font-size="19">Sistema de contratación y gestión</text><text x="700" y="410" fill="#dbeafe" font-size="19">de servicios eléctricos certificados</text>
+    <rect x="1040" y="560" width="260" height="120" rx="16" fill="#475569"/><text x="1170" y="610" fill="white" font-size="24" font-weight="700">Stripe</text><text x="1170" y="642" fill="#e2e8f0" font-size="16">Procesa pagos</text>
+    <rect x="520" y="650" width="260" height="120" rx="16" fill="#475569"/><text x="650" y="700" fill="white" font-size="24" font-weight="700">Mapas</text><text x="650" y="732" fill="#e2e8f0" font-size="16">Geolocalización</text>
+    <rect x="900" y="80" width="300" height="120" rx="16" fill="#475569"/><text x="1050" y="130" fill="white" font-size="24" font-weight="700">Notificaciones</text><text x="1050" y="162" fill="#e2e8f0" font-size="16">Correo y mensajes push</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M250 320 L490 350"/><path d="M250 620 L500 470"/><path d="M1150 320 L910 350"/><path d="M900 430 L1030 590"/><path d="M700 510 L660 640"/><path d="M820 250 L960 205"/></g>
+</svg>

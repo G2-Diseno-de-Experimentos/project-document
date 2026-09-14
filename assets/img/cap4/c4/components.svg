@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1600" height="1000" fill="#0f172a"/>
+  <text x="55" y="65" fill="white" font-family="Arial" font-size="34" font-weight="700">C4 · Component Diagram — RESTful API</text>
+  <g font-family="Arial" text-anchor="middle">
+    <rect x="70" y="150" width="250" height="120" rx="14" fill="#2563eb"/><text x="195" y="200" fill="white" font-size="22" font-weight="700">Web / Mobile UI</text><text x="195" y="232" fill="#dbeafe" font-size="16">Consume JSON/HTTPS</text>
+    <rect x="410" y="120" width="300" height="145" rx="14" fill="#f97316"/><text x="560" y="174" fill="white" font-size="24" font-weight="700">Controllers</text><text x="560" y="208" fill="#ffedd5" font-size="16">Endpoints y validación</text><text x="560" y="234" fill="#ffedd5" font-size="16">de recursos</text>
+    <rect x="410" y="340" width="300" height="145" rx="14" fill="#16a34a"/><text x="560" y="394" fill="white" font-size="24" font-weight="700">Application Services</text><text x="560" y="428" fill="#dcfce7" font-size="16">Comandos, consultas</text><text x="560" y="454" fill="#dcfce7" font-size="16">y orquestación</text>
+    <rect x="410" y="560" width="300" height="145" rx="14" fill="#7c3aed"/><text x="560" y="614" fill="white" font-size="24" font-weight="700">Domain Model</text><text x="560" y="648" fill="#ede9fe" font-size="16">Aggregates, entidades</text><text x="560" y="674" fill="#ede9fe" font-size="16">y Value Objects</text>
+    <rect x="410" y="780" width="300" height="145" rx="14" fill="#64748b"/><text x="560" y="834" fill="white" font-size="24" font-weight="700">Repositories</text><text x="560" y="868" fill="#e2e8f0" font-size="16">Persistencia con</text><text x="560" y="894" fill="#e2e8f0" font-size="16">Entity Framework</text>
+    <ellipse cx="960" cy="855" rx="165" ry="72" fill="#b91c1c"/><text x="960" y="847" fill="white" font-size="26" font-weight="700">PostgreSQL</text><text x="960" y="879" fill="#fee2e2" font-size="16">Base de datos</text>
+    <rect x="860" y="120" width="290" height="115" rx="14" fill="#0f766e"/><text x="1005" y="168" fill="white" font-size="21" font-weight="700">IAM</text><text x="1005" y="198" fill="#ccfbf1" font-size="15">Identidad y acceso</text>
+    <rect x="1220" y="120" width="290" height="115" rx="14" fill="#0f766e"/><text x="1365" y="168" fill="white" font-size="21" font-weight="700">Profiles</text><text x="1365" y="198" fill="#ccfbf1" font-size="15">Perfiles y preferencias</text>
+    <rect x="860" y="300" width="290" height="115" rx="14" fill="#0f766e"/><text x="1005" y="348" fill="white" font-size="21" font-weight="700">Assets</text><text x="1005" y="378" fill="#ccfbf1" font-size="15">Propiedades e inventario</text>
+    <rect x="1220" y="300" width="290" height="115" rx="14" fill="#0f766e"/><text x="1365" y="348" fill="white" font-size="21" font-weight="700">Service Design</text><text x="1365" y="378" fill="#ccfbf1" font-size="15">Catálogo y planificación</text>
+    <rect x="860" y="480" width="290" height="115" rx="14" fill="#0f766e"/><text x="1005" y="528" fill="white" font-size="21" font-weight="700">Service Operation</text><text x="1005" y="558" fill="#ccfbf1" font-size="15">Ejecución y evaluación</text>
+    <rect x="1220" y="480" width="290" height="115" rx="14" fill="#0f766e"/><text x="1365" y="528" fill="white" font-size="21" font-weight="700">Subscriptions</text><text x="1365" y="558" fill="#ccfbf1" font-size="15">Planes y pagos</text>
+    <rect x="1040" y="660" width="290" height="115" rx="14" fill="#0f766e"/><text x="1185" y="708" fill="white" font-size="21" font-weight="700">Analytics</text><text x="1185" y="738" fill="#ccfbf1" font-size="15">Métricas y reportes</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"><path d="M320 210 L400 195"/><path d="M560 265 L560 330"/><path d="M560 485 L560 550"/><path d="M560 705 L560 770"/><path d="M710 850 L785 850"/><path d="M710 400 L850 180"/><path d="M710 410 L1210 180"/><path d="M710 430 L850 355"/><path d="M710 440 L1210 355"/><path d="M710 455 L850 535"/><path d="M710 465 L1210 535"/><path d="M710 475 L1030 700"/></g>
+</svg>

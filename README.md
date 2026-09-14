@@ -5238,3 +5238,27 @@ El prototipo web permite recorrer las vistas principales y comprobar la claridad
 
 Prototipo de referencia: [ElectroLink en Figma](https://www.figma.com/design/sU4hpNItE2lZ88WrlTUKwy/Untitled?node-id=31-624&t=9AhvJafsRNaQO2cX-1).
 
+## 4.8. Domain-Driven Software Architecture
+
+La arquitectura se organiza por capacidades del negocio: identidad y acceso, perfiles, catálogo, solicitudes, ejecución, suscripciones y notificaciones. Esta separación reduce el acoplamiento y permite que las reglas de negocio evolucionen sin depender de la interfaz.
+
+Los diagramas siguientes utilizan la notación C4: primero muestran el entorno del sistema, luego sus contenedores ejecutables y finalmente los componentes internos del backend.
+
+### 4.8.1. Software Architecture Context Diagram
+
+El diagrama de contexto presenta a ElectroLink como un único sistema y señala a sus actores y servicios externos. Los clientes solicitan atenciones, los técnicos administran y ejecutan trabajos, y los administradores supervisan la operación.
+
+![Diagrama C4 de contexto de ElectroLink](assets/img/cap4/c4/context.svg)
+
+### 4.8.2. Software Architecture Container Diagrams
+
+El nivel de contenedores distingue la landing page, la aplicación web, la aplicación móvil, la API REST y la base de datos PostgreSQL. La API concentra las reglas de negocio y se integra con pagos, mapas y notificaciones.
+
+![Diagrama C4 de contenedores de ElectroLink](assets/img/cap4/c4/container.svg)
+
+### 4.8.3. Software Architecture Components Diagrams
+
+El nivel de componentes detalla la API. Los controladores reciben solicitudes, los servicios de aplicación coordinan casos de uso, el dominio protege las reglas y los repositorios aíslan la persistencia y las integraciones externas.
+
+![Diagrama C4 de componentes de ElectroLink](assets/img/cap4/c4/components.svg)
+
