@@ -4903,3 +4903,78 @@ En esta sección se organizan las épicas y las historias de usuario, cada una a
 </table>
 
 
+## 3.3. Product Backlog
+
+El Product Backlog reúne y prioriza las historias de usuario identificadas para ElectroLink. Los elementos de prioridad alta se atienden primero porque sostienen los procesos principales de registro de activos, contratación, agenda y gestión de servicios. Las estimaciones iniciales utilizan puntos de historia y pueden ajustarse durante el refinamiento del equipo.
+
+| Orden | Story ID | Título | Epic | Prioridad | Story Points |
+|---:|---|---|---|---|---:|
+| 1 | US-05 | Navegación sin errores | EP-08 | Alta | 5 |
+| 2 | US-29 | Configuración de zona de cobertura geográfica | EP-06 | Alta | 8 |
+| 3 | US-31 | Crear componente eléctrico | EP-10 | Alta | 5 |
+| 4 | US-32 | Editar componente eléctrico | EP-10 | Alta | 5 |
+| 5 | US-33 | Eliminar componente eléctrico | EP-10 | Alta | 3 |
+| 6 | US-34 | Registro de propiedad | EP-10 | Alta | 5 |
+| 7 | US-37 | Registro de inventario de componentes | EP-10 | Alta | 8 |
+| 8 | US-38 | Actualización de stock de componentes | EP-10 | Alta | 5 |
+| 9 | US-39 | Alertas de stock mínimo | EP-10 | Alta | 5 |
+| 10 | US-44 | Selección de servicio del catálogo | EP-04 | Alta | 5 |
+| 11 | US-45 | Cancelación de servicios programados | EP-04 | Alta | 5 |
+| 12 | US-47 | Historial de servicios contratados | EP-05 | Alta | 5 |
+| 13 | US-48 | Configurar horarios semanales | EP-06 | Alta | 5 |
+| 14 | US-49 | Modificar horarios de trabajo | EP-06 | Alta | 3 |
+| 15 | US-50 | Bloquear fechas y horarios | EP-06 | Alta | 5 |
+| 16 | US-51 | Visualizar agenda de trabajos asignados | EP-06 | Alta | 8 |
+| 17 | US-53 | Crear servicios con recetas de componentes | EP-11 | Alta | 8 |
+| 18 | US-54 | Modificar servicios y recetas | EP-11 | Alta | 5 |
+| 19 | US-55 | Eliminar servicios del catálogo | EP-11 | Alta | 3 |
+| 20 | US-62 | Actualización de inventario posterior al servicio | EP-06 | Alta | 8 |
+| 21 | US-01 | Visualización de características y beneficios | EP-08 | Media | 3 |
+| 22 | US-02 | Visualización de testimonios | EP-08 | Media | 3 |
+| 23 | US-03 | Adaptabilidad a diferentes dispositivos | EP-08 | Media | 5 |
+| 24 | US-04 | Visualización de una sección principal | EP-08 | Media | 3 |
+| 25 | US-08 | Información de la startup | EP-08 | Media | 2 |
+| 26 | US-09 | Misión de la startup | EP-08 | Media | 2 |
+| 27 | US-10 | Visión de la startup | EP-08 | Media | 2 |
+| 28 | US-11 | Información detallada de los servicios | EP-08 | Media | 3 |
+| 29 | US-12 | Planes de suscripción disponibles | EP-08 | Media | 3 |
+| 30 | US-13 | Registro de cuenta como dueño de hogar | EP-01 | Media | 5 |
+| 31 | US-14 | Registro de cuenta como dueño de empresa | EP-01 | Media | 5 |
+| 32 | US-15 | Registro de cuenta para técnicos | EP-01 | Media | 5 |
+| 33 | US-27 | Dashboard personalizado | EP-03 | Media | 8 |
+| 34 | US-30 | Notificaciones personalizadas | EP-03 | Media | 5 |
+| 35 | US-35 | Edición de propiedad | EP-10 | Media | 3 |
+| 36 | US-36 | Eliminación de propiedad | EP-10 | Media | 3 |
+| 37 | US-40 | Contratación mediante asistente guiado | EP-04 | Media | 8 |
+| 38 | US-41 | Selección de propiedad | EP-04 | Media | 3 |
+| 39 | US-42 | Carga manual de recibos eléctricos | EP-04 | Media | 5 |
+| 40 | US-43 | Descripción detallada del problema | EP-04 | Media | 3 |
+| 41 | US-46 | Notificación de asignación de técnico | EP-04 | Media | 5 |
+| 42 | US-52 | Configurar tiempo de traslado | EP-06 | Media | 3 |
+| 43 | US-56 | Precios por tipo de servicio y zona | EP-06 | Media | 5 |
+| 44 | US-58 | Notificación de límite de solicitudes | EP-04 | Media | 3 |
+| 45 | US-59 | Seguimiento de estados del servicio | EP-04 | Media | 8 |
+| 46 | US-60 | Registro fotográfico antes y después | EP-07 | Media | 5 |
+| 47 | US-61 | Reportes técnicos estructurados | EP-07 | Media | 8 |
+| 48 | US-63 | Historial de clientes atendidos | EP-06 | Media | 5 |
+| 49 | US-06 | Navegación mediante encabezado | EP-08 | Baja | 2 |
+| 50 | US-07 | Visualización del pie de página | EP-08 | Baja | 2 |
+| 51 | US-16 | Verificación de cuenta por correo | EP-01 | Baja | 5 |
+| 52 | US-17 | Inicio de sesión | EP-01 | Baja | 5 |
+| 53 | US-18 | Validación de datos de registro | EP-02 | Baja | 3 |
+| 54 | US-19 | Mensajes de éxito del registro | EP-02 | Baja | 2 |
+| 55 | US-20 | Mensajes de error del registro | EP-02 | Baja | 2 |
+| 56 | US-21 | Recuperación de contraseña | EP-03 | Baja | 5 |
+| 57 | US-22 | Cierre de sesión | EP-03 | Baja | 2 |
+| 58 | US-23 | Visualización del perfil de propietario | EP-03 | Baja | 3 |
+| 59 | US-24 | Edición del perfil de propietario | EP-03 | Baja | 3 |
+| 60 | US-25 | Visualización del perfil de técnico | EP-03 | Baja | 3 |
+| 61 | US-26 | Edición del perfil de técnico | EP-03 | Baja | 3 |
+| 62 | US-28 | Portafolio digital con evidencias | EP-07 | Baja | 5 |
+| 63 | US-57 | Beneficio de solicitud prioritaria | EP-04 | Baja | 3 |
+| 64 | US-64 | Calificación posterior al servicio | EP-07 | Baja | 3 |
+| 65 | US-65 | Visualización de calificaciones y reseñas | EP-07 | Baja | 3 |
+| 66 | US-66 | Retroalimentación directa del servicio | EP-07 | Baja | 3 |
+
+El [tablero de Product Backlog de ElectroLink en Trello](https://trello.com/b/vEA621A6/electrolink-product-backlog) refleja este mismo conjunto de historias y utiliza las columnas **Product Backlog**, **Sprint Backlog**, **En progreso**, **En revisión** y **Terminado**.
+
