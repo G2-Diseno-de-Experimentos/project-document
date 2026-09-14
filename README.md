@@ -741,3 +741,45 @@ Los user personas representan los tres segmentos objetivo definidos para Electro
 **Segmento #3**
 <img src="https://i.postimg.cc/85Tk7CZS/Alejandro-L-pez-9.png"/>
 
+### 2.3.2. User Task Matrix
+
+La matriz organiza las actividades de los User Personas de **ElectroLink** según su frecuencia e importancia. Estas tareas se relacionan con el mantenimiento eléctrico preventivo en viviendas y oficinas, así como con la prestación profesional de servicios.
+
+---
+
+### Olivia Pérez – Propietaria de hogar urbano
+
+| Actividades                                          | Frecuencia     | Importancia |
+|------------------------------------------------------|----------------|-------------|
+| Buscar electricistas certificados                    | Frecuentemente | Alta        |
+| Agendar mantenimientos preventivos para el hogar     | Ocasionalmente | Alta        |
+| Comparar calificaciones de proveedores               | Frecuentemente | Media       |
+| Buscar soluciones que ahorren energía en el hogar    | Ocasionalmente | Media       |
+| Pedir recomendaciones a vecinos o conocidos          | Rara vez       | Media       |
+
+---
+
+### Eduardo Gonzales – Dueño de PYME / Oficina
+
+| Actividades                                          | Frecuencia     | Importancia |
+|------------------------------------------------------|----------------|-------------|
+| Buscar formas de reducir costos energéticos          | Frecuentemente | Alta        |
+| Contratar servicios de mantenimiento eléctrico        | Ocasionalmente | Alta        |
+| Llevar registro del historial de mantenimiento        | Ocasionalmente | Media       |
+| Buscar proveedores o técnicos de confianza            | Ocasionalmente | Alta        |
+| Usar herramientas digitales para gestionar instalaciones | A veces     | Media       |
+
+---
+
+### Alejandro López – Proveedor de servicios eléctricos certificados
+
+| Actividades                                          | Frecuencia     | Importancia |
+|------------------------------------------------------|----------------|-------------|
+| Buscar nuevos clientes o trabajos                    | Frecuentemente | Alta        |
+| Actualizar su disponibilidad de servicios en plataformas | Ocasionalmente | Media    |
+| Gestionar pedidos y comunicación con clientes        | Frecuentemente | Alta        |
+| Pedir reseñas o testimonios a sus clientes           | Rara vez       | Media       |
+| Mantenerse al día con normativas eléctricas          | Ocasionalmente | Alta        |
+
+<hr>
+
