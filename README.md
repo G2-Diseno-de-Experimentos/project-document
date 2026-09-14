@@ -5056,3 +5056,55 @@ En iOS se respetan las áreas seguras, la navegación jerárquica y los patrones
 
 En Android se aplican convenciones de Material Design, tipografía Roboto para la interfaz funcional y áreas táctiles de al menos 48 dp. La barra superior contextualiza cada pantalla, la navegación inferior agrupa los destinos frecuentes y el botón Atrás conserva el historial esperado. Los estados, elevaciones y transiciones ayudan a distinguir acciones disponibles sin recargar la pantalla.
 
+## 4.2. Information Architecture
+
+La arquitectura de información organiza las funciones de ElectroLink para que clientes y técnicos encuentren rápidamente lo que necesitan. La estructura diferencia contenidos públicos, actividades de contratación y herramientas de gestión según el perfil autenticado.
+
+### 4.2.1. Organization Systems
+
+Se utiliza una organización jerárquica complementada por categorías. Desde el nivel público se accede a información general y al inicio de sesión; después de autenticarse, cada rol visualiza módulos propios. Los servicios se agrupan por especialidad, mientras que las solicitudes se ordenan por estado y fecha.
+
+![Sistema de organización de ElectroLink](assets/img/cap4/information-architecture/organization-system.png)
+
+### 4.2.2. Labeling Systems
+
+Las etiquetas se redactan con vocabulario cotidiano y orientado a la acción. Se evitan términos técnicos internos y se mantiene el mismo nombre para una función en todas las plataformas.
+
+| Etiqueta | Significado |
+|---|---|
+| Inicio | Resumen de actividad y accesos frecuentes |
+| Servicios | Categorías y prestaciones disponibles |
+| Técnicos | Profesionales que pueden atender una solicitud |
+| Solicitudes | Servicios pedidos y su estado actual |
+| Agenda | Fechas disponibles y atenciones programadas |
+| Historial | Trabajos concluidos o cancelados |
+| Suscripción | Plan y beneficios del técnico |
+| Perfil | Datos personales, preferencias y seguridad |
+| Ayuda | Preguntas frecuentes y canales de soporte |
+| Cerrar sesión | Finalización segura de la sesión activa |
+
+### 4.2.3. SEO Tags and Meta Tags
+
+La landing page emplea metadatos descriptivos para mejorar su presentación en buscadores y al compartir enlaces.
+
+| Elemento | Propuesta |
+|---|---|
+| `title` | ElectroLink | Encuentra técnicos de confianza |
+| `description` | Plataforma para solicitar y gestionar servicios técnicos de forma sencilla y segura. |
+| `keywords` | servicios técnicos, electricistas, mantenimiento, técnicos de confianza |
+| `robots` | index, follow |
+| Open Graph | Título, descripción, imagen de marca y URL canónica |
+| Twitter Card | Tarjeta de resumen con imagen destacada |
+
+Cada página pública debe contar con un título único, descripción pertinente, jerarquía correcta de encabezados y texto alternativo en imágenes relevantes.
+
+### 4.2.4. Searching Systems
+
+La búsqueda combina texto libre con filtros por especialidad, ubicación, disponibilidad, rango de precio y valoración. Los resultados muestran primero la coincidencia con la necesidad ingresada y luego criterios de confianza. Si no existen coincidencias, el sistema propone ajustar filtros o explorar categorías relacionadas.
+
+### 4.2.5. Navigation Systems
+
+La landing page utiliza navegación superior y enlaces de pie de página. En la plataforma web se incorpora un menú lateral o superior según el ancho de pantalla. En móvil, los destinos principales se ubican en una barra inferior y las funciones secundarias se agrupan en Perfil.
+
+![Sistema de navegación de ElectroLink](assets/img/cap4/information-architecture/navigation-system.png)
+
