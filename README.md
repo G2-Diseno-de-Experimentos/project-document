@@ -5300,11 +5300,251 @@ Para el alcance actual se selecciona una base relacional, ya que las operaciones
 ![Diagrama de base de datos relacional de ElectroLink](assets/img/cap4/database-design/Database-design.png)
 
 # Capítulo V: Product Implementation
+
+Se describe la evolución del sistema a lo largo de distintos sprints, detallando las principales decisiones tecnológicas adoptadas durante su desarrollo. Asimismo, se presentan las prácticas utilizadas para la gestión de versiones, los estándares aplicados al código y los mecanismos empleados para comprobar el funcionamiento de la solución con usuarios reales. Finalmente, se explican las actividades de despliegue, la ejecución de pruebas funcionales y las mejoras incorporadas a partir de los comentarios obtenidos durante las sesiones de validación.
+
 ## 5.1. Software Configuration Management.
+
+Una administración deficiente de la configuración del software puede provocar problemas de organización, discrepancias entre versiones y dificultades para coordinar el trabajo del equipo. Por ello, mantener un control adecuado sobre el código fuente, la documentación de diseño y los distintos recursos digitales permite que todos los integrantes trabajen con información actualizada y bajo una misma estructura. De esta manera, se facilita la colaboración entre desarrolladores y se reduce la posibilidad de cometer errores por utilizar archivos o versiones obsoletas.
+
+<hr>
+
 ## 5.1.1. Software Development Environment Configuration.
+
+**Project Management**
+
+| Plataforma    | Descripción                                                                                                                                                                                                                                                                                           | Enlace                       |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| Notion        | Esta plataforma de gestión de proyectos ofrece funcionalidades para el seguimiento detallado del progreso de cada tarea a lo largo de su ciclo de vida, además de permitir la designación clara de responsables para cada actividad dentro del equipo de trabajo.                                      | https://app.notion.com/p/Dise-o-ff0933e887b082f3baea01896284d980?source=copy_link           |
+| Uxpressia     | Herramienta en línea que ayuda en el proceso de
+mapeo.                                                                                                                                                                                                                                             | https://uxpressia.com/      |
+| Canva         | Es una aplicación web de diseño y comunicación visual donde los usuarios pueden diseñar lo que deseen y publicarlo. Cuenta con diversos formatos y estilos de creación para todo tipo de trabajo.                                                                                                    | https://www.canva.com      |
+| C4 Model      | Sistema de notación visual para arquitectos de software y equipos de desarrollo que ayuda a describir la arquitectura de un sistema de software en diferentes niveles de abstracción.                                                                                                                    | https://c4model.com            |
+
+**Product UX/UI Desing**
+
+| Plataforma | Descripción                                                                                                                                                                                                                            | Link                                                    |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Figma      | Herramienta para el diseño de productos digitales que fomenta la colaboración, agiliza el flujo de trabajo y permite crear experiencias de usuario efectivas y visualmente atractivas.                                                 | https://www.figma.com |
+
+**Software Development**
+
+| Plataforma           | Descripción                                                                                                                                                                                                                            | Link                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| HTML                | Sirve para definir la estructura y el contenido de una página web.                                                                                                                                                                      | https://www.w3schools.com/html/default.asp                                      |
+| CSS                 | Se encarga de la presentación visual y el estilo de la página web.                                                                                                                                                                       | https://www.w3schools.com/css/default.asp                                       |
+| JS                  | Añade interactividad y dinamismo a la página web.                                                                                                                                                                                        | https://www.w3schools.com/js/default.asp                               |
+| Visual Studio Code  | Entorno de desarrollo que facilita la escritura, edición, depuración y gestión de código para una amplia gama de lenguajes y proyectos.                                                                                                    | https://code.visualstudio.com          |
+
+**Software Documentation**
+
+| Plataforma | Descripción                                             | Link                                                              |
+|------------|---------------------------------------------------------|-------------------------------------------------------------------|
+| GitHub     | Gestión de la documentación en función a repositorios y organizaciones | https://github.com          |
+| Markdown   | Formato base para la presentación y documentación del proyecto | https://markdown.es/                     |
+<br>
+
 ### 5.1.2. Source Code Management.
-### 5.1.3. Source Code Style Guide & Conventions.
+
+Link Landing Page: []
+
+Link WebServices: []
+
+Link FrontEnd: []
+
+Establecer reglas claras para nombrar las ramas en Git permite mantener un flujo de trabajo más ordenado y comprensible para todos los integrantes del equipo. El uso de enfoques como Git Flow o trunk-based development contribuye a definir una estructura uniforme para el desarrollo, reduciendo confusiones y facilitando la coordinación entre los desarrolladores.
+
+Contar con una nomenclatura estandarizada también aporta ventajas adicionales, como facilitar la integración de procesos automatizados dentro de los pipelines de CI/CD y permitir reconocer rápidamente la finalidad de cada rama únicamente a partir de su nombre.
+
+Para el proyecto se adopta GitFlow como estrategia de administración de ramas. Este modelo permite separar el código estable de las funcionalidades que todavía se encuentran en desarrollo, así como gestionar de manera independiente las versiones y correcciones urgentes.
+
+Las principales ramas utilizadas son las siguientes:
+
+* **Rama `main`:** corresponde a la versión estable del proyecto y concentra los componentes que se encuentran preparados para su publicación o despliegue. En ella se mantienen los archivos que forman parte de la solución final, como hojas de estilo, recursos gráficos, scripts de JavaScript y los archivos HTML principales. Los cambios incorporados a esta rama deben haber sido previamente revisados y validados.
+
+De manera complementaria, el equipo dispone de un repositorio destinado a la organización de requerimientos y funcionalidades. Dentro de este espacio, las tareas se agrupan mediante epics y archivos con extensión `.feature`, en los cuales se especifican los escenarios y criterios de aceptación correspondientes. Esta organización permite relacionar de forma más clara los requerimientos definidos con las funcionalidades desarrolladas.
+
+GitHub fue seleccionado como plataforma principal para el control de versiones y la colaboración del equipo, ya que facilita el seguimiento de modificaciones, la revisión del historial de cambios y la coordinación del trabajo realizado por distintos desarrolladores. Asimismo, la integración con GitHub Pages permite publicar las actualizaciones del proyecto y brindar a los interesados una referencia visual del avance alcanzado.
+
+### Convenciones para las ramas
+
+Para mantener uniformidad dentro del repositorio, se establecieron las siguientes reglas de nomenclatura:
+
+**Ramas de funcionalidades (`feature`)**
+
+Se utilizan para desarrollar nuevas características o mejoras de manera independiente antes de integrarlas al código principal.
+
+Prefijo: `feature/`
+
+Formato:
+
+`feature/nombre-corto-descriptivo`
+
+Ejemplos:
+
+`feature/login-ui`
+
+`feature/pdf-export`
+
+`feature/api-integration-usuarios`
+
+**Ramas de versiones (`release`)**
+
+Se crean cuando un conjunto de funcionalidades se encuentra próximo a ser publicado y requiere una etapa final de estabilización, validación o preparación para el despliegue.
+
+Prefijo: `release/`
+
+Formato:
+
+`release/x.y.z`
+
+Los valores `x`, `y` y `z` representan respectivamente la versión mayor, menor y de parche.
+
+Ejemplos:
+
+`release/1.0.0`
+
+`release/2.1.0`
+
+**Ramas de correcciones urgentes (`hotfix`)**
+
+Estas ramas se destinan a solucionar errores críticos detectados en una versión estable o publicada, permitiendo realizar la corrección sin interferir con otras funcionalidades que se encuentren en desarrollo.
+
+Prefijo: `hotfix/`
+
+Formato:
+
+`hotfix/x.y.z-nombre-corto`
+
+Ejemplos:
+
+`hotfix/1.0.1-fix-login-error`
+
+`hotfix/2.3.2-bug-carrito`
+
+El repositorio principal del proyecto se encuentra alojado en GitHub bajo la organización de ElectroLink, desde donde se administra el código fuente y se coordinan las diferentes actividades relacionadas con el desarrollo.
+
+### 5.1.3. Source Code Style Guide & Conventions
+
+Con el propósito de mantener una estructura uniforme durante el desarrollo de la solución, se establecen lineamientos relacionados con el uso de etiquetas, propiedades, convenciones de nomenclatura y estándares de estilo para los distintos lenguajes empleados en el proyecto.
+
+### HTML
+
+En el desarrollo de las interfaces se emplearán principalmente las siguientes etiquetas HTML:
+
+* `<!DOCTYPE html>` - Indica que el documento utiliza el estándar HTML5.
+* `<html>` - Representa el elemento raíz que contiene toda la estructura del documento.
+* `<head>` - Agrupa la información de configuración y metadatos de la página.
+* `<meta>` - Permite definir información adicional del documento, como la codificación de caracteres y la configuración del viewport.
+* `<title>` - Especifica el nombre que se mostrará en la pestaña del navegador.
+* `<link>` - Se utiliza para enlazar recursos externos, como hojas de estilo, fuentes o íconos.
+* `<body>` - Contiene todos los elementos visibles que forman parte de la página.
+* `<header>` - Define el encabezado principal de la interfaz.
+* `<div>` - Funciona como un contenedor genérico para agrupar distintos elementos.
+* `<img>` - Permite insertar imágenes dentro de la página, como logotipos o recursos gráficos.
+* `<nav>` - Delimita la sección correspondiente a los elementos de navegación.
+* `<ul>` - Representa una lista no ordenada.
+* `<li>` - Define cada uno de los elementos que forman parte de una lista.
+* `<a>` - Se utiliza para crear enlaces hacia otras páginas, secciones o recursos.
+* `<button>` - Permite incorporar acciones interactivas mediante botones, como funciones relacionadas con accesibilidad.
+* `<section>` - Organiza el contenido de la página en bloques temáticos diferenciados.
+
+  * Sección principal: `<h1>`, `<p>`
+  * Sección informativa: `<h2>`, `<span>`, `<div>`, `<h3>`, `<p>`
+  * Propuesta de valor: `<h3>`, `<p>`, `<img>`
+  * Presentación del producto: `<h2>`, `<h4>`, `<p>`, `<img>`
+  * Servicios ofrecidos: `<h2>`, `<div>`, `<h4>`, `<p>`
+  * Testimonios: `<h2>`, `<p>`, `<img>`
+  * Sección de inicio: `<h2>`, `<h5>`, `<strong>`, `<p>`
+  * Área de descarga: `<h2>`, `<h3>`, `<span>`, `<a>`, `<img>`
+* `<footer>` - Representa la sección inferior de la página.
+* `<small>` - Se utiliza generalmente para información secundaria, como avisos legales o derechos de autor.
+* `<script>` - Permite incorporar código JavaScript encargado de proporcionar comportamiento dinámico a la interfaz.
+
+### CSS
+
+Para definir la presentación visual de los diferentes componentes se utilizarán propiedades CSS como las siguientes:
+
+* `width:` determina el ancho de un elemento.
+* `height:` establece la altura de un componente.
+* `padding:` define el espacio interno existente entre el contenido y los bordes.
+* `font-family:` especifica la familia tipográfica que será utilizada.
+* `font-size:` establece el tamaño del texto.
+* `font-weight:` controla el grosor o peso visual de la tipografía.
+* `font-style:` permite definir variaciones en el estilo del texto, como cursiva.
+* `text-align:` determina la alineación horizontal del contenido textual.
+* `color:` establece el color del texto u otros elementos compatibles.
+* `background-color:` define el color utilizado como fondo de un componente.
+
+---
+
+### Convenciones, estándares y referencias para el estilo del código
+
+Con el objetivo de preservar la legibilidad, consistencia y mantenibilidad del código fuente, se adoptarán estándares reconocidos para cada uno de los lenguajes utilizados en el proyecto.
+
+| Lenguaje       | Estándar o guía considerada                                                                                                                                                                                                                                                                                         | Finalidad                                                                                                                                                                                        |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **JavaScript** | **[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)** o **[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)**. Durante el inicio de la implementación se seleccionará una de estas alternativas como estándar definitivo.                                       | Mantener una sintaxis consistente y aprovechar adecuadamente las características modernas de ES6+, incluyendo criterios para espaciado, uso de comillas, declaraciones y estructuras de control. |
+| **TypeScript** | **[TypeScript Recommended Coding Practices](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html)**, complementadas con el estándar de JavaScript seleccionado.                                                                                                                      | Aplicar buenas prácticas propias de TypeScript, especialmente en el uso de tipos, interfaces, inferencia y reducción del uso innecesario de `any`.                                               |
+| **Java**       | **[Oracle Code Conventions for the Java Programming Language](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)** o **[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)**. Uno de estos estándares será definido como referencia principal para el equipo. | Uniformizar la organización de clases, declaraciones, comentarios, documentación mediante Javadoc y formato general del código.                                                                  |
+
+---
+
+### Convenciones de nomenclatura
+
+Se adoptarán reglas de nomenclatura consistentes para los distintos elementos que conforman el código. Estas convenciones buscan facilitar la lectura, comprensión y mantenimiento de la solución por parte de todos los integrantes del equipo.
+
+| Elemento                    | Convención y ejemplo                                                | Lenguajes aplicables         | Uso                                                                                               |
+| :-------------------------- | :------------------------------------------------------------------ | :--------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Variables y propiedades** | `camelCase`, por ejemplo: `nombreUsuario`, `maxRetries`             | JavaScript, TypeScript, Java | Se empleará para variables y atributos cuyo valor pueda cambiar durante la ejecución.             |
+| **Constantes**              | `SCREAMING_SNAKE_CASE`, por ejemplo: `MAX_SIZE`, `API_KEY`          | JavaScript, TypeScript, Java | Se utilizará para valores constantes o inmutables definidos a nivel global, de módulo o de clase. |
+| **Funciones y métodos**     | `camelCase`, por ejemplo: `calcularTotal`, `guardarDatos`           | JavaScript, TypeScript, Java | Identificará operaciones, funciones y comportamientos dentro de la aplicación.                    |
+| **Clases e interfaces**     | `PascalCase`, por ejemplo: `UsuarioService`, `AuthInterface`        | TypeScript, Java             | Será utilizado para clases, interfaces, tipos y enumeraciones.                                    |
+| **Paquetes**                | `lowercase`, por ejemplo: `com.empresa.app.utils`                   | Java                         | Permitirá organizar los paquetes utilizando únicamente caracteres en minúscula.                   |
+| **Archivos fuente**         | `PascalCase`, por ejemplo: `UserService.ts`, `MainApplication.java` | TypeScript, Java             | Se aplicará principalmente a archivos asociados a una clase, servicio o componente relevante.     |
+
+---
+
+### Automatización y validación del estilo de código
+
+Para reducir inconsistencias y verificar automáticamente el cumplimiento de los estándares establecidos, se incorporarán herramientas de análisis dentro del flujo de desarrollo.
+
+* **Checkstyle:** se utilizará en los componentes desarrollados con **Java** para realizar análisis estático del código y comprobar que las reglas de formato y estilo definidas por el equipo se respeten de manera uniforme.
+
+La finalidad de incorporar este tipo de herramientas es automatizar parte de la revisión del código, disminuyendo la necesidad de realizar verificaciones manuales de formato y permitiendo que los desarrolladores concentren mayor atención en la implementación de funcionalidades y lógica de negocio.
+
 ### 5.1.4. Software Deployment Configuration.
+
+**Aspectos previos al despliegue**
+
+* **Preparación de los recursos web:** La solución deberá contar con todos los archivos necesarios para su funcionamiento, incluyendo documentos HTML, hojas de estilo CSS y scripts JavaScript. Para los recursos gráficos podrán utilizarse formatos como JPG, PNG, WebP u otros compatibles con navegadores web.
+
+* **Publicación mediante GitHub:** El proyecto será alojado en un repositorio compartido de GitHub y publicado utilizando GitHub Pages. De esta manera, los integrantes del equipo podrán trabajar sobre una misma fuente de código, mantener los cambios centralizados y disponer de una versión accesible desde la web.
+
+* **Validación del funcionamiento:** Cada vez que se integren cambios relevantes al repositorio, se realizarán comprobaciones internas orientadas a verificar que la Landing Page continúe funcionando correctamente. Adicionalmente, se efectuarán sesiones de prueba con personas ajenas al equipo de desarrollo para identificar posibles problemas de uso y obtener retroalimentación desde una perspectiva externa.
+
+**Condiciones necesarias para realizar el despliegue**
+
+Antes de publicar la Landing Page, deberán cumplirse los siguientes requisitos:
+
+* Contar con un repositorio creado dentro de la organización de GitHub correspondiente al proyecto.
+* Configurar el repositorio con visibilidad pública para permitir el acceso mediante GitHub Pages.
+* Disponer de los permisos requeridos para modificar la configuración y administrar la publicación del repositorio.
+* Tener disponible y actualizado el código fuente completo de la Landing Page.
+
+**Proceso de publicación de la Landing Page**
+
+El despliegue se realizará siguiendo los siguientes pasos:
+
+* Incorporar la versión actualizada del código fuente de la Landing Page en el repositorio correspondiente.
+* Ingresar a la sección de configuración del repositorio desde GitHub.
+* Ubicar y acceder a la opción **Pages** dentro de las configuraciones disponibles.
+* Seleccionar la rama y el directorio que serán utilizados como fuente para la publicación.
+* Guardar la configuración para iniciar automáticamente el proceso de construcción y despliegue proporcionado por GitHub Pages.
+* Una vez concluido dicho proceso, verificar que la dirección web generada se encuentre disponible y que los componentes de la Landing Page funcionen correctamente.
+
+Este procedimiento permite mantener una versión publicada de la Landing Page alineada con el código almacenado en el repositorio y facilita la revisión continua de los avances realizados durante el desarrollo.
+
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
 ### 5.2.2. Implemented Landing Page Evidence
@@ -5320,7 +5560,7 @@ Luego de unos minutos de seleccionar "Save", se generará un enlace donde se pod
 
 <a href="https://ibb.co/4ZFNj4Yb"><img src="https://i.ibb.co/3yTh0SMx/lp1.png" alt="lp1" border="0"></a>
 
-URL:https://electrolink-diseno-de-experimentos.github.io/Landing-Page/
+URL:https://github.com/G2-Diseno-de-Experimentos
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
