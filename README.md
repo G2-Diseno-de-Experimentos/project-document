@@ -26,13 +26,13 @@
 
 <div align="center">
   
-|             <div style="width:300px">Alumno</div>             | <div style="width:125px">Código</div> |
-|:-------------------------------------------------------------:|:-------------------------------------------:|
-|   Ivo Marcelo Machado Bracamonte                                                            |   U20231C368                               |
-|   Leonardo Fabrizzio Junior Prieto Mantari                                                            |    U202319949                               |
-|                                                               |                                   |
-|                                                               |                                   |             
-|                                                               |                                   |
+|  <div style="width:300px">Alumno</div>   | <div style="width:125px">Código</div> |
+|:----------------------------------------:|:-------------------------------------:|
+|      Ivo Marcelo Machado Bracamonte      |              U20231C368               |
+| Leonardo Fabrizzio Junior Prieto Mantari |              U202319949               |
+|         Juan Sung Jau Wang Chen          |              U202318609               |
+|                                          |                                       |             
+
 
 </div>
 
@@ -153,12 +153,12 @@ HampCoders es una startup orientada a crear soluciones digitales basadas en arqu
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-| Integrante | Código de estudiante | Fotografía | Descripción |
-|------------|----------------------|------------|-------------|
-| Leonardo Fabrizzio Junior Prieto Mantari | U202319949 | <img src="assets/img/team/leonardo-prieto.png" alt="Leonardo Fabrizzio Junior Prieto Mantari" width="140"> | Me considero una persona trabajadora, comprometida y colaborativa, siempre dispuesta a apoyar a mi equipo y contribuir al cumplimiento de los objetivos. Cuento con conocimientos en desarrollo frontend y backend para aplicaciones web y móviles, utilizando tecnologías como HTML, CSS, JavaScript, Python, C++, Java, Spring Boot, Vue.js, Angular, Kotlin y Flutter, además de nociones de C#. Busco aplicar estas habilidades para aportar valor al proyecto y contribuir activamente a lograr un resultado final sólido y exitoso. |
-| Ivo Marcelo Machado Bracamonte           | U20231C368 | <img src="assets/img/team/ivo-machado.png" alt="Ivo Marcelo Machado Bracamonte" width="140">            | Mi nombre es Ivo Machado, tengo 19 años y soy estudiante del sexto ciclo de Ingeniería de Software en la UPC. Me caracterizo por mi mentalidad resiliente, ya que no me rindo con facilidad y no le tengo miedo al error. Tengo empatía con los demás, disfruto resolver problemas y busco mejorar constantemente en lo que hago. Poseo conocimientos en lenguajes de programación como C++, Java y Python, así como en HTML, CSS y JavaScript. Además, domino el inglés y tengo conocimientos de portugués.                               |
-|            |                      |            |             |
-|            |                      |            |             |
+| Integrante                               | Código de estudiante | Fotografía                                                                                                 | Descripción |
+|------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------|-------------|
+| Leonardo Fabrizzio Junior Prieto Mantari | U202319949           | <img src="assets/img/team/leonardo-prieto.png" alt="Leonardo Fabrizzio Junior Prieto Mantari" width="140"> | Me considero una persona trabajadora, comprometida y colaborativa, siempre dispuesta a apoyar a mi equipo y contribuir al cumplimiento de los objetivos. Cuento con conocimientos en desarrollo frontend y backend para aplicaciones web y móviles, utilizando tecnologías como HTML, CSS, JavaScript, Python, C++, Java, Spring Boot, Vue.js, Angular, Kotlin y Flutter, además de nociones de C#. Busco aplicar estas habilidades para aportar valor al proyecto y contribuir activamente a lograr un resultado final sólido y exitoso. |
+| Ivo Marcelo Machado Bracamonte           | U20231C368           | <img src="assets/img/team/ivo-machado.png" alt="Ivo Marcelo Machado Bracamonte" width="140">               | Mi nombre es Ivo Machado, tengo 19 años y soy estudiante del sexto ciclo de Ingeniería de Software en la UPC. Me caracterizo por mi mentalidad resiliente, ya que no me rindo con facilidad y no le tengo miedo al error. Tengo empatía con los demás, disfruto resolver problemas y busco mejorar constantemente en lo que hago. Poseo conocimientos en lenguajes de programación como C++, Java y Python, así como en HTML, CSS y JavaScript. Además, domino el inglés y tengo conocimientos de portugués.                               |
+| Juan Sung Jau Wang Chen                  | U202318609           | <img src="assets/img/team/juan.png" alt="Juan Sung Jau Wang Chen " width="140">                            |   Soy Juan Wang, estudiante de Ingeniería de Software en la UPC. Me considero alguien amigable y sociable, puedo adaptarme sin problemas a cualquier entorno, tengo experiencia en organización de equipos y conocimientos de C++, python, html, css, javascript y recientemente he adquirido experiencia creando aplicaciones web siguiendo DDD con frameworks frontend como Vue.js y Angular y backend con lenguajes como Java y C#.          |
+|                                          |                      |                                                                                                            |             |
 
 <br> 
 
