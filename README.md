@@ -5344,8 +5344,86 @@ mapeo.                                                                          
 | Markdown   | Formato base para la presentación y documentación del proyecto | https://markdown.es/                     |
 <br>
 
-
 ### 5.1.2. Source Code Management.
+
+Link Landing Page: []
+
+Link WebServices: []
+
+Link FrontEnd: []
+
+Establecer reglas claras para nombrar las ramas en Git permite mantener un flujo de trabajo más ordenado y comprensible para todos los integrantes del equipo. El uso de enfoques como Git Flow o trunk-based development contribuye a definir una estructura uniforme para el desarrollo, reduciendo confusiones y facilitando la coordinación entre los desarrolladores.
+
+Contar con una nomenclatura estandarizada también aporta ventajas adicionales, como facilitar la integración de procesos automatizados dentro de los pipelines de CI/CD y permitir reconocer rápidamente la finalidad de cada rama únicamente a partir de su nombre.
+
+Para el proyecto se adopta GitFlow como estrategia de administración de ramas. Este modelo permite separar el código estable de las funcionalidades que todavía se encuentran en desarrollo, así como gestionar de manera independiente las versiones y correcciones urgentes.
+
+Las principales ramas utilizadas son las siguientes:
+
+* **Rama `main`:** corresponde a la versión estable del proyecto y concentra los componentes que se encuentran preparados para su publicación o despliegue. En ella se mantienen los archivos que forman parte de la solución final, como hojas de estilo, recursos gráficos, scripts de JavaScript y los archivos HTML principales. Los cambios incorporados a esta rama deben haber sido previamente revisados y validados.
+
+De manera complementaria, el equipo dispone de un repositorio destinado a la organización de requerimientos y funcionalidades. Dentro de este espacio, las tareas se agrupan mediante epics y archivos con extensión `.feature`, en los cuales se especifican los escenarios y criterios de aceptación correspondientes. Esta organización permite relacionar de forma más clara los requerimientos definidos con las funcionalidades desarrolladas.
+
+GitHub fue seleccionado como plataforma principal para el control de versiones y la colaboración del equipo, ya que facilita el seguimiento de modificaciones, la revisión del historial de cambios y la coordinación del trabajo realizado por distintos desarrolladores. Asimismo, la integración con GitHub Pages permite publicar las actualizaciones del proyecto y brindar a los interesados una referencia visual del avance alcanzado.
+
+### Convenciones para las ramas
+
+Para mantener uniformidad dentro del repositorio, se establecieron las siguientes reglas de nomenclatura:
+
+**Ramas de funcionalidades (`feature`)**
+
+Se utilizan para desarrollar nuevas características o mejoras de manera independiente antes de integrarlas al código principal.
+
+Prefijo: `feature/`
+
+Formato:
+
+`feature/nombre-corto-descriptivo`
+
+Ejemplos:
+
+`feature/login-ui`
+
+`feature/pdf-export`
+
+`feature/api-integration-usuarios`
+
+**Ramas de versiones (`release`)**
+
+Se crean cuando un conjunto de funcionalidades se encuentra próximo a ser publicado y requiere una etapa final de estabilización, validación o preparación para el despliegue.
+
+Prefijo: `release/`
+
+Formato:
+
+`release/x.y.z`
+
+Los valores `x`, `y` y `z` representan respectivamente la versión mayor, menor y de parche.
+
+Ejemplos:
+
+`release/1.0.0`
+
+`release/2.1.0`
+
+**Ramas de correcciones urgentes (`hotfix`)**
+
+Estas ramas se destinan a solucionar errores críticos detectados en una versión estable o publicada, permitiendo realizar la corrección sin interferir con otras funcionalidades que se encuentren en desarrollo.
+
+Prefijo: `hotfix/`
+
+Formato:
+
+`hotfix/x.y.z-nombre-corto`
+
+Ejemplos:
+
+`hotfix/1.0.1-fix-login-error`
+
+`hotfix/2.3.2-bug-carrito`
+
+El repositorio principal del proyecto se encuentra alojado en GitHub bajo la organización de ElectroLink, desde donde se administra el código fuente y se coordinan las diferentes actividades relacionadas con el desarrollo.
+
 ### 5.1.3. Source Code Style Guide & Conventions.
 ### 5.1.4. Software Deployment Configuration.
 ## 5.2. Product Implementation & Deployment.
