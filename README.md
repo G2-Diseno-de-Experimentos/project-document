@@ -5305,6 +5305,12 @@ Se describe la evolución del sistema a lo largo de distintos sprints, detalland
 
 ## 5.1. Software Configuration Management.
 
+Una administración deficiente de la configuración del software puede provocar problemas de organización, discrepancias entre versiones y dificultades para coordinar el trabajo del equipo. Por ello, mantener un control adecuado sobre el código fuente, la documentación de diseño y los distintos recursos digitales permite que todos los integrantes trabajen con información actualizada y bajo una misma estructura. De esta manera, se facilita la colaboración entre desarrolladores y se reduce la posibilidad de cometer errores por utilizar archivos o versiones obsoletas.
+
+<hr>
+
+## 5.1.1. Software Development Environment Configuration.
+
 **Project Management**
 
 | Plataforma    | Descripción                                                                                                                                                                                                                                                                                           | Enlace                       |
@@ -5338,7 +5344,7 @@ mapeo.                                                                          
 | Markdown   | Formato base para la presentación y documentación del proyecto | https://markdown.es/                     |
 <br>
 
-## 5.1.1. Software Development Environment Configuration.
+
 ### 5.1.2. Source Code Management.
 ### 5.1.3. Source Code Style Guide & Conventions.
 ### 5.1.4. Software Deployment Configuration.
