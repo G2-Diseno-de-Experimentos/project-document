@@ -5424,7 +5424,95 @@ Ejemplos:
 
 El repositorio principal del proyecto se encuentra alojado en GitHub bajo la organización de ElectroLink, desde donde se administra el código fuente y se coordinan las diferentes actividades relacionadas con el desarrollo.
 
-### 5.1.3. Source Code Style Guide & Conventions.
+### 5.1.3. Source Code Style Guide & Conventions
+
+Con el propósito de mantener una estructura uniforme durante el desarrollo de la solución, se establecen lineamientos relacionados con el uso de etiquetas, propiedades, convenciones de nomenclatura y estándares de estilo para los distintos lenguajes empleados en el proyecto.
+
+### HTML
+
+En el desarrollo de las interfaces se emplearán principalmente las siguientes etiquetas HTML:
+
+* `<!DOCTYPE html>` - Indica que el documento utiliza el estándar HTML5.
+* `<html>` - Representa el elemento raíz que contiene toda la estructura del documento.
+* `<head>` - Agrupa la información de configuración y metadatos de la página.
+* `<meta>` - Permite definir información adicional del documento, como la codificación de caracteres y la configuración del viewport.
+* `<title>` - Especifica el nombre que se mostrará en la pestaña del navegador.
+* `<link>` - Se utiliza para enlazar recursos externos, como hojas de estilo, fuentes o íconos.
+* `<body>` - Contiene todos los elementos visibles que forman parte de la página.
+* `<header>` - Define el encabezado principal de la interfaz.
+* `<div>` - Funciona como un contenedor genérico para agrupar distintos elementos.
+* `<img>` - Permite insertar imágenes dentro de la página, como logotipos o recursos gráficos.
+* `<nav>` - Delimita la sección correspondiente a los elementos de navegación.
+* `<ul>` - Representa una lista no ordenada.
+* `<li>` - Define cada uno de los elementos que forman parte de una lista.
+* `<a>` - Se utiliza para crear enlaces hacia otras páginas, secciones o recursos.
+* `<button>` - Permite incorporar acciones interactivas mediante botones, como funciones relacionadas con accesibilidad.
+* `<section>` - Organiza el contenido de la página en bloques temáticos diferenciados.
+
+  * Sección principal: `<h1>`, `<p>`
+  * Sección informativa: `<h2>`, `<span>`, `<div>`, `<h3>`, `<p>`
+  * Propuesta de valor: `<h3>`, `<p>`, `<img>`
+  * Presentación del producto: `<h2>`, `<h4>`, `<p>`, `<img>`
+  * Servicios ofrecidos: `<h2>`, `<div>`, `<h4>`, `<p>`
+  * Testimonios: `<h2>`, `<p>`, `<img>`
+  * Sección de inicio: `<h2>`, `<h5>`, `<strong>`, `<p>`
+  * Área de descarga: `<h2>`, `<h3>`, `<span>`, `<a>`, `<img>`
+* `<footer>` - Representa la sección inferior de la página.
+* `<small>` - Se utiliza generalmente para información secundaria, como avisos legales o derechos de autor.
+* `<script>` - Permite incorporar código JavaScript encargado de proporcionar comportamiento dinámico a la interfaz.
+
+### CSS
+
+Para definir la presentación visual de los diferentes componentes se utilizarán propiedades CSS como las siguientes:
+
+* `width:` determina el ancho de un elemento.
+* `height:` establece la altura de un componente.
+* `padding:` define el espacio interno existente entre el contenido y los bordes.
+* `font-family:` especifica la familia tipográfica que será utilizada.
+* `font-size:` establece el tamaño del texto.
+* `font-weight:` controla el grosor o peso visual de la tipografía.
+* `font-style:` permite definir variaciones en el estilo del texto, como cursiva.
+* `text-align:` determina la alineación horizontal del contenido textual.
+* `color:` establece el color del texto u otros elementos compatibles.
+* `background-color:` define el color utilizado como fondo de un componente.
+
+---
+
+### Convenciones, estándares y referencias para el estilo del código
+
+Con el objetivo de preservar la legibilidad, consistencia y mantenibilidad del código fuente, se adoptarán estándares reconocidos para cada uno de los lenguajes utilizados en el proyecto.
+
+| Lenguaje       | Estándar o guía considerada                                                                                                                                                                                                                                                                                         | Finalidad                                                                                                                                                                                        |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **JavaScript** | **[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)** o **[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)**. Durante el inicio de la implementación se seleccionará una de estas alternativas como estándar definitivo.                                       | Mantener una sintaxis consistente y aprovechar adecuadamente las características modernas de ES6+, incluyendo criterios para espaciado, uso de comillas, declaraciones y estructuras de control. |
+| **TypeScript** | **[TypeScript Recommended Coding Practices](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html)**, complementadas con el estándar de JavaScript seleccionado.                                                                                                                      | Aplicar buenas prácticas propias de TypeScript, especialmente en el uso de tipos, interfaces, inferencia y reducción del uso innecesario de `any`.                                               |
+| **Java**       | **[Oracle Code Conventions for the Java Programming Language](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)** o **[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)**. Uno de estos estándares será definido como referencia principal para el equipo. | Uniformizar la organización de clases, declaraciones, comentarios, documentación mediante Javadoc y formato general del código.                                                                  |
+
+---
+
+### Convenciones de nomenclatura
+
+Se adoptarán reglas de nomenclatura consistentes para los distintos elementos que conforman el código. Estas convenciones buscan facilitar la lectura, comprensión y mantenimiento de la solución por parte de todos los integrantes del equipo.
+
+| Elemento                    | Convención y ejemplo                                                | Lenguajes aplicables         | Uso                                                                                               |
+| :-------------------------- | :------------------------------------------------------------------ | :--------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Variables y propiedades** | `camelCase`, por ejemplo: `nombreUsuario`, `maxRetries`             | JavaScript, TypeScript, Java | Se empleará para variables y atributos cuyo valor pueda cambiar durante la ejecución.             |
+| **Constantes**              | `SCREAMING_SNAKE_CASE`, por ejemplo: `MAX_SIZE`, `API_KEY`          | JavaScript, TypeScript, Java | Se utilizará para valores constantes o inmutables definidos a nivel global, de módulo o de clase. |
+| **Funciones y métodos**     | `camelCase`, por ejemplo: `calcularTotal`, `guardarDatos`           | JavaScript, TypeScript, Java | Identificará operaciones, funciones y comportamientos dentro de la aplicación.                    |
+| **Clases e interfaces**     | `PascalCase`, por ejemplo: `UsuarioService`, `AuthInterface`        | TypeScript, Java             | Será utilizado para clases, interfaces, tipos y enumeraciones.                                    |
+| **Paquetes**                | `lowercase`, por ejemplo: `com.empresa.app.utils`                   | Java                         | Permitirá organizar los paquetes utilizando únicamente caracteres en minúscula.                   |
+| **Archivos fuente**         | `PascalCase`, por ejemplo: `UserService.ts`, `MainApplication.java` | TypeScript, Java             | Se aplicará principalmente a archivos asociados a una clase, servicio o componente relevante.     |
+
+---
+
+### Automatización y validación del estilo de código
+
+Para reducir inconsistencias y verificar automáticamente el cumplimiento de los estándares establecidos, se incorporarán herramientas de análisis dentro del flujo de desarrollo.
+
+* **Checkstyle:** se utilizará en los componentes desarrollados con **Java** para realizar análisis estático del código y comprobar que las reglas de formato y estilo definidas por el equipo se respeten de manera uniforme.
+
+La finalidad de incorporar este tipo de herramientas es automatizar parte de la revisión del código, disminuyendo la necesidad de realizar verificaciones manuales de formato y permitiendo que los desarrolladores concentren mayor atención en la implementación de funcionalidades y lógica de negocio.
+
 ### 5.1.4. Software Deployment Configuration.
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
