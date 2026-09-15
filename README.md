@@ -5308,6 +5308,19 @@ Para el alcance actual se selecciona una base relacional, ya que las operaciones
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
 ### 5.2.2. Implemented Landing Page Evidence
+
+Ingresamos a github
+
+<a href="https://ibb.co/C5ZrL2Gh"><img src="https://i.ibb.co/MD4Xd60M/Github1.png" alt="Github1" border="0"></a>
+
+Nos dirijimos a la sección de pages en configuración, configuramos la rama a desplegar y guardamos en save.
+Luego de unos minutos de seleccionar "Save", se generará un enlace donde se podrá visualizar el landing page desplegado
+
+<a href="https://ibb.co/8RswyZm"><img src="https://i.ibb.co/Vh9GF4L/github3.png" alt="github3" border="0"></a>
+
+<a href="https://ibb.co/4ZFNj4Yb"><img src="https://i.ibb.co/3yTh0SMx/lp1.png" alt="lp1" border="0"></a>
+
+URL:https://electrolink-diseno-de-experimentos.github.io/Landing-Page/
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 ### 5.2.4. Acuerdo de Servicio - SaaS
 ### 5.2.5. Implemented Native-Mobile Application Evidence
@@ -5315,3 +5328,4 @@ Para el alcance actual se selecciona una base relacional, ya que las operaciones
 ### 5.2.7. RESTful API documentation
 ### 5.2.8. Team Collaboration Insights
 ## 5.3. Video About-the-Product.
+
