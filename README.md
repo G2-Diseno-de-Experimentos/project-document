@@ -5300,7 +5300,44 @@ Para el alcance actual se selecciona una base relacional, ya que las operaciones
 ![Diagrama de base de datos relacional de ElectroLink](assets/img/cap4/database-design/Database-design.png)
 
 # Capítulo V: Product Implementation
+
+Se describe la evolución del sistema a lo largo de distintos sprints, detallando las principales decisiones tecnológicas adoptadas durante su desarrollo. Asimismo, se presentan las prácticas utilizadas para la gestión de versiones, los estándares aplicados al código y los mecanismos empleados para comprobar el funcionamiento de la solución con usuarios reales. Finalmente, se explican las actividades de despliegue, la ejecución de pruebas funcionales y las mejoras incorporadas a partir de los comentarios obtenidos durante las sesiones de validación.
+
 ## 5.1. Software Configuration Management.
+
+**Project Management**
+
+| Plataforma    | Descripción                                                                                                                                                                                                                                                                                           | Enlace                       |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| Notion        | Esta plataforma de gestión de proyectos ofrece funcionalidades para el seguimiento detallado del progreso de cada tarea a lo largo de su ciclo de vida, además de permitir la designación clara de responsables para cada actividad dentro del equipo de trabajo.                                      | https://app.notion.com/p/Dise-o-ff0933e887b082f3baea01896284d980?source=copy_link           |
+| Uxpressia     | Herramienta en línea que ayuda en el proceso de
+mapeo.                                                                                                                                                                                                                                             | https://uxpressia.com/      |
+| Canva         | Es una aplicación web de diseño y comunicación visual donde los usuarios pueden diseñar lo que deseen y publicarlo. Cuenta con diversos formatos y estilos de creación para todo tipo de trabajo.                                                                                                    | https://www.canva.com      |
+| C4 Model      | Sistema de notación visual para arquitectos de software y equipos de desarrollo que ayuda a describir la arquitectura de un sistema de software en diferentes niveles de abstracción.                                                                                                                    | https://c4model.com            |
+
+**Product UX/UI Desing**
+
+| Plataforma | Descripción                                                                                                                                                                                                                            | Link                                                    |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Figma      | Herramienta para el diseño de productos digitales que fomenta la colaboración, agiliza el flujo de trabajo y permite crear experiencias de usuario efectivas y visualmente atractivas.                                                 | https://www.figma.com |
+
+**Software Development**
+
+| Plataforma           | Descripción                                                                                                                                                                                                                            | Link                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| HTML                | Sirve para definir la estructura y el contenido de una página web.                                                                                                                                                                      | https://www.w3schools.com/html/default.asp                                      |
+| CSS                 | Se encarga de la presentación visual y el estilo de la página web.                                                                                                                                                                       | https://www.w3schools.com/css/default.asp                                       |
+| JS                  | Añade interactividad y dinamismo a la página web.                                                                                                                                                                                        | https://www.w3schools.com/js/default.asp                               |
+| Visual Studio Code  | Entorno de desarrollo que facilita la escritura, edición, depuración y gestión de código para una amplia gama de lenguajes y proyectos.                                                                                                    | https://code.visualstudio.com          |
+
+**Software Documentation**
+
+| Plataforma | Descripción                                             | Link                                                              |
+|------------|---------------------------------------------------------|-------------------------------------------------------------------|
+| GitHub     | Gestión de la documentación en función a repositorios y organizaciones | https://github.com          |
+| Markdown   | Formato base para la presentación y documentación del proyecto | https://markdown.es/                     |
+<br>
+
 ## 5.1.1. Software Development Environment Configuration.
 ### 5.1.2. Source Code Management.
 ### 5.1.3. Source Code Style Guide & Conventions.
