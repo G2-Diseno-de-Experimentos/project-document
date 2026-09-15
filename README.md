@@ -5428,5 +5428,27 @@ Controladores de Inventario de Técnicos, Servicios, Schedules y Requests, mostr
 
 ### 5.2.7. RESTful API documentation
 ### 5.2.8. Team Collaboration Insights
+
+Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, Frontend y Backend. Las actividades fueron gestionadas a través de GitHub, permitiendo una trazabilidad clara de los aportes de cada miembro del equipo. Se realizaron tareas de codificación, revisión, organización del repositorio y mejoras visuales y funcionales del producto. Cada miembro del equipo tuvo participación activa, realizando commits, revisando código, y apoyando en la estructura y documentación del proyecto.
+
+- Insights de Landing Page:
+
+<a href="https://ibb.co/20vmC3mP"><img src="https://i.ibb.co/fVkBydBt/i1.png" alt="i1" border="0"></a>
+
+- Insights de Frontend:
+- 
+<a href="https://ibb.co/pjFPWtQN"><img src="https://i.ibb.co/VY4NH7xb/i2.png" alt="i2" border="0"></a>
+
+- Insights de Backend:
+- 
+<a href="https://ibb.co/nN8dCNNy"><img src="https://i.ibb.co/YFTnZFFS/i3.png" alt="i3" border="0"></a>
+
 ## 5.3. Video About-the-Product.
 
+**Video publicado en Microsoft Stream:**  
+[Ver video del producto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318323_upc_edu_pe/EaX2Zgimos9BtP8A_A6NVnAB6Q4or5MhvSJrmp8EnSKkEg?e=poBWky&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+**Video en YouTube (incrustado en el Landing Page):**  
+[https://www.youtube.com/watch?v=vajqovVXk3o](https://www.youtube.com/watch?v=vajqovVXk3o)
+
+**Duración del video:** 2 minutos y 35 segundos
