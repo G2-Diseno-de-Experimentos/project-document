@@ -5514,6 +5514,37 @@ Para reducir inconsistencias y verificar automáticamente el cumplimiento de los
 La finalidad de incorporar este tipo de herramientas es automatizar parte de la revisión del código, disminuyendo la necesidad de realizar verificaciones manuales de formato y permitiendo que los desarrolladores concentren mayor atención en la implementación de funcionalidades y lógica de negocio.
 
 ### 5.1.4. Software Deployment Configuration.
+
+**Aspectos previos al despliegue**
+
+* **Preparación de los recursos web:** La solución deberá contar con todos los archivos necesarios para su funcionamiento, incluyendo documentos HTML, hojas de estilo CSS y scripts JavaScript. Para los recursos gráficos podrán utilizarse formatos como JPG, PNG, WebP u otros compatibles con navegadores web.
+
+* **Publicación mediante GitHub:** El proyecto será alojado en un repositorio compartido de GitHub y publicado utilizando GitHub Pages. De esta manera, los integrantes del equipo podrán trabajar sobre una misma fuente de código, mantener los cambios centralizados y disponer de una versión accesible desde la web.
+
+* **Validación del funcionamiento:** Cada vez que se integren cambios relevantes al repositorio, se realizarán comprobaciones internas orientadas a verificar que la Landing Page continúe funcionando correctamente. Adicionalmente, se efectuarán sesiones de prueba con personas ajenas al equipo de desarrollo para identificar posibles problemas de uso y obtener retroalimentación desde una perspectiva externa.
+
+**Condiciones necesarias para realizar el despliegue**
+
+Antes de publicar la Landing Page, deberán cumplirse los siguientes requisitos:
+
+* Contar con un repositorio creado dentro de la organización de GitHub correspondiente al proyecto.
+* Configurar el repositorio con visibilidad pública para permitir el acceso mediante GitHub Pages.
+* Disponer de los permisos requeridos para modificar la configuración y administrar la publicación del repositorio.
+* Tener disponible y actualizado el código fuente completo de la Landing Page.
+
+**Proceso de publicación de la Landing Page**
+
+El despliegue se realizará siguiendo los siguientes pasos:
+
+* Incorporar la versión actualizada del código fuente de la Landing Page en el repositorio correspondiente.
+* Ingresar a la sección de configuración del repositorio desde GitHub.
+* Ubicar y acceder a la opción **Pages** dentro de las configuraciones disponibles.
+* Seleccionar la rama y el directorio que serán utilizados como fuente para la publicación.
+* Guardar la configuración para iniciar automáticamente el proceso de construcción y despliegue proporcionado por GitHub Pages.
+* Una vez concluido dicho proceso, verificar que la dirección web generada se encuentre disponible y que los componentes de la Landing Page funcionen correctamente.
+
+Este procedimiento permite mantener una versión publicada de la Landing Page alineada con el código almacenado en el repositorio y facilita la revisión continua de los avances realizados durante el desarrollo.
+
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
 ### 5.2.2. Implemented Landing Page Evidence
@@ -5529,7 +5560,7 @@ Luego de unos minutos de seleccionar "Save", se generará un enlace donde se pod
 
 <a href="https://ibb.co/4ZFNj4Yb"><img src="https://i.ibb.co/3yTh0SMx/lp1.png" alt="lp1" border="0"></a>
 
-URL:https://electrolink-diseno-de-experimentos.github.io/Landing-Page/
+URL:https://github.com/G2-Diseno-de-Experimentos
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
