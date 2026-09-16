@@ -125,10 +125,11 @@
     - 5.2.1. Sprint Backlogs
     - 5.2.2. Implemented Landing Page Evidence
     - 5.2.3. Implemented Frontend-Web Application Evidence
-    - 5.2.4. Implemented Native-Mobile Application Evidence
-    - 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
-    - 5.2.6. RESTful API documentation
-    - 5.2.7. Team Collaboration Insights
+    - 5.2.4. Acuerdo de Servicio - SaaS
+    - 5.2.5. Implemented Native-Mobile Application Evidence
+    - 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+    - 5.2.7. RESTful API documentation
+    - 5.2.8. Team Collaboration Insights
   - 5.3. Video About-the-Product
 
 ---
@@ -5604,7 +5605,45 @@ Y ya podemos interactuar con nuestro frontend desplegado.
 ### 5.2.4. Acuerdo de Servicio - SaaS
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+Esta sección reúne las evidencias visuales de la aplicación móvil de ElectroLink reutilizadas del proyecto base. Las pantallas seleccionadas corresponden al acceso a la plataforma, la creación de cuentas y la consulta de servicios y propiedades desde el perfil del propietario. Estas vistas permiten documentar la experiencia móvil que se toma como base para el alcance actual del producto.
 
+#### Inicio de sesión
+
+La pantalla de acceso presenta campos para el correo electrónico y la contraseña, junto con las opciones para iniciar sesión, recuperar el acceso o dirigirse al registro. La distribución en una sola columna facilita la lectura y concentra las acciones principales en la parte inferior del formulario. También se observan accesos visuales para Google y Apple; la captura por sí sola no verifica la integración funcional de estos proveedores.
+
+<p align="center">
+  <img src="assets/img/cap5/mobile/dashboard.jpeg" alt="ElectroLink móvil: formulario de inicio de sesión con correo y contraseña" width="320">
+</p>
+
+*Figura 5.2.5-1. Pantalla de inicio de sesión de la aplicación móvil.*
+
+#### Registro y selección del tipo de usuario
+
+El formulario de registro distingue tres perfiles: dueño de hogar, empresa y técnico. El usuario selecciona el perfil correspondiente e ingresa su correo, contraseña y confirmación de contraseña. La vista incluye una acción principal para registrar la cuenta y un enlace de retorno al inicio de sesión, manteniendo continuidad entre ambas pantallas de acceso.
+
+<p align="center">
+  <img src="assets/img/cap5/mobile/mob-regsitro.jpeg" alt="ElectroLink móvil: registro con selección de dueño de hogar, empresa o técnico" width="320">
+</p>
+
+*Figura 5.2.5-2. Registro de cuenta y selección de perfil.*
+
+#### Panel principal del propietario
+
+El panel del propietario agrupa un resumen del plan, una tarjeta de servicio en curso y accesos rápidos para crear solicitudes, consultar facturas y acceder al soporte. La tarjeta del servicio muestra el trabajo solicitado, la propiedad asociada, el técnico asignado y una acción para consultar sus detalles.
+
+La sección de propiedades presenta información resumida del inmueble, como la última revisión y los activos registrados. La barra inferior organiza los accesos a inicio, propiedades, historial, analítica y perfil. Los nombres, fechas y valores visibles corresponden a los datos ilustrativos de la captura del proyecto base.
+
+<p align="center">
+  <img src="assets/img/cap5/mobile/m-login.jpeg" alt="ElectroLink móvil: panel del propietario con servicio en curso, accesos rápidos y propiedades" width="320">
+</p>
+
+*Figura 5.2.5-3. Panel principal del propietario y navegación móvil.*
+
+#### Alcance de las evidencias
+
+Las capturas documentan las interfaces disponibles en el material de referencia. No constituyen por sí mismas evidencia de una nueva compilación, pruebas de integración con el backend actual ni publicación en Google Play o App Store. La validación de esos aspectos deberá acompañarse de los resultados de ejecución y del artefacto de distribución correspondiente cuando estén disponibles.
+
+Fuente de las capturas: [evidencias de la aplicación móvil del proyecto base ElectroLink](https://github.com/Hampcoders-Desarrollo-IoT/project-document/blob/develop/report/70-cap7-product-implementation-validation.md). Se mantienen copias locales en el repositorio para asegurar su visualización en el informe.
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
