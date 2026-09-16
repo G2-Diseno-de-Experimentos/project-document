@@ -5560,7 +5560,7 @@ Luego de unos minutos de seleccionar "Save", se generará un enlace donde se pod
 
 <a href="https://ibb.co/4ZFNj4Yb"><img src="https://i.ibb.co/3yTh0SMx/lp1.png" alt="lp1" border="0"></a>
 
-URL:https://github.com/G2-Diseno-de-Experimentos
+URL:https://g2-diseno-de-experimentos.github.io/Landing-Page/
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
