@@ -328,7 +328,7 @@ El problema puede presentarse en viviendas, instituciones educativas, oficinas, 
 
 ### 1.2.2. Lean UX Process
 
-De acuerdo con Pragma (2021), Lean UX integra principios ágiles y prácticas de usabilidad para situar la experiencia del usuario en el centro del desarrollo. Bajo este enfoque, el proceso de ElectroLink se organiza en cuatro elementos: problem statements, assumptions, hypothesis statements y Lean UX Canvas.
+De acuerdo con Gothelf y Seiden (2021), Lean UX integra principios ágiles y prácticas de usabilidad para situar la experiencia del usuario en el centro del desarrollo. Bajo este enfoque, el proceso de ElectroLink se organiza en cuatro elementos: problem statements, assumptions, hypothesis statements y Lean UX Canvas.
 
 #### 1.2.2.1. Lean UX Problem Statements
 
@@ -5437,9 +5437,9 @@ mapeo.                                                                          
 
 ### 5.1.2. Source Code Management.
 
-Link Landing Page: []
+Link Landing Page: https://g2-diseno-de-experimentos.github.io/Landing-Page/
 
-Link WebServices: []
+Link WebServices: https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html
 
 Link FrontEnd: []
 
@@ -5748,7 +5748,7 @@ Fuente de las capturas: [evidencias de la aplicación móvil del proyecto base E
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
-Url: https://electrolinkv2.onrender.com/swagger-ui/index.html#
+Url: https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html
 
 Vista general de Swagger con los grupos Autenticación, Propiedades y Perfiles, cada uno con sus operaciones CRUD protegidas.
 
@@ -5840,3 +5840,57 @@ Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, F
 - El desarrollo del proyecto **ElectroLink** demostró la efectividad de integrar el enfoque Lean UX con un riguroso proceso de investigación y análisis de requerimientos. Esto permitió comprender las necesidades críticas del sector eléctrico y consolidar una propuesta de valor sólida que promueve la formalización de servicios, aporta seguridad a los usuarios y genera nuevas oportunidades de negocio para los técnicos certificados.
 - La definición arquitectónica orientada a servicios y fundamentada en Domain-Driven Design (DDD) asegura una plataforma modular, robusta y escalable. Esta organización facilita el desacoplamiento de responsabilidades y garantiza una integración ordenada y mantenible entre las aplicaciones frontend, las aplicaciones móviles y los microservicios backend.
 - La implementación y despliegue de los componentes iniciales (Landing Page, flujos principales del Frontend y endpoints RESTful del Backend) comprueba la viabilidad técnica y operativa del producto. Asimismo, el establecimiento de buenas prácticas de control de versiones y gestión ágil del Product Backlog sienta las directrices necesarias para sostener un ciclo de desarrollo continuo, trazable y enfocado en entregar una solución de alto impacto.
+
+# Bibliografía
+
+Las referencias empleadas para sustentar la investigación, el diseño de la solución y la documentación técnica se presentan en formato APA (7.ª edición).
+
+- Airbnb. (s. f.). *Airbnb JavaScript style guide*. GitHub. https://github.com/airbnb/javascript
+
+- Apple. (s. f.). *Human Interface Guidelines*. https://developer.apple.com/design/human-interface-guidelines/
+
+- Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
+
+- Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
+
+- Easwaramoorthy, M., & Zarinpoush, F. (2006). *Interviewing for research* (Tip Sheet No. 6). Imagine Canada. https://www.sectorsource.ca/resource/file/interviewing-research
+
+- Figma. (s. f.). *Figma Design*. https://www.figma.com/
+
+- GitHub. (s. f.). *Acerca de Git*. GitHub Docs. https://docs.github.com/es/get-started/using-git/about-git
+
+- Google. (s. f.). *Firebase Hosting*. Firebase. https://firebase.google.com/docs/hosting?hl=es-419
+
+- Google. (s. f.). *Google Java style guide*. https://google.github.io/styleguide/javaguide.html
+
+- Google. (s. f.). *Google JavaScript style guide*. https://google.github.io/styleguide/jsguide.html
+
+- Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781098116293/
+
+- Material Design. (s. f.). *Material Design 3*. https://m3.material.io/
+
+- Microsoft. (s. f.). *Visual Studio Code documentation*. https://code.visualstudio.com/docs
+
+- Oracle. (1999). *Code conventions for the Java programming language*. https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
+
+- Render. (s. f.). *Web services*. https://render.com/docs/web-services
+
+- SmartBear Software. (s. f.). *Swagger documentation*. https://swagger.io/docs/
+
+- Trello. (s. f.). *Trello guide*. https://trello.com/guide
+
+- TypeScript. (s. f.). *Do's and don'ts*. https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html
+
+- UXPressia. (s. f.). *User persona vs. buyer persona: Differences and free template*. https://uxpressia.com/blog/user-persona-vs-buyer-persona-difference
+
+- World Wide Web Consortium. (2023). *Web Content Accessibility Guidelines (WCAG) 2.2*. https://www.w3.org/TR/WCAG22/
+
+# Anexos
+
+- Organización Github: https://github.com/G2-Diseno-de-Experimentos
+- Repositorio de la Landing Page: https://github.com/G2-Diseno-de-Experimentos/Landing-Page
+- Repositorio Frontend: https://github.com/G2-Diseno-de-Experimentos/Electrolink-Frontend
+- Repositorio Mobile: https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Mobile
+- Repositorio Backend: https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend
+- Landing Page: https://g2-diseno-de-experimentos.github.io/Landing-Page/
+- Backend: https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html
