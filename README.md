@@ -162,8 +162,8 @@
     <thead>
         <tr>
             <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 25%;">Criterio específico</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (TB1, TP, TB2, TF)</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (TB1, TP, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (AV1, TP, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (AV1, TP, TB2, TF)</th>
         </tr>
     </thead>
     <tbody>
@@ -174,23 +174,23 @@
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
-                <p style="font-size: 14px;"><strong>TB1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
+                <p style="font-size: 14px;"><strong>AV1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
             </td>
         </tr>
         <tr style="page-break-inside: avoid;">
@@ -200,22 +200,23 @@
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <p style="font-size: 14px;"><strong>AV1:</strong> El equipo tomó decisiones tecnológicas y estratégicas evaluando su impacto. El sistema diseñado fomenta la formalización del sector eléctrico, aumenta la seguridad en los hogares (impacto social) y genera ingresos sostenibles para técnicos certificados (impacto económico).</p>
             </td>
         </tr>
     </tbody>
@@ -5831,3 +5832,11 @@ Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, F
 [https://www.youtube.com/watch?v=vajqovVXk3o](https://www.youtube.com/watch?v=vajqovVXk3o)
 
 **Duración del video:** 2 minutos y 35 segundos
+
+<div style="page-break-after: always;"></div>
+
+# Conclusiones
+
+- El desarrollo del proyecto **ElectroLink** demostró la efectividad de integrar el enfoque Lean UX con un riguroso proceso de investigación y análisis de requerimientos. Esto permitió comprender las necesidades críticas del sector eléctrico y consolidar una propuesta de valor sólida que promueve la formalización de servicios, aporta seguridad a los usuarios y genera nuevas oportunidades de negocio para los técnicos certificados.
+- La definición arquitectónica orientada a servicios y fundamentada en Domain-Driven Design (DDD) asegura una plataforma modular, robusta y escalable. Esta organización facilita el desacoplamiento de responsabilidades y garantiza una integración ordenada y mantenible entre las aplicaciones frontend, las aplicaciones móviles y los microservicios backend.
+- La implementación y despliegue de los componentes iniciales (Landing Page, flujos principales del Frontend y endpoints RESTful del Backend) comprueba la viabilidad técnica y operativa del producto. Asimismo, el establecimiento de buenas prácticas de control de versiones y gestión ágil del Product Backlog sienta las directrices necesarias para sostener un ciclo de desarrollo continuo, trazable y enfocado en entregar una solución de alto impacto.
