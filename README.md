@@ -42,7 +42,106 @@
 
 ## Tabla de Contenidos
 
-- Student Outcome
+<h2>Student Outcome 4 – Diseño de Experimentos</h2>
+<p>El curso contribuye al cumplimiento del Student Outcome ABET: ABET – EAC - Student Outcome 4</p>
+<blockquote>
+    <p><strong>Criterio:</strong> La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.</p>
+</blockquote>
+<p>En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4.</p>
+<hr>
+
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 25%;">Criterio específico</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (TB1, TP, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (TB1, TP, TB2, TF)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="page-break-inside: avoid;">
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top; font-weight: bold;">
+                4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software.
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>TP:</strong> Desarrolló pruebas unitarias y de integración con Karate para el BC Assets y documentó las prácticas DevOps vinculadas con CI/CD y las revisiones de verificación estática.<br>
+                    - <strong>TB2:</strong> Planteó la estrategia de monitoreo continuo mediante alertas y notificaciones, y participó en la definición de objetivos, KPIs y mecanismos de seguimiento para las pruebas A/B y su documentación.<br>
+                    - <strong>TF:</strong> Asumió una responsabilidad importante en la implementación de las historias del <strong>"To-Be Sprint Backlog"</strong> tanto en frontend como en backend. Su participación permitió incorporar los cambios derivados de la experimentación sin romper la arquitectura existente y manteniendo controles de calidad mediante CI/CD y pruebas automatizadas.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Implementó pruebas unitarias y de integración con Karate para el BC Service Design and Planning, aplicó un checklist de calidad y colaboró en la redacción de las secciones introductorias de la Test Suite.<br>
+                    - <strong>TB2:</strong> Elaboró la documentación de planificación experimental, incluyendo la identificación de Raw Material (Gaps, Ideas, Claims), la organización del Question Backlog y la construcción de Experiment Cards.<br>
+                    - <strong>TF:</strong> Demostró responsabilidad profesional al participar en un SDLC orientado por experimentos y velar por que la planificación se ejecutara de forma consistente. La documentación de hallazgos en los <strong>"Shareback Session Artifacts"</strong> reforzó la trazabilidad y transparencia del proceso de validación.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Diseñó y ejecutó pruebas unitarias y de integración con Karate para el BC Profiles, aplicó un checklist de calidad y participó en la redacción de conclusiones y resúmenes ejecutivos.<br>
+                    - <strong>TB2:</strong> Condujo el diseño formal de la experimentación, definiendo hipótesis, medidas, condiciones y escalas de decisión. También estructuró las historias de usuario To-Be y el Product Backlog relacionado con los experimentos.<br>
+                    - <strong>TF:</strong> Mostró responsabilidad ética al mantener alineadas la estrategia y la ejecución. La documentación de evidencias y su participación en entrevistas de validación ayudaron a que el producto final respondiera tanto a las hipótesis comprobadas como a los objetivos del negocio.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Implementó pruebas unitarias y de integración con Karate para los BC Monitoring e IAM, además de liderar la ejecución y revisión de resultados obtenidos con SonarQube y CheckStyle.<br>
+                    - <strong>TB2:</strong> Desarrolló Core System Tests con Selenium y Gherkin para validar funcionalmente el frontend y reforzó la documentación de Continuous Deployment y Continuous Monitoring.<br>
+                    - <strong>TF:</strong> Evidenció responsabilidad profesional al encargarse del despliegue integral de la solución, incluyendo frontend, backend y base de datos. Su trabajo permitió mantener la plataforma estable y disponible durante la fase de experimentación.
+                </p>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <p style="font-size: 14px;"><strong>TB1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> La fase se centró en la ejecución rigurosa del testing, la validación de calidad y la documentación formal. La implementación de un testing integral (Unitarias, Integración y E2E) por Bounded Context y el uso de herramientas como Karate, CheckStyle y SonarQube confirmaron la adhesión a los estándares de Clean Code.</p>
+                <p style="font-size: 14px;"><strong>TB2:</strong> La fase final se centró en la madurez del producto a través de la experimentación A/B y la estabilización de DevOps. Se logró la planificación completa de experimentos (Hipótesis, Medidas y Backlogs), estableciendo un marco de medición claro (KPIs/Tracking) para el crecimiento. Paralelamente, se completó la formalización de System Tests (Selenium), Continuous Deployment y las prácticas avanzadas de Continuous Monitoring, garantizando la calidad funcional y la resiliencia del producto en producción.</p>
+                <p style="font-size: 14px;"><strong>TF:</strong> El equipo demostró una sobresaliente responsabilidad ética y profesional al aplicar de forma colaborativa un <strong>Experiment-Driven SDLC</strong>. Se utilizó un pipeline de CI/CD maduro para desplegar iterativamente los experimentos, validando cada cambio con una suite de pruebas automatizada completa (unitaria, integración y sistema). Los artefactos finales, como el Impact Map y el Backlog, reflejan un ciclo de mejora continua basado en evidencia, cumpliendo con los más altos estándares de la ingeniería de software moderna.</p>
+            </td>
+        </tr>
+        <tr style="page-break-inside: avoid;">
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top; font-weight: bold;">
+                4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales.
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>TP:</strong> Desarrolló pruebas unitarias y de integración con Karate para el BC Assets y documentó las prácticas DevOps vinculadas con CI/CD y las revisiones de verificación estática.<br>
+                    - <strong>TB2:</strong> Planteó la estrategia de monitoreo continuo mediante alertas y notificaciones, y participó en la definición de objetivos, KPIs y mecanismos de seguimiento para las pruebas A/B y su documentación.<br>
+                    - <strong>TF:</strong> Emitió juicios informados al utilizar los resultados del análisis de datos para tomar decisiones estratégicas. Su trabajo en el diseño de entrevistas y la re-priorización del <strong>"Question Backlog"</strong> fue crucial para enfocar la recolección de datos en los aspectos más relevantes para el negocio, comunicando estas decisiones de forma clara y objetiva en los artefactos finales del proyecto.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Implementó pruebas unitarias y de integración con Karate para el BC Service Design and Planning, aplicó un checklist de calidad y colaboró en la redacción de las secciones introductorias de la Test Suite.<br>
+                    - <strong>TB2:</strong> Elaboró la documentación de planificación experimental, incluyendo la identificación de Raw Material (Gaps, Ideas, Claims), la organización del Question Backlog y la construcción de Experiment Cards.<br>
+                    - <strong>TF:</strong> Lideró la recolección de datos cualitativos para emitir juicios informados, enfocándose en la validación con usuarios a través de las entrevistas que realizó. Su análisis de estos datos, documentado en los <strong>"Shareback Session Artifacts"</strong>, fue clave para generar aprendizaje continuo sobre el modelo de negocio y proponer mejoras concretas, comunicando los hallazgos con objetividad.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Diseñó y ejecutó pruebas unitarias y de integración con Karate para el BC Profiles, aplicó un checklist de calidad y participó en la redacción de conclusiones y resúmenes ejecutivos.<br>
+                    - <strong>TB2:</strong> Condujo el diseño formal de la experimentación, definiendo hipótesis, medidas, condiciones y escalas de decisión. También estructuró las historias de usuario To-Be y el Product Backlog relacionado con los experimentos.<br>
+                    - <strong>TF:</strong> Comunicó de forma escrita y objetiva el impacto de las soluciones, sustentando sus juicios en los datos de la experimentación. Su labor integrando el video del producto en la landing page y documentando las evidencias de implementación fue una forma tangible de presentar los resultados del proyecto, demostrando una clara orientación a la mejora continua basada en evidencia.
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Implementó pruebas unitarias y de integración con Karate para los BC Monitoring e IAM, además de liderar la ejecución y revisión de resultados obtenidos con SonarQube y CheckStyle.<br>
+                    - <strong>TB2:</strong> Desarrolló Core System Tests con Selenium y Gherkin para validar funcionalmente el frontend y reforzó la documentación de Continuous Deployment y Continuous Monitoring.<br>
+                    - <strong>TF:</strong> Su rol fue fundamental para emitir juicios informados, ya que llevó a cabo el <strong>análisis e interpretación de los resultados</strong> de la experimentación. Contrastó los datos recolectados contra las hipótesis definidas, proporcionando una base sólida y objetiva para las decisiones del equipo y evidenciando el aprendizaje continuo sobre el impacto de la solución de software.
+                </p>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <p style="font-size: 14px;"><strong>TF:</strong> El equipo demostró una capacidad sobresaliente para emitir juicios informados. Se implementaron herramientas adecuadas para la recolección de datos cualitativos y cuantitativos, que fueron sistemáticamente analizados y contrastados contra las hipótesis. Los hallazgos se comunicaron con objetividad y se utilizaron para impulsar un ciclo de mejora continua, reflejando los aprendizajes en las nuevas versiones de los artefactos del proyecto. Este proceso evidencia un profundo entendimiento del impacto de las soluciones de ingeniería en su contexto de negocio y social.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+-----
+
 - Capítulo I: Introducción
   - 1.1. Startup Profile
     - 1.1.1. Descripción de la Startup
