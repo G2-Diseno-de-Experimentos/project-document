@@ -48,10 +48,9 @@
 
 ---
 
-## Tabla de Contenidos
+## Contenido
 
 - Registro de Versiones del Informe
-
 - Student Outcome
 - Capítulo I: Introducción
   - 1.1. Startup Profile
@@ -141,6 +140,83 @@
     - 5.2.7. RESTful API documentation
     - 5.2.8. Team Collaboration Insights
   - 5.3. Video About-the-Product
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## Student Outcome
+
+<h2>Student Outcome 4 – Diseño de Experimentos</h2>
+<p>El curso contribuye al cumplimiento del Student Outcome ABET: ABET – EAC - Student Outcome 4</p>
+<blockquote>
+    <p><strong>Criterio:</strong> La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.</p>
+</blockquote>
+<p>En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4.</p>
+<hr>
+
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 25%;">Criterio específico</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (TB1, TP, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (TB1, TP, TB2, TF)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="page-break-inside: avoid;">
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top; font-weight: bold;">
+                4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software.
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                </p>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <p style="font-size: 14px;"><strong>TB1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
+            </td>
+        </tr>
+        <tr style="page-break-inside: avoid;">
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top; font-weight: bold;">
+                4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales.
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+                <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                </p>
+                <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
+                <p style="font-size: 14px; margin: 0;">
+                    - <strong>TB1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                </p>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ---
 
