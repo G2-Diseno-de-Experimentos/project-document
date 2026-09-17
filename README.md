@@ -5548,6 +5548,17 @@ Este procedimiento permite mantener una versión publicada de la Landing Page al
 
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
+| Sprint #       | Sprint 1 | |                                                            |                                                                                                                   |                     |                   |            |
+|----------------|----------|---|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|---------------------|-------------------|------------|
+| **User Story** | | **Work-Item/task** |                                                            |                                                                                                                   |                     |                   |            |
+| **ID**         | **Title** | **Id** | **Title**                                                  | **Description**                                                                                                   | **Estimation(Hrs)** | **Assigned To**   | **Status** |
+| **US-08**      | Ver Información del Startup | T001 | Actualización de startup                                   | Actualizar la información sobre los miembros de la startup pertenecientes al proyecto                             | 1                   | Leonardo Prieto  | Done       |
+| **US-27**      | Entrar a un dashboard Personalizado | T001 | Mejorar la visualización del dashboard para el propietario | Mejorar el estilo y la estructura funcional del dashboard orientado para el tipo de usuario "Homeowner"           | 1                   | Ivo Machado     | Done       |
+|                | | T002 | Mejorar la visualización del dashboard para el proveedor   | Mejorar el estilo y la estructura funcional del dashboard orientado para el tipo de usuario "Provider/Technician" | 2                   | Juan Wang     | Done       |
+| **US-13**      | Registro de cuentas como Dueño de Hogar | T001 | Mejorar la visualización del formulario                        | Actualizar la estructura y estilos del formulario de la sección 'Sign up'                                         | 1                   | Jorge Retuerto  | Done       |
+| **US-17**      | Inicio de sesión de usuarios | T001 | Mejorar la visualización del formulario | Actualizar la estructura y estilos del formulario de la sección 'Sign in'                                         | 1                   | Leonardo Prieto | Done       |
+| **TS-13**      | Conectar a Base de Datos | T001 | Desplegar el Backend                                       | Actualizar el despliegue de los servicios web (Backend)                                                           | 1                   | Ivo Machado      | Done       |
+
 ### 5.2.2. Implemented Landing Page Evidence
 
 Ingresamos a github
