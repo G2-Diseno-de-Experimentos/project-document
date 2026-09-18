@@ -5668,42 +5668,31 @@ URL:https://g2-diseno-de-experimentos.github.io/Landing-Page/
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
-En esta sección, explicamos el despliegue de la aplicación Front-end en firebase
+**Front-End**: https://expsoft-frontend.netlify.app
 
-Ulr: https://electrolink-195e0.web.app
+En esta sección, explicamos el despliegue de la aplicación Front-end en Netlify.
 
-Ingresamos al portal de Firebase
-<br>
+Usamos los servicios de Netlify, debido a su facilidad para hacer el deployment de nuestra aplicación, considerando que solo debemos permitirle el acceso al repositorio del proyecto. A continuación, la evidencia del deploy.
 
-<img src="https://i.ibb.co/tPvdG42H/image.png">
-<br>
-<br>
+<img src="assets/img/cap5/deployFront-01.png" alt="evidence">
 
-Dentro del portal, reutilizamos la aplicación front end previamente desplegada "electrolink-frontend-v2".
-<br>
+<img src="assets/img/cap5/deployFront-02.png" alt="evidence">
 
-<img src="https://i.ibb.co/xtKnQtdr/image.png">
-<br>
-<br>
+<img src="assets/img/cap5/deployFront-03.png" alt="evidence"> 
 
-Ahora, desde la consola del IDE, realizamos los siguientes comandos
-<br>
+Las evidencian muestran los logs conseguidos del deployment ejecutado y como el acceso a la pagina esta habilitado y funcional. Adicionalmente, se mostraran las capturas de las features hechas en la aplicacion.
 
-<img src="https://i.ibb.co/rfNWtpcp/image.png">
-<br>
-<br>
+<img src="assets/img/cap5/deployFront-04.png" alt="evidence">
 
+<img src="assets/img/cap5/deployFront-05.png" alt="evidence">
 
-Tras haber compilado subido el directorio dist, desplegamos con el siguiente comando y obtendremós el enlace de la aplicación front-end
-<br>
+<img src="assets/img/cap5/deployFront-06.png" alt="evidence">
 
-<img src="https://i.ibb.co/fdzrZCP6/image.png">
-<br>
-<br>
+<img src="assets/img/cap5/deployFront-07.png" alt="evidence">
 
-Y ya podemos interactuar con nuestro frontend desplegado.
+<img src="assets/img/cap5/deployFront-08.png" alt="evidence">
 
-<a href="https://ibb.co/TBSQ6pJ1"><img src="https://i.ibb.co/VWZFRrbx/frontend.png" alt="frontend" border="0"></a>
+<img src="assets/img/cap5/deployFront-09.png" alt="evidence">
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 ### 5.2.5. Implemented Native-Mobile Application Evidence
