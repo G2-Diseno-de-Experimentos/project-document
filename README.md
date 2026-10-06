@@ -5856,6 +5856,24 @@ Los repositorios se simulan con Mockito, por lo que las pruebas no requieren bas
 
 Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 
+**Evidencia de ejecución (IntelliJ IDEA)**
+
+`ComponentCommandServiceImplTest` — 6 pruebas:
+
+<img src="assets/img/cap6/ComponentCommandServiceImplTest.png"/>
+
+`ComponentQueryServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/ComponentQueryServiceImplTest.png"/>
+
+`TechnicianInventoryCommandServiceImplTest` — 13 pruebas:
+
+<img src="assets/img/cap6/TechnicianInventoryCommandServiceImplTest.png"/>
+
+`TechnicianInventoryQueryServiceImplTest` — 6 pruebas:
+
+<img src="assets/img/cap6/TechnicianInventoryQueryServiceImplTest.png"/>
+
 **Casos cubiertos**
 
 | Clase | Escenarios verificados |
