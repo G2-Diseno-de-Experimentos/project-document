@@ -5874,6 +5874,10 @@ Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 
 <img src="assets/img/cap6/TechnicianInventoryQueryServiceImplTest.png"/>
 
+`ComponentEntitiesTest` — 15 pruebas (entidades y value objects):
+
+<img src="assets/img/cap6/ComponentEntitiesTest.png"/>
+
 **Casos cubiertos**
 
 | Clase | Escenarios verificados |
