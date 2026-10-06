@@ -5824,6 +5824,73 @@ Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, F
 
 **Duración del video:** 2 minutos y 35 segundos
 
+# Capítulo VI: Product Verification & Validation
+
+## 6.1. Testing Suites & Validation
+
+### 6.1.1. Core Entities Unit Tests
+
+Las pruebas unitarias verifican de forma aislada la lógica de las entidades del dominio y de los servicios de aplicación (Command y Query) del backend de ElectroLink. Todas siguen el patrón **AAA (Arrange – Act – Assert)**: se preparan los datos y los mocks, se ejecuta una sola operación y se verifica el resultado esperado.
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| JUnit 5 | Framework de ejecución de pruebas |
+| Mockito | Mocks de los repositorios JPA (`@Mock`, `@InjectMocks`) |
+| AssertJ | Aserciones legibles (`assertThat`, `assertThatThrownBy`) |
+| Maven Surefire | Ejecución con `./mvnw test` |
+
+Los repositorios se simulan con Mockito, por lo que las pruebas no requieren base de datos ni levantar el contexto de Spring.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `ComponentCommandServiceImpl` | `ComponentCommandServiceImplTest` | 6 |
+| `ComponentQueryServiceImpl` | `ComponentQueryServiceImplTest` | 7 |
+| `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 12 |
+| `TechnicianInventoryQueryServiceImpl` | `TechnicianInventoryQueryServiceImplTest` | 6 |
+| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 12 |
+| **Total** | | **43** |
+
+Resultado de la ejecución: 43 pruebas, 0 fallos, 0 errores.
+
+**Casos cubiertos**
+
+| Clase | Escenarios verificados |
+|---|---|
+| `ComponentCommandServiceImpl` | Crear componente nuevo devuelve su `ComponentId`; crear con nombre duplicado lanza `IllegalStateException` y no guarda; actualizar componente existente cambia nombre y descripción; actualizar uno inexistente devuelve vacío; eliminar existente devuelve `true`; eliminar inexistente devuelve `false` sin borrar. |
+| `ComponentQueryServiceImpl` | Búsqueda por id (existente e inexistente); listar todos; filtrar por tipo; buscar por lista de ids; buscar por nombre aplicando el límite; búsqueda por nombre sin coincidencias. |
+| `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
+| `TechnicianInventoryQueryServiceImpl` | Inventario por técnico (existente e inexistente); inventarios con stock bajo (con y sin resultados); detalle de stock de un componente (existente e inexistente). |
+| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega y quita ítems de stock. |
+
+**Ejemplo de prueba con el patrón AAA**
+
+```java
+@Test
+@DisplayName("Create: lanza IllegalStateException si el nombre ya existe")
+void createComponent_whenNameExists_throwsIllegalStateException() {
+    // Arrange
+    var command = new CreateComponentCommand(UUID.randomUUID(), "Breaker 20A", "Interruptor", 1L, true);
+    when(componentRepository.existsByName("Breaker 20A")).thenReturn(true);
+
+    // Act + Assert
+    assertThatThrownBy(() -> service.handle(command))
+            .isInstanceOf(IllegalStateException.class)
+            .hasMessage("Component with the same name already exists");
+    verify(componentRepository, never()).save(any());
+}
+```
+
+**Convención de nombres:** `metodo_cuandoCondicion_resultadoEsperado`, con un `@DisplayName` en español que describe el caso.
+
+**Hallazgos durante la escritura de las pruebas**
+
+- `TechnicianInventory.updateStockItem(...)` actualiza el stock pero siempre devuelve `false`. El servicio no lo usa (actualiza directamente sobre `ComponentStock`), por lo que no afecta al flujo actual, pero el valor de retorno es incorrecto.
+- `UpdateComponentStockCommand` recibe `newAlertThreshold` como `Integer`; si llega `null`, la llamada a `updateAlertThreshold(int)` lanza `NullPointerException`.
+
 <div style="page-break-after: always;"></div>
 
 # Conclusiones
