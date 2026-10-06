@@ -5915,9 +5915,7 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
     when(componentRepository.existsByName("Breaker 20A")).thenReturn(true);
 
     // Act + Assert
-    assertThatThrownBy(() -> service.handle(command))
-            .isInstanceOf(IllegalStateException.class)
-            .hasMessage("Component with the same name already exists");
+    assertThatThrownBy(() -> service.handle(command)).isInstanceOf(IllegalStateException.class).hasMessage("Component with the same name already exists");
     verify(componentRepository, never()).save(any());
 }
 ```
