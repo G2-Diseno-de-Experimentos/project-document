@@ -5849,12 +5849,12 @@ Los repositorios se simulan con Mockito, por lo que las pruebas no requieren bas
 |---|---|---|
 | `ComponentCommandServiceImpl` | `ComponentCommandServiceImplTest` | 6 |
 | `ComponentQueryServiceImpl` | `ComponentQueryServiceImplTest` | 7 |
-| `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 12 |
+| `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 13 |
 | `TechnicianInventoryQueryServiceImpl` | `TechnicianInventoryQueryServiceImplTest` | 6 |
-| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 12 |
-| **Total** | | **43** |
+| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 15 |
+| **Total** | | **47** |
 
-Resultado de la ejecución: 43 pruebas, 0 fallos, 0 errores.
+Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 
 **Casos cubiertos**
 
@@ -5862,9 +5862,9 @@ Resultado de la ejecución: 43 pruebas, 0 fallos, 0 errores.
 |---|---|
 | `ComponentCommandServiceImpl` | Crear componente nuevo devuelve su `ComponentId`; crear con nombre duplicado lanza `IllegalStateException` y no guarda; actualizar componente existente cambia nombre y descripción; actualizar uno inexistente devuelve vacío; eliminar existente devuelve `true`; eliminar inexistente devuelve `false` sin borrar. |
 | `ComponentQueryServiceImpl` | Búsqueda por id (existente e inexistente); listar todos; filtrar por tipo; buscar por lista de ids; buscar por nombre aplicando el límite; búsqueda por nombre sin coincidencias. |
-| `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
+| `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, umbral `null`, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
 | `TechnicianInventoryQueryServiceImpl` | Inventario por técnico (existente e inexistente); inventarios con stock bajo (con y sin resultados); detalle de stock de un componente (existente e inexistente). |
-| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega y quita ítems de stock. |
+| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock. |
 
 **Ejemplo de prueba con el patrón AAA**
 
@@ -5886,10 +5886,10 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 
 **Convención de nombres:** `metodo_cuandoCondicion_resultadoEsperado`, con un `@DisplayName` en español que describe el caso.
 
-**Hallazgos durante la escritura de las pruebas**
+**Defectos detectados y corregidos durante la escritura de las pruebas**
 
-- `TechnicianInventory.updateStockItem(...)` actualiza el stock pero siempre devuelve `false`. El servicio no lo usa (actualiza directamente sobre `ComponentStock`), por lo que no afecta al flujo actual, pero el valor de retorno es incorrecto.
-- `UpdateComponentStockCommand` recibe `newAlertThreshold` como `Integer`; si llega `null`, la llamada a `updateAlertThreshold(int)` lanza `NullPointerException`.
+- `TechnicianInventory.updateStockItem(...)` actualizaba el stock pero siempre devolvía `false`. Ahora devuelve `true` cuando el componente existe en el inventario y `false` cuando no.
+- Si `UpdateComponentStockCommand.newAlertThreshold` llegaba `null`, se lanzaba `NullPointerException` al convertirlo a `int`. Ahora, cuando es `null`, se conserva el umbral actual (en `TechnicianInventory.updateStockItem` y en `TechnicianInventoryCommandServiceImpl`).
 
 <div style="page-break-after: always;"></div>
 
