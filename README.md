@@ -142,6 +142,22 @@
     - [5.2.7. RESTful API documentation](#527-restful-api-documentation)
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
   - [5.3. Video About-the-Product](#53-video-about-the-product)
+- [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
+  - [6.1. Testing Suites & Validation](#61-testing-suites--validation)
+    - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
+    - [6.1.2. Core Integration Tests](#612-core-integration-tests)
+    - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+    - [6.1.4. Core System Tests](#614-core-system-tests)
+- [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+  - [7.1. Continuous Integration](#71-continuous-integration)
+    - [7.1.1. Tools and Practices](#711-tools-and-practices)
+    - [7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)
+  - [7.2. Continuous Delivery](#72-continuous-delivery)
+    - [7.2.1. Tools and Practices](#721-tools-and-practices)
+    - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
+  - [7.3. Continuous Deployment](#73-continuous-deployment)
+    - [7.3.1. Tools and Practices](#731-tools-and-practices)
+    - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -5823,6 +5839,123 @@ Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, F
 [https://www.youtube.com/watch?v=vajqovVXk3o](https://www.youtube.com/watch?v=vajqovVXk3o)
 
 **Duración del video:** 2 minutos y 35 segundos
+
+# Capítulo VI: Product Verification & Validation
+
+## 6.1. Testing Suites & Validation
+
+### 6.1.1. Core Entities Unit Tests
+
+Las pruebas unitarias verifican de forma aislada la lógica de las entidades del dominio y de los servicios de aplicación (Command y Query) del backend de ElectroLink. Todas siguen el patrón **AAA (Arrange – Act – Assert)**: se preparan los datos y los mocks, se ejecuta una sola operación y se verifica el resultado esperado.
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| JUnit 5 | Framework de ejecución de pruebas |
+| Mockito | Mocks de los repositorios JPA (`@Mock`, `@InjectMocks`) |
+| AssertJ | Aserciones legibles (`assertThat`, `assertThatThrownBy`) |
+| Maven Surefire | Ejecución con `./mvnw test` |
+
+Los repositorios se simulan con Mockito, por lo que las pruebas no requieren base de datos ni levantar el contexto de Spring.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `ComponentCommandServiceImpl` | `ComponentCommandServiceImplTest` | 6 |
+| `ComponentQueryServiceImpl` | `ComponentQueryServiceImplTest` | 7 |
+| `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 13 |
+| `TechnicianInventoryQueryServiceImpl` | `TechnicianInventoryQueryServiceImplTest` | 6 |
+| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 15 |
+| **Total** | | **47** |
+
+Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
+
+**Evidencia de ejecución (IntelliJ IDEA)**
+
+`ComponentCommandServiceImplTest` — 6 pruebas:
+
+<img src="assets/img/cap6/ComponentCommandServiceImplTest.png"/>
+
+`ComponentQueryServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/ComponentQueryServiceImplTest.png"/>
+
+`TechnicianInventoryCommandServiceImplTest` — 13 pruebas:
+
+<img src="assets/img/cap6/TechnicianInventoryCommandServiceImplTest.png"/>
+
+`TechnicianInventoryQueryServiceImplTest` — 6 pruebas:
+
+<img src="assets/img/cap6/TechnicianInventoryQueryServiceImplTest.png"/>
+
+`ComponentEntitiesTest` — 15 pruebas (entidades y value objects):
+
+<img src="assets/img/cap6/ComponentEntitiesTest.png"/>
+
+**Casos cubiertos**
+
+| Clase | Escenarios verificados |
+|---|---|
+| `ComponentCommandServiceImpl` | Crear componente nuevo devuelve su `ComponentId`; crear con nombre duplicado lanza `IllegalStateException` y no guarda; actualizar componente existente cambia nombre y descripción; actualizar uno inexistente devuelve vacío; eliminar existente devuelve `true`; eliminar inexistente devuelve `false` sin borrar. |
+| `ComponentQueryServiceImpl` | Búsqueda por id (existente e inexistente); listar todos; filtrar por tipo; buscar por lista de ids; buscar por nombre aplicando el límite; búsqueda por nombre sin coincidencias. |
+| `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, umbral `null`, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
+| `TechnicianInventoryQueryServiceImpl` | Inventario por técnico (existente e inexistente); inventarios con stock bajo (con y sin resultados); detalle de stock de un componente (existente e inexistente). |
+| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock. |
+
+**Ejemplo de prueba con el patrón AAA**
+
+```java
+@Test
+@DisplayName("Create: lanza IllegalStateException si el nombre ya existe")
+void createComponent_whenNameExists_throwsIllegalStateException() {
+    // Arrange
+    var command = new CreateComponentCommand(UUID.randomUUID(), "Breaker 20A", "Interruptor", 1L, true);
+    when(componentRepository.existsByName("Breaker 20A")).thenReturn(true);
+
+    // Act + Assert
+    assertThatThrownBy(() -> service.handle(command))
+            .isInstanceOf(IllegalStateException.class)
+            .hasMessage("Component with the same name already exists");
+    verify(componentRepository, never()).save(any());
+}
+```
+
+**Convención de nombres:** `metodo_cuandoCondicion_resultadoEsperado`, con un `@DisplayName` en español que describe el caso.
+
+**Defectos detectados y corregidos durante la escritura de las pruebas**
+
+- `TechnicianInventory.updateStockItem(...)` actualizaba el stock pero siempre devolvía `false`. Ahora devuelve `true` cuando el componente existe en el inventario y `false` cuando no.
+- Si `UpdateComponentStockCommand.newAlertThreshold` llegaba `null`, se lanzaba `NullPointerException` al convertirlo a `int`. Ahora, cuando es `null`, se conserva el umbral actual (en `TechnicianInventory.updateStockItem` y en `TechnicianInventoryCommandServiceImpl`).
+
+### 6.1.2. Core Integration Tests
+
+### 6.1.3. Core Behavior-Driven Development
+
+### 6.1.4. Core System Tests
+
+<div style="page-break-after: always;"></div>
+
+# Capítulo VII: DevOps Practices
+
+## 7.1. Continuous Integration
+
+### 7.1.1. Tools and Practices
+
+### 7.1.2. Build & Test Suite Pipeline Components
+
+## 7.2. Continuous Delivery
+
+### 7.2.1. Tools and Practices
+
+### 7.2.2. Stages Deployment Pipeline Components
+
+## 7.3. Continuous Deployment
+
+### 7.3.1. Tools and Practices
+
+### 7.3.2. Production Deployment Pipeline Components
 
 <div style="page-break-after: always;"></div>
 
