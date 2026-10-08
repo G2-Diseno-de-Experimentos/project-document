@@ -5924,10 +5924,11 @@ Los repositorios se simulan con Mockito, por lo que las pruebas no requieren bas
 | `ComponentQueryServiceImpl` | `ComponentQueryServiceImplTest` | 7 |
 | `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 13 |
 | `TechnicianInventoryQueryServiceImpl` | `TechnicianInventoryQueryServiceImplTest` | 6 |
-| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 15 |
-| **Total** | | **47** |
+| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 16 |
+| `AssetsRestExceptionHandler` | `AssetsRestExceptionHandlerTest` | 3 |
+| **Total** | | **51** |
 
-Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
+Resultado de la ejecución: 51 pruebas, 0 fallos, 0 errores. Las capturas de IntelliJ corresponden a las 47 pruebas iniciales; las 4 pruebas añadidas junto con las correcciones de 6.1.2 (`ComponentEntitiesTest` y `AssetsRestExceptionHandlerTest`) se muestran en la ejecución de Maven que sigue a las capturas.
 
 **Evidencia de ejecución (IntelliJ IDEA)**
 
@@ -5951,6 +5952,10 @@ Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 
 <img src="assets/img/cap6/ComponentEntitiesTest.png"/>
 
+Ejecución con Maven de las 51 pruebas del bounded context, incluidas las 4 añadidas en el Sprint 2:
+
+<img src="assets/img/cap6/assets-unit-tests-sprint2.png"/>
+
 **Casos cubiertos**
 
 | Clase | Escenarios verificados |
@@ -5959,7 +5964,8 @@ Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 | `ComponentQueryServiceImpl` | Búsqueda por id (existente e inexistente); listar todos; filtrar por tipo; buscar por lista de ids; buscar por nombre aplicando el límite; búsqueda por nombre sin coincidencias. |
 | `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, umbral `null`, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
 | `TechnicianInventoryQueryServiceImpl` | Inventario por técnico (existente e inexistente); inventarios con stock bajo (con y sin resultados); detalle de stock de un componente (existente e inexistente). |
-| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock. |
+| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock, y suma la cantidad cuando se agrega un componente que ya está en el inventario. |
+| `AssetsRestExceptionHandler` | `IllegalStateException` → 409, `EntityNotFoundException` → 404 e `IllegalArgumentException` → 400, con el mensaje de la excepción. |
 
 **Ejemplo de prueba con el patrón AAA**
 
@@ -5986,7 +5992,195 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 
 ### 6.1.2. Core Integration Tests
 
+Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| Karate 2.1.2 (`io.karatelabs`) | Peticiones HTTP, aserciones sobre las respuestas y reporte HTML |
+| JUnit 5 | Runner que ejecuta los features (`Runner.path(...).parallel(5)`) |
+| PostgreSQL 16 (Docker) | Base de datos de la aplicación durante las pruebas |
+| Maven Surefire | Ejecución con `./mvnw test` |
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+**Estrategia de ejecución**
+
+Se sigue el método presentado en clase: la API se levanta por separado en `http://localhost:8091` y los features la llaman mediante la variable `baseUrl` de `karate-config.js`.
+
+1. Base de datos de prueba: `docker run -d --name electrolink-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=electrolink -p 5433:5432 postgres:16-alpine`.
+2. API (con `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y `JWT_SECRET` definidos): `./mvnw spring-boot:run "-Dspring-boot.run.jvmArguments=-Dspring.devtools.restart.enabled=false"`. Se desactiva el reinicio de *devtools* porque, de lo contrario, la API se reinicia cuando Maven recompila las pruebas y los primeros escenarios fallan con *Connection refused*.
+3. Pruebas: `./mvnw test -Dtest=ComponentInventoryKarateTest`. Si la API no responde, el runner omite la prueba en lugar de fallar.
+
+**Organización de los archivos** (`src/test/resources/com/hampcoders/electrolink/assets/integration/`)
+
+| Archivo | Tipo | Propósito |
+|---|---|---|
+| `components.feature` | Feature | 14 escenarios sobre `/api/v1/components` |
+| `technician-inventories.feature` | Feature | 19 escenarios sobre `/api/v1/technician-inventories` |
+| `support/create-technician.feature` | Helper `@ignore` | Registra un usuario `ROLE_TECHNICIAN`, crea su perfil de técnico e inicia sesión; devuelve `token` y `technicianId` |
+| `support/create-user.feature` | Helper `@ignore` | Registra un usuario sin perfil (para el caso 403) |
+| `support/create-component-type.feature` | Helper `@ignore` | Crea un tipo de componente con nombre único |
+| `support/create-component.feature` | Helper `@ignore` | Crea un tipo y un componente con nombre único |
+| `ComponentInventoryKarateTest.java` | Runner JUnit 5 | Ejecuta los dos features en paralelo y genera el reporte HTML |
+
+**Autenticación y datos de prueba**
+
+- El JWT se obtiene por la propia API: sign-up, sign-in y uso del token en la cabecera `Authorization: Bearer`. Es el mismo patrón de los ejemplos del curso: un feature auxiliar `@ignore` invocado con `call`/`callonce`.
+- El inventario se obtiene a partir del email del token, y cada técnico tiene un único inventario. Por eso cada escenario de inventario crea su propio técnico.
+- Los nombres de componentes y los emails llevan un UUID. Así los escenarios son independientes entre sí, se pueden ejecutar en paralelo y se pueden repetir sin limpiar la base de datos.
+
+**Resultados**
+
+Se ejecutaron 2 features y 33 escenarios: 33 aprobados y 0 fallidos. La suite se ejecutó dos veces seguidas sobre la misma base de datos con el mismo resultado.
+
+Reporte HTML de Karate (`target/karate-reports/karate-summary.html`):
+
+<img src="assets/img/cap6/karate-summary.png"/>
+
+Salida de consola de Maven al final de la ejecución:
+
+<img src="assets/img/cap6/karate-maven-console.png"/>
+
+**Evidencia de petición y respuesta**
+
+Nombre de componente duplicado: la API responde `409 Conflict` con el mensaje de la regla de negocio.
+
+<img src="assets/img/cap6/karate-components-duplicate-409.png"/>
+
+Agregar al stock un componente que ya está en el inventario suma la cantidad (10 + 5 = 15) en un único ítem:
+
+<img src="assets/img/cap6/karate-inventory-merge-stock.png"/>
+
+Consulta del detalle de stock de un componente (`GET /technician/{id}/stocks/{componentId}`):
+
+<img src="assets/img/cap6/karate-inventory-stock-detail.png"/>
+
+**Defectos detectados por las pruebas de integración y corregidos**
+
+Estos defectos no aparecían en las pruebas unitarias, porque allí los repositorios están simulados. Solo se manifestaron al ejecutar la API real con PostgreSQL.
+
+| Defecto | Síntoma en la API real | Corrección |
+|---|---|---|
+| La consulta `findByTechnicianInventoryIdAndComponentUid` comparaba el id del inventario (UUID) con el id del técnico (Long) | `GET /technician/{id}/stocks/{componentId}` nunca devolvía el detalle (error de tipos en Hibernate) | Nueva consulta `findByTechnicianIdAndComponentUid`, que filtra por `technicianInventory.technicianId` |
+| `InventoryStockList.addItem` siempre añadía un ítem nuevo | Agregar dos veces el mismo componente creaba dos filas de stock | Si el componente ya está en el inventario se suma la cantidad (`ComponentStock.increaseQuantity`) y se actualiza el umbral |
+| No había manejo de excepciones en los controladores; Spring reenviaba los errores a `/error`, una ruta protegida | Duplicados, recursos inexistentes y validaciones respondían `401 Unauthorized` | `AssetsRestExceptionHandler` (solo para `ComponentController` y `TechnicianInventoryController`) devuelve 409, 404 y 400 con un cuerpo `{"message": ...}` |
+
+**Comportamientos observados**
+
+- Al registrar un perfil con rol `TECHNICIAN`, el bounded context Profiles crea automáticamente el inventario del técnico. Por eso `POST /api/v1/technician-inventories` responde 409 para un técnico registrado, y los escenarios verifican la creación automática.
+- `PUT /api/v1/components/{id}` solo actualiza el nombre y la descripción.
+- Las rutas `/technician/{technicianId}/stocks...` no comprueban que el técnico del path sea el del token; queda registrado como mejora de seguridad pendiente.
+
+**Commits relacionados**
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [7a810e8](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/7a810e8) | fix: find stock item by technician id | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [c9313b6](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/c9313b6) | fix: merge stock when adding a component already in inventory | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [da8773f](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/da8773f) | feat: map component and inventory errors to http status codes | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [65c673a](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65c673a) | test: add karate integration scenarios for components and technician inventory | — | 08/10/2026 |
+
 ### 6.1.3. Core Behavior-Driven Development
+
+Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Los nombres de los escenarios están en inglés, según la convención de código del equipo.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+**Relación entre escenarios y User Stories**
+
+| User Story | Feature | Escenarios |
+|---|---|---|
+| US-31 Crear componente eléctrico | `components.feature` | Ciclo de vida completo (Outline × 2), listado, nombre duplicado (409), datos inválidos (Outline × 3, 400), sin token (401) |
+| US-32 Editar componente eléctrico | `components.feature` | Actualización en el ciclo de vida, nombre vacío (400), componente inexistente (404), id no positivo (400) |
+| US-33 Eliminar componente eléctrico | `components.feature` | Eliminación en el ciclo de vida, componente inexistente (404), componente en uso en un stock (409) |
+| US-37 Registro de inventario de componentes | `technician-inventories.feature` | Inventario creado al registrar el perfil técnico, inventario duplicado (409), usuario sin perfil (403), técnico inexistente (404), agregar componente, sumar cantidad, datos inválidos (Outline × 2), componente o técnico inexistente (Outline × 2), detalle de stock, quitar componente, sin token (401) |
+| US-38 Actualización de stock de componentes | `technician-inventories.feature` | Actualizar cantidad y umbral, componente fuera del inventario (404), cantidad negativa (400) |
+| US-39 Alertas de stock mínimo | `technician-inventories.feature` | El inventario aparece en `/low-stock` con cantidad menor a 5 y no aparece con stock suficiente |
+
+**Ejemplo: escenario con datos (Scenario Outline) — `components.feature`**
+
+```gherkin
+Scenario Outline: Manage the full life cycle of a component - <name>
+  * def compName = '<name> ' + uid
+  Given path '/api/v1/components'
+  And header Authorization = 'Bearer ' + token
+  And request { name: '#(compName)', description: '<description>', componentTypeId: '#(type.componentTypeId)', isActive: true }
+  When method post
+  Then status 201
+  And match response.id == '#string'
+  And match response.isActive == true
+  * def componentId = response.id
+
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  When method get
+  Then status 200
+  And match response.name == compName
+
+  * def updatedName = '<name> updated ' + uid
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  And request { name: '#(updatedName)', description: 'Updated description' }
+  When method put
+  Then status 200
+  And match response.name == updatedName
+
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  When method delete
+  Then status 204
+
+  Examples:
+    | name    | description                  |
+    | Breaker | Thermomagnetic breaker 2x20A |
+    | Cable   | Copper cable 12 AWG          |
+```
+
+**Ejemplo: regla de negocio de stock mínimo — `technician-inventories.feature`**
+
+```gherkin
+Background:
+  * url baseUrl
+  * def tech = call read('classpath:com/hampcoders/electrolink/assets/integration/support/create-technician.feature')
+  * def token = tech.token
+  * def technicianId = tech.technicianId
+  * def created = call read('classpath:com/hampcoders/electrolink/assets/integration/support/create-component.feature') { token: '#(token)' }
+  * def componentId = created.componentId
+
+Scenario: List the inventory among low stock inventories
+  Given path '/api/v1/technician-inventories/technician', technicianId, 'stocks'
+  And header Authorization = 'Bearer ' + token
+  And request { componentId: '#(componentId)', quantity: 10, alertThreshold: 3 }
+  When method post
+  Then status 200
+  * def inventoryId = response.inventoryId
+
+  Given path '/api/v1/technician-inventories/technician', technicianId, 'stocks', componentId
+  And header Authorization = 'Bearer ' + token
+  And request { newQuantity: 2, newAlertThreshold: 3 }
+  When method put
+  Then status 200
+
+  Given path '/api/v1/technician-inventories/low-stock'
+  And header Authorization = 'Bearer ' + token
+  When method get
+  Then status 200
+  And match response[*].inventoryId contains inventoryId
+```
+
+**Evidencia: escenarios ejecutados en el reporte de Karate**
+
+`components.feature`:
+
+<img src="assets/img/cap6/karate-components-feature.png"/>
+
+`technician-inventories.feature`:
+
+<img src="assets/img/cap6/karate-inventory-feature.png"/>
+
+Los archivos completos están en el repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/assets-karate-integration/src/test/resources/com/hampcoders/electrolink/assets/integration), rama `feature/assets-karate-integration`.
 
 ### 6.1.4. Core System Tests
 
