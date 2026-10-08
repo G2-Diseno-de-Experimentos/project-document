@@ -5656,6 +5656,9 @@ Este procedimiento permite mantener una versión publicada de la Landing Page al
 
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
+
+#### Sprint Planning 1
+
 | Sprint #       | Sprint 1 | |                                                            |                                                                                                                   |                     |                   |            |
 |----------------|----------|---|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|---------------------|-------------------|------------|
 | **User Story** | | **Work-Item/task** |                                                            |                                                                                                                   |                     |                   |            |
@@ -5666,6 +5669,44 @@ Este procedimiento permite mantener una versión publicada de la Landing Page al
 | **US-13**      | Registro de cuentas como Dueño de Hogar | T001 | Mejorar la visualización del formulario                        | Actualizar la estructura y estilos del formulario de la sección 'Sign up'                                         | 1                   | Jorge Retuerto  | Done       |
 | **US-17**      | Inicio de sesión de usuarios | T001 | Mejorar la visualización del formulario | Actualizar la estructura y estilos del formulario de la sección 'Sign in'                                         | 1                   | Leonardo Prieto | Done       |
 | **TS-13**      | Conectar a Base de Datos | T001 | Desplegar el Backend                                       | Actualizar el despliegue de los servicios web (Backend)                                                           | 1                   | Ivo Machado      | Done       |
+
+#### Sprint Planning 2
+
+El segundo sprint se centra en la verificación del backend de ElectroLink y en la preparación de las evidencias del Capítulo VI. Su objetivo es comprobar las reglas del dominio mediante pruebas unitarias, validar la integración de la API con Karate y expresar los comportamientos esperados mediante escenarios BDD en archivos `.feature`.
+
+El trabajo de 6.1.1 y 6.1.3 comparte los casos de negocio que se desean verificar, pero utiliza enfoques distintos: las pruebas unitarias aíslan entidades y servicios, mientras que los escenarios BDD describen el comportamiento observable. Los reportes de Karate de 6.1.2 y los archivos `.feature` de 6.1.3 son evidencias complementarias de la definición y ejecución de esos escenarios.
+
+| Campo | Detalle |
+|---|---|
+| Sprint | 2 |
+| Sprint Goal | Verificar las reglas y los comportamientos del backend y documentar las evidencias de pruebas correspondientes a 6.1.1, 6.1.2 y 6.1.3. |
+| Equipo | Ivo Machado, Leonardo Prieto, Juan Wang y Jorge Retuerto. |
+| Alcance | Pruebas unitarias, corrección de defectos detectados, pruebas de integración con Karate, escenarios BDD y actualización de evidencias de colaboración. |
+| Fuera del alcance de esta planificación | Core System Tests (6.1.4), análisis estático y prácticas DevOps. |
+
+**Sprint Backlog 2**
+
+Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product Backlog. Los identificadores `SP2-Txx` identifican tareas del sprint y no nuevas historias de usuario. Las horas que no constan en el registro del equipo se dejan sin estimación; tampoco se atribuyen responsables individuales sin una asignación confirmada.
+
+| Historia / apartado | Work item | Título | Descripción y entregable | Estimación (horas) | Responsable | Estado |
+|---|---|---|---|---|---|---|
+| US-37 / US-38 · 6.1.1 | SP2-T01 | Verificar entidades y value objects | Comprobar la creación y modificación de componentes, la validez de identificadores y cantidades, y las operaciones de stock del inventario. Evidencia: `ComponentEntitiesTest`. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+| US-37 / US-38 · 6.1.1 | SP2-T02 | Verificar servicios Command y Query | Probar creación, actualización, eliminación y consultas de componentes e inventarios, incluyendo duplicados y recursos inexistentes, con JUnit 5, Mockito y AssertJ. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+| US-38 · 6.1.1 | SP2-T03 | Corregir defectos de actualización de stock | Corregir el valor de retorno de `updateStockItem` y conservar el umbral vigente cuando `newAlertThreshold` es `null`; comprobar los casos afectados con pruebas. | No registrada | Equipo de desarrollo | Done: correcciones documentadas |
+| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Realizado según el avance del equipo; evidencia pendiente en este informe |
+| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los escenarios ejecutados en Karate. | No registrada | Equipo de desarrollo | Realizado según el avance del equipo; evidencia pendiente en este informe |
+| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | InProcess: 6.1.1 incorporado; 6.1.2 y 6.1.3 pendientes de incorporación |
+| 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+
+**Criterios de finalización del sprint**
+
+- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 47 casos.
+- Los defectos detectados en la actualización del inventario quedan corregidos y cubiertos por pruebas.
+- Los reportes de Karate permiten identificar los escenarios ejecutados y sus resultados, incluyendo cualquier fallo que requiera seguimiento.
+- Los archivos `.feature` presentados en 6.1.3 corresponden a los escenarios de integración mostrados en 6.1.2.
+- Las evidencias de los tres apartados quedan incorporadas al informe con rutas accesibles y una explicación de su alcance.
+
+La estructura de esta planificación toma como guía la separación entre historias, tareas, descripción, estimación, responsables y estados del [repositorio Docs de G-0X Diseño de Experimentos](https://github.com/G-0X-Diseno-de-Experimentos/Docs), adaptada al trabajo de verificación de ElectroLink.
 
 ### 5.2.2. Implemented Landing Page Evidence
 
@@ -5816,18 +5857,34 @@ Controladores de Inventario de Técnicos, Servicios, Schedules y Requests, mostr
 ### 5.2.7. RESTful API documentation
 ### 5.2.8. Team Collaboration Insights
 
-Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, Frontend y Backend. Las actividades fueron gestionadas a través de GitHub, permitiendo una trazabilidad clara de los aportes de cada miembro del equipo. Se realizaron tareas de codificación, revisión, organización del repositorio y mejoras visuales y funcionales del producto. Cada miembro del equipo tuvo participación activa, realizando commits, revisando código, y apoyando en la estructura y documentación del proyecto.
+Durante el Sprint 1, el equipo trabajó en la Landing Page, el Frontend y el Backend. Para el Sprint 2, el alcance se orientó a verificar la solución y documentar las pruebas unitarias, las ejecuciones de Karate y los escenarios BDD del Capítulo VI. El historial de GitHub permite consultar los cambios registrados y complementar las evidencias del informe.
+
+#### Contribuciones registradas para la entrega del Sprint 2
+
+![Contribuciones del equipo en GitHub: captura suministrada para la entrega del Sprint 2](assets/img/cap5/team-collaboration-sprint-2.png)
+
+La captura muestra el panel de contribuciones de GitHub con el intervalo indicado del 4 de julio al 3 de octubre de 2026. En los perfiles visibles se registran los siguientes valores:
+
+| Usuario de GitHub | Commits | Líneas añadidas | Líneas eliminadas |
+|---|---:|---:|---:|
+| Wuux1 | 30 | 5 541 | 108 |
+| jwd3t | 14 | 345 | 36 |
+| ivommb11 | 12 | 397 | 38 |
+| Calin1407 | 2 | 15 | 26 |
+| **Total de los perfiles visibles** | **58** | **6 298** | **208** |
+
+Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no exclusivamente las tareas del Sprint 2. La mayor concentración de actividad se observa en septiembre, con aportes adicionales al final del intervalo. El número de commits y las líneas modificadas describen la actividad registrada, pero no permiten determinar por sí solos qué integrante realizó cada prueba, la dificultad de las tareas o su calidad. Los commits posteriores al 3 de octubre no están representados en esta evidencia.
+
+#### Evidencias de los componentes del Sprint 1
 
 - Insights de Landing Page:
 
 <a href="https://ibb.co/20vmC3mP"><img src="https://i.ibb.co/fVkBydBt/i1.png" alt="i1" border="0"></a>
 
 - Insights de Frontend:
-- 
 <a href="https://ibb.co/pjFPWtQN"><img src="https://i.ibb.co/VY4NH7xb/i2.png" alt="i2" border="0"></a>
 
 - Insights de Backend:
-- 
 <a href="https://ibb.co/nN8dCNNy"><img src="https://i.ibb.co/YFTnZFFS/i3.png" alt="i3" border="0"></a>
 
 ## 5.3. Video About-the-Product.
