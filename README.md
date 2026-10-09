@@ -193,7 +193,6 @@
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
-                    - <strong>TP:</strong> Implementó las pruebas unitarias y de integración del bounded context Monitoring (operaciones de servicio, reportes, fotos y calificaciones) y documentó su evidencia en Gherkin, verificando que los recursos protegidos rechacen solicitudes sin autenticación.<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Desarrolló y documentó pruebas del bounded context Monitoring con JUnit 5, Mockito y Karate para operaciones de servicio, reportes, fotografías y calificaciones. Verificó el acceso sin JWT y registró con transparencia los fallos encontrados en los escenarios HTTP autenticados, asumiendo la responsabilidad profesional de no presentar como validadas funciones que todavía requieren corrección.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
@@ -214,7 +213,7 @@
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
-                <p style="font-size: 14px;"><strong>TP:</strong> El equipo asumió la responsabilidad profesional de verificar la calidad del backend antes de entregarlo: incorporó pruebas unitarias, de integración y escenarios BDD sobre la API real, corrigió los defectos que estas revelaron y documentó la evidencia de forma trazable, distinguiendo las ejecuciones reales de las validaciones de sintaxis.</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> El equipo asumió la responsabilidad profesional de verificar la calidad del backend antes de entregarlo: incorporó pruebas unitarias, de integración y escenarios BDD sobre la API real, corrigió los defectos que estas revelaron o los registró como pendientes cuando aún requerían corrección, y documentó la evidencia de forma trazable, distinguiendo las ejecuciones reales de las validaciones de sintaxis.</p>
             </td>
         </tr>
         <tr style="page-break-inside: avoid;">
@@ -225,7 +224,6 @@
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
-                    - <strong>TP:</strong> Verificó los flujos de reportes y calificaciones del servicio, que sostienen la confianza del cliente en el técnico (impacto social) y la reputación de la que dependen los ingresos de los técnicos certificados (impacto económico).<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Evaluó el impacto social y económico de Monitoring al probar el seguimiento de servicios, la trazabilidad de reportes y las calificaciones de técnicos, funciones que pueden ayudar a sustentar reclamos y decisiones de contratación. Definió escenarios para comprobar estados, consultas y acceso autorizado, e identificó límites de integración que deben resolverse antes de confiar en estos resultados para el uso real del sistema.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
