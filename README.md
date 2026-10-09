@@ -5865,6 +5865,94 @@ Controladores de Inventario de Técnicos, Servicios, Schedules y Requests, mostr
 
 
 ### 5.2.7. RESTful API documentation
+
+En esta sección se documenta la API RESTful del backend de ElectroLink. Para cada controlador se indican el método HTTP, la ruta del endpoint, su descripción funcional y un ejemplo de uso dentro de la plataforma. La documentación interactiva generada con OpenAPI (Swagger) está disponible en `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` y, en un entorno local, en `http://localhost:8091/swagger-ui/index.html`.
+
+**Autenticación:** los endpoints de `/api/v1/authentication/**` y los de `/api/v1/profiles/**` son públicos, salvo `/api/v1/profiles/me`. El resto exige un token JWT en la cabecera `Authorization: Bearer <token>`, que se obtiene con `POST /api/v1/authentication/sign-in`. Las respuestas se envían en formato JSON.
+
+| Método HTTP | Endpoint | Descripción | Ejemplo de uso |
+|---|---|---|---|
+| **Authentication** | | | |
+| POST | `/api/v1/authentication/sign-up` | Registra un nuevo usuario con sus roles | Crear una cuenta de técnico o de dueño de hogar |
+| POST | `/api/v1/authentication/sign-in` | Inicia sesión y devuelve el token JWT | Autenticarse para consumir los endpoints protegidos |
+| **Users** | | | |
+| GET | `/api/v1/users` | Obtiene todos los usuarios | Listar las cuentas registradas |
+| GET | `/api/v1/users/{userId}` | Obtiene un usuario por su identificador | Consultar los roles de un usuario |
+| GET | `/api/v1/users/me` | Obtiene el usuario autenticado | Mostrar los datos de la sesión actual |
+| **Roles** | | | |
+| GET | `/api/v1/roles` | Obtiene los roles disponibles | Elegir el rol durante el registro |
+| **Profiles** | | | |
+| POST | `/api/v1/profiles` | Crea un perfil de dueño de hogar o de técnico | Completar el perfil después del registro |
+| GET | `/api/v1/profiles` | Obtiene todos los perfiles | Listar los perfiles de la plataforma |
+| GET | `/api/v1/profiles/{profileId}` | Obtiene un perfil por su identificador | Ver el perfil de un técnico |
+| GET | `/api/v1/profiles/me` | Obtiene el perfil del usuario autenticado | Cargar el perfil propio al iniciar sesión |
+| GET | `/api/v1/profiles/search` | Busca perfiles por `email`, `role` o `firstName` y `lastName` | Buscar técnicos por rol |
+| PUT | `/api/v1/profiles/{profileId}` | Actualiza un perfil | Modificar la dirección o la certificación |
+| DELETE | `/api/v1/profiles/{profileId}` | Elimina un perfil | Dar de baja un perfil |
+| **Property Management** | | | |
+| GET | `/api/v1/properties` | Obtiene todas las propiedades | Listar los inmuebles registrados |
+| GET | `/api/v1/properties/{propertyId}` | Obtiene una propiedad por su identificador | Ver la dirección de una vivienda |
+| GET | `/api/v1/properties/owner/{ownerId}` | Obtiene las propiedades de un propietario | Mostrar las viviendas de un dueño de hogar |
+| POST | `/api/v1/properties` | Registra una propiedad | Agregar la vivienda que necesita el servicio |
+| PUT | `/api/v1/properties/{propertyId}` | Actualiza una propiedad | Corregir el distrito de una vivienda |
+| DELETE | `/api/v1/properties/{propertyId}` | Elimina una propiedad | Retirar una vivienda que ya no se usa |
+| **Component Types** | | | |
+| GET | `/api/v1/component-types` | Obtiene los tipos de componentes | Clasificar los materiales eléctricos |
+| POST | `/api/v1/component-types` | Registra un tipo de componente | Crear la categoría "Interruptor" |
+| **Component Management** | | | |
+| GET | `/api/v1/components` | Obtiene todos los componentes | Ver el catálogo de componentes eléctricos |
+| GET | `/api/v1/components/{componentId}` | Obtiene un componente por su identificador | Consultar el detalle de un breaker |
+| POST | `/api/v1/components` | Registra un componente (nombre único) | Agregar un componente al catálogo |
+| PUT | `/api/v1/components/{componentId}` | Actualiza el nombre y la descripción de un componente | Corregir la descripción de un cable |
+| DELETE | `/api/v1/components/{componentId}` | Elimina un componente que no esté en ningún stock | Retirar un componente descontinuado |
+| **Technician Inventories** | | | |
+| POST | `/api/v1/technician-inventories` | Crea el inventario del técnico autenticado (se crea automáticamente al registrar el perfil de técnico) | Inicializar el inventario de un técnico |
+| GET | `/api/v1/technician-inventories/technician/{technicianId}` | Obtiene el inventario de un técnico | Revisar los materiales disponibles |
+| GET | `/api/v1/technician-inventories/low-stock` | Obtiene los inventarios con algún componente por debajo de 5 unidades | Alertar al técnico para reponer stock |
+| POST | `/api/v1/technician-inventories/technician/{technicianId}/stocks` | Agrega un componente al stock (suma la cantidad si ya existe) | Registrar la compra de 10 breakers |
+| GET | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Obtiene el detalle de stock de un componente | Consultar cuántas unidades quedan |
+| PUT | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Actualiza la cantidad y el umbral de alerta | Ajustar el stock después de un servicio |
+| DELETE | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Retira un componente del stock | Quitar un material que ya no se usa |
+| **Services** | | | |
+| GET | `/api/v1/services` | Obtiene el catálogo de servicios | Mostrar los servicios ofrecidos |
+| GET | `/api/v1/services/{serviceId}` | Obtiene un servicio por su identificador | Ver el detalle de un servicio |
+| POST | `/api/v1/services` | Registra un servicio | Publicar un nuevo servicio eléctrico |
+| PUT | `/api/v1/services/{serviceId}` | Actualiza un servicio | Modificar el precio base o la descripción |
+| DELETE | `/api/v1/services/{serviceId}` | Elimina un servicio | Retirar un servicio del catálogo |
+| **Requests** | | | |
+| POST | `/api/v1/requests` | Crea una solicitud de servicio | El dueño de hogar solicita una reparación |
+| GET | `/api/v1/requests/{id}` | Obtiene una solicitud por su identificador | Ver el estado de una solicitud |
+| GET | `/api/v1/requests/clients/{clientId}/requests` | Obtiene las solicitudes de un cliente | Historial de solicitudes del dueño de hogar |
+| PUT | `/api/v1/requests/{id}` | Actualiza una solicitud | Modificar la descripción del problema |
+| DELETE | `/api/v1/requests/{id}` | Elimina una solicitud | Cancelar una solicitud |
+| **Schedules** | | | |
+| POST | `/api/v1/schedules` | Registra un horario de disponibilidad | El técnico publica su disponibilidad |
+| GET | `/api/v1/technicians/{technicianId}/schedules` | Obtiene los horarios de un técnico | Elegir una fecha para el servicio |
+| PUT | `/api/v1/schedules/{scheduleId}` | Actualiza un horario | Cambiar el rango de atención |
+| DELETE | `/api/v1/schedules/{scheduleId}` | Elimina un horario | Retirar un turno no disponible |
+| **Service Operations** | | | |
+| POST | `/api/v1/service-operations` | Crea una operación de servicio para un técnico | Iniciar la atención de una solicitud |
+| GET | `/api/v1/service-operations` | Obtiene todas las operaciones | Supervisar los servicios en curso |
+| GET | `/api/v1/service-operations/{serviceOperationId}` | Obtiene una operación por su identificador | Consultar el estado de una atención |
+| GET | `/api/v1/service-operations/technicians/{technicianId}` | Obtiene las operaciones de un técnico | Ver la agenda de trabajos del técnico |
+| PUT | `/api/v1/service-operations/status` | Actualiza el estado de una operación | Marcar un servicio como completado |
+| **Reports** | | | |
+| POST | `/api/v1/reports` | Registra un reporte de una solicitud | Reportar un incidente durante el servicio |
+| GET | `/api/v1/reports` | Obtiene todos los reportes | Revisar los reportes registrados |
+| GET | `/api/v1/reports/{reportId}` | Obtiene un reporte por su identificador | Ver el detalle de un reporte |
+| GET | `/api/v1/reports/requests/{requestId}` | Obtiene los reportes de una solicitud | Historial de reportes de un servicio |
+| DELETE | `/api/v1/reports/{reportId}` | Elimina un reporte | Retirar un reporte registrado por error |
+| **Report Photos** | | | |
+| POST | `/api/v1/photos` | Adjunta una foto a un reporte | Subir la evidencia de un trabajo realizado |
+| **Ratings** | | | |
+| POST | `/api/v1/ratings` | Registra la calificación de un servicio | El cliente califica al técnico |
+| PUT | `/api/v1/ratings` | Actualiza una calificación | Corregir el puntaje o el comentario |
+| GET | `/api/v1/ratings` | Obtiene todas las calificaciones | Revisar la reputación general |
+| GET | `/api/v1/ratings/{ratingId}` | Obtiene una calificación por su identificador | Ver el detalle de una calificación |
+| GET | `/api/v1/ratings/technicians/{technicianId}` | Obtiene las calificaciones de un técnico | Mostrar la reputación del técnico |
+| GET | `/api/v1/ratings/requests/{requestId}` | Obtiene las calificaciones de una solicitud | Ver la calificación de un servicio concreto |
+| DELETE | `/api/v1/ratings/{ratingId}` | Elimina una calificación | Retirar una calificación indebida |
+
 ### 5.2.8. Team Collaboration Insights
 
 Durante el Sprint 1, el equipo trabajó en la Landing Page, el Frontend y el Backend. Para el Sprint 2, el alcance se orientó a verificar la solución y documentar las pruebas unitarias, las ejecuciones de Karate y los escenarios BDD del Capítulo VI. El historial de GitHub permite consultar los cambios registrados y complementar las evidencias del informe.
