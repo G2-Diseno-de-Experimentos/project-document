@@ -6066,6 +6066,75 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 - `TechnicianInventory.updateStockItem(...)` actualizaba el stock pero siempre devolvía `false`. Ahora devuelve `true` cuando el componente existe en el inventario y `false` cuando no.
 - Si `UpdateComponentStockCommand.newAlertThreshold` llegaba `null`, se lanzaba `NullPointerException` al convertirlo a `int`. Ahora, cuando es `null`, se conserva el umbral actual (en `TechnicianInventory.updateStockItem` y en `TechnicianInventoryCommandServiceImpl`).
 
+#### Bounded Context Monitoring — Service Operations, Reports, Photos y Ratings
+
+Las pruebas unitarias de Monitoring cubren los cuatro Command Services y los tres Query Services. Utilizan **JUnit Jupiter 5**, **Mockito** y el patrón **Arrange / Act / Assert**; los repositorios y el `EntityManager` se simulan, por lo que esta ejecución no necesita PostgreSQL ni un contexto de Spring.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---:|
+| `ServiceOperationCommandServiceImpl` | `ServiceOperationCommandServiceImplTest` | 5 |
+| `RatingCommandServiceImpl` | `RatingCommandServiceImplTest` | 7 |
+| `ReportCommandServiceImpl` | `ReportCommandServiceImplTest` | 5 |
+| `ReportPhotoCommandServiceImpl` | `ReportPhotoCommandServiceImplTest` | 2 |
+| `ServiceOperationQueryServiceImpl` | `ServiceOperationQueryServiceImplTest` | 4 |
+| `ReportQueryServiceImpl` | `ReportQueryServiceImplTest` | 4 |
+| `RatingQueryServiceImpl` | `RatingQueryServiceImplTest` | 5 |
+| **Total** | | **32** |
+
+**Resultado verificado:** 32 pruebas ejecutadas, 32 aprobadas, 0 fallos, 0 errores y 0 omitidas. El backend evaluado corresponde a la rama [`feature/monitoring-tests`, commit `c4e3b82`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/c4e3b821c145c50c8e00b86921d145ee4146cea1). Los resultados por clase de Maven Surefire se conservan en [assets/evidence/cap6/monitoring](assets/evidence/cap6/monitoring/).
+
+**Casos cubiertos**
+
+| Servicio | Verificaciones |
+|---|---|
+| Service Operation Command | Creación con los datos del comando; cambio a `COMPLETED` con asignación de `completedAt`; cambio a `IN_PROGRESS` sin fecha de finalización; rechazo de una operación inexistente y de un estado desconocido. |
+| Rating Command | Creación para una operación completada; rechazo de operación pendiente o inexistente; actualización de puntuación y comentario; eliminación; rechazo de actualización y eliminación cuando la calificación no existe. |
+| Report Command | Creación cuando existe la operación; rechazo si no existe; eliminación de reporte existente e inexistente; persistencia de la foto asociada al reporte. |
+| Report Photo Command | Asociación de una foto a un reporte existente y rechazo cuando el reporte no existe. |
+| Query Services | Listados generales, búsquedas por ID existente e inexistente, reportes y calificaciones por request, y operaciones y calificaciones por técnico. |
+
+**Evidencia de ejecución (IntelliJ IDEA)**
+
+Las siguientes capturas muestran ejecuciones reales en IntelliJ: **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los resultados originales por clase también están en los archivos Surefire enlazados arriba.
+
+Resumen de los cuatro Command Services (19 pruebas):
+
+<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ: 19 pruebas Command de Monitoring aprobadas"/>
+
+`ServiceOperationCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
+
+`RatingCommandServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
+
+`ReportCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
+
+`ReportPhotoCommandServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
+
+Resumen de los tres Query Services (13 pruebas):
+
+<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ: 13 pruebas Query de Monitoring aprobadas"/>
+
+`ServiceOperationQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
+
+`ReportQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
+
+`RatingQueryServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
+
+**Límite de esta evidencia:** los repositorios simulados permiten comprobar las decisiones de los servicios, pero no prueban la persistencia JPA, los controladores ni las respuestas HTTP. La ejecución de `mvn test` sobre toda la suite devolvió 1 error en la prueba preexistente `ElectrolinkPlatformApplicationTests` porque no estaba definido `DB_URL`; ese error no corresponde a las 32 unitarias de Monitoring.
+
 ### 6.1.2. Core Integration Tests
 
 Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
@@ -6231,6 +6300,40 @@ Estos defectos no aparecían en las pruebas unitarias, porque allí los reposito
 | G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [c9313b6](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/c9313b6) | fix: merge stock when adding a component already in inventory | — | 08/10/2026 |
 | G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [da8773f](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/da8773f) | feat: map component and inventory errors to http status codes | — | 08/10/2026 |
 | G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [65c673a](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65c673a) | test: add karate integration scenarios for components and technician inventory | — | 08/10/2026 |
+
+#### Bounded Context Monitoring — Service Operations, Reports, Photos y Ratings
+
+Se crearon cuatro archivos Karate 2.1.2 y un runner JUnit específico, `MonitoringKarateTest`, para los endpoints `/api/v1/service-operations`, `/api/v1/reports`, `/api/v1/photos` y `/api/v1/ratings`. La URL se configura con `MONITORING_BASE_URL` o `-Dmonitoring.baseUrl`; el valor predeterminado es `http://localhost:8091`. El JWT se proporciona mediante `MONITORING_JWT` o `-Dmonitoring.jwt`, sin guardarlo en el repositorio. Los escenarios que necesitan datos preexistentes utilizan `MONITORING_REQUEST_ID`, `MONITORING_TECHNICIAN_ID` y `MONITORING_REPORT_ID`.
+
+| Feature | Escenarios definidos | Cobertura prevista |
+|---|---:|---|
+| `service-operations.feature` | 5 | Acceso sin token, listado autenticado, ID inexistente, creación y finalización con `completedAt`, consulta por técnico. |
+| `reports.feature` | 5 | Acceso sin token, listado, ID inexistente, creación/consulta/eliminación y consulta por request. |
+| `photos.feature` | 3 | Acceso sin token, asociación a un reporte y rechazo de reporte inexistente. |
+| `ratings.feature` | 5 | Acceso sin token, listado, ID inexistente, creación/actualización/eliminación y consultas por request y técnico. |
+| **Total** | **18** | |
+
+**Ejecución HTTP real (09/10/2026):** con Spring Boot en `localhost:8091` y PostgreSQL local de pruebas, `MonitoringKarateTest#monitoringEndpoints` ejecutó los cuatro escenarios sin JWT. Los cuatro pasaron y comprobaron `401 Unauthorized` en cada endpoint; Surefire registró 1 método JUnit aprobado, sin errores ni omisiones. El runner también había parseado los cuatro features y sus 18 escenarios con `dryRun`, que no cuenta como ejecución HTTP.
+
+<img src="assets/img/cap6/monitoring/MonitoringKarateSummary.png" alt="Karate Monitoring: cuatro features y cuatro escenarios HTTP sin JWT aprobados"/>
+
+**Detalle de las solicitudes HTTP ejecutadas:**
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-service-operations.png" alt="Karate Service Operations: GET sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-reports.png" alt="Karate Reports: GET sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-photos.png" alt="Karate Photos: POST sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-ratings.png" alt="Karate Ratings: GET sin JWT responde 401"/>
+
+Se conserva el [reporte HTML navegable](assets/evidence/cap6/monitoring/karate-reports/karate-summary.html) y el [resultado Surefire](assets/evidence/cap6/monitoring/MonitoringKarateTest.txt) de esa ejecución. El reporte publicado corresponde solo a los cuatro casos sin token y no contiene JWT. Para reproducirlo con el backend levantado:
+
+```powershell
+.\mvnw.cmd '-Dtest=MonitoringKarateTest#monitoringEndpoints' test
+```
+
+**Alcance pendiente:** se hizo además una ejecución exploratoria con un JWT temporal: 11 escenarios HTTP se ejecutaron, 7 pasaron y 4 fallaron al consultar recursos inexistentes (respuestas `401` o `500` donde se esperaba `404`). Los 7 escenarios con datos preexistentes (`@seeded`) no se ejecutaron en esa corrida. Por ello estas capturas **no** acreditan todavía el flujo autenticado completo ni los 18 escenarios. La lógica de esos errores requiere corrección y una nueva ejecución antes de presentarlos como aprobados.
 
 ### 6.1.3. Core Behavior-Driven Development
 
@@ -6427,6 +6530,12 @@ Scenario: List the inventory among low stock inventories
 <img src="assets/img/cap6/karate-inventory-feature.png"/>
 
 Los archivos completos están en el repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/assets-karate-integration/src/test/resources/com/hampcoders/electrolink/assets/integration), rama `feature/assets-karate-integration`.
+
+#### Bounded Context Monitoring
+
+Los cuatro features de Monitoring expresan comportamientos mediante Gherkin y Karate. Describen el acceso con y sin JWT, operaciones de escritura y consulta, recursos inexistentes y la regla de que una calificación solo puede crearse para una operación completada. El escenario de Service Operations verifica además que el cambio a `COMPLETED` asigne `completedAt`. Los [features están en el repositorio del backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/monitoring-tests/src/test/resources/com/hampcoders/electrolink/monitoring).
+
+Esta parte emplea los escenarios Gherkin de Karate; no incluye una suite Cucumber independiente para Monitoring. El [reporte Karate y sus capturas](#bounded-context-monitoring--service-operations-reports-photos-y-ratings) prueban mediante HTTP real los cuatro accesos sin JWT. Los flujos autenticados y los casos con datos preexistentes aún requieren una ejecución completamente aprobada.
 
 ### 6.1.4. Core System Tests
 
