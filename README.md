@@ -194,6 +194,7 @@
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Desarrolló y documentó pruebas del bounded context Monitoring con JUnit 5, Mockito y Karate para operaciones de servicio, reportes, fotografías y calificaciones. Verificó el acceso sin JWT y registró con transparencia los fallos encontrados en los escenarios HTTP autenticados, asumiendo la responsabilidad profesional de no presentar como validadas funciones que todavía requieren corrección.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
@@ -220,6 +221,7 @@
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Evaluó el impacto social y económico de Monitoring al probar el seguimiento de servicios, la trazabilidad de reportes y las calificaciones de técnicos, funciones que pueden ayudar a sustentar reclamos y decisiones de contratación. Definió escenarios para comprobar estados, consultas y acceso autorizado, e identificó límites de integración que deben resolverse antes de confiar en estos resultados para el uso real del sistema.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
