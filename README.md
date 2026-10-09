@@ -6849,9 +6849,157 @@ Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin
 
 ## 7.1. Continuous Integration
 
+La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada ejecución descarga el código de la rama `develop`, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto se identifica antes de integrarse al producto.
+
 ### 7.1.1. Tools and Practices
 
+**Herramientas**
+
+| Herramienta | Versión | Uso en el pipeline |
+|---|---|---|
+| **Jenkins** | 2.580.1 LTS (imagen Docker `jenkins/jenkins:lts-jdk21`) | Servidor de integración continua: ejecuta el pipeline, muestra cada etapa y publica los resultados |
+| **Docker** | Docker Desktop | Ejecuta Jenkins en un contenedor aislado, con el volumen `jenkins_home` para conservar la configuración y el historial |
+| **Git y GitHub** | Git 2.47 | Control de versiones; Jenkins obtiene el código del repositorio público mediante *Checkout SCM* |
+| **Apache Maven** | 3.9.16 (`MAVEN_3_9`, instalación automática) | Compilación, ejecución de pruebas, análisis y empaquetado del proyecto |
+| **JDK** | Temurin 21 (`JDK_21`) | Misma versión de Java definida en el `pom.xml` (`java.version` 21) y en el `Dockerfile` de despliegue |
+| **Pipeline Maven Integration** | Plugin de Jenkins | Paso `withMaven`, que configura Maven y el JDK en cada etapa |
+| **Checkstyle** | maven-checkstyle-plugin 3.6.0 (reglas `google_checks.xml`) | Verificación de las convenciones de código Java |
+| **JUnit 5, Mockito y AssertJ** | JUnit 5, Mockito 5.19 | Pruebas unitarias de entidades y servicios de los bounded contexts |
+| **JaCoCo** | jacoco-maven-plugin 0.8.15 | Medición de la cobertura de líneas y validación de un mínimo de 30 % |
+| **JUnit plugin** | Plugin de Jenkins | Publicación del reporte de pruebas de cada build |
+
+**Prácticas aplicadas**
+
+| Práctica | Cómo se aplica |
+|---|---|
+| **Pipeline as Code** | El flujo está versionado en el `Jenkinsfile` del repositorio, junto al código fuente, y se cambia mediante commits y GitFlow como cualquier otro archivo. |
+| **Integración sobre la rama compartida** | El job *Pipeline script from SCM* construye la rama `develop`, a la que se integran las ramas `feature/*` del equipo. |
+| **Builds limpios y reproducibles** | La primera etapa ejecuta `mvn clean`, y las herramientas se instalan con versiones fijas en *Tools* (`MAVEN_3_9` y `JDK_21`). |
+| **Aislamiento de etapas** | Cada validación es una etapa independiente, de modo que un fallo indica exactamente qué falló: compilación, estilo, pruebas o cobertura. |
+| **Detener la línea ante fallos** | Si una etapa falla, las siguientes no se ejecutan y el build queda en rojo. |
+| **Separación entre pruebas unitarias y de integración** | En la etapa de pruebas solo se ejecutan las pruebas unitarias, que usan mocks y no requieren servicios externos. Las pruebas de integración (clases `*IT` y el runner global de Karate) necesitan la API y PostgreSQL en ejecución, por lo que se ejecutan fuera del pipeline (sección 6.1.2). |
+| **Umbral de calidad** | JaCoCo exige al menos 30 % de cobertura de líneas; si la cobertura baja de ese valor, el build falla. |
+| **Publicación de evidencias** | El bloque `post` publica el reporte de JUnit y archiva el reporte de cobertura, el resultado de Checkstyle y el `.jar` generado. |
+| **Ejecución del pipeline** | Los builds se lanzan con *Construir ahora* después de integrar cambios en `develop`. Jenkins se ejecuta en un entorno local, por lo que no recibe webhooks de GitHub. |
+
 ### 7.1.2. Build & Test Suite Pipeline Components
+
+El job `ElectroLink-Backend` es de tipo *Pipeline* y obtiene el `Jenkinsfile` desde el repositorio (*Pipeline script from SCM*), sobre la rama `*/develop`:
+
+<img src="assets/img/cap7/jenkins-job-configuration.jpg" width="700"/>
+
+**Definición del pipeline (`Jenkinsfile`)**
+
+```groovy
+pipeline {
+  agent any
+
+  tools {
+    maven 'MAVEN_3_9'
+    jdk 'JDK_21'
+  }
+
+  environment {
+    // Tests that need a running backend are not part of the unit test stage:
+    // the whole Karate suite runner and the *IT integration classes
+    TEST_FILTER = '!ElectrolinkPlatformApplicationTests,!*IT'
+  }
+
+  stages {
+    stage('Compile Project') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B clean compile'
+        }
+      }
+    }
+
+    stage('Validate Checkstyle') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B checkstyle:check'
+        }
+      }
+    }
+
+    stage('Validate Unit Tests') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B test -Dtest="$TEST_FILTER"'
+        }
+      }
+    }
+
+    stage('Validate Test Coverage') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B jacoco:report jacoco:check'
+        }
+      }
+    }
+
+    stage('Package Project') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B package -DskipTests'
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+      archiveArtifacts artifacts: 'target/site/jacoco/**, target/checkstyle-result.xml', allowEmptyArchive: true
+    }
+    success {
+      archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+    }
+  }
+}
+```
+
+**Resumen de la ejecución**
+
+El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 segundos con resultado exitoso. Las ocho etapas del pipeline se completaron en verde:
+
+<img src="assets/img/cap7/jenkins-stages-overview.jpg" width="700"/>
+
+<img src="assets/img/cap7/jenkins-build-summary.jpg" width="700"/>
+
+**Checkout SCM:** obtiene el código de `develop` desde GitHub y registra la revisión construida (`ff8c798`).
+
+<img src="assets/img/cap7/jenkins-stage-1-checkout.jpg" width="700"/>
+
+**Tool Install:** prepara las herramientas configuradas en Jenkins, Maven (`MAVEN_3_9`) y JDK 21 (`JDK_21`), junto con sus variables de entorno.
+
+<img src="assets/img/cap7/jenkins-stage-2-tool-install.jpg" width="700"/>
+
+**Compile Project:** ejecuta `mvn clean compile`, elimina los artefactos anteriores y compila los 317 archivos fuente con `release 21`. La etapa termina con `BUILD SUCCESS`.
+
+<img src="assets/img/cap7/jenkins-stage-3-compile.jpg" width="700"/>
+
+**Validate Checkstyle:** ejecuta `mvn checkstyle:check` con las reglas de Google. El build solo se detiene ante violaciones de severidad *error*. En esta ejecución no hubo ninguna (`You have 0 Checkstyle violations`), y las 2474 advertencias de estilo quedaron registradas en `checkstyle-result.xml` como oportunidades de mejora.
+
+<img src="assets/img/cap7/jenkins-stage-4-checkstyle.jpg" width="700"/>
+
+**Validate Unit Tests:** ejecuta las pruebas unitarias de los bounded contexts Assets, Monitoring y SDP. Resultado: **127 pruebas, 0 fallos, 0 errores y 2 omitidas**. Las dos omitidas son los runners de Karate de integración, que se detienen solos cuando no hay una API en ejecución.
+
+<img src="assets/img/cap7/jenkins-stage-5-unit-tests.jpg" width="700"/>
+
+**Validate Test Coverage:** genera el reporte de JaCoCo y valida la regla de cobertura (`All coverage checks have been met`). La cobertura de líneas es de 31,2 % (628 de 2011 líneas), por encima del mínimo de 30 % configurado en el `pom.xml`.
+
+<img src="assets/img/cap7/jenkins-stage-6-coverage.jpg" width="700"/>
+
+**Package Project:** ejecuta `mvn package -DskipTests` y genera el ejecutable `service-platform-parent-0.0.1-SNAPSHOT.jar`, empaquetado por Spring Boot. Las pruebas se omiten en esta etapa porque ya se validaron antes.
+
+<img src="assets/img/cap7/jenkins-stage-7-package.jpg" width="700"/>
+
+**Post Actions:** publica el reporte de JUnit y archiva los artefactos del build: el reporte de cobertura, el resultado de Checkstyle y el `.jar`. El reporte de pruebas de Jenkins confirma las 127 pruebas, agrupadas por paquete:
+
+<img src="assets/img/cap7/jenkins-test-results.jpg" width="700"/>
+
+<img src="assets/img/cap7/jenkins-artifacts.jpg" width="700"/>
 
 ## 7.2. Continuous Delivery
 
