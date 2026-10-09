@@ -5711,15 +5711,15 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 
 **Tablero del Sprint 2 en Trello**
 
-[Abrir el tablero público de ElectroLink — Sprint 2](https://trello.com/b/1sCItIiR/electrolink-sprint-2)
+[Abrir el Product Backlog público de ElectroLink y consultar el Sprint 2](https://trello.com/b/vEA621A6/electrolink-product-backlog)
 
-El tablero registra las siete tareas `SP2-T01` a `SP2-T07` del Sprint Backlog anterior, con su descripción, referencia al informe y estado documentado. Las tarjetas se encuentran en **Terminado**, de acuerdo con los estados registrados en esta entrega. Las listas **Sprint Backlog**, **En progreso** y **En revisión** permiten mantener el flujo de seguimiento. El tablero se consolidó a partir del informe para esta entrega; las capturas muestran su estado al momento de la incorporación, no el historial previo de movimientos.
+El Sprint 2 se gestiona dentro del mismo tablero de **Product Backlog** de ElectroLink. La lista **Sprint 2 — Terminado** registra las siete tareas `SP2-T01` a `SP2-T07` del Sprint Backlog anterior, con su descripción, referencia al informe y estado documentado. Las listas **Sprint Backlog**, **En progreso**, **En revisión** y **Terminado** mantienen el flujo de seguimiento del proyecto. Las tareas del sprint se consolidaron a partir del informe para esta entrega; las capturas muestran su estado al momento de la incorporación, no el historial previo de movimientos.
 
 ![Tablero público de Trello del Sprint 2: vista general y tareas SP2-T01 a SP2-T04](assets/img/cap5/trello-sprint-2.jpg)
 
 ![Tablero público de Trello del Sprint 2: continuación de las tareas SP2-T04 a SP2-T07](assets/img/cap5/trello-sprint-2-continuacion.jpg)
 
-*Fuente: tablero de Trello de ElectroLink — Sprint 2. Las dos capturas permiten visualizar las siete tareas de la lista Terminado.*
+*Fuente: Product Backlog de ElectroLink en Trello. Las dos capturas permiten visualizar las siete tareas de la lista Sprint 2 — Terminado dentro del tablero del proyecto.*
 
 **Criterios de finalización del sprint**
 
