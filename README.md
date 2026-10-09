@@ -6637,11 +6637,77 @@ Scenario: List the inventory among low stock inventories
 
 Los archivos completos están en el repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/assets-karate-integration/src/test/resources/com/hampcoders/electrolink/assets/integration), rama `feature/assets-karate-integration`.
 
-#### Bounded Context Monitoring
+#### Bounded Context Monitoring — escenarios Gherkin con Karate
 
-Los cuatro features de Monitoring expresan comportamientos mediante Gherkin y Karate. Describen el acceso con y sin JWT, operaciones de escritura y consulta, recursos inexistentes y la regla de que una calificación solo puede crearse para una operación completada. El escenario de Service Operations verifica además que el cambio a `COMPLETED` asigne `completedAt`. Los [features están en el repositorio del backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/monitoring-tests/src/test/resources/com/hampcoders/electrolink/monitoring).
+Los cuatro archivos `.feature` de Monitoring describen el comportamiento de Service Operations, Reports, Photos y Ratings mediante `Feature`, `Background`, `Scenario` y pasos `Given / When / Then`. Son los mismos archivos usados por `MonitoringKarateTest` en 6.1.2; este apartado documenta la especificación BDD y no suma una segunda ejecución.
 
-Esta parte emplea los escenarios Gherkin de Karate; no incluye una suite Cucumber independiente para Monitoring. El [reporte Karate y sus capturas](#bounded-context-monitoring--service-operations-reports-photos-y-ratings) prueban mediante HTTP real los cuatro accesos sin JWT. Los flujos autenticados y los casos con datos preexistentes aún requieren una ejecución completamente aprobada.
+**Precondiciones:** el `Background` configura `baseUrl`, cuyo valor predeterminado es `http://localhost:8091`. Los escenarios `@auth` requieren un JWT suministrado mediante `MONITORING_JWT` o `-Dmonitoring.jwt`; los marcados además con `@seeded` requieren IDs de request, técnico y reporte preparados en la base de pruebas. Ninguna credencial ni token se incluye en estos archivos.
+
+| Feature | Escenarios definidos | Comportamientos descritos | HTTP aprobado |
+|---|---:|---|---:|
+| [`service-operations.feature`](assets/evidence/cap6/monitoring/features/service-operations.feature) | 5 | Acceso sin JWT, listado, ID inexistente, creación y transición a `COMPLETED` con `completedAt`, consulta por técnico | 1 (`401`) |
+| [`reports.feature`](assets/evidence/cap6/monitoring/features/reports.feature) | 5 | Acceso sin JWT, listado, ID inexistente, creación/consulta/eliminación y búsqueda por request | 1 (`401`) |
+| [`photos.feature`](assets/evidence/cap6/monitoring/features/photos.feature) | 3 | Rechazo sin JWT, asociación de foto a reporte y reporte inexistente | 1 (`401`) |
+| [`ratings.feature`](assets/evidence/cap6/monitoring/features/ratings.feature) | 5 | Acceso sin JWT, listado, ID inexistente, ciclo de creación/actualización/eliminación para una operación completada y búsquedas por request y técnico | 1 (`401`) |
+| **Total** | **18** | **Los mismos escenarios Karate descritos en 6.1.2** | **4 aprobados** |
+
+**Ejemplo literal ejecutado — acceso sin JWT en `photos.feature`:**
+
+```gherkin
+Scenario: Reject a photo creation without a token
+  Given path '/api/v1/photos'
+  And request { reportId: 1, url: 'https://example.org/photo.jpg' }
+  When method post
+  Then status 401
+```
+
+El escenario envía un `POST` real sin cabecera `Authorization` y exige `401`. Es uno de los cuatro casos aprobados en la ejecución HTTP de 6.1.2.
+
+**Ejemplo literal especificado — finalización en `service-operations.feature`:**
+
+```gherkin
+@auth @seeded
+Scenario: Create and complete a service operation
+  Given path '/api/v1/service-operations'
+  And header Authorization = 'Bearer ' + jwt
+  And request { technicianId: '#(technicianId)' }
+  When method post
+  Then status 201
+  * def operationId = response
+  Given path '/api/v1/service-operations/status'
+  And header Authorization = 'Bearer ' + jwt
+  And request { requestId: '#(operationId)', newStatus: 'COMPLETED' }
+  When method put
+  Then status 204
+  Given path '/api/v1/service-operations', operationId
+  And header Authorization = 'Bearer ' + jwt
+  When method get
+  Then status 200
+  And match response.currentStatus == 'COMPLETED'
+  And match response.completedAt == '#notnull'
+```
+
+Este escenario especifica la creación, el cambio de estado y la consulta posterior que debería mostrar `completedAt`. Está validado como sintaxis Gherkin, pero **no forma parte de los cuatro escenarios HTTP aprobados**. Lo mismo ocurre con los ciclos de Reports, Photos y Ratings marcados `@seeded`.
+
+**Evidencia de los cuatro features en el reporte Karate:** cada captura siguiente muestra el único escenario HTTP aprobado sin JWT de su archivo; no representa la aprobación de los demás escenarios definidos.
+
+`service-operations.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-service-operations.png" alt="Feature de Service Operations: escenario sin JWT aprobado con respuesta 401"/>
+
+`reports.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-reports.png" alt="Feature de Reports: escenario sin JWT aprobado con respuesta 401"/>
+
+`photos.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-photos.png" alt="Feature de Photos: escenario sin JWT aprobado con respuesta 401"/>
+
+`ratings.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-ratings.png" alt="Feature de Ratings: escenario sin JWT aprobado con respuesta 401"/>
+
+Se conservan los cuatro `.feature` completos en este repositorio y la [copia del reporte HTML Karate](assets/evidence/cap6/monitoring/karate-reports/karate-summary.html). El `dryRun` reconoció los 18 escenarios; la ejecución HTTP aprobada cubrió cuatro. La ejecución exploratoria autenticada tuvo fallos, detallados en 6.1.2, y no se presenta aquí como resultado aprobado.
 
 #### Bounded Context SDP — Escenarios Gherkin con Karate
 
