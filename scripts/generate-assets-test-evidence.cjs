@@ -21,7 +21,7 @@ const decode = value => value.replace(/&quot;/g, '"').replace(/&apos;/g, "'").re
 const attrs = text => Object.fromEntries([...text.matchAll(/([\w.-]+)="([^"]*)"/g)].map(m => [m[1], decode(m[2])]));
 const escape = text => String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const readJson = html => JSON.parse(html.match(/<script[^>]*id="karate-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
-const command = '.\\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT,AssetsCucumberIT" test';
+const command = '.\\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT" test';
 const suites = classes.map(([folder, name]) => {
   const fqcn = `com.hampcoders.electrolink.assets.application.internal.${folder}.${name}`;
   const file = path.join(backend, 'target/surefire-reports', `TEST-${fqcn}.xml`);
@@ -41,10 +41,6 @@ const suites = classes.map(([folder, name]) => {
 const karatePath = path.join(backend, 'target/karate-assets-real');
 const karate = readJson(fs.readFileSync(path.join(karatePath, 'karate-summary.html'), 'utf8'));
 if (karate.summary.scenario_count !== 13 || karate.summary.scenario_passed !== 13 || karate.summary.scenario_skipped !== 0) throw new Error('Karate must contain 13 executed, passing scenarios, not a dry run.');
-const cucumberPath = path.join(backend, 'target/cucumber-assets');
-const cucumber = JSON.parse(fs.readFileSync(path.join(cucumberPath, 'cucumber.json'), 'utf8'));
-const bddCases = cucumber.flatMap(f => f.elements.filter(e => e.type === 'scenario').map(e => ({ feature: f.name, name: e.name, line: e.line, status: e.steps.every(s => s.result?.status === 'passed') && [...(e.before || []), ...(e.after || [])].every(s => s.result?.status === 'passed') ? 'passed' : 'not-passed' })));
-if (bddCases.length !== 12 || bddCases.some(s => s.status !== 'passed')) throw new Error('Cucumber must contain 12 executed, passing cases.');
 fs.mkdirSync(output, { recursive: true });
 fs.mkdirSync(images, { recursive: true });
 const git = args => execFileSync('git', args, { cwd: backend, encoding: 'utf8' }).trim();
@@ -52,22 +48,19 @@ const sourceFiles = ['pom.xml',
   'src/main/java/com/hampcoders/electrolink/assets/application/internal/commandservices/PropertyCommandServiceImpl.java',
   'src/main/java/com/hampcoders/electrolink/assets/interfaces/rest/PropertyCatalogRestExceptionHandler.java',
   'src/test/java/com/hampcoders/electrolink/assets/integration/AssetsKarateIT.java',
-  'src/test/java/com/hampcoders/electrolink/assets/bdd/AssetsCucumberIT.java',
-  'src/test/java/com/hampcoders/electrolink/assets/bdd/AssetsSteps.java',
   'src/test/java/com/hampcoders/electrolink/assets/testing/AssetsApiSupport.java',
   ...classes.map(([folder,name]) => `src/test/java/com/hampcoders/electrolink/assets/application/internal/${folder}/${name}.java`),
-  ...['integration/properties.feature','integration/component-types.feature','bdd/properties-bdd.feature','bdd/component-types-bdd.feature'].map(f => 'src/test/resources/com/hampcoders/electrolink/assets/' + f)];
-const provenance = { repository: 'ElectroLink-Backend', branch: git(['branch', '--show-current']), base_commit: git(['rev-parse', 'HEAD']), working_tree_modified: Boolean(git(['status', '--porcelain'])), source_sha256: Object.fromEntries(sourceFiles.map(f => [f, createHash('sha256').update(fs.readFileSync(path.join(backend,f))).digest('hex')])), backend_jar_sha256: createHash('sha256').update(fs.readFileSync(path.join(backend,'target/service-platform-parent-0.0.1-SNAPSHOT.jar'))).digest('hex'), command, scope: '19 isolated unit tests; 13 Karate scenarios and 12 Cucumber acceptance cases against real Spring Boot and PostgreSQL 17.11. Local isolated database, no HTTP mock.', backend_url: 'http://localhost:8091', database: 'electrolink_assets_tests (127.0.0.1:55432)', suites, karate_summary: karate.summary, cucumber_summary: { cases: bddCases.length, passed: bddCases.filter(c => c.status === 'passed').length, failed: 0, skipped: 0, scenarios: bddCases } };
+  ...['integration/properties.feature','integration/component-types.feature'].map(f => 'src/test/resources/com/hampcoders/electrolink/assets/' + f)];
+const provenance = { repository: 'ElectroLink-Backend', branch: git(['branch', '--show-current']), base_commit: git(['rev-parse', 'HEAD']), working_tree_modified: Boolean(git(['status', '--porcelain'])), source_sha256: Object.fromEntries(sourceFiles.map(f => [f, createHash('sha256').update(fs.readFileSync(path.join(backend,f))).digest('hex')])), backend_jar_sha256: createHash('sha256').update(fs.readFileSync(path.join(backend,'target/service-platform-parent-0.0.1-SNAPSHOT.jar'))).digest('hex'), command, scope: '19 isolated unit tests; 13 Karate scenarios against real Spring Boot and PostgreSQL 17.11. Local isolated database, no HTTP mock.', backend_url: 'http://localhost:8091', database: 'electrolink_assets_tests (127.0.0.1:55432)', suites, karate_summary: karate.summary };
 fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify(provenance, null, 2) + '\n');
 for (const [folder, name] of classes) {
   const fqcn = `com.hampcoders.electrolink.assets.application.internal.${folder}.${name}`;
   fs.copyFileSync(path.join(backend, 'target/surefire-reports', `${fqcn}.txt`), path.join(output, `${name}.txt`));
 }
-for (const fqcn of ['com.hampcoders.electrolink.assets.integration.AssetsKarateIT','com.hampcoders.electrolink.assets.bdd.AssetsCucumberIT']) {
+for (const fqcn of ['com.hampcoders.electrolink.assets.integration.AssetsKarateIT']) {
   fs.copyFileSync(path.join(backend,'target/surefire-reports',`${fqcn}.txt`),path.join(output,`${fqcn.split('.').at(-1)}.txt`));
 }
 fs.cpSync(karatePath, path.join(output, 'karate-reports'), { recursive: true });
-fs.cpSync(cucumberPath, path.join(output, 'cucumber-reports'), { recursive: true });
 // Remove live bearer credentials from exported evidence while preserving the original test results.
 function sanitizeTree(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -80,7 +73,6 @@ function sanitizeTree(directory) {
   }
 }
 sanitizeTree(path.join(output, 'karate-reports'));
-sanitizeTree(path.join(output, 'cucumber-reports'));
 fs.mkdirSync(path.join(output, 'features'), { recursive: true });
 for (const file of sourceFiles.filter(f => f.endsWith('.feature'))) fs.copyFileSync(path.join(backend,file), path.join(output,'features',path.basename(file)));
 const date = new Intl.DateTimeFormat('es-PE', { dateStyle: 'long', timeStyle: 'medium', timeZone: 'America/Lima' }).format(new Date(suites[0].report_modified));
@@ -90,7 +82,7 @@ body{margin:0;background:#f3f6fa;color:#182a40;font:17px Arial,sans-serif}main{m
 <div class="muted">Captura de un resumen generado a partir de los XML reales de Maven Surefire.<br>Ejecución: ${escape(date)} (America/Lima) · JUnit Jupiter + Mockito · Patrón AAA<br>Backend: ${escape(provenance.branch)} · commit <code>${escape(provenance.base_commit.slice(0, 12))}</code>${provenance.working_tree_modified ? ' + cambios locales' : ' (árbol de trabajo limpio)'} · SHA-256 registrados</div>
 <div class="stats">${[['Ejecutadas', selected.reduce((n,s)=>n+s.tests,0)], ['Fallos',0], ['Errores',0], ['Omitidas',0]].map(([label,n])=>`<div class="stat"><b>${n}</b>${label}</div>`).join('')}</div>
 ${selected.length === 1 ? `<table><tr><th>Caso verificado</th><th>Resultado</th><th>Tiempo</th></tr>${selected[0].cases.map(t=>`<tr><td>${escape(t.label)}<small>${escape(t.method)}</small></td><td class="tag">PASÓ</td><td>${t.seconds.toFixed(3)} s</td></tr>`).join('')}</table>` : `<table><tr><th>Clase de prueba</th><th>Casos</th><th>Fallos</th><th>Errores</th></tr>${selected.map(s=>`<tr><td><code>${escape(s.name)}</code></td><td>${s.tests}</td><td>${s.failures}</td><td>${s.errors}</td></tr>`).join('')}</table>`}
-<div class="note">Alcance unitario: servicios Command y Query de Properties y Component Types, con repositorios simulados. Delete de Property ahora verifica la llamada a delete, el retorno y que no se invoque save. Las suites Karate y Cucumber, separadas, comprueban HTTP y PostgreSQL reales.</div><div class="cmd">Comando de la ejecución registrada:<br>${escape(command)}</div></main></html>`;
+<div class="note">Alcance unitario: servicios Command y Query de Properties y Component Types, con repositorios simulados. Delete de Property ahora verifica la llamada a delete, el retorno y que no se invoque save. Karate comprueba HTTP y PostgreSQL reales; sus features Gherkin se presentan también en 6.1.3.</div><div class="cmd">Comando de la ejecución registrada:<br>${escape(command)}</div></main></html>`;
 fs.writeFileSync(path.join(output, 'unit-tests.html'), html(suites));
 for (const suite of suites) fs.writeFileSync(path.join(output, `${suite.name}.html`), html([suite]));
 
@@ -115,16 +107,6 @@ for (const suite of suites) fs.writeFileSync(path.join(output, `${suite.name}.ht
       if (errors.length) throw new Error(errors.join('\n'));
       await page.screenshot({ path: path.join(images, `${name}.png`), fullPage: true });
     }
-    await page.goto(pathToFileURL(path.join(output,'cucumber-reports/cucumber.html')).href);
-    await page.waitForSelector('body', { state: 'visible' });
-    await page.waitForFunction(() => document.body.innerText.includes('12'));
-    await page.screenshot({ path: path.join(images, 'AssetsCucumberSummary.png'), fullPage: true });
-    for (const [name,file] of [['Properties','properties-bdd'],['ComponentTypes','component-types-bdd']]) {
-      const heading = page.getByText(`classpath:com/hampcoders/electrolink/assets/bdd/${file}.feature`, { exact: true });
-      await heading.click();
-      await page.screenshot({ path: path.join(images, `AssetsCucumber${name}.png`), fullPage: true });
-      await heading.click();
-    }
   } finally { await browser.close(); }
-  console.log('Evidence generated: 19 unit tests, 13 real Karate scenarios and 12 real Cucumber cases. JWTs redacted.');
+  console.log('Evidence generated: 19 unit tests and 13 real Karate scenarios. JWTs redacted.');
 })().catch(e=>{ console.error(e); process.exitCode=1; });
