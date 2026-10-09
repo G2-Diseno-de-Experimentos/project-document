@@ -5709,6 +5709,18 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 | 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: unitarias y evidencias Karate/Gherkin de Assets y SDP incorporadas |
 | 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 
+**Tablero del Sprint 2 en Trello**
+
+[Abrir el tablero público de ElectroLink — Sprint 2](https://trello.com/b/1sCItIiR/electrolink-sprint-2)
+
+El tablero registra las siete tareas `SP2-T01` a `SP2-T07` del Sprint Backlog anterior, con su descripción, referencia al informe y estado documentado. Las tarjetas se encuentran en **Terminado**, de acuerdo con los estados registrados en esta entrega. Las listas **Sprint Backlog**, **En progreso** y **En revisión** permiten mantener el flujo de seguimiento. El tablero se consolidó a partir del informe para esta entrega; las capturas muestran su estado al momento de la incorporación, no el historial previo de movimientos.
+
+![Tablero público de Trello del Sprint 2: vista general y tareas SP2-T01 a SP2-T04](assets/img/cap5/trello-sprint-2.jpg)
+
+![Tablero público de Trello del Sprint 2: continuación de las tareas SP2-T04 a SP2-T07](assets/img/cap5/trello-sprint-2-continuacion.jpg)
+
+*Fuente: tablero de Trello de ElectroLink — Sprint 2. Las dos capturas permiten visualizar las siete tareas de la lista Terminado.*
+
 **Criterios de finalización del sprint**
 
 - Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 122 casos: 19 de Properties y Component Types, 51 de Components, Technician Inventory, entidades y manejo de excepciones, 20 de SDP y 32 de Monitoring. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
