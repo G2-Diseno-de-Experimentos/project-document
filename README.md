@@ -5693,7 +5693,7 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 | US-37 / US-38 · 6.1.1 | SP2-T01 | Verificar entidades y value objects | Comprobar la creación y modificación de componentes, la validez de identificadores y cantidades, y las operaciones de stock del inventario. Evidencia: `ComponentEntitiesTest`. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 | US-37 / US-38 · 6.1.1 | SP2-T02 | Verificar servicios Command y Query | Probar creación, actualización, eliminación y consultas de componentes e inventarios, incluyendo duplicados y recursos inexistentes, con JUnit 5, Mockito y AssertJ. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 | US-38 · 6.1.1 | SP2-T03 | Corregir defectos de actualización de stock | Corregir el valor de retorno de `updateStockItem` y conservar el umbral vigente cuando `newAlertThreshold` es `null`; comprobar los casos afectados con pruebas. | No registrada | Equipo de desarrollo | Done: correcciones documentadas |
-| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Realizado según el avance del equipo; evidencia pendiente en este informe |
+| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Done: evidencia de Assets partes 1 y 2 incorporada contra el backend real |
 | 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los escenarios ejecutados en Karate. | No registrada | Equipo de desarrollo | Realizado según el avance del equipo; evidencia pendiente en este informe |
 | 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | InProcess: 6.1.1 incorporado; 6.1.2 y 6.1.3 pendientes de incorporación |
 | 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
@@ -6070,6 +6070,82 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 
 Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
 
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Para esta parte se utiliza **Karate 2.1.2**, ejecutado desde JUnit Jupiter mediante `AssetsKarateIT.assetsApiRunsAgainstRealBackend`. Los archivos `.feature` realizan peticiones HTTP contra el backend real y comprueban códigos de estado, estructura JSON y consultas posteriores a las operaciones de escritura.
+
+**Modalidad de ejecución: integración real, sin mock HTTP.** Se inicia el mismo backend Spring Boot del proyecto en `http://localhost:8091`, conectado a PostgreSQL **17.11** y a la base aislada `electrolink_assets_tests` en `127.0.0.1:55432`. Se ejecutan los controladores, servicios y repositorios JPA reales. El runner registra un usuario de prueba con nombre único y obtiene su JWT mediante los endpoints reales de autenticación; no reutiliza contraseñas ni tokens fijos.
+
+Esta evidencia reemplaza la ejecución anterior con mock. Los escenarios crean sus propias propiedades y utilizan los UUID devueltos por la API. Las listas no se comparan con tamaños fijos, y las propiedades de prueba se eliminan por API. Los usuarios y tipos de componentes generados permanecen únicamente en la base de pruebas porque no existen endpoints públicos para limpiarlos; no se modificaron la base habitual del usuario ni Render.
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| Karate 2.1.2 | Peticiones HTTP, verificación de códigos de estado y aserciones sobre JSON |
+| JUnit Jupiter | Ejecución del runner y verificación del resultado de los escenarios |
+| Spring Boot + PostgreSQL 17.11 | Aplicación y persistencia reales |
+| JWT | Autenticación dinámica de las solicitudes de prueba |
+| Maven Surefire | Ejecución del método seleccionado y generación del resultado JUnit |
+| Reporte HTML de Karate | Resumen y detalle de escenarios y pasos ejecutados |
+
+**Resultados de ejecución**
+
+| Feature | Escenarios ejecutados | Aprobados | Fallidos | Omitidos |
+|---|---|---|---|---|
+| `properties.feature` | 10 | 10 | 0 | 0 |
+| `component-types.feature` | 3 | 3 | 0 | 0 |
+| **Total** | **13** | **13** | **0** | **0** |
+
+La ejecución del **8 de octubre de 2026**, sobre el árbol de trabajo registrado en 6.1.1, completó los 13 escenarios mediante HTTP real; no corresponde a un `dryRun`. En la ejecución conjunta de la parte 1, Surefire registra **21 métodos JUnit**: 19 unitarios, un runner Karate y un runner Cucumber. Sus reportes internos registran **13 escenarios Karate** y **12 casos Cucumber**, respectivamente. No se afirma que toda la suite del equipo haya sido ejecutada en conjunto.
+
+**Evidencia de ejecución (reporte HTML original de Karate)**
+
+Resumen: dos features aprobados y 13 escenarios aprobados, sin fallidos ni omitidos:
+
+<img src="assets/img/cap6/AssetsKarateSummary.png" alt="Reporte original de Karate: 2 features, 13 escenarios aprobados, 0 fallidos y 0 omitidos"/>
+
+Detalle de `properties.feature` — 10 escenarios:
+
+<img src="assets/img/cap6/AssetsKarateProperties.png" alt="Reporte Karate de Properties con los diez escenarios y sus verificaciones HTTP aprobadas"/>
+
+Detalle de `component-types.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/AssetsKarateComponentTypes.png" alt="Reporte Karate de Component Types con tres escenarios aprobados"/>
+
+**Escenarios verificados contra el backend real**
+
+| Recurso | Escenarios | Respuestas esperadas |
+|---|---|---|
+| Properties — consultas | Listar todas, filtrar por propietario, buscar por UUID generado y buscar un UUID inexistente | `200` y presencia de los datos preparados; `404` para id inexistente |
+| Properties — creación | Crear con datos válidos, volver a consultar y enviar datos obligatorios ausentes | `201`, persistencia comprobada por `GET`; `400` para datos inválidos |
+| Properties — actualización | Actualizar una existente, volver a consultar y actualizar una inexistente | `200` y cambios persistidos; `404` para inexistente |
+| Properties — eliminación | Eliminar una creada por el escenario y eliminar una inexistente | `204`, seguido de `GET 404` para confirmar eliminación efectiva; `404` para inexistente |
+| Component Types | Listar, crear un nombre único y verificarlo en el catálogo, y enviar JSON malformado | `200`, `201` y presencia del registro persistido; `400` para JSON malformado |
+
+**Defectos detectados y corregidos:** además de la eliminación de Properties, las solicitudes inválidas podían terminar en el endpoint de error y devolver `401` en lugar del `400` documentado. Se incorporó `PropertyCatalogRestExceptionHandler`, limitado a `PropertyController` y `ComponentTypeController`, para responder directamente `400` ante errores de validación y JSON malformado. No se deshabilitó la autenticación ni se hicieron públicos los endpoints. No se afirma que el nombre vacío de un Component Type esté validado: ese caso del mock fue reemplazado por una solicitud JSON malformada que la API real sí rechaza.
+
+**Reproducción de la evidencia**
+
+Desde la carpeta del backend, con `JAVA_HOME` apuntando a un JDK compatible, preparar el backend y PostgreSQL aislados con el script incluido (PowerShell 7):
+
+```powershell
+.\scripts\start-assets-local.ps1 -PostgresBin 'D:\PostgreSQL\17\bin'
+.\mvnw.cmd "-Dtest=AssetsKarateIT" test
+```
+
+Con el backend ya iniciado, ejecutar las cuatro clases unitarias y las dos suites reales de esta parte:
+
+```powershell
+.\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT,AssetsCucumberIT" test
+```
+
+El reporte se genera en `target/karate-assets-real/karate-summary.html`. `AssetsKarateTest.featureFilesAreValid` solo comprueba sintaxis y utiliza una carpeta distinta (`target/karate-assets-dry-run`), por lo que no reemplaza la evidencia HTTP. Las suites reales se ejecutan explícitamente mediante clases `*IT`: si el backend no está disponible o falla un escenario, el resultado es fallo, no una omisión silenciosa. Para otra URL de pruebas puede utilizarse `-Dassets.baseUrl=http://localhost:8092` o `ASSETS_BASE_URL`.
+
+Se conserva una [copia del reporte HTML de Karate](assets/evidence/cap6/assets-parte1/karate-reports/karate-summary.html) con sus recursos y páginas de detalle, **con los JWT ocultados en la copia publicada**. Para navegarlo, descargar o clonar este repositorio y abrir ese archivo; GitHub muestra su código fuente, no el reporte interactivo. Los [datos de ejecución](assets/evidence/cap6/assets-parte1/results.json) registran el comando, el commit del backend evaluado, los hashes de los archivos y los resultados. También se incluyen los features de [Properties](assets/evidence/cap6/assets-parte1/features/properties.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types.feature). El [generador de capturas](scripts/generate-assets-test-evidence.cjs) exporta los resultados existentes, oculta los JWT y genera las imágenes; no ejecuta las pruebas.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
 **Herramientas**
 
 | Herramienta | Uso |
@@ -6078,8 +6154,6 @@ Las pruebas de integración verifican que los módulos del backend funcionan cor
 | JUnit 5 | Runner que ejecuta los features (`Runner.path(...).parallel(5)`) |
 | PostgreSQL 16 (Docker) | Base de datos de la aplicación durante las pruebas |
 | Maven Surefire | Ejecución con `./mvnw test` |
-
-#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
 **Estrategia de ejecución**
 
