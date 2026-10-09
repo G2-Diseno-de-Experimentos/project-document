@@ -5693,14 +5693,14 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 | US-37 / US-38 · 6.1.1 | SP2-T01 | Verificar entidades y value objects | Comprobar la creación y modificación de componentes, la validez de identificadores y cantidades, y las operaciones de stock del inventario. Evidencia: `ComponentEntitiesTest`. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 | US-37 / US-38 · 6.1.1 | SP2-T02 | Verificar servicios Command y Query | Probar creación, actualización, eliminación y consultas de componentes e inventarios, incluyendo duplicados y recursos inexistentes, con JUnit 5, Mockito y AssertJ. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 | US-38 · 6.1.1 | SP2-T03 | Corregir defectos de actualización de stock | Corregir el valor de retorno de `updateStockItem` y conservar el umbral vigente cuando `newAlertThreshold` es `null`; comprobar los casos afectados con pruebas. | No registrada | Equipo de desarrollo | Done: correcciones documentadas |
-| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Done: evidencia de Assets partes 1 y 2 incorporada contra el backend real |
-| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los comportamientos de la API verificados en 6.1.2. | No registrada | Equipo de desarrollo | Done: evidencia de Assets partes 1 y 2 incorporada; parte 1 con Cucumber y parte 2 con Karate/Gherkin |
-| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: evidencias de Assets partes 1 y 2 incorporadas en los tres apartados |
+| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Done: Assets partes 1 y 2 y SDP con reportes Karate ejecutados contra el backend real |
+| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los comportamientos de la API verificados en 6.1.2. | No registrada | Equipo de desarrollo | Done: features Gherkin y evidencias Karate de Assets y SDP incorporados |
+| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: unitarias y evidencias Karate/Gherkin de Assets y SDP incorporadas |
 | 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 
 **Criterios de finalización del sprint**
 
-- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 70 casos: 19 de Properties y Component Types, y 51 de Components, Technician Inventory, entidades y manejo de excepciones. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
+- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 122 casos: 19 de Properties y Component Types, 51 de Components, Technician Inventory, entidades y manejo de excepciones, 20 de SDP y 32 de Monitoring. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
 - Los defectos detectados en la actualización del inventario quedan corregidos y cubiertos por pruebas.
 - Los reportes de Karate permiten identificar los escenarios ejecutados y sus resultados, incluyendo cualquier fallo que requiera seguimiento.
 - Los archivos `.feature` presentados en 6.1.3 verifican comportamientos de la API cubiertos en 6.1.2, con escenarios de aceptación propios para Properties y Component Types.
@@ -5929,7 +5929,7 @@ Esta parte corresponde al integrante 1 y verifica los servicios de aplicación C
 | `ComponentTypeQueryServiceImpl` | `ComponentTypeQueryServiceImplTest` | 3 |
 | **Total** | | **19** |
 
-Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, todavía sin commit. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
+Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, sin commit en el momento de la captura. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
 
 **Evidencia de ejecución (IntelliJ IDEA)**
 
