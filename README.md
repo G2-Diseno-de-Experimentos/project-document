@@ -193,23 +193,28 @@
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>TP:</strong> Implementó las pruebas unitarias y de integración del bounded context Monitoring (operaciones de servicio, reportes, fotos y calificaciones) y documentó su evidencia en Gherkin, verificando que los recursos protegidos rechacen solicitudes sin autenticación.<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Desarrolló y documentó pruebas del bounded context Monitoring con JUnit 5, Mockito y Karate para operaciones de servicio, reportes, fotografías y calificaciones. Verificó el acceso sin JWT y registró con transparencia los fallos encontrados en los escenarios HTTP autenticados, asumiendo la responsabilidad profesional de no presentar como validadas funciones que todavía requieren corrección.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Desarrolló las pruebas unitarias y de integración de Properties y Component Types, reemplazó el servidor HTTP simulado por pruebas contra el backend real, corrigió la eliminación de propiedades y consolidó la planificación del Sprint 2 y las evidencias de SDP en el informe.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Implementó las pruebas unitarias (patrón AAA) y de integración con Karate de Components y Technician Inventory, corrigió tres defectos detectados contra la API real (detalle de stock, stock duplicado y códigos de error) y configuró el pipeline de integración continua en Jenkins con Checkstyle, JUnit y JaCoCo.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Implementó las pruebas unitarias de los servicios de SDP (solicitudes, horarios y servicios), sus escenarios Karate y la prueba de autenticación de IAM, y configuró las dependencias de pruebas del proyecto (JUnit 5, Mockito y Karate).<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> El equipo asumió la responsabilidad profesional de verificar la calidad del backend antes de entregarlo: incorporó pruebas unitarias, de integración y escenarios BDD sobre la API real, corrigió los defectos que estas revelaron y documentó la evidencia de forma trazable, distinguiendo las ejecuciones reales de las validaciones de sintaxis.</p>
             </td>
         </tr>
         <tr style="page-break-inside: avoid;">
@@ -220,23 +225,28 @@
                 <h4 style="margin-top: 0; margin-bottom: 5px;">Ivo Marcelo Machado Bracamonte</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
+                    - <strong>TP:</strong> Verificó los flujos de reportes y calificaciones del servicio, que sostienen la confianza del cliente en el técnico (impacto social) y la reputación de la que dependen los ingresos de los técnicos certificados (impacto económico).<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Evaluó el impacto social y económico de Monitoring al probar el seguimiento de servicios, la trazabilidad de reportes y las calificaciones de técnicos, funciones que pueden ayudar a sustentar reclamos y decisiones de contratación. Definió escenarios para comprobar estados, consultas y acceso autorizado, e identificó límites de integración que deben resolverse antes de confiar en estos resultados para el uso real del sistema.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Aisló las pruebas en una base de datos local con usuarios y datos únicos y bloqueó las escrituras contra entornos remotos, para no alterar información de usuarios reales en producción (impacto social y económico).<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Priorizó corregir el stock duplicado y el detalle de inventario, porque un inventario incorrecto afecta la planificación y el costo de materiales del técnico (impacto económico). Además, automatizó la verificación en Jenkins para detectar defectos antes de que lleguen a los usuarios.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Verificó con escenarios de prueba el control de acceso por rol en las solicitudes de servicio, que protege la información de clientes y técnicos frente a usos no autorizados (impacto social).<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo tomó decisiones tecnológicas y estratégicas evaluando su impacto. El sistema diseñado fomenta la formalización del sector eléctrico, aumenta la seguridad en los hogares (impacto social) y genera ingresos sostenibles para técnicos certificados (impacto económico).</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> Al decidir cómo probar y automatizar, el equipo evaluó el impacto de sus decisiones: ejecutar las pruebas en entornos locales aislados protege los datos de los usuarios reales, la integración continua reduce el costo de corregir defectos tardíos y verificar inventario, calificaciones y permisos fortalece la confianza en servicios eléctricos formales (impacto social y económico).</p>
             </td>
         </tr>
     </tbody>
