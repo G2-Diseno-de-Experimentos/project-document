@@ -5694,8 +5694,8 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 | US-37 / US-38 · 6.1.1 | SP2-T02 | Verificar servicios Command y Query | Probar creación, actualización, eliminación y consultas de componentes e inventarios, incluyendo duplicados y recursos inexistentes, con JUnit 5, Mockito y AssertJ. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 | US-38 · 6.1.1 | SP2-T03 | Corregir defectos de actualización de stock | Corregir el valor de retorno de `updateStockItem` y conservar el umbral vigente cuando `newAlertThreshold` es `null`; comprobar los casos afectados con pruebas. | No registrada | Equipo de desarrollo | Done: correcciones documentadas |
 | 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Done: evidencia de Assets partes 1 y 2 incorporada contra el backend real |
-| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los escenarios ejecutados en Karate. | No registrada | Equipo de desarrollo | Realizado según el avance del equipo; evidencia pendiente en este informe |
-| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | InProcess: 6.1.1 incorporado; 6.1.2 y 6.1.3 pendientes de incorporación |
+| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los comportamientos de la API verificados en 6.1.2. | No registrada | Equipo de desarrollo | Done: evidencia de Assets partes 1 y 2 incorporada; parte 1 con Cucumber y parte 2 con Karate/Gherkin |
+| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: evidencias de Assets partes 1 y 2 incorporadas en los tres apartados |
 | 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 
 **Criterios de finalización del sprint**
@@ -5703,7 +5703,7 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 - Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 70 casos: 19 de Properties y Component Types, y 51 de Components, Technician Inventory, entidades y manejo de excepciones. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
 - Los defectos detectados en la actualización del inventario quedan corregidos y cubiertos por pruebas.
 - Los reportes de Karate permiten identificar los escenarios ejecutados y sus resultados, incluyendo cualquier fallo que requiera seguimiento.
-- Los archivos `.feature` presentados en 6.1.3 corresponden a los escenarios de integración mostrados en 6.1.2.
+- Los archivos `.feature` presentados en 6.1.3 verifican comportamientos de la API cubiertos en 6.1.2, con escenarios de aceptación propios para Properties y Component Types.
 - Las evidencias de los tres apartados quedan incorporadas al informe con rutas accesibles y una explicación de su alcance.
 
 La estructura de esta planificación toma como guía la separación entre historias, tareas, descripción, estimación, responsables y estados del [repositorio Docs de G-0X Diseño de Experimentos](https://github.com/G-0X-Diseno-de-Experimentos/Docs), adaptada al trabajo de verificación de ElectroLink.
@@ -6234,7 +6234,103 @@ Estos defectos no aparecían en las pruebas unitarias, porque allí los reposito
 
 ### 6.1.3. Core Behavior-Driven Development
 
-Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Los nombres de los escenarios están en inglés, según la convención de código del equipo.
+Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. La parte 1 utiliza Cucumber con escenarios de negocio en español; la parte 2 utiliza los escenarios Gherkin de Karate en inglés, según la convención de código del equipo.
+
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Se implementó una suite de aceptación con **Cucumber-JVM 7.20.1**, siguiendo la separación entre features, runner y definiciones de pasos del [apartado BDD del repositorio de referencia](https://github.com/G-0X-Diseno-de-Experimentos/Docs#613-core-behavior-driven-development). Los escenarios describen los comportamientos desde la perspectiva del propietario y del usuario del catálogo mediante **Given / When / Then**. No son los mismos archivos Karate renombrados: Cucumber ejecuta sus propios archivos Gherkin y sus pasos Java.
+
+**Modalidad:** API real mediante HTTP. Se usa el backend Spring Boot ya iniciado y su PostgreSQL aislado, igual que en 6.1.2. Las definiciones de pasos no utilizan Mockito ni sustituyen los servicios por mocks. A diferencia de la referencia, que inicia Spring desde su contexto Cucumber, esta suite consume el backend real como cliente externo; las operaciones pasan por autenticación, controladores, servicios, repositorios y persistencia. No se utiliza Selenium porque el alcance es el comportamiento del backend, no una interfaz web ni una prueba de sistema de 6.1.4.
+
+**Configuración de la suite**
+
+| Componente | Archivo | Responsabilidad |
+|---|---|---|
+| Runner JUnit Jupiter | `AssetsCucumberIT.java` | Invoca el runtime real de Cucumber, genera reportes HTML/JSON/XML y comprueba que el código de salida sea cero |
+| Definiciones de pasos | `AssetsSteps.java` | Implementa las precondiciones, acciones y aserciones mediante solicitudes HTTP reales |
+| Cliente HTTP de pruebas | `AssetsApiSupport.java` | Registra usuarios únicos, obtiene JWTs reales y realiza las solicitudes sin imprimir credenciales |
+| Feature de propiedades | `properties-bdd.feature` | Registro, actualización, filtro por propietario, eliminación, validación y consulta de inexistentes |
+| Feature de catálogo | `component-types-bdd.feature` | Registro de un tipo, consulta del catálogo y rechazo del acceso sin autenticación |
+
+Cada escenario dispone de estado independiente en los pasos Java. Las propiedades se preparan con la API y se limpian al terminar mediante un hook `@After`, utilizando únicamente los identificadores creados por las pruebas. Los nombres de usuarios y tipos son únicos para permitir repetir la suite. El hook `@Before` obtiene una sesión real para la ejecución; los tokens no se incluyen en los mensajes de evidencia.
+
+**Escenarios y cobertura**
+
+| Feature | Comportamiento | Casos ejecutados | Resultado esperado |
+|---|---|---|---|
+| Properties | Registrar una propiedad y consultar sus datos guardados | 1 | `201`, UUID generado y consulta `200` con los mismos datos |
+| Properties | Actualizar la ubicación | 1 | El distrito actualizado se conserva al consultar de nuevo |
+| Properties | Filtrar por propietario | 1 | La lista incluye la propiedad preparada y excluye las del otro propietario |
+| Properties | Eliminar definitivamente | 1 | `DELETE 204`, seguido de `GET 404` |
+| Properties | Validar campos obligatorios con `Scenario Outline` | 4 | Ausencia de `ownerId`, `address`, `region` o `district`: `400` en cada ejemplo |
+| Properties | Consultar una propiedad inexistente | 1 | `404` |
+| Component Types | Registrar y encontrar un tipo en el catálogo | 1 | `201`, identificador válido y registro visible en el catálogo real |
+| Component Types | Consultar el catálogo | 1 | `200`, lista con identificadores y nombres |
+| Component Types | Consultar sin enviar autenticación | 1 | `401` |
+| **Total** | **9 casos Properties + 3 casos Component Types** | **12** | **12 aprobados, 0 fallidos, 0 omitidos** |
+
+**Ejemplo de comportamiento de Properties**
+
+```gherkin
+Feature: Gestión de propiedades del hogar
+  Como propietario de un hogar
+  Quiero registrar, consultar, actualizar y eliminar mis propiedades
+  Para mantener la información de los lugares donde necesito servicios eléctricos
+
+  Background:
+    Given un propietario autenticado
+
+  Scenario: Eliminar definitivamente una propiedad
+    Given una propiedad registrada por el propietario
+    When elimina su propiedad
+    Then la propiedad ya no puede consultarse
+```
+
+El `Given` crea una propiedad real y conserva su UUID; el `When` solicita su eliminación por API; el `Then` verifica tanto el `204` como el `404` de una consulta posterior. Así se comprueba la consecuencia del comportamiento, no solamente el código devuelto por DELETE.
+
+**Ejemplo de validación parametrizada**
+
+```gherkin
+Scenario Outline: Rechazar el registro cuando falta un dato obligatorio
+  Given los datos de una propiedad sin el campo obligatorio "<campo>"
+  When registra la propiedad
+  Then el sistema rechaza el registro con código 400
+
+  Examples:
+    | campo    |
+    | ownerId  |
+    | address  |
+    | region   |
+    | district |
+```
+
+Los cuatro ejemplos se ejecutan como casos independientes. Para cada uno se construye un payload válido, se retira el campo indicado y se verifica la respuesta del backend real. Los [features completos de Properties](assets/evidence/cap6/assets-parte1/features/properties-bdd.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types-bdd.feature) se incluyen con la evidencia.
+
+**Evidencia de ejecución (reporte HTML original de Cucumber)**
+
+Resultado del **8 de octubre de 2026**: **12 casos ejecutados y aprobados**. El código de salida de Cucumber y las aserciones del runner JUnit confirman el éxito; no se utiliza `dryRun`.
+
+<img src="assets/img/cap6/AssetsCucumberSummary.png" alt="Reporte Cucumber original: 12 casos ejecutados, 100 por ciento aprobados"/>
+
+Feature de Properties — 9 casos, incluyendo los cuatro ejemplos de validación:
+
+<img src="assets/img/cap6/AssetsCucumberProperties.png" alt="Reporte Cucumber del feature de Properties con sus escenarios aprobados"/>
+
+Feature de Component Types — 3 casos:
+
+<img src="assets/img/cap6/AssetsCucumberComponentTypes.png" alt="Reporte Cucumber del catálogo de Component Types con sus tres escenarios aprobados"/>
+
+**Reproducción y trazabilidad**
+
+Con el backend y PostgreSQL reales ya iniciados, desde la carpeta del backend:
+
+```powershell
+.\mvnw.cmd "-Dtest=AssetsCucumberIT" test
+```
+
+El reporte se genera en `target/cucumber-assets/cucumber.html`. Se conserva una [copia HTML de Cucumber](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.html), el [resultado JSON por escenario y paso](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.json) y el [resultado XML](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.xml). Para navegar el HTML hay que abrirlo desde una copia local del repositorio. El [registro estructurado conjunto](assets/evidence/cap6/assets-parte1/results.json) identifica el árbol de trabajo evaluado y los resultados de las tres herramientas.
+
+Esta suite complementa 6.1.1 y 6.1.2: las unitarias aíslan Command y Query; Karate verifica el contrato HTTP y la persistencia de operaciones específicas; Cucumber expresa y ejecuta los comportamientos del usuario. La autenticación se utiliza como precondición y comprobación de acceso, no como una suite completa del bounded context IAM. Tampoco se afirma cobertura de actualización o eliminación HTTP de Component Types, porque dichos endpoints no existen en el controlador actual.
 
 #### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
