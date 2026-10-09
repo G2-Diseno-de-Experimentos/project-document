@@ -5700,7 +5700,7 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 
 **Criterios de finalización del sprint**
 
-- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 47 casos.
+- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 70 casos: 19 de Properties y Component Types, y 51 de Components, Technician Inventory, entidades y manejo de excepciones. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
 - Los defectos detectados en la actualización del inventario quedan corregidos y cubiertos por pruebas.
 - Los reportes de Karate permiten identificar los escenarios ejecutados y sus resultados, incluyendo cualquier fallo que requiera seguimiento.
 - Los archivos `.feature` presentados en 6.1.3 corresponden a los escenarios de integración mostrados en 6.1.2.
@@ -5910,11 +5910,87 @@ Las pruebas unitarias verifican de forma aislada la lógica de las entidades del
 | Herramienta | Uso |
 |---|---|
 | JUnit 5 | Framework de ejecución de pruebas |
+| JUnit Jupiter Assertions | Aserciones de Properties y Component Types (`assertEquals`, `assertTrue`, `assertThrows`, entre otras) |
 | Mockito | Mocks de los repositorios JPA (`@Mock`, `@InjectMocks`) |
-| AssertJ | Aserciones legibles (`assertThat`, `assertThatThrownBy`) |
+| AssertJ | Aserciones de Components y Technician Inventory (`assertThat`, `assertThatThrownBy`) |
 | Maven Surefire | Ejecución con `./mvnw test` |
 
 Los repositorios se simulan con Mockito, por lo que las pruebas no requieren base de datos ni levantar el contexto de Spring.
+
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Esta parte corresponde al integrante 1 y verifica los servicios de aplicación Command y Query encargados de administrar propiedades y tipos de componentes. Las pruebas utilizan JUnit Jupiter, `MockitoExtension`, `@Mock`, `@InjectMocks` y el patrón AAA.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `PropertyCommandServiceImpl` | `PropertyCommandServiceImplTest` | 5 |
+| `PropertyQueryServiceImpl` | `PropertyQueryServiceImplTest` | 4 |
+| `ComponentTypeCommandServiceImpl` | `ComponentTypeCommandServiceImplTest` | 7 |
+| `ComponentTypeQueryServiceImpl` | `ComponentTypeQueryServiceImplTest` | 3 |
+| **Total** | | **19** |
+
+Resultado de la ejecución del **8 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit `0c64a0e`, con los cambios de esta entrega integrados sobre los últimos cambios de `origin/develop` y el árbol de trabajo limpio. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
+
+**Evidencia de ejecución (Maven Surefire)**
+
+Las siguientes capturas muestran resúmenes HTML elaborados a partir de los XML reales generados por Maven Surefire. No son capturas de IntelliJ IDEA. Incluyen los casos ejecutados, su resultado y el tiempo registrado.
+
+Resumen de las cuatro clases:
+
+<img src="assets/img/cap6/AssetsUnitTestsSummary.png" alt="Resumen Maven Surefire: 19 pruebas unitarias de Assets aprobadas, sin fallos, errores ni omitidas"/>
+
+`PropertyCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/PropertyCommandServiceImplTest.png" alt="Cinco casos aprobados de PropertyCommandServiceImplTest"/>
+
+`PropertyQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/PropertyQueryServiceImplTest.png" alt="Cuatro casos aprobados de PropertyQueryServiceImplTest"/>
+
+`ComponentTypeCommandServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/ComponentTypeCommandServiceImplTest.png" alt="Siete casos aprobados de ComponentTypeCommandServiceImplTest"/>
+
+`ComponentTypeQueryServiceImplTest` — 3 pruebas:
+
+<img src="assets/img/cap6/ComponentTypeQueryServiceImplTest.png" alt="Tres casos aprobados de ComponentTypeQueryServiceImplTest"/>
+
+**Casos cubiertos**
+
+| Clase | Escenarios verificados |
+|---|---|
+| `PropertyCommandServiceImpl` | Crear una propiedad verifica sus datos y devuelve el identificador; actualizar una existente modifica dirección, región y distrito; actualizar una inexistente devuelve `Optional` vacío y no guarda; Delete elimina una existente mediante `delete`, devuelve `true` y no llama a `save`; si no existe devuelve `false` y no elimina. |
+| `PropertyQueryServiceImpl` | Buscar por id existente e inexistente; listar propiedades por propietario; listar todas las propiedades. |
+| `ComponentTypeCommandServiceImpl` | Crear devuelve el identificador; rechazar nombre duplicado sin guardar; actualizar el nombre de un tipo existente; actualizar uno inexistente devuelve vacío; eliminar un tipo existente no utilizado; devolver `false` si no existe; rechazar la eliminación cuando el tipo está en uso. |
+| `ComponentTypeQueryServiceImpl` | Buscar por id existente e inexistente; listar todos los tipos de componentes. |
+
+**Ejemplo de prueba con el patrón AAA**
+
+```java
+@Test
+@DisplayName("Create: lanza excepción cuando el nombre ya existe")
+void handleCreateComponentTypeCommand_whenNameAlreadyExists_throwsException() {
+    // Arrange
+    var command = new CreateComponentTypeCommand("Interruptor", "Protege el circuito electrico");
+    when(componentTypeRepository.existsByName(command.name())).thenReturn(true);
+
+    // Act
+    var exception = assertThrows(
+            IllegalStateException.class,
+            () -> componentTypeCommandService.handle(command)
+    );
+
+    // Assert
+    assertEquals("Component type with the same name already exists", exception.getMessage());
+    verify(componentTypeRepository, never()).save(any(ComponentType.class));
+}
+```
+
+**Defecto corregido:** `PropertyCommandServiceImpl.handle(DeletePropertyCommand)` guardaba la propiedad sin eliminarla ni desactivarla. Ahora utiliza `propertyRepository.delete(property)`. La prueba unitaria verifica la eliminación y que no se invoque `save`; Karate y Cucumber comprueban por separado que la consulta posterior devuelve `404` contra PostgreSQL real.
+
+**Alcance y límites:** las unitarias verifican las interacciones con repositorios simulados, no la persistencia. La actualización de Component Type comprueba el cambio de nombre, no el cambio de descripción. Las pruebas HTTP de Component Types se limitan a crear y listar, ya que el controlador actual no expone endpoints de actualización o eliminación.
+
+Los [resultados estructurados y datos de la ejecución](assets/evidence/cap6/assets-parte1/results.json) y los reportes originales de Surefire por clase permiten contrastar las capturas: [Property Command](assets/evidence/cap6/assets-parte1/PropertyCommandServiceImplTest.txt), [Property Query](assets/evidence/cap6/assets-parte1/PropertyQueryServiceImplTest.txt), [Component Type Command](assets/evidence/cap6/assets-parte1/ComponentTypeCommandServiceImplTest.txt) y [Component Type Query](assets/evidence/cap6/assets-parte1/ComponentTypeQueryServiceImplTest.txt).
 
 #### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
