@@ -6255,7 +6255,7 @@ Esta evidencia reemplaza la ejecución anterior con mock. Los escenarios crean s
 | `component-types.feature` | 3 | 3 | 0 | 0 |
 | **Total** | **13** | **13** | **0** | **0** |
 
-La ejecución del **8 de octubre de 2026**, sobre el árbol de trabajo registrado en 6.1.1, completó los 13 escenarios mediante HTTP real; no corresponde a un `dryRun`. En la ejecución conjunta de la parte 1, Surefire registra **21 métodos JUnit**: 19 unitarios, un runner Karate y un runner Cucumber. Sus reportes internos registran **13 escenarios Karate** y **12 casos Cucumber**, respectivamente. No se afirma que toda la suite del equipo haya sido ejecutada en conjunto.
+La ejecución del **9 de octubre de 2026**, sobre el árbol de trabajo registrado en 6.1.1, completó los 13 escenarios mediante HTTP real; no corresponde a un `dryRun`. En la ejecución conjunta de la parte 1, Surefire registra **20 métodos JUnit**: 19 unitarios y un runner Karate. Su reporte interno registra **13 escenarios Karate**. No se afirma que toda la suite del equipo haya sido ejecutada en conjunto.
 
 **Evidencia de ejecución (reporte HTML original de Karate)**
 
@@ -6292,10 +6292,10 @@ Desde la carpeta del backend, con `JAVA_HOME` apuntando a un JDK compatible, pre
 .\mvnw.cmd "-Dtest=AssetsKarateIT" test
 ```
 
-Con el backend ya iniciado, ejecutar las cuatro clases unitarias y las dos suites reales de esta parte:
+Con el backend ya iniciado, ejecutar las cuatro clases unitarias y la suite Karate real de esta parte:
 
 ```powershell
-.\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT,AssetsCucumberIT" test
+.\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT" test
 ```
 
 El reporte se genera en `target/karate-assets-real/karate-summary.html`. `AssetsKarateTest.featureFilesAreValid` solo comprueba sintaxis y utiliza una carpeta distinta (`target/karate-assets-dry-run`), por lo que no reemplaza la evidencia HTTP. Las suites reales se ejecutan explícitamente mediante clases `*IT`: si el backend no está disponible o falla un escenario, el resultado es fallo, no una omisión silenciosa. Para otra URL de pruebas puede utilizarse `-Dassets.baseUrl=http://localhost:8092` o `ASSETS_BASE_URL`.
@@ -6423,6 +6423,62 @@ Se conserva el [reporte HTML navegable](assets/evidence/cap6/monitoring/karate-r
 ```
 
 **Alcance pendiente:** se hizo además una ejecución exploratoria con un JWT temporal: 11 escenarios HTTP se ejecutaron, 7 pasaron y 4 fallaron al consultar recursos inexistentes (respuestas `401` o `500` donde se esperaba `404`). Los 7 escenarios con datos preexistentes (`@seeded`) no se ejecutaron en esa corrida. Por ello estas capturas **no** acreditan todavía el flujo autenticado completo ni los 18 escenarios. La lógica de esos errores requiere corrección y una nueva ejecución antes de presentarlos como aprobados.
+
+#### Bounded Context SDP — Requests, Schedules y Services
+
+Calin implementó originalmente tres features Karate en el commit [073f348](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/073f348). Para unificar el entorno con Assets se adaptaron esos mismos archivos al **backend Spring Boot real en `http://localhost:8091`**, conectado a PostgreSQL **17.11** y a la base aislada `electrolink_assets_tests` en `127.0.0.1:55432`. No se usa Render ni un mock HTTP en esta ejecución.
+
+**Configuración y preparación**
+
+`SdpKarateIT.sdpRunsAgainstRealLocalBackend` ejecuta únicamente los tres features SDP, con sesiones creadas mediante los endpoints reales de registro e inicio de sesión. `SdpApiSupport` prepara los registros por HTTP: servicios con nombres únicos, horarios y solicitudes; para Requests crea también su propiedad y servicio asociados. Cada escenario utiliza los ids devueltos por la API, sin depender de cuentas o registros preexistentes.
+
+Los fixtures Java comprueban los códigos de creación y devuelven los ids/payloads a Karate. Los features realizan GET, PUT y DELETE reales y comprueban las consultas posteriores. El runner limpia en `finally` solamente las solicitudes, horarios, servicios y propiedades creados por esta ejecución, incluso ante un fallo. Las cuentas de prueba permanecen en la base aislada porque no existe endpoint para eliminarlas.
+
+| Feature | Escenarios ejecutados | Verificaciones |
+|---|---|---|
+| [request.feature](assets/evidence/cap6/sdp-calin/features/request.feature) | 3 | Registro real `201` en preparación; consulta por id y cliente `200`; actualización y eliminación `200`, seguida de consulta `404`; consulta sin token `401`. |
+| [schedules.feature](assets/evidence/cap6/sdp-calin/features/schedules.feature) | 3 | Registro real `200` en preparación; consulta por técnico `200` con día y horas; actualización `200` y valores persistidos; eliminación `200` y ausencia en la lista; consulta sin token `401`. |
+| [services.feature](assets/evidence/cap6/sdp-calin/features/services.feature) | 3 | Registro real `200` en preparación; consulta por id y catálogo `200`; actualización `200` con nombre/precio persistidos; eliminación `200` seguida de consulta `404`; consulta sin token `401`. |
+| **Total SDP** | **9** | **9 aprobados, 0 fallidos y 0 omitidos** |
+
+**Resultado de ejecución real — 9 de octubre de 2026**
+
+<img src="assets/img/cap6/SdpKarateSummary.png" alt="Resumen Karate SDP: nueve escenarios aprobados contra el backend real local"/>
+
+Requests:
+
+<img src="assets/img/cap6/SdpKarateRequests.png" alt="Tres escenarios de Requests ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+Schedules:
+
+<img src="assets/img/cap6/SdpKarateSchedules.png" alt="Tres escenarios de Schedules ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+Services:
+
+<img src="assets/img/cap6/SdpKarateServices.png" alt="Tres escenarios de Services ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+**Adaptaciones y límites del contrato**
+
+- La URL ya no está fija a Render: se obtiene de `sdp.baseUrl`, con valor por defecto local y opción `SDP_BASE_URL`. Las escrituras remotas están bloqueadas salvo autorización explícita.
+- La consulta por cliente utiliza la ruta del controlador: `/api/v1/requests/clients/{clientId}/requests`.
+- Los horarios incluyen `day` y horas `HH:mm`; las solicitudes y servicios envían los objetos completos que requiere el contrato actual.
+- Se sustituyeron los supuestos rechazos por rol por tres pruebas de **acceso sin autenticación**. El backend revisado exige token para SDP, pero no implementa las restricciones Homeowner/Técnico asumidas anteriormente. No se modificó su seguridad para hacer pasar los escenarios.
+- No se cambiaron controladores, entidades ni reglas de negocio de SDP. La preparación y la limpieza también usan la API real; no se sustituyen los servicios por mocks.
+
+**Reproducción**
+
+Con el mismo entorno local real de Assets ya iniciado:
+
+```powershell
+.\scripts\start-assets-local.ps1 -PostgresBin 'D:\PostgreSQL\17\bin'
+.\mvnw.cmd "-Dtest=SdpKarateIT" test
+```
+
+Si el backend ya está funcionando, ejecutar solo la segunda línea. `SdpKarateTest` comprueba sintaxis con `dryRun` en una carpeta diferente, pero no sustituye esta evidencia HTTP. El runner general `ElectrolinkPlatformApplicationTests` no prepara las sesiones y fixtures específicos; se utiliza `SdpKarateIT` para aislar SDP.
+
+El reporte real se genera en `target/karate-sdp-real/karate-summary.html`. Se incluye una [copia HTML con sus recursos](assets/evidence/cap6/sdp-calin/karate-reports/karate-summary.html), con los JWT ocultados, el [reporte del runner](assets/evidence/cap6/sdp-calin/SdpKarateIT.txt) y los [resultados estructurados con hashes de las fuentes](assets/evidence/cap6/sdp-calin/results.json). Para navegar el HTML hay que abrirlo desde una copia local del repositorio.
+
+La verificación conjunta de SDP registró 23 métodos JUnit: 20 unitarios, un runner Karate real y dos comprobaciones de sintaxis (`SdpKarateTest` y `AssetsKarateTest`). Solo el reporte `karate-sdp-real` acredita los nueve escenarios HTTP; las comprobaciones de sintaxis no se suman como integración ejecutada.
 
 ### 6.1.3. Core Behavior-Driven Development
 
