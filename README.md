@@ -52,6 +52,22 @@
 ---
 
 
+## Project Report Collaboration Insights
+
+Repositorio del informe: https://github.com/G2-Diseno-de-Experimentos/project-document
+
+El informe se elabora de forma colaborativa en Markdown, aplicando GitFlow (ramas `feature/*` que se integran en `develop` y luego en `main`) y Conventional Commits. A continuación se presentan los analíticos de colaboración del repositorio del informe para cada entrega.
+
+### Trabajo Parcial
+
+El panel **Pulse** muestra la actividad de la semana del 2 al 9 de octubre de 2026. Sin contar los merges, 3 autores registraron 24 commits en `main` y 26 commits en todas las ramas, con 166 archivos modificados (9970 líneas añadidas y 3 eliminadas).
+
+![Pulse del repositorio del informe entre el 2 y el 9 de octubre de 2026](assets/img/cap5/insights-pulse-tp.png)
+
+El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (39), jwd3t (21), ivommb11 (15) y Calin1407 (2). GitHub calcula este panel por semanas, por lo que el gráfico llega hasta el 3 de octubre de 2026.
+
+![Contribuciones por integrante en el repositorio del informe](assets/img/cap5/insights-contributors-tp.png)
+
 ## Contenido
 
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
@@ -5985,16 +6001,6 @@ La captura muestra el panel de contribuciones de GitHub con el intervalo indicad
 | **Total de los perfiles visibles** | **58** | **6 298** | **208** |
 
 Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no exclusivamente las tareas del Sprint 2. La mayor concentración de actividad se observa en septiembre, con aportes adicionales al final del intervalo. El número de commits y las líneas modificadas describen la actividad registrada, pero no permiten determinar por sí solos qué integrante realizó cada prueba, la dificultad de las tareas o su calidad. Los commits posteriores al 3 de octubre no están representados en esta evidencia.
-
-#### Actualización para el Trabajo Parcial
-
-El panel **Pulse** del repositorio del informe muestra la actividad de la semana del 2 al 9 de octubre de 2026. Sin contar los merges, 3 autores registraron 24 commits en `main` y 26 commits en todas las ramas, con 166 archivos modificados (9970 líneas añadidas y 3 eliminadas).
-
-![Pulse del repositorio project-document entre el 2 y el 9 de octubre de 2026](assets/img/cap5/insights-pulse-tp.png)
-
-El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (39), jwd3t (21), ivommb11 (15) y Calin1407 (2). GitHub calcula este panel por semanas, por lo que el gráfico llega hasta el 3 de octubre de 2026 y no incluye todavía los commits integrados en `main` después de esa fecha.
-
-![Contribuciones por integrante en el repositorio project-document](assets/img/cap5/insights-contributors-tp.png)
 
 #### Evidencias de los componentes del Sprint 1
 
