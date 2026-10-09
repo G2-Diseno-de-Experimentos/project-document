@@ -6482,103 +6482,64 @@ La verificación conjunta de SDP registró 23 métodos JUnit: 20 unitarios, un r
 
 ### 6.1.3. Core Behavior-Driven Development
 
-Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. La parte 1 utiliza Cucumber con escenarios de negocio en español; la parte 2 utiliza los escenarios Gherkin de Karate en inglés, según la convención de código del equipo.
+Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Assets y SDP presentan sus features Karate y las evidencias de esa misma ejecución. Las especificaciones combinan nombres en inglés para Assets y en español para SDP.
 
 #### Bounded Context Assets — Parte 1 (Properties y Component Types)
 
-Se implementó una suite de aceptación con **Cucumber-JVM 7.20.1**, siguiendo la separación entre features, runner y definiciones de pasos del [apartado BDD del repositorio de referencia](https://github.com/G-0X-Diseno-de-Experimentos/Docs#613-core-behavior-driven-development). Los escenarios describen los comportamientos desde la perspectiva del propietario y del usuario del catálogo mediante **Given / When / Then**. No son los mismos archivos Karate renombrados: Cucumber ejecuta sus propios archivos Gherkin y sus pasos Java.
+Los mismos archivos `properties.feature` y `component-types.feature` ejecutados en 6.1.2 expresan el comportamiento esperado mediante **Gherkin y Karate**. Se sigue el formato de Components y Technician Inventory: features, escenarios Given / When / Then y capturas del reporte Karate. No se utiliza una suite Cucumber independiente para este entregable.
 
-**Modalidad:** API real mediante HTTP. Se usa el backend Spring Boot ya iniciado y su PostgreSQL aislado, igual que en 6.1.2. Las definiciones de pasos no utilizan Mockito ni sustituyen los servicios por mocks. A diferencia de la referencia, que inicia Spring desde su contexto Cucumber, esta suite consume el backend real como cliente externo; las operaciones pasan por autenticación, controladores, servicios, repositorios y persistencia. No se utiliza Selenium porque el alcance es el comportamiento del backend, no una interfaz web ni una prueba de sistema de 6.1.4.
+**Precondiciones:** `AssetsKarateIT` registra un usuario único y obtiene un JWT real. El `Background` configura la URL y la autenticación; los escenarios preparan sus propios registros, usan los UUID devueltos por la API y comprueban las consecuencias mediante consultas posteriores.
 
-**Configuración de la suite**
-
-| Componente | Archivo | Responsabilidad |
+| Feature | Comportamientos expresados | Casos ejecutados |
 |---|---|---|
-| Runner JUnit Jupiter | `AssetsCucumberIT.java` | Invoca el runtime real de Cucumber, genera reportes HTML/JSON/XML y comprueba que el código de salida sea cero |
-| Definiciones de pasos | `AssetsSteps.java` | Implementa las precondiciones, acciones y aserciones mediante solicitudes HTTP reales |
-| Cliente HTTP de pruebas | `AssetsApiSupport.java` | Registra usuarios únicos, obtiene JWTs reales y realiza las solicitudes sin imprimir credenciales |
-| Feature de propiedades | `properties-bdd.feature` | Registro, actualización, filtro por propietario, eliminación, validación y consulta de inexistentes |
-| Feature de catálogo | `component-types-bdd.feature` | Registro de un tipo, consulta del catálogo y rechazo del acceso sin autenticación |
+| Properties | Consultar todas y por propietario; buscar existentes e inexistentes; registrar, validar datos obligatorios, actualizar y eliminar con comprobación de persistencia | 10 |
+| Component Types | Consultar el catálogo, registrar un nombre único y rechazar JSON malformado | 3 |
+| **Total** | **Los mismos escenarios Karate de 6.1.2, no una ejecución adicional** | **13 aprobados** |
 
-Cada escenario dispone de estado independiente en los pasos Java. Las propiedades se preparan con la API y se limpian al terminar mediante un hook `@After`, utilizando únicamente los identificadores creados por las pruebas. Los nombres de usuarios y tipos son únicos para permitir repetir la suite. El hook `@Before` obtiene una sesión real para la ejecución; los tokens no se incluyen en los mensajes de evidencia.
-
-**Escenarios y cobertura**
-
-| Feature | Comportamiento | Casos ejecutados | Resultado esperado |
-|---|---|---|---|
-| Properties | Registrar una propiedad y consultar sus datos guardados | 1 | `201`, UUID generado y consulta `200` con los mismos datos |
-| Properties | Actualizar la ubicación | 1 | El distrito actualizado se conserva al consultar de nuevo |
-| Properties | Filtrar por propietario | 1 | La lista incluye la propiedad preparada y excluye las del otro propietario |
-| Properties | Eliminar definitivamente | 1 | `DELETE 204`, seguido de `GET 404` |
-| Properties | Validar campos obligatorios con `Scenario Outline` | 4 | Ausencia de `ownerId`, `address`, `region` o `district`: `400` en cada ejemplo |
-| Properties | Consultar una propiedad inexistente | 1 | `404` |
-| Component Types | Registrar y encontrar un tipo en el catálogo | 1 | `201`, identificador válido y registro visible en el catálogo real |
-| Component Types | Consultar el catálogo | 1 | `200`, lista con identificadores y nombres |
-| Component Types | Consultar sin enviar autenticación | 1 | `401` |
-| **Total** | **9 casos Properties + 3 casos Component Types** | **12** | **12 aprobados, 0 fallidos, 0 omitidos** |
-
-**Ejemplo de comportamiento de Properties**
+**Ejemplo literal del feature de Properties**
 
 ```gherkin
-Feature: Gestión de propiedades del hogar
-  Como propietario de un hogar
-  Quiero registrar, consultar, actualizar y eliminar mis propiedades
-  Para mantener la información de los lugares donde necesito servicios eléctricos
-
-  Background:
-    Given un propietario autenticado
-
-  Scenario: Eliminar definitivamente una propiedad
-    Given una propiedad registrada por el propietario
-    When elimina su propiedad
-    Then la propiedad ya no puede consultarse
+Scenario: Delete an existing property and confirm that it cannot be retrieved
+  * def created = createProperty()
+  Given path '/api/v1/properties', created.property.id
+  When method delete
+  Then status 204
+  Given path '/api/v1/properties', created.property.id
+  When method get
+  Then status 404
 ```
 
-El `Given` crea una propiedad real y conserva su UUID; el `When` solicita su eliminación por API; el `Then` verifica tanto el `204` como el `404` de una consulta posterior. Así se comprueba la consecuencia del comportamiento, no solamente el código devuelto por DELETE.
+La preparación crea una propiedad real; `When` solicita su eliminación y `Then` comprueba `204` y posteriormente `404`. El escenario expresa la eliminación efectiva, no solamente el código de DELETE.
 
-**Ejemplo de validación parametrizada**
+**Ejemplo literal del feature de Component Types**
 
 ```gherkin
-Scenario Outline: Rechazar el registro cuando falta un dato obligatorio
-  Given los datos de una propiedad sin el campo obligatorio "<campo>"
-  When registra la propiedad
-  Then el sistema rechaza el registro con código 400
-
-  Examples:
-    | campo    |
-    | ownerId  |
-    | address  |
-    | region   |
-    | district |
+Scenario: Create a uniquely named component type and verify it in the catalog
+  * def name = 'Assets-Karate-' + java.util.UUID.randomUUID()
+  * def payload = { name: '#(name)', description: 'Tipo creado por pruebas reales de Assets' }
+  Given path '/api/v1/component-types'
+  And request payload
+  When method post
+  Then status 201
+  And match response contains { componentTypeId: '#number', name: '#(name)', description: '#(payload.description)' }
+  * def created = response
+  Given path '/api/v1/component-types'
+  When method get
+  Then status 200
+  And match response contains created
 ```
 
-Los cuatro ejemplos se ejecutan como casos independientes. Para cada uno se construye un payload válido, se retira el campo indicado y se verifica la respuesta del backend real. Los [features completos de Properties](assets/evidence/cap6/assets-parte1/features/properties-bdd.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types-bdd.feature) se incluyen con la evidencia.
+**Evidencia: escenarios ejecutados en el reporte de Karate**
 
-**Evidencia de ejecución (reporte HTML original de Cucumber)**
+`properties.feature` — 10 escenarios aprobados:
 
-Resultado del **8 de octubre de 2026**: **12 casos ejecutados y aprobados**. El código de salida de Cucumber y las aserciones del runner JUnit confirman el éxito; no se utiliza `dryRun`.
+<img src="assets/img/cap6/AssetsKarateProperties.png" alt="Feature Karate de Properties: diez escenarios ejecutados y aprobados"/>
 
-<img src="assets/img/cap6/AssetsCucumberSummary.png" alt="Reporte Cucumber original: 12 casos ejecutados, 100 por ciento aprobados"/>
+`component-types.feature` — 3 escenarios aprobados:
 
-Feature de Properties — 9 casos, incluyendo los cuatro ejemplos de validación:
+<img src="assets/img/cap6/AssetsKarateComponentTypes.png" alt="Feature Karate de Component Types: tres escenarios ejecutados y aprobados"/>
 
-<img src="assets/img/cap6/AssetsCucumberProperties.png" alt="Reporte Cucumber del feature de Properties con sus escenarios aprobados"/>
-
-Feature de Component Types — 3 casos:
-
-<img src="assets/img/cap6/AssetsCucumberComponentTypes.png" alt="Reporte Cucumber del catálogo de Component Types con sus tres escenarios aprobados"/>
-
-**Reproducción y trazabilidad**
-
-Con el backend y PostgreSQL reales ya iniciados, desde la carpeta del backend:
-
-```powershell
-.\mvnw.cmd "-Dtest=AssetsCucumberIT" test
-```
-
-El reporte se genera en `target/cucumber-assets/cucumber.html`. Se conserva una [copia HTML de Cucumber](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.html), el [resultado JSON por escenario y paso](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.json) y el [resultado XML](assets/evidence/cap6/assets-parte1/cucumber-reports/cucumber.xml). Para navegar el HTML hay que abrirlo desde una copia local del repositorio. El [registro estructurado conjunto](assets/evidence/cap6/assets-parte1/results.json) identifica el árbol de trabajo evaluado y los resultados de las tres herramientas.
-
-Esta suite complementa 6.1.1 y 6.1.2: las unitarias aíslan Command y Query; Karate verifica el contrato HTTP y la persistencia de operaciones específicas; Cucumber expresa y ejecuta los comportamientos del usuario. La autenticación se utiliza como precondición y comprobación de acceso, no como una suite completa del bounded context IAM. Tampoco se afirma cobertura de actualización o eliminación HTTP de Component Types, porque dichos endpoints no existen en el controlador actual.
+Los [features de Properties](assets/evidence/cap6/assets-parte1/features/properties.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types.feature) y la [copia del reporte Karate](assets/evidence/cap6/assets-parte1/karate-reports/karate-summary.html), con JWT ocultos, corresponden a la ejecución real del **9 de octubre de 2026** documentada en 6.1.2. Las limitaciones del contrato HTTP y los datos de trazabilidad de ese apartado también se aplican aquí.
 
 #### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
@@ -6681,6 +6642,40 @@ Los archivos completos están en el repositorio [ElectroLink-Backend](https://gi
 Los cuatro features de Monitoring expresan comportamientos mediante Gherkin y Karate. Describen el acceso con y sin JWT, operaciones de escritura y consulta, recursos inexistentes y la regla de que una calificación solo puede crearse para una operación completada. El escenario de Service Operations verifica además que el cambio a `COMPLETED` asigne `completedAt`. Los [features están en el repositorio del backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/monitoring-tests/src/test/resources/com/hampcoders/electrolink/monitoring).
 
 Esta parte emplea los escenarios Gherkin de Karate; no incluye una suite Cucumber independiente para Monitoring. El [reporte Karate y sus capturas](#bounded-context-monitoring--service-operations-reports-photos-y-ratings) prueban mediante HTTP real los cuatro accesos sin JWT. Los flujos autenticados y los casos con datos preexistentes aún requieren una ejecución completamente aprobada.
+
+#### Bounded Context SDP — Escenarios Gherkin con Karate
+
+Como en Components y Technician Inventory, los mismos features de 6.1.2 actúan como especificaciones ejecutables del comportamiento esperado. Se presentan sus escenarios **Given / When / Then** y las evidencias del reporte Karate; no se utiliza Cucumber ni se contabiliza una segunda ejecución distinta.
+
+Ejemplo literal de Requests:
+
+```gherkin
+Scenario: Rechazar la consulta de solicitudes sin autenticación
+  * configure headers = {}
+  Given path 'api/v1/requests/clients', sdpSession.clientId, 'requests'
+  When method get
+  Then status 401
+```
+
+La precondición elimina la cabecera de autenticación, `Given` define la consulta real por cliente, `When` la ejecuta y `Then` exige el rechazo sin token. A diferencia de las expectativas iniciales por rol, este comportamiento corresponde a la seguridad implementada y fue ejecutado con éxito.
+
+Los otros escenarios expresan registro y consulta, actualización persistida y eliminación verificable de solicitudes, horarios y servicios. Sus precondiciones se preparan por HTTP real y utilizan identificadores propios, sin depender de registros compartidos de Render.
+
+**Evidencia: features ejecutados en el reporte de Karate**
+
+`request.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateRequests.png" alt="Escenarios Gherkin de Requests aprobados en Karate"/>
+
+`schedules.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateSchedules.png" alt="Escenarios Gherkin de Schedules aprobados en Karate"/>
+
+`services.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateServices.png" alt="Escenarios Gherkin de Services aprobados en Karate"/>
+
+Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin/features/request.feature), [Schedules](assets/evidence/cap6/sdp-calin/features/schedules.feature) y [Services](assets/evidence/cap6/sdp-calin/features/services.feature) y la [copia del reporte Karate](assets/evidence/cap6/sdp-calin/karate-reports/karate-summary.html), correspondientes a los **nueve escenarios aprobados** del **9 de octubre de 2026**. El alcance, la preparación, la limpieza y los hashes de 6.1.2 se aplican también a este apartado.
 
 ### 6.1.4. Core System Tests
 
