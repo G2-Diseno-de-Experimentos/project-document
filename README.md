@@ -5709,6 +5709,18 @@ Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product
 | 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: unitarias y evidencias Karate/Gherkin de Assets y SDP incorporadas |
 | 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
 
+**Tablero del Sprint 2 en Trello**
+
+[Abrir el Product Backlog público de ElectroLink y consultar el Sprint 2](https://trello.com/b/vEA621A6/electrolink-product-backlog)
+
+El Sprint 2 se gestiona dentro del mismo tablero de **Product Backlog** de ElectroLink. La lista **Sprint 2 — Terminado** registra las siete tareas `SP2-T01` a `SP2-T07` del Sprint Backlog anterior, con su descripción, referencia al informe y estado documentado. Las listas **Sprint Backlog**, **En progreso**, **En revisión** y **Terminado** mantienen el flujo de seguimiento del proyecto. Las tareas del sprint se consolidaron a partir del informe para esta entrega; las capturas muestran su estado al momento de la incorporación, no el historial previo de movimientos.
+
+![Tablero público de Trello del Sprint 2: vista general y tareas SP2-T01 a SP2-T04](assets/img/cap5/trello-sprint-2.jpg)
+
+![Tablero público de Trello del Sprint 2: continuación de las tareas SP2-T04 a SP2-T07](assets/img/cap5/trello-sprint-2-continuacion.jpg)
+
+*Fuente: Product Backlog de ElectroLink en Trello. Las dos capturas permiten visualizar las siete tareas de la lista Sprint 2 — Terminado dentro del tablero del proyecto.*
+
 **Criterios de finalización del sprint**
 
 - Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 122 casos: 19 de Properties y Component Types, 51 de Components, Technician Inventory, entidades y manejo de excepciones, 20 de SDP y 32 de Monitoring. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
@@ -5973,6 +5985,16 @@ La captura muestra el panel de contribuciones de GitHub con el intervalo indicad
 | **Total de los perfiles visibles** | **58** | **6 298** | **208** |
 
 Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no exclusivamente las tareas del Sprint 2. La mayor concentración de actividad se observa en septiembre, con aportes adicionales al final del intervalo. El número de commits y las líneas modificadas describen la actividad registrada, pero no permiten determinar por sí solos qué integrante realizó cada prueba, la dificultad de las tareas o su calidad. Los commits posteriores al 3 de octubre no están representados en esta evidencia.
+
+#### Actualización para el Trabajo Parcial
+
+El panel **Pulse** del repositorio del informe muestra la actividad de la semana del 2 al 9 de octubre de 2026. Sin contar los merges, 3 autores registraron 24 commits en `main` y 26 commits en todas las ramas, con 166 archivos modificados (9970 líneas añadidas y 3 eliminadas).
+
+![Pulse del repositorio project-document entre el 2 y el 9 de octubre de 2026](assets/img/cap5/insights-pulse-tp.png)
+
+El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (39), jwd3t (21), ivommb11 (15) y Calin1407 (2). GitHub calcula este panel por semanas, por lo que el gráfico llega hasta el 3 de octubre de 2026 y no incluye todavía los commits integrados en `main` después de esa fecha.
+
+![Contribuciones por integrante en el repositorio project-document](assets/img/cap5/insights-contributors-tp.png)
 
 #### Evidencias de los componentes del Sprint 1
 
