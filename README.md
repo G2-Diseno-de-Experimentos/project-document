@@ -5910,7 +5910,7 @@ Las pruebas unitarias verifican de forma aislada la lógica de las entidades del
 | Herramienta | Uso |
 |---|---|
 | JUnit 5 | Framework de ejecución de pruebas |
-| JUnit Jupiter Assertions | Aserciones de Properties y Component Types (`assertEquals`, `assertTrue`, `assertThrows`, entre otras) |
+| JUnit Jupiter Assertions | Aserciones de Properties, Component Types y SDP (`assertEquals`, `assertTrue`, `assertThrows`, entre otras) |
 | Mockito | Mocks de los repositorios JPA (`@Mock`, `@InjectMocks`) |
 | AssertJ | Aserciones de Components y Technician Inventory (`assertThat`, `assertThatThrownBy`) |
 | Maven Surefire | Ejecución con `./mvnw test` |
@@ -5929,31 +5929,27 @@ Esta parte corresponde al integrante 1 y verifica los servicios de aplicación C
 | `ComponentTypeQueryServiceImpl` | `ComponentTypeQueryServiceImplTest` | 3 |
 | **Total** | | **19** |
 
-Resultado de la ejecución del **8 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit `0c64a0e`, con los cambios de esta entrega integrados sobre los últimos cambios de `origin/develop` y el árbol de trabajo limpio. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
+Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, todavía sin commit. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
 
-**Evidencia de ejecución (Maven Surefire)**
+**Evidencia de ejecución (IntelliJ IDEA)**
 
-Las siguientes capturas muestran resúmenes HTML elaborados a partir de los XML reales generados por Maven Surefire. No son capturas de IntelliJ IDEA. Incluyen los casos ejecutados, su resultado y el tiempo registrado.
-
-Resumen de las cuatro clases:
-
-<img src="assets/img/cap6/AssetsUnitTestsSummary.png" alt="Resumen Maven Surefire: 19 pruebas unitarias de Assets aprobadas, sin fallos, errores ni omitidas"/>
+Las siguientes capturas corresponden a ejecuciones reales de cada clase desde IntelliJ IDEA. Muestran el panel **Run**, los casos con checks verdes, el total de pruebas aprobadas y `Process finished with exit code 0`, siguiendo el formato de Assets Parte 2. Se recortó únicamente el panel de resultados, sin modificar su contenido; las capturas completas y los datos de la ejecución se conservan en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
 
 `PropertyCommandServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/PropertyCommandServiceImplTest.png" alt="Cinco casos aprobados de PropertyCommandServiceImplTest"/>
+<img src="assets/img/cap6/IntelliJPropertyCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco casos aprobados de PropertyCommandServiceImplTest y salida 0"/>
 
 `PropertyQueryServiceImplTest` — 4 pruebas:
 
-<img src="assets/img/cap6/PropertyQueryServiceImplTest.png" alt="Cuatro casos aprobados de PropertyQueryServiceImplTest"/>
+<img src="assets/img/cap6/IntelliJPropertyQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro casos aprobados de PropertyQueryServiceImplTest y salida 0"/>
 
 `ComponentTypeCommandServiceImplTest` — 7 pruebas:
 
-<img src="assets/img/cap6/ComponentTypeCommandServiceImplTest.png" alt="Siete casos aprobados de ComponentTypeCommandServiceImplTest"/>
+<img src="assets/img/cap6/IntelliJComponentTypeCommandServiceImplTest.png" alt="IntelliJ IDEA: siete casos aprobados de ComponentTypeCommandServiceImplTest y salida 0"/>
 
 `ComponentTypeQueryServiceImplTest` — 3 pruebas:
 
-<img src="assets/img/cap6/ComponentTypeQueryServiceImplTest.png" alt="Tres casos aprobados de ComponentTypeQueryServiceImplTest"/>
+<img src="assets/img/cap6/IntelliJComponentTypeQueryServiceImplTest.png" alt="IntelliJ IDEA: tres casos aprobados de ComponentTypeQueryServiceImplTest y salida 0"/>
 
 **Casos cubiertos**
 
@@ -5986,11 +5982,11 @@ void handleCreateComponentTypeCommand_whenNameAlreadyExists_throwsException() {
 }
 ```
 
-**Defecto corregido:** `PropertyCommandServiceImpl.handle(DeletePropertyCommand)` guardaba la propiedad sin eliminarla ni desactivarla. Ahora utiliza `propertyRepository.delete(property)`. La prueba unitaria verifica la eliminación y que no se invoque `save`; Karate y Cucumber comprueban por separado que la consulta posterior devuelve `404` contra PostgreSQL real.
+**Defecto corregido:** `PropertyCommandServiceImpl.handle(DeletePropertyCommand)` guardaba la propiedad sin eliminarla ni desactivarla. Ahora utiliza `propertyRepository.delete(property)`. La prueba unitaria verifica la eliminación y que no se invoque `save`; Karate comprueba que la consulta posterior devuelve `404` contra PostgreSQL real.
 
 **Alcance y límites:** las unitarias verifican las interacciones con repositorios simulados, no la persistencia. La actualización de Component Type comprueba el cambio de nombre, no el cambio de descripción. Las pruebas HTTP de Component Types se limitan a crear y listar, ya que el controlador actual no expone endpoints de actualización o eliminación.
 
-Los [resultados estructurados y datos de la ejecución](assets/evidence/cap6/assets-parte1/results.json) y los reportes originales de Surefire por clase permiten contrastar las capturas: [Property Command](assets/evidence/cap6/assets-parte1/PropertyCommandServiceImplTest.txt), [Property Query](assets/evidence/cap6/assets-parte1/PropertyQueryServiceImplTest.txt), [Component Type Command](assets/evidence/cap6/assets-parte1/ComponentTypeCommandServiceImplTest.txt) y [Component Type Query](assets/evidence/cap6/assets-parte1/ComponentTypeQueryServiceImplTest.txt).
+Como evidencia complementaria de una ejecución separada con Maven, se conservan el [resumen HTML de Surefire](assets/evidence/cap6/assets-parte1/unit-tests.html), los [resultados estructurados y datos de esa ejecución](assets/evidence/cap6/assets-parte1/results.json) y los reportes por clase: [Property Command](assets/evidence/cap6/assets-parte1/PropertyCommandServiceImplTest.txt), [Property Query](assets/evidence/cap6/assets-parte1/PropertyQueryServiceImplTest.txt), [Component Type Command](assets/evidence/cap6/assets-parte1/ComponentTypeCommandServiceImplTest.txt) y [Component Type Query](assets/evidence/cap6/assets-parte1/ComponentTypeQueryServiceImplTest.txt). Los tiempos de Maven y de IntelliJ pueden diferir porque son ejecuciones independientes.
 
 #### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
@@ -6134,6 +6130,99 @@ Resumen de los tres Query Services (13 pruebas):
 <img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
 
 **Límite de esta evidencia:** los repositorios simulados permiten comprobar las decisiones de los servicios, pero no prueban la persistencia JPA, los controladores ni las respuestas HTTP. La ejecución de `mvn test` sobre toda la suite devolvió 1 error en la prueba preexistente `ElectrolinkPlatformApplicationTests` porque no estaba definido `DB_URL`; ese error no corresponde a las 32 unitarias de Monitoring.
+
+#### Bounded Context SDP — Requests, Schedules y Services (Calin)
+
+Se incorporan las pruebas implementadas por **Calin** para los servicios de aplicación Command y Query del bounded context SDP. Utilizan **JUnit Jupiter y Mockito**, con preparación de datos y repositorios simulados, ejecución del servicio y comprobación de resultados e interacciones siguiendo AAA. No levantan Spring Boot ni PostgreSQL.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `RequestCommandServiceImpl` | `RequestCommandServiceImplTest` | 4 |
+| `RequestQueryServiceImpl` | `RequestQueryServiceImplTest` | 2 |
+| `ScheduleCommandServiceImpl` | `ScheduleCommandServiceImplTest` | 5 |
+| `ScheduleQueryServiceImpl` | `ScheduleQueryServiceImplTest` | 2 |
+| `ServiceCommandServiceImpl` | `ServiceCommandServiceImplTest` | 5 |
+| `ServiceQueryServiceImpl` | `ServiceQueryServiceImplTest` | 2 |
+| **Total SDP** | | **20** |
+
+**Ejecución verificada el 9 de octubre de 2026:** 20 pruebas, 0 fallos, 0 errores y 0 omitidas, sobre `develop` del backend, commit base `a88070e` más los cambios locales de Karate registrados mediante SHA-256. Se ejecutaron las seis clases existentes sin modificar sus pruebas ni el código de negocio.
+
+**Evidencias de ejecución (IntelliJ IDEA)**
+
+Las siguientes capturas se obtuvieron ejecutando las seis clases directamente en IntelliJ IDEA. El panel **Run** muestra cada caso con su check verde, el total aprobado y `Process finished with exit code 0`, con el mismo formato de Assets Parte 2. Solo se recortó el panel, sin alterar resultados; se conservan las imágenes completas en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
+
+`RequestCommandServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/IntelliJRequestCommandServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de Request Command aprobadas y salida 0"/>
+
+`RequestQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJRequestQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Request Query aprobadas y salida 0"/>
+
+`ScheduleCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/IntelliJScheduleCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de Schedule Command aprobadas y salida 0"/>
+
+`ScheduleQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJScheduleQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Schedule Query aprobadas y salida 0"/>
+
+`ServiceCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/IntelliJServiceCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de Service Command aprobadas y salida 0"/>
+
+`ServiceQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJServiceQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Service Query aprobadas y salida 0"/>
+
+**Casos cubiertos y límites**
+
+| Clase | Comportamientos comprobados |
+|---|---|
+| Request Command | Crear guarda y devuelve la solicitud simulada; actualizar una solicitud inexistente lanza excepción y no guarda; eliminar una existente llama a `delete`; eliminar una inexistente lanza excepción y no elimina. |
+| Request Query | Consultar una solicitud existente por id y listar solicitudes por cliente, verificando la consulta al repositorio. |
+| Schedule Command | Crear guarda y devuelve el id; actualizar una existente consulta y guarda; actualizar una inexistente lanza excepción; eliminar una existente llama a `deleteById`; eliminar una inexistente lanza excepción sin borrar. |
+| Schedule Query | Consultar un horario existente por id y listar los horarios de un técnico. |
+| Service Command | Crear guarda y devuelve el id; actualizar una existente invoca `updateFrom` y guarda; actualizar una inexistente lanza excepción y no guarda; eliminar una existente llama a `deleteById`; eliminar una inexistente lanza excepción sin borrar. |
+| Service Query | Consultar un servicio existente por id y listar el catálogo completo. |
+
+No se atribuye cobertura de actualización exitosa de Requests ni de consultas inexistentes o listas vacías a las seis clases: esos casos no están implementados. Las verificaciones con Mockito tampoco demuestran persistencia real ni restricciones de acceso por rol.
+
+**Ejemplo AAA de Query, tomado de la prueba existente**
+
+```java
+@Test
+@DisplayName("handle(FindRequestByIdQuery) should return request when found")
+void handle_FindRequestByIdQuery_ReturnsRequest_WhenFound() {
+    // ARRANGE
+    RequestRepository requestRepository = mock(RequestRepository.class);
+    RequestQueryServiceImpl queryService = new RequestQueryServiceImpl(requestRepository);
+    FindRequestByIdQuery query = mock(FindRequestByIdQuery.class);
+    when(query.requestId()).thenReturn(1L);
+    Request expectedRequest = mock(Request.class);
+    when(requestRepository.findById(1L)).thenReturn(Optional.of(expectedRequest));
+
+    // ACT
+    Optional<Request> result = queryService.handle(query);
+
+    // ASSERT
+    assertTrue(result.isPresent());
+    assertEquals(expectedRequest, result.get());
+    verify(requestRepository, times(1)).findById(1L);
+}
+```
+
+**Reproducción**
+
+Desde el backend, con `JAVA_HOME` configurado:
+
+```powershell
+.\mvnw.cmd "-Dtest=RequestCommandServiceImplTest,RequestQueryServiceImplTest,ScheduleCommandServiceImplTest,ScheduleQueryServiceImplTest,ServiceCommandServiceImplTest,ServiceQueryServiceImplTest" test
+```
+
+Como evidencia complementaria de una ejecución independiente con Maven, se conservan el [resumen HTML de Surefire](assets/evidence/cap6/sdp-calin/unit-tests.html), los [resultados estructurados y hashes de las fuentes](assets/evidence/cap6/sdp-calin/results.json) y los reportes por clase: [Request Command](assets/evidence/cap6/sdp-calin/RequestCommandServiceImplTest.txt), [Request Query](assets/evidence/cap6/sdp-calin/RequestQueryServiceImplTest.txt), [Schedule Command](assets/evidence/cap6/sdp-calin/ScheduleCommandServiceImplTest.txt), [Schedule Query](assets/evidence/cap6/sdp-calin/ScheduleQueryServiceImplTest.txt), [Service Command](assets/evidence/cap6/sdp-calin/ServiceCommandServiceImplTest.txt) y [Service Query](assets/evidence/cap6/sdp-calin/ServiceQueryServiceImplTest.txt). Sus tiempos pueden diferir de las capturas de IntelliJ porque son ejecuciones separadas.
+
+La autoría se verificó en el historial del backend: [3bb4a17 — unitarias de Command](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/3bb4a17) y [1964b8c — unitarias de Query](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/1964b8c). El [generador de evidencias SDP](scripts/generate-sdp-test-evidence.cjs) exporta los resultados existentes; no ejecuta Karate ni realiza peticiones a Render.
 
 ### 6.1.2. Core Integration Tests
 

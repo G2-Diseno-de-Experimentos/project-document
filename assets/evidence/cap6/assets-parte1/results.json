@@ -1,28 +1,24 @@
 {
   "repository": "ElectroLink-Backend",
   "branch": "develop",
-  "base_commit": "0c64a0ed385dfbed509f07fe25115bb04e3bb3ae",
-  "working_tree_modified": false,
+  "base_commit": "a88070e1bc6d19072c6b64bf96a7c9bad3c70e44",
+  "working_tree_modified": true,
   "source_sha256": {
-    "pom.xml": "473dc1528948c2bf9ae6bd0cc5fd453b4bce749c5a7f01d27d7e66f2c6d941b0",
+    "pom.xml": "aa20981bf6465c5de37165bb715382266a6cb0deb22045fb70cf04b88aebc3e1",
     "src/main/java/com/hampcoders/electrolink/assets/application/internal/commandservices/PropertyCommandServiceImpl.java": "575fdb50355525c6119ec6e2d6a1b816c0768bd8f36f48d357ef81a17d998105",
     "src/main/java/com/hampcoders/electrolink/assets/interfaces/rest/PropertyCatalogRestExceptionHandler.java": "c528898f03b69cad21c797d3137a3039fc3925bba8345f4c45f0c233afaa2e0d",
     "src/test/java/com/hampcoders/electrolink/assets/integration/AssetsKarateIT.java": "d358708f6d0e1ce8a4611c53fa82fca8ea5642d9276abeab7c7814eae5b1ce08",
-    "src/test/java/com/hampcoders/electrolink/assets/bdd/AssetsCucumberIT.java": "d095e37f0c3eb4d77a416c7f60194e1ff739c039fad8c0ab26f95fcf0b908420",
-    "src/test/java/com/hampcoders/electrolink/assets/bdd/AssetsSteps.java": "e09d49654ec67aa839a106de040b3605446f407f49e7cbd22623ee34da0a1d80",
-    "src/test/java/com/hampcoders/electrolink/assets/testing/AssetsApiSupport.java": "0925addf35e16205590cc89bd54db66e09d42a3febf229c951d8190330d8011e",
+    "src/test/java/com/hampcoders/electrolink/assets/testing/AssetsApiSupport.java": "8f9bccf2c440e3b50475ab35322f0660ca9a4ab21d336923951dcc516107ef09",
     "src/test/java/com/hampcoders/electrolink/assets/application/internal/commandservices/PropertyCommandServiceImplTest.java": "86bab501c8346d8a517fb17e5c511575575c7ce7b31300bf53353c11553bdc79",
     "src/test/java/com/hampcoders/electrolink/assets/application/internal/queryservices/PropertyQueryServiceImplTest.java": "c51067da82131631205848989d94abd102185826f81122103510fbbd27628d77",
     "src/test/java/com/hampcoders/electrolink/assets/application/internal/commandservices/ComponentTypeCommandServiceImplTest.java": "58fadd8f3e39d42b022248056dcefe0c122c3216de80e1c7c6f77d6073ece53b",
     "src/test/java/com/hampcoders/electrolink/assets/application/internal/queryservices/ComponentTypeQueryServiceImplTest.java": "cb00722878279b07542639e103d5a33f1feff5321dc81afbb7744589f5f0e507",
     "src/test/resources/com/hampcoders/electrolink/assets/integration/properties.feature": "5bee388af281f316a3dde012068e927f7bed0ebe9470f017da995ec0dde87d16",
-    "src/test/resources/com/hampcoders/electrolink/assets/integration/component-types.feature": "86fd1ed61fd36fe7db5f80d94a145c937cd635c585de7e2d2e14ed38372e6e6a",
-    "src/test/resources/com/hampcoders/electrolink/assets/bdd/properties-bdd.feature": "a72f6c5f3190c4e9671630a10c0e73229db66db9916cf40552c2115462e8da7d",
-    "src/test/resources/com/hampcoders/electrolink/assets/bdd/component-types-bdd.feature": "f281a967b39a8dffbf5d54525e814a972cd599276c727403446c569e8950feaf"
+    "src/test/resources/com/hampcoders/electrolink/assets/integration/component-types.feature": "86fd1ed61fd36fe7db5f80d94a145c937cd635c585de7e2d2e14ed38372e6e6a"
   },
-  "backend_jar_sha256": "4d59800ac62fb783e4ba70f407b08603300c2f9bc3080c35e2cc68e23ee2f80c",
-  "command": ".\\mvnw.cmd \"-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT,AssetsCucumberIT\" test",
-  "scope": "19 isolated unit tests; 13 Karate scenarios and 12 Cucumber acceptance cases against real Spring Boot and PostgreSQL 17.11. Local isolated database, no HTTP mock.",
+  "backend_jar_sha256": "0d149cf510cc2a8e001b2d81f8f111089e11615aa94a33a0bea22bbb236e9d58",
+  "command": ".\\mvnw.cmd \"-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT\" test",
+  "scope": "19 isolated unit tests; 13 Karate scenarios against real Spring Boot and PostgreSQL 17.11. Local isolated database, no HTTP mock.",
   "backend_url": "http://localhost:8091",
   "database": "electrolink_assets_tests (127.0.0.1:55432)",
   "suites": [
@@ -32,37 +28,37 @@
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "seconds": 0.081,
-      "report_modified": "2026-10-09T02:36:47.247Z",
+      "seconds": 0.074,
+      "report_modified": "2026-10-09T05:34:56.802Z",
       "cases": [
         {
           "method": "handleDeletePropertyCommand_whenPropertyExists_returnsTrue",
           "label": "Delete: elimina la propiedad y devuelve true cuando existe",
-          "seconds": 0.063,
+          "seconds": 0.061,
           "status": "passed"
         },
         {
           "method": "handleCreatePropertyCommand_whenCommandIsValid_savesPropertyAndReturnsId",
           "label": "Create: guarda la propiedad y devuelve su identificador",
-          "seconds": 0.006,
+          "seconds": 0.005,
           "status": "passed"
         },
         {
           "method": "handleUpdatePropertyCommand_whenPropertyExists_updatesAndReturnsProperty",
           "label": "Update: actualiza y guarda la propiedad cuando existe",
-          "seconds": 0.004,
+          "seconds": 0.002,
           "status": "passed"
         },
         {
           "method": "handleUpdatePropertyCommand_whenPropertyDoesNotExist_returnsEmpty",
           "label": "Update: devuelve Optional vacío cuando la propiedad no existe",
-          "seconds": 0.003,
+          "seconds": 0.001,
           "status": "passed"
         },
         {
           "method": "handleDeletePropertyCommand_whenPropertyDoesNotExist_returnsFalse",
           "label": "Delete: devuelve false y no elimina cuando la propiedad no existe",
-          "seconds": 0.002,
+          "seconds": 0.001,
           "status": "passed"
         }
       ]
@@ -73,8 +69,8 @@
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "seconds": 0.013,
-      "report_modified": "2026-10-09T02:36:47.278Z",
+      "seconds": 0.012,
+      "report_modified": "2026-10-09T05:34:56.826Z",
       "cases": [
         {
           "method": "handleGetPropertyByIdQuery_whenPropertyDoesNotExist_returnsEmpty",
@@ -85,13 +81,13 @@
         {
           "method": "handleGetPropertyByIdQuery_whenPropertyExists_returnsProperty",
           "label": "GetById: devuelve la propiedad cuando existe",
-          "seconds": 0.003,
+          "seconds": 0.001,
           "status": "passed"
         },
         {
           "method": "handleGetAllPropertiesByOwnerIdQuery_returnsOwnerProperties",
           "label": "GetByOwnerId: devuelve las propiedades del propietario",
-          "seconds": 0.003,
+          "seconds": 0.002,
           "status": "passed"
         },
         {
@@ -108,25 +104,25 @@
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "seconds": 1.395,
-      "report_modified": "2026-10-09T02:36:47.201Z",
+      "seconds": 1.428,
+      "report_modified": "2026-10-09T05:34:56.768Z",
       "cases": [
         {
           "method": "handleDeleteComponentTypeCommand_whenComponentTypeIsInUse_throwsException",
           "label": "Delete: lanza excepción cuando el tipo de componente esta en uso",
-          "seconds": 1.134,
+          "seconds": 1.143,
           "status": "passed"
         },
         {
           "method": "handleDeleteComponentTypeCommand_whenComponentTypeDoesNotExist_returnsFalse",
           "label": "Delete: devuelve false cuando el tipo de componente no existe",
-          "seconds": 0.005,
+          "seconds": 0.007,
           "status": "passed"
         },
         {
           "method": "handleUpdateComponentTypeCommand_whenComponentTypeExists_updatesAndReturnsIt",
           "label": "Update: actualiza y guarda el tipo de componente cuando existe",
-          "seconds": 0.205,
+          "seconds": 0.231,
           "status": "passed"
         },
         {
@@ -138,13 +134,13 @@
         {
           "method": "handleUpdateComponentTypeCommand_whenComponentTypeDoesNotExist_returnsEmpty",
           "label": "Update: devuelve Optional vacío cuando el tipo de componente no existe",
-          "seconds": 0.004,
+          "seconds": 0.003,
           "status": "passed"
         },
         {
           "method": "handleCreateComponentTypeCommand_whenNameIsAvailable_savesAndReturnsId",
           "label": "Create: guarda el tipo de componente y devuelve su identificador",
-          "seconds": 0.006,
+          "seconds": 0.005,
           "status": "passed"
         },
         {
@@ -161,8 +157,8 @@
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "seconds": 0.01,
-      "report_modified": "2026-10-09T02:36:47.258Z",
+      "seconds": 0.007,
+      "report_modified": "2026-10-09T05:34:56.816Z",
       "cases": [
         {
           "method": "handleGetAllComponentTypesQuery_returnsAllComponentTypes",
@@ -173,7 +169,7 @@
         {
           "method": "handleGetComponentTypeByIdQuery_whenComponentTypeExists_returnsComponentType",
           "label": "GetById: devuelve el tipo de componente cuando existe",
-          "seconds": 0.003,
+          "seconds": 0.002,
           "status": "passed"
         },
         {
@@ -193,87 +189,7 @@
     "scenario_passed": 13,
     "scenario_failed": 0,
     "scenario_skipped": 0,
-    "duration_millis": 1349,
+    "duration_millis": 1820,
     "status": "passed"
-  },
-  "cucumber_summary": {
-    "cases": 12,
-    "passed": 12,
-    "failed": 0,
-    "skipped": 0,
-    "scenarios": [
-      {
-        "feature": "Catálogo de tipos de componentes eléctricos",
-        "name": "Registrar un tipo de componente y encontrarlo en el catálogo",
-        "line": 9,
-        "status": "passed"
-      },
-      {
-        "feature": "Catálogo de tipos de componentes eléctricos",
-        "name": "Consultar los tipos de componentes disponibles",
-        "line": 14,
-        "status": "passed"
-      },
-      {
-        "feature": "Catálogo de tipos de componentes eléctricos",
-        "name": "Exigir autenticación para consultar el catálogo",
-        "line": 18,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Registrar una propiedad y consultar sus datos guardados",
-        "line": 9,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Actualizar la ubicación de una propiedad",
-        "line": 14,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Filtrar las propiedades por propietario",
-        "line": 19,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Eliminar definitivamente una propiedad",
-        "line": 24,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Rechazar el registro cuando falta un dato obligatorio",
-        "line": 36,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Rechazar el registro cuando falta un dato obligatorio",
-        "line": 37,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Rechazar el registro cuando falta un dato obligatorio",
-        "line": 38,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Rechazar el registro cuando falta un dato obligatorio",
-        "line": 39,
-        "status": "passed"
-      },
-      {
-        "feature": "Gestión de propiedades del hogar",
-        "name": "Informar que una propiedad no existe",
-        "line": 41,
-        "status": "passed"
-      }
-    ]
   }
 }
