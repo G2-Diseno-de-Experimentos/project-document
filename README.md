@@ -46,6 +46,7 @@
 | Versión | Fecha | Autor(es) | Contenido |
 | :---: | :---: | :--- | :--- |
 | Avance 1 | 16/09/2026 | Ivo Marcelo Machado Bracamonte<br>Leonardo Fabrizzio Junior Prieto Mantari<br>Juan Sung Jau Wang Chen<br>Jorge Manuel Retuerto Rodriguez | Capítulo I: Introducción<br>1.1. Startup Profile<br>1.1.1. Descripción de la Startup<br>1.1.2. Perfiles de integrantes del equipo<br>1.2. Solution Profile<br>1.2.1. Antecedentes y problemática<br>1.2.2. Lean UX Process.<br>1.2.2.1. Lean UX Problem Statements.<br>1.2.2.2. Lean UX Assumptions.<br>1.2.2.3. Lean UX Hypothesis Statements.<br>1.2.2.4. Lean UX Canvas.<br>1.3. Segmentos objetivo.<br>Capítulo II: Requirements Elicitation & Analysis<br>2.1. Competidores.<br>2.1.1. Análisis competitivo.<br>2.1.2. Estrategias y tácticas frente a competidores.<br>2.2. Entrevistas.<br>2.2.1. Diseño de entrevistas.<br>2.2.2. Registro de entrevistas.<br>2.2.3. Análisis de entrevistas.<br>2.3. Needfinding.<br>2.3.1. User Personas.<br>2.3.2. User Task Matrix.<br>2.3.3. User Journey Mapping.<br>2.3.4. Empathy Mapping.<br>2.3.5. As-is Scenario Mapping.<br>2.4. Ubiquitous Language.<br>Capítulo III: Requirements Specification<br>3.1. To-Be Scenario Mapping.<br>3.2. User Stories.<br>3.3. Product Backlog.<br>3.4. Impact Mapping.<br>Avance de Conclusiones, Bibliografía y Anexos.<br>Capítulo IV: Product Design<br>4.1. Style Guidelines.<br>4.1.1. General Style Guidelines.<br>4.1.2. Web Style Guidelines.<br>4.1.3. Mobile Style Guidelines.<br>4.1.3.1. iOS Mobile Style Guidelines.<br>4.1.3.2. Android Mobile Style Guidelines.<br>4.2. Information Architecture.<br>4.2.1. Organization Systems.<br>4.2.2. Labeling Systems.<br>4.2.3. SEO Tags and Meta Tags<br>4.2.4. Searching Systems.<br>4.2.5. Navigation Systems.<br>4.3. Landing Page UI Design.<br>4.3.1. Landing Page Wireframe.<br>4.3.2. Landing Page Mock-up.<br>4.4. Mobile Applications UX/UI Design.<br>4.4.1. Mobile Applications Wireframes.<br>4.4.2. Mobile Applications Wireflow Diagrams.<br>4.4.3. Mobile Applications Mock-ups.<br>4.4.4. Mobile Applications User Flow Diagrams.<br>4.5. Mobile Applications Prototyping.<br>4.5.1. Android Mobile Applications Prototyping.<br>4.5.2. iOS Mobile Applications Prototyping.<br>4.6. Web Applications UX/UI Design.<br>4.6.1. Web Applications Wireframes.<br>4.6.2. Web Applications Wireflow Diagrams.<br>4.6.3. Web Applications Mock-ups.<br>4.6.4. Web Applications User Flow Diagrams.<br>4.7. Web Applications Prototyping.<br>4.8. Domain-Driven Software Architecture.<br>4.8.1. Software Architecture Context Diagram.<br>4.8.2. Software Architecture Container Diagrams.<br>4.8.3. Software Architecture Components Diagrams.<br>4.9. Software Object-Oriented Design.<br>4.9.1. Class Diagrams.<br>4.9.2. Class Dictionary.<br>4.10. Database Design.<br>4.10.1. Relational/Non-Relational Database Diagram.<br>Capítulo V: Product Implementation<br>5.1. Software Configuration Management.<br>5.1.1. Software Development Environment Configuration.<br>5.1.2. Source Code Management.<br>5.1.3. Source Code Style Guide & Conventions.<br>5.1.4. Software Deployment Configuration.<br>5.2. Product Implementation & Deployment.<br>5.2.1. Sprint Backlogs.<br>5.2.2. Implemented Landing Page Evidence<br>5.2.3. Implemented Frontend-Web Application Evidence<br>5.2.4. Implemented Native-Mobile Application Evidence<br>5.2.5. Implemented RESTful API and/or Serverless Backend Evidence<br>5.2.6. RESTful API documentation<br>5.2.7. Team Collaboration Insights<br>5.3. Video About-the-Product.<br>Avance de Conclusiones, Bibliografía y Anexos. |
+| Trabajo Parcial | 16/10/2026 | Ivo Marcelo Machado Bracamonte<br>Leonardo Fabrizzio Junior Prieto Mantari<br>Juan Sung Jau Wang Chen<br>Jorge Manuel Retuerto Rodriguez | Student Outcome 4 (acciones y conclusiones TP)<br>Capítulo III: Requirements Specification<br>3.1. To-Be Scenario Mapping.<br>3.2. User Stories.<br>3.3. Product Backlog.<br>3.4. Impact Mapping.<br>Capítulo V: Product Implementation<br>5.1. Software Configuration Management.<br>5.1.1. Software Development Environment Configuration.<br>5.1.2. Source Code Management.<br>5.1.3. Source Code Style Guide & Conventions.<br>5.1.4. Software Deployment Configuration.<br>5.2. Product Implementation & Deployment.<br>5.2.1. Sprint Backlogs (Sprint Planning 2).<br>5.2.2. Implemented Landing Page Evidence.<br>5.2.3. Implemented Frontend-Web Application Evidence.<br>5.2.5. Implemented Native-Mobile Application Evidence.<br>5.2.6. Implemented RESTful API and/or Serverless Backend Evidence.<br>5.2.7. RESTful API documentation.<br>5.2.8. Team Collaboration Insights.<br>5.3. Video About-the-Product.<br>Capítulo VI: Product Verification & Validation<br>6.1. Testing Suites & Validation<br>6.1.1. Core Entities Unit Tests.<br>6.1.2. Core Integration Tests.<br>6.1.3. Core Behavior-Driven Development.<br>Capítulo VII: DevOps Practices<br>7.1. Continuous Integration<br>7.1.1. Tools and Practices.<br>7.1.2. Build & Test Suite Pipeline Components.<br>Avance de Conclusiones, Bibliografía y Anexos. |
 
 <div style="page-break-after: always;"></div>
 ---
@@ -194,21 +195,26 @@
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Desarrolló y documentó pruebas del bounded context Monitoring con JUnit 5, Mockito y Karate para operaciones de servicio, reportes, fotografías y calificaciones. Verificó el acceso sin JWT y registró con transparencia los fallos encontrados en los escenarios HTTP autenticados, asumiendo la responsabilidad profesional de no presentar como validadas funciones que todavía requieren corrección.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Desarrolló las pruebas unitarias y de integración de Properties y Component Types, reemplazó el servidor HTTP simulado por pruebas contra el backend real, corrigió la eliminación de propiedades y consolidó la planificación del Sprint 2 y las evidencias de SDP en el informe.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Implementó las pruebas unitarias (patrón AAA) y de integración con Karate de Components y Technician Inventory, corrigió tres defectos detectados contra la API real (detalle de stock, stock duplicado y códigos de error) y configuró el pipeline de integración continua en Jenkins con Checkstyle, JUnit y JaCoCo.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Implementó las pruebas unitarias de los servicios de SDP (solicitudes, horarios y servicios), sus escenarios Karate y la prueba de autenticación de IAM, y configuró las dependencias de pruebas del proyecto (JUnit 5, Mockito y Karate).<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> El equipo asumió la responsabilidad profesional de verificar la calidad del backend antes de entregarlo: incorporó pruebas unitarias, de integración y escenarios BDD sobre la API real, corrigió los defectos que estas revelaron o los registró como pendientes cuando aún requerían corrección, y documentó la evidencia de forma trazable, distinguiendo las ejecuciones reales de las validaciones de sintaxis.</p>
             </td>
         </tr>
         <tr style="page-break-inside: avoid;">
@@ -220,21 +226,26 @@
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Evaluó el impacto social y económico de Monitoring al probar el seguimiento de servicios, la trazabilidad de reportes y las calificaciones de técnicos, funciones que pueden ayudar a sustentar reclamos y decisiones de contratación. Definió escenarios para comprobar estados, consultas y acceso autorizado, e identificó límites de integración que deben resolverse antes de confiar en estos resultados para el uso real del sistema.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
+                    - <strong>TP:</strong> Aisló las pruebas en una base de datos local con usuarios y datos únicos y bloqueó las escrituras contra entornos remotos, para no alterar información de usuarios reales en producción (impacto social y económico).<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
+                    - <strong>TP:</strong> Priorizó corregir el stock duplicado y el detalle de inventario, porque un inventario incorrecto afecta la planificación y el costo de materiales del técnico (impacto económico). Además, automatizó la verificación en Jenkins para detectar defectos antes de que lleguen a los usuarios.<br>
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                    - <strong>TP:</strong> Verificó con escenarios de prueba el control de acceso por rol en las solicitudes de servicio, que protege la información de clientes y técnicos frente a usos no autorizados (impacto social).<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo tomó decisiones tecnológicas y estratégicas evaluando su impacto. El sistema diseñado fomenta la formalización del sector eléctrico, aumenta la seguridad en los hogares (impacto social) y genera ingresos sostenibles para técnicos certificados (impacto económico).</p>
+                <p style="font-size: 14px;"><strong>TP:</strong> Al decidir cómo probar y automatizar, el equipo evaluó el impacto de sus decisiones: ejecutar las pruebas en entornos locales aislados protege los datos de los usuarios reales, la integración continua reduce el costo de corregir defectos tardíos y verificar inventario, calificaciones y permisos fortalece la confianza en servicios eléctricos formales (impacto social y económico).</p>
             </td>
         </tr>
     </tbody>
@@ -5656,6 +5667,9 @@ Este procedimiento permite mantener una versión publicada de la Landing Page al
 
 ## 5.2. Product Implementation & Deployment.
 ### 5.2.1. Sprint Backlogs.
+
+#### Sprint Planning 1
+
 | Sprint #       | Sprint 1 | |                                                            |                                                                                                                   |                     |                   |            |
 |----------------|----------|---|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|---------------------|-------------------|------------|
 | **User Story** | | **Work-Item/task** |                                                            |                                                                                                                   |                     |                   |            |
@@ -5666,6 +5680,44 @@ Este procedimiento permite mantener una versión publicada de la Landing Page al
 | **US-13**      | Registro de cuentas como Dueño de Hogar | T001 | Mejorar la visualización del formulario                        | Actualizar la estructura y estilos del formulario de la sección 'Sign up'                                         | 1                   | Jorge Retuerto  | Done       |
 | **US-17**      | Inicio de sesión de usuarios | T001 | Mejorar la visualización del formulario | Actualizar la estructura y estilos del formulario de la sección 'Sign in'                                         | 1                   | Leonardo Prieto | Done       |
 | **TS-13**      | Conectar a Base de Datos | T001 | Desplegar el Backend                                       | Actualizar el despliegue de los servicios web (Backend)                                                           | 1                   | Ivo Machado      | Done       |
+
+#### Sprint Planning 2
+
+El segundo sprint se centra en la verificación del backend de ElectroLink y en la preparación de las evidencias del Capítulo VI. Su objetivo es comprobar las reglas del dominio mediante pruebas unitarias, validar la integración de la API con Karate y expresar los comportamientos esperados mediante escenarios BDD en archivos `.feature`.
+
+El trabajo de 6.1.1 y 6.1.3 comparte los casos de negocio que se desean verificar, pero utiliza enfoques distintos: las pruebas unitarias aíslan entidades y servicios, mientras que los escenarios BDD describen el comportamiento observable. Los reportes de Karate de 6.1.2 y los archivos `.feature` de 6.1.3 son evidencias complementarias de la definición y ejecución de esos escenarios.
+
+| Campo | Detalle |
+|---|---|
+| Sprint | 2 |
+| Sprint Goal | Verificar las reglas y los comportamientos del backend y documentar las evidencias de pruebas correspondientes a 6.1.1, 6.1.2 y 6.1.3. |
+| Equipo | Ivo Machado, Leonardo Prieto, Juan Wang y Jorge Retuerto. |
+| Alcance | Pruebas unitarias, corrección de defectos detectados, pruebas de integración con Karate, escenarios BDD y actualización de evidencias de colaboración. |
+| Fuera del alcance de esta planificación | Core System Tests (6.1.4), análisis estático y prácticas DevOps. |
+
+**Sprint Backlog 2**
+
+Las tareas relacionadas con inventario se vinculan con US-37 y US-38 del Product Backlog. Los identificadores `SP2-Txx` identifican tareas del sprint y no nuevas historias de usuario. Las horas que no constan en el registro del equipo se dejan sin estimación; tampoco se atribuyen responsables individuales sin una asignación confirmada.
+
+| Historia / apartado | Work item | Título | Descripción y entregable | Estimación (horas) | Responsable | Estado |
+|---|---|---|---|---|---|---|
+| US-37 / US-38 · 6.1.1 | SP2-T01 | Verificar entidades y value objects | Comprobar la creación y modificación de componentes, la validez de identificadores y cantidades, y las operaciones de stock del inventario. Evidencia: `ComponentEntitiesTest`. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+| US-37 / US-38 · 6.1.1 | SP2-T02 | Verificar servicios Command y Query | Probar creación, actualización, eliminación y consultas de componentes e inventarios, incluyendo duplicados y recursos inexistentes, con JUnit 5, Mockito y AssertJ. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+| US-38 · 6.1.1 | SP2-T03 | Corregir defectos de actualización de stock | Corregir el valor de retorno de `updateStockItem` y conservar el umbral vigente cuando `newAlertThreshold` es `null`; comprobar los casos afectados con pruebas. | No registrada | Equipo de desarrollo | Done: correcciones documentadas |
+| 6.1.2 | SP2-T04 | Ejecutar pruebas de integración con Karate | Ejecutar los escenarios de la API y recoger los reportes de Karate con las respuestas y verificaciones de los casos evaluados. | No registrada | Equipo de desarrollo | Done: Assets partes 1 y 2 y SDP con reportes Karate ejecutados contra el backend real |
+| 6.1.3 | SP2-T05 | Documentar escenarios BDD | Presentar los archivos `.feature` con sus precondiciones, acciones y resultados esperados, manteniendo correspondencia con los comportamientos de la API verificados en 6.1.2. | No registrada | Equipo de desarrollo | Done: features Gherkin y evidencias Karate de Assets y SDP incorporados |
+| 6.1.1–6.1.3 | SP2-T06 | Consolidar evidencias de validación | Organizar resultados, capturas y archivos de pruebas en sus apartados, diferenciando las pruebas unitarias, los reportes de integración y los escenarios BDD. | No registrada | Equipo de desarrollo | Done: unitarias y evidencias Karate/Gherkin de Assets y SDP incorporadas |
+| 5.2.8 | SP2-T07 | Actualizar insights de colaboración | Incorporar la captura de contribuciones suministrada por el equipo y describir el alcance temporal de las métricas mostradas. | No registrada | Equipo de desarrollo | Done: evidencia incorporada |
+
+**Criterios de finalización del sprint**
+
+- Las pruebas unitarias documentadas se ejecutan sin fallos ni errores; el alcance registrado en 6.1.1 comprende 122 casos: 19 de Properties y Component Types, 51 de Components, Technician Inventory, entidades y manejo de excepciones, 20 de SDP y 32 de Monitoring. Las evidencias corresponden a las ejecuciones de cada parte, no a una ejecución conjunta de toda la suite.
+- Los defectos detectados en la actualización del inventario quedan corregidos y cubiertos por pruebas.
+- Los reportes de Karate permiten identificar los escenarios ejecutados y sus resultados, incluyendo cualquier fallo que requiera seguimiento.
+- Los archivos `.feature` presentados en 6.1.3 verifican comportamientos de la API cubiertos en 6.1.2, con escenarios de aceptación propios para Properties y Component Types.
+- Las evidencias de los tres apartados quedan incorporadas al informe con rutas accesibles y una explicación de su alcance.
+
+La estructura de esta planificación toma como guía la separación entre historias, tareas, descripción, estimación, responsables y estados del [repositorio Docs de G-0X Diseño de Experimentos](https://github.com/G-0X-Diseno-de-Experimentos/Docs), adaptada al trabajo de verificación de ElectroLink.
 
 ### 5.2.2. Implemented Landing Page Evidence
 
@@ -5814,20 +5866,124 @@ Controladores de Inventario de Técnicos, Servicios, Schedules y Requests, mostr
 
 
 ### 5.2.7. RESTful API documentation
+
+En esta sección se documenta la API RESTful del backend de ElectroLink. Para cada controlador se indican el método HTTP, la ruta del endpoint, su descripción funcional y un ejemplo de uso dentro de la plataforma. La documentación interactiva generada con OpenAPI (Swagger) está disponible en `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` y, en un entorno local, en `http://localhost:8091/swagger-ui/index.html`.
+
+**Autenticación:** los endpoints de `/api/v1/authentication/**` y los de `/api/v1/profiles/**` son públicos, salvo `/api/v1/profiles/me`. El resto exige un token JWT en la cabecera `Authorization: Bearer <token>`, que se obtiene con `POST /api/v1/authentication/sign-in`. Las respuestas se envían en formato JSON.
+
+| Método HTTP | Endpoint | Descripción | Ejemplo de uso |
+|---|---|---|---|
+| **Authentication** | | | |
+| POST | `/api/v1/authentication/sign-up` | Registra un nuevo usuario con sus roles | Crear una cuenta de técnico o de dueño de hogar |
+| POST | `/api/v1/authentication/sign-in` | Inicia sesión y devuelve el token JWT | Autenticarse para consumir los endpoints protegidos |
+| **Users** | | | |
+| GET | `/api/v1/users` | Obtiene todos los usuarios | Listar las cuentas registradas |
+| GET | `/api/v1/users/{userId}` | Obtiene un usuario por su identificador | Consultar los roles de un usuario |
+| GET | `/api/v1/users/me` | Obtiene el usuario autenticado | Mostrar los datos de la sesión actual |
+| **Roles** | | | |
+| GET | `/api/v1/roles` | Obtiene los roles disponibles | Elegir el rol durante el registro |
+| **Profiles** | | | |
+| POST | `/api/v1/profiles` | Crea un perfil de dueño de hogar o de técnico | Completar el perfil después del registro |
+| GET | `/api/v1/profiles` | Obtiene todos los perfiles | Listar los perfiles de la plataforma |
+| GET | `/api/v1/profiles/{profileId}` | Obtiene un perfil por su identificador | Ver el perfil de un técnico |
+| GET | `/api/v1/profiles/me` | Obtiene el perfil del usuario autenticado | Cargar el perfil propio al iniciar sesión |
+| GET | `/api/v1/profiles/search` | Busca perfiles por `email`, `role` o `firstName` y `lastName` | Buscar técnicos por rol |
+| PUT | `/api/v1/profiles/{profileId}` | Actualiza un perfil | Modificar la dirección o la certificación |
+| DELETE | `/api/v1/profiles/{profileId}` | Elimina un perfil | Dar de baja un perfil |
+| **Property Management** | | | |
+| GET | `/api/v1/properties` | Obtiene todas las propiedades | Listar los inmuebles registrados |
+| GET | `/api/v1/properties/{propertyId}` | Obtiene una propiedad por su identificador | Ver la dirección de una vivienda |
+| GET | `/api/v1/properties/owner/{ownerId}` | Obtiene las propiedades de un propietario | Mostrar las viviendas de un dueño de hogar |
+| POST | `/api/v1/properties` | Registra una propiedad | Agregar la vivienda que necesita el servicio |
+| PUT | `/api/v1/properties/{propertyId}` | Actualiza una propiedad | Corregir el distrito de una vivienda |
+| DELETE | `/api/v1/properties/{propertyId}` | Elimina una propiedad | Retirar una vivienda que ya no se usa |
+| **Component Types** | | | |
+| GET | `/api/v1/component-types` | Obtiene los tipos de componentes | Clasificar los materiales eléctricos |
+| POST | `/api/v1/component-types` | Registra un tipo de componente | Crear la categoría "Interruptor" |
+| **Component Management** | | | |
+| GET | `/api/v1/components` | Obtiene todos los componentes | Ver el catálogo de componentes eléctricos |
+| GET | `/api/v1/components/{componentId}` | Obtiene un componente por su identificador | Consultar el detalle de un breaker |
+| POST | `/api/v1/components` | Registra un componente (nombre único) | Agregar un componente al catálogo |
+| PUT | `/api/v1/components/{componentId}` | Actualiza el nombre y la descripción de un componente | Corregir la descripción de un cable |
+| DELETE | `/api/v1/components/{componentId}` | Elimina un componente que no esté en ningún stock | Retirar un componente descontinuado |
+| **Technician Inventories** | | | |
+| POST | `/api/v1/technician-inventories` | Crea el inventario del técnico autenticado (se crea automáticamente al registrar el perfil de técnico) | Inicializar el inventario de un técnico |
+| GET | `/api/v1/technician-inventories/technician/{technicianId}` | Obtiene el inventario de un técnico | Revisar los materiales disponibles |
+| GET | `/api/v1/technician-inventories/low-stock` | Obtiene los inventarios con algún componente por debajo de 5 unidades | Alertar al técnico para reponer stock |
+| POST | `/api/v1/technician-inventories/technician/{technicianId}/stocks` | Agrega un componente al stock (suma la cantidad si ya existe) | Registrar la compra de 10 breakers |
+| GET | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Obtiene el detalle de stock de un componente | Consultar cuántas unidades quedan |
+| PUT | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Actualiza la cantidad y el umbral de alerta | Ajustar el stock después de un servicio |
+| DELETE | `/api/v1/technician-inventories/technician/{technicianId}/stocks/{componentId}` | Retira un componente del stock | Quitar un material que ya no se usa |
+| **Services** | | | |
+| GET | `/api/v1/services` | Obtiene el catálogo de servicios | Mostrar los servicios ofrecidos |
+| GET | `/api/v1/services/{serviceId}` | Obtiene un servicio por su identificador | Ver el detalle de un servicio |
+| POST | `/api/v1/services` | Registra un servicio | Publicar un nuevo servicio eléctrico |
+| PUT | `/api/v1/services/{serviceId}` | Actualiza un servicio | Modificar el precio base o la descripción |
+| DELETE | `/api/v1/services/{serviceId}` | Elimina un servicio | Retirar un servicio del catálogo |
+| **Requests** | | | |
+| POST | `/api/v1/requests` | Crea una solicitud de servicio | El dueño de hogar solicita una reparación |
+| GET | `/api/v1/requests/{id}` | Obtiene una solicitud por su identificador | Ver el estado de una solicitud |
+| GET | `/api/v1/requests/clients/{clientId}/requests` | Obtiene las solicitudes de un cliente | Historial de solicitudes del dueño de hogar |
+| PUT | `/api/v1/requests/{id}` | Actualiza una solicitud | Modificar la descripción del problema |
+| DELETE | `/api/v1/requests/{id}` | Elimina una solicitud | Cancelar una solicitud |
+| **Schedules** | | | |
+| POST | `/api/v1/schedules` | Registra un horario de disponibilidad | El técnico publica su disponibilidad |
+| GET | `/api/v1/technicians/{technicianId}/schedules` | Obtiene los horarios de un técnico | Elegir una fecha para el servicio |
+| PUT | `/api/v1/schedules/{scheduleId}` | Actualiza un horario | Cambiar el rango de atención |
+| DELETE | `/api/v1/schedules/{scheduleId}` | Elimina un horario | Retirar un turno no disponible |
+| **Service Operations** | | | |
+| POST | `/api/v1/service-operations` | Crea una operación de servicio para un técnico | Iniciar la atención de una solicitud |
+| GET | `/api/v1/service-operations` | Obtiene todas las operaciones | Supervisar los servicios en curso |
+| GET | `/api/v1/service-operations/{serviceOperationId}` | Obtiene una operación por su identificador | Consultar el estado de una atención |
+| GET | `/api/v1/service-operations/technicians/{technicianId}` | Obtiene las operaciones de un técnico | Ver la agenda de trabajos del técnico |
+| PUT | `/api/v1/service-operations/status` | Actualiza el estado de una operación | Marcar un servicio como completado |
+| **Reports** | | | |
+| POST | `/api/v1/reports` | Registra un reporte de una solicitud | Reportar un incidente durante el servicio |
+| GET | `/api/v1/reports` | Obtiene todos los reportes | Revisar los reportes registrados |
+| GET | `/api/v1/reports/{reportId}` | Obtiene un reporte por su identificador | Ver el detalle de un reporte |
+| GET | `/api/v1/reports/requests/{requestId}` | Obtiene los reportes de una solicitud | Historial de reportes de un servicio |
+| DELETE | `/api/v1/reports/{reportId}` | Elimina un reporte | Retirar un reporte registrado por error |
+| **Report Photos** | | | |
+| POST | `/api/v1/photos` | Adjunta una foto a un reporte | Subir la evidencia de un trabajo realizado |
+| **Ratings** | | | |
+| POST | `/api/v1/ratings` | Registra la calificación de un servicio | El cliente califica al técnico |
+| PUT | `/api/v1/ratings` | Actualiza una calificación | Corregir el puntaje o el comentario |
+| GET | `/api/v1/ratings` | Obtiene todas las calificaciones | Revisar la reputación general |
+| GET | `/api/v1/ratings/{ratingId}` | Obtiene una calificación por su identificador | Ver el detalle de una calificación |
+| GET | `/api/v1/ratings/technicians/{technicianId}` | Obtiene las calificaciones de un técnico | Mostrar la reputación del técnico |
+| GET | `/api/v1/ratings/requests/{requestId}` | Obtiene las calificaciones de una solicitud | Ver la calificación de un servicio concreto |
+| DELETE | `/api/v1/ratings/{ratingId}` | Elimina una calificación | Retirar una calificación indebida |
+
 ### 5.2.8. Team Collaboration Insights
 
-Durante este Sprint, el equipo ha colaborado en el soporte de la Landing Page, Frontend y Backend. Las actividades fueron gestionadas a través de GitHub, permitiendo una trazabilidad clara de los aportes de cada miembro del equipo. Se realizaron tareas de codificación, revisión, organización del repositorio y mejoras visuales y funcionales del producto. Cada miembro del equipo tuvo participación activa, realizando commits, revisando código, y apoyando en la estructura y documentación del proyecto.
+Durante el Sprint 1, el equipo trabajó en la Landing Page, el Frontend y el Backend. Para el Sprint 2, el alcance se orientó a verificar la solución y documentar las pruebas unitarias, las ejecuciones de Karate y los escenarios BDD del Capítulo VI. El historial de GitHub permite consultar los cambios registrados y complementar las evidencias del informe.
+
+#### Contribuciones registradas para la entrega del Sprint 2
+
+![Contribuciones del equipo en GitHub: captura suministrada para la entrega del Sprint 2](assets/img/cap5/team-collaboration-sprint-2.png)
+
+La captura muestra el panel de contribuciones de GitHub con el intervalo indicado del 4 de julio al 3 de octubre de 2026. En los perfiles visibles se registran los siguientes valores:
+
+| Usuario de GitHub | Commits | Líneas añadidas | Líneas eliminadas |
+|---|---:|---:|---:|
+| Wuux1 | 30 | 5 541 | 108 |
+| jwd3t | 14 | 345 | 36 |
+| ivommb11 | 12 | 397 | 38 |
+| Calin1407 | 2 | 15 | 26 |
+| **Total de los perfiles visibles** | **58** | **6 298** | **208** |
+
+Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no exclusivamente las tareas del Sprint 2. La mayor concentración de actividad se observa en septiembre, con aportes adicionales al final del intervalo. El número de commits y las líneas modificadas describen la actividad registrada, pero no permiten determinar por sí solos qué integrante realizó cada prueba, la dificultad de las tareas o su calidad. Los commits posteriores al 3 de octubre no están representados en esta evidencia.
+
+#### Evidencias de los componentes del Sprint 1
 
 - Insights de Landing Page:
 
 <a href="https://ibb.co/20vmC3mP"><img src="https://i.ibb.co/fVkBydBt/i1.png" alt="i1" border="0"></a>
 
 - Insights de Frontend:
-- 
 <a href="https://ibb.co/pjFPWtQN"><img src="https://i.ibb.co/VY4NH7xb/i2.png" alt="i2" border="0"></a>
 
 - Insights de Backend:
-- 
 <a href="https://ibb.co/nN8dCNNy"><img src="https://i.ibb.co/YFTnZFFS/i3.png" alt="i3" border="0"></a>
 
 ## 5.3. Video About-the-Product.
@@ -5853,11 +6009,83 @@ Las pruebas unitarias verifican de forma aislada la lógica de las entidades del
 | Herramienta | Uso |
 |---|---|
 | JUnit 5 | Framework de ejecución de pruebas |
+| JUnit Jupiter Assertions | Aserciones de Properties, Component Types y SDP (`assertEquals`, `assertTrue`, `assertThrows`, entre otras) |
 | Mockito | Mocks de los repositorios JPA (`@Mock`, `@InjectMocks`) |
-| AssertJ | Aserciones legibles (`assertThat`, `assertThatThrownBy`) |
+| AssertJ | Aserciones de Components y Technician Inventory (`assertThat`, `assertThatThrownBy`) |
 | Maven Surefire | Ejecución con `./mvnw test` |
 
 Los repositorios se simulan con Mockito, por lo que las pruebas no requieren base de datos ni levantar el contexto de Spring.
+
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Esta parte corresponde al integrante 1 y verifica los servicios de aplicación Command y Query encargados de administrar propiedades y tipos de componentes. Las pruebas utilizan JUnit Jupiter, `MockitoExtension`, `@Mock`, `@InjectMocks` y el patrón AAA.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `PropertyCommandServiceImpl` | `PropertyCommandServiceImplTest` | 5 |
+| `PropertyQueryServiceImpl` | `PropertyQueryServiceImplTest` | 4 |
+| `ComponentTypeCommandServiceImpl` | `ComponentTypeCommandServiceImplTest` | 7 |
+| `ComponentTypeQueryServiceImpl` | `ComponentTypeQueryServiceImplTest` | 3 |
+| **Total** | | **19** |
+
+Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, sin commit en el momento de la captura. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
+
+**Evidencia de ejecución (IntelliJ IDEA)**
+
+Las siguientes capturas corresponden a ejecuciones reales de cada clase desde IntelliJ IDEA. Muestran el panel **Run**, los casos con checks verdes, el total de pruebas aprobadas y `Process finished with exit code 0`, siguiendo el formato de Assets Parte 2. Se recortó únicamente el panel de resultados, sin modificar su contenido; las capturas completas y los datos de la ejecución se conservan en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
+
+`PropertyCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/IntelliJPropertyCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco casos aprobados de PropertyCommandServiceImplTest y salida 0"/>
+
+`PropertyQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/IntelliJPropertyQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro casos aprobados de PropertyQueryServiceImplTest y salida 0"/>
+
+`ComponentTypeCommandServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/IntelliJComponentTypeCommandServiceImplTest.png" alt="IntelliJ IDEA: siete casos aprobados de ComponentTypeCommandServiceImplTest y salida 0"/>
+
+`ComponentTypeQueryServiceImplTest` — 3 pruebas:
+
+<img src="assets/img/cap6/IntelliJComponentTypeQueryServiceImplTest.png" alt="IntelliJ IDEA: tres casos aprobados de ComponentTypeQueryServiceImplTest y salida 0"/>
+
+**Casos cubiertos**
+
+| Clase | Escenarios verificados |
+|---|---|
+| `PropertyCommandServiceImpl` | Crear una propiedad verifica sus datos y devuelve el identificador; actualizar una existente modifica dirección, región y distrito; actualizar una inexistente devuelve `Optional` vacío y no guarda; Delete elimina una existente mediante `delete`, devuelve `true` y no llama a `save`; si no existe devuelve `false` y no elimina. |
+| `PropertyQueryServiceImpl` | Buscar por id existente e inexistente; listar propiedades por propietario; listar todas las propiedades. |
+| `ComponentTypeCommandServiceImpl` | Crear devuelve el identificador; rechazar nombre duplicado sin guardar; actualizar el nombre de un tipo existente; actualizar uno inexistente devuelve vacío; eliminar un tipo existente no utilizado; devolver `false` si no existe; rechazar la eliminación cuando el tipo está en uso. |
+| `ComponentTypeQueryServiceImpl` | Buscar por id existente e inexistente; listar todos los tipos de componentes. |
+
+**Ejemplo de prueba con el patrón AAA**
+
+```java
+@Test
+@DisplayName("Create: lanza excepción cuando el nombre ya existe")
+void handleCreateComponentTypeCommand_whenNameAlreadyExists_throwsException() {
+    // Arrange
+    var command = new CreateComponentTypeCommand("Interruptor", "Protege el circuito electrico");
+    when(componentTypeRepository.existsByName(command.name())).thenReturn(true);
+
+    // Act
+    var exception = assertThrows(
+            IllegalStateException.class,
+            () -> componentTypeCommandService.handle(command)
+    );
+
+    // Assert
+    assertEquals("Component type with the same name already exists", exception.getMessage());
+    verify(componentTypeRepository, never()).save(any(ComponentType.class));
+}
+```
+
+**Defecto corregido:** `PropertyCommandServiceImpl.handle(DeletePropertyCommand)` guardaba la propiedad sin eliminarla ni desactivarla. Ahora utiliza `propertyRepository.delete(property)`. La prueba unitaria verifica la eliminación y que no se invoque `save`; Karate comprueba que la consulta posterior devuelve `404` contra PostgreSQL real.
+
+**Alcance y límites:** las unitarias verifican las interacciones con repositorios simulados, no la persistencia. La actualización de Component Type comprueba el cambio de nombre, no el cambio de descripción. Las pruebas HTTP de Component Types se limitan a crear y listar, ya que el controlador actual no expone endpoints de actualización o eliminación.
+
+Como evidencia complementaria de una ejecución separada con Maven, se conservan el [resumen HTML de Surefire](assets/evidence/cap6/assets-parte1/unit-tests.html), los [resultados estructurados y datos de esa ejecución](assets/evidence/cap6/assets-parte1/results.json) y los reportes por clase: [Property Command](assets/evidence/cap6/assets-parte1/PropertyCommandServiceImplTest.txt), [Property Query](assets/evidence/cap6/assets-parte1/PropertyQueryServiceImplTest.txt), [Component Type Command](assets/evidence/cap6/assets-parte1/ComponentTypeCommandServiceImplTest.txt) y [Component Type Query](assets/evidence/cap6/assets-parte1/ComponentTypeQueryServiceImplTest.txt). Los tiempos de Maven y de IntelliJ pueden diferir porque son ejecuciones independientes.
 
 #### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
 
@@ -5867,10 +6095,11 @@ Los repositorios se simulan con Mockito, por lo que las pruebas no requieren bas
 | `ComponentQueryServiceImpl` | `ComponentQueryServiceImplTest` | 7 |
 | `TechnicianInventoryCommandServiceImpl` | `TechnicianInventoryCommandServiceImplTest` | 13 |
 | `TechnicianInventoryQueryServiceImpl` | `TechnicianInventoryQueryServiceImplTest` | 6 |
-| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 15 |
-| **Total** | | **47** |
+| `Component`, `ComponentId`, `ComponentStock`, `TechnicianInventory` | `ComponentEntitiesTest` | 16 |
+| `AssetsRestExceptionHandler` | `AssetsRestExceptionHandlerTest` | 3 |
+| **Total** | | **51** |
 
-Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
+Resultado de la ejecución: 51 pruebas, 0 fallos, 0 errores. Las capturas de IntelliJ corresponden a las 47 pruebas iniciales; las 4 pruebas añadidas junto con las correcciones de 6.1.2 (`ComponentEntitiesTest` y `AssetsRestExceptionHandlerTest`) se muestran en la ejecución de Maven que sigue a las capturas.
 
 **Evidencia de ejecución (IntelliJ IDEA)**
 
@@ -5894,6 +6123,10 @@ Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 
 <img src="assets/img/cap6/ComponentEntitiesTest.png"/>
 
+Ejecución con Maven de las 51 pruebas del bounded context, incluidas las 4 añadidas en el Sprint 2:
+
+<img src="assets/img/cap6/assets-unit-tests-sprint2.png"/>
+
 **Casos cubiertos**
 
 | Clase | Escenarios verificados |
@@ -5902,7 +6135,8 @@ Resultado de la ejecución: 47 pruebas, 0 fallos, 0 errores.
 | `ComponentQueryServiceImpl` | Búsqueda por id (existente e inexistente); listar todos; filtrar por tipo; buscar por lista de ids; buscar por nombre aplicando el límite; búsqueda por nombre sin coincidencias. |
 | `TechnicianInventoryCommandServiceImpl` | Crear inventario y rechazar duplicado por técnico; agregar stock (éxito, inventario inexistente, componente inexistente); actualizar stock (éxito, umbral `null`, inventario inexistente, componente fuera del inventario, cantidad negativa); eliminar stock (éxito, componente ausente, inventario inexistente). |
 | `TechnicianInventoryQueryServiceImpl` | Inventario por técnico (existente e inexistente); inventarios con stock bajo (con y sin resultados); detalle de stock de un componente (existente e inexistente). |
-| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock. |
+| Entidades y value objects | `Component` se crea activo, se actualiza y se desactiva; `ComponentId` rechaza `null`, cero y negativos; `ComponentStock` rechaza cantidad y umbral negativos; `TechnicianInventory` agrega, actualiza y quita ítems de stock, y suma la cantidad cuando se agrega un componente que ya está en el inventario. |
+| `AssetsRestExceptionHandler` | `IllegalStateException` → 409, `EntityNotFoundException` → 404 e `IllegalArgumentException` → 400, con el mensaje de la excepción. |
 
 **Ejemplo de prueba con el patrón AAA**
 
@@ -5915,9 +6149,7 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
     when(componentRepository.existsByName("Breaker 20A")).thenReturn(true);
 
     // Act + Assert
-    assertThatThrownBy(() -> service.handle(command))
-            .isInstanceOf(IllegalStateException.class)
-            .hasMessage("Component with the same name already exists");
+    assertThatThrownBy(() -> service.handle(command)).isInstanceOf(IllegalStateException.class).hasMessage("Component with the same name already exists");
     verify(componentRepository, never()).save(any());
 }
 ```
@@ -5929,9 +6161,686 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 - `TechnicianInventory.updateStockItem(...)` actualizaba el stock pero siempre devolvía `false`. Ahora devuelve `true` cuando el componente existe en el inventario y `false` cuando no.
 - Si `UpdateComponentStockCommand.newAlertThreshold` llegaba `null`, se lanzaba `NullPointerException` al convertirlo a `int`. Ahora, cuando es `null`, se conserva el umbral actual (en `TechnicianInventory.updateStockItem` y en `TechnicianInventoryCommandServiceImpl`).
 
+#### Bounded Context Monitoring — Service Operations, Reports, Photos y Ratings
+
+Las pruebas unitarias de Monitoring cubren los cuatro Command Services y los tres Query Services. Utilizan **JUnit Jupiter 5**, **Mockito** y el patrón **Arrange / Act / Assert**; los repositorios y el `EntityManager` se simulan, por lo que esta ejecución no necesita PostgreSQL ni un contexto de Spring.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---:|
+| `ServiceOperationCommandServiceImpl` | `ServiceOperationCommandServiceImplTest` | 5 |
+| `RatingCommandServiceImpl` | `RatingCommandServiceImplTest` | 7 |
+| `ReportCommandServiceImpl` | `ReportCommandServiceImplTest` | 5 |
+| `ReportPhotoCommandServiceImpl` | `ReportPhotoCommandServiceImplTest` | 2 |
+| `ServiceOperationQueryServiceImpl` | `ServiceOperationQueryServiceImplTest` | 4 |
+| `ReportQueryServiceImpl` | `ReportQueryServiceImplTest` | 4 |
+| `RatingQueryServiceImpl` | `RatingQueryServiceImplTest` | 5 |
+| **Total** | | **32** |
+
+**Resultado verificado:** 32 pruebas ejecutadas, 32 aprobadas, 0 fallos, 0 errores y 0 omitidas. El backend evaluado corresponde a la rama [`feature/monitoring-tests`, commit `c4e3b82`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/c4e3b821c145c50c8e00b86921d145ee4146cea1). Los resultados por clase de Maven Surefire se conservan en [assets/evidence/cap6/monitoring](assets/evidence/cap6/monitoring/).
+
+**Casos cubiertos**
+
+| Servicio | Verificaciones |
+|---|---|
+| Service Operation Command | Creación con los datos del comando; cambio a `COMPLETED` con asignación de `completedAt`; cambio a `IN_PROGRESS` sin fecha de finalización; rechazo de una operación inexistente y de un estado desconocido. |
+| Rating Command | Creación para una operación completada; rechazo de operación pendiente o inexistente; actualización de puntuación y comentario; eliminación; rechazo de actualización y eliminación cuando la calificación no existe. |
+| Report Command | Creación cuando existe la operación; rechazo si no existe; eliminación de reporte existente e inexistente; persistencia de la foto asociada al reporte. |
+| Report Photo Command | Asociación de una foto a un reporte existente y rechazo cuando el reporte no existe. |
+| Query Services | Listados generales, búsquedas por ID existente e inexistente, reportes y calificaciones por request, y operaciones y calificaciones por técnico. |
+
+**Evidencia de ejecución (IntelliJ IDEA)**
+
+Las siguientes capturas muestran ejecuciones reales en IntelliJ: **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los resultados originales por clase también están en los archivos Surefire enlazados arriba.
+
+Resumen de los cuatro Command Services (19 pruebas):
+
+<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ: 19 pruebas Command de Monitoring aprobadas"/>
+
+`ServiceOperationCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
+
+`RatingCommandServiceImplTest` — 7 pruebas:
+
+<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
+
+`ReportCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
+
+`ReportPhotoCommandServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
+
+Resumen de los tres Query Services (13 pruebas):
+
+<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ: 13 pruebas Query de Monitoring aprobadas"/>
+
+`ServiceOperationQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
+
+`ReportQueryServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
+
+`RatingQueryServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
+
+**Límite de esta evidencia:** los repositorios simulados permiten comprobar las decisiones de los servicios, pero no prueban la persistencia JPA, los controladores ni las respuestas HTTP. La ejecución de `mvn test` sobre toda la suite devolvió 1 error en la prueba preexistente `ElectrolinkPlatformApplicationTests` porque no estaba definido `DB_URL`; ese error no corresponde a las 32 unitarias de Monitoring.
+
+#### Bounded Context SDP — Requests, Schedules y Services
+
+Se incorporan las pruebas implementadas por **Calin** para los servicios de aplicación Command y Query del bounded context SDP. Utilizan **JUnit Jupiter y Mockito**, con preparación de datos y repositorios simulados, ejecución del servicio y comprobación de resultados e interacciones siguiendo AAA. No levantan Spring Boot ni PostgreSQL.
+
+| Clase bajo prueba | Archivo de pruebas | Casos |
+|---|---|---|
+| `RequestCommandServiceImpl` | `RequestCommandServiceImplTest` | 4 |
+| `RequestQueryServiceImpl` | `RequestQueryServiceImplTest` | 2 |
+| `ScheduleCommandServiceImpl` | `ScheduleCommandServiceImplTest` | 5 |
+| `ScheduleQueryServiceImpl` | `ScheduleQueryServiceImplTest` | 2 |
+| `ServiceCommandServiceImpl` | `ServiceCommandServiceImplTest` | 5 |
+| `ServiceQueryServiceImpl` | `ServiceQueryServiceImplTest` | 2 |
+| **Total SDP** | | **20** |
+
+**Ejecución verificada el 9 de octubre de 2026:** 20 pruebas, 0 fallos, 0 errores y 0 omitidas, sobre `develop` del backend, commit base `a88070e` más los cambios locales de Karate registrados mediante SHA-256. Se ejecutaron las seis clases existentes sin modificar sus pruebas ni el código de negocio.
+
+**Evidencias de ejecución (IntelliJ IDEA)**
+
+Las siguientes capturas se obtuvieron ejecutando las seis clases directamente en IntelliJ IDEA. El panel **Run** muestra cada caso con su check verde, el total aprobado y `Process finished with exit code 0`, con el mismo formato de Assets Parte 2. Solo se recortó el panel, sin alterar resultados; se conservan las imágenes completas en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
+
+`RequestCommandServiceImplTest` — 4 pruebas:
+
+<img src="assets/img/cap6/IntelliJRequestCommandServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de Request Command aprobadas y salida 0"/>
+
+`RequestQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJRequestQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Request Query aprobadas y salida 0"/>
+
+`ScheduleCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/IntelliJScheduleCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de Schedule Command aprobadas y salida 0"/>
+
+`ScheduleQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJScheduleQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Schedule Query aprobadas y salida 0"/>
+
+`ServiceCommandServiceImplTest` — 5 pruebas:
+
+<img src="assets/img/cap6/IntelliJServiceCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de Service Command aprobadas y salida 0"/>
+
+`ServiceQueryServiceImplTest` — 2 pruebas:
+
+<img src="assets/img/cap6/IntelliJServiceQueryServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de Service Query aprobadas y salida 0"/>
+
+**Casos cubiertos y límites**
+
+| Clase | Comportamientos comprobados |
+|---|---|
+| Request Command | Crear guarda y devuelve la solicitud simulada; actualizar una solicitud inexistente lanza excepción y no guarda; eliminar una existente llama a `delete`; eliminar una inexistente lanza excepción y no elimina. |
+| Request Query | Consultar una solicitud existente por id y listar solicitudes por cliente, verificando la consulta al repositorio. |
+| Schedule Command | Crear guarda y devuelve el id; actualizar una existente consulta y guarda; actualizar una inexistente lanza excepción; eliminar una existente llama a `deleteById`; eliminar una inexistente lanza excepción sin borrar. |
+| Schedule Query | Consultar un horario existente por id y listar los horarios de un técnico. |
+| Service Command | Crear guarda y devuelve el id; actualizar una existente invoca `updateFrom` y guarda; actualizar una inexistente lanza excepción y no guarda; eliminar una existente llama a `deleteById`; eliminar una inexistente lanza excepción sin borrar. |
+| Service Query | Consultar un servicio existente por id y listar el catálogo completo. |
+
+No se atribuye cobertura de actualización exitosa de Requests ni de consultas inexistentes o listas vacías a las seis clases: esos casos no están implementados. Las verificaciones con Mockito tampoco demuestran persistencia real ni restricciones de acceso por rol.
+
+**Ejemplo AAA de Query, tomado de la prueba existente**
+
+```java
+@Test
+@DisplayName("handle(FindRequestByIdQuery) should return request when found")
+void handle_FindRequestByIdQuery_ReturnsRequest_WhenFound() {
+    // ARRANGE
+    RequestRepository requestRepository = mock(RequestRepository.class);
+    RequestQueryServiceImpl queryService = new RequestQueryServiceImpl(requestRepository);
+    FindRequestByIdQuery query = mock(FindRequestByIdQuery.class);
+    when(query.requestId()).thenReturn(1L);
+    Request expectedRequest = mock(Request.class);
+    when(requestRepository.findById(1L)).thenReturn(Optional.of(expectedRequest));
+
+    // ACT
+    Optional<Request> result = queryService.handle(query);
+
+    // ASSERT
+    assertTrue(result.isPresent());
+    assertEquals(expectedRequest, result.get());
+    verify(requestRepository, times(1)).findById(1L);
+}
+```
+
+**Reproducción**
+
+Desde el backend, con `JAVA_HOME` configurado:
+
+```powershell
+.\mvnw.cmd "-Dtest=RequestCommandServiceImplTest,RequestQueryServiceImplTest,ScheduleCommandServiceImplTest,ScheduleQueryServiceImplTest,ServiceCommandServiceImplTest,ServiceQueryServiceImplTest" test
+```
+
+Como evidencia complementaria de una ejecución independiente con Maven, se conservan el [resumen HTML de Surefire](assets/evidence/cap6/sdp-calin/unit-tests.html), los [resultados estructurados y hashes de las fuentes](assets/evidence/cap6/sdp-calin/results.json) y los reportes por clase: [Request Command](assets/evidence/cap6/sdp-calin/RequestCommandServiceImplTest.txt), [Request Query](assets/evidence/cap6/sdp-calin/RequestQueryServiceImplTest.txt), [Schedule Command](assets/evidence/cap6/sdp-calin/ScheduleCommandServiceImplTest.txt), [Schedule Query](assets/evidence/cap6/sdp-calin/ScheduleQueryServiceImplTest.txt), [Service Command](assets/evidence/cap6/sdp-calin/ServiceCommandServiceImplTest.txt) y [Service Query](assets/evidence/cap6/sdp-calin/ServiceQueryServiceImplTest.txt). Sus tiempos pueden diferir de las capturas de IntelliJ porque son ejecuciones separadas.
+
+La autoría se verificó en el historial del backend: [3bb4a17 — unitarias de Command](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/3bb4a17) y [1964b8c — unitarias de Query](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/1964b8c). El [generador de evidencias SDP](scripts/generate-sdp-test-evidence.cjs) exporta los resultados existentes; no ejecuta Karate ni realiza peticiones a Render.
+
 ### 6.1.2. Core Integration Tests
 
+Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
+
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Para esta parte se utiliza **Karate 2.1.2**, ejecutado desde JUnit Jupiter mediante `AssetsKarateIT.assetsApiRunsAgainstRealBackend`. Los archivos `.feature` realizan peticiones HTTP contra el backend real y comprueban códigos de estado, estructura JSON y consultas posteriores a las operaciones de escritura.
+
+**Modalidad de ejecución: integración real, sin mock HTTP.** Se inicia el mismo backend Spring Boot del proyecto en `http://localhost:8091`, conectado a PostgreSQL **17.11** y a la base aislada `electrolink_assets_tests` en `127.0.0.1:55432`. Se ejecutan los controladores, servicios y repositorios JPA reales. El runner registra un usuario de prueba con nombre único y obtiene su JWT mediante los endpoints reales de autenticación; no reutiliza contraseñas ni tokens fijos.
+
+Esta evidencia reemplaza la ejecución anterior con mock. Los escenarios crean sus propias propiedades y utilizan los UUID devueltos por la API. Las listas no se comparan con tamaños fijos, y las propiedades de prueba se eliminan por API. Los usuarios y tipos de componentes generados permanecen únicamente en la base de pruebas porque no existen endpoints públicos para limpiarlos; no se modificaron la base habitual del usuario ni Render.
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| Karate 2.1.2 | Peticiones HTTP, verificación de códigos de estado y aserciones sobre JSON |
+| JUnit Jupiter | Ejecución del runner y verificación del resultado de los escenarios |
+| Spring Boot + PostgreSQL 17.11 | Aplicación y persistencia reales |
+| JWT | Autenticación dinámica de las solicitudes de prueba |
+| Maven Surefire | Ejecución del método seleccionado y generación del resultado JUnit |
+| Reporte HTML de Karate | Resumen y detalle de escenarios y pasos ejecutados |
+
+**Resultados de ejecución**
+
+| Feature | Escenarios ejecutados | Aprobados | Fallidos | Omitidos |
+|---|---|---|---|---|
+| `properties.feature` | 10 | 10 | 0 | 0 |
+| `component-types.feature` | 3 | 3 | 0 | 0 |
+| **Total** | **13** | **13** | **0** | **0** |
+
+La ejecución del **9 de octubre de 2026**, sobre el árbol de trabajo registrado en 6.1.1, completó los 13 escenarios mediante HTTP real; no corresponde a un `dryRun`. En la ejecución conjunta de la parte 1, Surefire registra **20 métodos JUnit**: 19 unitarios y un runner Karate. Su reporte interno registra **13 escenarios Karate**. No se afirma que toda la suite del equipo haya sido ejecutada en conjunto.
+
+**Evidencia de ejecución (reporte HTML original de Karate)**
+
+Resumen: dos features aprobados y 13 escenarios aprobados, sin fallidos ni omitidos:
+
+<img src="assets/img/cap6/AssetsKarateSummary.png" alt="Reporte original de Karate: 2 features, 13 escenarios aprobados, 0 fallidos y 0 omitidos"/>
+
+Detalle de `properties.feature` — 10 escenarios:
+
+<img src="assets/img/cap6/AssetsKarateProperties.png" alt="Reporte Karate de Properties con los diez escenarios y sus verificaciones HTTP aprobadas"/>
+
+Detalle de `component-types.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/AssetsKarateComponentTypes.png" alt="Reporte Karate de Component Types con tres escenarios aprobados"/>
+
+**Escenarios verificados contra el backend real**
+
+| Recurso | Escenarios | Respuestas esperadas |
+|---|---|---|
+| Properties — consultas | Listar todas, filtrar por propietario, buscar por UUID generado y buscar un UUID inexistente | `200` y presencia de los datos preparados; `404` para id inexistente |
+| Properties — creación | Crear con datos válidos, volver a consultar y enviar datos obligatorios ausentes | `201`, persistencia comprobada por `GET`; `400` para datos inválidos |
+| Properties — actualización | Actualizar una existente, volver a consultar y actualizar una inexistente | `200` y cambios persistidos; `404` para inexistente |
+| Properties — eliminación | Eliminar una creada por el escenario y eliminar una inexistente | `204`, seguido de `GET 404` para confirmar eliminación efectiva; `404` para inexistente |
+| Component Types | Listar, crear un nombre único y verificarlo en el catálogo, y enviar JSON malformado | `200`, `201` y presencia del registro persistido; `400` para JSON malformado |
+
+**Defectos detectados y corregidos:** además de la eliminación de Properties, las solicitudes inválidas podían terminar en el endpoint de error y devolver `401` en lugar del `400` documentado. Se incorporó `PropertyCatalogRestExceptionHandler`, limitado a `PropertyController` y `ComponentTypeController`, para responder directamente `400` ante errores de validación y JSON malformado. No se deshabilitó la autenticación ni se hicieron públicos los endpoints. No se afirma que el nombre vacío de un Component Type esté validado: ese caso del mock fue reemplazado por una solicitud JSON malformada que la API real sí rechaza.
+
+**Reproducción de la evidencia**
+
+Desde la carpeta del backend, con `JAVA_HOME` apuntando a un JDK compatible, preparar el backend y PostgreSQL aislados con el script incluido (PowerShell 7):
+
+```powershell
+.\scripts\start-assets-local.ps1 -PostgresBin 'D:\PostgreSQL\17\bin'
+.\mvnw.cmd "-Dtest=AssetsKarateIT" test
+```
+
+Con el backend ya iniciado, ejecutar las cuatro clases unitarias y la suite Karate real de esta parte:
+
+```powershell
+.\mvnw.cmd "-Dtest=PropertyCommandServiceImplTest,PropertyQueryServiceImplTest,ComponentTypeCommandServiceImplTest,ComponentTypeQueryServiceImplTest,AssetsKarateIT" test
+```
+
+El reporte se genera en `target/karate-assets-real/karate-summary.html`. `AssetsKarateTest.featureFilesAreValid` solo comprueba sintaxis y utiliza una carpeta distinta (`target/karate-assets-dry-run`), por lo que no reemplaza la evidencia HTTP. Las suites reales se ejecutan explícitamente mediante clases `*IT`: si el backend no está disponible o falla un escenario, el resultado es fallo, no una omisión silenciosa. Para otra URL de pruebas puede utilizarse `-Dassets.baseUrl=http://localhost:8092` o `ASSETS_BASE_URL`.
+
+Se conserva una [copia del reporte HTML de Karate](assets/evidence/cap6/assets-parte1/karate-reports/karate-summary.html) con sus recursos y páginas de detalle, **con los JWT ocultados en la copia publicada**. Para navegarlo, descargar o clonar este repositorio y abrir ese archivo; GitHub muestra su código fuente, no el reporte interactivo. Los [datos de ejecución](assets/evidence/cap6/assets-parte1/results.json) registran el comando, el commit del backend evaluado, los hashes de los archivos y los resultados. También se incluyen los features de [Properties](assets/evidence/cap6/assets-parte1/features/properties.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types.feature). El [generador de capturas](scripts/generate-assets-test-evidence.cjs) exporta los resultados existentes, oculta los JWT y genera las imágenes; no ejecuta las pruebas.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+**Herramientas**
+
+| Herramienta | Uso |
+|---|---|
+| Karate 2.1.2 (`io.karatelabs`) | Peticiones HTTP, aserciones sobre las respuestas y reporte HTML |
+| JUnit 5 | Runner que ejecuta los features (`Runner.path(...).parallel(5)`) |
+| PostgreSQL 16 (Docker) | Base de datos de la aplicación durante las pruebas |
+| Maven Surefire | Ejecución con `./mvnw test` |
+
+**Estrategia de ejecución**
+
+Se sigue el método presentado en clase: la API se levanta por separado en `http://localhost:8091` y los features la llaman mediante la variable `baseUrl` de `karate-config.js`.
+
+1. Base de datos de prueba: `docker run -d --name electrolink-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=electrolink -p 5433:5432 postgres:16-alpine`.
+2. API (con `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y `JWT_SECRET` definidos): `./mvnw spring-boot:run "-Dspring-boot.run.jvmArguments=-Dspring.devtools.restart.enabled=false"`. Se desactiva el reinicio de *devtools* porque, de lo contrario, la API se reinicia cuando Maven recompila las pruebas y los primeros escenarios fallan con *Connection refused*.
+3. Pruebas: `./mvnw test -Dtest=ComponentInventoryKarateTest`. Si la API no responde, el runner omite la prueba en lugar de fallar.
+
+**Organización de los archivos** (`src/test/resources/com/hampcoders/electrolink/assets/integration/`)
+
+| Archivo | Tipo | Propósito |
+|---|---|---|
+| `components.feature` | Feature | 14 escenarios sobre `/api/v1/components` |
+| `technician-inventories.feature` | Feature | 19 escenarios sobre `/api/v1/technician-inventories` |
+| `support/create-technician.feature` | Helper `@ignore` | Registra un usuario `ROLE_TECHNICIAN`, crea su perfil de técnico e inicia sesión; devuelve `token` y `technicianId` |
+| `support/create-user.feature` | Helper `@ignore` | Registra un usuario sin perfil (para el caso 403) |
+| `support/create-component-type.feature` | Helper `@ignore` | Crea un tipo de componente con nombre único |
+| `support/create-component.feature` | Helper `@ignore` | Crea un tipo y un componente con nombre único |
+| `ComponentInventoryKarateTest.java` | Runner JUnit 5 | Ejecuta los dos features en paralelo y genera el reporte HTML |
+
+**Autenticación y datos de prueba**
+
+- El JWT se obtiene por la propia API: sign-up, sign-in y uso del token en la cabecera `Authorization: Bearer`. Es el mismo patrón de los ejemplos del curso: un feature auxiliar `@ignore` invocado con `call`/`callonce`.
+- El inventario se obtiene a partir del email del token, y cada técnico tiene un único inventario. Por eso cada escenario de inventario crea su propio técnico.
+- Los nombres de componentes y los emails llevan un UUID. Así los escenarios son independientes entre sí, se pueden ejecutar en paralelo y se pueden repetir sin limpiar la base de datos.
+
+**Resultados**
+
+Se ejecutaron 2 features y 33 escenarios: 33 aprobados y 0 fallidos. La suite se ejecutó dos veces seguidas sobre la misma base de datos con el mismo resultado.
+
+Reporte HTML de Karate (`target/karate-reports/karate-summary.html`):
+
+<img src="assets/img/cap6/karate-summary.png"/>
+
+Salida de consola de Maven al final de la ejecución:
+
+<img src="assets/img/cap6/karate-maven-console.png"/>
+
+**Evidencia de petición y respuesta**
+
+Nombre de componente duplicado: la API responde `409 Conflict` con el mensaje de la regla de negocio.
+
+<img src="assets/img/cap6/karate-components-duplicate-409.png"/>
+
+Agregar al stock un componente que ya está en el inventario suma la cantidad (10 + 5 = 15) en un único ítem:
+
+<img src="assets/img/cap6/karate-inventory-merge-stock.png"/>
+
+Consulta del detalle de stock de un componente (`GET /technician/{id}/stocks/{componentId}`):
+
+<img src="assets/img/cap6/karate-inventory-stock-detail.png"/>
+
+**Defectos detectados por las pruebas de integración y corregidos**
+
+Estos defectos no aparecían en las pruebas unitarias, porque allí los repositorios están simulados. Solo se manifestaron al ejecutar la API real con PostgreSQL.
+
+| Defecto | Síntoma en la API real | Corrección |
+|---|---|---|
+| La consulta `findByTechnicianInventoryIdAndComponentUid` comparaba el id del inventario (UUID) con el id del técnico (Long) | `GET /technician/{id}/stocks/{componentId}` nunca devolvía el detalle (error de tipos en Hibernate) | Nueva consulta `findByTechnicianIdAndComponentUid`, que filtra por `technicianInventory.technicianId` |
+| `InventoryStockList.addItem` siempre añadía un ítem nuevo | Agregar dos veces el mismo componente creaba dos filas de stock | Si el componente ya está en el inventario se suma la cantidad (`ComponentStock.increaseQuantity`) y se actualiza el umbral |
+| No había manejo de excepciones en los controladores; Spring reenviaba los errores a `/error`, una ruta protegida | Duplicados, recursos inexistentes y validaciones respondían `401 Unauthorized` | `AssetsRestExceptionHandler` (solo para `ComponentController` y `TechnicianInventoryController`) devuelve 409, 404 y 400 con un cuerpo `{"message": ...}` |
+
+**Comportamientos observados**
+
+- Al registrar un perfil con rol `TECHNICIAN`, el bounded context Profiles crea automáticamente el inventario del técnico. Por eso `POST /api/v1/technician-inventories` responde 409 para un técnico registrado, y los escenarios verifican la creación automática.
+- `PUT /api/v1/components/{id}` solo actualiza el nombre y la descripción.
+- Las rutas `/technician/{technicianId}/stocks...` no comprueban que el técnico del path sea el del token; queda registrado como mejora de seguridad pendiente.
+
+**Commits relacionados**
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [7a810e8](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/7a810e8) | fix: find stock item by technician id | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [c9313b6](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/c9313b6) | fix: merge stock when adding a component already in inventory | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [da8773f](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/da8773f) | feat: map component and inventory errors to http status codes | — | 08/10/2026 |
+| G2-Diseno-de-Experimentos/ElectroLink-Backend | feature/assets-karate-integration | [65c673a](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65c673a) | test: add karate integration scenarios for components and technician inventory | — | 08/10/2026 |
+
+#### Bounded Context Monitoring — Service Operations, Reports, Photos y Ratings
+
+Se crearon cuatro archivos Karate 2.1.2 y un runner JUnit específico, `MonitoringKarateTest`, para los endpoints `/api/v1/service-operations`, `/api/v1/reports`, `/api/v1/photos` y `/api/v1/ratings`. La URL se configura con `MONITORING_BASE_URL` o `-Dmonitoring.baseUrl`; el valor predeterminado es `http://localhost:8091`. El JWT se proporciona mediante `MONITORING_JWT` o `-Dmonitoring.jwt`, sin guardarlo en el repositorio. Los escenarios que necesitan datos preexistentes utilizan `MONITORING_REQUEST_ID`, `MONITORING_TECHNICIAN_ID` y `MONITORING_REPORT_ID`.
+
+| Feature | Escenarios definidos | Cobertura prevista |
+|---|---:|---|
+| `service-operations.feature` | 5 | Acceso sin token, listado autenticado, ID inexistente, creación y finalización con `completedAt`, consulta por técnico. |
+| `reports.feature` | 5 | Acceso sin token, listado, ID inexistente, creación/consulta/eliminación y consulta por request. |
+| `photos.feature` | 3 | Acceso sin token, asociación a un reporte y rechazo de reporte inexistente. |
+| `ratings.feature` | 5 | Acceso sin token, listado, ID inexistente, creación/actualización/eliminación y consultas por request y técnico. |
+| **Total** | **18** | |
+
+**Ejecución HTTP real (09/10/2026):** con Spring Boot en `localhost:8091` y PostgreSQL local de pruebas, `MonitoringKarateTest#monitoringEndpoints` ejecutó los cuatro escenarios sin JWT. Los cuatro pasaron y comprobaron `401 Unauthorized` en cada endpoint; Surefire registró 1 método JUnit aprobado, sin errores ni omisiones. El runner también había parseado los cuatro features y sus 18 escenarios con `dryRun`, que no cuenta como ejecución HTTP.
+
+<img src="assets/img/cap6/monitoring/MonitoringKarateSummary.png" alt="Karate Monitoring: cuatro features y cuatro escenarios HTTP sin JWT aprobados"/>
+
+**Detalle de las solicitudes HTTP ejecutadas:**
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-service-operations.png" alt="Karate Service Operations: GET sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-reports.png" alt="Karate Reports: GET sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-photos.png" alt="Karate Photos: POST sin JWT responde 401"/>
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-ratings.png" alt="Karate Ratings: GET sin JWT responde 401"/>
+
+Se conserva el [reporte HTML navegable](assets/evidence/cap6/monitoring/karate-reports/karate-summary.html) y el [resultado Surefire](assets/evidence/cap6/monitoring/MonitoringKarateTest.txt) de esa ejecución. El reporte publicado corresponde solo a los cuatro casos sin token y no contiene JWT. Para reproducirlo con el backend levantado:
+
+```powershell
+.\mvnw.cmd '-Dtest=MonitoringKarateTest#monitoringEndpoints' test
+```
+
+**Alcance pendiente:** se hizo además una ejecución exploratoria con un JWT temporal: 11 escenarios HTTP se ejecutaron, 7 pasaron y 4 fallaron al consultar recursos inexistentes (respuestas `401` o `500` donde se esperaba `404`). Los 7 escenarios con datos preexistentes (`@seeded`) no se ejecutaron en esa corrida. Por ello estas capturas **no** acreditan todavía el flujo autenticado completo ni los 18 escenarios. La lógica de esos errores requiere corrección y una nueva ejecución antes de presentarlos como aprobados.
+
+#### Bounded Context SDP — Requests, Schedules y Services
+
+Calin implementó originalmente tres features Karate en el commit [073f348](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/073f348). Para unificar el entorno con Assets se adaptaron esos mismos archivos al **backend Spring Boot real en `http://localhost:8091`**, conectado a PostgreSQL **17.11** y a la base aislada `electrolink_assets_tests` en `127.0.0.1:55432`. No se usa Render ni un mock HTTP en esta ejecución.
+
+**Configuración y preparación**
+
+`SdpKarateIT.sdpRunsAgainstRealLocalBackend` ejecuta únicamente los tres features SDP, con sesiones creadas mediante los endpoints reales de registro e inicio de sesión. `SdpApiSupport` prepara los registros por HTTP: servicios con nombres únicos, horarios y solicitudes; para Requests crea también su propiedad y servicio asociados. Cada escenario utiliza los ids devueltos por la API, sin depender de cuentas o registros preexistentes.
+
+Los fixtures Java comprueban los códigos de creación y devuelven los ids/payloads a Karate. Los features realizan GET, PUT y DELETE reales y comprueban las consultas posteriores. El runner limpia en `finally` solamente las solicitudes, horarios, servicios y propiedades creados por esta ejecución, incluso ante un fallo. Las cuentas de prueba permanecen en la base aislada porque no existe endpoint para eliminarlas.
+
+| Feature | Escenarios ejecutados | Verificaciones |
+|---|---|---|
+| [request.feature](assets/evidence/cap6/sdp-calin/features/request.feature) | 3 | Registro real `201` en preparación; consulta por id y cliente `200`; actualización y eliminación `200`, seguida de consulta `404`; consulta sin token `401`. |
+| [schedules.feature](assets/evidence/cap6/sdp-calin/features/schedules.feature) | 3 | Registro real `200` en preparación; consulta por técnico `200` con día y horas; actualización `200` y valores persistidos; eliminación `200` y ausencia en la lista; consulta sin token `401`. |
+| [services.feature](assets/evidence/cap6/sdp-calin/features/services.feature) | 3 | Registro real `200` en preparación; consulta por id y catálogo `200`; actualización `200` con nombre/precio persistidos; eliminación `200` seguida de consulta `404`; consulta sin token `401`. |
+| **Total SDP** | **9** | **9 aprobados, 0 fallidos y 0 omitidos** |
+
+**Resultado de ejecución real — 9 de octubre de 2026**
+
+<img src="assets/img/cap6/SdpKarateSummary.png" alt="Resumen Karate SDP: nueve escenarios aprobados contra el backend real local"/>
+
+Requests:
+
+<img src="assets/img/cap6/SdpKarateRequests.png" alt="Tres escenarios de Requests ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+Schedules:
+
+<img src="assets/img/cap6/SdpKarateSchedules.png" alt="Tres escenarios de Schedules ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+Services:
+
+<img src="assets/img/cap6/SdpKarateServices.png" alt="Tres escenarios de Services ejecutados contra Spring Boot y PostgreSQL reales"/>
+
+**Adaptaciones y límites del contrato**
+
+- La URL ya no está fija a Render: se obtiene de `sdp.baseUrl`, con valor por defecto local y opción `SDP_BASE_URL`. Las escrituras remotas están bloqueadas salvo autorización explícita.
+- La consulta por cliente utiliza la ruta del controlador: `/api/v1/requests/clients/{clientId}/requests`.
+- Los horarios incluyen `day` y horas `HH:mm`; las solicitudes y servicios envían los objetos completos que requiere el contrato actual.
+- Se sustituyeron los supuestos rechazos por rol por tres pruebas de **acceso sin autenticación**. El backend revisado exige token para SDP, pero no implementa las restricciones Homeowner/Técnico asumidas anteriormente. No se modificó su seguridad para hacer pasar los escenarios.
+- No se cambiaron controladores, entidades ni reglas de negocio de SDP. La preparación y la limpieza también usan la API real; no se sustituyen los servicios por mocks.
+
+**Reproducción**
+
+Con el mismo entorno local real de Assets ya iniciado:
+
+```powershell
+.\scripts\start-assets-local.ps1 -PostgresBin 'D:\PostgreSQL\17\bin'
+.\mvnw.cmd "-Dtest=SdpKarateIT" test
+```
+
+Si el backend ya está funcionando, ejecutar solo la segunda línea. `SdpKarateTest` comprueba sintaxis con `dryRun` en una carpeta diferente, pero no sustituye esta evidencia HTTP. El runner general `ElectrolinkPlatformApplicationTests` no prepara las sesiones y fixtures específicos; se utiliza `SdpKarateIT` para aislar SDP.
+
+El reporte real se genera en `target/karate-sdp-real/karate-summary.html`. Se incluye una [copia HTML con sus recursos](assets/evidence/cap6/sdp-calin/karate-reports/karate-summary.html), con los JWT ocultados, el [reporte del runner](assets/evidence/cap6/sdp-calin/SdpKarateIT.txt) y los [resultados estructurados con hashes de las fuentes](assets/evidence/cap6/sdp-calin/results.json). Para navegar el HTML hay que abrirlo desde una copia local del repositorio.
+
+La verificación conjunta de SDP registró 23 métodos JUnit: 20 unitarios, un runner Karate real y dos comprobaciones de sintaxis (`SdpKarateTest` y `AssetsKarateTest`). Solo el reporte `karate-sdp-real` acredita los nueve escenarios HTTP; las comprobaciones de sintaxis no se suman como integración ejecutada.
+
 ### 6.1.3. Core Behavior-Driven Development
+
+Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Assets y SDP presentan sus features Karate y las evidencias de esa misma ejecución. Las especificaciones combinan nombres en inglés para Assets y en español para SDP.
+
+#### Bounded Context Assets — Parte 1 (Properties y Component Types)
+
+Los mismos archivos `properties.feature` y `component-types.feature` ejecutados en 6.1.2 expresan el comportamiento esperado mediante **Gherkin y Karate**. Se sigue el formato de Components y Technician Inventory: features, escenarios Given / When / Then y capturas del reporte Karate. No se utiliza una suite Cucumber independiente para este entregable.
+
+**Precondiciones:** `AssetsKarateIT` registra un usuario único y obtiene un JWT real. El `Background` configura la URL y la autenticación; los escenarios preparan sus propios registros, usan los UUID devueltos por la API y comprueban las consecuencias mediante consultas posteriores.
+
+| Feature | Comportamientos expresados | Casos ejecutados |
+|---|---|---|
+| Properties | Consultar todas y por propietario; buscar existentes e inexistentes; registrar, validar datos obligatorios, actualizar y eliminar con comprobación de persistencia | 10 |
+| Component Types | Consultar el catálogo, registrar un nombre único y rechazar JSON malformado | 3 |
+| **Total** | **Los mismos escenarios Karate de 6.1.2, no una ejecución adicional** | **13 aprobados** |
+
+**Ejemplo literal del feature de Properties**
+
+```gherkin
+Scenario: Delete an existing property and confirm that it cannot be retrieved
+  * def created = createProperty()
+  Given path '/api/v1/properties', created.property.id
+  When method delete
+  Then status 204
+  Given path '/api/v1/properties', created.property.id
+  When method get
+  Then status 404
+```
+
+La preparación crea una propiedad real; `When` solicita su eliminación y `Then` comprueba `204` y posteriormente `404`. El escenario expresa la eliminación efectiva, no solamente el código de DELETE.
+
+**Ejemplo literal del feature de Component Types**
+
+```gherkin
+Scenario: Create a uniquely named component type and verify it in the catalog
+  * def name = 'Assets-Karate-' + java.util.UUID.randomUUID()
+  * def payload = { name: '#(name)', description: 'Tipo creado por pruebas reales de Assets' }
+  Given path '/api/v1/component-types'
+  And request payload
+  When method post
+  Then status 201
+  And match response contains { componentTypeId: '#number', name: '#(name)', description: '#(payload.description)' }
+  * def created = response
+  Given path '/api/v1/component-types'
+  When method get
+  Then status 200
+  And match response contains created
+```
+
+**Evidencia: escenarios ejecutados en el reporte de Karate**
+
+`properties.feature` — 10 escenarios aprobados:
+
+<img src="assets/img/cap6/AssetsKarateProperties.png" alt="Feature Karate de Properties: diez escenarios ejecutados y aprobados"/>
+
+`component-types.feature` — 3 escenarios aprobados:
+
+<img src="assets/img/cap6/AssetsKarateComponentTypes.png" alt="Feature Karate de Component Types: tres escenarios ejecutados y aprobados"/>
+
+Los [features de Properties](assets/evidence/cap6/assets-parte1/features/properties.feature) y [Component Types](assets/evidence/cap6/assets-parte1/features/component-types.feature) y la [copia del reporte Karate](assets/evidence/cap6/assets-parte1/karate-reports/karate-summary.html), con JWT ocultos, corresponden a la ejecución real del **9 de octubre de 2026** documentada en 6.1.2. Las limitaciones del contrato HTTP y los datos de trazabilidad de ese apartado también se aplican aquí.
+
+#### Bounded Context Assets — Parte 2 (Components y Technician Inventory)
+
+**Relación entre escenarios y User Stories**
+
+| User Story | Feature | Escenarios |
+|---|---|---|
+| US-31 Crear componente eléctrico | `components.feature` | Ciclo de vida completo (Outline × 2), listado, nombre duplicado (409), datos inválidos (Outline × 3, 400), sin token (401) |
+| US-32 Editar componente eléctrico | `components.feature` | Actualización en el ciclo de vida, nombre vacío (400), componente inexistente (404), id no positivo (400) |
+| US-33 Eliminar componente eléctrico | `components.feature` | Eliminación en el ciclo de vida, componente inexistente (404), componente en uso en un stock (409) |
+| US-37 Registro de inventario de componentes | `technician-inventories.feature` | Inventario creado al registrar el perfil técnico, inventario duplicado (409), usuario sin perfil (403), técnico inexistente (404), agregar componente, sumar cantidad, datos inválidos (Outline × 2), componente o técnico inexistente (Outline × 2), detalle de stock, quitar componente, sin token (401) |
+| US-38 Actualización de stock de componentes | `technician-inventories.feature` | Actualizar cantidad y umbral, componente fuera del inventario (404), cantidad negativa (400) |
+| US-39 Alertas de stock mínimo | `technician-inventories.feature` | El inventario aparece en `/low-stock` con cantidad menor a 5 y no aparece con stock suficiente |
+
+**Ejemplo: escenario con datos (Scenario Outline) — `components.feature`**
+
+```gherkin
+Scenario Outline: Manage the full life cycle of a component - <name>
+  * def compName = '<name> ' + uid
+  Given path '/api/v1/components'
+  And header Authorization = 'Bearer ' + token
+  And request { name: '#(compName)', description: '<description>', componentTypeId: '#(type.componentTypeId)', isActive: true }
+  When method post
+  Then status 201
+  And match response.id == '#string'
+  And match response.isActive == true
+  * def componentId = response.id
+
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  When method get
+  Then status 200
+  And match response.name == compName
+
+  * def updatedName = '<name> updated ' + uid
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  And request { name: '#(updatedName)', description: 'Updated description' }
+  When method put
+  Then status 200
+  And match response.name == updatedName
+
+  Given path '/api/v1/components', componentId
+  And header Authorization = 'Bearer ' + token
+  When method delete
+  Then status 204
+
+  Examples:
+    | name    | description                  |
+    | Breaker | Thermomagnetic breaker 2x20A |
+    | Cable   | Copper cable 12 AWG          |
+```
+
+**Ejemplo: regla de negocio de stock mínimo — `technician-inventories.feature`**
+
+```gherkin
+Background:
+  * url baseUrl
+  * def tech = call read('classpath:com/hampcoders/electrolink/assets/integration/support/create-technician.feature')
+  * def token = tech.token
+  * def technicianId = tech.technicianId
+  * def created = call read('classpath:com/hampcoders/electrolink/assets/integration/support/create-component.feature') { token: '#(token)' }
+  * def componentId = created.componentId
+
+Scenario: List the inventory among low stock inventories
+  Given path '/api/v1/technician-inventories/technician', technicianId, 'stocks'
+  And header Authorization = 'Bearer ' + token
+  And request { componentId: '#(componentId)', quantity: 10, alertThreshold: 3 }
+  When method post
+  Then status 200
+  * def inventoryId = response.inventoryId
+
+  Given path '/api/v1/technician-inventories/technician', technicianId, 'stocks', componentId
+  And header Authorization = 'Bearer ' + token
+  And request { newQuantity: 2, newAlertThreshold: 3 }
+  When method put
+  Then status 200
+
+  Given path '/api/v1/technician-inventories/low-stock'
+  And header Authorization = 'Bearer ' + token
+  When method get
+  Then status 200
+  And match response[*].inventoryId contains inventoryId
+```
+
+**Evidencia: escenarios ejecutados en el reporte de Karate**
+
+`components.feature`:
+
+<img src="assets/img/cap6/karate-components-feature.png"/>
+
+`technician-inventories.feature`:
+
+<img src="assets/img/cap6/karate-inventory-feature.png"/>
+
+Los archivos completos están en el repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/tree/feature/assets-karate-integration/src/test/resources/com/hampcoders/electrolink/assets/integration), rama `feature/assets-karate-integration`.
+
+#### Bounded Context Monitoring — escenarios Gherkin con Karate
+
+Los cuatro archivos `.feature` de Monitoring describen el comportamiento de Service Operations, Reports, Photos y Ratings mediante `Feature`, `Background`, `Scenario` y pasos `Given / When / Then`. Son los mismos archivos usados por `MonitoringKarateTest` en 6.1.2; este apartado documenta la especificación BDD y no suma una segunda ejecución.
+
+**Precondiciones:** el `Background` configura `baseUrl`, cuyo valor predeterminado es `http://localhost:8091`. Los escenarios `@auth` requieren un JWT suministrado mediante `MONITORING_JWT` o `-Dmonitoring.jwt`; los marcados además con `@seeded` requieren IDs de request, técnico y reporte preparados en la base de pruebas. Ninguna credencial ni token se incluye en estos archivos.
+
+| Feature | Escenarios definidos | Comportamientos descritos | HTTP aprobado |
+|---|---:|---|---:|
+| [`service-operations.feature`](assets/evidence/cap6/monitoring/features/service-operations.feature) | 5 | Acceso sin JWT, listado, ID inexistente, creación y transición a `COMPLETED` con `completedAt`, consulta por técnico | 1 (`401`) |
+| [`reports.feature`](assets/evidence/cap6/monitoring/features/reports.feature) | 5 | Acceso sin JWT, listado, ID inexistente, creación/consulta/eliminación y búsqueda por request | 1 (`401`) |
+| [`photos.feature`](assets/evidence/cap6/monitoring/features/photos.feature) | 3 | Rechazo sin JWT, asociación de foto a reporte y reporte inexistente | 1 (`401`) |
+| [`ratings.feature`](assets/evidence/cap6/monitoring/features/ratings.feature) | 5 | Acceso sin JWT, listado, ID inexistente, ciclo de creación/actualización/eliminación para una operación completada y búsquedas por request y técnico | 1 (`401`) |
+| **Total** | **18** | **Los mismos escenarios Karate descritos en 6.1.2** | **4 aprobados** |
+
+**Ejemplo literal ejecutado — acceso sin JWT en `photos.feature`:**
+
+```gherkin
+Scenario: Reject a photo creation without a token
+  Given path '/api/v1/photos'
+  And request { reportId: 1, url: 'https://example.org/photo.jpg' }
+  When method post
+  Then status 401
+```
+
+El escenario envía un `POST` real sin cabecera `Authorization` y exige `401`. Es uno de los cuatro casos aprobados en la ejecución HTTP de 6.1.2.
+
+**Ejemplo literal especificado — finalización en `service-operations.feature`:**
+
+```gherkin
+@auth @seeded
+Scenario: Create and complete a service operation
+  Given path '/api/v1/service-operations'
+  And header Authorization = 'Bearer ' + jwt
+  And request { technicianId: '#(technicianId)' }
+  When method post
+  Then status 201
+  * def operationId = response
+  Given path '/api/v1/service-operations/status'
+  And header Authorization = 'Bearer ' + jwt
+  And request { requestId: '#(operationId)', newStatus: 'COMPLETED' }
+  When method put
+  Then status 204
+  Given path '/api/v1/service-operations', operationId
+  And header Authorization = 'Bearer ' + jwt
+  When method get
+  Then status 200
+  And match response.currentStatus == 'COMPLETED'
+  And match response.completedAt == '#notnull'
+```
+
+Este escenario especifica la creación, el cambio de estado y la consulta posterior que debería mostrar `completedAt`. Está validado como sintaxis Gherkin, pero **no forma parte de los cuatro escenarios HTTP aprobados**. Lo mismo ocurre con los ciclos de Reports, Photos y Ratings marcados `@seeded`.
+
+**Evidencia de los cuatro features en el reporte Karate:** cada captura siguiente muestra el único escenario HTTP aprobado sin JWT de su archivo; no representa la aprobación de los demás escenarios definidos.
+
+`service-operations.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-service-operations.png" alt="Feature de Service Operations: escenario sin JWT aprobado con respuesta 401"/>
+
+`reports.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-reports.png" alt="Feature de Reports: escenario sin JWT aprobado con respuesta 401"/>
+
+`photos.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-photos.png" alt="Feature de Photos: escenario sin JWT aprobado con respuesta 401"/>
+
+`ratings.feature`:
+
+<img src="assets/img/cap6/monitoring/MonitoringKarate-ratings.png" alt="Feature de Ratings: escenario sin JWT aprobado con respuesta 401"/>
+
+Se conservan los cuatro `.feature` completos en este repositorio y la [copia del reporte HTML Karate](assets/evidence/cap6/monitoring/karate-reports/karate-summary.html). El `dryRun` reconoció los 18 escenarios; la ejecución HTTP aprobada cubrió cuatro. La ejecución exploratoria autenticada tuvo fallos, detallados en 6.1.2, y no se presenta aquí como resultado aprobado.
+
+#### Bounded Context SDP — Escenarios Gherkin con Karate
+
+Como en Components y Technician Inventory, los mismos features de 6.1.2 actúan como especificaciones ejecutables del comportamiento esperado. Se presentan sus escenarios **Given / When / Then** y las evidencias del reporte Karate; no se utiliza Cucumber ni se contabiliza una segunda ejecución distinta.
+
+Ejemplo literal de Requests:
+
+```gherkin
+Scenario: Rechazar la consulta de solicitudes sin autenticación
+  * configure headers = {}
+  Given path 'api/v1/requests/clients', sdpSession.clientId, 'requests'
+  When method get
+  Then status 401
+```
+
+La precondición elimina la cabecera de autenticación, `Given` define la consulta real por cliente, `When` la ejecuta y `Then` exige el rechazo sin token. A diferencia de las expectativas iniciales por rol, este comportamiento corresponde a la seguridad implementada y fue ejecutado con éxito.
+
+Los otros escenarios expresan registro y consulta, actualización persistida y eliminación verificable de solicitudes, horarios y servicios. Sus precondiciones se preparan por HTTP real y utilizan identificadores propios, sin depender de registros compartidos de Render.
+
+**Evidencia: features ejecutados en el reporte de Karate**
+
+`request.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateRequests.png" alt="Escenarios Gherkin de Requests aprobados en Karate"/>
+
+`schedules.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateSchedules.png" alt="Escenarios Gherkin de Schedules aprobados en Karate"/>
+
+`services.feature` — 3 escenarios:
+
+<img src="assets/img/cap6/SdpKarateServices.png" alt="Escenarios Gherkin de Services aprobados en Karate"/>
+
+Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin/features/request.feature), [Schedules](assets/evidence/cap6/sdp-calin/features/schedules.feature) y [Services](assets/evidence/cap6/sdp-calin/features/services.feature) y la [copia del reporte Karate](assets/evidence/cap6/sdp-calin/karate-reports/karate-summary.html), correspondientes a los **nueve escenarios aprobados** del **9 de octubre de 2026**. El alcance, la preparación, la limpieza y los hashes de 6.1.2 se aplican también a este apartado.
 
 ### 6.1.4. Core System Tests
 
@@ -5941,9 +6850,157 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 
 ## 7.1. Continuous Integration
 
+La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada ejecución descarga el código de la rama `develop`, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto se identifica antes de integrarse al producto.
+
 ### 7.1.1. Tools and Practices
 
+**Herramientas**
+
+| Herramienta | Versión | Uso en el pipeline |
+|---|---|---|
+| **Jenkins** | 2.580.1 LTS (imagen Docker `jenkins/jenkins:lts-jdk21`) | Servidor de integración continua: ejecuta el pipeline, muestra cada etapa y publica los resultados |
+| **Docker** | Docker Desktop | Ejecuta Jenkins en un contenedor aislado, con el volumen `jenkins_home` para conservar la configuración y el historial |
+| **Git y GitHub** | Git 2.47 | Control de versiones; Jenkins obtiene el código del repositorio público mediante *Checkout SCM* |
+| **Apache Maven** | 3.9.16 (`MAVEN_3_9`, instalación automática) | Compilación, ejecución de pruebas, análisis y empaquetado del proyecto |
+| **JDK** | Temurin 21 (`JDK_21`) | Misma versión de Java definida en el `pom.xml` (`java.version` 21) y en el `Dockerfile` de despliegue |
+| **Pipeline Maven Integration** | Plugin de Jenkins | Paso `withMaven`, que configura Maven y el JDK en cada etapa |
+| **Checkstyle** | maven-checkstyle-plugin 3.6.0 (reglas `google_checks.xml`) | Verificación de las convenciones de código Java |
+| **JUnit 5, Mockito y AssertJ** | JUnit 5, Mockito 5.19 | Pruebas unitarias de entidades y servicios de los bounded contexts |
+| **JaCoCo** | jacoco-maven-plugin 0.8.15 | Medición de la cobertura de líneas y validación de un mínimo de 30 % |
+| **JUnit plugin** | Plugin de Jenkins | Publicación del reporte de pruebas de cada build |
+
+**Prácticas aplicadas**
+
+| Práctica | Cómo se aplica |
+|---|---|
+| **Pipeline as Code** | El flujo está versionado en el `Jenkinsfile` del repositorio, junto al código fuente, y se cambia mediante commits y GitFlow como cualquier otro archivo. |
+| **Integración sobre la rama compartida** | El job *Pipeline script from SCM* construye la rama `develop`, a la que se integran las ramas `feature/*` del equipo. |
+| **Builds limpios y reproducibles** | La primera etapa ejecuta `mvn clean`, y las herramientas se instalan con versiones fijas en *Tools* (`MAVEN_3_9` y `JDK_21`). |
+| **Aislamiento de etapas** | Cada validación es una etapa independiente, de modo que un fallo indica exactamente qué falló: compilación, estilo, pruebas o cobertura. |
+| **Detener la línea ante fallos** | Si una etapa falla, las siguientes no se ejecutan y el build queda en rojo. |
+| **Separación entre pruebas unitarias y de integración** | En la etapa de pruebas solo se ejecutan las pruebas unitarias, que usan mocks y no requieren servicios externos. Las pruebas de integración (clases `*IT` y el runner global de Karate) necesitan la API y PostgreSQL en ejecución, por lo que se ejecutan fuera del pipeline (sección 6.1.2). |
+| **Umbral de calidad** | JaCoCo exige al menos 30 % de cobertura de líneas; si la cobertura baja de ese valor, el build falla. |
+| **Publicación de evidencias** | El bloque `post` publica el reporte de JUnit y archiva el reporte de cobertura, el resultado de Checkstyle y el `.jar` generado. |
+| **Ejecución del pipeline** | Los builds se lanzan con *Construir ahora* después de integrar cambios en `develop`. Jenkins se ejecuta en un entorno local, por lo que no recibe webhooks de GitHub. |
+
 ### 7.1.2. Build & Test Suite Pipeline Components
+
+El job `ElectroLink-Backend` es de tipo *Pipeline* y obtiene el `Jenkinsfile` desde el repositorio (*Pipeline script from SCM*), sobre la rama `*/develop`:
+
+<img src="assets/img/cap7/jenkins-job-configuration.jpg" width="700"/>
+
+**Definición del pipeline (`Jenkinsfile`)**
+
+```groovy
+pipeline {
+  agent any
+
+  tools {
+    maven 'MAVEN_3_9'
+    jdk 'JDK_21'
+  }
+
+  environment {
+    // Tests that need a running backend are not part of the unit test stage:
+    // the whole Karate suite runner and the *IT integration classes
+    TEST_FILTER = '!ElectrolinkPlatformApplicationTests,!*IT'
+  }
+
+  stages {
+    stage('Compile Project') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B clean compile'
+        }
+      }
+    }
+
+    stage('Validate Checkstyle') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B checkstyle:check'
+        }
+      }
+    }
+
+    stage('Validate Unit Tests') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B test -Dtest="$TEST_FILTER"'
+        }
+      }
+    }
+
+    stage('Validate Test Coverage') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B jacoco:report jacoco:check'
+        }
+      }
+    }
+
+    stage('Package Project') {
+      steps {
+        withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+          sh 'mvn -B package -DskipTests'
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+      archiveArtifacts artifacts: 'target/site/jacoco/**, target/checkstyle-result.xml', allowEmptyArchive: true
+    }
+    success {
+      archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+    }
+  }
+}
+```
+
+**Resumen de la ejecución**
+
+El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 segundos con resultado exitoso. Las ocho etapas del pipeline se completaron en verde:
+
+<img src="assets/img/cap7/jenkins-stages-overview.jpg" width="700"/>
+
+<img src="assets/img/cap7/jenkins-build-summary.jpg" width="700"/>
+
+**Checkout SCM:** obtiene el código de `develop` desde GitHub y registra la revisión construida (`ff8c798`).
+
+<img src="assets/img/cap7/jenkins-stage-1-checkout.jpg" width="700"/>
+
+**Tool Install:** prepara las herramientas configuradas en Jenkins, Maven (`MAVEN_3_9`) y JDK 21 (`JDK_21`), junto con sus variables de entorno.
+
+<img src="assets/img/cap7/jenkins-stage-2-tool-install.jpg" width="700"/>
+
+**Compile Project:** ejecuta `mvn clean compile`, elimina los artefactos anteriores y compila los 317 archivos fuente con `release 21`. La etapa termina con `BUILD SUCCESS`.
+
+<img src="assets/img/cap7/jenkins-stage-3-compile.jpg" width="700"/>
+
+**Validate Checkstyle:** ejecuta `mvn checkstyle:check` con las reglas de Google. El build solo se detiene ante violaciones de severidad *error*. En esta ejecución no hubo ninguna (`You have 0 Checkstyle violations`), y las 2474 advertencias de estilo quedaron registradas en `checkstyle-result.xml` como oportunidades de mejora.
+
+<img src="assets/img/cap7/jenkins-stage-4-checkstyle.jpg" width="700"/>
+
+**Validate Unit Tests:** ejecuta las pruebas unitarias de los bounded contexts Assets, Monitoring y SDP. Resultado: **127 pruebas, 0 fallos, 0 errores y 2 omitidas**. Las dos omitidas son los runners de Karate de integración, que se detienen solos cuando no hay una API en ejecución.
+
+<img src="assets/img/cap7/jenkins-stage-5-unit-tests.jpg" width="700"/>
+
+**Validate Test Coverage:** genera el reporte de JaCoCo y valida la regla de cobertura (`All coverage checks have been met`). La cobertura de líneas es de 31,2 % (628 de 2011 líneas), por encima del mínimo de 30 % configurado en el `pom.xml`.
+
+<img src="assets/img/cap7/jenkins-stage-6-coverage.jpg" width="700"/>
+
+**Package Project:** ejecuta `mvn package -DskipTests` y genera el ejecutable `service-platform-parent-0.0.1-SNAPSHOT.jar`, empaquetado por Spring Boot. Las pruebas se omiten en esta etapa porque ya se validaron antes.
+
+<img src="assets/img/cap7/jenkins-stage-7-package.jpg" width="700"/>
+
+**Post Actions:** publica el reporte de JUnit y archiva los artefactos del build: el reporte de cobertura, el resultado de Checkstyle y el `.jar`. El reporte de pruebas de Jenkins confirma las 127 pruebas, agrupadas por paquete:
+
+<img src="assets/img/cap7/jenkins-test-results.jpg" width="700"/>
+
+<img src="assets/img/cap7/jenkins-artifacts.jpg" width="700"/>
 
 ## 7.2. Continuous Delivery
 
@@ -5964,6 +7021,8 @@ void createComponent_whenNameExists_throwsIllegalStateException() {
 - El desarrollo del proyecto **ElectroLink** demostró la efectividad de integrar el enfoque Lean UX con un riguroso proceso de investigación y análisis de requerimientos. Esto permitió comprender las necesidades críticas del sector eléctrico y consolidar una propuesta de valor sólida que promueve la formalización de servicios, aporta seguridad a los usuarios y genera nuevas oportunidades de negocio para los técnicos certificados.
 - La definición arquitectónica orientada a servicios y fundamentada en Domain-Driven Design (DDD) asegura una plataforma modular, robusta y escalable. Esta organización facilita el desacoplamiento de responsabilidades y garantiza una integración ordenada y mantenible entre las aplicaciones frontend, las aplicaciones móviles y los microservicios backend.
 - La implementación y despliegue de los componentes iniciales (Landing Page, flujos principales del Frontend y endpoints RESTful del Backend) comprueba la viabilidad técnica y operativa del producto. Asimismo, el establecimiento de buenas prácticas de control de versiones y gestión ágil del Product Backlog sienta las directrices necesarias para sostener un ciclo de desarrollo continuo, trazable y enfocado en entregar una solución de alto impacto.
+- La verificación del backend mediante pruebas unitarias con JUnit 5 y Mockito, pruebas de integración con Karate contra la API real y escenarios de comportamiento escritos en Gherkin permitió validar las reglas de negocio de los bounded contexts y detectar defectos que las pruebas aisladas no revelaban, como errores de consulta y de persistencia del inventario. Estos defectos se corrigieron antes de su integración.
+- La implementación de un pipeline de integración continua en Jenkins, que compila, valida el estilo con Checkstyle, ejecuta las pruebas unitarias, controla la cobertura con JaCoCo y empaqueta la aplicación, automatiza la verificación de cada cambio integrado en `develop`. Así se reduce el riesgo de entregar defectos y se sienta la base para las prácticas de entrega y despliegue continuo de las siguientes etapas.
 
 # Bibliografía
 

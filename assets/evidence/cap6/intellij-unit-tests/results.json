@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "captureMethod": "Native Windows screenshots of the IntelliJ IDEA JUnit Run panel, cropped without changing the content.",
+  "ide": "IntelliJ IDEA 2026.2.1",
+  "javaVersion": "OpenJDK 26.0.2.1",
+  "backendBranch": "develop",
+  "backendBaseCommit": "a88070e1bc6d19072c6b64bf96a7c9bad3c70e44",
+  "workingTree": "Includes uncommitted changes; the tested unit-test source hashes are recorded per capture.",
+  "executionScope": "Each class was executed independently in IntelliJ; durations are independent from the supplementary Maven reports.",
+  "testsPassed": 39,
+  "testsTotal": 39,
+  "assetsPart1Tests": 19,
+  "sdpTests": 20,
+  "captures": [
+    {
+      "class": "PropertyCommandServiceImplTest",
+      "testsPassed": 5,
+      "testsTotal": 5,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:52:23.199Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/PropertyCommandServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJPropertyCommandServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/assets/application/internal/commandservices/PropertyCommandServiceImplTest.java",
+      "sourceSha256": "86bab501c8346d8a517fb17e5c511575575c7ce7b31300bf53353c11553bdc79",
+      "fullScreenshotSha256": "2a97756d50245b165f8b7cf8670fd42cf8ef8c19ee5a15099d7d347b01ce4b4d"
+    },
+    {
+      "class": "PropertyQueryServiceImplTest",
+      "testsPassed": 4,
+      "testsTotal": 4,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:53:33.436Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/PropertyQueryServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJPropertyQueryServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/assets/application/internal/queryservices/PropertyQueryServiceImplTest.java",
+      "sourceSha256": "c51067da82131631205848989d94abd102185826f81122103510fbbd27628d77",
+      "fullScreenshotSha256": "2bb362c05a2b9344513d9abca1006a1797dccf6c7ac13df58463dc02d493ba04"
+    },
+    {
+      "class": "ComponentTypeCommandServiceImplTest",
+      "testsPassed": 7,
+      "testsTotal": 7,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:54:22.934Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ComponentTypeCommandServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJComponentTypeCommandServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/assets/application/internal/commandservices/ComponentTypeCommandServiceImplTest.java",
+      "sourceSha256": "58fadd8f3e39d42b022248056dcefe0c122c3216de80e1c7c6f77d6073ece53b",
+      "fullScreenshotSha256": "471c5c8ee0dfa550a06214736d266a02c77006b5b79604c90ced6cfb18bd571a"
+    },
+    {
+      "class": "ComponentTypeQueryServiceImplTest",
+      "testsPassed": 3,
+      "testsTotal": 3,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:55:09.777Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ComponentTypeQueryServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJComponentTypeQueryServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/assets/application/internal/queryservices/ComponentTypeQueryServiceImplTest.java",
+      "sourceSha256": "cb00722878279b07542639e103d5a33f1feff5321dc81afbb7744589f5f0e507",
+      "fullScreenshotSha256": "7e0cb49e8c53ae5d0f9ebef9fde242fb4dbd329815336f9556b9625f4a5359a4"
+    },
+    {
+      "class": "RequestCommandServiceImplTest",
+      "testsPassed": 4,
+      "testsTotal": 4,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:56:32.197Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/RequestCommandServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJRequestCommandServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/RequestCommandServiceImplTest.java",
+      "sourceSha256": "19f10655cb0bf95a7d2eb0c0bdca1c717fe8779a73c3dfe4578b3dd1764ee72c",
+      "fullScreenshotSha256": "35b37bbef1433ce109978344af3cc83becc2f26673f9437db5e055d7a4e23e54"
+    },
+    {
+      "class": "RequestQueryServiceImplTest",
+      "testsPassed": 2,
+      "testsTotal": 2,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:57:52.990Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/RequestQueryServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJRequestQueryServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/RequestQueryServiceImplTest.java",
+      "sourceSha256": "9724ae70129162e882b4dd2db6fae8d6bd8b3e42de043616bd428e088b09b7e5",
+      "fullScreenshotSha256": "988904e932e2b5dd21861dc55dc6f6448527658029b4fcbd536f36a9155d1d52"
+    },
+    {
+      "class": "ScheduleCommandServiceImplTest",
+      "testsPassed": 5,
+      "testsTotal": 5,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T06:59:24.792Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ScheduleCommandServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJScheduleCommandServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "previousAttempt": {
+        "exitCode": 1,
+        "message": "Test framework quit unexpectedly: java.lang.ClassCircularityError before discovery; unchanged rerun passed."
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ScheduleCommandServiceImplTest.java",
+      "sourceSha256": "66fd5c0dd2fb88cb47d74612fa08a1254ca5c3be76a2e1e97b3a0904d629007c",
+      "fullScreenshotSha256": "c871c94298aa3282a445d895e43c653a4049e0dec93eb89f62a51963eb9d141c"
+    },
+    {
+      "class": "ScheduleQueryServiceImplTest",
+      "testsPassed": 2,
+      "testsTotal": 2,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T07:00:27.496Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ScheduleQueryServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJScheduleQueryServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ScheduleQueryServiceImplTest.java",
+      "sourceSha256": "61a48460c1a5525a1aab3cbbde0e03d8bfa8c866221cfb5618a25aed518b54e2",
+      "fullScreenshotSha256": "1013de0b92d843c917846dcab4d3cb5c3cd697974fbdad5a39eddc94d96f7fb3"
+    },
+    {
+      "class": "ServiceCommandServiceImplTest",
+      "testsPassed": 5,
+      "testsTotal": 5,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T07:01:31.815Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ServiceCommandServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJServiceCommandServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ServiceCommandServiceImplTest.java",
+      "sourceSha256": "db4e95f87f943fab4364178db12d729d8229060b3ed2fc05fbe3aebd378c45ab",
+      "fullScreenshotSha256": "01231b17a5c3fca907dec222fb292d7f648d6a58d9e051296e9ebd0c8dd0185b"
+    },
+    {
+      "class": "ServiceQueryServiceImplTest",
+      "testsPassed": 2,
+      "testsTotal": 2,
+      "exitCode": 0,
+      "capturedAt": "2026-10-09T07:05:19.731Z",
+      "screenshotId": "screenshot-0",
+      "fullScreenshot": "assets/evidence/cap6/intellij-unit-tests/ServiceQueryServiceImplTest.png",
+      "reportScreenshot": "assets/img/cap6/IntelliJServiceQueryServiceImplTest.png",
+      "crop": {
+        "left": 42,
+        "top": 418,
+        "width": 1830,
+        "height": 350
+      },
+      "sourceFile": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ServiceQueryServiceImplTest.java",
+      "sourceSha256": "71fbaf3a223dd955ea352d7687835665e85b72ea329f25ebddf47cdf7c09f56e",
+      "fullScreenshotSha256": "c3128a8a0505b6867bcedf3a28cb27c862c8812be6c841b1929032db8e8fbe1a"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "repository": "ElectroLink-Backend",
+  "branch": "develop",
+  "commit": "a88070e1bc6d19072c6b64bf96a7c9bad3c70e44",
+  "working_tree_modified": true,
+  "author_reviewed": "Calin",
+  "backend_jar_sha256": "0d149cf510cc2a8e001b2d81f8f111089e11615aa94a33a0bea22bbb236e9d58",
+  "command": ".\\mvnw.cmd \"-Dtest=RequestCommandServiceImplTest,RequestQueryServiceImplTest,ScheduleCommandServiceImplTest,ScheduleQueryServiceImplTest,ServiceCommandServiceImplTest,ServiceQueryServiceImplTest,SdpKarateIT,SdpKarateTest,AssetsKarateTest\" test",
+  "unit_tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "RequestCommandServiceImplTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:06.986Z",
+      "surefire_xml_sha256": "f71db18c01de7545fcf8bddff951047ce0b083be745a23624a2e7dcb0036e2d5",
+      "cases": [
+        {
+          "name": "handle_CreateRequestCommand_MustReturnAndSaveRequest",
+          "label": "handle(CreateRequestCommand) must return and save the created Request",
+          "seconds": 1.484,
+          "status": "passed"
+        },
+        {
+          "name": "handle_UpdateRequestCommand_MustThrowException_WhenRequestNotExist",
+          "label": "handle(UpdateRequestCommand) must throw IllegalArgumentException when request doesn't exist",
+          "seconds": 0.06,
+          "status": "passed"
+        },
+        {
+          "name": "handle_DeleteRequestCommand_MustThrowException_WhenNotExist",
+          "label": "handle(DeleteRequestCommand) must be throw IllegalArgumentException when request doesn't exist",
+          "seconds": 0.03,
+          "status": "passed"
+        },
+        {
+          "name": "handle_DeleteRequestCommand_MustDelete_WhenExist",
+          "label": "handle(DeleteRequestCommand) must delete request when exits",
+          "seconds": 0.003,
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "RequestQueryServiceImplTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:07.909Z",
+      "surefire_xml_sha256": "f935fd5bbf9fcdd16bd16840b880208f43bf9dd83a8c8c25f3d1363daafe8863",
+      "cases": [
+        {
+          "name": "handle_FindRequestByIdQuery_ReturnsRequest_WhenFound",
+          "label": "handle(FindRequestByIdQuery) should return request when found",
+          "seconds": 0.141,
+          "status": "passed"
+        },
+        {
+          "name": "handle_FindRequestsByClientIdQuery_ReturnsList",
+          "label": "handle(FindRequestsByClientIdQuery) should return list of requests for client",
+          "seconds": 0.059,
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "ScheduleCommandServiceImplTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:07.083Z",
+      "surefire_xml_sha256": "60435cd8fc08ec6f5d92171fd10563d90584170640704b2f0aeb565c63a682d8",
+      "cases": [
+        {
+          "name": "handle_DeleteScheduleCommand_MustThrowException_WhenNotExist",
+          "label": "handle(DeleteScheduleCommand) must be throw IllegalArgumentException when Schedule not exist",
+          "seconds": 0.065,
+          "status": "passed"
+        },
+        {
+          "name": "handle_CreateScheduleCommand_MustReturnAndSaveSchedule",
+          "label": "handle(CreateScheduleCommand) must be save and return the Schedule created",
+          "seconds": 0.031,
+          "status": "passed"
+        },
+        {
+          "name": "handle_UpdateScheduleCommand_MustThrowException_WhenNotExist",
+          "label": "handle(UpdateScheduleCommand) must be throw IllegalArgumentException when Schedule doesn't exist",
+          "seconds": 0.005,
+          "status": "passed"
+        },
+        {
+          "name": "handle_DeleteScheduleCommand_MustDelete_WhenExist",
+          "label": "handle(DeleteScheduleCommand) must be delete Schedule when exist",
+          "seconds": 0.001,
+          "status": "passed"
+        },
+        {
+          "name": "handle_UpdateScheduleCommand_MustUpdateAndReturn_WhenExist",
+          "label": "handle(UpdateScheduleCommand) must be return and update Schedule when already Exists",
+          "seconds": 0.002,
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "ScheduleQueryServiceImplTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:08.010Z",
+      "surefire_xml_sha256": "c21f44a12ad40c983df564a645e31bdcbdcbec73e6075bf07af61fb1a1e4c566",
+      "cases": [
+        {
+          "name": "handle_FindScheduleByIdQuery_ReturnsSchedule_WhenFound",
+          "label": "handle(FindScheduleByIdQuery) should return schedule when found",
+          "seconds": 0.047,
+          "status": "passed"
+        },
+        {
+          "name": "handle_FindSchedulesByTechnicianIdQuery_ReturnsList",
+          "label": "handle(FindSchedulesByTechnicianIdQuery) should return list of schedules for technician",
+          "seconds": 0.044,
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "ServiceCommandServiceImplTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:07.725Z",
+      "surefire_xml_sha256": "e0368e3a759b9db9f06a65043d168624cf96bc5527068d9d49c774f7c9c68ea3",
+      "cases": [
+        {
+          "name": "handle_CreateServiceCommand_Success",
+          "label": "handle(CreateServiceCommand) should save entity and return ID when command is valid",
+          "seconds": 0.446,
+          "status": "passed"
+        },
+        {
+          "name": "handle_DeleteServiceCommand_Success",
+          "label": "handle(DeleteServiceCommand) should delete service when it exists",
+          "seconds": 0.013,
+          "status": "passed"
+        },
+        {
+          "name": "handle_UpdateServiceCommand_ThrowsException_WhenNotExist",
+          "label": "handle(UpdateServiceCommand) should throw IllegalArgumentException when service does not exist",
+          "seconds": 0.009,
+          "status": "passed"
+        },
+        {
+          "name": "handle_DeleteServiceCommand_ThrowsException_WhenNotExist",
+          "label": "handle(DeleteServiceCommand) should throw IllegalArgumentException when service does not exist",
+          "seconds": 0.015,
+          "status": "passed"
+        },
+        {
+          "name": "handle_UpdateServiceCommand_Success",
+          "label": "handle(UpdateServiceCommand) should update and save entity when service exists",
+          "seconds": 0.042,
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "name": "ServiceQueryServiceImplTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "report_modified": "2026-10-09T05:35:08.099Z",
+      "surefire_xml_sha256": "14a6f457f8d48e0b796535253017e63028de4bc08e5deb4613245529cd379e28",
+      "cases": [
+        {
+          "name": "handle_FindServiceByIdQuery_ReturnsService_WhenFound",
+          "label": "handle(FindServiceByIdQuery) should return service when found",
+          "seconds": 0.048,
+          "status": "passed"
+        },
+        {
+          "name": "handle_GetAllServicesQuery_ReturnsAllServices",
+          "label": "handle(GetAllServicesQuery) should return all services",
+          "seconds": 0.031,
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/RequestCommandServiceImplTest.java": "19f10655cb0bf95a7d2eb0c0bdca1c717fe8779a73c3dfe4578b3dd1764ee72c",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/RequestCommandServiceImpl.java": "d3ecd6753f69a6be1360638cf18f3abccca7123ab7015a99ae67f26438f928ba",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/RequestQueryServiceImplTest.java": "9724ae70129162e882b4dd2db6fae8d6bd8b3e42de043616bd428e088b09b7e5",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/RequestQueryServiceImpl.java": "5341659c42f2d76ff9e1673d405d604cc5991975f453ae6571e93fe71b0b4544",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ScheduleCommandServiceImplTest.java": "66fd5c0dd2fb88cb47d74612fa08a1254ca5c3be76a2e1e97b3a0904d629007c",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ScheduleCommandServiceImpl.java": "c18017b78d55af69f8a39cbd86671629537831516d8c9966dd925cad694b9fc5",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ScheduleQueryServiceImplTest.java": "61a48460c1a5525a1aab3cbbde0e03d8bfa8c866221cfb5618a25aed518b54e2",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ScheduleQueryServiceImpl.java": "dac81641fd4ebe1fa73ed5e994e289e89bff25011f8e31f721049f887f5c2dbc",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ServiceCommandServiceImplTest.java": "db4e95f87f943fab4364178db12d729d8229060b3ed2fc05fbe3aebd378c45ab",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/commandservices/ServiceCommandServiceImpl.java": "327c7e46b887059a5f7538052731484275e1e14706bba0dc3771441d5e039f15",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ServiceQueryServiceImplTest.java": "71fbaf3a223dd955ea352d7687835665e85b72ea329f25ebddf47cdf7c09f56e",
+    "src/main/java/com/hampcoders/electrolink/sdp/application/internal/queryservices/ServiceQueryServiceImpl.java": "ff9b14e142d54ed8d3a45f7a9862a184e51b31a750737560b71c781182cfa401",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/request.feature": "e842adc898c50b0adadd6d39e5279c0527cd639b85387d723c4ada5ed0686a84",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/schedules.feature": "4dcbf2357136f9048a059e486fbe50566df31eb557da7362b14376e55ef5bf54",
+    "src/test/java/com/hampcoders/electrolink/sdp/application/internal/services.feature": "7485d0f1193c8b659018fa6c0baf7810cf2dd797f24ab5cbdd97692b0d1a7beb",
+    "pom.xml": "aa20981bf6465c5de37165bb715382266a6cb0deb22045fb70cf04b88aebc3e1",
+    "src/test/java/com/hampcoders/electrolink/sdp/integration/SdpApiSupport.java": "174ae2902f8a8609ac1d5c4c9a8ed39b81703bb4570db01658d0231c13924dd8",
+    "src/test/java/com/hampcoders/electrolink/sdp/integration/SdpKarateIT.java": "a4ca7a5b806328ef56952ee21076fb05910401371519aecee25c0c6a61117e36",
+    "src/test/java/com/hampcoders/electrolink/assets/testing/AssetsApiSupport.java": "8f9bccf2c440e3b50475ab35322f0660ca9a4ab21d336923951dcc516107ef09"
+  },
+  "karate": {
+    "implemented_features": 3,
+    "implemented_scenarios": 9,
+    "execution_status": "passed",
+    "backend_url": "http://localhost:8091",
+    "database": "electrolink_assets_tests (127.0.0.1:55432)",
+    "summary": {
+      "feature_count": 3,
+      "feature_passed": 3,
+      "feature_failed": 0,
+      "scenario_count": 9,
+      "scenario_passed": 9,
+      "scenario_failed": 0,
+      "scenario_skipped": 0,
+      "duration_millis": 1089,
+      "status": "passed"
+    },
+    "features": [
+      {
+        "file": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/request.feature",
+        "author_commit": "073f3487417b370e01d776b333c792aa8af7a034 | Calin | test(sdp): implemented test to request, schedules & services.",
+        "scenarios": [
+          "Registrar una solicitud y encontrarla por id y cliente",
+          "Actualizar y eliminar una solicitud con persistencia comprobada",
+          "Rechazar la consulta de solicitudes sin autenticación"
+        ],
+        "review_status": "executed_passed",
+        "adapted_in_working_tree": true,
+        "configured_backend": "http://localhost:8091"
+      },
+      {
+        "file": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/schedules.feature",
+        "author_commit": "073f3487417b370e01d776b333c792aa8af7a034 | Calin | test(sdp): implemented test to request, schedules & services.",
+        "scenarios": [
+          "Registrar un horario y consultarlo por técnico",
+          "Actualizar un horario y confirmar su eliminación",
+          "Rechazar la consulta de horarios sin autenticación"
+        ],
+        "review_status": "executed_passed",
+        "adapted_in_working_tree": true,
+        "configured_backend": "http://localhost:8091"
+      },
+      {
+        "file": "src/test/java/com/hampcoders/electrolink/sdp/application/internal/services.feature",
+        "author_commit": "073f3487417b370e01d776b333c792aa8af7a034 | Calin | test(sdp): implemented test to request, schedules & services.",
+        "scenarios": [
+          "Registrar un servicio y encontrarlo por id y en el catálogo",
+          "Actualizar un servicio y comprobar que fue eliminado",
+          "Rechazar la consulta del catálogo sin autenticación"
+        ],
+        "review_status": "executed_passed",
+        "adapted_in_working_tree": true,
+        "configured_backend": "http://localhost:8091"
+      }
+    ]
+  }
+}
