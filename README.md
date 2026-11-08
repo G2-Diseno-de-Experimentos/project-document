@@ -7032,7 +7032,7 @@ El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 
 
 ## 7.2. Continuous Delivery
 
-La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. Cada cambio que se integra en `develop` pasa por las validaciones automáticas del pipeline de Jenkins (sección 7.1) y produce un artefacto verificado. La decisión de llevar ese artefacto a producción es **manual**: consiste en integrar `develop` en `main` siguiendo GitFlow.
+La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. Cada cambio que se integra en `develop` pasa por las validaciones automáticas del pipeline de Jenkins (sección 7.1), que además construye la imagen Docker de la versión y se detiene para que el equipo la apruebe como candidata a liberación. Llevar esa versión a producción sigue siendo una decisión **manual**: consiste en integrar `develop` en `main` siguiendo GitFlow.
 
 ### 7.2.1. Tools and Practices
 
@@ -7040,9 +7040,10 @@ La entrega continua mantiene el backend de ElectroLink en un estado siempre desp
 
 | Herramienta | Uso en la entrega |
 |---|---|
-| **Jenkins** | Ejecuta las etapas de compilación, estilo, pruebas, cobertura y empaquetado sobre `develop`, y archiva los resultados de cada build. |
+| **Jenkins** | Ejecuta las etapas de compilación, estilo, pruebas, cobertura y empaquetado sobre `develop`, construye la imagen Docker y espera la aprobación manual de la versión (paso `input`). |
 | **Apache Maven** | Genera el ejecutable `service-platform-parent-0.0.1-SNAPSHOT.jar` (Spring Boot) en la etapa *Package Project*. |
-| **Docker (`Dockerfile`)** | Empaquetado reproducible en dos etapas: una imagen `maven:3.9.9-eclipse-temurin-21` compila el proyecto y una imagen `eclipse-temurin:21-jre` ejecuta el `.jar`. Expone el puerto 10000. |
+| **Docker (`Dockerfile`)** | Empaquetado reproducible en dos etapas: una imagen `maven:3.9.9-eclipse-temurin-21` compila el proyecto y una imagen `eclipse-temurin:21-jre` ejecuta el `.jar`. Expone el puerto 10000. Es el mismo archivo que usa Render. |
+| **Imagen de Jenkins con Docker (`ci/jenkins/Dockerfile`)** | Parte de `jenkins/jenkins:lts-jdk21` y agrega el cliente Docker y `buildx`. El contenedor de Jenkins usa el Docker del equipo a través del socket (`docs/JENKINS.md`). |
 | **Git, GitHub y GitFlow** | Las ramas `feature/*` se integran en `develop`, y `main` solo recibe cambios desde `develop`. Los commits siguen *Conventional Commits*. |
 | **Karate** | Suite de integración contra la API real y PostgreSQL local aislado (sección 6.1.2). Se ejecuta aparte del pipeline, antes de liberar. |
 | **Swagger UI (springdoc)** | Verificación manual de la API desplegada en `/swagger-ui/index.html`. |
@@ -7052,29 +7053,55 @@ La entrega continua mantiene el backend de ElectroLink en un estado siempre desp
 | Práctica | Cómo se aplica |
 |---|---|
 | **Artefacto verificado y trazable** | El `.jar` solo se archiva cuando todas las etapas anteriores terminan en verde, y se registra con *fingerprint* asociado al build y al commit. |
-| **Empaquetado definido en el repositorio** | El `Dockerfile` está versionado junto al código, de modo que cualquier entorno construye la misma imagen. |
+| **Empaquetado definido en el repositorio** | El `Dockerfile` está versionado junto al código, de modo que Jenkins y Render construyen la imagen con la misma receta. |
+| **Imagen versionada y trazable** | Cada build genera `electrolink-backend:<número de build>` y `electrolink-backend:latest`, con la etiqueta `org.opencontainers.image.revision` igual al commit construido. |
 | **Configuración fuera del código** | La aplicación lee la base de datos, el secreto JWT, el puerto y los orígenes CORS desde variables de entorno (`DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`, `PORT`, `CORS_ALLOWED_ORIGINS`). El mismo artefacto sirve para entornos locales y de producción. |
 | **Integración validada antes de liberar** | Las pruebas Karate se ejecutan contra una instancia real del backend con PostgreSQL aislado antes de integrar en `main`. No se ejecutan contra la base de producción. |
-| **Aprobación manual** | Llevar un cambio a producción requiere integrar `develop` en `main`. Solo se hace cuando el último build de `develop` está en verde. |
+| **Aprobación manual** | La etapa *Approve Delivery* detiene el pipeline hasta que un integrante aprueba la versión (máximo 30 minutos; si nadie responde, el build se aborta). Al aprobarla, la imagen se etiqueta como `electrolink-backend:release-candidate`. Llevarla a producción requiere además integrar `develop` en `main`. |
 | **Reversión controlada** | Si un cambio falla en producción, se revierte el *merge* en `main` con `git revert` y se vuelve a publicar. |
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
-El recorrido de un cambio, desde que se escribe hasta que queda listo para producción, tiene cinco etapas:
+El pipeline de Jenkins agrega dos etapas de entrega después de las de integración continua descritas en 7.1.2:
+
+```groovy
+    stage('Build Docker Image') {
+      steps {
+        sh 'docker build --label org.opencontainers.image.revision="$GIT_COMMIT" -t "$IMAGE_NAME:$BUILD_NUMBER" -t "$IMAGE_NAME:latest" .'
+        sh 'docker image ls "$IMAGE_NAME"'
+      }
+    }
+
+    stage('Approve Delivery') {
+      steps {
+        // The build is aborted if nobody approves within the timeout
+        timeout(time: 30, unit: 'MINUTES') {
+          input message: 'Approve this version as a release candidate?', ok: 'Approve'
+        }
+        sh 'docker tag "$IMAGE_NAME:$BUILD_NUMBER" "$IMAGE_NAME:release-candidate"'
+      }
+    }
+```
+
+El recorrido completo de un cambio, desde que se escribe hasta que queda listo para producción, tiene siete etapas:
 
 | # | Etapa | Responsable | Qué ocurre | Criterio para avanzar |
 |---|---|---|---|---|
 | 1 | **Desarrollo en rama** | Integrante del equipo | Se trabaja en una rama `feature/*` creada desde `develop`, con *Conventional Commits*. | Cambio completo y probado localmente. |
 | 2 | **Integración en `develop`** | Equipo | La rama se integra en `develop` mediante *merge*. | Sin conflictos. |
-| 3 | **Build de Jenkins** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
-| 4 | **Archivo del artefacto** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Artefacto disponible en el build. |
-| 5 | **Validación de integración y aprobación** | Equipo | Se ejecutan las pruebas Karate contra el backend real y, si pasan, se aprueba la liberación integrando `develop` en `main`. | Escenarios Karate aprobados y *merge* a `main`. |
+| 3 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
+| 4 | **Build Docker Image** | Jenkins | Construye la imagen con el `Dockerfile` del repositorio y la etiqueta con el número de build y `latest`. | Imagen construida sin errores. |
+| 5 | **Approve Delivery** | Integrante del equipo | El pipeline se detiene hasta que se aprueba la versión. Al aprobarla, la imagen se etiqueta como `release-candidate`. | Aprobación dentro de 30 minutos. |
+| 6 | **Archivo de evidencias** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Build terminado en verde. |
+| 7 | **Validación de integración y liberación** | Equipo | Se ejecutan las pruebas Karate contra el backend real y, si pasan, se libera la versión integrando `develop` en `main`. | Escenarios Karate aprobados y *merge* a `main`. |
+
+**[CAPTURAS PENDIENTES]** Vista de etapas de un build con *Build Docker Image* y *Approve Delivery*, el diálogo de aprobación y la salida de `docker image ls`.
 
 **Limitaciones actuales**
 
 - No existe un entorno de *staging* separado: el paso siguiente a la validación local es producción.
 - Jenkins se ejecuta en un entorno local y no recibe *webhooks* de GitHub. Los builds se lanzan manualmente con *Construir ahora*.
-- El pipeline termina en el empaquetado del `.jar`. La construcción de la imagen Docker ocurre en la plataforma de despliegue (sección 7.3), no en Jenkins.
+- La imagen aprobada queda en el Docker del equipo y no se publica en un registro. Render construye su propia imagen con el mismo `Dockerfile` (sección 7.3).
 
 ## 7.3. Continuous Deployment
 
