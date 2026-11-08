@@ -7032,15 +7032,102 @@ El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 
 
 ## 7.2. Continuous Delivery
 
+La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. Cada cambio que se integra en `develop` pasa por las validaciones automáticas del pipeline de Jenkins (sección 7.1) y produce un artefacto verificado. La decisión de llevar ese artefacto a producción es **manual**: consiste en integrar `develop` en `main` siguiendo GitFlow.
+
 ### 7.2.1. Tools and Practices
+
+**Herramientas**
+
+| Herramienta | Uso en la entrega |
+|---|---|
+| **Jenkins** | Ejecuta las etapas de compilación, estilo, pruebas, cobertura y empaquetado sobre `develop`, y archiva los resultados de cada build. |
+| **Apache Maven** | Genera el ejecutable `service-platform-parent-0.0.1-SNAPSHOT.jar` (Spring Boot) en la etapa *Package Project*. |
+| **Docker (`Dockerfile`)** | Empaquetado reproducible en dos etapas: una imagen `maven:3.9.9-eclipse-temurin-21` compila el proyecto y una imagen `eclipse-temurin:21-jre` ejecuta el `.jar`. Expone el puerto 10000. |
+| **Git, GitHub y GitFlow** | Las ramas `feature/*` se integran en `develop`, y `main` solo recibe cambios desde `develop`. Los commits siguen *Conventional Commits*. |
+| **Karate** | Suite de integración contra la API real y PostgreSQL local aislado (sección 6.1.2). Se ejecuta aparte del pipeline, antes de liberar. |
+| **Swagger UI (springdoc)** | Verificación manual de la API desplegada en `/swagger-ui/index.html`. |
+
+**Prácticas aplicadas**
+
+| Práctica | Cómo se aplica |
+|---|---|
+| **Artefacto verificado y trazable** | El `.jar` solo se archiva cuando todas las etapas anteriores terminan en verde, y se registra con *fingerprint* asociado al build y al commit. |
+| **Empaquetado definido en el repositorio** | El `Dockerfile` está versionado junto al código, de modo que cualquier entorno construye la misma imagen. |
+| **Configuración fuera del código** | La aplicación lee la base de datos, el secreto JWT, el puerto y los orígenes CORS desde variables de entorno (`DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`, `PORT`, `CORS_ALLOWED_ORIGINS`). El mismo artefacto sirve para entornos locales y de producción. |
+| **Integración validada antes de liberar** | Las pruebas Karate se ejecutan contra una instancia real del backend con PostgreSQL aislado antes de integrar en `main`. No se ejecutan contra la base de producción. |
+| **Aprobación manual** | Llevar un cambio a producción requiere integrar `develop` en `main`. Solo se hace cuando el último build de `develop` está en verde. |
+| **Reversión controlada** | Si un cambio falla en producción, se revierte el *merge* en `main` con `git revert` y se vuelve a publicar. |
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
+El recorrido de un cambio, desde que se escribe hasta que queda listo para producción, tiene cinco etapas:
+
+| # | Etapa | Responsable | Qué ocurre | Criterio para avanzar |
+|---|---|---|---|---|
+| 1 | **Desarrollo en rama** | Integrante del equipo | Se trabaja en una rama `feature/*` creada desde `develop`, con *Conventional Commits*. | Cambio completo y probado localmente. |
+| 2 | **Integración en `develop`** | Equipo | La rama se integra en `develop` mediante *merge*. | Sin conflictos. |
+| 3 | **Build de Jenkins** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
+| 4 | **Archivo del artefacto** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Artefacto disponible en el build. |
+| 5 | **Validación de integración y aprobación** | Equipo | Se ejecutan las pruebas Karate contra el backend real y, si pasan, se aprueba la liberación integrando `develop` en `main`. | Escenarios Karate aprobados y *merge* a `main`. |
+
+**Limitaciones actuales**
+
+- No existe un entorno de *staging* separado: el paso siguiente a la validación local es producción.
+- Jenkins se ejecuta en un entorno local y no recibe *webhooks* de GitHub. Los builds se lanzan manualmente con *Construir ahora*.
+- El pipeline termina en el empaquetado del `.jar`. La construcción de la imagen Docker ocurre en la plataforma de despliegue (sección 7.3), no en Jenkins.
+
 ## 7.3. Continuous Deployment
+
+El despliegue continuo publica automáticamente en producción lo que llega a la rama de liberación. En ElectroLink, cada componente de la solución se despliega solo cuando se actualiza su repositorio, sin intervención manual en el servidor.
 
 ### 7.3.1. Tools and Practices
 
+**Herramientas**
+
+| Componente | Plataforma | Uso | URL |
+|---|---|---|---|
+| **Backend RESTful API** | **Render** (*Web Service*, entorno Docker, plan gratuito) | Construye la imagen con el `Dockerfile` del repositorio y publica la API. | https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html |
+| **Front-end web** | **Netlify** | Publica la aplicación web a partir del repositorio conectado. | https://expsoft-frontend.netlify.app |
+| **Landing Page** | **GitHub Pages** | Publica la página estática desde la rama configurada en *Settings → Pages*. | https://g2-diseno-de-experimentos.github.io/Landing-Page/ |
+| **Base de datos** | PostgreSQL | Base de datos de producción del backend, conectada mediante variables de entorno. | — |
+| **Repositorio** | GitHub (organización `G2-Diseno-de-Experimentos`) | Origen del código que despliegan las plataformas. | — |
+
+**Prácticas aplicadas**
+
+| Práctica | Cómo se aplica |
+|---|---|
+| **Despliegue disparado por Git** | Un *push* a la rama configurada en Render (`main`) inicia automáticamente la construcción y el despliegue de una nueva versión del backend. |
+| **Una rama de producción protegida por GitFlow** | Como `main` solo recibe cambios desde `develop`, lo que se despliega siempre pasó antes por el pipeline de Jenkins. |
+| **Construcción de la imagen en la plataforma** | Render usa el `Dockerfile` del repositorio, con las mismas versiones de Java y Maven que Jenkins (JDK 21 y Maven 3.9). |
+| **Secretos como variables de entorno** | Las credenciales de la base de datos y el secreto JWT se configuran en la sección *Environment* de Render y no se guardan en el repositorio. |
+| **Puerto inyectado por la plataforma** | La aplicación usa la variable `PORT` que Render inyecta (`server.port=${PORT:8091}`) y escucha en `0.0.0.0`. |
+| **Verificación posterior al despliegue** | Se comprueba que la URL pública responda y que Swagger UI liste los grupos de endpoints. |
+
+<!-- CONFIRMAR con quien administra Render: (1) que la rama configurada sea `main`, (2) proveedor de PostgreSQL de producción, (3) nombre exacto de las variables de entorno cargadas. -->
+
 ### 7.3.2. Production Deployment Pipeline Components
+
+| Componente | Disparador | Qué ocurre en el despliegue | Verificación |
+|---|---|---|---|
+| **Backend (Render)** | *Push* a `main` | Render clona el repositorio, construye la imagen con el `Dockerfile` (`mvn package -DskipTests`, y luego la imagen `eclipse-temurin:21-jre`), inicia el contenedor con las variables de entorno y publica la nueva versión. | URL pública y Swagger UI disponibles. |
+| **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify descarga el código, ejecuta la construcción de la aplicación y publica el resultado. | La página carga y los registros del despliegue no muestran errores. |
+| **Landing Page (GitHub Pages)** | Cambios en la rama configurada en *Pages* | GitHub construye y publica el sitio estático. | La dirección de GitHub Pages responde. |
+| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas desde las entidades. No hay migraciones versionadas. | El backend inicia y responde a las consultas. |
+
+**Flujo completo hacia producción**
+
+1. El cambio se integra en `develop` y Jenkins lo valida (secciones 7.1 y 7.2).
+2. El equipo integra `develop` en `main`.
+3. GitHub notifica a Render, que construye y despliega la nueva versión del backend.
+4. Se verifica la API en Swagger UI.
+
+**Consideraciones**
+
+- La construcción de la imagen en Render omite las pruebas (`-DskipTests`) porque ya se ejecutaron en Jenkins sobre `develop`. La garantía de calidad depende de que `main` solo reciba cambios que pasaron por el pipeline.
+- El despliegue de producción lo inicia el *push* a `main`, no Jenkins. Integrar ambos, por ejemplo con un *webhook* de GitHub hacia Jenkins, queda como mejora futura.
+- `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
+
+**[CAPTURAS PENDIENTES]** Render: configuración del servicio (rama, entorno Docker) y registro del último despliegue. Netlify: registro del último despliegue. Swagger UI de producción.
 
 <div style="page-break-after: always;"></div>
 
