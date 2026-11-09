@@ -7205,6 +7205,328 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 
 <div style="page-break-after: always;"></div>
 
+# Capitulo VIII: Experiment-Driven-Development
+
+## 8.1. Experiment Planning 
+
+### 8.1.1. As-Is Summary.
+
+Esta sección presenta la recolección inicial del material bruto que constituye el punto
+de partida del trabajo, enfocándose estrictamente en el objetivo de generar preguntas de
+investigación, en contraste con la propuesta prematura de soluciones.
+
+Por un lado, desde la perspectiva de Propietarios de viviendas y administradores de
+PYMES experimentan una incidencia o necesidad de mantenimiento eléctrico y siente la
+urgencia de resolverla. Para hacer algo al respecto, busca entre consejos caseros y
+recomendaciones empíricas en redes sociales, se informa superficialmente sobre
+reparaciones, sigue pautas de internet mientras se pregunta si
+podrá encontrar a un especialista calificado que pueda entender la gravedad del problema
+de manera segura, y experimenta constantes dudas sobre si la instalación quedará óptima
+y duradera. Finalmente, ante la incertidumbre, decide buscar soporte especializado,
+recurriendo a contactos informales o llamadas a ciegas para contratar a un técnico,
+exponiéndose a sobrecostos y falta de garantías formales.
+
+Desde la perspectiva del Técnicos electricistas y contratistas reciben una solicitud de
+servicio imprevista; primero acude al lugar o evalúa verbalmente el panorama para
+formarse una idea de la avería, corrobora el diagnóstico según su experiencia empírica y
+los repuestos disponibles mientras piensa que es indispensable que los clientes
+prioricen instalaciones eléctricas seguras y reglamentarias. Logra identificar la falla
+y proponer una cotización o intervención para solucionar el problema; sin embargo, en
+este punto se cuestiona si el cliente aceptará el presupuesto o si contará con los
+componentes adecuados en su inventario para finalizar el trabajo sin retrasos.
+Finalmente, acuerda de forma manual o verbal una futura visita de seguimiento o
+mantenimiento preventivo, mientras asume que esta forma tradicional de coordinar
+servicios es poco eficiente y carece de trazabilidad digital.
+
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims.
+
+**Assumptions**
+
+- Business Outcomes:
+
+  - Mejorar la seguridad y la confianza de los propietarios en la contratación de servicios eléctricos en un 30%.
+  - Aumentar la satisfacción de los usuarios al brindarles una opción rápida (en menos de 15 minutos para emergencias) y directa a través de la aplicación.
+  - Fortalecer la reputación y la credibilidad de ElectroLink en un 25% al demostrar un enfoque riguroso en la certificación y trazabilidad de los técnicos.
+  - Aumentar o mantener en un 10% la cantidad de usuarios activos recurrentes dentro de la plataforma.
+  - Captar y gestionar al menos el 80% de las incidencias o solicitudes de emergencia eléctrica de nuestros segmentos objetivo.
+
+- Propietarios / PYMES:
+
+  - Los clientes se podrían sentir más seguros al saber que tienen acceso directo a un sistema de verificación de credenciales y un flujo de contratación guiado (Wizard).
+  - Los clientes podrían valorar la conveniencia de poder contactar rápidamente a un electricista certificado en situaciones de averías críticas.
+  - Los clientes se sentirían más respaldados y apoyados al recibir una respuesta rápida, transparente y eficiente cuando se encuentren en una situación eléctricamente complicada para ellos.
+
+- Technician:
+
+  - Los técnicos podrían necesitar una herramienta digital o mecanismo que les permita gestionar de manera oportuna y adecuada sus zonas de cobertura y catálogos de componentes durante las emergencias de sus clientes.
+  - Los técnicos podrían apreciar la oportunidad de poder ofrecer apoyo inmediato a sus clientes en momentos críticos y captar ingresos recurrentes mediante suscripciones estructuradas.  
+
+**User Outcomes**
+
+- Propietarios / PYMES:
+
+  - Acceso rápido a ayuda y apoyo en situaciones de emergencia eléctrica.
+  - Sensación de seguridad y respaldo al contar con perfiles verificados y opciones de emergencia en la aplicación.
+  - Atención oportuna y adecuada por parte de los profesionales electricistas certificados.
+
+- Technician:
+
+  - Capacidad para ofrecer apoyo inmediato a los clientes en situaciones de crisis o averías urgentes.
+  - Mayor eficiencia en la respuesta y atención a emergencias eléctricas de los clientes.
+  - Mejor calidad de servicio al brindar atención personalizada y oportuna en momentos críticos.
+
+- Knowledge Gaps:
+
+  - No sabemos con exactitud cuándo un propietario o administrador de PYME sufrirá una avería eléctrica crítica que requiera asistencia de emergencia.
+  - No sabemos si todos nuestros usuarios cuentan con una red de soporte técnico o criterios claros para identificar fallas de alto riesgo eléctrico.
+  - No sabemos las circunstancias o patrones exactos que pueden provocar estas crisis eléctricas a cada uno de nuestros usuarios.
+  - Desconocemos las medidas específicas que se tomarán por parte de los técnicos electricistas al recibir una alerta de servicio rápido desde la plataforma.
+
+- Ideas
+
+  - Implementar un acceso directo tipo asistente guiado (Wizard) en el que el usuario pueda recibir ayuda y asistencia técnica inmediata en alguna emergencia o crisis eléctrica.
+  - Que no haya necesidad de pasar por procesos manuales complejos de cotización y esperar a que se concrete la asignación del especialista.
+  - Será de fácil acceso porque en momentos de crisis o averías imprevistas no siempre se puede pensar con claridad como para acordarse en dónde está la opción.
+
+- Claims
+
+  - *"Me siento desprotegido y solo, cuando tengo una emergencia eléctrica urgente."*
+  - *"No me gusta esperar horas o días hasta que un electricista responda cuando tengo algo que solucionar inmediatamente."*
+  - *"Me genera angustia y ansiedad el no recibir ayuda rápida y confiable cuando la necesito para mi hogar o local comercial."*
+
+## 8.1.3. Experiment-Ready Questions.
+
+Esta sección presentamos el método de las **5W y 2H** para el desarrollo de las preguntas para el desarrollo de la experimentación:
+
+- 1. Who 
+  * **Pregunta 1:** ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos?
+  * **Pregunta 2:** ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura?
+
+- 2. What 
+  * **Pregunta 3:** ¿Qué elementos visuales y de interacción del asistente guiado reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional?
+  * **Pregunta 4:** ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico?
+
+- 3. Where 
+  * **Pregunta 5:** ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico?
+  * **Pregunta 6:** ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia?
+
+- 4. When 
+  * **Pregunta 7:** ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES?
+  * **Pregunta 8:** ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas?
+
+- 5. Why 
+  * **Pregunta 9:** ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico?
+  * **Pregunta 10:** ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma?
+
+- 6. How 
+  * **Pregunta 11:** ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales?
+  * **Pregunta 12:** ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final?
+
+- 7. How Much 
+  * **Pregunta 13:** ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal?
+  * **Pregunta 14:** ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización?
+
+## 8.1.4. Question Backlog.
+
+Esta sección presenta el backlog como una lista priorizada de preguntas para la investigación, basada en una evaluación cuantitativa mediante criterios de **Confianza, Riesgo, Impacto e Interés**, tal como se muestra en la matriz de puntuación.
+
+- Matriz de Evaluación de Preguntas
+
+| Question | Confidence | Risk | Impact | Interest | Total Score |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? | 6 | 7 | 8 | 7 | **28** |
+| ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? | 7 | 6 | 7 | 6 | **26** |
+| ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? | 7 | 5 | 9 | 8 | **29** |
+| ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? | 6 | 6 | 8 | 7 | **27** |
+| ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? | 8 | 5 | 7 | 6 | **26** |
+| ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? | 5 | 7 | 8 | 7 | **27** |
+| ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? | 5 | 6 | 7 | 6 | **24** |
+| ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? | 6 | 4 | 6 | 5 | **21** |
+| ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? | 8 | 3 | 7 | 9 | **27** |
+| ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? | 7 | 5 | 8 | 8 | **28** |
+| ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? | 7 | 4 | 7 | 7 | **25** |
+| ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? | 6 | 6 | 8 | 7 | **27** |
+| ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? | 5 | 7 | 7 | 6 | **25** |
+| ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? | 6 | 6 | 9 | 8 | **29** |
+
+
+- Matriz de Priorización de Preguntas
+
+| Prioridad (1/2/3/5/8) | Pregunta |
+| :---: | :--- |
+| **8** | ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? |
+| **8** | ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? |
+| **8** | ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? |
+| **8** | ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? |
+| **5** | ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? |
+| **5** | ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? |
+| **5** | ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? |
+| **5** | ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? |
+| **5** | ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? |
+| **5** | ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? |
+| **3** | ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? |
+| **3** | ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? |
+| **3** | ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? |
+| **2** | ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? |
+
+### 8.1.5. Experiment Cards.
+
+#### Tarjeta de Experimento 1
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? |
+| **Why** | <ul><li>Identificar los perfiles demográficos y comportamentales que muestran mayor fricción o desconfianza hacia la adopción de plataformas digitales en el sector eléctrico.</li><li>Comprender las motivaciones profundas que impulsan a este grupo a seguir prefiriendo la contratación informal frente a servicios formalizados.</li><li>Diseñar estrategias de comunicación y propuestas de valor personalizadas para mitigar esta resistencia y fomentar la migración hacia ElectroLink.</li></ul> |
+| **What** | <ul><li>Realizar entrevistas en profundidad y sesiones de observación con usuarios de viviendas y administradores de PYMES identificados con baja adopción tecnológica.</li><li>Analizar patrones de comportamiento en la landing page mediante métricas de abandono y puntos de fricción en los formularios iniciales.</li><li>Implementar un cuestionario cualitativo rápido para captar los motivos exactos de abandono del flujo digital.</li></ul> |
+| **Hypothesis** | Se espera que la identificación detallada de los factores de resistencia permita clasificar a los usuarios reticentes y adaptar los mensajes de confianza en la landing page, incrementando en al menos un 20% la tasa de retención de visitantes primerizos hacia el flujo de registro. |
+
+---
+
+#### Tarjeta de Experimento 2
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? |
+| **Why** | <ul><li>Evaluar el impacto operativo y la carga de trabajo que perciben los profesionales al mantener al día sus datos de disponibilidad y stock de componentes.</li><li>Comprender el umbral de tolerancia de los técnicos frente a procesos administrativos exigidos dentro de la aplicación móvil.</li><li>Identificar los perfiles de técnicos más propensos a la deserción por exigencias de control operativo.</li></ul> |
+| **What** | <ul><li>Monitorear la frecuencia y constancia de actualización de inventarios y zonas de cobertura en un grupo piloto de técnicos durante sus primeras tres semanas de uso.</li><li>Realizar entrevistas de seguimiento con los profesionales que presenten menor actividad en la gestión de sus perfiles.</li><li>Recopilar retroalimentación sobre las dificultades operativas encontradas en el módulo de gestión técnica.</li></ul> |
+| **Hypothesis** | Se espera que los técnicos independientes con alta carga de servicios en campo sean los más propensos a descuidar la actualización de su inventario, requiriendo la automatización de alertas y notificaciones para prevenir su abandono de la plataforma. |
+
+---
+
+#### Tarjeta de Experimento 3
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? |
+| **Why** | <ul><li>Evaluar la efectividad del asistente guiado por pasos (Wizard) implementado en las historias de usuario para disminuir la carga cognitiva del usuario.</li><li>Comprender cómo la segmentación visual de la información influye en la decisión del cliente de completar una solicitud de servicio.</li><li>Identificar mejoras de usabilidad y diseño de interfaz para optimizar el flujo principal de conversión de la aplicación web.</li></ul> |
+| **What** | <ul><li>Implementar un test A/B en el entorno web exponiendo a un grupo de usuarios a un formulario estático tradicional (Variante A) y a otro grupo al asistente guiado por pasos (Variante B).</li><li>Registrar y medir analíticamente la tasa de conversión, el tiempo promedio de completado y la tasa de rebote en ambas variantes.</li><li>Recopilar opiniones cualitativas mediante breves encuestas de satisfacción posteriores a la interacción.</li></ul> |
+| **Hypothesis** | Se espera que la implementación del asistente guiado por pasos (Wizard) proporcione a los usuarios una experiencia de solicitud más intuitiva y desglosada, reduciendo la tasa de rebote y superando en al menos un 15% la conversión del formulario tradicional. |
+
+---
+
+#### Tarjeta de Experimento 4
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? |
+| **Why** | <ul><li>Determinar el grado de confiabilidad que los clientes otorgan a las cotizaciones automatizadas estimadas por la plataforma antes de aceptar la visita de un técnico.</li><li>Comprender el impacto que tiene una discrepancia entre el presupuesto preliminar y el costo final de la reparación en la satisfacción del usuario.</li><li>Establecer los márgenes de tolerancia aceptados por el mercado para evitar rechazos de servicios por presupuestos imprecisos.</li></ul> |
+| **What** | <ul><li>Desplegar un cotizador estimado basado en catálogos de servicios estandarizados dentro del flujo de solicitud de la aplicación web.</li><li>Registrar las desviaciones porcentuales entre el presupuesto preliminar emitido por la plataforma y el costo real reportado por el técnico tras la revisión presencial.</li><li>Aplicar encuestas de satisfacción enfocadas en la transparencia y precisión de precios a los clientes que completen el servicio.</li></ul> |
+| **Hypothesis** | Se espera que los propietarios acepten un margen de variación presupuestal de hasta un 15% entre la estimación digital y el costo final, siempre y cuando se detallen con claridad los conceptos y componentes eléctricos involucrados en la cotización. |
+
+---
+
+#### Tarjeta de Experimento 5
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? |
+| **Why** | <ul><li>Identificar los elementos de confianza más relevantes para el cliente al momento de evaluar la idoneidad y seguridad de un profesional.</li><li>Comprender el recorrido visual y los puntos de interés (*heatmaps*) dentro del perfil detallado del técnico.</li><li>Optimizar la arquitectura de información y la jerarquía visual de los distintivos de certificación profesional.</li></ul> |
+| **What** | <ul><li>Instalar herramientas de análisis de comportamiento de UI y mapas de calor (*heatmaps* y grabaciones de sesión) en la vista de perfiles de técnicos.</li><li>Rastrear los clics e interacciones directas sobre las insignias de certificación, calificaciones y comentarios de otros clientes.</li><li>Analizar el tiempo de permanencia en las secciones de credenciales legales y antecedentes del especialista.</li></ul> |
+| **Hypothesis** | Se espera que los usuarios interactúen primordialmente con las insignias de certificación oficial y el puntaje de reseñas en los primeros cinco segundos de visualización del perfil, confirmando que estos elementos son determinantes en la decisión de contratación. |
+
+---
+
+#### Tarjeta de Experimento 6
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? |
+| **Why** | <ul><li>Detectar ineficiencias logísticas y desbalance de oferta y demanda de especialistas eléctricos según las zonas de cobertura urbana.</li><li>Comprender el impacto de la dispersión geográfica en los tiempos de respuesta ante solicitudes urgentes de propietarios y PYMES.</li><li>Planificar estrategias de atracción y retención de técnicos en distritos críticos con alta demanda insatisfecha.</li></ul> |
+| **What** | <ul><li>Analizar los registros de tiempo de respuesta y asignación de solicitudes (*timestamps* de backend) segmentados por distrito de origen.</li><li>Cruzar los datos de ubicación de las solicitudes de emergencia con la densidad de técnicos activos registrados en cada zona geográfica.</li><li>Generar un mapa de calor operativo para visualizar las brechas de cobertura de la red de especialistas.</li></ul> |
+| **Hypothesis** | Se espera identificar al menos dos distritos periféricos con tiempos de asignación superiores al promedio general de la plataforma, lo que validará la necesidad de incentivar la incorporación de técnicos en dichas zonas geográficas. |
+
+---
+
+#### Tarjeta de Experimento 7
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? |
+| **Why** | <ul><li>Localizar el punto crítico exacto de fricción y abandono dentro del proceso de contratación de servicios corporativos.</li><li>Comprender si la solicitud de datos detallados del local comercial o los métodos de pago generan desconfianza o fatiga de formularios en las PYMES.</li><li>Simplificar las etapas del embudo de conversión orientadas a clientes corporativos.</li></ul> |
+| **What** | <ul><li>Configurar eventos analíticos de seguimiento (*funnel tracking*) en cada paso del proceso de contratación de la aplicación web y móvil para administradores de PYMES.</li><li>Medir el porcentaje de usuarios que progresan entre el inicio del formulario, el ingreso de especificaciones técnicas y la confirmación final.</li><li>Analizar cuantitativamente las tasas de caída en cada etapa durante un periodo de medición de dos semanas.</li></ul> |
+| **Hypothesis** | Se espera que el punto de mayor abandono se produzca en la sección de ingreso de datos detallados de la infraestructura eléctrica del local, lo que evidenciará la necesidad de flexibilizar este requisito inicial mediante plantillas predefinidas. |
+
+---
+
+#### Tarjeta de Experimento 8
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? |
+| **Why** | <ul><li>Optimizar los canales y tiempos de comunicación proactiva hacia el profesional para garantizar la disponibilidad de materiales antes de atender un servicio.</li><li>Prevenir cancelaciones operativas y reprogramaciones de citas provocadas por desabastecimiento imprevisto de componentes eléctricos críticos.</li><li>Mejorar la puntualidad y eficiencia operativa de los técnicos registrados en la plataforma.</li></ul> |
+| **What** | <ul><li>Realizar una encuesta estructurada y entrevistas focales a una muestra representativa de técnicos activos sobre sus hábitos de gestión de inventario.</li><li>Probar diferentes configuraciones temporales de envío de alertas automáticas (por ejemplo, al concluir un servicio o en el reporte matutino) evaluando su tasa de apertura y respuesta.</li><li>Medir la reducción de incidencias por falta de stock tras la implementación de las notificaciones optimizadas.</li></ul> |
+| **Hypothesis** | Se espera que los técnicos prefieran recibir las notificaciones de stock mínimo inmediatamente al finalizar cada servicio o al inicio de su jornada diaria, logrando reducir en al menos un 25% las reprogramaciones de citas por falta de materiales. |
+
+---
+
+#### Tarjeta de Experimento 9
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? |
+| **Why** | <ul><li>Comprender la jerarquía de valores y la aversión al riesgo de los propietarios de viviendas ante la contratación de servicios de alta criticidad en el hogar.</li><li>Validar la hipótesis de que la seguridad y la reputación superan al factor precio en intervenciones de infraestructura eléctrica.</li><li>Orientar las estrategias de posicionamiento de la plataforma hacia la confianza y la certificación rigurosa.</li></ul> |
+| **What** | <ul><li>Aplicar entrevistas de validación y pruebas de preferencia visual con usuarios propietarios, contrastando perfiles con distintas combinaciones de precio y calificación.</li><li>Analizar la correlación estadística entre la puntuación de los técnicos y la tasa de selección por parte de clientes en solicitudes reales.</li><li>Recopilar testimonios cualitativos sobre experiencias previas negativas con electricistas informales.</li></ul> |
+| **Hypothesis** | Se espera demostrar que los propietarios están dispuestos a aceptar tarifas ligeramente superiores si el profesional cuenta con un historial verificado de calificaciones excelentes y reseñas detalladas, priorizando la seguridad sobre la opción más económica. |
+
+---
+
+#### Tarjeta de Experimento 10
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? |
+| **Why**| <ul><li>Identificar las barreras económicas y de desconfianza que frenan a los profesionales independientes al comprometerse a un pago recurrente por membresía.</li><li>Evaluar la percepción de valor frente al costo del modelo de suscripción propuesto para la oferta.</li><li>Rediseñar o ajustar los incentivos del modelo de negocio para facilitar la incorporación sostenible de técnicos.</li></ul> |
+| **What** | <ul><li>Desplegar una landing page informativa con los detalles y beneficios del modelo de suscripción para técnicos, midiendo la intención de registro y las objeciones manifestadas.</li><li>Conducir entrevistas en profundidad con profesionales independientes para indagar en sus expectativas de retorno de inversión (ROI) sobre la membresía.</li><li>Analizar las tasas de conversión ante distintas alternativas de prueba gratuita o comisionado por servicio.</li></ul> |
+| **Hypothesis** | Se espera que la reticencia inicial se deba principalmente a la incertidumbre sobre el volumen de clientes que recibirán en sus primeros meses, lo que se mitigará ofreciendo un periodo de prueba inicial sin costo o un esquema mixto de comisiones por servicio completado. |
+
+---
+
+#### Tarjeta de Experimento 11
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? |
+| **Why** | <ul><li>Medir el grado de claridad y aceptación del modelo de precios estandarizados frente a la informalidad de cotizaciones a ojo o sobreprecios ocultos.</li><li>Comprender si la visibilidad anticipada de tarifas genera mayor confianza en el proceso de contratación.</li><li>Identificar ajustes necesarios en la presentación de costos adicionales o tarifas por emergencia dentro de la plataforma.</li></ul> |
+| **What** | <ul><li>Presentar prototipos interactivos del catálogo de servicios con precios fijos y transparentes a un grupo de usuarios en sesiones de validación.</li><li>Evaluar mediante escalas de Likert la percepción de honestidad, claridad y competitividad de las tarifas mostradas.</li><li>Comparar las reacciones frente a los métodos tradicionales de cotización telefónica o presencial.</li></ul> |
+| **Hypothesis** | Se espera que más del 80% de los usuarios encuestados valoren positivamente la transparencia de los precios en el catálogo, percibiendo una mayor equidad y reduciendo la fricción generada por la incertidumbre de presupuestos ocultos. |
+
+---
+
+#### Tarjeta de Experimento 12
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? |
+| **Why** | <ul><li>Validar la eficiencia operativa del algoritmo de despacho y asignación de técnicos basado en geolocalización y cercanía al punto de incidencia.</li><li>Medir el impacto directo de la reducción de tiempos de traslado en la satisfacción global del propietario o PYME.</li><li>Optimizar los parámetros del motor de asignación para servicios de emergencia.</li></ul> |
+| **What** | <ul><li>Implementar el módulo de asignación automática por proximidad en el flujo operativo piloto y registrar los tiempos de llegada de los técnicos a campo.</li><li>Comparar los tiempos de respuesta y los puntajes de satisfacción del cliente frente al método manual tradicional de asignación.</li><li>Analizar las métricas de completado exitoso de servicios de emergencia.</li></ul> |
+| **Hypothesis** | Se espera que la asignación automática por proximidad geográfica reduzca el tiempo total de respuesta y llegada del especialista en al menos un 25%, incrementando significativamente la satisfacción del cliente en situaciones críticas. |
+
+---
+
+#### Tarjeta de Experimento 13
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? |
+| **Why** | <ul><li>Establecer el nivel de paciencia y expectativa de tiempo de respuesta que tienen los clientes al buscar un especialista verificado a través de canales digitales.</li><li>Determinar si la espera por validación de credenciales genera abandono hacia alternativas informales inmediatas.</li><li>Calibrar los tiempos esperados de respuesta en el flujo operativo de asignación.</li></ul> |
+| **What** | <ul><li>Incluir pantallas de espera simuladas con indicadores de progreso y estimaciones de tiempo en prototipos interactivos expuestos a usuarios evaluadores.</li><li>Registrar el punto de abandono o frustración manifestado cuando el tiempo de confirmación supera determinados umbrales (5, 10 o 15 minutos).</li><li>Analizar las respuestas cualitativas sobre la disposición a esperar a cambio de una garantía de certificación formal.</li></ul> |
+| **Hypothesis** | Se espera que los propietarios estén dispuestos a esperar hasta 10 minutos adicionales para recibir la confirmación de un técnico certificado en comparación con la inmediatez riesgosa de un contacto informal, valorando la seguridad garantizada por la plataforma. |
+
+---
+
+#### Tarjeta de Experimento 14
+| Campo | Detalle |
+| :--- | :--- |
+| **Question** | ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? |
+| **Why** | <ul><li>Cuantificar de manera precisa el beneficio comercial y operativo de automatizar y guiar el proceso de solicitud de servicios en comparación con cotizaciones manuales por chat o llamada.</li><li>Justificar el esfuerzo de desarrollo técnico de los componentes del asistente interactivo en la plataforma web y móvil.</li><li>Validar el impacto global del diseño centrado en el usuario sobre los indicadores clave de negocio de la startup.</li></ul> |
+| **What** | <ul><li>Realizar un análisis comparativo de métricas de conversión entre un grupo de control que utiliza el flujo manual tradicional de contacto y un grupo experimental expuesto al asistente digital automatizado.</li><li>Rastrear el número de solicitudes completadas con éxito frente al total de visitas iniciales en ambos escenarios durante un ciclo operativo de dos semanas.</li><li>Medir la rentabilidad y eficiencia operativa derivada de la automatización del proceso.</li></ul> |
+| **Hypothesis** | Se espera lograr un incremento porcentual superior al 30% en la tasa de conversión de solicitudes completadas al reemplazar el proceso manual de cotización por el flujo asistido automatizado de ElectroLink. |
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses.
+
+### 8.2.2. Domain Business Metrics
+
+### 8.2.3. Measures.
+
+### 8.2.4. Conditions.
+
+### 8.2.5. Scale Calculations and Decisions.
+
+### 8.2.6. Methods Selection.
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection.
+
+### 8.2.8. Web and Mobile Tracking Plan
+
 # Conclusiones
 
 - El desarrollo del proyecto **ElectroLink** demostró la efectividad de integrar el enfoque Lean UX con un riguroso proceso de investigación y análisis de requerimientos. Esto permitió comprender las necesidades críticas del sector eléctrico y consolidar una propuesta de valor sólida que promueve la formalización de servicios, aporta seguridad a los usuarios y genera nuevas oportunidades de negocio para los técnicos certificados.
