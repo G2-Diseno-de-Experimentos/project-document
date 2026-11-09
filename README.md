@@ -6878,7 +6878,7 @@ Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin
 
 ## 7.1. Continuous Integration
 
-La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada ejecución descarga el código de la rama `develop`, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto se identifica antes de integrarse al producto.
+La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
 
 ### 7.1.1. Tools and Practices
 
@@ -6902,20 +6902,22 @@ La integración continua del backend de ElectroLink se implementó con un pipeli
 | Práctica | Cómo se aplica |
 |---|---|
 | **Pipeline as Code** | El flujo está versionado en el `Jenkinsfile` del repositorio, junto al código fuente, y se cambia mediante commits y GitFlow como cualquier otro archivo. |
-| **Integración sobre la rama compartida** | El job *Pipeline script from SCM* construye la rama `develop`, a la que se integran las ramas `feature/*` del equipo. |
+| **Integración sobre la rama de liberación** | El job *Pipeline script from SCM* construye la rama `main`, que solo recibe cambios desde `develop`. Así se valida exactamente el código que se libera. |
+| **Disparo automático** | El bloque `triggers { pollSCM('H/2 * * * *') }` hace que Jenkins consulte GitHub cada 2 minutos y lance el pipeline cuando encuentra commits nuevos en `main`. |
+| **Un build a la vez** | `disableConcurrentBuilds()` impide que el polling lance builds nuevos mientras otro está en ejecución o esperando aprobación. |
 | **Builds limpios y reproducibles** | La primera etapa ejecuta `mvn clean`, y las herramientas se instalan con versiones fijas en *Tools* (`MAVEN_3_9` y `JDK_21`). |
 | **Aislamiento de etapas** | Cada validación es una etapa independiente, de modo que un fallo indica exactamente qué falló: compilación, estilo, pruebas o cobertura. |
 | **Detener la línea ante fallos** | Si una etapa falla, las siguientes no se ejecutan y el build queda en rojo. |
 | **Separación entre pruebas unitarias y de integración** | En la etapa de pruebas solo se ejecutan las pruebas unitarias, que usan mocks y no requieren servicios externos. Las pruebas de integración (clases `*IT` y el runner global de Karate) necesitan la API y PostgreSQL en ejecución, por lo que se ejecutan fuera del pipeline (sección 6.1.2). |
 | **Umbral de calidad** | JaCoCo exige al menos 30 % de cobertura de líneas; si la cobertura baja de ese valor, el build falla. |
 | **Publicación de evidencias** | El bloque `post` publica el reporte de JUnit y archiva el reporte de cobertura, el resultado de Checkstyle y el `.jar` generado. |
-| **Ejecución del pipeline** | Los builds se lanzan con *Construir ahora* después de integrar cambios en `develop`. Jenkins se ejecuta en un entorno local, por lo que no recibe webhooks de GitHub. |
+| **Ejecución del pipeline** | Jenkins se ejecuta en un entorno local y no puede recibir *webhooks* de GitHub, por eso usa *polling*. Un cambio en `main` inicia el pipeline en dos minutos como máximo. *Construir ahora* sigue disponible para ejecuciones manuales. |
 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
-El job `ElectroLink-Backend` es de tipo *Pipeline* y obtiene el `Jenkinsfile` desde el repositorio (*Pipeline script from SCM*), sobre la rama `*/develop`:
+El job `ElectroLink-Backend` es de tipo *Pipeline* y obtiene el `Jenkinsfile` desde el repositorio (*Pipeline script from SCM*), sobre la rama `*/main`:
 
-<img src="assets/img/cap7/jenkins-job-configuration.jpg" width="700"/>
+<img src="assets/img/cap7/jenkins-job-configuration-main.jpg" width="700"/>
 
 **Definición del pipeline (`Jenkinsfile`)**
 
@@ -6928,10 +6930,23 @@ pipeline {
     jdk 'JDK_21'
   }
 
+  options {
+    // A build waiting for approval must not let polling start new ones
+    disableConcurrentBuilds()
+  }
+
+  triggers {
+    // Jenkins runs locally and cannot receive GitHub webhooks,
+    // so it checks the repository for new commits every 2 minutes
+    pollSCM('H/2 * * * *')
+  }
+
   environment {
     // Tests that need a running backend are not part of the unit test stage:
     // the whole Karate suite runner and the *IT integration classes
     TEST_FILTER = '!ElectrolinkPlatformApplicationTests,!*IT'
+    // Same Dockerfile that Render uses to deploy the backend
+    IMAGE_NAME = 'electrolink-backend'
   }
 
   stages {
@@ -6974,6 +6989,10 @@ pipeline {
         }
       }
     }
+
+    // Delivery stages, described in 7.2.2
+    stage('Build Docker Image') { ... }
+    stage('Approve Delivery') { ... }
   }
 
   post {
@@ -6990,7 +7009,7 @@ pipeline {
 
 **Resumen de la ejecución**
 
-El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 segundos con resultado exitoso. Las ocho etapas del pipeline se completaron en verde:
+Las capturas de esta sección corresponden al build #5, que se ejecutó sobre el commit `ff8c798` cuando el job todavía construía `develop` y el pipeline solo tenía las etapas de integración continua. Terminó en 34 segundos con resultado exitoso, con las ocho etapas en verde. La ejecución actual sobre `main`, con las etapas de entrega, se muestra en 7.2.2.
 
 <img src="assets/img/cap7/jenkins-stages-overview.jpg" width="700"/>
 
@@ -7032,7 +7051,7 @@ El build #5 se ejecutó sobre el commit `ff8c798` de `develop` y terminó en 34 
 
 ## 7.2. Continuous Delivery
 
-La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. Cada cambio que se integra en `develop` pasa por las validaciones automáticas del pipeline de Jenkins (sección 7.1), que además construye la imagen Docker de la versión y se detiene para que el equipo la apruebe como candidata a liberación. Llevar esa versión a producción sigue siendo una decisión **manual**: consiste en integrar `develop` en `main` siguiendo GitFlow.
+La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. La decisión de liberar una versión es **manual**: el equipo integra `develop` en `main` siguiendo GitFlow. Desde ese momento todo es automático. Jenkins detecta el cambio en `main`, ejecuta las validaciones de integración continua (sección 7.1), construye la imagen Docker de la versión y se detiene para que un integrante la apruebe como candidata a liberación.
 
 ### 7.2.1. Tools and Practices
 
@@ -7040,7 +7059,7 @@ La entrega continua mantiene el backend de ElectroLink en un estado siempre desp
 
 | Herramienta | Uso en la entrega |
 |---|---|
-| **Jenkins** | Ejecuta las etapas de compilación, estilo, pruebas, cobertura y empaquetado sobre `develop`, construye la imagen Docker y espera la aprobación manual de la versión (paso `input`). |
+| **Jenkins** | Detecta los cambios en `main` por *polling*, ejecuta las etapas de compilación, estilo, pruebas, cobertura y empaquetado, construye la imagen Docker y espera la aprobación manual de la versión (paso `input`). |
 | **Apache Maven** | Genera el ejecutable `service-platform-parent-0.0.1-SNAPSHOT.jar` (Spring Boot) en la etapa *Package Project*. |
 | **Docker (`Dockerfile`)** | Empaquetado reproducible en dos etapas: una imagen `maven:3.9.9-eclipse-temurin-21` compila el proyecto y una imagen `eclipse-temurin:21-jre` ejecuta el `.jar`. Expone el puerto 10000. Es el mismo archivo que usa Render. |
 | **Imagen de Jenkins con Docker (`ci/jenkins/Dockerfile`)** | Parte de `jenkins/jenkins:lts-jdk21` y agrega el cliente Docker y `buildx`. El contenedor de Jenkins usa el Docker del equipo a través del socket (`docs/JENKINS.md`). |
@@ -7057,12 +7076,13 @@ La entrega continua mantiene el backend de ElectroLink en un estado siempre desp
 | **Imagen versionada y trazable** | Cada build genera `electrolink-backend:<número de build>` y `electrolink-backend:latest`, con la etiqueta `org.opencontainers.image.revision` igual al commit construido. |
 | **Configuración fuera del código** | La aplicación lee la base de datos, el secreto JWT, el puerto y los orígenes CORS desde variables de entorno (`DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`, `PORT`, `CORS_ALLOWED_ORIGINS`). El mismo artefacto sirve para entornos locales y de producción. |
 | **Integración validada antes de liberar** | Las pruebas Karate se ejecutan contra una instancia real del backend con PostgreSQL aislado antes de integrar en `main`. No se ejecutan contra la base de producción. |
-| **Aprobación manual** | La etapa *Approve Delivery* detiene el pipeline hasta que un integrante aprueba la versión (máximo 30 minutos; si nadie responde, el build se aborta). Al aprobarla, la imagen se etiqueta como `electrolink-backend:release-candidate`. Llevarla a producción requiere además integrar `develop` en `main`. |
+| **Decisión de liberación manual** | Solo el *merge* de `develop` en `main`, hecho por el equipo, inicia una liberación. Queda registrado en el historial de git. |
+| **Aprobación manual de la versión** | La etapa *Approve Delivery* detiene el pipeline hasta que un integrante aprueba la versión construida (máximo 30 minutos; si nadie responde, el build se aborta). Jenkins registra quién aprobó (`Approved by`), y la imagen se etiqueta como `electrolink-backend:release-candidate`. |
 | **Reversión controlada** | Si un cambio falla en producción, se revierte el *merge* en `main` con `git revert` y se vuelve a publicar. |
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
-El pipeline de Jenkins agrega dos etapas de entrega después de las de integración continua descritas en 7.1.2:
+El pipeline de Jenkins agrega dos etapas de entrega después de las de integración continua descritas en 7.1.2. Además, `triggers` y `options` (sección 7.1.2) hacen que se ejecute solo ante cada cambio en `main` y de a un build a la vez.
 
 ```groovy
     stage('Build Docker Image') {
@@ -7083,25 +7103,52 @@ El pipeline de Jenkins agrega dos etapas de entrega después de las de integraci
     }
 ```
 
-El recorrido completo de un cambio, desde que se escribe hasta que queda listo para producción, tiene siete etapas:
+El recorrido completo de un cambio, desde que se escribe hasta que queda aprobado como candidato a liberación, tiene nueve etapas:
 
 | # | Etapa | Responsable | Qué ocurre | Criterio para avanzar |
 |---|---|---|---|---|
 | 1 | **Desarrollo en rama** | Integrante del equipo | Se trabaja en una rama `feature/*` creada desde `develop`, con *Conventional Commits*. | Cambio completo y probado localmente. |
 | 2 | **Integración en `develop`** | Equipo | La rama se integra en `develop` mediante *merge*. | Sin conflictos. |
-| 3 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
-| 4 | **Build Docker Image** | Jenkins | Construye la imagen con el `Dockerfile` del repositorio y la etiqueta con el número de build y `latest`. | Imagen construida sin errores. |
-| 5 | **Approve Delivery** | Integrante del equipo | El pipeline se detiene hasta que se aprueba la versión. Al aprobarla, la imagen se etiqueta como `release-candidate`. | Aprobación dentro de 30 minutos. |
-| 6 | **Archivo de evidencias** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Build terminado en verde. |
-| 7 | **Validación de integración y liberación** | Equipo | Se ejecutan las pruebas Karate contra el backend real y, si pasan, se libera la versión integrando `develop` en `main`. | Escenarios Karate aprobados y *merge* a `main`. |
+| 3 | **Validación de integración** | Equipo | Se ejecutan las pruebas Karate contra el backend real con PostgreSQL aislado (sección 6.1.2). | Escenarios Karate aprobados. |
+| 4 | **Decisión de liberación** | Equipo | Se integra `develop` en `main`. | *Merge* a `main`. |
+| 5 | **Detección del cambio** | Jenkins | El *polling* encuentra el commit nuevo en `main` e inicia el pipeline. | Dentro de 2 minutos. |
+| 6 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
+| 7 | **Build Docker Image** | Jenkins | Construye la imagen con el `Dockerfile` del repositorio y la etiqueta con el número de build y `latest`. | Imagen construida sin errores. |
+| 8 | **Approve Delivery** | Integrante del equipo | El pipeline se detiene hasta que se aprueba la versión. Al aprobarla, la imagen se etiqueta como `release-candidate`. | Aprobación dentro de 30 minutos. |
+| 9 | **Archivo de evidencias** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Build terminado en verde. |
 
-**[CAPTURAS PENDIENTES]** Vista de etapas de un build con *Build Docker Image* y *Approve Delivery*, el diálogo de aprobación y la salida de `docker image ls`.
+**Evidencia de ejecución: build #13**
+
+El build #13 se inició solo, sin intervención manual, después de integrar en `main` el commit `ci: disable concurrent builds so polling waits for pending approvals`. Jenkins registra la causa *"Ejecutado porque se detectaron cambios en el repositorio"* y el commit incluido:
+
+<img src="assets/img/cap7/jenkins-cd-changes.jpg" width="700"/>
+
+El registro de *polling* muestra cómo Jenkins comparó la última revisión construida (`1053830`) con la nueva cabeza de `main` (`37cef46`) y encontró cambios:
+
+<img src="assets/img/cap7/jenkins-poll-scm-log.jpg" width="700"/>
+
+Las etapas de integración continua y *Build Docker Image* terminaron en verde, y el pipeline se detuvo en *Approve Delivery* a la espera de la aprobación:
+
+<img src="assets/img/cap7/jenkins-cd-awaiting-approval.jpg" width="700"/>
+
+*Build Docker Image* construyó la imagen con el mismo `Dockerfile` que usa Render. La salida de `docker image ls` muestra las imágenes etiquetadas con el número de cada build y `latest`:
+
+<img src="assets/img/cap7/jenkins-cd-build-docker-image.jpg" width="700"/>
+
+Después de la aprobación, Jenkins registra quién aprobó (`Approved by admin`) y etiqueta la imagen como `release-candidate`:
+
+<img src="assets/img/cap7/jenkins-cd-approved.jpg" width="700"/>
+
+El build terminó con todas las etapas en verde en 1 minuto y 58 segundos. Las etapas de Maven y Docker reutilizan la caché de builds anteriores:
+
+<img src="assets/img/cap7/jenkins-cd-stages-success.jpg" width="700"/>
 
 **Limitaciones actuales**
 
 - No existe un entorno de *staging* separado: el paso siguiente a la validación local es producción.
-- Jenkins se ejecuta en un entorno local y no recibe *webhooks* de GitHub. Los builds se lanzan manualmente con *Construir ahora*.
-- La imagen aprobada queda en el Docker del equipo y no se publica en un registro. Render construye su propia imagen con el mismo `Dockerfile` (sección 7.3).
+- Jenkins se ejecuta en un entorno local y no recibe *webhooks* de GitHub. El *polling* agrega hasta dos minutos de espera antes de iniciar el pipeline.
+- La aprobación de *Approve Delivery* no bloquea el despliegue en Render, que se inicia con el mismo *push* a `main` (sección 7.3).
+- La imagen aprobada queda en el Docker del equipo y no se publica en un registro. Render construye su propia imagen con el mismo `Dockerfile`.
 
 ## 7.3. Continuous Deployment
 
@@ -7124,7 +7171,7 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 | Práctica | Cómo se aplica |
 |---|---|
 | **Despliegue disparado por Git** | Un *push* a la rama configurada en Render (`main`) inicia automáticamente la construcción y el despliegue de una nueva versión del backend. |
-| **Una rama de producción protegida por GitFlow** | Como `main` solo recibe cambios desde `develop`, lo que se despliega siempre pasó antes por el pipeline de Jenkins. |
+| **Una rama de producción alimentada por GitFlow** | `main` solo recibe cambios desde `develop`, después de la validación de integración con Karate. El mismo commit que Render despliega es el que Jenkins valida (sección 7.2). |
 | **Construcción de la imagen en la plataforma** | Render usa el `Dockerfile` del repositorio, con las mismas versiones de Java y Maven que Jenkins (JDK 21 y Maven 3.9). |
 | **Secretos como variables de entorno** | Las credenciales de la base de datos y el secreto JWT se configuran en la sección *Environment* de Render y no se guardan en el repositorio. |
 | **Puerto inyectado por la plataforma** | La aplicación usa la variable `PORT` que Render inyecta (`server.port=${PORT:8091}`) y escucha en `0.0.0.0`. |
@@ -7143,15 +7190,15 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 
 **Flujo completo hacia producción**
 
-1. El cambio se integra en `develop` y Jenkins lo valida (secciones 7.1 y 7.2).
+1. El cambio se integra en `develop` y se valida con las pruebas Karate contra el backend real (sección 6.1.2).
 2. El equipo integra `develop` en `main`.
-3. GitHub notifica a Render, que construye y despliega la nueva versión del backend.
-4. Se verifica la API en Swagger UI.
+3. Con el mismo *push* ocurren dos cosas en paralelo: GitHub notifica a Render, que construye y despliega la nueva versión, y Jenkins detecta el cambio por *polling* y ejecuta el pipeline de las secciones 7.1 y 7.2.
+4. Se verifica la API en Swagger UI y que el build de Jenkins de ese commit termine en verde. Si Jenkins falla, se revierte el *merge* en `main` con `git revert` y Render vuelve a desplegar la versión anterior.
 
 **Consideraciones**
 
-- La construcción de la imagen en Render omite las pruebas (`-DskipTests`) porque ya se ejecutaron en Jenkins sobre `develop`. La garantía de calidad depende de que `main` solo reciba cambios que pasaron por el pipeline.
-- El despliegue de producción lo inicia el *push* a `main`, no Jenkins. Integrar ambos, por ejemplo con un *webhook* de GitHub hacia Jenkins, queda como mejora futura.
+- La construcción de la imagen en Render omite las pruebas (`-DskipTests`). Las pruebas unitarias se ejecutan en Jenkins sobre el mismo commit, pero en paralelo al despliegue y no antes. Un defecto que solo detecte Jenkins puede llegar a producción durante unos minutos, hasta que se revierta. Por eso la validación previa con Karate en `develop` es importante.
+- El despliegue de producción lo inicia el *push* a `main`, no Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
 - `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
 
 **[CAPTURAS PENDIENTES]** Render: configuración del servicio (rama, entorno Docker) y registro del último despliegue. Netlify: registro del último despliegue. Swagger UI de producción.
