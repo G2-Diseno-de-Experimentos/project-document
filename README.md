@@ -185,6 +185,11 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
   - [7.3. Continuous Deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -7450,6 +7455,47 @@ El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication`
 Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los grupos de autenticación y calificaciones. La especificación publicada utiliza el título `Learning Platform API`.
 
 ![Swagger UI del backend desplegado en Render con los endpoints cargados](assets/img/cap7/swagger-produccion.png)
+
+## 7.4. Continuous Monitoring
+
+Para esta entrega se preparó un entorno local que observa la disponibilidad HTTP de la API publicada en Render. Reproduce las etapas de monitoreo, alerta y notificación de la estructura del grupo de referencia. La ejecución depende de que la computadora y Docker estén encendidos; por eso la evidencia corresponde a una demostración local y no a vigilancia permanente en la nube.
+
+### 7.4.1. Tools and Practices
+
+| Herramienta | Función en ElectroLink |
+|---|---|
+| **Docker Compose** | Inicia y conecta los componentes del entorno local. |
+| **Blackbox Exporter** | Envía una solicitud GET a la página pública de Swagger UI y registra si devuelve HTTP 200 y cuánto tarda. |
+| **Prometheus** | Consulta las métricas, conserva su historial y evalúa las reglas de alerta. |
+| **Grafana** | Presenta el estado actual y la evolución de disponibilidad y tiempo de respuesta. |
+| **Alertmanager** | Recibe las alertas de Prometheus y las entrega a un receptor HTTP local. |
+| **Receptor local** | Guarda y muestra los eventos de activación y resolución para comprobar el recorrido de la notificación. |
+
+La contraseña de administración de Grafana se configura en `observability/.env`, ignorado por Git. El dashboard, el origen de datos y las reglas se cargan desde archivos del proyecto. Se usa además un sitio local de demostración para provocar una caída controlada sin interrumpir la API real. [Render indica](https://render.com/docs/free) que un servicio gratuito puede tardar en responder tras un período de inactividad; la comprobación admite hasta 90 segundos y la alerta de la API exige diez minutos de fallos sostenidos.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El flujo es **URL pública de Render → Blackbox Exporter → Prometheus → Grafana**. Prometheus comprueba `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` cada cinco minutos. El panel principal muestra la métrica `probe_success`: 1 significa que la solicitud observada devolvió HTTP 200; 0 significa que esa comprobación falló. Otros paneles muestran el historial de disponibilidad y duración, junto con el estado del servicio local de demostración.
+
+En la ejecución del 11/11/2026, Prometheus registró `probe_success = 1` para la URL pública. Este chequeo confirma el acceso HTTP a Swagger UI desde la computadora de prueba; no comprueba la conexión con PostgreSQL ni un flujo autenticado con JWT.
+
+![Dashboard local de Grafana con disponibilidad y duración de las comprobaciones HTTP](assets/img/cap7/grafana-disponibilidad.png)
+
+### 7.4.3. Alerting Pipeline Components
+
+Prometheus evalúa `ElectroLinkApiUnavailable` cuando la comprobación pública falla durante diez minutos consecutivos. Para verificar la cadena de forma segura, `DemoEndpointUnavailable` se activa si el sitio local permanece inaccesible durante treinta segundos. Alertmanager recibe la alerta y la entrega al receptor local mediante un webhook. La regla distingue un fallo observado de su causa: si la comprobación falla, corresponde revisar Render, la red y los registros antes de atribuir el problema al backend.
+
+La prueba de demostración consistió en detener `demo-site` con `docker compose stop demo-site`, observar la alerta activa y restaurarlo con `docker compose start demo-site`.
+
+![Reglas de Prometheus durante la demostración de la alerta](assets/img/cap7/prometheus-alertas.png)
+
+### 7.4.4. Notification Pipeline Components
+
+Alertmanager envía al receptor HTTP local los eventos `firing` y `resolved`. El receptor los conserva en un volumen de Docker y los presenta en `http://localhost:8089`. La evidencia confirma la entrega dentro del entorno local. En esta entrega no se configuró correo, Slack ni otro aviso a personas fuera de la computadora; para lograr notificaciones permanentes haría falta un destino del equipo y una instalación que siga encendida.
+
+![Eventos de activación y resolución recibidos por el receptor local](assets/img/cap7/notificaciones-locales.png)
+
+Para repetir la demostración, iniciar Docker Desktop y ejecutar `docker compose up -d` dentro de `observability`; abrir Grafana en `http://localhost:3000`, Prometheus en `http://localhost:9090` y el receptor en `http://localhost:8089`. La configuración y los pasos detallados están en `observability/README.md` del repositorio del backend.
 
 <div style="page-break-after: always;"></div>
 
