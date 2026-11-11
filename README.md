@@ -6220,43 +6220,43 @@ Las pruebas unitarias de Monitoring cubren los cuatro Command Services y los tre
 
 **Evidencia de ejecución (IntelliJ IDEA)**
 
-Las siguientes capturas muestran ejecuciones reales en IntelliJ: **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los resultados originales por clase también están en los archivos Surefire enlazados arriba.
+Las capturas originales de IntelliJ IDEA se recortaron para excluir el cursor. El panel Run muestra **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los recortes conservan los totales; el desglose completo por clase está en los reportes de Maven Surefire enlazados arriba.
 
 Resumen de los cuatro Command Services (19 pruebas):
 
-<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ: 19 pruebas Command de Monitoring aprobadas"/>
+<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ IDEA: 19 pruebas Command de Monitoring aprobadas"/>
 
 `ServiceOperationCommandServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
 
 `RatingCommandServiceImplTest` — 7 pruebas:
 
-<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ IDEA: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
 
 `ReportCommandServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
 
 `ReportPhotoCommandServiceImplTest` — 2 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
 
 Resumen de los tres Query Services (13 pruebas):
 
-<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ: 13 pruebas Query de Monitoring aprobadas"/>
+<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ IDEA: 13 pruebas Query de Monitoring aprobadas"/>
 
 `ServiceOperationQueryServiceImplTest` — 4 pruebas:
 
-<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
 
 `ReportQueryServiceImplTest` — 4 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
 
 `RatingQueryServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
 
 **Límite de esta evidencia:** los repositorios simulados permiten comprobar las decisiones de los servicios, pero no prueban la persistencia JPA, los controladores ni las respuestas HTTP. La ejecución de `mvn test` sobre toda la suite devolvió 1 error en la prueba preexistente `ElectrolinkPlatformApplicationTests` porque no estaba definido `DB_URL`; ese error no corresponde a las 32 unitarias de Monitoring.
 
