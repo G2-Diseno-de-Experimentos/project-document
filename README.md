@@ -7431,6 +7431,22 @@ La captura de *Environment* muestra los nombres de las variables con sus valores
 - `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
 - El endpoint de filess.io usado en la demostración rechaza TLS. La conexión usa `sslmode=prefer` y la base está reservada para datos ficticios.
 
+El 11/11/2026, Render desplegó el commit `37cef46` tras una actualización de las variables de entorno. El despliegue quedó en estado **Live**.
+
+![Render muestra el despliegue del commit 37cef46 en estado Live](assets/img/cap7/render-deploy-events.png)
+
+En ese mismo despliegue, Render obtuvo el código de `main` y cargó el `Dockerfile`. El paso `mvn -B -DskipTests package` aparece como **CACHED**. Docker reutilizó esa capa y exportó la imagen antes de iniciar el despliegue del contenedor.
+
+![Render obtiene el commit 37cef46 de main y carga el Dockerfile](assets/img/cap7/render-docker-build.png)
+
+![Docker reutiliza la capa con el paquete de Maven](assets/img/cap7/render-docker-maven-cache.png)
+
+![Render exporta la imagen de Docker e inicia el despliegue](assets/img/cap7/render-docker-export.png)
+
+El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication` a las 03:15:38 (hora de Lima) y que Tomcat escucha en el puerto `10000`.
+
+![Registro de arranque de Spring Boot y Tomcat en Render](assets/img/cap7/render-deploy-logs.png)
+
 <div style="page-break-after: always;"></div>
 
 # Capitulo VIII: Experiment-Driven-Development
