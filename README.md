@@ -7459,32 +7459,13 @@ Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los gr
 
 ### 8.1.1. As-Is Summary.
 
-Esta sección presenta la recolección inicial del material bruto que constituye el punto
-de partida del trabajo, enfocándose estrictamente en el objetivo de generar preguntas de
-investigación, en contraste con la propuesta prematura de soluciones.
+ElectroLink es una plataforma digital orientada a conectar propietarios de viviendas y pequeñas y medianas empresas con proveedores de servicios eléctricos certificados. Su propuesta de valor se centra en facilitar la contratación de profesionales, mejorar la confianza durante la selección de proveedores y proporcionar herramientas para gestionar los servicios eléctricos.
 
-Por un lado, desde la perspectiva de Propietarios de viviendas y administradores de
-PYMES experimentan una incidencia o necesidad de mantenimiento eléctrico y siente la
-urgencia de resolverla. Para hacer algo al respecto, busca entre consejos caseros y
-recomendaciones empíricas en redes sociales, se informa superficialmente sobre
-reparaciones, sigue pautas de internet mientras se pregunta si
-podrá encontrar a un especialista calificado que pueda entender la gravedad del problema
-de manera segura, y experimenta constantes dudas sobre si la instalación quedará óptima
-y duradera. Finalmente, ante la incertidumbre, decide buscar soporte especializado,
-recurriendo a contactos informales o llamadas a ciegas para contratar a un técnico,
-exponiéndose a sobrecostos y falta de garantías formales.
+Actualmente, cotemplamos funcionalidades relacionadas a la administración de profiles, propiedades en inventario, solucitudes y gestión de servicios, programación de actividades, seguimiento de servicios y evaluación del servicio recibido. Sin embargo, nuestro producto no considero el desarrollo como herramienta preventiva y proactiva para la gestión del comportamiento eléctrico. 
 
-Desde la perspectiva del Técnicos electricistas y contratistas reciben una solicitud de
-servicio imprevista; primero acude al lugar o evalúa verbalmente el panorama para
-formarse una idea de la avería, corrobora el diagnóstico según su experiencia empírica y
-los repuestos disponibles mientras piensa que es indispensable que los clientes
-prioricen instalaciones eléctricas seguras y reglamentarias. Logra identificar la falla
-y proponer una cotización o intervención para solucionar el problema; sin embargo, en
-este punto se cuestiona si el cliente aceptará el presupuesto o si contará con los
-componentes adecuados en su inventario para finalizar el trabajo sin retrasos.
-Finalmente, acuerda de forma manual o verbal una futura visita de seguimiento o
-mantenimiento preventivo, mientras asume que esta forma tradicional de coordinar
-servicios es poco eficiente y carece de trazabilidad digital.
+Por un lado, desde la perspectiva de los propietarios de viviendas y las PYMES, la gestión eléctrica suele adquirir mayor importancia cuando se presenta una avería, interrupción del servicio o comportamiento irregular en sus instalaciones. Ante esta situación, deben identificar el origen del problema, buscar un técnico capacitado y asumir los costos asociados a la reparación. Mientras tanto, pueden experimentar interrupciones en sus actividades cotidianas o productivas, gastos imprevistos y dificultades para determinar si existían señales previas que hubieran permitido anticiparse al inconveniente. Esto genera incertidumbre respecto al estado de sus instalaciones y limita su capacidad para tomar decisiones preventivas.
+
+Por otro lado, desde la perspectiva de los técnicos electricistas, atender una instalación cuando la falla ya se ha manifestado puede representar mayores dificultades durante el diagnóstico y la intervención. El profesional debe identificar las posibles causas del problema, evaluar el estado de los componentes involucrados y determinar las acciones correctivas necesarias. Además, cuando no existe un historial organizado del comportamiento eléctrico de la instalación, dispone de menos información para comprender su evolución y reconocer posibles antecedentes del inconveniente. Esto puede incrementar la complejidad del diagnóstico y dificultar la planificación de intervenciones preventivas.
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims.
 
@@ -7492,87 +7473,76 @@ servicios es poco eficiente y carece de trazabilidad digital.
 
 - Business Outcomes:
 
-  - Mejorar la seguridad y la confianza de los propietarios en la contratación de servicios eléctricos en un 30%.
-  - Aumentar la satisfacción de los usuarios al brindarles una opción rápida (en menos de 15 minutos para emergencias) y directa a través de la aplicación.
-  - Fortalecer la reputación y la credibilidad de ElectroLink en un 25% al demostrar un enfoque riguroso en la certificación y trazabilidad de los técnicos.
-  - Aumentar o mantener en un 10% la cantidad de usuarios activos recurrentes dentro de la plataforma.
-  - Captar y gestionar al menos el 80% de las incidencias o solicitudes de emergencia eléctrica de nuestros segmentos objetivo.
+  - Los propietarios de negocios con más de una sede podrían encontrar valor adicional en la posibilidad de comparar el comportamiento eléctrico de sus instalaciones.
+  - La introducción de una herramienta de seguimiento preventivo e historial incrementará la tasa de conversión de solicitudes de servicios correctivos a preventivos en al menos un 15% dentro del primer trimestre de lanzamiento.
 
 - Propietarios / PYMES:
 
-  - Los clientes se podrían sentir más seguros al saber que tienen acceso directo a un sistema de verificación de credenciales y un flujo de contratación guiado (Wizard).
-  - Los clientes podrían valorar la conveniencia de poder contactar rápidamente a un electricista certificado en situaciones de averías críticas.
-  - Los clientes se sentirían más respaldados y apoyados al recibir una respuesta rápida, transparente y eficiente cuando se encuentren en una situación eléctricamente complicada para ellos.
+  - Los propietarios de viviendas y responsables de PYMES tienen dificultades para reconocer variaciones relevantes en el comportamiento eléctrico de sus instalaciones antes de que se manifieste una falla.
+  - Los usuarios estarían interesados en consultar un historial de consumo eléctrico para comprender mejor el comportamiento de sus instalaciones.
+  - La presentación visual de datos históricos facilitaría la identificación de variaciones de consumo frente a la consulta de lecturas aisladas.
 
 - Technician:
 
-  - Los técnicos podrían necesitar una herramienta digital o mecanismo que les permita gestionar de manera oportuna y adecuada sus zonas de cobertura y catálogos de componentes durante las emergencias de sus clientes.
-  - Los técnicos podrían apreciar la oportunidad de poder ofrecer apoyo inmediato a sus clientes en momentos críticos y captar ingresos recurrentes mediante suscripciones estructuradas.  
+  - Los técnicos electricistas podrían realizar una evaluación inicial más contextualizada si disponen de información histórica de la instalación.
 
 **User Outcomes**
 
 - Propietarios / PYMES:
 
-  - Acceso rápido a ayuda y apoyo en situaciones de emergencia eléctrica.
-  - Sensación de seguridad y respaldo al contar con perfiles verificados y opciones de emergencia en la aplicación.
-  - Atención oportuna y adecuada por parte de los profesionales electricistas certificados.
+  - La consulta de un historial de consumo permite a los propietarios comprender mejor el comportamiento eléctrico de sus instalaciones (Evaluar si los usuarios interpretan correctamente información histórica y comparativa).
+  - Las alertas sobre variaciones relevantes ayudan a los usuarios a reconocer cuándo una instalación requiere atención.
+  - Los responsables de PYMES con varias sedes encuentran valor en supervisar el comportamiento eléctrico de sus instalaciones desde un mismo espacio.
 
 - Technician:
-
-  - Capacidad para ofrecer apoyo inmediato a los clientes en situaciones de crisis o averías urgentes.
-  - Mayor eficiencia en la respuesta y atención a emergencias eléctricas de los clientes.
-  - Mejor calidad de servicio al brindar atención personalizada y oportuna en momentos críticos.
+  
+  - La disponibilidad de información histórica aporta contexto útil a los técnicos electricistas durante una evaluación
+  - El tiempo medio de diagnóstico de una avería eléctrica puede reducirse en al menos un 25% si el técnico cuenta con acceso previo al historial estructurado de la instalación.
 
 - Knowledge Gaps:
 
-  - No sabemos con exactitud cuándo un propietario o administrador de PYME sufrirá una avería eléctrica crítica que requiera asistencia de emergencia.
-  - No sabemos si todos nuestros usuarios cuentan con una red de soporte técnico o criterios claros para identificar fallas de alto riesgo eléctrico.
-  - No sabemos las circunstancias o patrones exactos que pueden provocar estas crisis eléctricas a cada uno de nuestros usuarios.
-  - Desconocemos las medidas específicas que se tomarán por parte de los técnicos electricistas al recibir una alerta de servicio rápido desde la plataforma.
+  - Se desconoce qué indicadores eléctricos resultan más comprensibles y útiles para los propietarios de viviendas y responsables de PYMES.
+  - No se conoce si los usuarios pueden identificar por sí mismos variaciones relevantes a partir de un historial de consumo.
+  - Se desconoce qué frecuencia de consulta tendría una herramienta de seguimiento del comportamiento eléctrico.
+  - No se ha determinado qué tipo de alerta sería considerada útil y en qué circunstancias podría generar notificaciones innecesarias.
+  - No se ha validado si los técnicos electricistas consideran útil disponer de un historial de consumo y eventos anteriores durante el diagnóstico de una instalación.
+  - No se ha determinado si la gestión de múltiples instalaciones constituye una necesidad prioritaria para los propietarios de PYMES.
 
 - Ideas
 
-  - Implementar un acceso directo tipo asistente guiado (Wizard) en el que el usuario pueda recibir ayuda y asistencia técnica inmediata en alguna emergencia o crisis eléctrica.
-  - Que no haya necesidad de pasar por procesos manuales complejos de cotización y esperar a que se concrete la asignación del especialista.
-  - Será de fácil acceso porque en momentos de crisis o averías imprevistas no siempre se puede pensar con claridad como para acordarse en dónde está la opción.
+  - Historial de consumo eléctrico por propiedad o instalación, permitir que el usuario consulte el comportamiento eléctrico registrado a lo largo del tiempo.
+  - Gráficos comparativos de consumo por períodos, facilitar la interpretación de variaciones respecto a períodos anteriores.
+  - Alertas ante variaciones que superen determinados umbrales, comunicar oportunamente condiciones que merezcan revisión.
+  - Vista consolidada de múltiples propiedades o sedes, facilitar la supervisión de instalaciones pertenecientes a una misma organización.
+  - Registro de eventos e incidencias eléctricas, relacionar los eventos reportados con el historial de una instalación.
 
 - Claims
 
-  - *"Me siento desprotegido y solo, cuando tengo una emergencia eléctrica urgente."*
-  - *"No me gusta esperar horas o días hasta que un electricista responda cuando tengo algo que solucionar inmediatamente."*
-  - *"Me genera angustia y ansiedad el no recibir ayuda rápida y confiable cuando la necesito para mi hogar o local comercial."*
+  - La consulta de un historial de consumo permite a los propietarios comprender mejor el comportamiento eléctrico de sus instalaciones.
+  - La presentación visual de variaciones facilita la identificación de comportamientos eléctricos inusuales.
+  - La disponibilidad de información histórica aporta contexto útil a los técnicos electricistas durante una evaluación.
+  - La posibilidad de solicitar una evaluación profesional a partir de una variación identificada complementa la propuesta de valor de ElectroLink.
 
 ## 8.1.3. Experiment-Ready Questions.
 
-Esta sección presentamos el método de las **5W y 2H** para el desarrollo de las preguntas para el desarrollo de la experimentación:
+A partir de las suposiciones, brechas de conocimiento, ideas y afirmaciones recopiladas, se formulan preguntas orientadas a reducir la incertidumbre sobre la extensión preventiva y proactiva de ElectroLink. Por ello, presentamos el método de las **5W y 2H** para el desarrollo de las preguntas para el desarrollo de la experimentación:
 
-- 1. Who 
-  * **Pregunta 1:** ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos?
-  * **Pregunta 2:** ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura?
-
-- 2. What 
-  * **Pregunta 3:** ¿Qué elementos visuales y de interacción del asistente guiado reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional?
-  * **Pregunta 4:** ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico?
-
-- 3. Where 
-  * **Pregunta 5:** ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico?
-  * **Pregunta 6:** ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia?
-
-- 4. When 
-  * **Pregunta 7:** ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES?
-  * **Pregunta 8:** ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas?
-
-- 5. Why 
-  * **Pregunta 9:** ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico?
-  * **Pregunta 10:** ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma?
-
-- 6. How 
-  * **Pregunta 11:** ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales?
-  * **Pregunta 12:** ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final?
-
-- 7. How Much 
-  * **Pregunta 13:** ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal?
-  * **Pregunta 14:** ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización?
+| ID | Enfoque | Pregunta |
+|:---:|:---:|:--- |
+| Q01 | What / How | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| Q02 | Why | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| Q03 | Who | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| Q04 | Where | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| Q05 | When | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| Q06 | How | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| Q07 | How Much | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| Q08 | What / How | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| Q09 | Who / How | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| Q10 | What / Why | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| Q11 | How | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| Q12 | How | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| Q13 | How Much | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| Q14 | When / How | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
 
 ## 8.1.4. Question Backlog.
 
@@ -7582,180 +7552,195 @@ Esta sección presenta el backlog como una lista priorizada de preguntas para la
 
 | Question | Confidence | Risk | Impact | Interest | Total Score |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? | 6 | 7 | 8 | 7 | **28** |
-| ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? | 7 | 6 | 7 | 6 | **26** |
-| ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? | 7 | 5 | 9 | 8 | **29** |
-| ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? | 6 | 6 | 8 | 7 | **27** |
-| ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? | 8 | 5 | 7 | 6 | **26** |
-| ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? | 5 | 7 | 8 | 7 | **27** |
-| ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? | 5 | 6 | 7 | 6 | **24** |
-| ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? | 6 | 4 | 6 | 5 | **21** |
-| ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? | 8 | 3 | 7 | 9 | **27** |
-| ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? | 7 | 5 | 8 | 8 | **28** |
-| ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? | 7 | 4 | 7 | 7 | **25** |
-| ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? | 6 | 6 | 8 | 7 | **27** |
-| ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? | 5 | 7 | 7 | 6 | **25** |
-| ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? | 6 | 6 | 9 | 8 | **29** |
+| ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? | 7 | 6 | 9 | 8 | **30** |
+| ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? | 8 | 5 | 7 | 7 | **27** |
+| ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? | 6 | 7 | 8 | 7 | **28** |
+| ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? | 7 | 5 | 7 | 6 | **25** |
+| ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? | 7 | 6 | 8 | 8 | **29** |
+| ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? | 6 | 5 | 7 | 7 | **25** |
+| ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? | 5 | 7 | 7 | 6 | **25** |
+| ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? | 7 | 6 | 9 | 8 | **30** |
+| ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? | 6 | 6 | 8 | 7 | **27** |
+| ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? | 7 | 5 | 8 | 7 | **27** |
+| ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? | 6 | 6 | 8 | 7 | **27** |
+| ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? | 7 | 6 | 9 | 8 | **30** |
+| ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? | 6 | 5 | 7 | 6 | **24** |
+| ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? | 5 | 7 | 8 | 7 | **27** |
 
+---
 
 - Matriz de Priorización de Preguntas
 
 | Prioridad (1/2/3/5/8) | Pregunta |
 | :---: | :--- |
-| **8** | ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? |
-| **8** | ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? |
-| **8** | ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? |
-| **8** | ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? |
-| **5** | ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? |
-| **5** | ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? |
-| **5** | ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? |
-| **5** | ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? |
-| **5** | ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? |
-| **5** | ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? |
-| **3** | ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? |
-| **3** | ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? |
-| **3** | ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? |
-| **2** | ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? |
+| **8** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **8** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **8** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **8** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **5** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **5** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **5** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **5** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **5** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variation inusual en el comportamiento eléctrico de su instalación? |
+| **5** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **3** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **3** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **3** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **2** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
 
 ### 8.1.5. Experiment Cards.
 
-#### Tarjeta de Experimento 1
+Tarjeta de Experimento 1
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Quiénes son los usuarios específicos dentro del segmento de propietarios y PYMES que presentan mayor resistencia a utilizar canales digitales y prefieren la contratación informal de técnicos? |
-| **Why** | <ul><li>Identificar los perfiles demográficos y comportamentales que muestran mayor fricción o desconfianza hacia la adopción de plataformas digitales en el sector eléctrico.</li><li>Comprender las motivaciones profundas que impulsan a este grupo a seguir prefiriendo la contratación informal frente a servicios formalizados.</li><li>Diseñar estrategias de comunicación y propuestas de valor personalizadas para mitigar esta resistencia y fomentar la migración hacia ElectroLink.</li></ul> |
-| **What** | <ul><li>Realizar entrevistas en profundidad y sesiones de observación con usuarios de viviendas y administradores de PYMES identificados con baja adopción tecnológica.</li><li>Analizar patrones de comportamiento en la landing page mediante métricas de abandono y puntos de fricción en los formularios iniciales.</li><li>Implementar un cuestionario cualitativo rápido para captar los motivos exactos de abandono del flujo digital.</li></ul> |
-| **Hypothesis** | Se espera que la identificación detallada de los factores de resistencia permita clasificar a los usuarios reticentes y adaptar los mensajes de confianza en la landing page, incrementando en al menos un 20% la tasa de retención de visitantes primerizos hacia el flujo de registro. |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Why** | <ul><li>Evaluar cuantitativa y cualitativamente si el formato visual comparativo acelera y facilita la detección de anomalías frente al uso de tablas de datos numéricos aislados.</li><li>Comprender la comprensión cognitiva de los usuarios ante diferentes esquemas de visualización de métricas eléctricas.</li><li>Optimizar el diseño de la interfaz analítica para reducir la fatiga de lectura y mejorar la toma de decisiones preventivas.</li></ul> |
+| **What** | <ul><li>Implementar una prueba A/B exponiendo a un grupo de usuarios a tablas numéricas convencionales (Variante A) y a otro grupo a gráficos comparativos de consumo (Variante B).</li><li>Registrar métricas analíticas de tiempo medio de respuesta y tasa de acierto en la detección de un pico anómalo insertado en los datos.</li><li>Aplicar encuestas breves de usabilidad y satisfacción tras la interacción con ambas interfaces.</li></ul> |
+| **Hypothesis** | Se espera que la presentación visual de gráficos comparativos reduzca de forma estadísticamente significativa el tiempo de identificación de anomalías y aumente la precisión de los propietarios frente a una tabla convencional. |
 
 ---
 
-#### Tarjeta de Experimento 2
+Tarjeta de Experimento 2
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Quiénes son los técnicos electricistas con mayor probabilidad de abandonar la plataforma si se les exige una actualización constante de su inventario y zonas de cobertura? |
-| **Why** | <ul><li>Evaluar el impacto operativo y la carga de trabajo que perciben los profesionales al mantener al día sus datos de disponibilidad y stock de componentes.</li><li>Comprender el umbral de tolerancia de los técnicos frente a procesos administrativos exigidos dentro de la aplicación móvil.</li><li>Identificar los perfiles de técnicos más propensos a la deserción por exigencias de control operativo.</li></ul> |
-| **What** | <ul><li>Monitorear la frecuencia y constancia de actualización de inventarios y zonas de cobertura en un grupo piloto de técnicos durante sus primeras tres semanas de uso.</li><li>Realizar entrevistas de seguimiento con los profesionales que presenten menor actividad en la gestión de sus perfiles.</li><li>Recopilar retroalimentación sobre las dificultades operativas encontradas en el módulo de gestión técnica.</li></ul> |
-| **Hypothesis** | Se espera que los técnicos independientes con alta carga de servicios en campo sean los más propensos a descuidar la actualización de su inventario, requiriendo la automatización de alertas y notificaciones para prevenir su abandono de la plataforma. |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Why** | <ul><li>Descubrir los detonantes comportamentales y psicológicos que motivan el uso recurrente de herramientas de seguimiento energético.</li><li>Comprender si el motor de consulta responde a la optimización de gastos, la prevención de fallas o la curiosidad operativa.</li><li>Alinear las propuestas de valor de la interfaz de usuario con las verdaderas expectativas de consulta del cliente.</li></ul> |
+| **What** | <ul><li>Realizar diarios de uso simulados y entrevistas de seguimiento con usuarios piloto tras interactuar durante una semana con un prototipo de historial de consumo.</li><li>Categorizar las motivaciones expresadas durante las sesiones de retroalimentación según su frecuencia e intensidad emocional.</li><li>Identificar las funcionalidades del historial que generan mayor retención de consulta.</li></ul> |
+| **Hypothesis** | Se espera que el control y reducción del gasto económico mensual constituya el principal motor de consulta periódica para más del 60% de los usuarios, seguido de cerca por el temor a daños imprevistos en equipos. |
 
 ---
 
-#### Tarjeta de Experimento 3
+Tarjeta de Experimento 3
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Qué elementos visuales y de interacción del asistente guiado (Wizard) reducen de manera efectiva la tasa de rebote en comparación con un formulario estático tradicional? |
-| **Why** | <ul><li>Evaluar la efectividad del asistente guiado por pasos (Wizard) implementado en las historias de usuario para disminuir la carga cognitiva del usuario.</li><li>Comprender cómo la segmentación visual de la información influye en la decisión del cliente de completar una solicitud de servicio.</li><li>Identificar mejoras de usabilidad y diseño de interfaz para optimizar el flujo principal de conversión de la aplicación web.</li></ul> |
-| **What** | <ul><li>Implementar un test A/B en el entorno web exponiendo a un grupo de usuarios a un formulario estático tradicional (Variante A) y a otro grupo al asistente guiado por pasos (Variante B).</li><li>Registrar y medir analíticamente la tasa de conversión, el tiempo promedio de completado y la tasa de rebote en ambas variantes.</li><li>Recopilar opiniones cualitativas mediante breves encuestas de satisfacción posteriores a la interacción.</li></ul> |
-| **Hypothesis** | Se espera que la implementación del asistente guiado por pasos (Wizard) proporcione a los usuarios una experiencia de solicitud más intuitiva y desglosada, reduciendo la tasa de rebote y superando en al menos un 15% la conversión del formulario tradicional. |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Why** | <ul><li>Identificar los perfiles operativos, de riesgo y de costos que impulsan a un grupo específico a priorizar el monitoreo proactivo frente a la reacción tradicional.</li><li>Segmentar adecuadamente las estrategias de comunicación y comercialización de las nuevas extensiones de servicio.</li><li>Optimizar el enfoque de diseño según las prioridades particulares de hogares versus negocios comerciales.</li></ul> |
+| **What** | <ul><li>Aplicar cuestionarios de segmentación y entrevistas semiestructuradas a una muestra mixta de propietarios residenciales y gestores de PYMES.</li><li>Cruzar las variables de tamaño de la instalación, costos energéticos asumidos e historial de incidencias previas con el nivel de interés manifestado en el monitoreo.</li><li>Analizar estadísticamente qué variables determinan una mayor propensión hacia la prevención.</li></ul> |
+| **Hypothesis** | Se espera demostrar que los responsables de PYMES con costos operativos sensibles presentan un interés de supervisión preventiva un 35% mayor que los propietarios residenciales, impulsados por el riesgo de interrupción de su actividad comercial. |
 
 ---
 
-#### Tarjeta de Experimento 4
+Tarjeta de Experimento 4
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Qué nivel de precisión esperan los propietarios en el presupuesto inicial generado por el sistema antes de confirmar la solicitud de un servicio eléctrico? |
-| **Why** | <ul><li>Determinar el grado de confiabilidad que los clientes otorgan a las cotizaciones automatizadas estimadas por la plataforma antes de aceptar la visita de un técnico.</li><li>Comprender el impacto que tiene una discrepancia entre el presupuesto preliminar y el costo final de la reparación en la satisfacción del usuario.</li><li>Establecer los márgenes de tolerancia aceptados por el mercado para evitar rechazos de servicios por presupuestos imprecisos.</li></ul> |
-| **What** | <ul><li>Desplegar un cotizador estimado basado en catálogos de servicios estandarizados dentro del flujo de solicitud de la aplicación web.</li><li>Registrar las desviaciones porcentuales entre el presupuesto preliminar emitido por la plataforma y el costo real reportado por el técnico tras la revisión presencial.</li><li>Aplicar encuestas de satisfacción enfocadas en la transparencia y precisión de precios a los clientes que completen el servicio.</li></ul> |
-| **Hypothesis** | Se espera que los propietarios acepten un margen de variación presupuestal de hasta un 15% entre la estimación digital y el costo final, siempre y cuando se detallen con claridad los conceptos y componentes eléctricos involucrados en la cotización. |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Why** | <ul><li>Identificar los nichos de infraestructura donde la trazabilidad histórica aporta mayor valor preventivo y económico.</li><li>Focalizar los esfuerzos de despliegue inicial de la extensión en aquellos espacios con mayor criticidad operativa.</li><li>Optimizar la comunicación de los casos de uso más exitosos para la plataforma.</li></ul> |
+| **What** | <ul><li>Analizar la correlación entre la complejidad de las instalaciones (viviendas antiguas, talleres artesanales, comercios de alta demanda) y la utilidad percibida del historial mediante paneles de expertos y entrevistas a administradores.</li><li>Evaluar escenarios de riesgo de sobrecarga según el tipo de carga instalada.</li><li>Categorizar las instalaciones según su grado de dependencia del suministro eléctrico continuo.</li></ul> |
+| **Hypothesis** | Se espera que los talleres artesanales y comercios minoristas con maquinaria sensible identifiquen un valor crítico en la información histórica, superando la utilidad percibida en viviendas residenciales estándar. |
 
 ---
 
-#### Tarjeta de Experimento 5
+Tarjeta de Experimento 5
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿En qué sección exacta de la interfaz web y móvil interactúan con mayor frecuencia los usuarios al momento de validar las credenciales de certificación del técnico? |
-| **Why** | <ul><li>Identificar los elementos de confianza más relevantes para el cliente al momento de evaluar la idoneidad y seguridad de un profesional.</li><li>Comprender el recorrido visual y los puntos de interés (*heatmaps*) dentro del perfil detallado del técnico.</li><li>Optimizar la arquitectura de información y la jerarquía visual de los distintivos de certificación profesional.</li></ul> |
-| **What** | <ul><li>Instalar herramientas de análisis de comportamiento de UI y mapas de calor (*heatmaps* y grabaciones de sesión) en la vista de perfiles de técnicos.</li><li>Rastrear los clics e interacciones directas sobre las insignias de certificación, calificaciones y comentarios de otros clientes.</li><li>Analizar el tiempo de permanencia en las secciones de credenciales legales y antecedentes del especialista.</li></ul> |
-| **Hypothesis** | Se espera que los usuarios interactúen primordialmente con las insignias de certificación oficial y el puntaje de reseñas en los primeros cinco segundos de visualización del perfil, confirmando que estos elementos son determinantes en la decisión de contratación. |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Why** | <ul><li>Determinar los umbrales de sensibilidad y las circunstancias en las que una notificación automatizada aporta valor real sin generar fatiga de alertas.</li><li>Comprender qué niveles de desviación en el consumo activan una preocupación genuina en propietarios de viviendas y administradores de PYMES.</li><li>Evitar la saturación de notificaciones innecesarias que provoquen el rechazo o desactivación de las alertas de la plataforma.</li></ul> |
+| **What** | <ul><li>Conducir entrevistas en profundidad y sesiones de evaluación con mockups de notificaciones móviles configuradas con diferentes porcentajes de variación (+15%, +30%, +50%).</li><li>Evaluar la percepción de utilidad y urgencia de los usuarios ante diversos escenarios de anomalías energéticas simuladas.</li><li>Identificar el rango de sensibilidad óptimo consensuado por los segmentos evaluados.</li></ul> |
+| **Hypothesis** | Se espera que los usuarios consideren útiles las alertas únicamente cuando el desvío porcentual supera un umbral crítico de su media histórica y se acompaña de una recomendación de acción clara. |
 
 ---
 
-#### Tarjeta de Experimento 6
+Tarjeta de Experimento 6
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿En qué puntos geográficos o distritos urbanos se concentran las mayores brechas de tiempo en la asignación de técnicos para servicios de emergencia? |
-| **Why** | <ul><li>Detectar ineficiencias logísticas y desbalance de oferta y demanda de especialistas eléctricos según las zonas de cobertura urbana.</li><li>Comprender el impacto de la dispersión geográfica en los tiempos de respuesta ante solicitudes urgentes de propietarios y PYMES.</li><li>Planificar estrategias de atracción y retención de técnicos en distritos críticos con alta demanda insatisfecha.</li></ul> |
-| **What** | <ul><li>Analizar los registros de tiempo de respuesta y asignación de solicitudes (*timestamps* de backend) segmentados por distrito de origen.</li><li>Cruzar los datos de ubicación de las solicitudes de emergencia con la densidad de técnicos activos registrados en cada zona geográfica.</li><li>Generar un mapa de calor operativo para visualizar las brechas de cobertura de la red de especialistas.</li></ul> |
-| **Hypothesis** | Se espera identificar al menos dos distritos periféricos con tiempos de asignación superiores al promedio general de la plataforma, lo que validará la necesidad de incentivar la incorporación de técnicos en dichas zonas geográficas. |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Why** | <ul><li>Comprender el modelo mental que emplean los usuarios no técnicos al analizar datos evolutivos de su consumo eléctrico.</li><li>Detectar qué términos, métricas o referencias comparativas facilitan una interpretación correcta sin caer en confusiones.</li><li>Mejorar el diseño de las leyendas explicativas y la interfaz de análisis dentro de la plataforma.</li></ul> |
+| **What** | <ul><li>Conducir sesiones de observación y análisis de protocolos concurrentes (*think-aloud testing*) mientras los usuarios examinan gráficos comparativos históricos.</li><li>Registrar las expresiones, dudas y conclusiones verbalizadas por los participantes al interpretar diferentes variaciones de consumo simuladas.</li><li>Evaluar la precisión de sus deducciones frente a la realidad de los datos presentados.</li></ul> |
+| **Hypothesis** | Se espera que los usuarios dependan principalmente de comparativas directas con el mes anterior y el mismo mes del año previo para interpretar una variación, requiriendo apoyos textuales breves para comprender fluctuaciones porcentuales complejas. |
 
 ---
 
-#### Tarjeta de Experimento 7
+Tarjeta de Experimento 7
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿En qué momento del flujo de contratación (inicio, llenado de datos o confirmación de pago) se registra el mayor porcentaje de abandono por parte de los administradores de PYMES? |
-| **Why** | <ul><li>Localizar el punto crítico exacto de fricción y abandono dentro del proceso de contratación de servicios corporativos.</li><li>Comprender si la solicitud de datos detallados del local comercial o los métodos de pago generan desconfianza o fatiga de formularios en las PYMES.</li><li>Simplificar las etapas del embudo de conversión orientadas a clientes corporativos.</li></ul> |
-| **What** | <ul><li>Configurar eventos analíticos de seguimiento (*funnel tracking*) en cada paso del proceso de contratación de la aplicación web y móvil para administradores de PYMES.</li><li>Medir el porcentaje de usuarios que progresan entre el inicio del formulario, el ingreso de especificaciones técnicas y la confirmación final.</li><li>Analizar cuantitativamente las tasas de caída en cada etapa durante un periodo de medición de dos semanas.</li></ul> |
-| **Hypothesis** | Se espera que el punto de mayor abandono se produzca en la sección de ingreso de datos detallados de la infraestructura eléctrica del local, lo que evidenciará la necesidad de flexibilizar este requisito inicial mediante plantillas predefinidas. |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Why** | <ul><li>Definir los patrones de engagement y los momentos de contacto óptimos entre el usuario y las herramientas de seguimiento preventivo.</li><li>Comprender si el registro manual de datos representa una fricción insostenible frente a la necesidad de automatización.</li><li>Calibrar las estrategias de recordatorios y notificaciones de revisión periódica dentro de la aplicación.</li></ul> |
+| **What** | <ul><li>Monitorear la frecuencia voluntaria de acceso a prototipos de seguimiento durante pruebas de campo de dos semanas con usuarios seleccionados.</li><li>Evaluar mediante encuestas de salida la disposición a realizar registros manuales periódicos de lecturas frente a la expectativa de automatización.</li><li>Analizar las tasas de retención de uso de las herramientas preventivas.</li></ul> |
+| **Hypothesis** | Se espera que la mayoría de los usuarios muestren resistencia a realizar registros manuales frecuentes (superiores a una vez por semana), prefiriendo consultas mensuales asociadas a la llegada de sus recibos de servicio eléctrico. |
 
 ---
 
-#### Tarjeta de Experimento 8
+Tarjeta de Experimento 8
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Cuándo consideran los técnicos que es más oportuno recibir notificaciones de alertas de stock mínimo para evitar retrasos en sus citas programadas? |
-| **Why** | <ul><li>Optimizar los canales y tiempos de comunicación proactiva hacia el profesional para garantizar la disponibilidad de materiales antes de atender un servicio.</li><li>Prevenir cancelaciones operativas y reprogramaciones de citas provocadas por desabastecimiento imprevisto de componentes eléctricos críticos.</li><li>Mejorar la puntualidad y eficiencia operativa de los técnicos registrados en la plataforma.</li></ul> |
-| **What** | <ul><li>Realizar una encuesta estructurada y entrevistas focales a una muestra representativa de técnicos activos sobre sus hábitos de gestión de inventario.</li><li>Probar diferentes configuraciones temporales de envío de alertas automáticas (por ejemplo, al concluir un servicio o en el reporte matutino) evaluando su tasa de apertura y respuesta.</li><li>Medir la reducción de incidencias por falta de stock tras la implementación de las notificaciones optimizadas.</li></ul> |
-| **Hypothesis** | Se espera que los técnicos prefieran recibir las notificaciones de stock mínimo inmediatamente al finalizar cada servicio o al inicio de su jornada diaria, logrando reducir en al menos un 25% las reprogramaciones de citas por falta de materiales. |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Why** | <ul><li>Medir la utilidad operativa del acceso al historial y a los reportes previos de la instalación durante el diagnóstico de una avería.</li><li>Comprender cómo los antecedentes de mantenimiento reducen la incertidumbre técnica antes de la intervención física en campo.</li><li>Validar la propuesta de valor de la plataforma hacia los profesionales del sector eléctrico.</li></ul> |
+| **What** | <ul><li>Simular casos de estudio técnicos con electricistas certificados divididos en dos grupos: un grupo con acceso previo al historial estructurado y un grupo de control sin antecedentes.</li><li>Registrar y comparar el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) y la precisión en la identificación de la causa raíz.</li><li>Recopilar retroalimentación cualitativa sobre la relevancia de los datos suministrados.</li></ul> |
+| **Hypothesis** | Se espera que el acceso previo al historial estructurado de la instalación reduzca el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) de los técnicos electricistas en al menos un 25%. |
 
 ---
 
-#### Tarjeta de Experimento 9
+Tarjeta de Experimento 9
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Por qué los propietarios priorizan la visualización de reseñas y calificaciones frente al costo económico inmediato al seleccionar un especialista eléctrico? |
-| **Why** | <ul><li>Comprender la jerarquía de valores y la aversión al riesgo de los propietarios de viviendas ante la contratación de servicios de alta criticidad en el hogar.</li><li>Validar la hipótesis de que la seguridad y la reputación superan al factor precio en intervenciones de infraestructura eléctrica.</li><li>Orientar las estrategias de posicionamiento de la plataforma hacia la confianza y la certificación rigurosa.</li></ul> |
-| **What** | <ul><li>Aplicar entrevistas de validación y pruebas de preferencia visual con usuarios propietarios, contrastando perfiles con distintas combinaciones de precio y calificación.</li><li>Analizar la correlación estadística entre la puntuación de los técnicos y la tasa de selección por parte de clientes en solicitudes reales.</li><li>Recopilar testimonios cualitativos sobre experiencias previas negativas con electricistas informales.</li></ul> |
-| **Hypothesis** | Se espera demostrar que los propietarios están dispuestos a aceptar tarifas ligeramente superiores si el profesional cuenta con un historial verificado de calificaciones excelentes y reseñas detalladas, priorizando la seguridad sobre la opción más económica. |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Why** | <ul><li>Precintar el alcance y formato de los reportes históricos que deben integrarse en el perfil técnico de cada propiedad o sede.</li><li>Evitar la sobrecarga de datos irrelevantes que entorpezcan la revisión rápida previa a una visita de campo.</li><li>Garantizar que los antecedentes de fallas pasadas, reparaciones y variaciones de consumo se presenten de forma accionable.</li></ul> |
+| **What** | <ul><li>Someter a evaluación tarjetas de prototipo con diferentes niveles de resumen histórico (cronología de eventos, gráficas de picos, bitácoras de técnicos anteriores) ante un panel de electricistas expertos.</li><li>Registrar mediante pruebas de ordenamiento (*card sorting* y entrevistas de priorización) qué datos consideran indispensables para su labor diagnóstica.</li><li>Evaluar el tiempo de asimilación de la información por parte de los profesionales.</li></ul> |
+| **Hypothesis** | Se espera que los técnicos prioricen la visualización de un registro cronológico de reparaciones previas y alertas de sobrecarga recientes por encima de los gráficos globales de consumo histórico detallado. |
 
 ---
 
-#### Tarjeta de Experimento 10
+Tarjeta de Experimento 10
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Por qué los técnicos independientes muestran reticencia inicial a adoptar un modelo de suscripción mensual dentro de la plataforma? |
-| **Why**| <ul><li>Identificar las barreras económicas y de desconfianza que frenan a los profesionales independientes al comprometerse a un pago recurrente por membresía.</li><li>Evaluar la percepción de valor frente al costo del modelo de suscripción propuesto para la oferta.</li><li>Rediseñar o ajustar los incentivos del modelo de negocio para facilitar la incorporación sostenible de técnicos.</li></ul> |
-| **What** | <ul><li>Desplegar una landing page informativa con los detalles y beneficios del modelo de suscripción para técnicos, midiendo la intención de registro y las objeciones manifestadas.</li><li>Conducir entrevistas en profundidad con profesionales independientes para indagar en sus expectativas de retorno de inversión (ROI) sobre la membresía.</li><li>Analizar las tasas de conversión ante distintas alternativas de prueba gratuita o comisionado por servicio.</li></ul> |
-| **Hypothesis** | Se espera que la reticencia inicial se deba principalmente a la incertidumbre sobre el volumen de clientes que recibirán en sus primeros meses, lo que se mitigará ofreciendo un periodo de prueba inicial sin costo o un esquema mixto de comisiones por servicio completado. |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Why** | <ul><li>Evaluar la conveniencia y el atractivo comercial de una vista centralizada o multidestino para la gestión de múltiples locales comerciales.</li><li>Identificar posibles cuellos de botella de usabilidad al consolidar información de diferentes ubicaciones en un solo panel de control.</li><li>Dimensionar el potencial de expansión de la plataforma hacia segmentos corporativos con sucursales múltiples.</li></ul> |
+| **What** | <ul><li>Conducir pruebas de concepto y entrevistas con administradores que operan dos o más sedes comerciales utilizando un prototipo de vista consolidada de instalaciones.</li><li>Evaluar la claridad comparativa entre sedes y registrar las limitaciones de visualización o control reportadas por los participantes.</li><li>Medir la disposición a pagar un valor diferencial por la funcionalidad de gestión multisede.</li></ul> |
+| **Hypothesis** | Se espera que los responsables de múltiples sedes valoren positivamente la vista consolidada para detectar rápidamente anomalías entre locales, identificando como principal limitación la falta de filtros avanzados por tipo de consumo comercial. |
 
 ---
 
-#### Tarjeta de Experimento 11
+Tarjeta de Experimento 11
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Cómo perciben los usuarios la transparencia de los precios mostrados en el catálogo de servicios en comparación con los presupuestos tradicionales? |
-| **Why** | <ul><li>Medir el grado de claridad y aceptación del modelo de precios estandarizados frente a la informalidad de cotizaciones a ojo o sobreprecios ocultos.</li><li>Comprender si la visibilidad anticipada de tarifas genera mayor confianza en el proceso de contratación.</li><li>Identificar ajustes necesarios en la presentación de costos adicionales o tarifas por emergencia dentro de la plataforma.</li></ul> |
-| **What** | <ul><li>Presentar prototipos interactivos del catálogo de servicios con precios fijos y transparentes a un grupo de usuarios en sesiones de validación.</li><li>Evaluar mediante escalas de Likert la percepción de honestidad, claridad y competitividad de las tarifas mostradas.</li><li>Comparar las reacciones frente a los métodos tradicionales de cotización telefónica o presencial.</li></ul> |
-| **Hypothesis** | Se espera que más del 80% de los usuarios encuestados valoren positivamente la transparencia de los precios en el catálogo, percibiendo una mayor equidad y reduciendo la fricción generada por la incertidumbre de presupuestos ocultos. |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Why** | <ul><li>Mapear el recorrido de decisión y los puntos de contacto del usuario cuando surge una sospecha de anomalía en su suministro.</li><li>Identificar en qué momento del proceso de reacción el usuario suele recurrir a soluciones informales o plataformas digitales.</li><li>Diseñar intervenciones de marketing y flujos de soporte en el instante exacto en que se manifiesta la necesidad de ayuda.</li></ul> |
+| **What** | <ul><li>Desarrollar entrevistas retrospectivas y dinámicas de mapeo de recorrido (*customer journey mapping*) con usuarios que hayan enfrentado anomalías eléctricas recientes en sus inmuebles.</li><li>Registrar la secuencia exacta de pasos adoptados (desde la revisión del recibo o tablero hasta la búsqueda de un técnico).</li><li>Detectar puntos de fricción y abandono en la búsqueda de soluciones.</li></ul> |
+| **Hypothesis** | Se espera que ante una variación inusual los propietarios recurran primero a la revisión visual de interruptores o a consultar con conocidos, demorando la búsqueda de un profesional certificado hasta que la falla se torna evidente o persistente. |
 
 ---
 
-#### Tarjeta de Experimento 12
+Tarjeta de Experimento 12
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Cómo influye la asignación automática basada en proximidad geográfica en la velocidad de respuesta y satisfacción del cliente final? |
-| **Why** | <ul><li>Validar la eficiencia operativa del algoritmo de despacho y asignación de técnicos basado en geolocalización y cercanía al punto de incidencia.</li><li>Medir el impacto directo de la reducción de tiempos de traslado en la satisfacción global del propietario o PYME.</li><li>Optimizar los parámetros del motor de asignación para servicios de emergencia.</li></ul> |
-| **What** | <ul><li>Implementar el módulo de asignación automática por proximidad en el flujo operativo piloto y registrar los tiempos de llegada de los técnicos a campo.</li><li>Comparar los tiempos de respuesta y los puntajes de satisfacción del cliente frente al método manual tradicional de asignación.</li><li>Analizar las métricas de completado exitoso de servicios de emergencia.</li></ul> |
-| **Hypothesis** | Se espera que la asignación automática por proximidad geográfica reduzca el tiempo total de respuesta y llegada del especialista en al menos un 25%, incrementando significativamente la satisfacción del cliente en situaciones críticas. |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Why** | <ul><li>Validar si la integración de un llamado a la acción (CTA) preventivo basado en anomalías estimula la contratación oportuna de servicios en ElectroLink.</li><li>Comprender la conexión mental que hacen los usuarios entre la detección de un riesgo técnico y la necesidad de asistencia especializada.</li><li>Potenciar la conversión cruzada desde las herramientas de monitoreo hacia los servicios correctivos y preventivos de la plataforma.</li></ul> |
+| **What** | <ul><li>Desplegar un prototipo interactivo con flujos de alerta simulados que incluyan un acceso directo (CTA) para solicitar una revisión profesional.</li><li>Medir las tasas de interacción, clics y conversión de los usuarios al enfrentarse a una notificación de variación inusual.</li><li>Analizar el comportamiento del usuario mediante pruebas de usabilidad guiadas en un entorno controlado.</li></ul> |
+| **Hypothesis** | Se espera que al menos el 40% de los usuarios evaluados identifiquen la conexión directa entre la alerta y la solicitud de soporte técnico, ejecutando el flujo de contacto ante una variación inusual simulada. |
 
 ---
 
-#### Tarjeta de Experimento 13
+Tarjeta de Experimento 13
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Cuánto tiempo adicional están dispuestos a esperar los propietarios de viviendas para recibir confirmación de un técnico certificado frente a una contratación informal? |
-| **Why** | <ul><li>Establecer el nivel de paciencia y expectativa de tiempo de respuesta que tienen los clientes al buscar un especialista verificado a través de canales digitales.</li><li>Determinar si la espera por validación de credenciales genera abandono hacia alternativas informales inmediatas.</li><li>Calibrar los tiempos esperados de respuesta en el flujo operativo de asignación.</li></ul> |
-| **What** | <ul><li>Incluir pantallas de espera simuladas con indicadores de progreso y estimaciones de tiempo en prototipos interactivos expuestos a usuarios evaluadores.</li><li>Registrar el punto de abandono o frustración manifestado cuando el tiempo de confirmación supera determinados umbrales (5, 10 o 15 minutos).</li><li>Analizar las respuestas cualitativas sobre la disposición a esperar a cambio de una garantía de certificación formal.</li></ul> |
-| **Hypothesis** | Se espera que los propietarios estén dispuestos a esperar hasta 10 minutos adicionales para recibir la confirmación de un técnico certificado en comparación con la inmediatez riesgosa de un contacto informal, valorando la seguridad garantizada por la plataforma. |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Why** | <ul><li>Equilibrar la riqueza analítica de los datos históricos con la simplicidad visual requerida por un usuario promedio no especializado.</li><li>Evitar la parálisis por análisis o la saturación de información en los paneles de control de la aplicación.</li><li>Determinar las agrupaciones temporales ideales (diaria, semanal, mensual) para la visualización efectiva de tendencias.</li></ul> |
+| **What** | <ul><li>Probar iterativamente interfaces con diferentes niveles de granularidad temporal (desde detalle diario hasta vistas anuales resumidas) en sesiones de prueba con usuarios.</li><li>Medir la claridad de comprensión y la capacidad de aislamiento de anomalías en cada nivel de profundidad visual.</li><li>Recopilar preferencias sobre el grado de detalle preferido para la toma de decisiones cotidianas.</li></ul> |
+| **Hypothesis** | Se espera que una vista agregada por semanas con opción de desglose mensual ofrezca el equilibrio óptimo de detalle, permitiendo a los usuarios identificar variaciones relevantes sin abrumarse con datos diarios excesivos. |
 
 ---
 
-#### Tarjeta de Experimento 14
+Tarjeta de Experimento 14
 | Campo | Detalle |
 | :--- | :--- |
-| **Question** | ¿Cuánto es el incremento porcentual en la tasa de conversión de solicitudes que se logra al implementar un flujo asistido en lugar de un proceso manual de cotización? |
-| **Why** | <ul><li>Cuantificar de manera precisa el beneficio comercial y operativo de automatizar y guiar el proceso de solicitud de servicios en comparación con cotizaciones manuales por chat o llamada.</li><li>Justificar el esfuerzo de desarrollo técnico de los componentes del asistente interactivo en la plataforma web y móvil.</li><li>Validar el impacto global del diseño centrado en el usuario sobre los indicadores clave de negocio de la startup.</li></ul> |
-| **What** | <ul><li>Realizar un análisis comparativo de métricas de conversión entre un grupo de control que utiliza el flujo manual tradicional de contacto y un grupo experimental expuesto al asistente digital automatizado.</li><li>Rastrear el número de solicitudes completadas con éxito frente al total de visitas iniciales en ambos escenarios durante un ciclo operativo de dos semanas.</li><li>Medir la rentabilidad y eficiencia operativa derivada de la automatización del proceso.</li></ul> |
-| **Hypothesis** | Se espera lograr un incremento porcentual superior al 30% en la tasa de conversión de solicitudes completadas al reemplazar el proceso manual de cotización por el flujo asistido automatizado de ElectroLink. |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Why** | <ul><li>Establecer límites estrictos en los algoritmos de notificación para evitar falsos positivos que alarmen indebidamente al usuario.</li><li>Proteger la confianza en la plataforma asegurando que cada aviso esté respaldado por datos concluyentes y explicaciones comprensibles.</li><li>Reducir el riesgo de abandono de la aplicación motivado por la ansiedad o frustración ante alertas confusas.</li></ul> |
+| **What** | <ul><li>Probar escenarios de alertas generadas por fluctuaciones menores o estacionales ante un grupo de usuarios sin conocimientos técnicos especializados.</li><li>Evaluar el nivel de estrés, confusión o desconfianza generado mediante escalas de percepción cualitativa.</li><li>Recopilar propuestas de redacción y aclaración contextual sugeridas por los participantes para mitigar alarmas falsas.</li></ul> |
+| **Hypothesis** | Se espera que las alertas disparadas por variaciones estacionales normales (como el uso de calefacción o aire acondicionado) sin la debida contextualización generen preocupación injustificada y desconfianza en más del 50% de los usuarios residenciales. |
 
 ## 8.2. Experiment Design
 
