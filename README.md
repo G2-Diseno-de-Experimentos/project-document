@@ -6888,6 +6888,40 @@ Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin
 
 ### 6.1.4. Core System Tests
 
+Las pruebas de sistema observan el comportamiento de ElectroLink desde las interfaces que utiliza el usuario. La suite web controla el navegador y comprueba que Angular consuma la API real; la comprobación por API recorre el ciclo de vida de una propiedad con autenticación, validación y persistencia reales. Los casos unitarios e integraciones de los apartados anteriores se registran por separado.
+
+#### Entorno y alcance
+
+| Componente | Configuración evaluada |
+|---|---|
+| Backend | [ElectroLink-Backend, `5391df7`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/5391df7e91861cf5797ed8b65cc1770bdf402add), Spring Boot y PostgreSQL 17.11 en un entorno local aislado. |
+| Frontend | [Electrolink-Frontend, `e44a087`](https://github.com/G2-Diseno-de-Experimentos/Electrolink-Frontend/commit/e44a087335c9baf3dcc5b65f1158cd60c1d99f6f), rama `develop`, compilada en modo desarrollo. En la copia de pruebas solo se cambió la URL de la API para apuntar al backend local. |
+| Ejecución | 10/11/2026, Edge en modo headless con Playwright 1.58.2. Cuentas y direcciones de prueba sin datos reales. |
+| Límites | La API no se simuló. Se bloquearon las solicitudes a terceros; no se evaluaron los mapas externos, las fuentes externas ni la geocodificación. No se ejecutó la app nativa. |
+
+#### Casos ejecutados
+
+| ID | Procedimiento | Resultado esperado | Resultado observado |
+|---|---|---|---|
+| ST-API-01 · US-34 a US-36 | Iniciar sesión, registrar una propiedad, consultarla, editarla, volver a consultarla y eliminarla. Comprobar también el acceso sin sesión. | La API rechaza la consulta anónima; persiste altas y cambios; el registro eliminado deja de existir. | **Aprobado.** Sin sesión: 401. Alta: 201. Consulta y edición: 200, con datos persistidos. Baja: 204; consulta posterior: 404. |
+| ST-WEB-01 · Acceso | Completar el formulario de inicio de sesión con una cuenta sintética de propietario. | Autenticación exitosa y navegación al panel del propietario. | **Aprobado.** La API devolvió 200 y Angular abrió el panel de propietario. |
+| ST-WEB-02 · US-34 | Preparar una propiedad por API, ingresar al módulo Propiedades, seleccionar el registro y recargar. | El registro se visualiza en la lista y el detalle, y permanece tras recargar. | **Aprobado.** La lista y el detalle mostraron el dato persistido. El alta se hizo como preparación por API, no mediante el mapa del formulario web. |
+| ST-WEB-03 · Registro | Pulsar «Regístrate» en el formulario de inicio de sesión. | El enlace abre el formulario de registro. | **Falló.** La navegación terminó en la página inicial en lugar de abrir el formulario. |
+| ST-WEB-04 · Privacidad | Crear una propiedad para una cuenta sintética y revisar el módulo Propiedades desde una segunda cuenta en una sesión separada. | La segunda cuenta no recibe ni visualiza la propiedad de la primera. | **Falló.** La API entregó el registro a la segunda cuenta y la interfaz lo mostró. |
+
+**Balance:** 5 casos ejecutados, 3 aprobados y 2 fallidos. Estos resultados no certifican la totalidad de los procesos de ElectroLink. La [suite reproducible](scripts/run-av2-system-tests.cjs) y el [registro de la ejecución](assets/evidence/cap6/av2/system-tests.json) conservan el alcance y las versiones. Las capturas se tomaron automáticamente, sin cursor.
+
+![ST-WEB-01: panel de propietario después de iniciar sesión con una cuenta sintética](assets/img/cap6/av2/st-web-01-dashboard.png)
+
+![ST-WEB-02: propiedad de prueba consultada desde la lista y el detalle](assets/img/cap6/av2/st-web-02-propiedad.png)
+
+#### Casos móviles diseñados, no ejecutados
+
+| ID | Flujo en Flutter | Precondición | Criterio de aceptación |
+|---|---|---|---|
+| ST-MOB-01 | Desde el panel del propietario, elegir la categoría del servicio, seleccionar una propiedad y completar la confirmación de solicitud. | Compilación Android vinculada a la API de pruebas; propietario, propiedad y servicio de prueba disponibles. | La app confirma el registro y una consulta posterior muestra la solicitud asociada al propietario y a la propiedad seleccionada. |
+| ST-MOB-02 | Como técnico, abrir Inventario, agregar un componente y comprobar la cantidad después de volver a ingresar. | Cuenta técnica y componente disponibles; backend de pruebas con inventario habilitado. | El componente y la cantidad se muestran correctamente después de recargar los datos; el inventario de otra cuenta no se modifica. |
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo VII: DevOps Practices
@@ -7578,6 +7612,8 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781098116293/
 
 - Material Design. (s. f.). *Material Design 3*. https://m3.material.io/
+
+- Microsoft. (s. f.). *Playwright Library*. https://playwright.dev/docs/library
 
 - Microsoft. (s. f.). *Visual Studio Code documentation*. https://code.visualstudio.com/docs
 
