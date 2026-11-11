@@ -7447,6 +7447,10 @@ El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication`
 
 ![Registro de arranque de Spring Boot y Tomcat en Render](assets/img/cap7/render-deploy-logs.png)
 
+Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los grupos de autenticación y calificaciones. La especificación publicada utiliza el título `Learning Platform API`.
+
+![Swagger UI del backend desplegado en Render con los endpoints cargados](assets/img/cap7/swagger-produccion.png)
+
 <div style="page-break-after: always;"></div>
 
 # Capitulo VIII: Experiment-Driven-Development
