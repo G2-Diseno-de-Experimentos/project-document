@@ -170,6 +170,10 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
       - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
       - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
+  - [6.3. Validation Interviews](#63-validation-interviews)
+    - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
+    - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
+    - [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
 - [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
@@ -6986,6 +6990,102 @@ Se revisaron los cambios previos de Leonardo y los flujos que se volvieron a eje
 | RV-02 · Datos y ambiente de integración | [Migración a HTTP real `d0f7403`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/d0f7403235ff323e5fa486477a1b0560493b9216) y [regresión SDP `65f9cff`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65f9cff26b4b1b12a73e0978719d8cf86f75ac15). | **Verificada dentro del alcance.** Se mantuvieron la base aislada y las sesiones sintéticas, separando las ejecuciones HTTP de los `dryRun`. |
 | RV-03 · Navegación y autorización | ST-WEB-03, ST-WEB-04 y AV2-CS-02. | **Abierta.** Corregir el enlace de registro, el alcance de la consulta de propiedades y el registro del JWT en consola. Adjuntar el cambio y repetir las pruebas antes de cerrar. |
 
+## 6.3. Validation Interviews
+
+### 6.3.1. Diseño de Entrevistas
+
+#### Clientes
+
+1. ¿Te resultó sencillo crear una cuenta y entender para qué podías usar ElectroLink?
+2. ¿Cómo fue el recorrido desde el inicio hasta encontrar un técnico?
+3. Al comparar fichas de técnicos, ¿pesaron más las reseñas, la cercanía o la disponibilidad?
+4. ¿El panel de servicios activos te permitió seguir lo que contrataste?
+5. ¿Pudiste distinguir el estado de tu solicitud o mantenimiento?
+6. ¿Qué impresión de confianza y profesionalismo te dio la interfaz?
+7. ¿Te sirvió el acceso a la búsqueda de técnicos? ¿Qué filtro te resultó más útil?
+8. ¿La ubicación y el mapa facilitaron la elección de un técnico cercano?
+9. ¿Te sentirías cómodo contratando directamente desde la plataforma?
+10. ¿Los avisos te permitieron saber cuándo se realizaría el mantenimiento?
+11. ¿Pudiste dejar una calificación al terminar el servicio?
+12. ¿Qué cambiarías para que la interfaz sea más clara o rápida de usar?
+
+#### PYMEs
+
+1. ¿Cómo gestionaba tu empresa a los proveedores eléctricos y qué cambiaría al usar ElectroLink?
+2. ¿La agenda del panel facilita programar un mantenimiento?
+3. ¿La información de rendimiento te ayudó a identificar mejoras?
+4. ¿Qué valor tiene consultar el historial de servicios desde la web?
+5. ¿Puedes ajustar los días y horarios de atención a las necesidades de tu empresa?
+6. ¿Puedes identificar a tus técnicos preferidos? ¿Los contratarías de nuevo?
+7. ¿Cómo fue buscar por tipo de servicio y ubicación?
+8. ¿Consultaste las reseñas al elegir un técnico? ¿Te parecieron confiables?
+9. ¿La interfaz se siente lo bastante profesional para usarla en tu empresa?
+10. ¿Qué utilidad tendría recibir un informe automático al terminar un mantenimiento?
+11. ¿Te ayudaron los recordatorios de mantenimiento?
+12. ¿Qué función agregarías para facilitar la gestión de servicios en tu empresa?
+
+#### Proveedores
+
+1. ¿Cómo fue crear una cuenta de proveedor y configurar tu perfil?
+2. ¿El panel te permite reconocer tu disponibilidad y los trabajos en curso?
+3. ¿La presentación y los datos del perfil reflejan tu experiencia profesional?
+4. ¿Te resulta útil tener un apartado dedicado a los servicios activos?
+5. ¿Fue sencillo actualizar los componentes y servicios en inventario y catálogo?
+6. ¿Te ayudaría consultar tus métricas de rendimiento al momento?
+7. ¿Las calificaciones te han ayudado a mejorar tu trabajo o a recibir solicitudes?
+8. ¿Cómo fue agregar un horario y administrar tu disponibilidad?
+9. ¿Te queda claro qué parte de tu perfil pueden ver los clientes? ¿Te parece una presentación justa?
+10. ¿Pudiste cargar tus certificaciones y ver cómo quedaron publicadas?
+11. ¿La plataforma te daría más visibilidad que buscar clientes por tu cuenta?
+12. ¿Qué agregarías al panel para facilitar tu trabajo como técnico?
+
+### 6.3.2. Registro de Entrevistas
+
+| Participante | Duración y evidencia | Aportes sobre el producto |
+|---|---|---|
+| Leonardo Prieto | 6 min 28 s; inicio: 00:00. | Entendió que ElectroLink pone en contacto a clientes y técnicos eléctricos. La interfaz le transmitió confianza y destacó la disponibilidad y la búsqueda por cercanía como criterios para elegir un técnico. Sugirió incorporar un chat en tiempo real y sumar imágenes e información visual. |
+| Piero Tenorio Medina | 7 min 53 s; inicio: 00:00. [Video de la entrevista](https://youtu.be/Epc6R8F4hjE). | Comprendió el propósito de la plataforma, valoró la gestión de componentes y encontró útil poder agregarlos al inventario. La interfaz le transmitió confianza, aunque propuso reorganizar las secciones, mejorar la paleta de colores y presentar los componentes en tablas. |
+
+### 6.3.3. Evaluaciones según heurísticas
+
+Se evaluaron el diseño y la accesibilidad de ElectroLink Web. Se identificaron 12 hallazgos: siete con severidad 2 y cinco con severidad 3.
+
+**Tareas evaluadas**
+
+- Identificar el propósito del sitio y distinguir la propuesta para propietarios y proveedores.
+- Consultar el catálogo, los testimonios y la información de la empresa.
+- Localizar los accesos de registro, búsqueda de técnicos y consulta de perfiles.
+- Gestionar servicios e inventario, y publicar trabajos para que los vean los clientes.
+- Comparar técnicos y reseñas, y reportar la finalización de un servicio desde ambos roles.
+- Revisar la accesibilidad visual y la inclusión.
+
+**Hallazgos de la evaluación heurística**
+
+| ID | Hallazgo | Severidad | Principio afectado |
+|---|---|---:|---|
+| UX-2025-01 | Volver al inicio requiere recorrer de nuevo las páginas largas. | 2 | Control del usuario. |
+| UX-2025-02 | Algunos recursos visuales informativos no tienen una alternativa accesible. | 3 | Accesibilidad e inclusión. |
+| UX-2025-03 | Las acciones principales no destacan lo suficiente frente a las secundarias. | 2 | Jerarquía visual. |
+| UX-2025-04 | Los accesos de cliente y proveedor se distinguen poco visualmente. | 2 | Consistencia y estándares. |
+| UX-2025-05 | No resulta evidente qué gana el técnico al publicar un servicio. | 2 | Reconocimiento y claridad. |
+| UX-2025-06 | El panel del proveedor no da prioridad visual a las solicitudes nuevas. | 3 | Visibilidad del estado. |
+| UX-2025-07 | Al guardar o completar ciertas acciones no aparece una confirmación clara. | 3 | Retroalimentación del sistema. |
+| UX-2025-08 | Algunos iconos de servicios carecen de explicaciones en contexto. | 2 | Ayuda y documentación. |
+| UX-2025-09 | La web no diferencia con claridad qué ventajas ofrece a una PYME. | 2 | Personalización y reconocimiento. |
+| UX-2025-10 | No se encontraron ajustes de presentación para contraste o tamaño. | 3 | Diseño inclusivo. |
+| UX-2025-11 | El proveedor no puede anticipar cómo se verá su trabajo para el cliente. | 2 | Correspondencia con la perspectiva del usuario. |
+| UX-2025-12 | El registro no deja claro si terminó correctamente ni con qué rol. | 3 | Prevención de errores y control. |
+
+**Recomendaciones de la evaluación**
+
+La evaluación registra las siguientes recomendaciones. No consigna su implementación.
+
+| Hallazgo | Modificación recomendada |
+|---|---|
+| UX-2025-02 · Accesibilidad de imágenes e iconos | Añadir texto alternativo y etiquetas accesibles a los elementos que comunican información, y ofrecer ayudas breves donde corresponda. |
+| UX-2025-06 · Solicitudes nuevas | Señalar las solicitudes y acciones pendientes con distintivos visuales o con un apartado de actividad reciente. |
+| UX-2025-07 · Confirmación de acciones | Mostrar avisos de éxito o indicadores de carga al guardar componentes, aceptar solicitudes o subir fotos. |
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo VII: DevOps Practices
@@ -7682,6 +7782,8 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Microsoft. (s. f.). *Playwright Library*. https://playwright.dev/docs/library
 
 - Microsoft. (s. f.). *Visual Studio Code documentation*. https://code.visualstudio.com/docs
+
+- Nielsen, J. (1994, 24 de abril). *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
 
 - Oracle. (1999). *Code conventions for the Java programming language*. https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
 
