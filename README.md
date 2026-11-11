@@ -165,6 +165,11 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
     - [6.1.4. Core System Tests](#614-core-system-tests)
+  - [6.2. Static testing & Verification](#62-static-testing--verification)
+    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+      - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+      - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
+    - [6.2.2. Reviews](#622-reviews)
 - [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
@@ -6922,6 +6927,65 @@ Las pruebas de sistema observan el comportamiento de ElectroLink desde las inter
 | ST-MOB-01 | Desde el panel del propietario, elegir la categoría del servicio, seleccionar una propiedad y completar la confirmación de solicitud. | Compilación Android vinculada a la API de pruebas; propietario, propiedad y servicio de prueba disponibles. | La app confirma el registro y una consulta posterior muestra la solicitud asociada al propietario y a la propiedad seleccionada. |
 | ST-MOB-02 | Como técnico, abrir Inventario, agregar un componente y comprobar la cantidad después de volver a ingresar. | Cuenta técnica y componente disponibles; backend de pruebas con inventario habilitado. | El componente y la cantidad se muestran correctamente después de recargar los datos; el inventario de otra cuenta no se modifica. |
 
+## 6.2. Static testing & Verification
+
+### 6.2.1. Static Code Analysis
+
+La revisión del Avance 2 cubre el backend Java en `5391df7` y una revisión focalizada de la web. Se aplicaron dos controles distintos: **Checkstyle** para convenciones y **SpotBugs con Find Security Bugs** para patrones en el código compilado. Se ejecutaron en una copia de la rama `develop`, sin cambiar el POM del repositorio del backend. Para reproducir el análisis se incluye la [configuración de SpotBugs](assets/evidence/cap6/av2/spotbugs-plugin.xml) usada en esa copia.
+
+#### 6.2.1.1. Coding standard & Code conventions
+
+| Aspecto | Convención o criterio |
+|---|---|
+| Nombres | `PascalCase` en clases y tipos, `camelCase` en variables y métodos, y `UPPER_SNAKE_CASE` en constantes. |
+| Organización | Paquetes en minúsculas y separación por contexto y capa: dominio, aplicación, infraestructura e interfaces REST. |
+| Formato Java | Reglas de Google Java Style en `google_checks.xml`: sangría, imports, longitud de línea y documentación, entre otras. |
+| Pruebas | Nombres que describen el comportamiento, con preparación, acción y aserción separadas; se evita mezclar validaciones no relacionadas en un solo caso. |
+
+Se ejecutó `mvn -B checkstyle:check` con Maven Checkstyle Plugin **3.6.0** y motor **9.3**. El XML listó **318 archivos**, **0 errores** y **2 474 advertencias**. Como el POM usa `violationSeverity=error`, el objetivo finalizó satisfactoriamente; eso no implica conformidad completa.
+
+| Regla | Advertencias |
+|---|---:|
+| Sangría (`Indentation`) | 1 262 |
+| Javadoc de tipos (`MissingJavadocType`) | 293 |
+| Orden de imports (`CustomImportOrder`) | 292 |
+| Longitud de línea (`LineLength`) | 189 |
+| Javadoc de métodos (`MissingJavadocMethod`) | 148 |
+| Otras reglas | 290 |
+| **Total** | **2 474** |
+
+Para reducir la deuda sin dificultar las revisiones, se prioriza corregir el estilo en los archivos modificados por cada cambio, empezando por sangría e imports. La revisión de estilo no reemplaza la evaluación funcional ni de seguridad.
+
+#### 6.2.1.2. Code Quality & Code Security
+
+Después de compilar la copia de `develop` con `release 21`, se ejecutó el objetivo `spotbugs:spotbugs` del plugin Maven **4.10.5.0**, con SpotBugs **4.10.5**, Find Security Bugs **1.14.0**, esfuerzo máximo y umbral bajo. Se analizaron **320 clases** y se registraron **132 avisos**, sin errores del analizador ni clases faltantes.
+
+| Categoría del analizador | Avisos | Interpretación |
+|---|---:|---|
+| Security | 80 | Incluye 65 entradas `SPRING_ENDPOINT`; son puntos de entrada que requieren revisión, no 65 vulnerabilidades comprobadas. |
+| Malicious code | 40 | Principalmente exposición de referencias mutables; el nombre de la categoría no demuestra código malicioso. |
+| Bad practice | 9 | Prácticas que conviene revisar por mantenibilidad y robustez. |
+| Correctness, I18N y Style | 3 | Un aviso en cada categoría. |
+| **Total** | **132** | **44 de prioridad 2 y 88 de prioridad 3.** |
+
+| Hallazgo | Evidencia y valoración | Acción propuesta |
+|---|---|---|
+| AV2-CQ-01 · Variable local innecesaria | `DLS_DEAD_LOCAL_STORE` en `ReportPhotoCommandServiceImpl.handle`: se asigna el reporte a una variable que no vuelve a leerse. La consulta sí valida que el reporte exista. | Eliminar la asignación innecesaria, conservando la validación. |
+| AV2-CS-01 · Privacidad de propiedades | La revisión de la pantalla y de `PropertyController` mostró que la lista general no se limita al propietario autenticado. **ST-WEB-04** confirmó que una segunda cuenta sintética recibe y visualiza el registro de la primera. | Aplicar el control de titularidad en el backend y probar los accesos permitidos y denegados; usar en la web la consulta correspondiente a la sesión. |
+| AV2-CS-02 · Datos de sesión en consola | La revisión de `SignInComponent` mostró que imprime la respuesta completa del login, que contiene el JWT. No se copiaron tokens a la evidencia. | Eliminar el log o limitarlo a datos que no identifiquen la sesión. |
+
+El [resumen de análisis estático](assets/evidence/cap6/av2/static-analysis.json) contiene categorías, reglas y ubicaciones. El análisis es una revisión de código y bytecode; no se ejecutó un escaneo de vulnerabilidades de dependencias ni una auditoría de producción.
+
+### 6.2.2. Reviews
+
+Se revisaron los cambios previos de Leonardo y los flujos que se volvieron a ejecutar para el Avance 2. Se trata de una **revisión técnica del código y de las evidencias**. No se registran aprobaciones de pares sin un enlace o acta que las confirme.
+
+| Revisión | Evidencia revisada | Decisión y seguimiento |
+|---|---|---|
+| RV-01 · Eliminación de propiedades | [Corrección `b4c5a20`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/b4c5a2063995bbf596e055544c9d6630a3da5979), regresión de `PropertyCommandServiceImplTest` y ST-API-01. | **Verificada.** La prueba de sistema confirmó la baja y que el registro ya no se consulta. |
+| RV-02 · Datos y ambiente de integración | [Migración a HTTP real `d0f7403`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/d0f7403235ff323e5fa486477a1b0560493b9216) y [regresión SDP `65f9cff`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65f9cff26b4b1b12a73e0978719d8cf86f75ac15). | **Verificada dentro del alcance.** Se mantuvieron la base aislada y las sesiones sintéticas, separando las ejecuciones HTTP de los `dryRun`. |
+| RV-03 · Navegación y autorización | ST-WEB-03, ST-WEB-04 y AV2-CS-02. | **Abierta.** Corregir el enlace de registro, el alcance de la consulta de propiedades y el registro del JWT en consola. Adjuntar el cambio y repetir las pruebas antes de cerrar. |
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo VII: DevOps Practices
@@ -7595,6 +7659,8 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 
 - Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
 
+- Checkstyle. (s. f.). *Checkstyle*. https://checkstyle.org/
+
 - Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
 
 - Easwaramoorthy, M., & Zarinpoush, F. (2006). *Interviewing for research* (Tip Sheet No. 6). Imagine Canada. https://www.sectorsource.ca/resource/file/interviewing-research
@@ -7622,6 +7688,8 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Render. (s. f.). *Web services*. https://render.com/docs/web-services
 
 - SmartBear Software. (s. f.). *Swagger documentation*. https://swagger.io/docs/
+
+- SpotBugs. (s. f.). *SpotBugs Maven Plugin: Usage*. https://spotbugs.github.io/spotbugs-maven-plugin/usage.html
 
 - Trello. (s. f.). *Trello guide*. https://trello.com/guide
 
