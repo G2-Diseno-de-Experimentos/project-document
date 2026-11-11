@@ -7371,7 +7371,7 @@ El build terminó con todas las etapas en verde en 1 minuto y 58 segundos. Las e
 
 ## 7.3. Continuous Deployment
 
-El despliegue continuo publica automáticamente en producción lo que llega a la rama de liberación. En ElectroLink, cada componente de la solución se despliega solo cuando se actualiza su repositorio, sin intervención manual en el servidor.
+Render despliega la API de ElectroLink desde la rama `main` del repositorio del backend. La configuración **Auto-Deploy → On Commit** activa el despliegue cuando llegan cambios a esa rama.
 
 ### 7.3.1. Tools and Practices
 
@@ -7380,9 +7380,9 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 | Componente | Plataforma | Uso | URL |
 |---|---|---|---|
 | **Backend RESTful API** | **Render** (*Web Service*, entorno Docker, plan gratuito) | Construye la imagen con el `Dockerfile` del repositorio y publica la API. | https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html |
-| **Front-end web** | **Netlify** | Publica la aplicación web a partir del repositorio conectado. | https://expsoft-frontend.netlify.app |
+| **Front-end web** | **Netlify** | El despliegue web anterior está documentado en la [sección 5.2.3](#523-implemented-frontend-web-application-evidence). | https://expsoft-frontend.netlify.app |
 | **Landing Page** | **GitHub Pages** | Publica la página estática desde la rama configurada en *Settings → Pages*. | https://g2-diseno-de-experimentos.github.io/Landing-Page/ |
-| **Base de datos** | PostgreSQL | Base de datos de producción del backend, conectada mediante variables de entorno. | — |
+| **Base de datos** | **PostgreSQL 17 en filess.io** | Base temporal conectada al backend para la demostración con datos ficticios. | — |
 | **Repositorio** | GitHub (organización `G2-Diseno-de-Experimentos`) | Origen del código que despliegan las plataformas. | — |
 
 **Prácticas aplicadas**
@@ -7392,20 +7392,30 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 | **Despliegue disparado por Git** | Un *push* a la rama configurada en Render (`main`) inicia automáticamente la construcción y el despliegue de una nueva versión del backend. |
 | **Una rama de producción alimentada por GitFlow** | `main` solo recibe cambios desde `develop`, después de la validación de integración con Karate. El mismo commit que Render despliega es el que Jenkins valida (sección 7.2). |
 | **Construcción de la imagen en la plataforma** | Render usa el `Dockerfile` del repositorio, con las mismas versiones de Java y Maven que Jenkins (JDK 21 y Maven 3.9). |
-| **Secretos como variables de entorno** | Las credenciales de la base de datos y el secreto JWT se configuran en la sección *Environment* de Render y no se guardan en el repositorio. |
+| **Secretos como variables de entorno** | Render suministra `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y `JWT_SECRET` desde *Environment*. |
 | **Puerto inyectado por la plataforma** | La aplicación usa la variable `PORT` que Render inyecta (`server.port=${PORT:8091}`) y escucha en `0.0.0.0`. |
 | **Verificación posterior al despliegue** | Se comprueba que la URL pública responda y que Swagger UI liste los grupos de endpoints. |
 
-<!-- CONFIRMAR con quien administra Render: (1) que la rama configurada sea `main`, (2) proveedor de PostgreSQL de producción, (3) nombre exacto de las variables de entorno cargadas. -->
+La configuración de compilación apunta al repositorio `G2-Diseno-de-Experimentos/ElectroLink-Backend`, la rama `main` y el archivo `./Dockerfile`.
+
+![Repositorio, rama main y Dockerfile configurados en Render](assets/img/cap7/render-settings-branch.png)
+
+Render tiene habilitado el despliegue automático con **On Commit**.
+
+![Auto-Deploy configurado en On Commit](assets/img/cap7/render-settings-autodeploy.png)
+
+La captura de *Environment* muestra los nombres de las variables con sus valores ocultos.
+
+![Variables de entorno de Render con sus valores ocultos](assets/img/cap7/render-environment.png)
 
 ### 7.3.2. Production Deployment Pipeline Components
 
 | Componente | Disparador | Qué ocurre en el despliegue | Verificación |
 |---|---|---|---|
 | **Backend (Render)** | *Push* a `main` | Render clona el repositorio, construye la imagen con el `Dockerfile` (`mvn package -DskipTests`, y luego la imagen `eclipse-temurin:21-jre`), inicia el contenedor con las variables de entorno y publica la nueva versión. | URL pública y Swagger UI disponibles. |
-| **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify descarga el código, ejecuta la construcción de la aplicación y publica el resultado. | La página carga y los registros del despliegue no muestran errores. |
+| **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify construye y publica la aplicación web. | La [sección 5.2.3](#523-implemented-frontend-web-application-evidence) muestra un despliegue anterior. La rama y el commit de la publicación actual quedan por verificar. |
 | **Landing Page (GitHub Pages)** | Cambios en la rama configurada en *Pages* | GitHub construye y publica el sitio estático. | La dirección de GitHub Pages responde. |
-| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas desde las entidades. No hay migraciones versionadas. | El backend inicia y responde a las consultas. |
+| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas en el esquema `electrolink`, seleccionado mediante `currentSchema` en la conexión JDBC. | El backend completa el arranque con la configuración de la base de demostración. |
 
 **Flujo completo hacia producción**
 
@@ -7417,10 +7427,9 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 **Consideraciones**
 
 - La construcción de la imagen en Render omite las pruebas (`-DskipTests`). Las pruebas unitarias se ejecutan en Jenkins sobre el mismo commit, pero en paralelo al despliegue y no antes. Un defecto que solo detecte Jenkins puede llegar a producción durante unos minutos, hasta que se revierta. Por eso la validación previa con Karate en `develop` es importante.
-- El despliegue de producción lo inicia el *push* a `main`, no Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
+- Un *push* a `main` activa el despliegue automático de Render en paralelo a Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
 - `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
-
-**[CAPTURAS PENDIENTES]** Render: configuración del servicio (rama, entorno Docker) y registro del último despliegue. Netlify: registro del último despliegue. Swagger UI de producción.
+- El endpoint de filess.io usado en la demostración rechaza TLS. La conexión usa `sslmode=prefer` y la base está reservada para datos ficticios.
 
 <div style="page-break-after: always;"></div>
 
