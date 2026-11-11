@@ -6030,6 +6030,8 @@ Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no
 
 ### 6.1.1. Core Entities Unit Tests
 
+**Regresión del Avance 2 (10/11/2026).** En el backend [`5391df7`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/5391df7e91861cf5797ed8b65cc1770bdf402add), Maven Surefire registró **127 casos: 125 aprobados, 0 fallos, 0 errores y 2 omitidos**. La ejecución usa el filtro de CI para excluir las clases `*IT` y la prueba de arranque de la aplicación; los 127 casos también incluyen métodos que solo verifican la sintaxis de Karate y los dos runners que se omiten sin API disponible. No se contabilizan como pruebas unitarias todos los métodos de Surefire ni se interpreta el resultado como ejecución HTTP. Se conserva el [desglose por clase y método](assets/evidence/cap6/av2/surefire-baseline.json).
+
 Las pruebas unitarias verifican de forma aislada la lógica de las entidades del dominio y de los servicios de aplicación (Command y Query) del backend de ElectroLink. Todas siguen el patrón **AAA (Arrange – Act – Assert)**: se preparan los datos y los mocks, se ejecuta una sola operación y se verifica el resultado esperado.
 
 **Herramientas**
@@ -6058,7 +6060,7 @@ Esta parte corresponde al integrante 1 y verifica los servicios de aplicación C
 
 Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, sin commit en el momento de la captura. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
 
-**Evidencia de ejecución (IntelliJ IDEA)**
+**Evidencia de ejecución (Maven Surefire)**
 
 Las siguientes capturas corresponden a ejecuciones reales de cada clase desde IntelliJ IDEA. Muestran el panel **Run**, los casos con checks verdes, el total de pruebas aprobadas y `Process finished with exit code 0`, siguiendo el formato de Assets Parte 2. Se recortó únicamente el panel de resultados, sin modificar su contenido; las capturas completas y los datos de la ejecución se conservan en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
 
@@ -6353,6 +6355,18 @@ La autoría se verificó en el historial del backend: [3bb4a17 — unitarias de 
 
 ### 6.1.2. Core Integration Tests
 
+**Regresión del Avance 2 (10/11/2026).** Se ejecutaron las suites conservadas del Trabajo Parcial sobre `develop` (`5391df7`), con Spring Boot y PostgreSQL 17.11 en un entorno local aislado. Las cifras siguientes cuentan **escenarios HTTP** de Karate 2.1.2, no métodos JUnit:
+
+| Suite | Escenarios ejecutados | Aprobados | Fallidos |
+|---|---:|---:|---:|
+| Properties y Component Types | 13 | 13 | 0 |
+| Components y Technician Inventory | 33 | 33 | 0 |
+| SDP: Requests, Schedules y Services | 9 | 9 | 0 |
+| Monitoring: solicitudes sin JWT | 4 | 4 | 0 |
+| **Total** | **59** | **59** | **0** |
+
+En la primera corrida, el runner de inventario quedó omitido por tiempo de espera al consultar la documentación OpenAPI; se ejecutó por separado, después de confirmar que Swagger respondía. La corrida de Monitoring solo comprueba el rechazo sin JWT. La validación de sus flujos autenticados sigue pendiente. Véase el [resumen de los reportes de Karate](assets/evidence/cap6/av2/karate-http.json), que excluye credenciales y cuerpos HTTP.
+
 Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
 
 #### Bounded Context Assets — Parte 1 (Properties y Component Types)
@@ -6608,6 +6622,8 @@ El reporte real se genera en `target/karate-sdp-real/karate-summary.html`. Se in
 La verificación conjunta de SDP registró 23 métodos JUnit: 20 unitarios, un runner Karate real y dos comprobaciones de sintaxis (`SdpKarateTest` y `AssetsKarateTest`). Solo el reporte `karate-sdp-real` acredita los nueve escenarios HTTP; las comprobaciones de sintaxis no se suman como integración ejecutada.
 
 ### 6.1.3. Core Behavior-Driven Development
+
+**Trazabilidad AV2.** La regresión de 6.1.2 reutilizó los archivos `.feature` documentados en este apartado. La implementación de los pasos está en el DSL de Karate: `Given` prepara la ruta y los datos, `When method` ejecuta la solicitud y `Then status` / `match` comprueban el resultado. Los runners Java y sus clases de soporte preparan las sesiones y datos reales. Los 59 escenarios HTTP se cuentan una sola vez; aquí se documenta cómo expresan el comportamiento esperado.
 
 Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Assets y SDP presentan sus features Karate y las evidencias de esa misma ejecución. Las especificaciones combinan nombres en inglés para Assets y en español para SDP.
 
