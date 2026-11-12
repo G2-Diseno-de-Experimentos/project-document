@@ -1,0 +1,1138 @@
+{
+  "backendCommit": "5391df7e91861cf5797ed8b65cc1770bdf402add",
+  "checkstyle": {
+    "mavenPlugin": "3.6.0",
+    "engine": "9.3",
+    "config": "google_checks.xml",
+    "reportTimeUtc": "2026-11-10T22:12:47.0553982Z",
+    "files": 318,
+    "severities": [
+      {
+        "name": "warning",
+        "count": 2474
+      }
+    ],
+    "rules": [
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck",
+        "count": 1262
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck",
+        "count": 293
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck",
+        "count": 292
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck",
+        "count": 189
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck",
+        "count": 148
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck",
+        "count": 72
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.javadoc.RequireEmptyLineBeforeBlockTagGroupCheck",
+        "count": 50
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck",
+        "count": 49
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.javadoc.SummaryJavadocCheck",
+        "count": 38
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck",
+        "count": 25
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck",
+        "count": 13
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck",
+        "count": 10
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck",
+        "count": 7
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck",
+        "count": 6
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck",
+        "count": 4
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck",
+        "count": 3
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck",
+        "count": 3
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck",
+        "count": 3
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.javadoc.AtclauseOrderCheck",
+        "count": 2
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck",
+        "count": 1
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck",
+        "count": 1
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.coding.MissingSwitchDefaultCheck",
+        "count": 1
+      },
+      {
+        "name": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck",
+        "count": 1
+      },
+      {
+        "name": "RightCurlySame",
+        "count": 1
+      }
+    ]
+  },
+  "spotbugs": {
+    "mavenPlugin": "4.10.5.0",
+    "engine": "4.10.5",
+    "findSecBugs": "1.14.0",
+    "effort": "Max",
+    "threshold": "Low",
+    "reportTimeUtc": "2026-11-10T22:13:07.9196815Z",
+    "classes": 320,
+    "findings": 132,
+    "analysisErrors": 0,
+    "missingClasses": 0,
+    "categories": [
+      {
+        "name": "SECURITY",
+        "count": 80
+      },
+      {
+        "name": "MALICIOUS_CODE",
+        "count": 40
+      },
+      {
+        "name": "BAD_PRACTICE",
+        "count": 9
+      },
+      {
+        "name": "CORRECTNESS",
+        "count": 1
+      },
+      {
+        "name": "I18N",
+        "count": 1
+      },
+      {
+        "name": "STYLE",
+        "count": 1
+      }
+    ],
+    "priorities": [
+      {
+        "name": "3",
+        "count": 88
+      },
+      {
+        "name": "2",
+        "count": 44
+      }
+    ],
+    "rules": [
+      {
+        "name": "SPRING_ENDPOINT",
+        "count": 65
+      },
+      {
+        "name": "EI_EXPOSE_REP2",
+        "count": 24
+      },
+      {
+        "name": "EI_EXPOSE_REP",
+        "count": 15
+      },
+      {
+        "name": "CRLF_INJECTION_LOGS",
+        "count": 10
+      },
+      {
+        "name": "SE_NO_SERIALVERSIONID",
+        "count": 6
+      },
+      {
+        "name": "ENTITY_LEAK",
+        "count": 4
+      },
+      {
+        "name": "THROWS_METHOD_THROWS_RUNTIMEEXCEPTION",
+        "count": 3
+      },
+      {
+        "name": "DLS_DEAD_LOCAL_STORE",
+        "count": 1
+      },
+      {
+        "name": "DM_CONVERT_CASE",
+        "count": 1
+      },
+      {
+        "name": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY",
+        "count": 1
+      },
+      {
+        "name": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR",
+        "count": 1
+      },
+      {
+        "name": "SERVLET_HEADER",
+        "count": 1
+      }
+    ],
+    "locations": [
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/application/internal/outboundservices/ExternalProfileService.java",
+        "line": 15
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/entities/ComponentStock.java",
+        "line": 46
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/entities/ComponentStock.java",
+        "line": 49
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/entities/ComponentStock.java",
+        "line": 45
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/entities/ComponentStock.java",
+        "line": 75
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/queries/GetComponentsByIdsQuery.java",
+        "line": 7
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/domain/model/queries/GetComponentsByIdsQuery.java",
+        "line": 7
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentController.java",
+        "line": 86
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentController.java",
+        "line": 129
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentController.java",
+        "line": 69
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentController.java",
+        "line": 55
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentController.java",
+        "line": 113
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentTypeController.java",
+        "line": 67
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/ComponentTypeController.java",
+        "line": 48
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 100
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 148
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 48
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 64
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 82
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/PropertyController.java",
+        "line": 129
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 117
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 87
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 144
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 48
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 77
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 63
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/TechnicianInventoryController.java",
+        "line": 131
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/resource/ComponentStockResource.java",
+        "line": 6
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/resource/ComponentStockResource.java",
+        "line": 6
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/resource/TechnicianInventoryResource.java",
+        "line": 6
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/assets/interfaces/rest/resource/TechnicianInventoryResource.java",
+        "line": 6
+      },
+      {
+        "rule": "THROWS_METHOD_THROWS_RUNTIMEEXCEPTION",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/application/internal/commandservices/UserCommandServiceImpl.java",
+        "line": 54
+      },
+      {
+        "rule": "THROWS_METHOD_THROWS_RUNTIMEEXCEPTION",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/application/internal/commandservices/UserCommandServiceImpl.java",
+        "line": 56
+      },
+      {
+        "rule": "THROWS_METHOD_THROWS_RUNTIMEEXCEPTION",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/application/internal/commandservices/UserCommandServiceImpl.java",
+        "line": 73
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/application/internal/eventhandlers/ApplicationReadyEventHandler.java",
+        "line": 35
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/application/internal/eventhandlers/ApplicationReadyEventHandler.java",
+        "line": 40
+      },
+      {
+        "rule": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR",
+        "category": "MALICIOUS_CODE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/domain/model/aggregates/User.java",
+        "line": 51
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/domain/model/commands/SignUpCommand.java",
+        "line": 7
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/domain/model/commands/SignUpCommand.java",
+        "line": 7
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/authorization/sfs/model/UserDetailsImpl.java",
+        "line": 35
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/authorization/sfs/model/UserDetailsImpl.java",
+        "line": 19
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/authorization/sfs/pipeline/BearerAuthorizationRequestFilter.java",
+        "line": 55
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/authorization/sfs/pipeline/BearerAuthorizationRequestFilter.java",
+        "line": 68
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/authorization/sfs/pipeline/UnauthorizedRequestHandlerEntryPoint.java",
+        "line": 40
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 101
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 103
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 105
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 107
+      },
+      {
+        "rule": "CRLF_INJECTION_LOGS",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 109
+      },
+      {
+        "rule": "SERVLET_HEADER",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/infrastructure/tokens/jwt/services/TokenServiceImpl.java",
+        "line": 161
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/AuthenticationController.java",
+        "line": 51
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/AuthenticationController.java",
+        "line": 71
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/RolesController.java",
+        "line": 37
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/UsersController.java",
+        "line": 66
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/UsersController.java",
+        "line": 47
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/UsersController.java",
+        "line": 84
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/resources/SignUpResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/resources/SignUpResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/resources/UserResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/iam/interfaces/rest/resources/UserResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/monitoring/application/internal/commandservices/ReportCommandServiceImpl.java",
+        "line": 25
+      },
+      {
+        "rule": "DLS_DEAD_LOCAL_STORE",
+        "category": "STYLE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/monitoring/application/internal/commandservices/ReportPhotoCommandServiceImpl.java",
+        "line": 30
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/domain/model/valueObjects/RatingId.java",
+        "line": 13
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/domain/model/valueObjects/ReportId.java",
+        "line": 13
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/domain/model/valueObjects/ReportPhotoId.java",
+        "line": 13
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/domain/model/valueObjects/RequestId.java",
+        "line": 13
+      },
+      {
+        "rule": "SE_NO_SERIALVERSIONID",
+        "category": "BAD_PRACTICE",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/domain/model/valueObjects/TechnicianId.java",
+        "line": 13
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 49
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 72
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 95
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 85
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 115
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 105
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/RatingsController.java",
+        "line": 60
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportPhotoController.java",
+        "line": 23
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportsController.java",
+        "line": 38
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportsController.java",
+        "line": 48
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportsController.java",
+        "line": 68
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportsController.java",
+        "line": 58
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ReportsController.java",
+        "line": 78
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ServiceOperationsController.java",
+        "line": 42
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ServiceOperationsController.java",
+        "line": 77
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ServiceOperationsController.java",
+        "line": 56
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ServiceOperationsController.java",
+        "line": 67
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/monitoring/interfaces/rest/ServiceOperationsController.java",
+        "line": 89
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 42
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 96
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 53
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 66
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 79
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 109
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/profiles/interfaces/rest/ProfilesController.java",
+        "line": 87
+      },
+      {
+        "rule": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY",
+        "category": "CORRECTNESS",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/aggregates/Request.java",
+        "line": 52
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/CreateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/CreateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/CreateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/CreateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/UpdateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/UpdateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/UpdateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/commands/UpdateServiceCommand.java",
+        "line": 10
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/valueobjects/Restriction.java",
+        "line": 25
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/domain/model/valueobjects/Restriction.java",
+        "line": 24
+      },
+      {
+        "rule": "ENTITY_LEAK",
+        "category": "SECURITY",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 41
+      },
+      {
+        "rule": "ENTITY_LEAK",
+        "category": "SECURITY",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 49
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 34
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 62
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 41
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 49
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/RequestController.java",
+        "line": 55
+      },
+      {
+        "rule": "ENTITY_LEAK",
+        "category": "SECURITY",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ScheduleController.java",
+        "line": 31
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ScheduleController.java",
+        "line": 38
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ScheduleController.java",
+        "line": 52
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ScheduleController.java",
+        "line": 31
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ScheduleController.java",
+        "line": 45
+      },
+      {
+        "rule": "ENTITY_LEAK",
+        "category": "SECURITY",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 66
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 45
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 59
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 36
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 66
+      },
+      {
+        "rule": "SPRING_ENDPOINT",
+        "category": "SECURITY",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/ServiceController.java",
+        "line": 52
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateRequestResource.java",
+        "line": 6
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateRequestResource.java",
+        "line": 6
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateServiceResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateServiceResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateServiceResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/CreateServiceResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/RestrictionResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/RestrictionResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/RestrictionResource.java",
+        "line": 5
+      },
+      {
+        "rule": "EI_EXPOSE_REP2",
+        "category": "MALICIOUS_CODE",
+        "priority": 2,
+        "source": "com/hampcoders/electrolink/sdp/interfaces/rest/resources/RestrictionResource.java",
+        "line": 5
+      },
+      {
+        "rule": "DM_CONVERT_CASE",
+        "category": "I18N",
+        "priority": 3,
+        "source": "com/hampcoders/electrolink/shared/infrastructure/persistence/jpa/configuration/strategy/SnakeCaseWithPluralizedTablePhysicalNamingStrategy.java",
+        "line": 44
+      }
+    ]
+  }
+}

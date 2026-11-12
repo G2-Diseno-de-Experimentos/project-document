@@ -1,0 +1,56 @@
+{
+  "executedAt": "2026-11-11T01:58:31.105Z",
+  "backendCommit": "5391df7e91861cf5797ed8b65cc1770bdf402add",
+  "webCommit": "e44a087335c9baf3dcc5b65f1158cd60c1d99f6f",
+  "webBundleSha256": "f7bb4eb62045457a1685f4b8558f40ac931ffdf7372e98a02a908f8c316550ab",
+  "browser": "157.0.4341.42",
+  "api": "http://localhost:8091",
+  "web": "http://127.0.0.1:4200",
+  "webBuildOverride": "Solo serverBasePath en la copia local apunta a la API de pruebas.",
+  "externalResources": "Bloqueados: no se probaron mapas, fuentes externas ni geocodificación.",
+  "fixtureScope": "Cuentas y propiedades sintéticas; base de datos local desechable.",
+  "results": [
+    {
+      "id": "ST-API-01",
+      "name": "Ciclo de vida de propiedad (IAM + Assets + PostgreSQL)",
+      "status": "APROBADO",
+      "observed": "401 sin sesión; alta 201; consultas y edición 200 con datos persistidos; baja 204 y consulta posterior 404.",
+      "milliseconds": 325
+    },
+    {
+      "id": "ST-WEB-01",
+      "name": "Inicio de sesión y llegada al panel",
+      "status": "APROBADO",
+      "observed": "La API devolvió 200 y Angular abrió el panel de propietario.",
+      "milliseconds": 535
+    },
+    {
+      "id": "ST-WEB-02",
+      "name": "Consulta y persistencia de una propiedad en web",
+      "status": "APROBADO",
+      "observed": "Angular mostró el registro de prueba en la lista y en el detalle; el registro siguió visible tras recargar.",
+      "milliseconds": 490
+    },
+    {
+      "id": "ST-WEB-03",
+      "name": "Navegación desde Login hacia el registro",
+      "status": "FALLÓ",
+      "observed": "El enlace abrió / en lugar del formulario /sign-up.",
+      "milliseconds": 358
+    },
+    {
+      "id": "ST-WEB-04",
+      "name": "Visibilidad de propiedades entre dos cuentas de prueba",
+      "status": "FALLÓ",
+      "observed": "La segunda cuenta recibió y visualizó la propiedad creada por la primera cuenta de prueba.",
+      "milliseconds": 1015
+    }
+  ],
+  "displayFixtures": {
+    "username": "leonardo123@gmail.com",
+    "street": "psje el sol 397 callao",
+    "district": "Callao",
+    "region": "Callao",
+    "coordinates": "0,0: dato de prueba, no es una geolocalización de la dirección."
+  }
+}

@@ -17,7 +17,7 @@
     <br> <br>
     Ciclo: 2026-20 
     <br> <br>
-    Informe de TF
+    Informe de Avance 2
     <br> <br>
     Startup: HampCoders
     <br> <br>
@@ -36,7 +36,7 @@
 
 </div>
 
-<div align="center"> Diciembre 2026 </div>
+<div align="center"> Noviembre 2026 </div>
 <div style="page-break-after: always;"></div>
 
 ---
@@ -47,6 +47,7 @@
 | :---: | :---: | :--- | :--- |
 | Avance 1 | 16/09/2026 | Ivo Marcelo Machado Bracamonte<br>Leonardo Fabrizzio Junior Prieto Mantari<br>Juan Sung Jau Wang Chen<br>Jorge Manuel Retuerto Rodriguez | Capítulo I: Introducción<br>1.1. Startup Profile<br>1.1.1. Descripción de la Startup<br>1.1.2. Perfiles de integrantes del equipo<br>1.2. Solution Profile<br>1.2.1. Antecedentes y problemática<br>1.2.2. Lean UX Process.<br>1.2.2.1. Lean UX Problem Statements.<br>1.2.2.2. Lean UX Assumptions.<br>1.2.2.3. Lean UX Hypothesis Statements.<br>1.2.2.4. Lean UX Canvas.<br>1.3. Segmentos objetivo.<br>Capítulo II: Requirements Elicitation & Analysis<br>2.1. Competidores.<br>2.1.1. Análisis competitivo.<br>2.1.2. Estrategias y tácticas frente a competidores.<br>2.2. Entrevistas.<br>2.2.1. Diseño de entrevistas.<br>2.2.2. Registro de entrevistas.<br>2.2.3. Análisis de entrevistas.<br>2.3. Needfinding.<br>2.3.1. User Personas.<br>2.3.2. User Task Matrix.<br>2.3.3. User Journey Mapping.<br>2.3.4. Empathy Mapping.<br>2.3.5. As-is Scenario Mapping.<br>2.4. Ubiquitous Language.<br>Capítulo III: Requirements Specification<br>3.1. To-Be Scenario Mapping.<br>3.2. User Stories.<br>3.3. Product Backlog.<br>3.4. Impact Mapping.<br>Avance de Conclusiones, Bibliografía y Anexos.<br>Capítulo IV: Product Design<br>4.1. Style Guidelines.<br>4.1.1. General Style Guidelines.<br>4.1.2. Web Style Guidelines.<br>4.1.3. Mobile Style Guidelines.<br>4.1.3.1. iOS Mobile Style Guidelines.<br>4.1.3.2. Android Mobile Style Guidelines.<br>4.2. Information Architecture.<br>4.2.1. Organization Systems.<br>4.2.2. Labeling Systems.<br>4.2.3. SEO Tags and Meta Tags<br>4.2.4. Searching Systems.<br>4.2.5. Navigation Systems.<br>4.3. Landing Page UI Design.<br>4.3.1. Landing Page Wireframe.<br>4.3.2. Landing Page Mock-up.<br>4.4. Mobile Applications UX/UI Design.<br>4.4.1. Mobile Applications Wireframes.<br>4.4.2. Mobile Applications Wireflow Diagrams.<br>4.4.3. Mobile Applications Mock-ups.<br>4.4.4. Mobile Applications User Flow Diagrams.<br>4.5. Mobile Applications Prototyping.<br>4.5.1. Android Mobile Applications Prototyping.<br>4.5.2. iOS Mobile Applications Prototyping.<br>4.6. Web Applications UX/UI Design.<br>4.6.1. Web Applications Wireframes.<br>4.6.2. Web Applications Wireflow Diagrams.<br>4.6.3. Web Applications Mock-ups.<br>4.6.4. Web Applications User Flow Diagrams.<br>4.7. Web Applications Prototyping.<br>4.8. Domain-Driven Software Architecture.<br>4.8.1. Software Architecture Context Diagram.<br>4.8.2. Software Architecture Container Diagrams.<br>4.8.3. Software Architecture Components Diagrams.<br>4.9. Software Object-Oriented Design.<br>4.9.1. Class Diagrams.<br>4.9.2. Class Dictionary.<br>4.10. Database Design.<br>4.10.1. Relational/Non-Relational Database Diagram.<br>Capítulo V: Product Implementation<br>5.1. Software Configuration Management.<br>5.1.1. Software Development Environment Configuration.<br>5.1.2. Source Code Management.<br>5.1.3. Source Code Style Guide & Conventions.<br>5.1.4. Software Deployment Configuration.<br>5.2. Product Implementation & Deployment.<br>5.2.1. Sprint Backlogs.<br>5.2.2. Implemented Landing Page Evidence<br>5.2.3. Implemented Frontend-Web Application Evidence<br>5.2.4. Implemented Native-Mobile Application Evidence<br>5.2.5. Implemented RESTful API and/or Serverless Backend Evidence<br>5.2.6. RESTful API documentation<br>5.2.7. Team Collaboration Insights<br>5.3. Video About-the-Product.<br>Avance de Conclusiones, Bibliografía y Anexos. |
 | Trabajo Parcial | 16/10/2026 | Ivo Marcelo Machado Bracamonte<br>Leonardo Fabrizzio Junior Prieto Mantari<br>Juan Sung Jau Wang Chen<br>Jorge Manuel Retuerto Rodriguez | Student Outcome 4 (acciones y conclusiones TP)<br>Capítulo III: Requirements Specification<br>3.1. To-Be Scenario Mapping.<br>3.2. User Stories.<br>3.3. Product Backlog.<br>3.4. Impact Mapping.<br>Capítulo V: Product Implementation<br>5.1. Software Configuration Management.<br>5.1.1. Software Development Environment Configuration.<br>5.1.2. Source Code Management.<br>5.1.3. Source Code Style Guide & Conventions.<br>5.1.4. Software Deployment Configuration.<br>5.2. Product Implementation & Deployment.<br>5.2.1. Sprint Backlogs (Sprint Planning 2).<br>5.2.2. Implemented Landing Page Evidence.<br>5.2.3. Implemented Frontend-Web Application Evidence.<br>5.2.5. Implemented Native-Mobile Application Evidence.<br>5.2.6. Implemented RESTful API and/or Serverless Backend Evidence.<br>5.2.7. RESTful API documentation.<br>5.2.8. Team Collaboration Insights.<br>5.3. Video About-the-Product.<br>Capítulo VI: Product Verification & Validation<br>6.1. Testing Suites & Validation<br>6.1.1. Core Entities Unit Tests.<br>6.1.2. Core Integration Tests.<br>6.1.3. Core Behavior-Driven Development.<br>Capítulo VII: DevOps Practices<br>7.1. Continuous Integration<br>7.1.1. Tools and Practices.<br>7.1.2. Build & Test Suite Pipeline Components.<br>Avance de Conclusiones, Bibliografía y Anexos. |
+| Avance 2 | 12/11/2026 | Ivo Marcelo Machado Bracamonte<br>Leonardo Fabrizzio Junior Prieto Mantari<br>Juan Sung Jau Wang Chen<br>Jorge Manuel Retuerto Rodriguez | Student Outcome 4 (acciones y conclusiones AV2)<br>Capítulo VI: Product Verification & Validation<br>6.1. Testing Suites & Validation<br>6.1.1. Core Entities Unit Tests.<br>6.1.2. Core Integration Tests.<br>6.1.3. Core Behavior-Driven Development.<br>6.1.4. Core System Tests.<br>6.2. Static testing & Verification<br>6.2.1. Static Code Analysis.<br>6.2.1.1. Coding standard & Code conventions.<br>6.2.1.2. Code Quality & Code Security.<br>6.2.2. Reviews.<br>6.3. Validation Interviews.<br>6.3.1. Diseño de Entrevistas.<br>6.3.2. Registro de Entrevistas.<br>6.3.3. Evaluaciones según heurísticas.<br>6.4. Auditoría de Experiencias de Usuario (autoauditoría).<br>6.4.2. Auditoría recibida (revisión interna).<br>6.4.2.1. Información del grupo auditor.<br>6.4.2.2. Cronograma de auditoría recibida.<br>6.4.2.3. Contenido de auditoría recibida.<br>6.4.2.4. Resumen de modificaciones para subsanar hallazgos.<br>Capítulo VII: DevOps Practices<br>Benchmark de herramientas DevOps.<br>7.1. Continuous Integration<br>7.1.1. Tools and Practices.<br>7.1.2. Build & Test Suite Pipeline Components.<br>7.2. Continuous Delivery<br>7.2.1. Tools and Practices.<br>7.2.2. Stages Deployment Pipeline Components.<br>7.3. Continuous Deployment<br>7.3.1. Tools and Practices.<br>7.3.2. Production Deployment Pipeline Components.<br>7.4. Continuous Monitoring<br>7.4.1. Tools and Practices.<br>7.4.2. Monitoring Pipeline Components.<br>7.4.3. Alerting Pipeline Components.<br>7.4.4. Notification Pipeline Components.<br>Capítulo VIII: Experiment-Driven Development<br>8.1. Experiment Planning<br>8.1.1. As-Is Summary.<br>8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims.<br>8.1.3. Experiment-Ready Questions.<br>8.1.4. Question Backlog.<br>8.1.5. Experiment Cards.<br>8.2. Experiment Design<br>8.2.1. Hypotheses.<br>8.2.2. Experiment Measures.<br>8.2.3. Conditions.<br>8.2.4. Scale Calculations and Decisions.<br>8.2.5. Methods Selection.<br>8.2.6. Data Analytics: Goals, KPIs and Metrics Selection.<br>8.2.7. Web and Mobile Tracking Plan.<br>8.3. Experimentation<br>8.3.1. To-Be User Stories.<br>8.3.2. To-Be Product Backlog e Impact Map.<br>8.3.3. To-Be Sprint Backlog.<br>Avance de Conclusiones, Bibliografía y Anexos. |
 
 <div style="page-break-after: always;"></div>
 ---
@@ -113,7 +114,8 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
       - [4.1.3.2. Android Mobile Style Guidelines](#4132-android-mobile-style-guidelines)
   - [4.2. Information Architecture](#42-information-architecture)
     - [4.2.1. Organization Systems](#421-organization-systems)
-    - [4.2.2. Labeling Systems](#422-labeling-systems)
+    - [4.2.2. Labeling Systems](#422-labeling-systems)### 8.3.1. 
+
     - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
     - [4.2.4. Searching Systems](#424-searching-systems)
     - [4.2.5. Navigation Systems](#425-navigation-systems)
@@ -165,7 +167,23 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
     - [6.1.4. Core System Tests](#614-core-system-tests)
+  - [6.2. Static testing & Verification](#62-static-testing--verification)
+    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+      - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+      - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
+    - [6.2.2. Reviews](#622-reviews)
+  - [6.3. Validation Interviews](#63-validation-interviews)
+    - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
+    - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
+    - [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
+  - [6.4. Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
+    - [6.4.2. Auditoría recibida (revisión interna)](#642-auditoría-recibida-revisión-interna)
+      - [6.4.2.1. Información del grupo auditor](#6421-información-del-grupo-auditor)
+      - [6.4.2.2. Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
+      - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
+      - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+  - [Benchmark de herramientas DevOps](#benchmark-de-herramientas-devops)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
     - [7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)
@@ -175,6 +193,30 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
   - [7.3. Continuous Deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+- [Capítulo VIII: Experiment-Driven Development](#capítulo-viii-experiment-driven-development)
+  - [8.1. Experiment Planning](#81-experiment-planning)
+    - [8.1.1. As-Is Summary](#811-as-is-summary)
+    - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4. Question Backlog](#814-question-backlog)
+    - [8.1.5. Experiment Cards](#815-experiment-cards)
+  - [8.2. Experiment Design](#82-experiment-design)
+    - [8.2.1. Hypotheses](#821-hypotheses)
+    - [8.2.2. Experiment Measures](#822-experiment-measures)
+    - [8.2.3. Conditions](#823-conditions)
+    - [8.2.4. Scale Calculations and Decisions](#824-scale-calculations-and-decisions)
+    - [8.2.5. Methods Selection](#825-methods-selection)
+    - [8.2.6. Data Analytics: Goals, KPIs and Metrics Selection](#826-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.7. Web and Mobile Tracking Plan](#827-web-and-mobile-tracking-plan)
+  - [8.3. Experimentation](#83-experimentation)
+    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+    - [8.3.3. To-Be Sprint Backlog](#833-to-be-sprint-backlog)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -197,8 +239,8 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     <thead>
         <tr>
             <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 25%;">Criterio específico</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (AV1, TP, TB2, TF)</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (AV1, TP, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (AV1, TP, AV2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (AV1, TP, AV2, TF)</th>
         </tr>
     </thead>
     <tbody>
@@ -212,25 +254,30 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Desarrolló y documentó pruebas del bounded context Monitoring con JUnit 5, Mockito y Karate para operaciones de servicio, reportes, fotografías y calificaciones. Verificó el acceso sin JWT y registró con transparencia los fallos encontrados en los escenarios HTTP autenticados, asumiendo la responsabilidad profesional de no presentar como validadas funciones que todavía requieren corrección.</p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>AV2:</strong> Implementó y documentó el monitoreo del uso del frontend con Google Analytics 4 y la comprobación de disponibilidad de la API con Prometheus, Grafana y Alertmanager. Registró los eventos recibidos durante una prueba real desde el frontend local y distinguió esa evidencia del uso del sitio publicado. Realizó una autoauditoría de los formularios de ingreso y registro, corrigió enlaces, etiquetas accesibles y el control de visibilidad de contraseña, y dejó constancia de las verificaciones pendientes antes del despliegue.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                     - <strong>TP:</strong> Desarrolló las pruebas unitarias y de integración de Properties y Component Types, reemplazó el servidor HTTP simulado por pruebas contra el backend real, corrigió la eliminación de propiedades y consolidó la planificación del Sprint 2 y las evidencias de SDP en el informe.<br>
+                    - <strong>AV2:</strong> Verificó ElectroLink con pruebas de regresión, integración y sistema, y revisó el código con Checkstyle y SpotBugs. Documentó tres casos de sistema aprobados y dos fallidos. En estos últimos, el enlace de registro redirigió a la página inicial y una cuenta pudo ver una propiedad ajena. Incorporó al informe las entrevistas de validación y la evaluación heurística. Configuró PostgreSQL 17 en filess.io para restablecer el backend en Render, comprobó el arranque y la carga de Swagger, y ocultó los valores de las variables de entorno en las capturas.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                     - <strong>TP:</strong> Implementó las pruebas unitarias (patrón AAA) y de integración con Karate de Components y Technician Inventory, corrigió tres defectos detectados contra la API real (detalle de stock, stock duplicado y códigos de error) y configuró el pipeline de integración continua en Jenkins con Checkstyle, JUnit y JaCoCo.<br>
+                    - <strong>AV2:</strong> Documentó las etapas de compilación, pruebas y cobertura de Jenkins y la entrega de una imagen Docker candidata con aprobación manual. En el apartado de despliegue registró la configuración de Render para la rama main, el commit publicado y la verificación de Swagger UI. Dejó trazabilidad de las validaciones y de la versión que se presentó en la demostración.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
-                    - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
-                    - <strong>TP:</strong> Implementó las pruebas unitarias de los servicios de SDP (solicitudes, horarios y servicios), sus escenarios Karate y la prueba de autenticación de IAM, y configuró las dependencias de pruebas del proyecto (JUnit 5, Mockito y Karate).<br>
+                - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
+                - <strong>TP:</strong> Implementó las pruebas unitarias de los servicios de SDP (solicitudes, horarios y servicios), sus escenarios Karate y la prueba de autenticación de IAM, y configuró las dependencias de pruebas del proyecto (JUnit 5, Mockito y Karate).<br>
+                - <strong>AV2:</strong> Desarrolló la planificación de experimentos para la extensión preventiva de ElectroLink, definiendo hipótesis, métricas y criterios de aceptación. Evaluó herramientas de analítica considerando la privacidad de los usuarios e integró Matomo en la Landing Page como prueba técnica de seguimiento. Delimitó el uso responsable de los datos recopilados, diferenciando las interacciones de prueba de los resultados experimentales y evitando presentar alertas de consumo como diagnósticos eléctricos concluyentes.<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo demostró una sólida capacidad de planificación y gestión de proyectos. La aplicación de metodologías ágiles como Lean UX y la gestión del Product Backlog permitió organizar las tareas de manera eficiente y adaptarse a los desafíos del proyecto, sentando una base robusta para las siguientes etapas del proyecto.</p>
                 <p style="font-size: 14px;"><strong>TP:</strong> El equipo asumió la responsabilidad profesional de verificar la calidad del backend antes de entregarlo: incorporó pruebas unitarias, de integración y escenarios BDD sobre la API real, corrigió los defectos que estas revelaron o los registró como pendientes cuando aún requerían corrección, y documentó la evidencia de forma trazable, distinguiendo las ejecuciones reales de las validaciones de sintaxis.</p>
+                <p style="font-size: 14px;"><strong>AV2:</strong> Una compilación satisfactoria y los casos aprobados no sustituyen la verificación del sistema. El informe registra el alcance de las pruebas y los fallos que aún requieren corrección.</p>
             </td>
         </tr>
         <tr style="page-break-inside: avoid;">
@@ -243,25 +290,30 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                     - <strong>AV1:</strong> Participó en la elaboración de los capítulos iniciales, definió la arquitectura basada en DDD y coordinó aspectos de la landing page, la documentación técnica y las historias de usuario.<br>
                 </p>
                 <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>TP:</strong> Evaluó el impacto social y económico de Monitoring al probar el seguimiento de servicios, la trazabilidad de reportes y las calificaciones de técnicos, funciones que pueden ayudar a sustentar reclamos y decisiones de contratación. Definió escenarios para comprobar estados, consultas y acceso autorizado, e identificó límites de integración que deben resolverse antes de confiar en estos resultados para el uso real del sistema.</p>
+                <p style="font-size: 14px; margin: 5px 0 0 0;">- <strong>AV2:</strong> Contrastó las métricas de navegación de Google Analytics con las comprobaciones HTTP de Grafana para decidir qué podía afirmarse sobre el producto: los eventos observados provenían de una prueba local y la respuesta de Swagger en Render no demostraba que todos los flujos de la API funcionaran. Priorizó corregir la navegación rota y mejorar las etiquetas de los formularios por su efecto en el acceso de los usuarios. Consideró la privacidad al registrar eventos sin credenciales ni tokens y evitó atribuir ahorros económicos o ambientales que no habían sido medidos.</p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Leonardo Fabrizzio Junior Prieto Mantari</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                     - <strong>TP:</strong> Aisló las pruebas en una base de datos local con usuarios y datos únicos y bloqueó las escrituras contra entornos remotos, para no alterar información de usuarios reales en producción (impacto social y económico).<br>
+                    - <strong>AV2:</strong> Usó cuentas sintéticas y PostgreSQL aislado para comprobar que una segunda cuenta podía ver la propiedad de la primera. Priorizó verificar la titularidad en el backend antes de habilitar la gestión de propiedades con datos reales, por su efecto en la privacidad y la confianza de los propietarios. Al comprobar que el endpoint de filess.io rechazaba TLS, reservó esa base para la demostración con datos ficticios y planteó migrar a una conexión cifrada antes de incorporar datos reales.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                     - <strong>TP:</strong> Priorizó corregir el stock duplicado y el detalle de inventario, porque un inventario incorrecto afecta la planificación y el costo de materiales del técnico (impacto económico). Además, automatizó la verificación en Jenkins para detectar defectos antes de que lleguen a los usuarios.<br>
+                    - <strong>AV2:</strong> Identificó que la aprobación de la imagen en Jenkins y el despliegue de Render operan en paralelo. Documentó la validación previa en develop y la verificación posterior a la publicación para reducir el riesgo de interrupciones para propietarios y técnicos, así como el costo de corregir un despliegue fallido.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Elaboró las User Personas y la User Task Matrix, desarrolló prototipos web y la guía de estilos, y colaboró en las mejoras y el despliegue del backend.<br>
                     - <strong>TP:</strong> Verificó con escenarios de prueba el control de acceso por rol en las solicitudes de servicio, que protege la información de clientes y técnicos frente a usos no autorizados (impacto social).<br>
+                    - <strong>AV2:</strong> Planificó experimentos para evaluar funcionalidades de monitoreo preventivo del consumo eléctrico, considerando su potencial impacto económico en la identificación de consumos anómalos, ambiental en la gestión eficiente de la energía y social en el acceso a evaluaciones técnicas oportunas. Definió KPIs y métricas de validación, comparó herramientas de analítica según su capacidad, facilidad de uso y privacidad, y verificó la integración inicial de Matomo. Estas actividades permitieron fundamentar decisiones sobre la evolución del producto mediante evidencia medible, sin atribuir beneficios que todavía no han sido validados experimentalmente.<br>
                 </p>
             </td>
             <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
                 <p style="font-size: 14px;"><strong>AV1:</strong> El equipo tomó decisiones tecnológicas y estratégicas evaluando su impacto. El sistema diseñado fomenta la formalización del sector eléctrico, aumenta la seguridad en los hogares (impacto social) y genera ingresos sostenibles para técnicos certificados (impacto económico).</p>
                 <p style="font-size: 14px;"><strong>TP:</strong> Al decidir cómo probar y automatizar, el equipo evaluó el impacto de sus decisiones: ejecutar las pruebas en entornos locales aislados protege los datos de los usuarios reales, la integración continua reduce el costo de corregir defectos tardíos y verificar inventario, calificaciones y permisos fortalece la confianza en servicios eléctricos formales (impacto social y económico).</p>
+                <p style="font-size: 14px;"><strong>AV2:</strong> El equipo debe verificar la titularidad de los datos antes de liberar la gestión de propiedades. Una sesión válida identifica al usuario, pero por sí sola no demuestra que pueda acceder a todos los registros.</p>
             </td>
         </tr>
     </tbody>
@@ -6030,6 +6082,8 @@ Estos valores reflejan las contribuciones acumuladas mostradas en la captura, no
 
 ### 6.1.1. Core Entities Unit Tests
 
+**Regresión del Avance 2 (10/11/2026).** En el backend [`5391df7`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/5391df7e91861cf5797ed8b65cc1770bdf402add), Maven Surefire registró **127 casos: 125 aprobados, 0 fallos, 0 errores y 2 omitidos**. La ejecución usa el filtro de CI para excluir las clases `*IT` y la prueba de arranque de la aplicación; los 127 casos también incluyen métodos que solo verifican la sintaxis de Karate y los dos runners que se omiten sin API disponible. No se contabilizan como pruebas unitarias todos los métodos de Surefire ni se interpreta el resultado como ejecución HTTP. Se conserva el [desglose por clase y método](assets/evidence/cap6/av2/surefire-baseline.json).
+
 Las pruebas unitarias verifican de forma aislada la lógica de las entidades del dominio y de los servicios de aplicación (Command y Query) del backend de ElectroLink. Todas siguen el patrón **AAA (Arrange – Act – Assert)**: se preparan los datos y los mocks, se ejecuta una sola operación y se verifica el resultado esperado.
 
 **Herramientas**
@@ -6058,7 +6112,7 @@ Esta parte corresponde al integrante 1 y verifica los servicios de aplicación C
 
 Resultado de la ejecución del **9 de octubre de 2026**: **19 pruebas, 0 fallos, 0 errores y 0 omitidas**. Backend evaluado: rama `develop`, commit base `a88070e` más los cambios locales de esta adaptación, sin commit en el momento de la captura. Los hashes SHA-256 de los archivos evaluados se registran junto con la evidencia.
 
-**Evidencia de ejecución (IntelliJ IDEA)**
+**Evidencia de ejecución (Maven Surefire)**
 
 Las siguientes capturas corresponden a ejecuciones reales de cada clase desde IntelliJ IDEA. Muestran el panel **Run**, los casos con checks verdes, el total de pruebas aprobadas y `Process finished with exit code 0`, siguiendo el formato de Assets Parte 2. Se recortó únicamente el panel de resultados, sin modificar su contenido; las capturas completas y los datos de la ejecución se conservan en el [registro de capturas de IntelliJ](assets/evidence/cap6/intellij-unit-tests/results.json).
 
@@ -6218,43 +6272,43 @@ Las pruebas unitarias de Monitoring cubren los cuatro Command Services y los tre
 
 **Evidencia de ejecución (IntelliJ IDEA)**
 
-Las siguientes capturas muestran ejecuciones reales en IntelliJ: **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los resultados originales por clase también están en los archivos Surefire enlazados arriba.
+Las capturas originales de IntelliJ IDEA se recortaron para excluir el cursor. El panel Run muestra **19 pruebas Command** y **13 pruebas Query**, todas aprobadas. Los recortes conservan los totales; el desglose completo por clase está en los reportes de Maven Surefire enlazados arriba.
 
 Resumen de los cuatro Command Services (19 pruebas):
 
-<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ: 19 pruebas Command de Monitoring aprobadas"/>
+<img src="assets/img/cap6/monitoring/MonitoringCommandServicesSummary.png" alt="IntelliJ IDEA: 19 pruebas Command de Monitoring aprobadas"/>
 
 `ServiceOperationCommandServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ServiceOperationCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de ServiceOperationCommandServiceImplTest aprobadas"/>
 
 `RatingCommandServiceImplTest` — 7 pruebas:
 
-<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/RatingCommandServiceImplTest.png" alt="IntelliJ IDEA: siete pruebas de RatingCommandServiceImplTest aprobadas"/>
 
 `ReportCommandServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportCommandServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de ReportCommandServiceImplTest aprobadas"/>
 
 `ReportPhotoCommandServiceImplTest` — 2 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportPhotoCommandServiceImplTest.png" alt="IntelliJ IDEA: dos pruebas de ReportPhotoCommandServiceImplTest aprobadas"/>
 
 Resumen de los tres Query Services (13 pruebas):
 
-<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ: 13 pruebas Query de Monitoring aprobadas"/>
+<img src="assets/img/cap6/monitoring/MonitoringQueryServicesSummary.png" alt="IntelliJ IDEA: 13 pruebas Query de Monitoring aprobadas"/>
 
 `ServiceOperationQueryServiceImplTest` — 4 pruebas:
 
-<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ServiceOperationQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de ServiceOperationQueryServiceImplTest aprobadas"/>
 
 `ReportQueryServiceImplTest` — 4 pruebas:
 
-<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/ReportQueryServiceImplTest.png" alt="IntelliJ IDEA: cuatro pruebas de ReportQueryServiceImplTest aprobadas"/>
 
 `RatingQueryServiceImplTest` — 5 pruebas:
 
-<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
+<img src="assets/img/cap6/monitoring/RatingQueryServiceImplTest.png" alt="IntelliJ IDEA: cinco pruebas de RatingQueryServiceImplTest aprobadas"/>
 
 **Límite de esta evidencia:** los repositorios simulados permiten comprobar las decisiones de los servicios, pero no prueban la persistencia JPA, los controladores ni las respuestas HTTP. La ejecución de `mvn test` sobre toda la suite devolvió 1 error en la prueba preexistente `ElectrolinkPlatformApplicationTests` porque no estaba definido `DB_URL`; ese error no corresponde a las 32 unitarias de Monitoring.
 
@@ -6352,6 +6406,18 @@ Como evidencia complementaria de una ejecución independiente con Maven, se cons
 La autoría se verificó en el historial del backend: [3bb4a17 — unitarias de Command](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/3bb4a17) y [1964b8c — unitarias de Query](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/1964b8c). El [generador de evidencias SDP](scripts/generate-sdp-test-evidence.cjs) exporta los resultados existentes; no ejecuta Karate ni realiza peticiones a Render.
 
 ### 6.1.2. Core Integration Tests
+
+**Regresión del Avance 2 (10/11/2026).** Se ejecutaron las suites conservadas del Trabajo Parcial sobre `develop` (`5391df7`), con Spring Boot y PostgreSQL 17.11 en un entorno local aislado. Las cifras siguientes cuentan **escenarios HTTP** de Karate 2.1.2, no métodos JUnit:
+
+| Suite | Escenarios ejecutados | Aprobados | Fallidos |
+|---|---:|---:|---:|
+| Properties y Component Types | 13 | 13 | 0 |
+| Components y Technician Inventory | 33 | 33 | 0 |
+| SDP: Requests, Schedules y Services | 9 | 9 | 0 |
+| Monitoring: solicitudes sin JWT | 4 | 4 | 0 |
+| **Total** | **59** | **59** | **0** |
+
+En la primera corrida, el runner de inventario quedó omitido por tiempo de espera al consultar la documentación OpenAPI; se ejecutó por separado, después de confirmar que Swagger respondía. La corrida de Monitoring solo comprueba el rechazo sin JWT. La validación de sus flujos autenticados sigue pendiente. Véase el [resumen de los reportes de Karate](assets/evidence/cap6/av2/karate-http.json), que excluye credenciales y cuerpos HTTP.
 
 Las pruebas de integración verifican que los módulos del backend funcionan correctamente cuando interactúan entre sí a través de la API REST. A diferencia de las pruebas unitarias, no usan mocks: cada escenario envía peticiones HTTP reales a la aplicación Spring Boot en ejecución, que valida el JWT, aplica las reglas del dominio y persiste los datos en PostgreSQL.
 
@@ -6608,6 +6674,8 @@ El reporte real se genera en `target/karate-sdp-real/karate-summary.html`. Se in
 La verificación conjunta de SDP registró 23 métodos JUnit: 20 unitarios, un runner Karate real y dos comprobaciones de sintaxis (`SdpKarateTest` y `AssetsKarateTest`). Solo el reporte `karate-sdp-real` acredita los nueve escenarios HTTP; las comprobaciones de sintaxis no se suman como integración ejecutada.
 
 ### 6.1.3. Core Behavior-Driven Development
+
+**Trazabilidad AV2.** La regresión de 6.1.2 reutilizó los archivos `.feature` documentados en este apartado. La implementación de los pasos está en el DSL de Karate: `Given` prepara la ruta y los datos, `When method` ejecuta la solicitud y `Then status` / `match` comprueban el resultado. Los runners Java y sus clases de soporte preparan las sesiones y datos reales. Los 59 escenarios HTTP se cuentan una sola vez; aquí se documenta cómo expresan el comportamiento esperado.
 
 Los escenarios de integración se escriben en Gherkin (`Feature`, `Background`, `Scenario`, `Scenario Outline` y los pasos `Given / When / Then`). Así, cada archivo `.feature` funciona a la vez como especificación ejecutable del comportamiento esperado y como prueba automatizada. Assets y SDP presentan sus features Karate y las evidencias de esa misma ejecución. Las especificaciones combinan nombres en inglés para Assets y en español para SDP.
 
@@ -6872,13 +6940,274 @@ Se conservan los features completos de [Requests](assets/evidence/cap6/sdp-calin
 
 ### 6.1.4. Core System Tests
 
+Las pruebas de sistema observan el comportamiento de ElectroLink desde las interfaces que utiliza el usuario. La suite web controla el navegador y comprueba que Angular consuma la API real; la comprobación por API recorre el ciclo de vida de una propiedad con autenticación, validación y persistencia reales. Los casos unitarios e integraciones de los apartados anteriores se registran por separado.
+
+#### Entorno y alcance
+
+| Componente | Configuración evaluada |
+|---|---|
+| Backend | [ElectroLink-Backend, `5391df7`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/5391df7e91861cf5797ed8b65cc1770bdf402add), Spring Boot y PostgreSQL 17.11 en un entorno local aislado. |
+| Frontend | [Electrolink-Frontend, `e44a087`](https://github.com/G2-Diseno-de-Experimentos/Electrolink-Frontend/commit/e44a087335c9baf3dcc5b65f1158cd60c1d99f6f), rama `develop`, compilada en modo desarrollo. En la copia de pruebas solo se cambió la URL de la API para apuntar al backend local. |
+| Ejecución | 10/11/2026, Edge en modo headless con Playwright 1.58.2. Cuentas y direcciones de prueba sin datos reales. |
+| Límites | La API no se simuló. Se bloquearon las solicitudes a terceros; no se evaluaron los mapas externos, las fuentes externas ni la geocodificación. No se ejecutó la app nativa. |
+
+#### Casos ejecutados
+
+| ID | Procedimiento | Resultado esperado | Resultado observado |
+|---|---|---|---|
+| ST-API-01 · US-34 a US-36 | Iniciar sesión, registrar una propiedad, consultarla, editarla, volver a consultarla y eliminarla. Comprobar también el acceso sin sesión. | La API rechaza la consulta anónima; persiste altas y cambios; el registro eliminado deja de existir. | **Aprobado.** Sin sesión: 401. Alta: 201. Consulta y edición: 200, con datos persistidos. Baja: 204; consulta posterior: 404. |
+| ST-WEB-01 · Acceso | Completar el formulario de inicio de sesión con una cuenta sintética de propietario. | Autenticación exitosa y navegación al panel del propietario. | **Aprobado.** La API devolvió 200 y Angular abrió el panel de propietario. |
+| ST-WEB-02 · US-34 | Preparar una propiedad por API, ingresar al módulo Propiedades, seleccionar el registro y recargar. | El registro se visualiza en la lista y el detalle, y permanece tras recargar. | **Aprobado.** La lista y el detalle mostraron el dato persistido. El alta se hizo como preparación por API, no mediante el mapa del formulario web. |
+| ST-WEB-03 · Registro | Pulsar «Regístrate» en el formulario de inicio de sesión. | El enlace abre el formulario de registro. | **Falló.** La navegación terminó en la página inicial en lugar de abrir el formulario. |
+| ST-WEB-04 · Privacidad | Crear una propiedad para una cuenta sintética y revisar el módulo Propiedades desde una segunda cuenta en una sesión separada. | La segunda cuenta no recibe ni visualiza la propiedad de la primera. | **Falló.** La API entregó el registro a la segunda cuenta y la interfaz lo mostró. |
+
+**Balance:** 5 casos ejecutados, 3 aprobados y 2 fallidos. Estos resultados no certifican la totalidad de los procesos de ElectroLink. La [suite reproducible](scripts/run-av2-system-tests.cjs) y el [registro de la ejecución](assets/evidence/cap6/av2/system-tests.json) conservan el alcance y las versiones. Las capturas se tomaron automáticamente, sin cursor.
+
+![ST-WEB-01: panel de propietario después de iniciar sesión con una cuenta sintética](assets/img/cap6/av2/st-web-01-dashboard.png)
+
+![ST-WEB-02: propiedad de prueba consultada desde la lista y el detalle](assets/img/cap6/av2/st-web-02-propiedad.png)
+
+#### Casos móviles diseñados, no ejecutados
+
+| ID | Flujo en Flutter | Precondición | Criterio de aceptación |
+|---|---|---|---|
+| ST-MOB-01 | Desde el panel del propietario, elegir la categoría del servicio, seleccionar una propiedad y completar la confirmación de solicitud. | Compilación Android vinculada a la API de pruebas; propietario, propiedad y servicio de prueba disponibles. | La app confirma el registro y una consulta posterior muestra la solicitud asociada al propietario y a la propiedad seleccionada. |
+| ST-MOB-02 | Como técnico, abrir Inventario, agregar un componente y comprobar la cantidad después de volver a ingresar. | Cuenta técnica y componente disponibles; backend de pruebas con inventario habilitado. | El componente y la cantidad se muestran correctamente después de recargar los datos; el inventario de otra cuenta no se modifica. |
+
+## 6.2. Static testing & Verification
+
+### 6.2.1. Static Code Analysis
+
+La revisión del Avance 2 cubre el backend Java en `5391df7` y una revisión focalizada de la web. Se aplicaron dos controles distintos: **Checkstyle** para convenciones y **SpotBugs con Find Security Bugs** para patrones en el código compilado. Se ejecutaron en una copia de la rama `develop`, sin cambiar el POM del repositorio del backend. Para reproducir el análisis se incluye la [configuración de SpotBugs](assets/evidence/cap6/av2/spotbugs-plugin.xml) usada en esa copia.
+
+#### 6.2.1.1. Coding standard & Code conventions
+
+| Aspecto | Convención o criterio |
+|---|---|
+| Nombres | `PascalCase` en clases y tipos, `camelCase` en variables y métodos, y `UPPER_SNAKE_CASE` en constantes. |
+| Organización | Paquetes en minúsculas y separación por contexto y capa: dominio, aplicación, infraestructura e interfaces REST. |
+| Formato Java | Reglas de Google Java Style en `google_checks.xml`: sangría, imports, longitud de línea y documentación, entre otras. |
+| Pruebas | Nombres que describen el comportamiento, con preparación, acción y aserción separadas; se evita mezclar validaciones no relacionadas en un solo caso. |
+
+Se ejecutó `mvn -B checkstyle:check` con Maven Checkstyle Plugin **3.6.0** y motor **9.3**. El XML listó **318 archivos**, **0 errores** y **2 474 advertencias**. Como el POM usa `violationSeverity=error`, el objetivo finalizó satisfactoriamente; eso no implica conformidad completa.
+
+| Regla | Advertencias |
+|---|---:|
+| Sangría (`Indentation`) | 1 262 |
+| Javadoc de tipos (`MissingJavadocType`) | 293 |
+| Orden de imports (`CustomImportOrder`) | 292 |
+| Longitud de línea (`LineLength`) | 189 |
+| Javadoc de métodos (`MissingJavadocMethod`) | 148 |
+| Otras reglas | 290 |
+| **Total** | **2 474** |
+
+Para reducir la deuda sin dificultar las revisiones, se prioriza corregir el estilo en los archivos modificados por cada cambio, empezando por sangría e imports. La revisión de estilo no reemplaza la evaluación funcional ni de seguridad.
+
+#### 6.2.1.2. Code Quality & Code Security
+
+Después de compilar la copia de `develop` con `release 21`, se ejecutó el objetivo `spotbugs:spotbugs` del plugin Maven **4.10.5.0**, con SpotBugs **4.10.5**, Find Security Bugs **1.14.0**, esfuerzo máximo y umbral bajo. Se analizaron **320 clases** y se registraron **132 avisos**, sin errores del analizador ni clases faltantes.
+
+| Categoría del analizador | Avisos | Interpretación |
+|---|---:|---|
+| Security | 80 | Incluye 65 entradas `SPRING_ENDPOINT`; son puntos de entrada que requieren revisión, no 65 vulnerabilidades comprobadas. |
+| Malicious code | 40 | Principalmente exposición de referencias mutables; el nombre de la categoría no demuestra código malicioso. |
+| Bad practice | 9 | Prácticas que conviene revisar por mantenibilidad y robustez. |
+| Correctness, I18N y Style | 3 | Un aviso en cada categoría. |
+| **Total** | **132** | **44 de prioridad 2 y 88 de prioridad 3.** |
+
+| Hallazgo | Evidencia y valoración | Acción propuesta |
+|---|---|---|
+| AV2-CQ-01 · Variable local innecesaria | `DLS_DEAD_LOCAL_STORE` en `ReportPhotoCommandServiceImpl.handle`: se asigna el reporte a una variable que no vuelve a leerse. La consulta sí valida que el reporte exista. | Eliminar la asignación innecesaria, conservando la validación. |
+| AV2-CS-01 · Privacidad de propiedades | La revisión de la pantalla y de `PropertyController` mostró que la lista general no se limita al propietario autenticado. **ST-WEB-04** confirmó que una segunda cuenta sintética recibe y visualiza el registro de la primera. | Aplicar el control de titularidad en el backend y probar los accesos permitidos y denegados; usar en la web la consulta correspondiente a la sesión. |
+| AV2-CS-02 · Datos de sesión en consola | La revisión de `SignInComponent` mostró que imprime la respuesta completa del login, que contiene el JWT. No se copiaron tokens a la evidencia. | Eliminar el log o limitarlo a datos que no identifiquen la sesión. |
+
+El [resumen de análisis estático](assets/evidence/cap6/av2/static-analysis.json) contiene categorías, reglas y ubicaciones. El análisis es una revisión de código y bytecode; no se ejecutó un escaneo de vulnerabilidades de dependencias ni una auditoría de producción.
+
+Además de esta revisión puntual, el pipeline de Jenkins analiza cada cambio en `main` con **SonarQube** y detiene el build si no se cumple el Quality Gate. El primer análisis (build #14) aprobó el Quality Gate y registró tres *issues*: CSRF desactivado, CORS abierto en `ProfilesController` y una expresión regular costosa en el código de prueba. El detalle está en la sección 7.1.2.
+
+### 6.2.2. Reviews
+
+Se revisaron los cambios previos de Leonardo y los flujos que se volvieron a ejecutar para el Avance 2. Se trata de una **revisión técnica del código y de las evidencias**. No se registran aprobaciones de pares sin un enlace o acta que las confirme.
+
+| Revisión | Evidencia revisada | Decisión y seguimiento |
+|---|---|---|
+| RV-01 · Eliminación de propiedades | [Corrección `b4c5a20`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/b4c5a2063995bbf596e055544c9d6630a3da5979), regresión de `PropertyCommandServiceImplTest` y ST-API-01. | **Verificada.** La prueba de sistema confirmó la baja y que el registro ya no se consulta. |
+| RV-02 · Datos y ambiente de integración | [Migración a HTTP real `d0f7403`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/d0f7403235ff323e5fa486477a1b0560493b9216) y [regresión SDP `65f9cff`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/65f9cff26b4b1b12a73e0978719d8cf86f75ac15). | **Verificada dentro del alcance.** Se mantuvieron la base aislada y las sesiones sintéticas, separando las ejecuciones HTTP de los `dryRun`. |
+| RV-03 · Navegación y autorización | ST-WEB-03, ST-WEB-04 y AV2-CS-02. | **Abierta.** Corregir el enlace de registro, el alcance de la consulta de propiedades y el registro del JWT en consola. Adjuntar el cambio y repetir las pruebas antes de cerrar. |
+
+## 6.3. Validation Interviews
+
+### 6.3.1. Diseño de Entrevistas
+
+#### Clientes
+
+1. ¿Te resultó sencillo crear una cuenta y entender para qué podías usar ElectroLink?
+2. ¿Cómo fue el recorrido desde el inicio hasta encontrar un técnico?
+3. Al comparar fichas de técnicos, ¿pesaron más las reseñas, la cercanía o la disponibilidad?
+4. ¿El panel de servicios activos te permitió seguir lo que contrataste?
+5. ¿Pudiste distinguir el estado de tu solicitud o mantenimiento?
+6. ¿Qué impresión de confianza y profesionalismo te dio la interfaz?
+7. ¿Te sirvió el acceso a la búsqueda de técnicos? ¿Qué filtro te resultó más útil?
+8. ¿La ubicación y el mapa facilitaron la elección de un técnico cercano?
+9. ¿Te sentirías cómodo contratando directamente desde la plataforma?
+10. ¿Los avisos te permitieron saber cuándo se realizaría el mantenimiento?
+11. ¿Pudiste dejar una calificación al terminar el servicio?
+12. ¿Qué cambiarías para que la interfaz sea más clara o rápida de usar?
+
+#### PYMEs
+
+1. ¿Cómo gestionaba tu empresa a los proveedores eléctricos y qué cambiaría al usar ElectroLink?
+2. ¿La agenda del panel facilita programar un mantenimiento?
+3. ¿La información de rendimiento te ayudó a identificar mejoras?
+4. ¿Qué valor tiene consultar el historial de servicios desde la web?
+5. ¿Puedes ajustar los días y horarios de atención a las necesidades de tu empresa?
+6. ¿Puedes identificar a tus técnicos preferidos? ¿Los contratarías de nuevo?
+7. ¿Cómo fue buscar por tipo de servicio y ubicación?
+8. ¿Consultaste las reseñas al elegir un técnico? ¿Te parecieron confiables?
+9. ¿La interfaz se siente lo bastante profesional para usarla en tu empresa?
+10. ¿Qué utilidad tendría recibir un informe automático al terminar un mantenimiento?
+11. ¿Te ayudaron los recordatorios de mantenimiento?
+12. ¿Qué función agregarías para facilitar la gestión de servicios en tu empresa?
+
+#### Proveedores
+
+1. ¿Cómo fue crear una cuenta de proveedor y configurar tu perfil?
+2. ¿El panel te permite reconocer tu disponibilidad y los trabajos en curso?
+3. ¿La presentación y los datos del perfil reflejan tu experiencia profesional?
+4. ¿Te resulta útil tener un apartado dedicado a los servicios activos?
+5. ¿Fue sencillo actualizar los componentes y servicios en inventario y catálogo?
+6. ¿Te ayudaría consultar tus métricas de rendimiento al momento?
+7. ¿Las calificaciones te han ayudado a mejorar tu trabajo o a recibir solicitudes?
+8. ¿Cómo fue agregar un horario y administrar tu disponibilidad?
+9. ¿Te queda claro qué parte de tu perfil pueden ver los clientes? ¿Te parece una presentación justa?
+10. ¿Pudiste cargar tus certificaciones y ver cómo quedaron publicadas?
+11. ¿La plataforma te daría más visibilidad que buscar clientes por tu cuenta?
+12. ¿Qué agregarías al panel para facilitar tu trabajo como técnico?
+
+### 6.3.2. Registro de Entrevistas
+
+| Participante | Duración y evidencia | Aportes sobre el producto |
+|---|---|---|
+| Leonardo Prieto | 6 min 28 s. Inicio: 00:00. **Enlace de la entrevista pendiente.** | Entendió que ElectroLink pone en contacto a clientes y técnicos eléctricos. La interfaz le transmitió confianza y destacó la disponibilidad y la búsqueda por cercanía como criterios para elegir un técnico. Sugirió incorporar un chat en tiempo real y sumar imágenes e información visual. |
+| Piero Tenorio Medina | 7 min 53 s; inicio: 00:00. [Video de la entrevista](https://youtu.be/Epc6R8F4hjE). | Comprendió el propósito de la plataforma, valoró la gestión de componentes y encontró útil poder agregarlos al inventario. La interfaz le transmitió confianza, aunque propuso reorganizar las secciones, mejorar la paleta de colores y presentar los componentes en tablas. |
+
+### 6.3.3. Evaluaciones según heurísticas
+
+Se evaluaron el diseño y la accesibilidad de ElectroLink Web. Se identificaron 12 hallazgos: siete con severidad 2 y cinco con severidad 3.
+
+**Tareas evaluadas**
+
+- Identificar el propósito del sitio y distinguir la propuesta para propietarios y proveedores.
+- Consultar el catálogo, los testimonios y la información de la empresa.
+- Localizar los accesos de registro, búsqueda de técnicos y consulta de perfiles.
+- Gestionar servicios e inventario, y publicar trabajos para que los vean los clientes.
+- Comparar técnicos y reseñas, y reportar la finalización de un servicio desde ambos roles.
+- Revisar la accesibilidad visual y la inclusión.
+
+**Hallazgos de la evaluación heurística**
+
+| ID | Hallazgo | Severidad | Principio afectado |
+|---|---|---:|---|
+| UX-2025-01 | Volver al inicio requiere recorrer de nuevo las páginas largas. | 2 | Control del usuario. |
+| UX-2025-02 | Algunos recursos visuales informativos no tienen una alternativa accesible. | 3 | Accesibilidad e inclusión. |
+| UX-2025-03 | Las acciones principales no destacan lo suficiente frente a las secundarias. | 2 | Jerarquía visual. |
+| UX-2025-04 | Los accesos de cliente y proveedor se distinguen poco visualmente. | 2 | Consistencia y estándares. |
+| UX-2025-05 | No resulta evidente qué gana el técnico al publicar un servicio. | 2 | Reconocimiento y claridad. |
+| UX-2025-06 | El panel del proveedor no da prioridad visual a las solicitudes nuevas. | 3 | Visibilidad del estado. |
+| UX-2025-07 | Al guardar o completar ciertas acciones no aparece una confirmación clara. | 3 | Retroalimentación del sistema. |
+| UX-2025-08 | Algunos iconos de servicios carecen de explicaciones en contexto. | 2 | Ayuda y documentación. |
+| UX-2025-09 | La web no diferencia con claridad qué ventajas ofrece a una PYME. | 2 | Personalización y reconocimiento. |
+| UX-2025-10 | No se encontraron ajustes de presentación para contraste o tamaño. | 3 | Diseño inclusivo. |
+| UX-2025-11 | El proveedor no puede anticipar cómo se verá su trabajo para el cliente. | 2 | Correspondencia con la perspectiva del usuario. |
+| UX-2025-12 | El registro no deja claro si terminó correctamente ni con qué rol. | 3 | Prevención de errores y control. |
+
+**Recomendaciones de la evaluación**
+
+La evaluación registra las siguientes recomendaciones. No consigna su implementación.
+
+| Hallazgo | Modificación recomendada |
+|---|---|
+| UX-2025-02 · Accesibilidad de imágenes e iconos | Añadir texto alternativo y etiquetas accesibles a los elementos que comunican información, y ofrecer ayudas breves donde corresponda. |
+| UX-2025-06 · Solicitudes nuevas | Señalar las solicitudes y acciones pendientes con distintivos visuales o con un apartado de actividad reciente. |
+| UX-2025-07 · Confirmación de acciones | Mostrar avisos de éxito o indicadores de carga al guardar componentes, aceptar solicitudes o subir fotos. |
+
+## 6.4. Auditoría de Experiencias de Usuario
+
+Esta sección presenta una autoauditoría heurística de ElectroLink Web, centrada en los flujos de ingreso y registro. Complementa la evaluación de 6.3.3 con hallazgos comprobados en la implementación actual.
+
+### 6.4.2. Auditoría recibida (revisión interna)
+
+A continuación se documenta la revisión interna de la aplicación web de ElectroLink.
+
+#### 6.4.2.1. Información del grupo auditor
+
+| Campo | Detalle informativo |
+| :--- | :--- |
+| *Grupo evaluador* | G2 ElectroLink (autoauditoría). |
+| *Producto evaluado* | ElectroLink Web, aplicación Angular ejecutada localmente en http://127.0.0.1:4200/. |
+| *Grupo auditado* | G2 ElectroLink. |
+| *Alcance* | Navegación entre ingreso y registro, identificación de campos y control de visibilidad de contraseña. |
+| *Método* | Inspección heurística de las plantillas y rutas, más comprobación del enlace de registro en el DOM renderizado. |
+
+#### 6.4.2.2. Cronograma de auditoría recibida
+
+| Hito | Fecha | Participantes | Objetivo y resultado |
+| :--- | :---: | :--- | :--- |
+| Revisión de navegación | 11/11/2026 | Equipo G2 | Comparar los enlaces visibles con las rutas declaradas en app.routes.ts; se detectaron dos destinos inexistentes. |
+| Inspección de formularios | 11/11/2026 | Equipo G2 | Revisar etiquetas y controles de ingreso y registro; se identificaron problemas de accesibilidad y un botón sin acción. |
+| Subsanación y verificación técnica | 11/11/2026 | Equipo G2 | Corregir los tres hallazgos y ejecutar npm run build, que terminó sin errores. |
+
+#### 6.4.2.3. Contenido de auditoría recibida
+
+La severidad se expresa en una escala de 1 a 3: *1* corresponde a una molestia menor, *2* a una dificultad que afecta la tarea y *3* a un obstáculo importante para completarla. La revisión se limitó a la aplicación web y a las pantallas indicadas en el alcance.
+
+##### 1. Evaluación de la navegación entre ingreso y registro
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-01* | “Regístrate” llevaba a /register e “Inicia sesión” a /login; ninguna de esas rutas existe. La redirección general devolvía al usuario al inicio. | 3 | Consistencia y estándares; control y libertad del usuario. |
+
+##### 2. Evaluación de los formularios de la aplicación web
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-02* | Las etiquetas visibles no estaban asociadas a los campos mediante for e id, lo que dificultaba identificar los controles con tecnologías de asistencia. | 2 | Accesibilidad; reconocimiento de la información. |
+| *AU-03* | El botón con icono de visibilidad de contraseña no cambiaba el estado del campo. | 2 | Consistencia y estándares; correspondencia entre control y resultado. |
+
+##### Descripción de problemas y recomendaciones
+
+- *AU-01 — Navegación (severidad 3):* app.routes.ts define /sign-up y /sign-in, mientras que las plantillas enlazaban a /register y /login. El enlace de registro se confirmó también en el DOM de la aplicación local. *Recomendación:* enlazar cada acción con su ruta existente.
+- *AU-02 — Etiquetas de campos (severidad 2):* los nombres de los campos aparecían como etiquetas visuales sin asociación explícita con el control correspondiente. *Recomendación:* usar for e id en los campos de texto y un nombre accesible para el selector de rol.
+- *AU-03 — Visibilidad de contraseña (severidad 2):* el botón mostraba un icono de ojo, pero carecía de una acción que alternara el tipo del campo. *Recomendación:* permitir mostrar y ocultar la contraseña y comunicar el estado del botón con una etiqueta accesible.
+
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+| Hallazgo | Modificación aplicada | Archivo principal | Verificación |
+| :--- | :--- | :--- | :--- |
+| *AU-01* | Se sustituyeron los destinos por /sign-up y /sign-in. | Plantillas de ingreso y registro. | Rutas contrastadas con app.routes.ts; compilación correcta. |
+| *AU-02* | Se asociaron etiquetas y campos con for e id; el selector de rol recibió un nombre accesible. | Plantillas de ingreso y registro. | Revisión del código modificado; compilación correcta. |
+| *AU-03* | El botón alterna entre mostrar y ocultar la contraseña y actualiza su icono y atributos accesibles. | Plantilla y componente de ingreso. | Compilación correcta; falta comprobación manual de la interacción. |
+
+Además, el botón de ingreso y el control de visibilidad usan ahora textos en español. Los cambios se encuentran en la copia local del frontend y aún requieren commit y despliegue para llegar al sitio público. La compilación npm run build terminó sin errores; quedan pendientes la comprobación manual completa con credenciales de prueba y la revisión en distintos tamaños de pantalla.
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo VII: DevOps Practices
 
+## Benchmark de herramientas DevOps
+
+La comparación documental usa cuatro criterios para ElectroLink: compatibilidad con Java 21, Maven y Docker, trazabilidad de las validaciones por commit, control de la publicación y mantenimiento operativo. Las evidencias de las secciones 7.1 a 7.4 corresponden al flujo implementado. Las demás opciones se evaluaron con su documentación técnica.
+
+| Etapa | Alternativas | Criterio y decisión para el AV2 |
+| :--- | :--- | :--- |
+| Compilación y pruebas | Jenkins local o GitHub Actions con ejecutores administrados. [Jenkins Pipeline](https://www.jenkins.io/doc/book/pipeline/syntax/) · [Ejecutores de GitHub Actions](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners) | Jenkins reutiliza el `Jenkinsfile` y el entorno Docker del equipo. El historial conserva los reportes JUnit, JaCoCo y Checkstyle asociados al build. GitHub Actions reduciría el mantenimiento del ejecutor y requeriría trasladar las etapas a un workflow. |
+| Entrega de la versión candidata | Aprobación `input` en Jenkins o aprobación de un entorno en GitHub Actions. [Jenkins Pipeline](https://www.jenkins.io/doc/book/pipeline/syntax/#input) · [Entornos de despliegue en GitHub Actions](https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments) | Jenkins registra la aprobación y etiqueta la imagen en el Docker local. Un entorno de GitHub Actions permitiría aplicar reglas de protección al trabajo de entrega. El flujo actual conserva la aprobación dentro del build de Jenkins. |
+| Despliegue del backend | Render con `On Commit` o `After CI Checks Pass`. [Despliegues de Render](https://render.com/docs/deploys#configuring-auto-deploys) | El backend usa `On Commit` en `main` y Render construye desde el `Dockerfile`. La opción condicionada a CI requiere que Render detecte el resultado de las comprobaciones del commit en el proveedor Git. En el AV2, Jenkins y Render se ejecutan en paralelo. |
+| Monitoreo y alertas | Reglas de Prometheus con Alertmanager o reglas y notificaciones en Grafana Alerting. [Prometheus y Alertmanager](https://prometheus.io/docs/alerting/latest/overview/) · [Grafana Alerting](https://grafana.com/docs/grafana/latest/alerting/) | El entorno local usa reglas versionadas de Prometheus, visualización en Grafana y entrega al receptor HTTP por Alertmanager. Grafana Alerting centralizaría reglas y notificaciones en la misma interfaz. La demo documenta la activación y resolución de la alerta en el entorno local. |
+
 ## 7.1. Continuous Integration
 
-La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
+La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura, lo analiza con SonarQube y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
 
 ### 7.1.1. Tools and Practices
 
@@ -6896,6 +7225,8 @@ La integración continua del backend de ElectroLink se implementó con un pipeli
 | **JUnit 5, Mockito y AssertJ** | JUnit 5, Mockito 5.19 | Pruebas unitarias de entidades y servicios de los bounded contexts |
 | **JaCoCo** | jacoco-maven-plugin 0.8.15 | Medición de la cobertura de líneas y validación de un mínimo de 30 % |
 | **JUnit plugin** | Plugin de Jenkins | Publicación del reporte de pruebas de cada build |
+| **SonarQube Community** | 26.11 (imagen Docker `sonarqube:community`) | Análisis estático de calidad y seguridad, con el Quality Gate *Sonar way*. Se ejecuta en otro contenedor, en la misma red de Docker que Jenkins |
+| **SonarQube Scanner** | Plugin de Jenkins 2.19.0 y sonar-maven-plugin 5.8.0.7211 | Paso `withSonarQubeEnv`, que entrega a Maven la URL del servidor y el token guardado como credencial (`sonarqube-token`) |
 
 **Prácticas aplicadas**
 
@@ -6910,6 +7241,7 @@ La integración continua del backend de ElectroLink se implementó con un pipeli
 | **Detener la línea ante fallos** | Si una etapa falla, las siguientes no se ejecutan y el build queda en rojo. |
 | **Separación entre pruebas unitarias y de integración** | En la etapa de pruebas solo se ejecutan las pruebas unitarias, que usan mocks y no requieren servicios externos. Las pruebas de integración (clases `*IT` y el runner global de Karate) necesitan la API y PostgreSQL en ejecución, por lo que se ejecutan fuera del pipeline (sección 6.1.2). |
 | **Umbral de calidad** | JaCoCo exige al menos 30 % de cobertura de líneas; si la cobertura baja de ese valor, el build falla. |
+| **Quality Gate en el pipeline** | La etapa *SonarQube Analysis* ejecuta el escáner con `sonar.qualitygate.wait=true`: espera el resultado del Quality Gate *Sonar way* y detiene el build si no se cumple. Se usa esta opción en lugar de `waitForQualityGate` porque SonarQube rechaza webhooks hacia direcciones internas como la del contenedor de Jenkins. |
 | **Publicación de evidencias** | El bloque `post` publica el reporte de JUnit y archiva el reporte de cobertura, el resultado de Checkstyle y el `.jar` generado. |
 | **Ejecución del pipeline** | Jenkins se ejecuta en un entorno local y no puede recibir *webhooks* de GitHub, por eso usa *polling*. Un cambio en `main` inicia el pipeline en dos minutos como máximo. *Construir ahora* sigue disponible para ejecuciones manuales. |
 
@@ -6982,6 +7314,18 @@ pipeline {
       }
     }
 
+    stage('SonarQube Analysis') {
+      steps {
+        // Server URL and token come from the 'SonarQube' server configured in Jenkins.
+        // sonar.qualitygate.wait makes the scanner fail the build if the Quality Gate fails.
+        withSonarQubeEnv('SonarQube') {
+          withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+            sh 'mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar -Dsonar.projectKey=electrolink-backend -Dsonar.projectName=ElectroLink-Backend -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300'
+          }
+        }
+      }
+    }
+
     stage('Package Project') {
       steps {
         withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
@@ -7049,9 +7393,50 @@ Las capturas de esta sección corresponden al build #5, que se ejecutó sobre el
 
 <img src="assets/img/cap7/jenkins-artifacts.jpg" width="700"/>
 
+**Análisis estático con SonarQube: build #14**
+
+La etapa *SonarQube Analysis* se agregó después de *Validate Test Coverage*, para que el análisis incluya el reporte de JaCoCo. Jenkins se conecta con el servidor `SonarQube` (`http://sonarqube:9000`) mediante el token guardado como credencial:
+
+<img src="assets/img/cap7/jenkins-sonarqube-server.png" width="700"/>
+
+El build #14 se inició solo al integrar en `main` el commit `ci: add SonarQube analysis stage with quality gate` (`4d56227`). El escáner analizó 317 archivos fuente y 32 de prueba, importó el reporte de JaCoCo y esperó el resultado del Quality Gate: **`QUALITY GATE STATUS: PASSED`**.
+
+<img src="assets/img/cap7/jenkins-sonar-quality-gate-log.png" width="700"/>
+
+El pipeline terminó en verde en 1 minuto y 47 segundos. *SonarQube Analysis* tardó 24 segundos:
+
+<img src="assets/img/cap7/jenkins-sonar-stages-success.png" width="700"/>
+
+El panel del proyecto `electrolink-backend` en SonarQube resume el análisis del código completo:
+
+<img src="assets/img/cap7/sonarqube-dashboard.png" width="700"/>
+
+| Métrica | Resultado |
+|---|---|
+| Quality Gate (*Sonar way*) | **Passed** |
+| Líneas de código | 6 505 |
+| Cobertura | 30,9 % |
+| Duplicación | 0,3 % |
+| Seguridad | 2 *issues* abiertos (calificación D) |
+| Confiabilidad | 1 *issue* abierto (calificación C) |
+| Mantenibilidad | 0 *issues* (calificación A) |
+| *Security Hotspots* | 0 |
+
+El Quality Gate *Sonar way* evalúa el código nuevo. Como este fue el primer análisis del proyecto, no había un período de código nuevo y la puerta resultó aprobada aunque el código completo tiene tres *issues*:
+
+<img src="assets/img/cap7/sonarqube-issues.png" width="700"/>
+
+| Regla | Ubicación | Hallazgo | Valoración y acción |
+|---|---|---|---|
+| `java:S4502` · Seguridad, alta | `WebSecurityConfiguration`, línea 78 | La protección CSRF de Spring Security está desactivada. | La API es sin estado (`SessionCreationPolicy.STATELESS`) y se autentica con JWT en la cabecera `Authorization`, sin cookies de sesión, por lo que CSRF no aplica en la práctica. Se debe revisar y, si se confirma, marcar como aceptado en SonarQube con esa justificación. |
+| `java:S5122` · Seguridad, media | `ProfilesController`, línea 22 | El controlador habilita CORS para cualquier origen. | `@CrossOrigin(origins = "*")` ignora la configuración global de `WebSecurityConfiguration`, que toma los orígenes de `CORS_ALLOWED_ORIGINS` (por defecto `*`). Conviene quitar la anotación del controlador y definir en `CORS_ALLOWED_ORIGINS` solo los dominios del front-end. |
+| `java:S8786` · Confiabilidad, media | `AssetsApiSupport` (código de prueba), línea 26 | Una expresión regular puede tener un tiempo de ejecución super lineal por *backtracking*. | Afecta solo a una clase de apoyo de las pruebas Karate. Se puede simplificar la expresión sin impacto en producción. |
+
+A partir de este análisis, cada cambio que llegue a `main` se compara con esta línea base: si introduce *issues* que incumplan el Quality Gate en el código nuevo, el build se detiene antes de construir la imagen Docker.
+
 ## 7.2. Continuous Delivery
 
-La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. La decisión de liberar una versión es **manual**: el equipo integra `develop` en `main` siguiendo GitFlow. Desde ese momento todo es automático. Jenkins detecta el cambio en `main`, ejecuta las validaciones de integración continua (sección 7.1), construye la imagen Docker de la versión y se detiene para que un integrante la apruebe como candidata a liberación.
+El equipo integra `develop` en `main` siguiendo GitFlow. Jenkins detecta el cambio, ejecuta las validaciones de integración continua (sección 7.1) y construye la imagen Docker. Después, un integrante aprueba manualmente la imagen como candidata a liberación. Render inicia su propio despliegue en paralelo desde `main` (sección 7.3).
 
 ### 7.2.1. Tools and Practices
 
@@ -7112,7 +7497,7 @@ El recorrido completo de un cambio, desde que se escribe hasta que queda aprobad
 | 3 | **Validación de integración** | Equipo | Se ejecutan las pruebas Karate contra el backend real con PostgreSQL aislado (sección 6.1.2). | Escenarios Karate aprobados. |
 | 4 | **Decisión de liberación** | Equipo | Se integra `develop` en `main`. | *Merge* a `main`. |
 | 5 | **Detección del cambio** | Jenkins | El *polling* encuentra el commit nuevo en `main` e inicia el pipeline. | Dentro de 2 minutos. |
-| 6 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
+| 6 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage*, *SonarQube Analysis* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde, cobertura de líneas de al menos 30 % y Quality Gate aprobado. |
 | 7 | **Build Docker Image** | Jenkins | Construye la imagen con el `Dockerfile` del repositorio y la etiqueta con el número de build y `latest`. | Imagen construida sin errores. |
 | 8 | **Approve Delivery** | Integrante del equipo | El pipeline se detiene hasta que se aprueba la versión. Al aprobarla, la imagen se etiqueta como `release-candidate`. | Aprobación dentro de 30 minutos. |
 | 9 | **Archivo de evidencias** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Build terminado en verde. |
@@ -7152,7 +7537,7 @@ El build terminó con todas las etapas en verde en 1 minuto y 58 segundos. Las e
 
 ## 7.3. Continuous Deployment
 
-El despliegue continuo publica automáticamente en producción lo que llega a la rama de liberación. En ElectroLink, cada componente de la solución se despliega solo cuando se actualiza su repositorio, sin intervención manual en el servidor.
+Render despliega la API de ElectroLink desde la rama `main` del repositorio del backend. La configuración **Auto-Deploy → On Commit** activa el despliegue cuando llegan cambios a esa rama.
 
 ### 7.3.1. Tools and Practices
 
@@ -7161,9 +7546,9 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 | Componente | Plataforma | Uso | URL |
 |---|---|---|---|
 | **Backend RESTful API** | **Render** (*Web Service*, entorno Docker, plan gratuito) | Construye la imagen con el `Dockerfile` del repositorio y publica la API. | https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html |
-| **Front-end web** | **Netlify** | Publica la aplicación web a partir del repositorio conectado. | https://expsoft-frontend.netlify.app |
+| **Front-end web** | **Netlify** | El despliegue web anterior está documentado en la [sección 5.2.3](#523-implemented-frontend-web-application-evidence). | https://expsoft-frontend.netlify.app |
 | **Landing Page** | **GitHub Pages** | Publica la página estática desde la rama configurada en *Settings → Pages*. | https://g2-diseno-de-experimentos.github.io/Landing-Page/ |
-| **Base de datos** | PostgreSQL | Base de datos de producción del backend, conectada mediante variables de entorno. | — |
+| **Base de datos** | **PostgreSQL 17 en filess.io** | Base temporal conectada al backend para la demostración con datos ficticios. | — |
 | **Repositorio** | GitHub (organización `G2-Diseno-de-Experimentos`) | Origen del código que despliegan las plataformas. | — |
 
 **Prácticas aplicadas**
@@ -7173,20 +7558,30 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 | **Despliegue disparado por Git** | Un *push* a la rama configurada en Render (`main`) inicia automáticamente la construcción y el despliegue de una nueva versión del backend. |
 | **Una rama de producción alimentada por GitFlow** | `main` solo recibe cambios desde `develop`, después de la validación de integración con Karate. El mismo commit que Render despliega es el que Jenkins valida (sección 7.2). |
 | **Construcción de la imagen en la plataforma** | Render usa el `Dockerfile` del repositorio, con las mismas versiones de Java y Maven que Jenkins (JDK 21 y Maven 3.9). |
-| **Secretos como variables de entorno** | Las credenciales de la base de datos y el secreto JWT se configuran en la sección *Environment* de Render y no se guardan en el repositorio. |
+| **Secretos como variables de entorno** | Render suministra `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y `JWT_SECRET` desde *Environment*. |
 | **Puerto inyectado por la plataforma** | La aplicación usa la variable `PORT` que Render inyecta (`server.port=${PORT:8091}`) y escucha en `0.0.0.0`. |
 | **Verificación posterior al despliegue** | Se comprueba que la URL pública responda y que Swagger UI liste los grupos de endpoints. |
 
-<!-- CONFIRMAR con quien administra Render: (1) que la rama configurada sea `main`, (2) proveedor de PostgreSQL de producción, (3) nombre exacto de las variables de entorno cargadas. -->
+La configuración de compilación apunta al repositorio `G2-Diseno-de-Experimentos/ElectroLink-Backend`, la rama `main` y el archivo `./Dockerfile`.
+
+![Repositorio, rama main y Dockerfile configurados en Render](assets/img/cap7/render-settings-branch.png)
+
+Render tiene habilitado el despliegue automático con **On Commit**.
+
+![Auto-Deploy configurado en On Commit](assets/img/cap7/render-settings-autodeploy.png)
+
+La captura de *Environment* muestra los nombres de las variables con sus valores ocultos.
+
+![Variables de entorno de Render con sus valores ocultos](assets/img/cap7/render-environment.png)
 
 ### 7.3.2. Production Deployment Pipeline Components
 
 | Componente | Disparador | Qué ocurre en el despliegue | Verificación |
 |---|---|---|---|
 | **Backend (Render)** | *Push* a `main` | Render clona el repositorio, construye la imagen con el `Dockerfile` (`mvn package -DskipTests`, y luego la imagen `eclipse-temurin:21-jre`), inicia el contenedor con las variables de entorno y publica la nueva versión. | URL pública y Swagger UI disponibles. |
-| **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify descarga el código, ejecuta la construcción de la aplicación y publica el resultado. | La página carga y los registros del despliegue no muestran errores. |
+| **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify construye y publica la aplicación web. | La [sección 5.2.3](#523-implemented-frontend-web-application-evidence) muestra un despliegue anterior. La rama y el commit de la publicación actual quedan por verificar. |
 | **Landing Page (GitHub Pages)** | Cambios en la rama configurada en *Pages* | GitHub construye y publica el sitio estático. | La dirección de GitHub Pages responde. |
-| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas desde las entidades. No hay migraciones versionadas. | El backend inicia y responde a las consultas. |
+| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas en el esquema `electrolink`, seleccionado mediante `currentSchema` en la conexión JDBC. | El backend completa el arranque con la configuración de la base de demostración. |
 
 **Flujo completo hacia producción**
 
@@ -7198,12 +7593,937 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 **Consideraciones**
 
 - La construcción de la imagen en Render omite las pruebas (`-DskipTests`). Las pruebas unitarias se ejecutan en Jenkins sobre el mismo commit, pero en paralelo al despliegue y no antes. Un defecto que solo detecte Jenkins puede llegar a producción durante unos minutos, hasta que se revierta. Por eso la validación previa con Karate en `develop` es importante.
-- El despliegue de producción lo inicia el *push* a `main`, no Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
+- Un *push* a `main` activa el despliegue automático de Render en paralelo a Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
 - `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
+- El endpoint de filess.io usado en la demostración rechaza TLS. La conexión usa `sslmode=prefer` y la base está reservada para datos ficticios.
 
-**[CAPTURAS PENDIENTES]** Render: configuración del servicio (rama, entorno Docker) y registro del último despliegue. Netlify: registro del último despliegue. Swagger UI de producción.
+El 11/11/2026, Render desplegó el commit `37cef46` tras una actualización de las variables de entorno. El despliegue quedó en estado **Live**.
+
+![Render muestra el despliegue del commit 37cef46 en estado Live](assets/img/cap7/render-deploy-events.png)
+
+En ese mismo despliegue, Render obtuvo el código de `main` y cargó el `Dockerfile`. El paso `mvn -B -DskipTests package` aparece como **CACHED**. Docker reutilizó esa capa y exportó la imagen antes de iniciar el despliegue del contenedor.
+
+![Render obtiene el commit 37cef46 de main y carga el Dockerfile](assets/img/cap7/render-docker-build.png)
+
+![Docker reutiliza la capa con el paquete de Maven](assets/img/cap7/render-docker-maven-cache.png)
+
+![Render exporta la imagen de Docker e inicia el despliegue](assets/img/cap7/render-docker-export.png)
+
+El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication` a las 03:15:38 (hora de Lima) y que Tomcat escucha en el puerto `10000`.
+
+![Registro de arranque de Spring Boot y Tomcat en Render](assets/img/cap7/render-deploy-logs.png)
+
+Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los grupos de autenticación y calificaciones. La especificación publicada utiliza el título `Learning Platform API`.
+
+![Swagger UI del backend desplegado en Render con los endpoints cargados](assets/img/cap7/swagger-produccion.png)
+
+## 7.4. Continuous Monitoring
+
+El monitoreo de ElectroLink comprende el uso del frontend y la disponibilidad técnica de la API. Para medir el uso se creó un flujo web en Google Analytics 4 y se preparó el frontend para enviar visitas y el evento de inicio de sesión exitoso. Se realizó una **prueba en línea real de envío de eventos**: el frontend ejecutado en `127.0.0.1` envió `page_view` y `scroll` a Google Analytics por internet y recibió respuestas HTTP 204. Estas visitas de prueba no representan tráfico del sitio publicado en Netlify. En paralelo, un entorno local observa la disponibilidad HTTP de la API en Render y demuestra las etapas de alerta y notificación mientras Docker está encendido.
+
+### 7.4.1. Tools and Practices
+
+| Herramienta | Función en ElectroLink |
+|---|---|
+| **Google Analytics 4** | Recibe las visitas y eventos de uso del frontend web. El flujo `ElectroLink Frontend Web` recibió eventos reales durante una prueba con el frontend local; falta publicar la etiqueta para medir el sitio de Netlify. |
+| **Event Tracking** | El frontend preparado emite `login` únicamente después de que la API confirma la autenticación. No envía credenciales, token ni identificadores personales. |
+| **Docker Compose** | Inicia y conecta los componentes del entorno local. |
+| **Blackbox Exporter** | Envía una solicitud GET a la página pública de Swagger UI y registra si devuelve HTTP 200 y cuánto tarda. |
+| **Prometheus** | Consulta las métricas, conserva su historial y evalúa las reglas de alerta. |
+| **Grafana** | Presenta el estado actual y la evolución de disponibilidad y tiempo de respuesta. |
+| **Alertmanager** | Recibe las alertas de Prometheus y las entrega a un receptor HTTP local. |
+| **Receptor local** | Guarda y muestra los eventos de activación y resolución para comprobar el recorrido de la notificación. |
+
+La elección de herramientas responde a dos preguntas distintas: Analytics ayuda a conocer qué funciones usan las personas; Prometheus y Grafana muestran si la API responde desde una comprobación externa. La contraseña de Grafana se configura en `observability/.env`, ignorado por Git. El dashboard, el origen de datos y las reglas se cargan desde archivos del proyecto. Se usa además un sitio local de demostración para provocar una caída controlada sin interrumpir la API real. [Render indica](https://render.com/docs/free) que un servicio gratuito puede demorar tras un período de inactividad; la comprobación admite hasta 90 segundos y la alerta de la API exige diez minutos de fallos sostenidos.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El flujo de medición de uso es **frontend web → etiqueta GA4 → flujo web de Analytics → informes de uso**. La propiedad y el flujo `ElectroLink Frontend Web` se crearon para `https://expsoft-frontend.netlify.app`, con medición mejorada activada. Se colocó la etiqueta de Google en el `<head>` de `src/index.html` del frontend y se preparó el evento recomendado `login` para enviarse después de una respuesta exitosa del backend. La captura del flujo se tomó antes de la prueba en línea y por eso indica que todavía no había datos. Después, la navegación por el frontend local generó eventos enviados al endpoint de [Google Analytics](https://developers.google.com/analytics/devguides/collection/ga4/troubleshoot), que respondió HTTP 204. El informe en tiempo real confirmó su recepción: mostró un usuario activo durante los últimos 30 minutos, dos vistas de página y los eventos `page_view`, `first_visit`, `scroll` y `session_start`. Esta evidencia corresponde a navegación de prueba desde `127.0.0.1`; falta publicar la etiqueta para medir el uso del sitio de Netlify. No se observó el evento `login`, que requiere un inicio de sesión exitoso.
+
+La etiqueta que se publica con el frontend es:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8CWPHJ0GF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P8CWPHJ0GF');
+</script>
+```
+
+La siguiente captura muestra la etiqueta dentro del `<head>` del archivo real del frontend. Corresponde al código local preparado para publicación; todavía no es una captura del sitio desplegado.
+
+![Etiqueta GA4 ubicada en el head de src/index.html del frontend](assets/img/cap7/ga4-header-codigo.png)
+
+![Flujo web de Google Analytics 4 configurado para el frontend de ElectroLink, todavía sin datos](assets/img/cap7/ga4-flujo-web.png)
+
+La siguiente captura del informe en tiempo real registra los eventos recibidos durante la prueba en línea con el frontend local.
+
+![Informe en tiempo real de GA4 con un usuario activo, dos vistas de página y eventos de navegación](assets/img/cap7/ga4-tiempo-real.png)
+
+Como comprobación técnica complementaria, se usa el siguiente flujo de disponibilidad HTTP:
+
+El flujo es **URL pública de Render → Blackbox Exporter → Prometheus → Grafana**. Prometheus comprueba `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` cada cinco minutos. El panel principal muestra la métrica `probe_success`: 1 significa que la solicitud observada devolvió HTTP 200; 0 significa que esa comprobación falló. Otros paneles muestran el historial de disponibilidad y duración, junto con el estado del servicio local de demostración.
+
+En la ejecución del 11/11/2026, Prometheus registró `probe_success = 1` para la URL pública. Este chequeo confirma el acceso HTTP a Swagger UI desde la computadora de prueba; no comprueba la conexión con PostgreSQL ni un flujo autenticado con JWT.
+
+![Dashboard local de Grafana con disponibilidad y duración de las comprobaciones HTTP](assets/img/cap7/grafana-disponibilidad.png)
+
+### 7.4.3. Alerting Pipeline Components
+
+Prometheus evalúa `ElectroLinkApiUnavailable` cuando la comprobación pública falla durante diez minutos consecutivos. Para verificar la cadena de forma segura, `DemoEndpointUnavailable` se activa si el sitio local permanece inaccesible durante treinta segundos. Alertmanager recibe la alerta y la entrega al receptor local mediante un webhook. La regla distingue un fallo observado de su causa: si la comprobación falla, corresponde revisar Render, la red y los registros antes de atribuir el problema al backend.
+
+La prueba de demostración consistió en detener `demo-site` con `docker compose stop demo-site`, observar la alerta activa y restaurarlo con `docker compose start demo-site`.
+
+![Reglas de Prometheus durante la demostración de la alerta](assets/img/cap7/prometheus-alertas.png)
+
+### 7.4.4. Notification Pipeline Components
+
+Alertmanager envía al receptor HTTP local los eventos `firing` y `resolved`. El receptor los conserva en un volumen de Docker y los presenta en `http://localhost:8089`. La evidencia confirma la entrega dentro del entorno local. En esta entrega no se configuró correo, Slack ni otro aviso a personas fuera de la computadora; para lograr notificaciones permanentes haría falta un destino del equipo y una instalación que siga encendida.
+
+![Eventos de activación y resolución recibidos por el receptor local](assets/img/cap7/notificaciones-locales.png)
+
+Para repetir la demostración, iniciar Docker Desktop y ejecutar `docker compose up -d` dentro de `observability`; abrir Grafana en `http://localhost:3000`, Prometheus en `http://localhost:9090` y el receptor en `http://localhost:8089`. La configuración y los pasos detallados están en `observability/README.md` del repositorio del backend.
 
 <div style="page-break-after: always;"></div>
+
+# Capítulo VIII: Experiment-Driven Development
+
+## 8.1. Experiment Planning 
+
+### 8.1.1. As-Is Summary.
+
+ElectroLink es una plataforma digital orientada a conectar propietarios de viviendas y pequeñas y medianas empresas con proveedores de servicios eléctricos certificados. Su propuesta de valor se centra en facilitar la contratación de profesionales, mejorar la confianza durante la selección de proveedores y proporcionar herramientas para gestionar los servicios eléctricos.
+
+Actualmente, cotemplamos funcionalidades relacionadas a la administración de profiles, propiedades en inventario, solucitudes y gestión de servicios, programación de actividades, seguimiento de servicios y evaluación del servicio recibido. Sin embargo, nuestro producto no considero el desarrollo como herramienta preventiva y proactiva para la gestión del comportamiento eléctrico. 
+
+Por un lado, desde la perspectiva de los propietarios de viviendas y las PYMES, la gestión eléctrica suele adquirir mayor importancia cuando se presenta una avería, interrupción del servicio o comportamiento irregular en sus instalaciones. Ante esta situación, deben identificar el origen del problema, buscar un técnico capacitado y asumir los costos asociados a la reparación. Mientras tanto, pueden experimentar interrupciones en sus actividades cotidianas o productivas, gastos imprevistos y dificultades para determinar si existían señales previas que hubieran permitido anticiparse al inconveniente. Esto genera incertidumbre respecto al estado de sus instalaciones y limita su capacidad para tomar decisiones preventivas.
+
+Por otro lado, desde la perspectiva de los técnicos electricistas, atender una instalación cuando la falla ya se ha manifestado puede representar mayores dificultades durante el diagnóstico y la intervención. El profesional debe identificar las posibles causas del problema, evaluar el estado de los componentes involucrados y determinar las acciones correctivas necesarias. Además, cuando no existe un historial organizado del comportamiento eléctrico de la instalación, dispone de menos información para comprender su evolución y reconocer posibles antecedentes del inconveniente. Esto puede incrementar la complejidad del diagnóstico y dificultar la planificación de intervenciones preventivas.
+
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims.
+
+**Assumptions**
+
+- Business Outcomes:
+
+  - Los propietarios de negocios con más de una sede podrían encontrar valor adicional en la posibilidad de comparar el comportamiento eléctrico de sus instalaciones.
+  - La introducción de una herramienta de seguimiento preventivo e historial incrementará la tasa de conversión de solicitudes de servicios correctivos a preventivos en al menos un 15% dentro del primer trimestre de lanzamiento.
+
+- Propietarios / PYMES:
+
+  - Los propietarios de viviendas y responsables de PYMES tienen dificultades para reconocer variaciones relevantes en el comportamiento eléctrico de sus instalaciones antes de que se manifieste una falla.
+  - Los usuarios estarían interesados en consultar un historial de consumo eléctrico para comprender mejor el comportamiento de sus instalaciones.
+  - La presentación visual de datos históricos facilitaría la identificación de variaciones de consumo frente a la consulta de lecturas aisladas.
+
+- Technician:
+
+  - Los técnicos electricistas podrían realizar una evaluación inicial más contextualizada si disponen de información histórica de la instalación.
+
+**User Outcomes**
+
+- Propietarios / PYMES:
+
+  - La consulta de un historial de consumo permite a los propietarios comprender mejor el comportamiento eléctrico de sus instalaciones (Evaluar si los usuarios interpretan correctamente información histórica y comparativa).
+  - Las alertas sobre variaciones relevantes ayudan a los usuarios a reconocer cuándo una instalación requiere atención.
+  - Los responsables de PYMES con varias sedes encuentran valor en supervisar el comportamiento eléctrico de sus instalaciones desde un mismo espacio.
+
+- Technician:
+  
+  - La disponibilidad de información histórica aporta contexto útil a los técnicos electricistas durante una evaluación
+  - El tiempo medio de diagnóstico de una avería eléctrica puede reducirse en al menos un 25% si el técnico cuenta con acceso previo al historial estructurado de la instalación.
+
+- Knowledge Gaps:
+
+  - Se desconoce qué indicadores eléctricos resultan más comprensibles y útiles para los propietarios de viviendas y responsables de PYMES.
+  - No se conoce si los usuarios pueden identificar por sí mismos variaciones relevantes a partir de un historial de consumo.
+  - Se desconoce qué frecuencia de consulta tendría una herramienta de seguimiento del comportamiento eléctrico.
+  - No se ha determinado qué tipo de alerta sería considerada útil y en qué circunstancias podría generar notificaciones innecesarias.
+  - No se ha validado si los técnicos electricistas consideran útil disponer de un historial de consumo y eventos anteriores durante el diagnóstico de una instalación.
+  - No se ha determinado si la gestión de múltiples instalaciones constituye una necesidad prioritaria para los propietarios de PYMES.
+
+- Ideas
+
+  - Historial de consumo eléctrico por propiedad o instalación, permitir que el usuario consulte el comportamiento eléctrico registrado a lo largo del tiempo.
+  - Gráficos comparativos de consumo por períodos, facilitar la interpretación de variaciones respecto a períodos anteriores.
+  - Alertas ante variaciones que superen determinados umbrales, comunicar oportunamente condiciones que merezcan revisión.
+  - Vista consolidada de múltiples propiedades o sedes, facilitar la supervisión de instalaciones pertenecientes a una misma organización.
+  - Registro de eventos e incidencias eléctricas, relacionar los eventos reportados con el historial de una instalación.
+
+- Claims
+
+  - La consulta de un historial de consumo permite a los propietarios comprender mejor el comportamiento eléctrico de sus instalaciones.
+  - La presentación visual de variaciones facilita la identificación de comportamientos eléctricos inusuales.
+  - La disponibilidad de información histórica aporta contexto útil a los técnicos electricistas durante una evaluación.
+  - La posibilidad de solicitar una evaluación profesional a partir de una variación identificada complementa la propuesta de valor de ElectroLink.
+
+### 8.1.3. Experiment-Ready Questions.
+
+A partir de las suposiciones, brechas de conocimiento, ideas y afirmaciones recopiladas, se formulan preguntas orientadas a reducir la incertidumbre sobre la extensión preventiva y proactiva de ElectroLink. Por ello, presentamos el método de las **5W y 2H** para el desarrollo de las preguntas para el desarrollo de la experimentación:
+
+| ID | Enfoque | Pregunta |
+|:---:|:---:|:--- |
+| Q01 | What / How | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| Q02 | Why | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| Q03 | Who | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| Q04 | Where | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| Q05 | When | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| Q06 | How | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| Q07 | How Much | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| Q08 | What / How | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| Q09 | Who / How | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| Q10 | What / Why | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| Q11 | How | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| Q12 | How | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| Q13 | How Much | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| Q14 | When / How | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+
+### 8.1.4. Question Backlog.
+
+Esta sección presenta el backlog como una lista priorizada de preguntas para la investigación, basada en una evaluación cuantitativa mediante criterios de **Confianza, Riesgo, Impacto e Interés**, tal como se muestra en la matriz de puntuación.
+
+- Matriz de Evaluación de Preguntas
+
+| Question | Confidence | Risk | Impact | Interest | Total Score |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? | 7 | 6 | 9 | 8 | **30** |
+| ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? | 8 | 5 | 7 | 7 | **27** |
+| ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? | 6 | 7 | 8 | 7 | **28** |
+| ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? | 7 | 5 | 7 | 6 | **25** |
+| ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? | 7 | 6 | 8 | 8 | **29** |
+| ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? | 6 | 5 | 7 | 7 | **25** |
+| ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? | 5 | 7 | 7 | 6 | **25** |
+| ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? | 7 | 6 | 9 | 8 | **30** |
+| ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? | 6 | 6 | 8 | 7 | **27** |
+| ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? | 7 | 5 | 8 | 7 | **27** |
+| ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? | 6 | 6 | 8 | 7 | **27** |
+| ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? | 7 | 6 | 9 | 8 | **30** |
+| ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? | 6 | 5 | 7 | 6 | **24** |
+| ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? | 5 | 7 | 8 | 7 | **27** |
+
+---
+
+- Matriz de Priorización de Preguntas
+
+| Prioridad (1/2/3/5/8) | Pregunta |
+| :---: | :--- |
+| **8** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **8** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **8** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **8** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **5** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **5** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **5** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **5** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **5** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variation inusual en el comportamiento eléctrico de su instalación? |
+| **5** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **3** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **3** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **3** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **2** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+
+### 8.1.5. Experiment Cards.
+
+Tarjeta de Experimento 1
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Why** | <ul><li>Evaluar cuantitativa y cualitativamente si el formato visual comparativo acelera y facilita la detección de anomalías frente al uso de tablas de datos numéricos aislados.</li><li>Comprender la comprensión cognitiva de los usuarios ante diferentes esquemas de visualización de métricas eléctricas.</li><li>Optimizar el diseño de la interfaz analítica para reducir la fatiga de lectura y mejorar la toma de decisiones preventivas.</li></ul> |
+| **What** | <ul><li>Implementar una prueba A/B exponiendo a un grupo de usuarios a tablas numéricas convencionales (Variante A) y a otro grupo a gráficos comparativos de consumo (Variante B).</li><li>Registrar métricas analíticas de tiempo medio de respuesta y tasa de acierto en la detección de un pico anómalo insertado en los datos.</li><li>Aplicar encuestas breves de usabilidad y satisfacción tras la interacción con ambas interfaces.</li></ul> |
+| **Hypothesis** | Se espera que la presentación visual de gráficos comparativos reduzca de forma estadísticamente significativa el tiempo de identificación de anomalías y aumente la precisión de los propietarios frente a una tabla convencional. |
+
+---
+
+Tarjeta de Experimento 2
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Why** | <ul><li>Descubrir los detonantes comportamentales y psicológicos que motivan el uso recurrente de herramientas de seguimiento energético.</li><li>Comprender si el motor de consulta responde a la optimización de gastos, la prevención de fallas o la curiosidad operativa.</li><li>Alinear las propuestas de valor de la interfaz de usuario con las verdaderas expectativas de consulta del cliente.</li></ul> |
+| **What** | <ul><li>Realizar diarios de uso simulados y entrevistas de seguimiento con usuarios piloto tras interactuar durante una semana con un prototipo de historial de consumo.</li><li>Categorizar las motivaciones expresadas durante las sesiones de retroalimentación según su frecuencia e intensidad emocional.</li><li>Identificar las funcionalidades del historial que generan mayor retención de consulta.</li></ul> |
+| **Hypothesis** | Se espera que el control y reducción del gasto económico mensual constituya el principal motor de consulta periódica para más del 60% de los usuarios, seguido de cerca por el temor a daños imprevistos en equipos. |
+
+---
+
+Tarjeta de Experimento 3
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Why** | <ul><li>Identificar los perfiles operativos, de riesgo y de costos que impulsan a un grupo específico a priorizar el monitoreo proactivo frente a la reacción tradicional.</li><li>Segmentar adecuadamente las estrategias de comunicación y comercialización de las nuevas extensiones de servicio.</li><li>Optimizar el enfoque de diseño según las prioridades particulares de hogares versus negocios comerciales.</li></ul> |
+| **What** | <ul><li>Aplicar cuestionarios de segmentación y entrevistas semiestructuradas a una muestra mixta de propietarios residenciales y gestores de PYMES.</li><li>Cruzar las variables de tamaño de la instalación, costos energéticos asumidos e historial de incidencias previas con el nivel de interés manifestado en el monitoreo.</li><li>Analizar estadísticamente qué variables determinan una mayor propensión hacia la prevención.</li></ul> |
+| **Hypothesis** | Se espera demostrar que los responsables de PYMES con costos operativos sensibles presentan un interés de supervisión preventiva un 35% mayor que los propietarios residenciales, impulsados por el riesgo de interrupción de su actividad comercial. |
+
+---
+
+Tarjeta de Experimento 4
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Why** | <ul><li>Identificar los nichos de infraestructura donde la trazabilidad histórica aporta mayor valor preventivo y económico.</li><li>Focalizar los esfuerzos de despliegue inicial de la extensión en aquellos espacios con mayor criticidad operativa.</li><li>Optimizar la comunicación de los casos de uso más exitosos para la plataforma.</li></ul> |
+| **What** | <ul><li>Analizar la correlación entre la complejidad de las instalaciones (viviendas antiguas, talleres artesanales, comercios de alta demanda) y la utilidad percibida del historial mediante paneles de expertos y entrevistas a administradores.</li><li>Evaluar escenarios de riesgo de sobrecarga según el tipo de carga instalada.</li><li>Categorizar las instalaciones según su grado de dependencia del suministro eléctrico continuo.</li></ul> |
+| **Hypothesis** | Se espera que los talleres artesanales y comercios minoristas con maquinaria sensible identifiquen un valor crítico en la información histórica, superando la utilidad percibida en viviendas residenciales estándar. |
+
+---
+
+Tarjeta de Experimento 5
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Why** | <ul><li>Determinar los umbrales de sensibilidad y las circunstancias en las que una notificación automatizada aporta valor real sin generar fatiga de alertas.</li><li>Comprender qué niveles de desviación en el consumo activan una preocupación genuina en propietarios de viviendas y administradores de PYMES.</li><li>Evitar la saturación de notificaciones innecesarias que provoquen el rechazo o desactivación de las alertas de la plataforma.</li></ul> |
+| **What** | <ul><li>Conducir entrevistas en profundidad y sesiones de evaluación con mockups de notificaciones móviles configuradas con diferentes porcentajes de variación (+15%, +30%, +50%).</li><li>Evaluar la percepción de utilidad y urgencia de los usuarios ante diversos escenarios de anomalías energéticas simuladas.</li><li>Identificar el rango de sensibilidad óptimo consensuado por los segmentos evaluados.</li></ul> |
+| **Hypothesis** | Se espera que los usuarios consideren útiles las alertas únicamente cuando el desvío porcentual supera un umbral crítico de su media histórica y se acompaña de una recomendación de acción clara. |
+
+---
+
+Tarjeta de Experimento 6
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Why** | <ul><li>Comprender el modelo mental que emplean los usuarios no técnicos al analizar datos evolutivos de su consumo eléctrico.</li><li>Detectar qué términos, métricas o referencias comparativas facilitan una interpretación correcta sin caer en confusiones.</li><li>Mejorar el diseño de las leyendas explicativas y la interfaz de análisis dentro de la plataforma.</li></ul> |
+| **What** | <ul><li>Conducir sesiones de observación y análisis de protocolos concurrentes (*think-aloud testing*) mientras los usuarios examinan gráficos comparativos históricos.</li><li>Registrar las expresiones, dudas y conclusiones verbalizadas por los participantes al interpretar diferentes variaciones de consumo simuladas.</li><li>Evaluar la precisión de sus deducciones frente a la realidad de los datos presentados.</li></ul> |
+| **Hypothesis** | Se espera que los usuarios dependan principalmente de comparativas directas con el mes anterior y el mismo mes del año previo para interpretar una variación, requiriendo apoyos textuales breves para comprender fluctuaciones porcentuales complejas. |
+
+---
+
+Tarjeta de Experimento 7
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Why** | <ul><li>Definir los patrones de engagement y los momentos de contacto óptimos entre el usuario y las herramientas de seguimiento preventivo.</li><li>Comprender si el registro manual de datos representa una fricción insostenible frente a la necesidad de automatización.</li><li>Calibrar las estrategias de recordatorios y notificaciones de revisión periódica dentro de la aplicación.</li></ul> |
+| **What** | <ul><li>Monitorear la frecuencia voluntaria de acceso a prototipos de seguimiento durante pruebas de campo de dos semanas con usuarios seleccionados.</li><li>Evaluar mediante encuestas de salida la disposición a realizar registros manuales periódicos de lecturas frente a la expectativa de automatización.</li><li>Analizar las tasas de retención de uso de las herramientas preventivas.</li></ul> |
+| **Hypothesis** | Se espera que la mayoría de los usuarios muestren resistencia a realizar registros manuales frecuentes (superiores a una vez por semana), prefiriendo consultas mensuales asociadas a la llegada de sus recibos de servicio eléctrico. |
+
+---
+
+Tarjeta de Experimento 8
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Why** | <ul><li>Medir la utilidad operativa del acceso al historial y a los reportes previos de la instalación durante el diagnóstico de una avería.</li><li>Comprender cómo los antecedentes de mantenimiento reducen la incertidumbre técnica antes de la intervención física en campo.</li><li>Validar la propuesta de valor de la plataforma hacia los profesionales del sector eléctrico.</li></ul> |
+| **What** | <ul><li>Simular casos de estudio técnicos con electricistas certificados divididos en dos grupos: un grupo con acceso previo al historial estructurado y un grupo de control sin antecedentes.</li><li>Registrar y comparar el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) y la precisión en la identificación de la causa raíz.</li><li>Recopilar retroalimentación cualitativa sobre la relevancia de los datos suministrados.</li></ul> |
+| **Hypothesis** | Se espera que el acceso previo al historial estructurado de la instalación reduzca el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) de los técnicos electricistas en al menos un 25%. |
+
+---
+
+Tarjeta de Experimento 9
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Why** | <ul><li>Precintar el alcance y formato de los reportes históricos que deben integrarse en el perfil técnico de cada propiedad o sede.</li><li>Evitar la sobrecarga de datos irrelevantes que entorpezcan la revisión rápida previa a una visita de campo.</li><li>Garantizar que los antecedentes de fallas pasadas, reparaciones y variaciones de consumo se presenten de forma accionable.</li></ul> |
+| **What** | <ul><li>Someter a evaluación tarjetas de prototipo con diferentes niveles de resumen histórico (cronología de eventos, gráficas de picos, bitácoras de técnicos anteriores) ante un panel de electricistas expertos.</li><li>Registrar mediante pruebas de ordenamiento (*card sorting* y entrevistas de priorización) qué datos consideran indispensables para su labor diagnóstica.</li><li>Evaluar el tiempo de asimilación de la información por parte de los profesionales.</li></ul> |
+| **Hypothesis** | Se espera que los técnicos prioricen la visualización de un registro cronológico de reparaciones previas y alertas de sobrecarga recientes por encima de los gráficos globales de consumo histórico detallado. |
+
+---
+
+Tarjeta de Experimento 10
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Why** | <ul><li>Evaluar la conveniencia y el atractivo comercial de una vista centralizada o multidestino para la gestión de múltiples locales comerciales.</li><li>Identificar posibles cuellos de botella de usabilidad al consolidar información de diferentes ubicaciones en un solo panel de control.</li><li>Dimensionar el potencial de expansión de la plataforma hacia segmentos corporativos con sucursales múltiples.</li></ul> |
+| **What** | <ul><li>Conducir pruebas de concepto y entrevistas con administradores que operan dos o más sedes comerciales utilizando un prototipo de vista consolidada de instalaciones.</li><li>Evaluar la claridad comparativa entre sedes y registrar las limitaciones de visualización o control reportadas por los participantes.</li><li>Medir la disposición a pagar un valor diferencial por la funcionalidad de gestión multisede.</li></ul> |
+| **Hypothesis** | Se espera que los responsables de múltiples sedes valoren positivamente la vista consolidada para detectar rápidamente anomalías entre locales, identificando como principal limitación la falta de filtros avanzados por tipo de consumo comercial. |
+
+---
+
+Tarjeta de Experimento 11
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Why** | <ul><li>Mapear el recorrido de decisión y los puntos de contacto del usuario cuando surge una sospecha de anomalía en su suministro.</li><li>Identificar en qué momento del proceso de reacción el usuario suele recurrir a soluciones informales o plataformas digitales.</li><li>Diseñar intervenciones de marketing y flujos de soporte en el instante exacto en que se manifiesta la necesidad de ayuda.</li></ul> |
+| **What** | <ul><li>Desarrollar entrevistas retrospectivas y dinámicas de mapeo de recorrido (*customer journey mapping*) con usuarios que hayan enfrentado anomalías eléctricas recientes en sus inmuebles.</li><li>Registrar la secuencia exacta de pasos adoptados (desde la revisión del recibo o tablero hasta la búsqueda de un técnico).</li><li>Detectar puntos de fricción y abandono en la búsqueda de soluciones.</li></ul> |
+| **Hypothesis** | Se espera que ante una variación inusual los propietarios recurran primero a la revisión visual de interruptores o a consultar con conocidos, demorando la búsqueda de un profesional certificado hasta que la falla se torna evidente o persistente. |
+
+---
+
+Tarjeta de Experimento 12
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Why** | <ul><li>Validar si la integración de un llamado a la acción (CTA) preventivo basado en anomalías estimula la contratación oportuna de servicios en ElectroLink.</li><li>Comprender la conexión mental que hacen los usuarios entre la detección de un riesgo técnico y la necesidad de asistencia especializada.</li><li>Potenciar la conversión cruzada desde las herramientas de monitoreo hacia los servicios correctivos y preventivos de la plataforma.</li></ul> |
+| **What** | <ul><li>Desplegar un prototipo interactivo con flujos de alerta simulados que incluyan un acceso directo (CTA) para solicitar una revisión profesional.</li><li>Medir las tasas de interacción, clics y conversión de los usuarios al enfrentarse a una notificación de variación inusual.</li><li>Analizar el comportamiento del usuario mediante pruebas de usabilidad guiadas en un entorno controlado.</li></ul> |
+| **Hypothesis** | Se espera que al menos el 40% de los usuarios evaluados identifiquen la conexión directa entre la alerta y la solicitud de soporte técnico, ejecutando el flujo de contacto ante una variación inusual simulada. |
+
+---
+
+Tarjeta de Experimento 13
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Why** | <ul><li>Equilibrar la riqueza analítica de los datos históricos con la simplicidad visual requerida por un usuario promedio no especializado.</li><li>Evitar la parálisis por análisis o la saturación de información en los paneles de control de la aplicación.</li><li>Determinar las agrupaciones temporales ideales (diaria, semanal, mensual) para la visualización efectiva de tendencias.</li></ul> |
+| **What** | <ul><li>Probar iterativamente interfaces con diferentes niveles de granularidad temporal (desde detalle diario hasta vistas anuales resumidas) en sesiones de prueba con usuarios.</li><li>Medir la claridad de comprensión y la capacidad de aislamiento de anomalías en cada nivel de profundidad visual.</li><li>Recopilar preferencias sobre el grado de detalle preferido para la toma de decisiones cotidianas.</li></ul> |
+| **Hypothesis** | Se espera que una vista agregada por semanas con opción de desglose mensual ofrezca el equilibrio óptimo de detalle, permitiendo a los usuarios identificar variaciones relevantes sin abrumarse con datos diarios excesivos. |
+
+---
+
+Tarjeta de Experimento 14
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Why** | <ul><li>Establecer límites estrictos en los algoritmos de notificación para evitar falsos positivos que alarmen indebidamente al usuario.</li><li>Proteger la confianza en la plataforma asegurando que cada aviso esté respaldado por datos concluyentes y explicaciones comprensibles.</li><li>Reducir el riesgo de abandono de la aplicación motivado por la ansiedad o frustración ante alertas confusas.</li></ul> |
+| **What** | <ul><li>Probar escenarios de alertas generadas por fluctuaciones menores o estacionales ante un grupo de usuarios sin conocimientos técnicos especializados.</li><li>Evaluar el nivel de estrés, confusión o desconfianza generado mediante escalas de percepción cualitativa.</li><li>Recopilar propuestas de redacción y aclaración contextual sugeridas por los participantes para mitigar alarmas falsas.</li></ul> |
+| **Hypothesis** | Se espera que las alertas disparadas por variaciones estacionales normales (como el uso de calefacción o aire acondicionado) sin la debida contextualización generen preocupación injustificada y desconfianza en más del 50% de los usuarios residenciales. |
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses
+
+**Experimento EC-01 – Q01: Interpretación del comportamiento eléctrico mediante gráficos comparativos**
+
+* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES que consultan gráficos comparativos identifican variaciones en menos tiempo que quienes consultan una tabla. La precisión se controla como métrica secundaria.
+* **H0 (Hipótesis nula):** El tiempo medio de identificación con gráficos es igual o mayor que el tiempo medio con la tabla.
+* **Criterio de evaluación:** Se establece como diferencia mínima de interés una reducción del 15% en el tiempo de identificación, sin disminuir la precisión de las respuestas (umbral de diseño experimental propuesto por el equipo).
+
+---
+
+**Experimento EC-02 – Q02: Motivos de consulta periódica del comportamiento eléctrico**
+
+* **H1 (Hipótesis alternativa):** El control y la reducción del gasto económico mensual constituyen el principal detonante que motiva a más del 60% de los propietarios y responsables de PYMES a consultar periódicamente el comportamiento eléctrico de sus instalaciones.
+* **H0 (Hipótesis nula):** La consulta periódica de las instalaciones no está motivada principalmente por el control del gasto económico, sino por factores aleatorios o de simple curiosidad operativa sin patrón definido.
+* **Criterio de evaluación:** Validar mediante diarios de uso simulados y entrevistas que al menos el 60% de los usuarios priorizan la optimización económica frente a otros factores.
+
+---
+
+**Experimento EC-03 – Q03: Diferenciación de segmentos en la supervisión preventiva**
+
+* **H1 (Hipótesis alternativa):** Los responsables de PYMES con costos operativos sensibles presentan un interés de supervisión preventiva un 35% mayor que los propietarios residenciales, impulsados por el riesgo de interrupción de su actividad comercial.
+* **H0 (Hipótesis nula):** No existe una diferencia estadísticamente significativa en el nivel de interés ni en la percepción de necesidad de supervisión preventiva entre propietarios residenciales y responsables de PYMES.
+* **Criterio de evaluación:** Analizar estadísticamente las encuestas de segmentación para comprobar una diferencia del 35% en la propensión hacia la prevención a favor de las PYMES.
+
+---
+
+**Experimento EC-04 – Q04: Contextos operativos y tipos de instalación para la información histórica**
+
+* **H1 (Hipótesis alternativa):** Los talleres artesanales y comercios minoristas con maquinaria sensible identifican un valor crítico en la información histórica del comportamiento eléctrico, superando la utilidad percibida en viviendas residenciales estándar.
+* **H0 (Hipótesis nula):** La utilidad percibida de la información histórica es homogénea en todos los tipos de instalación, sin que los comercios o talleres presenten una valoración diferencial significativa.
+* **Criterio de evaluación:** Evaluar mediante paneles de expertos y entrevistas si los nichos de alta criticidad otorgan una calificación de utilidad superior a 4.5/5 frente al sector residencial.
+
+---
+
+**Experimento EC-05 – Q05: Utilidad de las alertas ante variaciones relevantes**
+
+* **H1 (Hipótesis alternativa):** Los propietarios y responsables de PYMES otorgan una valoración media de utilidad mayor a las alertas con contexto y una acción sugerida que a las alertas genéricas.
+* **H0 (Hipótesis nula):** La valoración media de utilidad de las alertas contextualizadas es igual o menor que la de las alertas genéricas.
+* **Criterio de evaluación:** Comparar las valoraciones de ambas variantes en una escala de 1 a 5. La meta para la variante contextualizada es alcanzar una media de al menos 4 sobre 5 y mantener la comprensión del aviso.
+
+---
+
+**Experimento EC-06 – Q06: Interpretación de variaciones con información histórica y comparativa**
+
+* **H1 (Hipótesis alternativa):** Los usuarios interpretan correctamente las variaciones de consumo apoyándose principalmente en comparativas directas con el mes anterior y el mismo periodo del año previo, requiriendo apoyos textuales breves para fluctuaciones complejas.
+* **H0 (Hipótesis nula):** Los usuarios no logran interpretar de manera consistente las variaciones de consumo a partir de la información histórica y comparativa presentada, incurriendo en confusiones sistemáticas.
+* **Criterio de evaluación:** Alcanzar un porcentaje de acierto superior al 75% en las pruebas de interpretación de escenarios de consumo simulados con apoyos textuales.
+
+---
+
+**Experimento EC-07 – Q07: Frecuencia y circunstancias de registro o consulta**
+
+* **H1 (Hipótesis alternativa):** Los usuarios muestran resistencia a realizar registros manuales frecuentes (superiores a una vez por semana), prefiriendo consultas mensuales asociadas a la llegada de sus recibos de servicio eléctrico.
+* **H0 (Hipótesis nula):** Los usuarios están dispuestos a realizar registros manuales frecuentes de manera constante sin que se observe una caída en la retención o rechazo al método manual.
+* **Criterio de evaluación:** Registrar tasas de abandono superiores al 30% en pruebas de registro manual diario o semanal frente a la consulta pasiva o automatizada.
+
+---
+
+**Experimento EC-08 – Q08: Utilidad del historial eléctrico durante la evaluación técnica**
+
+* **H1 (Hipótesis alternativa):** Los técnicos electricistas que disponen de un historial estructurado de consumo y eventos anteriores realizan una evaluación inicial en menos tiempo que aquellos que no disponen de dicha información.
+* **H0 (Hipótesis nula):** La disponibilidad de un historial estructurado no produce una reducción estadísticamente significativa en el tiempo de evaluación inicial de los técnicos electricistas.
+* **Criterio de evaluación:** Alcanzar una reducción de al menos el 25 % en el tiempo medio de evaluación inicial y mantener la calidad de las conclusiones técnicas. Para una evaluación confirmatoria se propone un nivel de significancia de 0,05.
+
+---
+
+**Experimento EC-09 – Q09: Información y nivel de detalle requerido por los técnicos**
+
+* **H1 (Hipótesis alternativa):** Los técnicos electricistas priorizan la visualización de un registro cronológico de reparaciones previas y alertas de sobrecarga recientes por encima de los gráficos globales de consumo histórico detallado.
+* **H0 (Hipótesis nula):** Los técnicos electricistas no muestran una preferencia estadísticamente significativa por el registro cronológico frente a los gráficos globales de consumo.
+* **Criterio de evaluación:** Validar mediante pruebas de priorización (*card sorting*) que al menos el 70% de los técnicos seleccionen el registro cronológico como su herramienta principal de consulta inicial.
+
+---
+
+**Experimento EC-10 – Q10: Valor de la vista consolidada para PYMES con múltiples sedes**
+
+* **H1 (Hipótesis alternativa):** Los responsables de múltiples sedes valoran positivamente la vista consolidada para detectar rápidamente anomalías entre locales, identificando como principal limitación la falta de filtros avanzados por tipo de consumo comercial.
+* **H0 (Hipótesis nula):** La vista consolidada no aporta un valor perceptible para los administradores multisede frente al monitoreo individual de cada local.
+* **Criterio de evaluación:** Obtener una valoración de utilidad superior al 80% en las pruebas de concepto con administradores que operan dos o más sedes comerciales.
+
+---
+
+**Experimento EC-11 – Q11: Acciones secuenciales de los propietarios ante una variación inusual**
+
+* **H1 (Hipótesis alternativa):** Ante una variación inusual, los propietarios recurren primero a la revisión visual de interruptores o consultas informales, demorando la búsqueda de un profesional certificado hasta que la falla se torna evidente o persistente.
+* **H0 (Hipótesis nula):** Los propietarios buscan asistencia profesional de manera inmediata al primer indicio de variación inusual en su instalación.
+* **Criterio de evaluación:** Mapear mediante entrevistas retrospectivas que más del 70% de los usuarios siguen una secuencia de auto-revisión antes de contactar a un especialista.
+
+---
+
+**Experimento EC-12 – Q12: Integración de una solicitud de evaluación profesional**
+
+* **H1 (Hipótesis alternativa):** La incorporación de un acceso directo para solicitar una evaluación profesional desde una alerta o variación identificada incrementa la proporción de usuarios que inicia el flujo de solicitud de un servicio.
+* **H0 (Hipótesis nula):** La incorporación del acceso directo no genera un incremento significativo en la proporción de usuarios que inicia el flujo de solicitud frente a una presentación de la alerta sin dicho acceso.
+* **Criterio de evaluación:** Se establece como expectativa preliminar que al menos el 40% de los usuarios expuestos a la alerta con acceso directo inicie el flujo de solicitud de servicio.
+
+---
+
+**Experimento EC-13 – Q13: Nivel de detalle y profundidad histórica para evitar confusiones**
+
+* **H1 (Hipótesis alternativa):** Una vista agregada por semanas con opción de desglose mensual ofrece el equilibrio óptimo de detalle, permitiendo a los usuarios identificar variaciones relevantes sin abrumarse con datos diarios excesivos.
+* **H0 (Hipótesis nula):** El nivel de agregación temporal no influye de forma significativa en la capacidad de comprensión del usuario ni evita la confusión frente a datos detallados.
+* **Criterio de evaluación:** Lograr una tasa de comprensión y satisfacción superior al 85% utilizando vistas semanales/mensuales en las pruebas de usabilidad iterativas.
+
+---
+
+**Experimento EC-14 – Q14: Circunstancias en que una alerta resulta contraproducente o innecesaria**
+
+* **H1 (Hipótesis alternativa):** Las alertas disparadas por variaciones estacionales normales (como calefacción o aire acondicionado) sin la debida contextualización generan preocupación injustificada y desconfianza en más del 50% de los usuarios residenciales.
+* **H0 (Hipótesis nula):** Las fluctuaciones estacionales notificadas sin contexto no generan niveles significativos de desconfianza ni preocupación en los usuarios.
+* **Criterio de evaluación:** Registrar niveles de ansiedad o rechazo superiores al 50% mediante escalas de percepción cualitativa ante escenarios de alertas por variaciones estacionales sin contexto.
+
+### 8.2.2. Experiment Measures
+
+**EC-01**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Measure** | Tiempo medio de respuesta (en segundos) y porcentaje de acierto en la identificación de anomalías comparando la variante gráfica frente a la tabla numérica tradicional. |
+
+---
+
+**EC-02**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Measure** | Porcentaje de menciones clasificadas por categoría (optimización de costos, prevención de fallas, curiosidad) obtenidas mediante diarios de uso simulados y entrevistas. |
+
+---
+
+**EC-03**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Measure** | Diferencia porcentual en la puntuación media de interés preventivo (escala de 1 a 5) y análisis de correlación cruzada con el tamaño y costos operativos del segmento. |
+
+---
+
+**EC-04**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Measure** | Calificación promedio de utilidad percibida (escala Likert de 1 a 5) segmentada por tipo de inmueble (vivienda residencial, taller artesanal, comercio minorista). |
+
+---
+
+**EC-05**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Measure** | Valoración promedio de utilidad de las alertas (escala de 1 a 5) ante distintos escenarios de umbrales porcentuales de desviación simulados. |
+
+---
+
+**EC-06**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Measure** | Tasa de acierto y porcentaje de expresiones de comprensión correcta frente a confusiones durante las pruebas de protocolos concurrentes (*think-aloud*). |
+
+---
+
+**EC-07**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Measure** | Tasa de retención de uso voluntario y porcentaje de abandono ante solicitudes de registro manual durante un periodo de prueba de dos semanas. |
+
+---
+
+**EC-08**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Measure** | Tiempo medio de evaluación inicial en minutos y puntuación de calidad de las conclusiones en casos simulados con y sin acceso al historial. |
+
+---
+
+**EC-09**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Measure** | Porcentaje de preferencias asignadas a cada componente de información (cronología de fallas, gráficos globales, bitácoras) en pruebas de priorización (*card sorting*). |
+
+---
+
+**EC-10**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Measure** | Porcentaje de satisfacción y valoración de utilidad con la vista consolidada en administradores con dos o más locales comerciales. |
+
+---
+
+**EC-11**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Measure** | Frecuencia y porcentaje de usuarios que ejecutan cada paso secuencial (auto-revisión física vs. contacto con técnico) mapeados mediante entrevistas retrospectivas. |
+
+---
+
+**EC-12**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Measure** | Tasa de conversión (porcentaje de usuarios expuestos a la alerta que hacen clic e inician el flujo de solicitud de servicio profesional). |
+
+---
+
+**EC-13**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Measure** | Porcentaje de comprensión y claridad reportada por los usuarios evaluando diferentes agrupaciones temporales (diaria, semanal, mensual). |
+
+---
+
+**EC-14**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Measure** | Porcentaje de usuarios que manifiestan ansiedad, confusión o desconfianza ante escenarios simulados de alertas por fluctuaciones menores o estacionales. |
+
+### 8.2.3. Conditions
+
+**EC-01**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Condición experimental** | Los usuarios evalúan el historial de consumo mediante una interfaz basada en gráficos comparativos interactivos con desglose temporal. |
+| **Condición de control** | Los usuarios evalúan el mismo conjunto de datos e historial de consumo mediante una presentación convencional de tablas numéricas estáticas. |
+
+---
+
+**EC-02**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Condición experimental** | Los usuarios interactúan durante un ciclo completo de dos semanas con un prototipo funcional de seguimiento y alertas de consumo energético. |
+| **Condición de control** | Los usuarios responden a cuestionarios retrospectivos basados en sus experiencias pasadas de consumo sin haber interactuado con el prototipo preventivo. |
+
+---
+
+**EC-03**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Condición experimental** | El segmento evaluado corresponde a administradores y responsables de PYMES con instalaciones comerciales e industriales de alta criticidad operativa. |
+| **Condición de control** | El segmento evaluado corresponde exclusivamente a propietarios de viviendas residenciales estándar con consumo doméstico básico. |
+
+---
+
+**EC-04**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Condición experimental** | Instalaciones clasificadas con alta sensibilidad operativa y de cargas eléctricas continuas (talleres artesanales y comercios minoristas). |
+| **Condición de control** | Instalaciones clasificadas con baja criticidad y cargas eléctricas estables (viviendas unifamiliares residenciales estándar). |
+
+---
+
+**EC-05**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Condición experimental** | Los usuarios reciben notificaciones de alerta enriquecidas con contexto detallado, porcentaje de desviación y una recomendación de acción correctiva clara. |
+| **Condición de control** | Los usuarios reciben notificaciones de alerta genéricas que solo indican la ocurrencia de una anomalía numérica sin contexto ni acciones sugeridas. |
+
+---
+
+**EC-06**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Condición experimental** | Los usuarios interpretan los escenarios de variación acompañados de guías contextuales breves y referencias comparativas directas (mes anterior / año previo). |
+| **Condición de control** | Los usuarios interpretan los escenarios de variación únicamente mediante datos métricos aislados sin ayudas visuales ni referencias comparativas guiadas. |
+
+---
+
+**EC-07**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Condición experimental** | El sistema exige a los usuarios un registro manual periódico y activo de las lecturas de medidores dentro de la plataforma durante el periodo de prueba. |
+| **Condición de control** | El sistema presenta la información de manera automatizada y pasiva sin requerir ninguna acción de registro manual por parte del usuario. |
+
+---
+
+**EC-08**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Condición experimental** | Los técnicos electricistas disponen de acceso previo a un historial estructurado de consumo, picos y reportes de eventos anteriores de la instalación. |
+| **Condición de control** | Los técnicos electricistas realizan la evaluación inicial sin acceso a ningún antecedente histórico ni bitácora previa de la instalación. |
+
+---
+
+**EC-09**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Condición experimental** | Los técnicos evalúan prototipos que organizan la información mediante una cronología detallada de reparaciones previas y alertas de sobrecarga recientes. |
+| **Condición de control** | Los técnicos evalúan prototipos que presentan la información únicamente mediante gráficos globales de consumo histórico general sin desglose cronológico. |
+
+---
+
+**EC-10**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Condición experimental** | Los administradores con múltiples locales utilizan una vista centralizada y consolidada de todas sus sedes en un único panel de control. |
+| **Condición de control** | Los administradores con múltiples locales deben navegar de forma independiente y aislada por perfiles separados para cada una de sus sedes. |
+
+---
+
+**EC-11**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Condición experimental** | Los usuarios enfrentan una simulación de variación inusual con acceso inmediato a herramientas digitales de autodiagnóstico y contacto guiado. |
+| **Condición de control** | Los usuarios enfrentan la misma variación inusual en un entorno tradicional sin herramientas de soporte digital integradas. |
+
+---
+
+**EC-12**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Condición experimental** | La notificación de alerta incluye un acceso directo (CTA) integrado que permite iniciar el flujo de contratación de un técnico con un solo clic. |
+| **Condición de control** | La notificación de alerta se presenta de manera informativa sin ningún enlace ni acceso directo para contratar servicios profesionales. |
+
+---
+
+**EC-13**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Condición experimental** | Los usuarios interactúan con una interfaz que ofrece agregación temporal flexible basada en vistas semanales con opción de desglose mensual. |
+| **Condición de control** | Los usuarios interactúan con una interfaz rígida que presenta datos diarios detallados y continuos sin opciones de agrupación temporal resumida. |
+
+---
+
+**EC-14**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Condición experimental** | Los usuarios reciben alertas generadas por fluctuaciones menores o estacionales acompañadas de explicaciones sobre el clima o uso estacional. |
+| **Condición de control** | Los usuarios reciben las mismas alertas por fluctuaciones menores o estacionales presentadas de forma abrupta y sin ninguna contextualización explicativa. |
+
+### 8.2.4. Scale Calculations and Decisions
+
+La siguiente matriz permitirá evaluar el cumplimiento de las hipótesis relacionadas con las funcionalidades propuestas para la extensión preventiva de ElectroLink. Para ello, se establece una escala de cuatro niveles: **Desfavorable, Aceptable, Ideal y Excelente**, tomando como referencia el valor mínimo y el valor ideal definido para cada experimento.
+
+El nivel **Ideal** comienza en la meta de cada métrica. El umbral **Excelente** equivale a la meta más un 25 %. Los límites de **Aceptable** y **Desfavorable** se indican en la matriz para cada experimento. Para decidir si una variante puede avanzar, se revisarán también sus métricas secundarias.
+
+Los valores establecidos representan criterios de decisión propuestos para la experimentación.
+
+| Scale Calculation | Decision | Desfavorable | Aceptable | Ideal | Excelente |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **EC-01.** Reducción del tiempo medio para identificar una variación con gráficos. | Incorporar gráficos comparativos si se alcanza la meta y se mantiene la precisión. | < 7,5 % | ≥ 7,5 % y < 15 % | ≥ 15 % y < 18,75 % | ≥ 18,75 % |
+| **EC-05.** Valoración media de utilidad de la alerta contextualizada. | Incorporar alertas con contexto si superan al control, alcanzan la meta y mantienen la comprensión. | < 3,5/5 | ≥ 3,5/5 y < 4/5 | ≥ 4/5 y < 5/5 | 5/5 |
+| **EC-08.** Reducción del tiempo medio de evaluación técnica inicial. | Incorporar el historial si se alcanza la meta y se mantiene la calidad de la evaluación. | < 12,5 % | ≥ 12,5 % y < 25 % | ≥ 25 % y < 31,25 % | ≥ 31,25 % |
+| **EC-12.** Tasa de inicio de la solicitud en la variante con acceso directo. | Incorporar el acceso si se alcanza la meta, se supera la tasa del control y se mantiene la finalización. | < 30 % | ≥ 30 % y < 40 % | ≥ 40 % y < 50 % | ≥ 50 % |
+
+### 8.2.5. Methods Selection
+
+**Método experimental y ejecución prevista**
+
+Para las cuatro preguntas prioritarias se propone un experimento controlado por tareas. Cada participante se asignará al azar a una sola variante de cada experimento. Los grupos recibirán los mismos datos ficticios, instrucciones y tiempo disponible. El análisis comparará las variantes dentro de cada plataforma y registrará el segmento del participante. Un piloto permitirá comprobar la claridad de las tareas, estimar la variabilidad y definir el tamaño de muestra antes de la ejecución confirmatoria.
+
+| Experimento | Método y condición de control | Evidencia para decidir |
+| :--- | :--- | :--- |
+| EC-01 | Tarea cronometrada para localizar una variación. El grupo experimental usa gráficos y el grupo de control usa una tabla con las mismas lecturas. | Tiempo hasta registrar la respuesta y acierto con una clave común. |
+| EC-05 | Evaluación de una alerta simulada. Ambos grupos ven la misma variación. La variante experimental agrega contexto y una acción sugerida. | Valoración de utilidad de 1 a 5 y respuesta a una pregunta de comprensión. |
+| EC-08 | Evaluación inicial de un caso técnico simulado con y sin historial estructurado. | Tiempo hasta entregar la evaluación y calidad de las conclusiones según una rúbrica común. |
+| EC-12 | Tarea de solicitud simulada a partir de una alerta. Ambos grupos conservan el acceso habitual a la solicitud. La variante experimental agrega un acceso directo desde la alerta. | Proporción de participantes que inicia la solicitud y proporción que completa el flujo simulado. |
+
+Las variantes y los datos ficticios se prepararán en ramas de trabajo y se integrarán en `develop`. Antes de convocar participantes, el equipo comprobará la asignación, los escenarios HTTP y los eventos en un entorno aislado. Las etapas de Jenkins documentadas en 7.1 se podrán ejecutar sobre la revisión candidata con un job de prueba. El job de liberación del AV2 monitorea `main`. La ejecución conservará el commit, la versión de la aplicación y la versión de los datos de prueba para relacionar los eventos con la variante entregada.
+
+**Selección de la herramienta de analítica**
+
+Para la ejecución y evaluación de los experimentos de ElectroLink, se analizaron diferentes herramientas de analítica digital capaces de recopilar información sobre el comportamiento de los usuarios y proporcionar evidencia cuantitativa para validar las hipótesis propuestas.
+
+La selección se realizó siguiendo el principio **Simplest Useful Thing (SUT)**, priorizando una herramienta que permita obtener las métricas necesarias sin introducir complejidad técnica innecesaria.
+
+Se consideraron tres alternativas: **Google Analytics 4, Statcounter y Matomo**. La evaluación se desarrolló a partir de tres criterios: capacidad de análisis, facilidad de uso y privacidad.
+
+**Comparación de herramientas de analítica digital**
+
+| Herramienta | Capacidad de análisis | Facilidad de uso | Privacidad |
+| :--- | :--- | :--- | :--- |
+| **Google Analytics 4** | **Alta.** Permite registrar eventos personalizados, segmentar usuarios, analizar recorridos y construir embudos de interacción. Ofrece integración con aplicaciones web y móviles mediante Firebase. | **Alta.** Dispone de documentación, SDKs y paneles de análisis. La configuración de eventos personalizados requiere conocimientos técnicos. | **Media.** Los datos se procesan mediante la infraestructura de Google. Requiere configurar adecuadamente la recopilación, el consentimiento y la retención de información. |
+| **Statcounter** | **Básica a intermedia.** Permite analizar visitas, páginas consultadas y recorridos de navegación. Su enfoque principal es la analítica de sitios web, por lo que resulta menos adecuado para instrumentar los experimentos móviles propuestos. | **Alta.** Su configuración y sus reportes de navegación son relativamente sencillos. | **Media.** Utiliza un servicio externo para el procesamiento de los datos y requiere revisar sus condiciones de privacidad. |
+| **Matomo** | **Alta.** Permite registrar eventos, objetivos y dimensiones personalizadas. Dispone de SDKs para aplicaciones móviles y mecanismos de análisis del comportamiento. | **Media.** Su implementación requiere mayor configuración, especialmente cuando se utiliza una instalación autohospedada. | **Alta.** Permite alojar los datos en infraestructura propia y ofrece controles de privacidad y retención configurables. |
+
+**Matriz de evaluación ponderada**
+
+Para establecer una comparación cuantitativa, se asignaron ponderaciones según la importancia de cada criterio para los experimentos de ElectroLink.
+
+| Criterio | Peso | Google Analytics 4 | Statcounter | Matomo |
+| :--- | :---: | :---: | :---: | :---: |
+| Capacidad de análisis | 40 % | 5 | 3 | 5 |
+| Facilidad de uso | 35 % | 4 | 5 | 3 |
+| Privacidad | 25 % | 3 | 3 | 5 |
+| **Puntuación ponderada** | **100 %** | **4.15 / 5** | **3.70 / 5** | **4.30 / 5** |
+
+De acuerdo con la matriz de evaluación, Matomo obtiene la mayor puntuación ponderada, principalmente por su capacidad de análisis y sus opciones de control sobre los datos recopilados.
+
+Por consiguiente, se selecciona **Matomo como herramienta propuesta para el seguimiento analítico de los experimentos de ElectroLink**, considerando su capacidad para registrar eventos personalizados, distinguir variantes experimentales y recopilar información tanto en entornos web como móviles.
+
+### 8.2.6. Data Analytics: Goals, KPIs and Metrics Selection
+
+Las métricas primarias establecen la meta de cada experimento. Las métricas secundarias permiten comprobar efectos sobre la precisión, la comprensión o la finalización de las tareas.
+
+| Experimento | Objetivo analítico | KPI primario | Métricas secundarias |
+| :--- | :--- | :--- | :--- |
+| **EC-01. Gráficos comparativos** | Identificar variaciones de consumo más rápido con gráficos. | Reducción del tiempo medio de identificación ≥ 15 %. | Porcentaje de acierto y tareas sin respuesta. |
+| **EC-05. Alertas contextualizadas** | Medir la utilidad del contexto y de la acción sugerida. | Utilidad media ≥ 4/5 en la variante contextualizada y superior a la del control. | Porcentaje de comprensión correcta y evaluaciones sin respuesta. |
+| **EC-08. Historial técnico estructurado** | Agilizar la evaluación inicial con un historial de consumo y eventos. | Reducción del tiempo medio de evaluación inicial ≥ 25 %. | Puntuación de calidad de las conclusiones y evaluaciones incompletas. |
+| **EC-12. Solicitud de evaluación profesional** | Facilitar el inicio de una solicitud desde una alerta. | Tasa de inicio ≥ 40 % en la variante con acceso directo y superior a la del control. | Tasa de finalización entre solicitudes iniciadas y tasa de abandono. |
+
+La reducción de tiempo se calculará como `(media del control − media de la variante) / media del control × 100`. La tasa de inicio usará intentos expuestos como denominador y la tasa de finalización usará solicitudes iniciadas. El análisis reportará el número de intentos válidos, incompletos y excluidos por variante.
+
+Con el propósito de comprobar la viabilidad técnica de Matomo como herramienta de recopilación de datos, se realizó una prueba inicial de integración con la Landing Page de ElectroLink, publicada mediante GitHub Pages.
+
+Esta implementación inicial tuvo dos propósitos: verificar que Matomo pudiera recibir correctamente los eventos enviados desde una interfaz web y establecer una base para el futuro monitoreo de las interacciones que pueden reflejar el interés de los visitantes por conocer o acceder a ElectroLink.
+
+![matomo-01](assets/evidence/cap8/matomo-01.png)
+
+La figura presenta el seguimiento individual de las interacciones realizadas durante una sesión de prueba. Se observa la recepción del evento personalizado, lo que demuestra que la integración permite registrar acciones concretas efectuadas sobre la interfaz web.
+
+![matomo-02](assets/evidence/cap8/matomo-02.png)
+
+La figura muestra el estado de procesamiento de los informes estadísticos durante la prueba técnica. Esta situación permite distinguir entre la recepción de eventos individuales y su posterior disponibilidad en los reportes agregados de Matomo. La ausencia temporal de información consolidada no impidió verificar la recepción del evento mediante el registro de visitas.
+
+### 8.2.7. Web and Mobile Tracking Plan
+
+Angular y Flutter compartirán los nombres de eventos y la definición de cada métrica. En web se prevé usar el cliente JavaScript de Matomo. En móvil se propone un adaptador de Flutter que envíe el mismo esquema a través de la API HTTP de seguimiento. El alcance ejecutado en el AV2 corresponde a la prueba de la landing documentada en 8.2.6. [Cliente JavaScript de Matomo](https://developer.matomo.org/guides/tracking-javascript-guide) · [API de seguimiento de Matomo](https://developer.matomo.org/api-reference/tracking-api)
+
+Los eventos incluirán `experiment_id`, `variant` (`control` o `experimental`), `platform` (`web`, `android` o `ios`), `build_version` y un `attempt_id` aleatorio para unir los eventos de una tarea. Se enviarán datos ficticios a una propiedad de pruebas separada, con consentimiento de los participantes. El esquema excluye nombres, correos, tokens, direcciones, lecturas reales y respuestas de texto libre.
+
+| Experimento | Evento | Disparador en web y móvil | Datos adicionales | Uso en la medición |
+| :--- | :--- | :--- | :--- | :--- |
+| Todos | `experiment_exposed` | La variante asignada se muestra por primera vez en el intento. | `case_id` del caso ficticio. | Número de intentos expuestos por variante. |
+| EC-01 | `variation_task_started` | El gráfico o la tabla está visible y comienza la tarea. | Ninguno. | Inicio de la medición de tiempo. |
+| EC-01 | `variation_answer_submitted` | El participante confirma su respuesta. | `elapsed_ms` y `answer_correct`. | Tiempo de identificación y porcentaje de acierto. |
+| EC-05 | `alert_feedback_submitted` | El participante envía la valoración y responde la pregunta de comprensión. | `usefulness_score` (1 a 5) y `understood_alert`. | Utilidad media y comprensión por variante. |
+| EC-08 | `assessment_started` | La pantalla del caso técnico está lista y comienza la evaluación. | Ninguno. | Inicio de la evaluación técnica. |
+| EC-08 | `assessment_submitted` | El participante entrega su evaluación inicial. | `elapsed_ms`. La puntuación de la rúbrica se registra por separado con el `attempt_id`. | Tiempo medio de evaluación y calidad de las conclusiones. |
+| EC-12 | `request_started` | Se abre el primer paso de la solicitud desde el acceso directo o la navegación habitual. | `entry_point` (`alert` o `standard_navigation`). | Tasa de inicio por variante y ruta de entrada. |
+| EC-12 | `request_completed` | La interfaz confirma la finalización del flujo simulado. | Ninguno. | Tasa de finalización y abandono entre solicitudes iniciadas. |
+
+El piloto comprobará en ambas variantes que Matomo reciba cada evento con su versión, plataforma e identificador de intento. El análisis contará una exposición y una finalización por intento. Los eventos duplicados por recargas o reintentos se consolidarán por `attempt_id` y nombre de evento. También se verificará que un intento incompleto carezca del evento de finalización y que los registros puedan exportarse agrupados por variante y plataforma.
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+Las siguientes historias de usuario describen las funcionalidades requeridas para implementar las variantes experimentales propuestas para la extensión preventiva de ElectroLink. Cada historia se encuentra relacionada con una de las hipótesis priorizadas y establece los criterios de aceptación necesarios para evaluar su comportamiento durante las pruebas.
+
+| ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Experimento) |
+| :--- | :--- | :--- | :--- | :--- |
+| **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | **Escenario 1:** El usuario experimental visualiza gráficos comparativos de periodos seleccionados. **Escenario 2:** El sistema registra la respuesta y el tiempo de identificación. **Escenario 3:** El usuario de control visualiza datos equivalentes mediante una tabla convencional. | EC-01: Gráficos comparativos |
+| **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo. | **Escenario 1:** La variante experimental presenta la alerta con contexto y el control recibe la alerta genérica. **Escenario 2:** En ambas variantes el usuario valora la utilidad de 1 a 5 y responde una pregunta de comprensión. **Escenario 3:** El sistema registra la valoración y si la respuesta fue correcta. | EC-05. Alertas contextualizadas |
+| **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial de consumo y eventos anteriores, para facilitar mi evaluación técnica inicial. | **Escenario 1:** El técnico experimental consulta el historial estructurado. **Escenario 2:** El sistema registra el tiempo de evaluación y la rúbrica permite valorar sus conclusiones. **Escenario 3:** El técnico de control evalúa un caso equivalente sin historial estructurado. | EC-08. Historial técnico estructurado |
+| **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional desde una alerta, para acceder rápidamente a la asistencia especializada. | **Escenario 1:** La variante experimental ofrece un acceso directo en la alerta. **Escenario 2:** Ambas variantes conservan la navegación habitual y registran la ruta de entrada y el inicio del flujo. **Escenario 3:** El sistema registra la finalización simulada en ambas variantes. | EC-12. Solicitud de evaluación profesional |
+
+### 8.3.2. To-Be Product Backlog
+
+| Prioridad | User Story ID | Título | Descripción | Estimación (SP) | Estado | Experimento |
+| :---: | :--- | :--- | :--- | :---: | :--- | :--- |
+| 1 | **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | 5 | To Do | EC-01 |
+| 2 | **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo y determinar si requieren atención. | 5 | To Do | EC-05 |
+| 3 | **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial estructurado de consumo y eventos anteriores de un inmueble, para facilitar mi evaluación técnica inicial. | 8 | To Do | EC-08 |
+| 4 | **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional directamente desde una alerta, para acceder rápidamente a la asistencia especializada. | 3 | To Do | EC-12 |
+
+- **Criterios de priorización**
+
+La organización del backlog responde a las siguientes consideraciones:
+
+  - **EXP-US-001 – Visualización comparativa del consumo eléctrico:** se establece como primera prioridad porque proporciona una representación visual de los registros históricos de consumo, que constituye una capacidad fundamental para la interpretación de variaciones.
+
+  - **EXP-US-002 – Consulta de alertas contextualizadas:** se ubica en segundo lugar porque complementa el análisis del consumo mediante información contextual y acciones sugeridas, facilitando la comprensión de situaciones que podrían requerir atención.
+
+  - **EXP-US-003 – Consulta del historial estructurado para evaluación técnica:** se considera la tercera prioridad porque extiende el uso de los registros de consumo hacia los técnicos electricistas. Su implementación requiere organizar información histórica y presentarla de manera adecuada para apoyar las evaluaciones iniciales.
+
+  - **EXP-US-004 – Solicitud de evaluación profesional desde una alerta:** se establece como cuarta prioridad debido a su relación funcional con las alertas contextualizadas. Su implementación permitirá evaluar si un acceso directo facilita el inicio de solicitudes de asistencia profesional.
+
+**Impact Map de los experimentos**
+
+**Objetivo.** Facilitar que propietarios, responsables de PYMES y técnicos detecten y atiendan variaciones del consumo eléctrico con información suficiente. El mapa aplica al alcance experimental la estructura de [Impact Mapping](#34-impact-mapping).
+
+| Actor | Cambio esperado | Entregable y evidencia | Prioridad |
+| :--- | :--- | :--- | :---: |
+| Propietario o responsable de PYME | Identifica una variación más rápido y conserva la precisión. | Gráficos comparativos. EXP-US-001, EC-01. | 1 |
+| Propietario o responsable de PYME | Entiende el aviso y valora la acción sugerida. | Alertas con contexto. EXP-US-002, EC-05. | 2 |
+| Técnico electricista | Completa su evaluación inicial en menos tiempo y mantiene la calidad de sus conclusiones. | Historial estructurado. EXP-US-003, EC-08. | 3 |
+| Propietario o responsable de PYME | Inicia una solicitud cuando el aviso requiere ayuda profesional. | Acceso directo desde la alerta. EXP-US-004, EC-12. | 4 |
+
+### 8.3.3. To-Be Sprint Backlog
+
+**Objetivo del primer sprint experimental.** Dejar listas las variantes y el seguimiento de EC-01 y EC-05 en web y móvil para un piloto con datos ficticios. Se seleccionan las dos primeras historias porque validan si el usuario detecta y comprende variaciones antes de ampliar el flujo hacia el diagnóstico y la contratación. Las tareas y estimaciones corresponden a la planificación del sprint.
+
+| Tarea | Historia | Engineering Task | Área | Horas estimadas |
+| :--- | :--- | :--- | :--- | ---: |
+| EXP-T01 | EXP-US-001 | Preparar lecturas simuladas, clave de respuestas y asignación estable a las variantes para el mismo intento. | Experimentación | 6 |
+| EXP-T02 | EXP-US-001 | Implementar en Angular las vistas de gráfico y tabla con los mismos datos. | Web | 6 |
+| EXP-T03 | EXP-US-001 | Implementar en Flutter las vistas de gráfico y tabla con los mismos datos. | Móvil | 8 |
+| EXP-T04 | EXP-US-001 | Integrar la exposición, el cronómetro y el registro de la respuesta en Matomo para web y móvil. | Analítica | 6 |
+| EXP-T05 | EXP-US-001 | Verificar las dos variantes y comprobar que el tiempo y la precisión se puedan calcular desde la exportación de prueba. | QA | 4 |
+| EXP-T06 | EXP-US-002 | Implementar en Angular las alertas genérica y contextualizada con el formulario de evaluación. | Web | 6 |
+| EXP-T07 | EXP-US-002 | Implementar en Flutter las dos variantes de alerta y el formulario de evaluación. | Móvil | 6 |
+| EXP-T08 | EXP-US-002 | Registrar en Matomo la exposición, la utilidad y el acierto de comprensión en ambas plataformas. | Analítica | 6 |
+| EXP-T09 | EXP-US-002 | Validar los eventos y casos incompletos con datos ficticios y guardar evidencia de ambas variantes. | QA | 4 |
+| | | **Total del sprint** | | **52** |
 
 # Conclusiones
 
@@ -7211,7 +8531,13 @@ El despliegue continuo publica automáticamente en producción lo que llega a la
 - La definición arquitectónica orientada a servicios y fundamentada en Domain-Driven Design (DDD) asegura una plataforma modular, robusta y escalable. Esta organización facilita el desacoplamiento de responsabilidades y garantiza una integración ordenada y mantenible entre las aplicaciones frontend, las aplicaciones móviles y los microservicios backend.
 - La implementación y despliegue de los componentes iniciales (Landing Page, flujos principales del Frontend y endpoints RESTful del Backend) comprueba la viabilidad técnica y operativa del producto. Asimismo, el establecimiento de buenas prácticas de control de versiones y gestión ágil del Product Backlog sienta las directrices necesarias para sostener un ciclo de desarrollo continuo, trazable y enfocado en entregar una solución de alto impacto.
 - La verificación del backend mediante pruebas unitarias con JUnit 5 y Mockito, pruebas de integración con Karate contra la API real y escenarios de comportamiento escritos en Gherkin permitió validar las reglas de negocio de los bounded contexts y detectar defectos que las pruebas aisladas no revelaban, como errores de consulta y de persistencia del inventario. Estos defectos se corrigieron antes de su integración.
-- La implementación de un pipeline de integración continua en Jenkins, que compila, valida el estilo con Checkstyle, ejecuta las pruebas unitarias, controla la cobertura con JaCoCo y empaqueta la aplicación, automatiza la verificación de cada cambio integrado en `develop`. Así se reduce el riesgo de entregar defectos y se sienta la base para las prácticas de entrega y despliegue continuo de las siguientes etapas.
+- El pipeline de Jenkins compila, valida el estilo con Checkstyle, ejecuta las pruebas, controla la cobertura con JaCoCo y empaqueta la aplicación al detectar cambios en `main`. Las integraciones HTTP se validan por separado sobre `develop` antes de integrar a `main`.
+
+**Avance 2.** En la revisión del 10/11/2026 se aprobaron 59 escenarios HTTP de Karate y tres de cinco casos de sistema. La prueba web encontró un problema de navegación hacia el registro y otro de separación de datos entre propietarios, aun con las suites de integración aprobadas. Se prioriza corregir la titularidad de propiedades antes de ampliar el uso del sistema y repetir los casos afectados. El análisis estático aporta una línea base de calidad, no una certificación de seguridad. La ejecución móvil sigue pendiente.
+
+Jenkins dejó evidencia de la compilación, las pruebas, la cobertura y la aprobación local de la imagen candidata. Render publicó el backend y el equipo verificó la carga de Swagger. El monitoreo local registró la disponibilidad HTTP y la recepción de alertas de prueba. Para que la aprobación controle la publicación, queda pendiente vincularla al despliegue de Render.
+
+El equipo priorizó cuatro hipótesis para evaluar la gestión preventiva del consumo. El primer sprint experimental propone implementar los gráficos comparativos y las alertas contextualizadas. La prueba de Matomo en la landing confirmó la recepción de un evento. La instrumentación en web y móvil, la ejecución con participantes y la evaluación de los KPIs quedan pendientes.
 
 # Bibliografía
 
@@ -7223,6 +8549,8 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 
 - Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
 
+- Checkstyle. (s. f.). *Checkstyle*. https://checkstyle.org/
+
 - Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
 
 - Easwaramoorthy, M., & Zarinpoush, F. (2006). *Interviewing for research* (Tip Sheet No. 6). Imagine Canada. https://www.sectorsource.ca/resource/file/interviewing-research
@@ -7230,6 +8558,10 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Figma. (s. f.). *Figma Design*. https://www.figma.com/
 
 - GitHub. (s. f.). *Acerca de Git*. GitHub Docs. https://docs.github.com/es/get-started/using-git/about-git
+
+- GitHub. (s. f.). *Deployment environments*. GitHub Docs. https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments
+
+- GitHub. (s. f.). *GitHub-hosted runners*. GitHub Docs. https://docs.github.com/en/actions/concepts/runners/github-hosted-runners
 
 - Google. (s. f.). *Firebase Hosting*. Firebase. https://firebase.google.com/docs/hosting?hl=es-419
 
@@ -7239,15 +8571,33 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 
 - Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781098116293/
 
+- Grafana Labs. (s. f.). *Grafana Alerting*. https://grafana.com/docs/grafana/latest/alerting/
+
+- Jenkins. (s. f.). *Pipeline syntax*. https://www.jenkins.io/doc/book/pipeline/syntax/
+
 - Material Design. (s. f.). *Material Design 3*. https://m3.material.io/
+
+- Matomo. (s. f.). *JavaScript tracking client*. https://developer.matomo.org/guides/tracking-javascript-guide
+
+- Matomo. (s. f.). *Tracking HTTP API*. https://developer.matomo.org/api-reference/tracking-api
+
+- Microsoft. (s. f.). *Playwright Library*. https://playwright.dev/docs/library
 
 - Microsoft. (s. f.). *Visual Studio Code documentation*. https://code.visualstudio.com/docs
 
+- Nielsen, J. (1994, 24 de abril). *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+
 - Oracle. (1999). *Code conventions for the Java programming language*. https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
+
+- Prometheus. (s. f.). *Alerting overview*. https://prometheus.io/docs/alerting/latest/overview/
+
+- Render. (s. f.). *Deploying on Render*. https://render.com/docs/deploys
 
 - Render. (s. f.). *Web services*. https://render.com/docs/web-services
 
 - SmartBear Software. (s. f.). *Swagger documentation*. https://swagger.io/docs/
+
+- SpotBugs. (s. f.). *SpotBugs Maven Plugin: Usage*. https://spotbugs.github.io/spotbugs-maven-plugin/usage.html
 
 - Trello. (s. f.). *Trello guide*. https://trello.com/guide
 
@@ -7266,3 +8616,5 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Repositorio Backend: https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend
 - Landing Page: https://g2-diseno-de-experimentos.github.io/Landing-Page/
 - Backend: https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html
+- [Evidencias reproducibles del Capítulo VI – Avance 2](assets/evidence/cap6/av2/README.md).
+- [Informe de TextilFlow, G-0X – Diseño de Experimentos](https://github.com/G-0X-Diseno-de-Experimentos/Docs/blob/main/README.md#614-core-system-tests): referencia de estructura para casos de sistema y análisis estático. Sus resultados no se usaron como evidencia de ElectroLink.

@@ -1,0 +1,763 @@
+{
+  "backendCommit": "5391df7e91861cf5797ed8b65cc1770bdf402add",
+  "reportTimeUtc": "2026-11-10T22:40:19.1573311Z",
+  "filter": "!*IT,!ElectrolinkPlatformApplicationTests",
+  "environment": "Maven 3.9.16, JDK 26.0.2.1, release 21; Mockito 5.19.0 como agente, JaCoCo desactivado.",
+  "cases": 127,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 2,
+  "suites": [
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.commandservices.ComponentCommandServiceImplTest",
+      "cases": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "createComponent_whenNameIsNew_returnsComponentId",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateComponent_whenComponentDoesNotExist_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateComponent_whenComponentExists_updatesAndReturnsComponent",
+          "status": "aprobado"
+        },
+        {
+          "name": "createComponent_whenNameExists_throwsIllegalStateException",
+          "status": "aprobado"
+        },
+        {
+          "name": "deleteComponent_whenComponentExists_returnsTrue",
+          "status": "aprobado"
+        },
+        {
+          "name": "deleteComponent_whenComponentDoesNotExist_returnsFalse",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.commandservices.ComponentTypeCommandServiceImplTest",
+      "cases": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handleDeleteComponentTypeCommand_whenComponentTypeIsInUse_throwsException",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleDeleteComponentTypeCommand_whenComponentTypeDoesNotExist_returnsFalse",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleUpdateComponentTypeCommand_whenComponentTypeExists_updatesAndReturnsIt",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleCreateComponentTypeCommand_whenNameAlreadyExists_throwsException",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleUpdateComponentTypeCommand_whenComponentTypeDoesNotExist_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleCreateComponentTypeCommand_whenNameIsAvailable_savesAndReturnsId",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleDeleteComponentTypeCommand_whenNotInUse_deletesAndReturnsTrue",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.commandservices.PropertyCommandServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handleDeletePropertyCommand_whenPropertyExists_returnsTrue",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleCreatePropertyCommand_whenCommandIsValid_savesPropertyAndReturnsId",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleUpdatePropertyCommand_whenPropertyExists_updatesAndReturnsProperty",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleUpdatePropertyCommand_whenPropertyDoesNotExist_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleDeletePropertyCommand_whenPropertyDoesNotExist_returnsFalse",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.commandservices.TechnicianInventoryCommandServiceImplTest",
+      "cases": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "deleteStock_whenInventoryMissing_returnsFalse",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateStock_whenThresholdIsNull_keepsCurrentThreshold",
+          "status": "aprobado"
+        },
+        {
+          "name": "addStock_whenInventoryMissing_throwsEntityNotFoundException",
+          "status": "aprobado"
+        },
+        {
+          "name": "deleteStock_whenComponentNotInInventory_returnsFalse",
+          "status": "aprobado"
+        },
+        {
+          "name": "addStock_whenInventoryAndComponentExist_addsStockItem",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateStock_whenStockExists_updatesQuantityAndThreshold",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateStock_whenComponentNotInInventory_throwsEntityNotFoundException",
+          "status": "aprobado"
+        },
+        {
+          "name": "createInventory_whenTechnicianAlreadyHasOne_throwsIllegalStateException",
+          "status": "aprobado"
+        },
+        {
+          "name": "createInventory_whenTechnicianHasNone_savesInventory",
+          "status": "aprobado"
+        },
+        {
+          "name": "addStock_whenComponentMissing_throwsEntityNotFoundException",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateStock_whenQuantityIsNegative_throwsIllegalArgumentException",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateStock_whenInventoryMissing_throwsEntityNotFoundException",
+          "status": "aprobado"
+        },
+        {
+          "name": "deleteStock_whenStockExists_removesItAndReturnsTrue",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.queryservices.ComponentQueryServiceImplTest",
+      "cases": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "getAllComponents_returnsAllComponents",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentsByName_whenNoMatches_returnsEmptyList",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentsByName_appliesLimit",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentsByIds_mapsIdsAndReturnsComponents",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentById_whenMissing_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentById_whenExists_returnsComponent",
+          "status": "aprobado"
+        },
+        {
+          "name": "getComponentsByTypeId_returnsComponentsOfThatType",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.queryservices.ComponentTypeQueryServiceImplTest",
+      "cases": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handleGetAllComponentTypesQuery_returnsAllComponentTypes",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleGetComponentTypeByIdQuery_whenComponentTypeExists_returnsComponentType",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleGetComponentTypeByIdQuery_whenComponentTypeDoesNotExist_returnsEmpty",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.queryservices.PropertyQueryServiceImplTest",
+      "cases": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handleGetPropertyByIdQuery_whenPropertyDoesNotExist_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleGetPropertyByIdQuery_whenPropertyExists_returnsProperty",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleGetAllPropertiesByOwnerIdQuery_returnsOwnerProperties",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleGetAllPropertiesQuery_returnsAllProperties",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.application.internal.queryservices.TechnicianInventoryQueryServiceImplTest",
+      "cases": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "getInventoryByTechnicianId_whenExists_returnsInventory",
+          "status": "aprobado"
+        },
+        {
+          "name": "getInventoryByTechnicianId_whenMissing_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "getStockItemDetails_whenExists_returnsStock",
+          "status": "aprobado"
+        },
+        {
+          "name": "getInventoriesWithLowStock_returnsInventoriesBelowThreshold",
+          "status": "aprobado"
+        },
+        {
+          "name": "getStockItemDetails_whenMissing_returnsEmpty",
+          "status": "aprobado"
+        },
+        {
+          "name": "getInventoriesWithLowStock_whenNone_returnsEmptyList",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.domain.model.ComponentEntitiesTest",
+      "cases": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "technicianInventory_addToStock_whenComponentAlreadyInStock_increasesQuantity",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentId_whenPositive_isCreated",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_updateStockItem_whenThresholdNull_keepsThreshold",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_updateStockItem_whenPresent_updatesAndReturnsTrue",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_removeStockItem_whenPresent_returnsTrueAndRemoves",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentStock_updateQuantity_whenValid_setsQuantity",
+          "status": "aprobado"
+        },
+        {
+          "name": "component_updateInfo_changesNameAndDescription",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_addToStock_addsStockItem",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentStock_updateQuantity_whenNegative_throwsIllegalArgumentException",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentStock_updateAlertThreshold_whenNegative_throwsIllegalArgumentException",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentStock_updateAlertThreshold_whenValid_setsThreshold",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_updateStockItem_whenAbsent_returnsFalse",
+          "status": "aprobado"
+        },
+        {
+          "name": "componentId_whenNullZeroOrNegative_throwsIllegalArgumentException",
+          "status": "aprobado"
+        },
+        {
+          "name": "component_whenCreatedFromCommand_isActiveWithCommandData",
+          "status": "aprobado"
+        },
+        {
+          "name": "component_deactivate_marksComponentInactive",
+          "status": "aprobado"
+        },
+        {
+          "name": "technicianInventory_removeStockItem_whenAbsent_returnsFalse",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.integration.AssetsKarateTest",
+      "cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "featureFilesAreValid",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.integration.ComponentInventoryKarateTest",
+      "cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "casesByStatus": [
+        {
+          "name": "componentAndInventoryEndpoints",
+          "status": "omitido"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.assets.interfaces.rest.AssetsRestExceptionHandlerTest",
+      "cases": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handleIllegalStateException_whenThrown_returnsConflictWithMessage",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleIllegalArgumentException_whenThrown_returnsBadRequestWithMessage",
+          "status": "aprobado"
+        },
+        {
+          "name": "handleEntityNotFoundException_whenThrown_returnsNotFoundWithMessage",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.commandservices.RatingCommandServiceImplTest",
+      "cases": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "deleteMissingRating",
+          "status": "aprobado"
+        },
+        {
+          "name": "updatesRating",
+          "status": "aprobado"
+        },
+        {
+          "name": "updateMissingRating",
+          "status": "aprobado"
+        },
+        {
+          "name": "deletesRating",
+          "status": "aprobado"
+        },
+        {
+          "name": "rejectsPendingOperation",
+          "status": "aprobado"
+        },
+        {
+          "name": "rejectsMissingOperation",
+          "status": "aprobado"
+        },
+        {
+          "name": "createsRating",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.commandservices.ReportCommandServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "deleteMissingReport",
+          "status": "aprobado"
+        },
+        {
+          "name": "deletesReport",
+          "status": "aprobado"
+        },
+        {
+          "name": "rejectsMissingOperation",
+          "status": "aprobado"
+        },
+        {
+          "name": "addsPhoto",
+          "status": "aprobado"
+        },
+        {
+          "name": "createsReport",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.commandservices.ReportPhotoCommandServiceImplTest",
+      "cases": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "missingReport",
+          "status": "aprobado"
+        },
+        {
+          "name": "addsPhoto",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.commandservices.ServiceOperationCommandServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "updatesWithoutCompleting",
+          "status": "aprobado"
+        },
+        {
+          "name": "createsOperation",
+          "status": "aprobado"
+        },
+        {
+          "name": "completesOperation",
+          "status": "aprobado"
+        },
+        {
+          "name": "invalidStatus",
+          "status": "aprobado"
+        },
+        {
+          "name": "missingOperation",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.MonitoringKarateTest",
+      "cases": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "casesByStatus": [
+        {
+          "name": "featureFiles",
+          "status": "aprobado"
+        },
+        {
+          "name": "monitoringEndpoints",
+          "status": "omitido"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.queryservices.RatingQueryServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "findsAll",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsByRequest",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsByTechnician",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsById",
+          "status": "aprobado"
+        },
+        {
+          "name": "missingId",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.queryservices.ReportQueryServiceImplTest",
+      "cases": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "findsAll",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsByRequest",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsById",
+          "status": "aprobado"
+        },
+        {
+          "name": "missingId",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.monitoring.queryservices.ServiceOperationQueryServiceImplTest",
+      "cases": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "findsAll",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsByTechnician",
+          "status": "aprobado"
+        },
+        {
+          "name": "findsById",
+          "status": "aprobado"
+        },
+        {
+          "name": "missingId",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.commandservices.RequestCommandServiceImplTest",
+      "cases": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_CreateRequestCommand_MustReturnAndSaveRequest",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_UpdateRequestCommand_MustThrowException_WhenRequestNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_DeleteRequestCommand_MustThrowException_WhenNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_DeleteRequestCommand_MustDelete_WhenExist",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.commandservices.ScheduleCommandServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_DeleteScheduleCommand_MustThrowException_WhenNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_CreateScheduleCommand_MustReturnAndSaveSchedule",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_UpdateScheduleCommand_MustThrowException_WhenNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_DeleteScheduleCommand_MustDelete_WhenExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_UpdateScheduleCommand_MustUpdateAndReturn_WhenExist",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.commandservices.ServiceCommandServiceImplTest",
+      "cases": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_CreateServiceCommand_Success",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_DeleteServiceCommand_Success",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_UpdateServiceCommand_ThrowsException_WhenNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_DeleteServiceCommand_ThrowsException_WhenNotExist",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_UpdateServiceCommand_Success",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.queryservices.RequestQueryServiceImplTest",
+      "cases": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_FindRequestByIdQuery_ReturnsRequest_WhenFound",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_FindRequestsByClientIdQuery_ReturnsList",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.queryservices.ScheduleQueryServiceImplTest",
+      "cases": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_FindScheduleByIdQuery_ReturnsSchedule_WhenFound",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_FindSchedulesByTechnicianIdQuery_ReturnsList",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.application.internal.queryservices.ServiceQueryServiceImplTest",
+      "cases": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "handle_FindServiceByIdQuery_ReturnsService_WhenFound",
+          "status": "aprobado"
+        },
+        {
+          "name": "handle_GetAllServicesQuery_ReturnsAllServices",
+          "status": "aprobado"
+        }
+      ]
+    },
+    {
+      "suite": "com.hampcoders.electrolink.sdp.integration.SdpKarateTest",
+      "cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "casesByStatus": [
+        {
+          "name": "sdpFeatureSyntaxIsValid",
+          "status": "aprobado"
+        }
+      ]
+    }
+  ]
+}

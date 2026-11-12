@@ -1,0 +1,46 @@
+{
+  "backendCommit": "5391df7e91861cf5797ed8b65cc1770bdf402add",
+  "environment": "Spring Boot + PostgreSQL 17.11 aislados. HTTP real.",
+  "suites": [
+    {
+      "suite": "Assets: Properties y Component Types",
+      "reportTimeUtc": "2026-11-10T22:36:35.881Z",
+      "karateVersion": "2.1.2",
+      "features": 2,
+      "scenarios": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "Monitoring: solo sin JWT",
+      "reportTimeUtc": "2026-11-10T22:36:38.393Z",
+      "karateVersion": "2.1.2",
+      "features": 4,
+      "scenarios": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "Assets: Components y Technician Inventory",
+      "reportTimeUtc": "2026-11-10T22:38:59.346Z",
+      "karateVersion": "2.1.2",
+      "features": 2,
+      "scenarios": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "SDP: Requests, Schedules y Services",
+      "reportTimeUtc": "2026-11-10T22:36:39.931Z",
+      "karateVersion": "2.1.2",
+      "features": 3,
+      "scenarios": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  ]
+}

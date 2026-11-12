@@ -1,0 +1,19 @@
+<!-- Fragmento agregado a build/plugins de una copia del backend, no al POM de develop. -->
+<plugin>
+  <groupId>com.github.spotbugs</groupId>
+  <artifactId>spotbugs-maven-plugin</artifactId>
+  <version>4.10.5.0</version>
+  <configuration>
+    <effort>Max</effort>
+    <threshold>Low</threshold>
+    <xmlOutput>true</xmlOutput>
+    <failOnError>true</failOnError>
+  </configuration>
+  <dependencies>
+    <dependency>
+      <groupId>com.h3xstream.findsecbugs</groupId>
+      <artifactId>findsecbugs-plugin</artifactId>
+      <version>1.14.0</version>
+    </dependency>
+  </dependencies>
+</plugin>
