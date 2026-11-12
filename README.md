@@ -8467,8 +8467,6 @@ La organización del backlog responde a las siguientes consideraciones:
 | EXP-T09 | EXP-US-002 | Validar los eventos y casos incompletos con datos ficticios y guardar evidencia de ambas variantes. | QA | 4 |
 | | | **Total del sprint** | | **52** |
 
-**Criterio de cierre.** Las variantes deben funcionar con los mismos datos de prueba en web y móvil. Una sesión de comprobación por variante debe aparecer en Matomo con su plataforma y versión. El equipo guardará la exportación de prueba y el commit evaluado antes de iniciar el piloto. EXP-US-003 y EXP-US-004 quedan en el Product Backlog para un sprint posterior.
-
 # Conclusiones
 
 - El desarrollo del proyecto **ElectroLink** demostró la efectividad de integrar el enfoque Lean UX con un riguroso proceso de investigación y análisis de requerimientos. Esto permitió comprender las necesidades críticas del sector eléctrico y consolidar una propuesta de valor sólida que promueve la formalización de servicios, aporta seguridad a los usuarios y genera nuevas oportunidades de negocio para los técnicos certificados.
