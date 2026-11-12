@@ -183,6 +183,7 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
       - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
       - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+  - [Benchmark de herramientas DevOps](#benchmark-de-herramientas-devops)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
     - [7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)
@@ -7172,6 +7173,17 @@ Además, el botón de ingreso y el control de visibilidad usan ahora textos en e
 
 # Capítulo VII: DevOps Practices
 
+## Benchmark de herramientas DevOps
+
+La comparación documental usa cuatro criterios para ElectroLink: compatibilidad con Java 21, Maven y Docker, trazabilidad de las validaciones por commit, control de la publicación y mantenimiento operativo. Las evidencias de las secciones 7.1 a 7.4 corresponden al flujo implementado. Las demás opciones se evaluaron con su documentación técnica.
+
+| Etapa | Alternativas | Criterio y decisión para el AV2 |
+| :--- | :--- | :--- |
+| Compilación y pruebas | Jenkins local o GitHub Actions con ejecutores administrados. [Jenkins Pipeline](https://www.jenkins.io/doc/book/pipeline/syntax/) · [Ejecutores de GitHub Actions](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners) | Jenkins reutiliza el `Jenkinsfile` y el entorno Docker del equipo. El historial conserva los reportes JUnit, JaCoCo y Checkstyle asociados al build. GitHub Actions reduciría el mantenimiento del ejecutor y requeriría trasladar las etapas a un workflow. |
+| Entrega de la versión candidata | Aprobación `input` en Jenkins o aprobación de un entorno en GitHub Actions. [Jenkins Pipeline](https://www.jenkins.io/doc/book/pipeline/syntax/#input) · [Entornos de despliegue en GitHub Actions](https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments) | Jenkins registra la aprobación y etiqueta la imagen en el Docker local. Un entorno de GitHub Actions permitiría aplicar reglas de protección al trabajo de entrega. El flujo actual conserva la aprobación dentro del build de Jenkins. |
+| Despliegue del backend | Render con `On Commit` o `After CI Checks Pass`. [Despliegues de Render](https://render.com/docs/deploys#configuring-auto-deploys) | El backend usa `On Commit` en `main` y Render construye desde el `Dockerfile`. La opción condicionada a CI requiere que Render detecte el resultado de las comprobaciones del commit en el proveedor Git. En el AV2, Jenkins y Render se ejecutan en paralelo. |
+| Monitoreo y alertas | Reglas de Prometheus con Alertmanager o reglas y notificaciones en Grafana Alerting. [Prometheus y Alertmanager](https://prometheus.io/docs/alerting/latest/overview/) · [Grafana Alerting](https://grafana.com/docs/grafana/latest/alerting/) | El entorno local usa reglas versionadas de Prometheus, visualización en Grafana y entrega al receptor HTTP por Alertmanager. Grafana Alerting centralizaría reglas y notificaciones en la misma interfaz. La demo documenta la activación y resolución de la alerta en el entorno local. |
+
 ## 7.1. Continuous Integration
 
 La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
@@ -7347,7 +7359,7 @@ Las capturas de esta sección corresponden al build #5, que se ejecutó sobre el
 
 ## 7.2. Continuous Delivery
 
-La entrega continua mantiene el backend de ElectroLink en un estado siempre desplegable. La decisión de liberar una versión es **manual**: el equipo integra `develop` en `main` siguiendo GitFlow. Desde ese momento todo es automático. Jenkins detecta el cambio en `main`, ejecuta las validaciones de integración continua (sección 7.1), construye la imagen Docker de la versión y se detiene para que un integrante la apruebe como candidata a liberación.
+El equipo integra `develop` en `main` siguiendo GitFlow. Jenkins detecta el cambio, ejecuta las validaciones de integración continua (sección 7.1) y construye la imagen Docker. Después, un integrante aprueba manualmente la imagen como candidata a liberación. Render inicia su propio despliegue en paralelo desde `main` (sección 7.3).
 
 ### 7.2.1. Tools and Practices
 
@@ -8422,6 +8434,10 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 
 - GitHub. (s. f.). *Acerca de Git*. GitHub Docs. https://docs.github.com/es/get-started/using-git/about-git
 
+- GitHub. (s. f.). *Deployment environments*. GitHub Docs. https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments
+
+- GitHub. (s. f.). *GitHub-hosted runners*. GitHub Docs. https://docs.github.com/en/actions/concepts/runners/github-hosted-runners
+
 - Google. (s. f.). *Firebase Hosting*. Firebase. https://firebase.google.com/docs/hosting?hl=es-419
 
 - Google. (s. f.). *Google Java style guide*. https://google.github.io/styleguide/javaguide.html
@@ -8429,6 +8445,10 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Google. (s. f.). *Google JavaScript style guide*. https://google.github.io/styleguide/jsguide.html
 
 - Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781098116293/
+
+- Grafana Labs. (s. f.). *Grafana Alerting*. https://grafana.com/docs/grafana/latest/alerting/
+
+- Jenkins. (s. f.). *Pipeline syntax*. https://www.jenkins.io/doc/book/pipeline/syntax/
 
 - Material Design. (s. f.). *Material Design 3*. https://m3.material.io/
 
@@ -8439,6 +8459,10 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Nielsen, J. (1994, 24 de abril). *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
 
 - Oracle. (1999). *Code conventions for the Java programming language*. https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
+
+- Prometheus. (s. f.). *Alerting overview*. https://prometheus.io/docs/alerting/latest/overview/
+
+- Render. (s. f.). *Deploying on Render*. https://render.com/docs/deploys
 
 - Render. (s. f.). *Web services*. https://render.com/docs/web-services
 
