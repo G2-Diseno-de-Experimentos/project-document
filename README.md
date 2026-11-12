@@ -7458,12 +7458,14 @@ Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los gr
 
 ## 7.4. Continuous Monitoring
 
-Para esta entrega se preparó un entorno local que observa la disponibilidad HTTP de la API publicada en Render. Reproduce las etapas de monitoreo, alerta y notificación de la estructura del grupo de referencia. La ejecución depende de que la computadora y Docker estén encendidos; por eso la evidencia corresponde a una demostración local y no a vigilancia permanente en la nube.
+El monitoreo de ElectroLink comprende el uso del frontend y la disponibilidad técnica de la API. Para medir el uso se creó un flujo web en Google Analytics 4 y se preparó el frontend para enviar visitas y el evento de inicio de sesión exitoso. Se realizó una **prueba en línea real de envío de eventos**: el frontend ejecutado en `127.0.0.1` envió `page_view` y `scroll` a Google Analytics por internet y recibió respuestas HTTP 204. Estas visitas de prueba no representan tráfico del sitio publicado en Netlify. En paralelo, un entorno local observa la disponibilidad HTTP de la API en Render y demuestra las etapas de alerta y notificación mientras Docker está encendido.
 
 ### 7.4.1. Tools and Practices
 
 | Herramienta | Función en ElectroLink |
 |---|---|
+| **Google Analytics 4** | Recibe las visitas y eventos de uso del frontend web. El flujo `ElectroLink Frontend Web` recibió eventos reales durante una prueba con el frontend local; falta publicar la etiqueta para medir el sitio de Netlify. |
+| **Event Tracking** | El frontend preparado emite `login` únicamente después de que la API confirma la autenticación. No envía credenciales, token ni identificadores personales. |
 | **Docker Compose** | Inicia y conecta los componentes del entorno local. |
 | **Blackbox Exporter** | Envía una solicitud GET a la página pública de Swagger UI y registra si devuelve HTTP 200 y cuánto tarda. |
 | **Prometheus** | Consulta las métricas, conserva su historial y evalúa las reglas de alerta. |
@@ -7471,9 +7473,36 @@ Para esta entrega se preparó un entorno local que observa la disponibilidad HTT
 | **Alertmanager** | Recibe las alertas de Prometheus y las entrega a un receptor HTTP local. |
 | **Receptor local** | Guarda y muestra los eventos de activación y resolución para comprobar el recorrido de la notificación. |
 
-La contraseña de administración de Grafana se configura en `observability/.env`, ignorado por Git. El dashboard, el origen de datos y las reglas se cargan desde archivos del proyecto. Se usa además un sitio local de demostración para provocar una caída controlada sin interrumpir la API real. [Render indica](https://render.com/docs/free) que un servicio gratuito puede tardar en responder tras un período de inactividad; la comprobación admite hasta 90 segundos y la alerta de la API exige diez minutos de fallos sostenidos.
+La elección de herramientas responde a dos preguntas distintas: Analytics ayuda a conocer qué funciones usan las personas; Prometheus y Grafana muestran si la API responde desde una comprobación externa. La contraseña de Grafana se configura en `observability/.env`, ignorado por Git. El dashboard, el origen de datos y las reglas se cargan desde archivos del proyecto. Se usa además un sitio local de demostración para provocar una caída controlada sin interrumpir la API real. [Render indica](https://render.com/docs/free) que un servicio gratuito puede demorar tras un período de inactividad; la comprobación admite hasta 90 segundos y la alerta de la API exige diez minutos de fallos sostenidos.
 
 ### 7.4.2. Monitoring Pipeline Components
+
+El flujo de medición de uso es **frontend web → etiqueta GA4 → flujo web de Analytics → informes de uso**. La propiedad y el flujo `ElectroLink Frontend Web` se crearon para `https://expsoft-frontend.netlify.app`, con medición mejorada activada. Se colocó la etiqueta de Google en el `<head>` de `src/index.html` del frontend y se preparó el evento recomendado `login` para enviarse después de una respuesta exitosa del backend. La captura del flujo se tomó antes de la prueba en línea y por eso indica que todavía no había datos. Después, la navegación por el frontend local generó eventos enviados al endpoint de [Google Analytics](https://developers.google.com/analytics/devguides/collection/ga4/troubleshoot), que respondió HTTP 204. El informe en tiempo real confirmó su recepción: mostró un usuario activo durante los últimos 30 minutos, dos vistas de página y los eventos `page_view`, `first_visit`, `scroll` y `session_start`. Esta evidencia corresponde a navegación de prueba desde `127.0.0.1`; falta publicar la etiqueta para medir el uso del sitio de Netlify. No se observó el evento `login`, que requiere un inicio de sesión exitoso.
+
+La etiqueta que se publica con el frontend es:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8CWPHJ0GF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P8CWPHJ0GF');
+</script>
+```
+
+La siguiente captura muestra la etiqueta dentro del `<head>` del archivo real del frontend. Corresponde al código local preparado para publicación; todavía no es una captura del sitio desplegado.
+
+![Etiqueta GA4 ubicada en el head de src/index.html del frontend](assets/img/cap7/ga4-header-codigo.png)
+
+![Flujo web de Google Analytics 4 configurado para el frontend de ElectroLink, todavía sin datos](assets/img/cap7/ga4-flujo-web.png)
+
+La siguiente captura del informe en tiempo real registra los eventos recibidos durante la prueba en línea con el frontend local.
+
+![Informe en tiempo real de GA4 con un usuario activo, dos vistas de página y eventos de navegación](assets/img/cap7/ga4-tiempo-real.png)
+
+Como comprobación técnica complementaria, se usa el siguiente flujo de disponibilidad HTTP:
 
 El flujo es **URL pública de Render → Blackbox Exporter → Prometheus → Grafana**. Prometheus comprueba `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` cada cinco minutos. El panel principal muestra la métrica `probe_success`: 1 significa que la solicitud observada devolvió HTTP 200; 0 significa que esa comprobación falló. Otros paneles muestran el historial de disponibilidad y duración, junto con el estado del servicio local de demostración.
 
