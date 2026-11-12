@@ -38,61 +38,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000177961329446" />
-      <entry key="MS500" value="1.1424238481377256" />
-      <entry key="S2" value="2.298880861940507" />
-      <entry key="S5" value="4.184763569906826" />
-      <entry key="S10" value="6.345889961474496" />
-      <entry key="S30" value="11.287766477647052" />
-      <entry key="S60" value="18.583294694761907" />
-      <entry key="M2" value="30.151281729749865" />
-      <entry key="M5" value="45.13787582860864" />
-      <entry key="M10" value="53.35145560674664" />
-      <entry key="M15" value="56.96221306704943" />
-      <entry key="M30" value="66.00335966589482" />
-      <entry key="H1" value="103.63343762485599" />
-      <entry key="H2" value="202.2184389560759" />
-      <entry key="H4" value="333.3323240755866" />
-      <entry key="D1" value="544.6637271965543" />
-      <entry key="W1" value="595.9125483540162" />
+      <entry key="MS100" value="1.8169672257360866E-6" />
+      <entry key="MS500" value="0.268029385399485" />
+      <entry key="S2" value="3.7885271604075443" />
+      <entry key="S5" value="7.721231762566657" />
+      <entry key="S10" value="11.043598843036834" />
+      <entry key="S30" value="17.138190523311852" />
+      <entry key="S60" value="24.749474068077525" />
+      <entry key="M2" value="36.531295759098114" />
+      <entry key="M5" value="51.784652011278716" />
+      <entry key="M10" value="60.14600211063111" />
+      <entry key="M15" value="63.81679679870188" />
+      <entry key="M30" value="72.92012604858613" />
+      <entry key="H1" value="110.56998505509591" />
+      <entry key="H2" value="209.15811640975835" />
+      <entry key="H4" value="340.2831463707586" />
+      <entry key="D1" value="551.6504221979204" />
+      <entry key="W1" value="602.91047065178" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.098194782178505E-93" />
-      <entry key="S2" value="1.163289384396407E-23" />
-      <entry key="S5" value="1.008736625267832E-9" />
-      <entry key="S10" value="4.4861932493530014E-5" />
-      <entry key="S30" value="0.05638925738689338" />
-      <entry key="S60" value="0.33655544425446665" />
-      <entry key="M2" value="0.8803983424878826" />
-      <entry key="M5" value="2.2569719063906946" />
-      <entry key="M10" value="3.7434399363243087" />
-      <entry key="M15" value="4.553604696598373" />
-      <entry key="M30" value="5.664359304551643" />
-      <entry key="H1" value="7.294341789524882" />
-      <entry key="H2" value="11.524713354945794" />
-      <entry key="H4" value="17.622534221660622" />
-      <entry key="D1" value="27.973469002840037" />
-      <entry key="W1" value="30.542603863053504" />
+      <entry key="MS100" value="1.000298496161546" />
+      <entry key="MS500" value="1.1972367102131163" />
+      <entry key="S2" value="1.6664183355229674" />
+      <entry key="S5" value="1.8501562958711233" />
+      <entry key="S10" value="1.9220756112019834" />
+      <entry key="S30" value="2.025904122566916" />
+      <entry key="S60" value="2.3116054798174908" />
+      <entry key="M2" value="2.8584675170071563" />
+      <entry key="M5" value="4.238612612967681" />
+      <entry key="M10" value="5.729080715626426" />
+      <entry key="M15" value="6.542148840030082" />
+      <entry key="M30" value="7.657340206006388" />
+      <entry key="H1" value="9.289885941763433" />
+      <entry key="H2" value="13.521258222292802" />
+      <entry key="H4" value="19.619922221063" />
+      <entry key="D1" value="29.972783444674764" />
+      <entry key="W1" value="32.542497053627756" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.37631742891353426" />
-      <entry key="MS500" value="0.9147262862115835" />
-      <entry key="S2" value="1.9767006619905354" />
-      <entry key="S5" value="3.8814663604828956" />
-      <entry key="S10" value="6.104194066258414" />
-      <entry key="S30" value="11.202759147387843" />
-      <entry key="S60" value="18.83015954488618" />
-      <entry key="M2" value="30.97857311194744" />
-      <entry key="M5" value="47.36770623724656" />
-      <entry key="M10" value="57.078254011255254" />
-      <entry key="M15" value="61.503572259509035" />
-      <entry key="M30" value="71.66045007245123" />
-      <entry key="H1" value="110.92224321818682" />
-      <entry key="H2" value="213.73792895297746" />
-      <entry key="H4" value="350.9506303695773" />
-      <entry key="D1" value="572.6360615933538" />
-      <entry key="W1" value="626.4549753163044" />
+      <entry key="MS100" value="0.004252592041604442" />
+      <entry key="MS500" value="0.6843653444817351" />
+      <entry key="S2" value="4.963945501885208" />
+      <entry key="S5" value="9.19025717847997" />
+      <entry key="S10" value="12.672616022312445" />
+      <entry key="S30" value="18.998411138071187" />
+      <entry key="S60" value="26.957363083461118" />
+      <entry key="M2" value="39.32897578516638" />
+      <entry key="M5" value="55.99286066813492" />
+      <entry key="M10" value="65.85677173256593" />
+      <entry key="M15" value="70.345576478817" />
+      <entry key="M30" value="80.56962954218146" />
+      <entry key="H1" value="119.85404983376226" />
+      <entry key="H2" value="222.67400868604938" />
+      <entry key="H4" value="359.8987692223668" />
+      <entry key="D1" value="581.6220590543395" />
+      <entry key="W1" value="635.4527890895786" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -131,7 +131,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "feature/implements__experiment",
+    "git-widget-placeholder": "develop",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "/home/calin/Documentos/Universidad/Disen",
     "node.js.detected.package.eslint": "true",

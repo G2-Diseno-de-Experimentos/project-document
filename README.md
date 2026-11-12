@@ -7978,6 +7978,144 @@ Tarjeta de Experimento 14
 | **What** | <ul><li>Probar escenarios de alertas generadas por fluctuaciones menores o estacionales ante un grupo de usuarios sin conocimientos técnicos especializados.</li><li>Evaluar el nivel de estrés, confusión o desconfianza generado mediante escalas de percepción cualitativa.</li><li>Recopilar propuestas de redacción y aclaración contextual sugeridas por los participantes para mitigar alarmas falsas.</li></ul> |
 | **Hypothesis** | Se espera que las alertas disparadas por variaciones estacionales normales (como el uso de calefacción o aire acondicionado) sin la debida contextualización generen preocupación injustificada y desconfianza en más del 50% de los usuarios residenciales. |
 
+### Experiment Card of Priority
+
+En esta sección se presentan las Experiment Cards correspondientes a las cuatro preguntas de investigación priorizadas (Q01, Q05, Q08 y Q12), seleccionadas a partir de la matriz de evaluación y el Question Backlog de ElectroLink.
+
+Cada tarjeta se estructura en dos partes: el anverso (Front Side), que establece la pregunta de investigación, su motivación, la intervención mínima necesaria (Simplest Useful Thing) y la hipótesis; y el reverso (Reverse Side).
+
+Se estructura de esta manera para facilitar la observacion y validacion de mejora en el trabajo, respecto observaciones destacadas del docente durante la exposicion del av2.
+
+EC-01 — Q01: Interpretación del consumo mediante gráficos comparativos
+
+**Anverso (Front Side)**
+
+- **Pregunta (Question):** ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas?
+
+- **Motivación (Why):** Los propietarios y responsables de PYMES necesitan interpretar su comportamiento eléctrico sin depender de conocimientos técnicos especializados. Si los gráficos facilitan la identificación de variaciones, ElectroLink podría ofrecer información más comprensible para apoyar decisiones preventivas.
+
+- **Lo Más Simple Útil (What):** Implementar dos variantes de una misma pantalla de historial eléctrico: una con tablas numéricas convencionales y otra con gráficos comparativos. Solicitar a los participantes que identifiquen una variación previamente definida y registrar su tiempo de respuesta y precisión.
+
+- **Hipótesis (Hypothesis):** Los usuarios que consultan gráficos comparativos identificarán variaciones de consumo en menos tiempo que quienes utilizan tablas convencionales, alcanzando una reducción mínima del 15 % sin disminuir la precisión.
+
+**Reverso (Reverse Side)**
+
+- **Medidas (Measures):**
+  - **Métrica primaria representativa:** Reducción porcentual del tiempo medio de identificación de variaciones entre la variante gráfica y la variante tabular.
+  - **Métricas de salud (Do No Harm):** Porcentaje de respuestas correctas, tareas sin respuesta y errores de interpretación.
+
+- **Condiciones (Conditions – Delimitación Poblacional):**
+  - **Criterio de inclusión:** Propietarios de viviendas y responsables de PYMES que consulten o administren información de consumo eléctrico, con capacidad para completar una prueba digital.
+  - **Criterio de exclusión:** Participantes que hayan intervenido en el diseño de los prototipos o conozcan previamente las respuestas de los escenarios experimentales.
+  - **Condición experimental:** Historial presentado mediante gráficos comparativos interactivos.
+  - **Condición de control:** Historial presentado mediante tablas numéricas convencionales con información equivalente.
+
+- **Escala y Método (Scale & Rigor):**
+  - **Muestra y granularidad:** Propuesta inicial de 64 participantes, distribuidos aleatoriamente en dos grupos de 32, sujeta a ajuste mediante un piloto y cálculo de potencia.
+  - **Ventana temporal:** 7 días de sesiones experimentales.
+  - **Control de sesgos:** Asignación aleatoria, mismos datos de consumo, instrucciones estandarizadas y respuestas verificadas mediante una clave común.
+  - **Escala de decisión:** Desfavorable: reducción menor al 7,5 %. Aceptable: desde 7,5 % hasta menos del 15 %. Ideal: desde 15 % hasta menos del 18,75 %. Excelente: 18,75 % o más.
+  - **Método:** Experimento A/B con tareas cronometradas y análisis cuantitativo de tiempo y precisión.
+
+---
+
+EC-05 — Q05: Utilidad de las alertas contextualizadas
+
+**Anverso (Front Side)**
+
+- **Pregunta (Question):** ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación?
+
+- **Motivación (Why):** Una alerta que únicamente informa una variación numérica puede resultar confusa o generar preocupación innecesaria. Es necesario determinar si incorporar información contextual y una acción sugerida mejora su utilidad y comprensión.
+
+- **Lo Más Simple Útil (What):** Presentar dos versiones de una alerta simulada: una genérica y otra con porcentaje de variación, información comparativa y una acción sugerida. Solicitar a los participantes que valoren su utilidad y expliquen qué interpretaron.
+
+- **Hipótesis (Hypothesis):** Los usuarios valorarán más positivamente las alertas contextualizadas que las alertas genéricas. Se espera una utilidad media de al menos 4 sobre 5, sin perjudicar la comprensión del mensaje.
+
+**Reverso (Reverse Side)**
+
+- **Medidas (Measures):**
+  - **Métrica primaria representativa:** Puntuación media de utilidad percibida en una escala Likert de 1 a 5, comparando ambas variantes.
+  - **Métricas de salud (Do No Harm):** Porcentaje de comprensión correcta, respuestas incompletas y percepción de preocupación injustificada.
+
+- **Condiciones (Conditions – Delimitación Poblacional):**
+  - **Criterio de inclusión:** Propietarios de viviendas y responsables de PYMES que puedan recibir y evaluar notificaciones digitales relacionadas con sus instalaciones.
+  - **Criterio de exclusión:** Participantes que conozcan previamente las respuestas esperadas o hayan colaborado en el diseño de las alertas.
+  - **Condición experimental:** Alerta con información contextual, porcentaje de desviación y acción sugerida.
+  - **Condición de control:** Alerta genérica que comunica una variación sin información contextual adicional.
+
+- **Escala y Método (Scale & Rigor):**
+  - **Muestra y granularidad:** Propuesta inicial de 60 participantes, distribuidos aleatoriamente en dos grupos de 30, ajustable tras el piloto.
+  - **Ventana temporal:** 7 días de evaluación de prototipos.
+  - **Control de sesgos:** Mismo escenario de variación para ambas condiciones, instrucciones neutrales, escala de valoración uniforme y ausencia de alertas reales.
+  - **Escala de decisión:** Desfavorable: menos de 3,5/5. Aceptable: desde 3,5 hasta menos de 4/5. Ideal: desde 4 hasta menos de 5/5. Excelente: 5/5. Además, la variante contextualizada debe superar al control.
+  - **Método:** Experimento A/B con mockups de alertas, cuestionario Likert y preguntas de comprensión.
+
+---
+
+EC-08 — Q08: Historial eléctrico para evaluación técnica
+
+**Anverso (Front Side)**
+
+- **Pregunta (Question):** ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas?
+
+- **Motivación (Why):** Los técnicos pueden iniciar una evaluación sin información suficiente sobre los antecedentes de una instalación. Disponer de un historial estructurado podría reducir el tiempo necesario para comprender el caso y formular una evaluación inicial.
+
+- **Lo Más Simple Útil (What):** Presentar un caso eléctrico simulado a dos grupos de técnicos. Un grupo recibirá únicamente la descripción actual del problema y el otro dispondrá adicionalmente de un historial estructurado de consumo y eventos anteriores.
+
+- **Hipótesis (Hypothesis):** Los técnicos con acceso al historial estructurado realizarán la evaluación inicial en menos tiempo, con una reducción mínima esperada del 25 %, manteniendo la calidad de sus conclusiones.
+
+**Reverso (Reverse Side)**
+
+- **Medidas (Measures):**
+  - **Métrica primaria representativa:** Reducción porcentual del tiempo medio de evaluación técnica inicial, medido en minutos.
+  - **Métricas de salud (Do No Harm):** Calidad de las conclusiones según una rúbrica común, identificación correcta de antecedentes relevantes y respuestas incompletas.
+
+- **Condiciones (Conditions – Delimitación Poblacional):**
+  - **Criterio de inclusión:** Técnicos electricistas con formación o experiencia verificable en evaluación y mantenimiento de instalaciones eléctricas.
+  - **Criterio de exclusión:** Participantes que hayan elaborado los casos simulados o conozcan previamente sus soluciones.
+  - **Condición experimental:** Evaluación inicial con acceso al historial estructurado de consumo y eventos.
+  - **Condición de control:** Evaluación inicial sin acceso al historial ni a los antecedentes de la instalación.
+
+- **Escala y Método (Scale & Rigor):**
+  - **Muestra y granularidad:** Propuesta de 54 técnicos, distribuidos en dos grupos de 27, considerando posibles abandonos.
+  - **Ventana temporal:** 14 días de sesiones programadas.
+  - **Control de sesgos:** Casos equivalentes, distribución aleatoria, instrucciones uniformes y evaluación de conclusiones mediante una rúbrica estandarizada.
+  - **Escala de decisión:** Desfavorable: reducción menor al 12,5 %. Aceptable: desde 12,5 % hasta menos del 25 %. Ideal: desde 25 % hasta menos del 31,25 %. Excelente: 31,25 % o más.
+  - **Método:** Experimento controlado con casos técnicos simulados, medición de tiempos y evaluación de calidad.
+
+---
+
+EC-12 — Q12: Solicitud de evaluación profesional desde una alerta
+
+**Anverso (Front Side)**
+
+- **Pregunta (Question):** ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario?
+
+- **Motivación (Why):** Identificar una variación de consumo no garantiza que el usuario sepa cómo solicitar ayuda. Un acceso directo desde la alerta podría facilitar el inicio de una solicitud profesional y reducir la fricción entre recibir información y actuar.
+
+- **Lo Más Simple Útil (What):** Crear dos variantes de una alerta simulada. La primera permitirá acceder a la solicitud mediante la navegación habitual de ElectroLink. La segunda incorporará un botón directo para solicitar una evaluación profesional desde la propia alerta.
+
+- **Hipótesis (Hypothesis):** Incorporar un acceso directo desde la alerta incrementará la proporción de usuarios que inicia el flujo de solicitud, con una meta preliminar de al menos el 40 % de los participantes expuestos a la variante experimental.
+
+**Reverso (Reverse Side)**
+
+- **Medidas (Measures):**
+  - **Métrica primaria representativa:** Porcentaje de usuarios expuestos a la alerta que inician el flujo simulado de solicitud profesional.
+  - **Métricas de salud (Do No Harm):** Porcentaje de finalización del flujo, abandonos y errores de navegación.
+
+- **Condiciones (Conditions – Delimitación Poblacional):**
+  - **Criterio de inclusión:** Propietarios de viviendas y responsables de PYMES que puedan utilizar ElectroLink para solicitar servicios eléctricos.
+  - **Criterio de exclusión:** Participantes familiarizados con las respuestas esperadas o involucrados en el diseño del flujo experimental.
+  - **Condición experimental:** Alerta con botón directo para iniciar una solicitud profesional.
+  - **Condición de control:** Alerta sin botón directo, manteniendo disponible la navegación habitual hacia la solicitud de servicios.
+
+- **Escala y Método (Scale & Rigor):**
+  - **Muestra y granularidad:** Propuesta de 180 participantes, distribuidos en dos grupos de 90, basada en supuestos preliminares de conversión del 20 % y 40 %.
+  - **Ventana temporal:** 14 días de pruebas controladas.
+  - **Control de sesgos:** Asignación aleatoria, mismo contenido de alerta, acceso equivalente a las demás funcionalidades y registro separado de clic, inicio y finalización.
+  - **Escala de decisión:** Desfavorable: tasa inferior al 30 %. Aceptable: desde 30 % hasta menos del 40 %. Ideal: desde 40 % hasta menos del 50 %. Excelente: 50 % o más. También debe superarse la tasa del control.
+  - **Método:** Experimento A/B con prototipo interactivo, telemetría de eventos y análisis de tasas de inicio y finalización del flujo.
+
 ## 8.2. Experiment Design
 
 ### 8.2.1. Hypotheses
