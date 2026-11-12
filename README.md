@@ -186,6 +186,11 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
   - [7.3. Continuous Deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+  - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -7453,6 +7458,76 @@ El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication`
 Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los grupos de autenticación y calificaciones. La especificación publicada utiliza el título `Learning Platform API`.
 
 ![Swagger UI del backend desplegado en Render con los endpoints cargados](assets/img/cap7/swagger-produccion.png)
+
+## 7.4. Continuous Monitoring
+
+El monitoreo de ElectroLink comprende el uso del frontend y la disponibilidad técnica de la API. Para medir el uso se creó un flujo web en Google Analytics 4 y se preparó el frontend para enviar visitas y el evento de inicio de sesión exitoso. Se realizó una **prueba en línea real de envío de eventos**: el frontend ejecutado en `127.0.0.1` envió `page_view` y `scroll` a Google Analytics por internet y recibió respuestas HTTP 204. Estas visitas de prueba no representan tráfico del sitio publicado en Netlify. En paralelo, un entorno local observa la disponibilidad HTTP de la API en Render y demuestra las etapas de alerta y notificación mientras Docker está encendido.
+
+### 7.4.1. Tools and Practices
+
+| Herramienta | Función en ElectroLink |
+|---|---|
+| **Google Analytics 4** | Recibe las visitas y eventos de uso del frontend web. El flujo `ElectroLink Frontend Web` recibió eventos reales durante una prueba con el frontend local; falta publicar la etiqueta para medir el sitio de Netlify. |
+| **Event Tracking** | El frontend preparado emite `login` únicamente después de que la API confirma la autenticación. No envía credenciales, token ni identificadores personales. |
+| **Docker Compose** | Inicia y conecta los componentes del entorno local. |
+| **Blackbox Exporter** | Envía una solicitud GET a la página pública de Swagger UI y registra si devuelve HTTP 200 y cuánto tarda. |
+| **Prometheus** | Consulta las métricas, conserva su historial y evalúa las reglas de alerta. |
+| **Grafana** | Presenta el estado actual y la evolución de disponibilidad y tiempo de respuesta. |
+| **Alertmanager** | Recibe las alertas de Prometheus y las entrega a un receptor HTTP local. |
+| **Receptor local** | Guarda y muestra los eventos de activación y resolución para comprobar el recorrido de la notificación. |
+
+La elección de herramientas responde a dos preguntas distintas: Analytics ayuda a conocer qué funciones usan las personas; Prometheus y Grafana muestran si la API responde desde una comprobación externa. La contraseña de Grafana se configura en `observability/.env`, ignorado por Git. El dashboard, el origen de datos y las reglas se cargan desde archivos del proyecto. Se usa además un sitio local de demostración para provocar una caída controlada sin interrumpir la API real. [Render indica](https://render.com/docs/free) que un servicio gratuito puede demorar tras un período de inactividad; la comprobación admite hasta 90 segundos y la alerta de la API exige diez minutos de fallos sostenidos.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El flujo de medición de uso es **frontend web → etiqueta GA4 → flujo web de Analytics → informes de uso**. La propiedad y el flujo `ElectroLink Frontend Web` se crearon para `https://expsoft-frontend.netlify.app`, con medición mejorada activada. Se colocó la etiqueta de Google en el `<head>` de `src/index.html` del frontend y se preparó el evento recomendado `login` para enviarse después de una respuesta exitosa del backend. La captura del flujo se tomó antes de la prueba en línea y por eso indica que todavía no había datos. Después, la navegación por el frontend local generó eventos enviados al endpoint de [Google Analytics](https://developers.google.com/analytics/devguides/collection/ga4/troubleshoot), que respondió HTTP 204. El informe en tiempo real confirmó su recepción: mostró un usuario activo durante los últimos 30 minutos, dos vistas de página y los eventos `page_view`, `first_visit`, `scroll` y `session_start`. Esta evidencia corresponde a navegación de prueba desde `127.0.0.1`; falta publicar la etiqueta para medir el uso del sitio de Netlify. No se observó el evento `login`, que requiere un inicio de sesión exitoso.
+
+La etiqueta que se publica con el frontend es:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8CWPHJ0GF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P8CWPHJ0GF');
+</script>
+```
+
+La siguiente captura muestra la etiqueta dentro del `<head>` del archivo real del frontend. Corresponde al código local preparado para publicación; todavía no es una captura del sitio desplegado.
+
+![Etiqueta GA4 ubicada en el head de src/index.html del frontend](assets/img/cap7/ga4-header-codigo.png)
+
+![Flujo web de Google Analytics 4 configurado para el frontend de ElectroLink, todavía sin datos](assets/img/cap7/ga4-flujo-web.png)
+
+La siguiente captura del informe en tiempo real registra los eventos recibidos durante la prueba en línea con el frontend local.
+
+![Informe en tiempo real de GA4 con un usuario activo, dos vistas de página y eventos de navegación](assets/img/cap7/ga4-tiempo-real.png)
+
+Como comprobación técnica complementaria, se usa el siguiente flujo de disponibilidad HTTP:
+
+El flujo es **URL pública de Render → Blackbox Exporter → Prometheus → Grafana**. Prometheus comprueba `https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html` cada cinco minutos. El panel principal muestra la métrica `probe_success`: 1 significa que la solicitud observada devolvió HTTP 200; 0 significa que esa comprobación falló. Otros paneles muestran el historial de disponibilidad y duración, junto con el estado del servicio local de demostración.
+
+En la ejecución del 11/11/2026, Prometheus registró `probe_success = 1` para la URL pública. Este chequeo confirma el acceso HTTP a Swagger UI desde la computadora de prueba; no comprueba la conexión con PostgreSQL ni un flujo autenticado con JWT.
+
+![Dashboard local de Grafana con disponibilidad y duración de las comprobaciones HTTP](assets/img/cap7/grafana-disponibilidad.png)
+
+### 7.4.3. Alerting Pipeline Components
+
+Prometheus evalúa `ElectroLinkApiUnavailable` cuando la comprobación pública falla durante diez minutos consecutivos. Para verificar la cadena de forma segura, `DemoEndpointUnavailable` se activa si el sitio local permanece inaccesible durante treinta segundos. Alertmanager recibe la alerta y la entrega al receptor local mediante un webhook. La regla distingue un fallo observado de su causa: si la comprobación falla, corresponde revisar Render, la red y los registros antes de atribuir el problema al backend.
+
+La prueba de demostración consistió en detener `demo-site` con `docker compose stop demo-site`, observar la alerta activa y restaurarlo con `docker compose start demo-site`.
+
+![Reglas de Prometheus durante la demostración de la alerta](assets/img/cap7/prometheus-alertas.png)
+
+### 7.4.4. Notification Pipeline Components
+
+Alertmanager envía al receptor HTTP local los eventos `firing` y `resolved`. El receptor los conserva en un volumen de Docker y los presenta en `http://localhost:8089`. La evidencia confirma la entrega dentro del entorno local. En esta entrega no se configuró correo, Slack ni otro aviso a personas fuera de la computadora; para lograr notificaciones permanentes haría falta un destino del equipo y una instalación que siga encendida.
+
+![Eventos de activación y resolución recibidos por el receptor local](assets/img/cap7/notificaciones-locales.png)
+
+Para repetir la demostración, iniciar Docker Desktop y ejecutar `docker compose up -d` dentro de `observability`; abrir Grafana en `http://localhost:3000`, Prometheus en `http://localhost:9090` y el receptor en `http://localhost:8089`. La configuración y los pasos detallados están en `observability/README.md` del repositorio del backend.
 
 <div style="page-break-after: always;"></div>
 
