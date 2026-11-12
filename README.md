@@ -7099,6 +7099,65 @@ La evaluación registra las siguientes recomendaciones. No consigna su implement
 | UX-2025-06 · Solicitudes nuevas | Señalar las solicitudes y acciones pendientes con distintivos visuales o con un apartado de actividad reciente. |
 | UX-2025-07 · Confirmación de acciones | Mostrar avisos de éxito o indicadores de carga al guardar componentes, aceptar solicitudes o subir fotos. |
 
+## 6.4. Auditoría de Experiencias de Usuario
+
+Esta sección presenta una autoauditoría heurística de ElectroLink Web, centrada en los flujos de ingreso y registro. Complementa la evaluación de 6.3.3 con hallazgos comprobados en la implementación actual.
+
+### 6.4.2. Auditoría recibida
+
+A continuación se documenta la revisión interna de la aplicación web de ElectroLink.
+
+#### 6.4.2.1. Información del grupo auditor
+
+| Campo | Detalle informativo |
+| :--- | :--- |
+| *Grupo evaluador* | G2 ElectroLink (autoauditoría). |
+| *Producto evaluado* | ElectroLink Web, aplicación Angular ejecutada localmente en http://127.0.0.1:4200/. |
+| *Grupo auditado* | G2 ElectroLink. |
+| *Alcance* | Navegación entre ingreso y registro, identificación de campos y control de visibilidad de contraseña. |
+| *Método* | Inspección heurística de las plantillas y rutas, más comprobación del enlace de registro en el DOM renderizado. |
+
+#### 6.4.2.2. Cronograma de auditoría recibida
+
+| Hito | Fecha | Participantes | Objetivo y resultado |
+| :--- | :---: | :--- | :--- |
+| Revisión de navegación | 11/11/2026 | Equipo G2 | Comparar los enlaces visibles con las rutas declaradas en app.routes.ts; se detectaron dos destinos inexistentes. |
+| Inspección de formularios | 11/11/2026 | Equipo G2 | Revisar etiquetas y controles de ingreso y registro; se identificaron problemas de accesibilidad y un botón sin acción. |
+| Subsanación y verificación técnica | 11/11/2026 | Equipo G2 | Corregir los tres hallazgos y ejecutar npm run build, que terminó sin errores. |
+
+#### 6.4.2.3. Contenido de auditoría recibida
+
+La severidad se expresa en una escala de 1 a 3: *1* corresponde a una molestia menor, *2* a una dificultad que afecta la tarea y *3* a un obstáculo importante para completarla. La revisión se limitó a la aplicación web y a las pantallas indicadas en el alcance.
+
+##### 1. Evaluación de la navegación entre ingreso y registro
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-01* | “Regístrate” llevaba a /register e “Inicia sesión” a /login; ninguna de esas rutas existe. La redirección general devolvía al usuario al inicio. | 3 | Consistencia y estándares; control y libertad del usuario. |
+
+##### 2. Evaluación de los formularios de la aplicación web
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-02* | Las etiquetas visibles no estaban asociadas a los campos mediante for e id, lo que dificultaba identificar los controles con tecnologías de asistencia. | 2 | Accesibilidad; reconocimiento de la información. |
+| *AU-03* | El botón con icono de visibilidad de contraseña no cambiaba el estado del campo. | 2 | Consistencia y estándares; correspondencia entre control y resultado. |
+
+##### Descripción de problemas y recomendaciones
+
+- *AU-01 — Navegación (severidad 3):* app.routes.ts define /sign-up y /sign-in, mientras que las plantillas enlazaban a /register y /login. El enlace de registro se confirmó también en el DOM de la aplicación local. *Recomendación:* enlazar cada acción con su ruta existente.
+- *AU-02 — Etiquetas de campos (severidad 2):* los nombres de los campos aparecían como etiquetas visuales sin asociación explícita con el control correspondiente. *Recomendación:* usar for e id en los campos de texto y un nombre accesible para el selector de rol.
+- *AU-03 — Visibilidad de contraseña (severidad 2):* el botón mostraba un icono de ojo, pero carecía de una acción que alternara el tipo del campo. *Recomendación:* permitir mostrar y ocultar la contraseña y comunicar el estado del botón con una etiqueta accesible.
+
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+| Hallazgo | Modificación aplicada | Archivo principal | Verificación |
+| :--- | :--- | :--- | :--- |
+| *AU-01* | Se sustituyeron los destinos por /sign-up y /sign-in. | Plantillas de ingreso y registro. | Rutas contrastadas con app.routes.ts; compilación correcta. |
+| *AU-02* | Se asociaron etiquetas y campos con for e id; el selector de rol recibió un nombre accesible. | Plantillas de ingreso y registro. | Revisión del código modificado; compilación correcta. |
+| *AU-03* | El botón alterna entre mostrar y ocultar la contraseña y actualiza su icono y atributos accesibles. | Plantilla y componente de ingreso. | Compilación correcta; falta comprobación manual de la interacción. |
+
+Además, el botón de ingreso y el control de visibilidad usan ahora textos en español. Los cambios se encuentran en la copia local del frontend y aún requieren commit y despliegue para llegar al sitio público. La compilación npm run build terminó sin errores; quedan pendientes la comprobación manual completa con credenciales de prueba y la revisión en distintos tamaños de pantalla.
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo VII: DevOps Practices
