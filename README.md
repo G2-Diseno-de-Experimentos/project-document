@@ -176,6 +176,12 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
     - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
     - [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
+  - [6.4. Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
+    - [6.4.2. Auditoría recibida (revisión interna)](#642-auditoría-recibida-revisión-interna)
+      - [6.4.2.1. Información del grupo auditor](#6421-información-del-grupo-auditor)
+      - [6.4.2.2. Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
+      - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
+      - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 - [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
   - [7.1. Continuous Integration](#71-continuous-integration)
     - [7.1.1. Tools and Practices](#711-tools-and-practices)
@@ -239,6 +245,7 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                     - <strong>TP:</strong> Implementó las pruebas unitarias (patrón AAA) y de integración con Karate de Components y Technician Inventory, corrigió tres defectos detectados contra la API real (detalle de stock, stock duplicado y códigos de error) y configuró el pipeline de integración continua en Jenkins con Checkstyle, JUnit y JaCoCo.<br>
+                    - <strong>AV2:</strong> Documentó las etapas de compilación, pruebas y cobertura de Jenkins y la entrega de una imagen Docker candidata con aprobación manual. En el apartado de despliegue registró la configuración de Render para la rama main, el commit publicado y la verificación de Swagger UI. Dejó trazabilidad de las validaciones y de la versión que se presentó en la demostración.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
@@ -274,6 +281,7 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Preparó el entorno de desarrollo, apoyó la administración inicial del Product Backlog y colaboró en la organización del documento y en la definición de criterios SEO.<br>
                     - <strong>TP:</strong> Priorizó corregir el stock duplicado y el detalle de inventario, porque un inventario incorrecto afecta la planificación y el costo de materiales del técnico (impacto económico). Además, automatizó la verificación en Jenkins para detectar defectos antes de que lleguen a los usuarios.<br>
+                    - <strong>AV2:</strong> Identificó que la aprobación de la imagen en Jenkins y el despliegue de Render operan en paralelo. Documentó la validación previa en develop y la verificación posterior a la publicación para reducir el riesgo de interrupciones para propietarios y técnicos, así como el costo de corregir un despliegue fallido.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Jorge Manuel Retuerto Rodriguez</h4>
                 <p style="font-size: 14px; margin: 0;">
@@ -7058,7 +7066,7 @@ Se revisaron los cambios previos de Leonardo y los flujos que se volvieron a eje
 
 | Participante | Duración y evidencia | Aportes sobre el producto |
 |---|---|---|
-| Leonardo Prieto | 6 min 28 s; inicio: 00:00. | Entendió que ElectroLink pone en contacto a clientes y técnicos eléctricos. La interfaz le transmitió confianza y destacó la disponibilidad y la búsqueda por cercanía como criterios para elegir un técnico. Sugirió incorporar un chat en tiempo real y sumar imágenes e información visual. |
+| Leonardo Prieto | 6 min 28 s. Inicio: 00:00. **Enlace de la entrevista pendiente.** | Entendió que ElectroLink pone en contacto a clientes y técnicos eléctricos. La interfaz le transmitió confianza y destacó la disponibilidad y la búsqueda por cercanía como criterios para elegir un técnico. Sugirió incorporar un chat en tiempo real y sumar imágenes e información visual. |
 | Piero Tenorio Medina | 7 min 53 s; inicio: 00:00. [Video de la entrevista](https://youtu.be/Epc6R8F4hjE). | Comprendió el propósito de la plataforma, valoró la gestión de componentes y encontró útil poder agregarlos al inventario. La interfaz le transmitió confianza, aunque propuso reorganizar las secciones, mejorar la paleta de colores y presentar los componentes en tablas. |
 
 ### 6.3.3. Evaluaciones según heurísticas
@@ -7105,7 +7113,7 @@ La evaluación registra las siguientes recomendaciones. No consigna su implement
 
 Esta sección presenta una autoauditoría heurística de ElectroLink Web, centrada en los flujos de ingreso y registro. Complementa la evaluación de 6.3.3 con hallazgos comprobados en la implementación actual.
 
-### 6.4.2. Auditoría recibida
+### 6.4.2. Auditoría recibida (revisión interna)
 
 A continuación se documenta la revisión interna de la aplicación web de ElectroLink.
 
