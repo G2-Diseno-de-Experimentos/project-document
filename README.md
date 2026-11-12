@@ -7744,21 +7744,506 @@ Tarjeta de Experimento 14
 
 ## 8.2. Experiment Design
 
-### 8.2.1. Hypotheses.
+### 8.2.1. Hypotheses
 
-### 8.2.2. Domain Business Metrics
+**Experimento EC-01 – Q01: Interpretación del comportamiento eléctrico mediante gráficos comparativos**
 
-### 8.2.3. Measures.
+* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES que consultan el historial de consumo mediante gráficos comparativos identifican variaciones relevantes en menos tiempo y con una precisión superior a quienes consultan una presentación convencional de lecturas.
+* **H0 (Hipótesis nula):** No existe una diferencia estadísticamente significativa en el tiempo de identificación ni en la precisión de los usuarios al comparar la presentación gráfica con la presentación convencional de lecturas.
+* **Criterio de evaluación:** Se establece como diferencia mínima de interés una reducción del 15% en el tiempo de identificación, sin disminuir la precisión de las respuestas (umbral de diseño experimental propuesto por el equipo).
 
-### 8.2.4. Conditions.
+---
 
-### 8.2.5. Scale Calculations and Decisions.
+**Experimento EC-02 – Q02: Motivos de consulta periódica del comportamiento eléctrico**
 
-### 8.2.6. Methods Selection.
+* **H1 (Hipótesis alternativa):** El control y la reducción del gasto económico mensual constituyen el principal detonante que motiva a más del 60% de los propietarios y responsables de PYMES a consultar periódicamente el comportamiento eléctrico de sus instalaciones.
+* **H0 (Hipótesis nula):** La consulta periódica de las instalaciones no está motivada principalmente por el control del gasto económico, sino por factores aleatorios o de simple curiosidad operativa sin patrón definido.
+* **Criterio de evaluación:** Validar mediante diarios de uso simulados y entrevistas que al menos el 60% de los usuarios priorizan la optimización económica frente a otros factores.
 
-### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection.
+---
 
-### 8.2.8. Web and Mobile Tracking Plan
+**Experimento EC-03 – Q03: Diferenciación de segmentos en la supervisión preventiva**
+
+* **H1 (Hipótesis alternativa):** Los responsables de PYMES con costos operativos sensibles presentan un interés de supervisión preventiva un 35% mayor que los propietarios residenciales, impulsados por el riesgo de interrupción de su actividad comercial.
+* **H0 (Hipótesis nula):** No existe una diferencia estadísticamente significativa en el nivel de interés ni en la percepción de necesidad de supervisión preventiva entre propietarios residenciales y responsables de PYMES.
+* **Criterio de evaluación:** Analizar estadísticamente las encuestas de segmentación para comprobar una diferencia del 35% en la propensión hacia la prevención a favor de las PYMES.
+
+---
+
+**Experimento EC-04 – Q04: Contextos operativos y tipos de instalación para la información histórica**
+
+* **H1 (Hipótesis alternativa):** Los talleres artesanales y comercios minoristas con maquinaria sensible identifican un valor crítico en la información histórica del comportamiento eléctrico, superando la utilidad percibida en viviendas residenciales estándar.
+* **H0 (Hipótesis nula):** La utilidad percibida de la información histórica es homogénea en todos los tipos de instalación, sin que los comercios o talleres presenten una valoración diferencial significativa.
+* **Criterio de evaluación:** Evaluar mediante paneles de expertos y entrevistas si los nichos de alta criticidad otorgan una calificación de utilidad superior a 4.5/5 frente al sector residencial.
+
+---
+
+**Experimento EC-05 – Q05: Utilidad de las alertas ante variaciones relevantes**
+
+* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES consideran útiles las alertas que comunican variaciones relevantes del comportamiento eléctrico cuando incluyen información contextual y una acción sugerida.
+* **H0 (Hipótesis nula):** La presentación de alertas contextualizadas no genera una percepción de utilidad superior a la neutral entre los usuarios evaluados.
+* **Criterio de evaluación:** Se evaluará mediante escenarios simulados con una escala de Likert de 5 puntos, estableciendo como umbral preliminar una valoración promedio igual o superior a 4 puntos sobre 5.
+
+---
+
+**Experimento EC-06 – Q06: Interpretación de variaciones con información histórica y comparativa**
+
+* **H1 (Hipótesis alternativa):** Los usuarios interpretan correctamente las variaciones de consumo apoyándose principalmente en comparativas directas con el mes anterior y el mismo periodo del año previo, requiriendo apoyos textuales breves para fluctuaciones complejas.
+* **H0 (Hipótesis nula):** Los usuarios no logran interpretar de manera consistente las variaciones de consumo a partir de la información histórica y comparativa presentada, incurriendo en confusiones sistemáticas.
+* **Criterio de evaluación:** Alcanzar un porcentaje de acierto superior al 75% en las pruebas de interpretación de escenarios de consumo simulados con apoyos textuales.
+
+---
+
+**Experimento EC-07 – Q07: Frecuencia y circunstancias de registro o consulta**
+
+* **H1 (Hipótesis alternativa):** Los usuarios muestran resistencia a realizar registros manuales frecuentes (superiores a una vez por semana), prefiriendo consultas mensuales asociadas a la llegada de sus recibos de servicio eléctrico.
+* **H0 (Hipótesis nula):** Los usuarios están dispuestos a realizar registros manuales frecuentes de manera constante sin que se observe una caída en la retención o rechazo al método manual.
+* **Criterio de evaluación:** Registrar tasas de abandono superiores al 30% en pruebas de registro manual diario o semanal frente a la consulta pasiva o automatizada.
+
+---
+
+**Experimento EC-08 – Q08: Utilidad del historial eléctrico durante la evaluación técnica**
+
+* **H1 (Hipótesis alternativa):** Los técnicos electricistas que disponen de un historial estructurado de consumo y eventos anteriores realizan una evaluación inicial en menos tiempo que aquellos que no disponen de dicha información.
+* **H0 (Hipótesis nula):** La disponibilidad de un historial estructurado no produce una reducción estadísticamente significativa en el tiempo de evaluación inicial de los técnicos electricistas.
+* **Criterio de evaluación:** Explorar una reducción del 25% en el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR), manteniendo o mejorando la calidad de las conclusiones técnicas ($p < 0.05$).
+
+---
+
+**Experimento EC-09 – Q09: Información y nivel de detalle requerido por los técnicos**
+
+* **H1 (Hipótesis alternativa):** Los técnicos electricistas priorizan la visualización de un registro cronológico de reparaciones previas y alertas de sobrecarga recientes por encima de los gráficos globales de consumo histórico detallado.
+* **H0 (Hipótesis nula):** Los técnicos electricistas no muestran una preferencia estadísticamente significativa por el registro cronológico frente a los gráficos globales de consumo.
+* **Criterio de evaluación:** Validar mediante pruebas de priorización (*card sorting*) que al menos el 70% de los técnicos seleccionen el registro cronológico como su herramienta principal de consulta inicial.
+
+---
+
+**Experimento EC-10 – Q10: Valor de la vista consolidada para PYMES con múltiples sedes**
+
+* **H1 (Hipótesis alternativa):** Los responsables de múltiples sedes valoran positivamente la vista consolidada para detectar rápidamente anomalías entre locales, identificando como principal limitación la falta de filtros avanzados por tipo de consumo comercial.
+* **H0 (Hipótesis nula):** La vista consolidada no aporta un valor perceptible para los administradores multisede frente al monitoreo individual de cada local.
+* **Criterio de evaluación:** Obtener una valoración de utilidad superior al 80% en las pruebas de concepto con administradores que operan dos o más sedes comerciales.
+
+---
+
+**Experimento EC-11 – Q11: Acciones secuenciales de los propietarios ante una variación inusual**
+
+* **H1 (Hipótesis alternativa):** Ante una variación inusual, los propietarios recurren primero a la revisión visual de interruptores o consultas informales, demorando la búsqueda de un profesional certificado hasta que la falla se torna evidente o persistente.
+* **H0 (Hipótesis nula):** Los propietarios buscan asistencia profesional de manera inmediata al primer indicio de variación inusual en su instalación.
+* **Criterio de evaluación:** Mapear mediante entrevistas retrospectivas que más del 70% de los usuarios siguen una secuencia de auto-revisión antes de contactar a un especialista.
+
+---
+
+**Experimento EC-12 – Q12: Integración de una solicitud de evaluación profesional**
+
+* **H1 (Hipótesis alternativa):** La incorporación de un acceso directo para solicitar una evaluación profesional desde una alerta o variación identificada incrementa la proporción de usuarios que inicia el flujo de solicitud de un servicio.
+* **H0 (Hipótesis nula):** La incorporación del acceso directo no genera un incremento significativo en la proporción de usuarios que inicia el flujo de solicitud frente a una presentación de la alerta sin dicho acceso.
+* **Criterio de evaluación:** Se establece como expectativa preliminar que al menos el 40% de los usuarios expuestos a la alerta con acceso directo inicie el flujo de solicitud de servicio.
+
+---
+
+**Experimento EC-13 – Q13: Nivel de detalle y profundidad histórica para evitar confusiones**
+
+* **H1 (Hipótesis alternativa):** Una vista agregada por semanas con opción de desglose mensual ofrece el equilibrio óptimo de detalle, permitiendo a los usuarios identificar variaciones relevantes sin abrumarse con datos diarios excesivos.
+* **H0 (Hipótesis nula):** El nivel de agregación temporal no influye de forma significativa en la capacidad de comprensión del usuario ni evita la confusión frente a datos detallados.
+* **Criterio de evaluación:** Lograr una tasa de comprensión y satisfacción superior al 85% utilizando vistas semanales/mensuales en las pruebas de usabilidad iterativas.
+
+---
+
+**Experimento EC-14 – Q14: Circunstancias en que una alerta resulta contraproducente o innecesaria**
+
+* **H1 (Hipótesis alternativa):** Las alertas disparadas por variaciones estacionales normales (como calefacción o aire acondicionado) sin la debida contextualización generan preocupación injustificada y desconfianza en más del 50% de los usuarios residenciales.
+* **H0 (Hipótesis nula):** Las fluctuaciones estacionales notificadas sin contexto no generan niveles significativos de desconfianza ni preocupación en los usuarios.
+* **Criterio de evaluación:** Registrar niveles de ansiedad o rechazo superiores al 50% mediante escalas de percepción cualitativa ante escenarios de alertas por variaciones estacionales sin contexto.
+
+### 8.2.2. Experiment Measures
+
+**EC-01**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Measure** | Tiempo medio de respuesta (en segundos) y porcentaje de acierto en la identificación de anomalías comparando la variante gráfica frente a la tabla numérica tradicional. |
+
+---
+
+**EC-02**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Measure** | Porcentaje de menciones clasificadas por categoría (optimización de costos, prevención de fallas, curiosidad) obtenidas mediante diarios de uso simulados y entrevistas. |
+
+---
+
+**EC-03**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Measure** | Diferencia porcentual en la puntuación media de interés preventivo (escala de 1 a 5) y análisis de correlación cruzada con el tamaño y costos operativos del segmento. |
+
+---
+
+**EC-04**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Measure** | Calificación promedio de utilidad percibida (escala Likert de 1 a 5) segmentada por tipo de inmueble (vivienda residencial, taller artesanal, comercio minorista). |
+
+---
+
+**EC-05**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Measure** | Valoración promedio de utilidad de las alertas (escala de 1 a 5) ante distintos escenarios de umbrales porcentuales de desviación simulados. |
+
+---
+
+**EC-06**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Measure** | Tasa de acierto y porcentaje de expresiones de comprensión correcta frente a confusiones durante las pruebas de protocolos concurrentes (*think-aloud*). |
+
+---
+
+**EC-07**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Measure** | Tasa de retención de uso voluntario y porcentaje de abandono ante solicitudes de registro manual durante un periodo de prueba de dos semanas. |
+
+---
+
+**EC-08**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Measure** | Tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) en minutos y puntuación de precisión técnica en casos simulados con y sin acceso al historial. |
+
+---
+
+**EC-09**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Measure** | Porcentaje de preferencias asignadas a cada componente de información (cronología de fallas, gráficos globales, bitácoras) en pruebas de priorización (*card sorting*). |
+
+---
+
+**EC-10**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Measure** | Porcentaje de satisfacción y valoración de utilidad con la vista consolidada en administradores con dos o más locales comerciales. |
+
+---
+
+**EC-11**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Measure** | Frecuencia y porcentaje de usuarios que ejecutan cada paso secuencial (auto-revisión física vs. contacto con técnico) mapeados mediante entrevistas retrospectivas. |
+
+---
+
+**EC-12**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Measure** | Tasa de conversión (porcentaje de usuarios expuestos a la alerta que hacen clic e inician el flujo de solicitud de servicio profesional). |
+
+---
+
+**EC-13**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Measure** | Porcentaje de comprensión y claridad reportada por los usuarios evaluando diferentes agrupaciones temporales (diaria, semanal, mensual). |
+
+---
+
+**EC-14**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Measure** | Porcentaje de usuarios que manifiestan ansiedad, confusión o desconfianza ante escenarios simulados de alertas por fluctuaciones menores o estacionales. |
+
+## 8.2.3. Conditions
+
+**EC-01**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q01 |
+| **Question** | ¿De qué manera la presentación de un historial de consumo mediante gráficos comparativos influye en la capacidad de los propietarios para identificar variaciones relevantes frente a una presentación convencional de lecturas? |
+| **Condición experimental** | Los usuarios evalúan el historial de consumo mediante una interfaz basada en gráficos comparativos interactivos con desglose temporal. |
+| **Condición de control** | Los usuarios evalúan el mismo conjunto de datos e historial de consumo mediante una presentación convencional de tablas numéricas estáticas. |
+
+---
+
+**EC-02**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q02 |
+| **Question** | ¿Cuáles son los principales motivos que llevan a un propietario de vivienda o responsable de una PYME a consultar periódicamente el comportamiento eléctrico de sus instalaciones? |
+| **Condición experimental** | Los usuarios interactúan durante un ciclo completo de dos semanas con un prototipo funcional de seguimiento y alertas de consumo energético. |
+| **Condición de control** | Los usuarios responden a cuestionarios retrospectivos basados en sus experiencias pasadas de consumo sin haber interactuado con el prototipo preventivo. |
+
+---
+
+**EC-03**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q03 |
+| **Question** | ¿Qué características y condiciones diferencian al segmento de usuarios que percibe mayor necesidad de supervisar preventivamente el comportamiento eléctrico entre propietarios de viviendas y responsables de PYMES? |
+| **Condición experimental** | El segmento evaluado corresponde a administradores y responsables de PYMES con instalaciones comerciales e industriales de alta criticidad operativa. |
+| **Condición de control** | El segmento evaluado corresponde exclusivamente a propietarios de viviendas residenciales estándar con consumo doméstico básico. |
+
+---
+
+**EC-04**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q04 |
+| **Question** | ¿En qué contextos operativos o tipos de instalación específicos resulta más útil disponer de información histórica sobre el comportamiento eléctrico? |
+| **Condición experimental** | Instalaciones clasificadas con alta sensibilidad operativa y de cargas eléctricas continuas (talleres artesanales y comercios minoristas). |
+| **Condición de control** | Instalaciones clasificadas con baja criticidad y cargas eléctricas estables (viviendas unifamiliares residenciales estándar). |
+
+---
+
+**EC-05**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q05 |
+| **Question** | ¿En qué situaciones específicas los usuarios consideran útil o necesaria la recepción de una alerta ante una variación relevante respecto al comportamiento habitual de su instalación? |
+| **Condición experimental** | Los usuarios reciben notificaciones de alerta enriquecidas con contexto detallado, porcentaje de desviación y una recomendación de acción correctiva clara. |
+| **Condición de control** | Los usuarios reciben notificaciones de alerta genéricas que solo indican la ocurrencia de una anomalía numérica sin contexto ni acciones sugeridas. |
+
+---
+
+**EC-06**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q06 |
+| **Question** | ¿Cómo describen y qué factores consideran los usuarios al interpretar las variaciones de consumo cuando disponen de información histórica y comparativa? |
+| **Condición experimental** | Los usuarios interpretan los escenarios de variación acompañados de guías contextuales breves y referencias comparativas directas (mes anterior / año previo). |
+| **Condición de control** | Los usuarios interpretan los escenarios de variación únicamente mediante datos métricos aislados sin ayudas visuales ni referencias comparativas guiadas. |
+
+---
+
+**EC-07**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q07 |
+| **Question** | ¿Con qué frecuencia y bajo qué circunstancias estarían dispuestos los usuarios a registrar o consultar información sobre el comportamiento eléctrico de sus instalaciones? |
+| **Condición experimental** | El sistema exige a los usuarios un registro manual periódico y activo de las lecturas de medidores dentro de la plataforma durante el periodo de prueba. |
+| **Condición de control** | El sistema presenta la información de manera automatizada y pasiva sin requerir ninguna acción de registro manual por parte del usuario. |
+
+---
+
+**EC-08**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q08 |
+| **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
+| **Condición experimental** | Los técnicos electricistas disponen de acceso previo a un historial estructurado de consumo, picos y reportes de eventos anteriores de la instalación. |
+| **Condición de control** | Los técnicos electricistas realizan la evaluación inicial sin acceso a ningún antecedente histórico ni bitácora previa de la instalación. |
+
+---
+
+**EC-09**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q09 |
+| **Question** | ¿Qué información y nivel de detalle exacto necesitan los técnicos electricistas para comprender los antecedentes de una instalación antes de realizar una intervención? |
+| **Condición experimental** | Los técnicos evalúan prototipos que organizan la información mediante una cronología detallada de reparaciones previas y alertas de sobrecarga recientes. |
+| **Condición de control** | Los técnicos evalúan prototipos que presentan la información únicamente mediante gráficos globales de consumo histórico general sin desglose cronológico. |
+
+---
+
+**EC-10**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q10 |
+| **Question** | ¿Qué valor específico encuentran los responsables de PYMES con varias sedes al consultar el comportamiento eléctrico de todas sus instalaciones desde un mismo espacio y qué limitaciones identifican? |
+| **Condición experimental** | Los administradores con múltiples locales utilizan una vista centralizada y consolidada de todas sus sedes en un único panel de control. |
+| **Condición de control** | Los administradores con múltiples locales deben navegar de forma independiente y aislada por perfiles separados para cada una de sus sedes. |
+
+---
+
+**EC-11**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q11 |
+| **Question** | ¿Qué acciones secuenciales realizan los propietarios desde el momento en que identifican una variación inusual en el comportamiento eléctrico de su instalación? |
+| **Condición experimental** | Los usuarios enfrentan una simulación de variación inusual con acceso inmediato a herramientas digitales de autodiagnóstico y contacto guiado. |
+| **Condición de control** | Los usuarios enfrentan la misma variación inusual en un entorno tradicional sin herramientas de soporte digital integradas. |
+
+---
+
+**EC-12**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q12 |
+| **Question** | ¿De qué manera la posibilidad de solicitar una evaluación profesional directamente desde la información de una variación identificada influye en la toma de medidas oportunas por parte del usuario? |
+| **Condición experimental** | La notificación de alerta incluye un acceso directo (CTA) integrado que permite iniciar el flujo de contratación de un técnico con un solo clic. |
+| **Condición de control** | La notificación de alerta se presenta de manera informativa sin ningún enlace ni acceso directo para contratar servicios profesionales. |
+
+---
+
+**EC-13**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q13 |
+| **Question** | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
+| **Condición experimental** | Los usuarios interactúan con una interfaz que ofrece agregación temporal flexible basada en vistas semanales con opción de desglose mensual. |
+| **Condición de control** | Los usuarios interactúan con una interfaz rígida que presenta datos diarios detallados y continuos sin opciones de agrupación temporal resumida. |
+
+---
+
+**EC-14**
+| Campo | Detalle |
+| :--- | :--- |
+| **ID** | Q14 |
+| **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
+| **Condición experimental** | Los usuarios reciben alertas generadas por fluctuaciones menores o estacionales acompañadas de explicaciones sobre el clima o uso estacional. |
+| **Condición de control** | Los usuarios reciben las mismas alertas por fluctuaciones menores o estacionales presentadas de forma abrupta y sin ninguna contextualización explicativa. |
+
+### 8.2.4. Scale Calculations and Decisions.
+
+### 8.2.5. Scale Calculations and Decisions
+
+La siguiente matriz permitirá evaluar el cumplimiento de las hipótesis relacionadas con las funcionalidades propuestas para la extensión preventiva de ElectroLink. Para ello, se establece una escala de cuatro niveles: **Desfavorable, Aceptable, Ideal y Excelente**, tomando como referencia el valor mínimo y el valor ideal definido para cada experimento.
+
+El nivel **Ideal** representa el cumplimiento de la métrica objetivo establecida por el equipo. El nivel **Excelente** corresponde a un resultado que supera dicha meta en al menos un 25 %. El nivel **Aceptable** comprende los resultados iguales o superiores al promedio entre el valor mínimo y el valor ideal. Finalmente, el nivel **Desfavorable** corresponde a los resultados inferiores al umbral aceptable.
+
+Los valores establecidos representan criterios de decisión propuestos para la experimentación.
+
+| Scale Calculation | Decision | Desfavorable | Aceptable | Ideal | Excelente |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Creemos que** los gráficos comparativos permiten identificar variaciones relevantes en menos tiempo que una tabla convencional. **Sabremos que** esta funcionalidad aporta valor cuando reduzca el tiempo de identificación de variaciones. **Cuando** la reducción del tiempo sea igual o superior al 15 %, sin disminuir la precisión de identificación. | Incorporar gráficos comparativos en el historial de consumo eléctrico. | Reducción inferior al 7.5 %. | Reducción igual o superior al 7.5 % e inferior al 15 %. | Reducción igual o superior al 15 % e inferior al 18.75 %. | Reducción igual o superior al 18.75 %. |
+| **Creemos que** las alertas contextualizadas ayudan a los usuarios a comprender las variaciones relevantes y determinar cuándo requieren atención. **Sabremos que** esta funcionalidad aporta valor cuando los usuarios otorguen una valoración positiva a su utilidad. **Cuando** la puntuación promedio de utilidad sea igual o superior a 4 sobre 5. | Incorporar alertas contextualizadas con información comparativa y una acción sugerida. | Puntuación inferior a 3.5. | Puntuación igual o superior a 3.5 e inferior a 4. | Puntuación igual o superior a 4 e inferior a 5. | Puntuación igual a 5. |
+| **Creemos que** disponer de un historial estructurado de consumo y eventos anteriores facilita la evaluación inicial de los técnicos electricistas. **Sabremos que** esta funcionalidad aporta valor cuando reduzca el tiempo de evaluación sin disminuir la calidad de las conclusiones técnicas. **Cuando** la reducción del tiempo de evaluación inicial sea igual o superior al 25 %. | Incorporar un historial estructurado de consumo y eventos para consulta de los técnicos electricistas. | Reducción inferior al 12.5 %. | Reducción igual o superior al 12.5 % e inferior al 25 %. | Reducción igual o superior al 25 % e inferior al 31.25 %. | Reducción igual o superior al 31.25 %. |
+| **Creemos que** ofrecer un acceso directo desde una alerta hacia la solicitud de evaluación profesional incrementa la intención de los usuarios de solicitar asistencia especializada. **Sabremos que** esta funcionalidad aporta valor cuando los usuarios inicien el flujo de solicitud desde la alerta. **Cuando** la tasa de inicio del flujo sea igual o superior al 40 %. | Incorporar un acceso directo (CTA) para solicitar una evaluación profesional desde las alertas. | Tasa inferior al 30 %. | Tasa igual o superior al 30 % e inferior al 40 %. | Tasa igual o superior al 40 % e inferior al 50 %. | Tasa igual o superior al 50 %. |
+
+### 8.2.5. Methods Selection
+
+Para la ejecución y evaluación de los experimentos de ElectroLink, se analizaron diferentes herramientas de analítica digital capaces de recopilar información sobre el comportamiento de los usuarios y proporcionar evidencia cuantitativa para validar las hipótesis propuestas.
+
+La selección se realizó siguiendo el principio **Simplest Useful Thing (SUT)**, priorizando una herramienta que permita obtener las métricas necesarias sin introducir complejidad técnica innecesaria.
+
+Se consideraron tres alternativas: **Google Analytics 4, Statcounter y Matomo**. La evaluación se desarrolló a partir de tres criterios: capacidad de análisis, facilidad de uso y privacidad.
+
+**Comparación de herramientas de analítica digital**
+
+| Herramienta | Capacidad de análisis | Facilidad de uso | Privacidad |
+| :--- | :--- | :--- | :--- |
+| **Google Analytics 4** | **Alta.** Permite registrar eventos personalizados, segmentar usuarios, analizar recorridos y construir embudos de interacción. Ofrece integración con aplicaciones web y móviles mediante Firebase. | **Alta.** Dispone de documentación, SDKs y paneles de análisis. La configuración de eventos personalizados requiere conocimientos técnicos. | **Media.** Los datos se procesan mediante la infraestructura de Google. Requiere configurar adecuadamente la recopilación, el consentimiento y la retención de información. |
+| **Statcounter** | **Básica a intermedia.** Permite analizar visitas, páginas consultadas y recorridos de navegación. Su enfoque principal es la analítica de sitios web, por lo que resulta menos adecuado para instrumentar los experimentos móviles propuestos. | **Alta.** Su configuración y sus reportes de navegación son relativamente sencillos. | **Media.** Utiliza un servicio externo para el procesamiento de los datos y requiere revisar sus condiciones de privacidad. |
+| **Matomo** | **Alta.** Permite registrar eventos, objetivos y dimensiones personalizadas. Dispone de SDKs para aplicaciones móviles y mecanismos de análisis del comportamiento. | **Media.** Su implementación requiere mayor configuración, especialmente cuando se utiliza una instalación autohospedada. | **Alta.** Permite alojar los datos en infraestructura propia y ofrece controles de privacidad y retención configurables. |
+
+**Matriz de evaluación ponderada**
+
+Para establecer una comparación cuantitativa, se asignaron ponderaciones según la importancia de cada criterio para los experimentos de ElectroLink.
+
+| Criterio | Peso | Google Analytics 4 | Statcounter | Matomo |
+| :--- | :---: | :---: | :---: | :---: |
+| Capacidad de análisis | 40 % | 5 | 3 | 5 |
+| Facilidad de uso | 35 % | 4 | 5 | 3 |
+| Privacidad | 25 % | 3 | 3 | 5 |
+| **Puntuación ponderada** | **100 %** | **4.15 / 5** | **3.70 / 5** | **4.30 / 5** |
+
+De acuerdo con la matriz de evaluación, Matomo obtiene la mayor puntuación ponderada, principalmente por su capacidad de análisis y sus opciones de control sobre los datos recopilados.
+
+Por consiguiente, se selecciona **Matomo como herramienta propuesta para el seguimiento analítico de los experimentos de ElectroLink**, considerando su capacidad para registrar eventos personalizados, distinguir variantes experimentales y recopilar información tanto en entornos web como móviles.
+
+### 8.2.6. Data Analytics: Goals, KPIs and Metrics Selection
+
+Dada la elección de Matomo como herramienta de analítica digital, es necesario delimitar los objetivos y métricas que se esperan alcanzar durante los experimentos de ElectroLink. Estas métricas permitirán evaluar la utilidad de las funcionalidades propuestas para la gestión preventiva del consumo eléctrico y determinar si cumplen con las hipótesis establecidas.
+
+Las métricas seleccionadas son las siguientes:
+
+- Tiempo medio de identificación de variaciones de consumo: se registrará el tiempo que necesitan los usuarios para identificar cambios relevantes en el consumo eléctrico mediante gráficos comparativos y tablas convencionales. De acuerdo con el experimento EC-01, se espera reducir este tiempo en al menos un 15 %, manteniendo la precisión de las respuestas.
+
+- Valoración de utilidad de las alertas contextualizadas: se recopilarán las valoraciones de los usuarios sobre la utilidad de las alertas que presentan variaciones de consumo, información contextual y acciones sugeridas. De acuerdo con el experimento EC-02, se espera obtener una puntuación promedio de al menos 4 sobre 5 en la escala de utilidad.
+
+- Tiempo medio de evaluación técnica inicial: se registrará el tiempo que necesitan los técnicos electricistas para evaluar un caso utilizando un historial estructurado de consumo y eventos anteriores, comparándolo con una evaluación sin dicho historial. De acuerdo con el experimento EC-03, se espera reducir el tiempo de evaluación inicial en al menos un 25 %, sin disminuir la calidad de las conclusiones técnicas.
+
+- Tasa de inicio de solicitudes de evaluación profesional: se registrará la proporción de usuarios que inician el flujo simulado de solicitud de evaluación profesional después de visualizar una alerta con acceso directo. De acuerdo con el experimento EC-04, se espera alcanzar una tasa de inicio igual o superior al 40 %.
+
+Con el propósito de comprobar la viabilidad técnica de Matomo como herramienta de recopilación de datos, se realizó una prueba inicial de integración con la Landing Page de ElectroLink, publicada mediante GitHub Pages.
+
+Esta implementación inicial tuvo dos propósitos: verificar que Matomo pudiera recibir correctamente los eventos enviados desde una interfaz web y establecer una base para el futuro monitoreo de las interacciones que pueden reflejar el interés de los visitantes por conocer o acceder a ElectroLink.
+
+![matomo-01](assets/evidence/cap8/matomo-01.png)
+
+La figura presenta el seguimiento individual de las interacciones realizadas durante una sesión de prueba. Se observa la recepción del evento personalizado, lo que demuestra que la integración permite registrar acciones concretas efectuadas sobre la interfaz web.
+
+![matomo-02](assets/evidence/cap8/matomo-02.png)
+
+La figura muestra el estado de procesamiento de los informes estadísticos durante la prueba técnica. Esta situación permite distinguir entre la recepción de eventos individuales y su posterior disponibilidad en los reportes agregados de Matomo. La ausencia temporal de información consolidada no impidió verificar la recepción del evento mediante el registro de visitas.
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+El objetivo analítico es determinar si las funcionalidades propuestas para la gestión preventiva del consumo eléctrico de ElectroLink producen resultados superiores a sus respectivas condiciones de control, utilizando los KPIs definidos para cada experimento.
+
+Para ello, se establecen métricas primarias que permitirán evaluar el cumplimiento de las hipótesis y métricas secundarias (*Guardrails*) que permitirán identificar posibles efectos negativos o limitaciones de las funcionalidades evaluadas.
+
+| Hipótesis | Objetivo Analítico | KPI Primario (Métrica de Éxito) | Métricas Secundarias (Guardrails) |
+| :--- | :--- | :--- | :--- |
+| **EC-01: Gráficos comparativos** | Determinar si la representación gráfica del consumo eléctrico permite identificar variaciones relevantes en menos tiempo que una tabla convencional. | **Reducción porcentual del tiempo medio de identificación.** Meta: reducción ≥ 15 %. | Precisión en la identificación de variaciones; tasa de respuestas incorrectas. |
+| **EC-02: Alertas contextualizadas** | Determinar si las alertas acompañadas de información contextual y acciones sugeridas son percibidas como útiles por los usuarios. | **Puntuación promedio de utilidad percibida.** Meta: ≥ 4/5. | Precisión en la interpretación de alertas; proporción de interpretaciones incorrectas. |
+| **EC-03: Historial técnico estructurado** | Determinar si disponer de un historial de consumo y eventos anteriores reduce el tiempo necesario para realizar una evaluación técnica inicial. | **Reducción porcentual del tiempo medio de evaluación técnica inicial.** Meta: reducción ≥ 25 %. | Calidad de las conclusiones técnicas; tasa de evaluaciones incompletas o incorrectas. |
+| **EC-04: Solicitud de evaluación profesional** | Determinar si incorporar un acceso directo desde una alerta incrementa el inicio del flujo de solicitud de evaluación profesional. | **Tasa de inicio del flujo de solicitud.** Meta: ≥ 40 %. | Tasa de finalización del flujo; tasa de abandono durante la solicitud. |
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+Las siguientes historias de usuario describen las funcionalidades requeridas para implementar las variantes experimentales propuestas para la extensión preventiva de ElectroLink. Cada historia se encuentra relacionada con una de las hipótesis priorizadas y establece los criterios de aceptación necesarios para evaluar su comportamiento durante las pruebas.
+
+| ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Experimento) |
+| :--- | :--- | :--- | :--- | :--- |
+| **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | **Escenario 1:** El usuario experimental visualiza gráficos comparativos de periodos seleccionados. **Escenario 2:** El sistema registra la respuesta y el tiempo de identificación. **Escenario 3:** El usuario de control visualiza datos equivalentes mediante una tabla convencional. | EC-01: Gráficos comparativos |
+| **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo. | **Escenario 1:** El sistema presenta la alerta con información contextual. **Escenario 2:** El usuario valora su utilidad en una escala de 1 a 5. **Escenario 3:** El sistema registra la respuesta utilizada para evaluar la comprensión. | EC-02: Alertas contextualizadas |
+| **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial de consumo y eventos anteriores, para facilitar mi evaluación técnica inicial. | **Escenario 1:** El técnico experimental consulta el historial estructurado. **Escenario 2:** El sistema registra el tiempo y las conclusiones de la evaluación. **Escenario 3:** El técnico de control evalúa un caso equivalente sin historial estructurado. | EC-03: Historial técnico estructurado |
+| **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional desde una alerta, para acceder rápidamente a la asistencia especializada. | **Escenario 1:** Se muestra el CTA en la variante experimental. **Escenario 2:** Se registra el inicio del flujo. **Escenario 3:** Se registra su finalización simulada. **Escenario 4:** La variante de control no muestra el CTA. | EC-04: Solicitud de evaluación profesional |
+
+### 8.3.2. To-Be Product Backlog
+
+### 8.3.2. To-Be Product Backlog
+
+| Prioridad | User Story ID | Título | Descripción | Estimación (SP) | Estado | Experimento |
+| :---: | :--- | :--- | :--- | :---: | :--- | :--- |
+| 1 | **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | 5 | To Do | EC-01 |
+| 2 | **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo y determinar si requieren atención. | 5 | To Do | EC-02 |
+| 3 | **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial estructurado de consumo y eventos anteriores de un inmueble, para facilitar mi evaluación técnica inicial. | 8 | To Do | EC-03 |
+| 4 | **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional directamente desde una alerta, para acceder rápidamente a la asistencia especializada. | 3 | To Do | EC-04 |
+
+- **Criterios de priorización**
+
+La organización del backlog responde a las siguientes consideraciones:
+
+  - **EXP-US-001 – Visualización comparativa del consumo eléctrico:** se establece como primera prioridad porque proporciona una representación visual de los registros históricos de consumo, que constituye una capacidad fundamental para la interpretación de variaciones.
+
+  - **EXP-US-002 – Consulta de alertas contextualizadas:** se ubica en segundo lugar porque complementa el análisis del consumo mediante información contextual y acciones sugeridas, facilitando la comprensión de situaciones que podrían requerir atención.
+
+  - **EXP-US-003 – Consulta del historial estructurado para evaluación técnica:** se considera la tercera prioridad porque extiende el uso de los registros de consumo hacia los técnicos electricistas. Su implementación requiere organizar información histórica y presentarla de manera adecuada para apoyar las evaluaciones iniciales.
+
+  - **EXP-US-004 – Solicitud de evaluación profesional desde una alerta:** se establece como cuarta prioridad debido a su relación funcional con las alertas contextualizadas. Su implementación permitirá evaluar si un acceso directo facilita el inicio de solicitudes de asistencia profesional.
 
 # Conclusiones
 
