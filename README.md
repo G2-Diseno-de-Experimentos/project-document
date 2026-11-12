@@ -7023,6 +7023,8 @@ Después de compilar la copia de `develop` con `release 21`, se ejecutó el obje
 
 El [resumen de análisis estático](assets/evidence/cap6/av2/static-analysis.json) contiene categorías, reglas y ubicaciones. El análisis es una revisión de código y bytecode; no se ejecutó un escaneo de vulnerabilidades de dependencias ni una auditoría de producción.
 
+Además de esta revisión puntual, el pipeline de Jenkins analiza cada cambio en `main` con **SonarQube** y detiene el build si no se cumple el Quality Gate. El primer análisis (build #14) aprobó el Quality Gate y registró tres *issues*: CSRF desactivado, CORS abierto en `ProfilesController` y una expresión regular costosa en el código de prueba. El detalle está en la sección 7.1.2.
+
 ### 6.2.2. Reviews
 
 Se revisaron los cambios previos de Leonardo y los flujos que se volvieron a ejecutar para el Avance 2. Se trata de una **revisión técnica del código y de las evidencias**. No se registran aprobaciones de pares sin un enlace o acta que las confirme.
@@ -7205,7 +7207,7 @@ La comparación documental usa cuatro criterios para ElectroLink: compatibilidad
 
 ## 7.1. Continuous Integration
 
-La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
+La integración continua del backend de ElectroLink se implementó con un pipeline declarativo de Jenkins definido en el archivo `Jenkinsfile` del repositorio [ElectroLink-Backend](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend). Cada vez que llega un cambio a la rama `main`, Jenkins lo detecta automáticamente, descarga el código, lo compila, valida el estilo, ejecuta las pruebas unitarias, mide la cobertura, lo analiza con SonarQube y empaqueta la aplicación. Si alguna etapa falla, el pipeline se detiene y el defecto queda identificado en el build de ese commit.
 
 ### 7.1.1. Tools and Practices
 
@@ -7223,6 +7225,8 @@ La integración continua del backend de ElectroLink se implementó con un pipeli
 | **JUnit 5, Mockito y AssertJ** | JUnit 5, Mockito 5.19 | Pruebas unitarias de entidades y servicios de los bounded contexts |
 | **JaCoCo** | jacoco-maven-plugin 0.8.15 | Medición de la cobertura de líneas y validación de un mínimo de 30 % |
 | **JUnit plugin** | Plugin de Jenkins | Publicación del reporte de pruebas de cada build |
+| **SonarQube Community** | 26.11 (imagen Docker `sonarqube:community`) | Análisis estático de calidad y seguridad, con el Quality Gate *Sonar way*. Se ejecuta en otro contenedor, en la misma red de Docker que Jenkins |
+| **SonarQube Scanner** | Plugin de Jenkins 2.19.0 y sonar-maven-plugin 5.8.0.7211 | Paso `withSonarQubeEnv`, que entrega a Maven la URL del servidor y el token guardado como credencial (`sonarqube-token`) |
 
 **Prácticas aplicadas**
 
@@ -7237,6 +7241,7 @@ La integración continua del backend de ElectroLink se implementó con un pipeli
 | **Detener la línea ante fallos** | Si una etapa falla, las siguientes no se ejecutan y el build queda en rojo. |
 | **Separación entre pruebas unitarias y de integración** | En la etapa de pruebas solo se ejecutan las pruebas unitarias, que usan mocks y no requieren servicios externos. Las pruebas de integración (clases `*IT` y el runner global de Karate) necesitan la API y PostgreSQL en ejecución, por lo que se ejecutan fuera del pipeline (sección 6.1.2). |
 | **Umbral de calidad** | JaCoCo exige al menos 30 % de cobertura de líneas; si la cobertura baja de ese valor, el build falla. |
+| **Quality Gate en el pipeline** | La etapa *SonarQube Analysis* ejecuta el escáner con `sonar.qualitygate.wait=true`: espera el resultado del Quality Gate *Sonar way* y detiene el build si no se cumple. Se usa esta opción en lugar de `waitForQualityGate` porque SonarQube rechaza webhooks hacia direcciones internas como la del contenedor de Jenkins. |
 | **Publicación de evidencias** | El bloque `post` publica el reporte de JUnit y archiva el reporte de cobertura, el resultado de Checkstyle y el `.jar` generado. |
 | **Ejecución del pipeline** | Jenkins se ejecuta en un entorno local y no puede recibir *webhooks* de GitHub, por eso usa *polling*. Un cambio en `main` inicia el pipeline en dos minutos como máximo. *Construir ahora* sigue disponible para ejecuciones manuales. |
 
@@ -7309,6 +7314,18 @@ pipeline {
       }
     }
 
+    stage('SonarQube Analysis') {
+      steps {
+        // Server URL and token come from the 'SonarQube' server configured in Jenkins.
+        // sonar.qualitygate.wait makes the scanner fail the build if the Quality Gate fails.
+        withSonarQubeEnv('SonarQube') {
+          withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
+            sh 'mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar -Dsonar.projectKey=electrolink-backend -Dsonar.projectName=ElectroLink-Backend -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300'
+          }
+        }
+      }
+    }
+
     stage('Package Project') {
       steps {
         withMaven(maven: 'MAVEN_3_9', options: [junitPublisher(disabled: true)]) {
@@ -7376,6 +7393,47 @@ Las capturas de esta sección corresponden al build #5, que se ejecutó sobre el
 
 <img src="assets/img/cap7/jenkins-artifacts.jpg" width="700"/>
 
+**Análisis estático con SonarQube: build #14**
+
+La etapa *SonarQube Analysis* se agregó después de *Validate Test Coverage*, para que el análisis incluya el reporte de JaCoCo. Jenkins se conecta con el servidor `SonarQube` (`http://sonarqube:9000`) mediante el token guardado como credencial:
+
+<img src="assets/img/cap7/jenkins-sonarqube-server.png" width="700"/>
+
+El build #14 se inició solo al integrar en `main` el commit `ci: add SonarQube analysis stage with quality gate` (`4d56227`). El escáner analizó 317 archivos fuente y 32 de prueba, importó el reporte de JaCoCo y esperó el resultado del Quality Gate: **`QUALITY GATE STATUS: PASSED`**.
+
+<img src="assets/img/cap7/jenkins-sonar-quality-gate-log.png" width="700"/>
+
+El pipeline terminó en verde en 1 minuto y 47 segundos. *SonarQube Analysis* tardó 24 segundos:
+
+<img src="assets/img/cap7/jenkins-sonar-stages-success.png" width="700"/>
+
+El panel del proyecto `electrolink-backend` en SonarQube resume el análisis del código completo:
+
+<img src="assets/img/cap7/sonarqube-dashboard.png" width="700"/>
+
+| Métrica | Resultado |
+|---|---|
+| Quality Gate (*Sonar way*) | **Passed** |
+| Líneas de código | 6 505 |
+| Cobertura | 30,9 % |
+| Duplicación | 0,3 % |
+| Seguridad | 2 *issues* abiertos (calificación D) |
+| Confiabilidad | 1 *issue* abierto (calificación C) |
+| Mantenibilidad | 0 *issues* (calificación A) |
+| *Security Hotspots* | 0 |
+
+El Quality Gate *Sonar way* evalúa el código nuevo. Como este fue el primer análisis del proyecto, no había un período de código nuevo y la puerta resultó aprobada aunque el código completo tiene tres *issues*:
+
+<img src="assets/img/cap7/sonarqube-issues.png" width="700"/>
+
+| Regla | Ubicación | Hallazgo | Valoración y acción |
+|---|---|---|---|
+| `java:S4502` · Seguridad, alta | `WebSecurityConfiguration`, línea 78 | La protección CSRF de Spring Security está desactivada. | La API es sin estado (`SessionCreationPolicy.STATELESS`) y se autentica con JWT en la cabecera `Authorization`, sin cookies de sesión, por lo que CSRF no aplica en la práctica. Se debe revisar y, si se confirma, marcar como aceptado en SonarQube con esa justificación. |
+| `java:S5122` · Seguridad, media | `ProfilesController`, línea 22 | El controlador habilita CORS para cualquier origen. | `@CrossOrigin(origins = "*")` ignora la configuración global de `WebSecurityConfiguration`, que toma los orígenes de `CORS_ALLOWED_ORIGINS` (por defecto `*`). Conviene quitar la anotación del controlador y definir en `CORS_ALLOWED_ORIGINS` solo los dominios del front-end. |
+| `java:S8786` · Confiabilidad, media | `AssetsApiSupport` (código de prueba), línea 26 | Una expresión regular puede tener un tiempo de ejecución super lineal por *backtracking*. | Afecta solo a una clase de apoyo de las pruebas Karate. Se puede simplificar la expresión sin impacto en producción. |
+
+A partir de este análisis, cada cambio que llegue a `main` se compara con esta línea base: si introduce *issues* que incumplan el Quality Gate en el código nuevo, el build se detiene antes de construir la imagen Docker.
+
 ## 7.2. Continuous Delivery
 
 El equipo integra `develop` en `main` siguiendo GitFlow. Jenkins detecta el cambio, ejecuta las validaciones de integración continua (sección 7.1) y construye la imagen Docker. Después, un integrante aprueba manualmente la imagen como candidata a liberación. Render inicia su propio despliegue en paralelo desde `main` (sección 7.3).
@@ -7439,7 +7497,7 @@ El recorrido completo de un cambio, desde que se escribe hasta que queda aprobad
 | 3 | **Validación de integración** | Equipo | Se ejecutan las pruebas Karate contra el backend real con PostgreSQL aislado (sección 6.1.2). | Escenarios Karate aprobados. |
 | 4 | **Decisión de liberación** | Equipo | Se integra `develop` en `main`. | *Merge* a `main`. |
 | 5 | **Detección del cambio** | Jenkins | El *polling* encuentra el commit nuevo en `main` e inicia el pipeline. | Dentro de 2 minutos. |
-| 6 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde y cobertura de líneas de al menos 30 %. |
+| 6 | **Integración continua** | Jenkins | Ejecuta *Checkout SCM*, *Tool Install*, *Compile Project*, *Validate Checkstyle*, *Validate Unit Tests*, *Validate Test Coverage*, *SonarQube Analysis* y *Package Project* (detalle en 7.1.2). | Todas las etapas en verde, cobertura de líneas de al menos 30 % y Quality Gate aprobado. |
 | 7 | **Build Docker Image** | Jenkins | Construye la imagen con el `Dockerfile` del repositorio y la etiqueta con el número de build y `latest`. | Imagen construida sin errores. |
 | 8 | **Approve Delivery** | Integrante del equipo | El pipeline se detiene hasta que se aprueba la versión. Al aprobarla, la imagen se etiqueta como `release-candidate`. | Aprobación dentro de 30 minutos. |
 | 9 | **Archivo de evidencias** | Jenkins | Publica el reporte de JUnit y archiva el reporte de JaCoCo, el resultado de Checkstyle y el `.jar`. | Build terminado en verde. |
