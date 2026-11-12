@@ -198,6 +198,25 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
     - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
     - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+- [Capítulo VIII: Experiment-Driven Development](#capítulo-viii-experiment-driven-development)
+  - [8.1. Experiment Planning](#81-experiment-planning)
+    - [8.1.1. As-Is Summary](#811-as-is-summary)
+    - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4. Question Backlog](#814-question-backlog)
+    - [8.1.5. Experiment Cards](#815-experiment-cards)
+  - [8.2. Experiment Design](#82-experiment-design)
+    - [8.2.1. Hypotheses](#821-hypotheses)
+    - [8.2.2. Experiment Measures](#822-experiment-measures)
+    - [8.2.3. Conditions](#823-conditions)
+    - [8.2.4. Scale Calculations and Decisions](#824-scale-calculations-and-decisions)
+    - [8.2.5. Methods Selection](#825-methods-selection)
+    - [8.2.6. Data Analytics: Goals, KPIs and Metrics Selection](#826-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.7. Web and Mobile Tracking Plan](#827-web-and-mobile-tracking-plan)
+  - [8.3. Experimentation](#83-experimentation)
+    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+    - [8.3.3. To-Be Sprint Backlog](#833-to-be-sprint-backlog)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -7612,7 +7631,7 @@ Para repetir la demostración, iniciar Docker Desktop y ejecutar `docker compose
 
 <div style="page-break-after: always;"></div>
 
-# Capitulo VIII: Experiment-Driven-Development
+# Capítulo VIII: Experiment-Driven Development
 
 ## 8.1. Experiment Planning 
 
@@ -7682,7 +7701,7 @@ Por otro lado, desde la perspectiva de los técnicos electricistas, atender una 
   - La disponibilidad de información histórica aporta contexto útil a los técnicos electricistas durante una evaluación.
   - La posibilidad de solicitar una evaluación profesional a partir de una variación identificada complementa la propuesta de valor de ElectroLink.
 
-## 8.1.3. Experiment-Ready Questions.
+### 8.1.3. Experiment-Ready Questions.
 
 A partir de las suposiciones, brechas de conocimiento, ideas y afirmaciones recopiladas, se formulan preguntas orientadas a reducir la incertidumbre sobre la extensión preventiva y proactiva de ElectroLink. Por ello, presentamos el método de las **5W y 2H** para el desarrollo de las preguntas para el desarrollo de la experimentación:
 
@@ -7703,7 +7722,7 @@ A partir de las suposiciones, brechas de conocimiento, ideas y afirmaciones reco
 | Q13 | How Much | ¿Qué nivel de detalle y profundidad histórica necesitan los usuarios para lograr reconocer variaciones relevantes en sus instalaciones sin incurrir en confusiones? |
 | Q14 | When / How | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
 
-## 8.1.4. Question Backlog.
+### 8.1.4. Question Backlog.
 
 Esta sección presenta el backlog como una lista priorizada de preguntas para la investigación, basada en una evaluación cuantitativa mediante criterios de **Confianza, Riesgo, Impacto e Interés**, tal como se muestra en la matriz de puntuación.
 
@@ -7907,8 +7926,8 @@ Tarjeta de Experimento 14
 
 **Experimento EC-01 – Q01: Interpretación del comportamiento eléctrico mediante gráficos comparativos**
 
-* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES que consultan el historial de consumo mediante gráficos comparativos identifican variaciones relevantes en menos tiempo y con una precisión superior a quienes consultan una presentación convencional de lecturas.
-* **H0 (Hipótesis nula):** No existe una diferencia estadísticamente significativa en el tiempo de identificación ni en la precisión de los usuarios al comparar la presentación gráfica con la presentación convencional de lecturas.
+* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES que consultan gráficos comparativos identifican variaciones en menos tiempo que quienes consultan una tabla. La precisión se controla como métrica secundaria.
+* **H0 (Hipótesis nula):** El tiempo medio de identificación con gráficos es igual o mayor que el tiempo medio con la tabla.
 * **Criterio de evaluación:** Se establece como diferencia mínima de interés una reducción del 15% en el tiempo de identificación, sin disminuir la precisión de las respuestas (umbral de diseño experimental propuesto por el equipo).
 
 ---
@@ -7939,9 +7958,9 @@ Tarjeta de Experimento 14
 
 **Experimento EC-05 – Q05: Utilidad de las alertas ante variaciones relevantes**
 
-* **H1 (Hipótesis alternativa):** Los propietarios de viviendas y responsables de PYMES consideran útiles las alertas que comunican variaciones relevantes del comportamiento eléctrico cuando incluyen información contextual y una acción sugerida.
-* **H0 (Hipótesis nula):** La presentación de alertas contextualizadas no genera una percepción de utilidad superior a la neutral entre los usuarios evaluados.
-* **Criterio de evaluación:** Se evaluará mediante escenarios simulados con una escala de Likert de 5 puntos, estableciendo como umbral preliminar una valoración promedio igual o superior a 4 puntos sobre 5.
+* **H1 (Hipótesis alternativa):** Los propietarios y responsables de PYMES otorgan una valoración media de utilidad mayor a las alertas con contexto y una acción sugerida que a las alertas genéricas.
+* **H0 (Hipótesis nula):** La valoración media de utilidad de las alertas contextualizadas es igual o menor que la de las alertas genéricas.
+* **Criterio de evaluación:** Comparar las valoraciones de ambas variantes en una escala de 1 a 5. La meta para la variante contextualizada es alcanzar una media de al menos 4 sobre 5 y mantener la comprensión del aviso.
 
 ---
 
@@ -7965,7 +7984,7 @@ Tarjeta de Experimento 14
 
 * **H1 (Hipótesis alternativa):** Los técnicos electricistas que disponen de un historial estructurado de consumo y eventos anteriores realizan una evaluación inicial en menos tiempo que aquellos que no disponen de dicha información.
 * **H0 (Hipótesis nula):** La disponibilidad de un historial estructurado no produce una reducción estadísticamente significativa en el tiempo de evaluación inicial de los técnicos electricistas.
-* **Criterio de evaluación:** Explorar una reducción del 25% en el tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR), manteniendo o mejorando la calidad de las conclusiones técnicas ($p < 0.05$).
+* **Criterio de evaluación:** Alcanzar una reducción de al menos el 25 % en el tiempo medio de evaluación inicial y mantener la calidad de las conclusiones técnicas. Para una evaluación confirmatoria se propone un nivel de significancia de 0,05.
 
 ---
 
@@ -8085,7 +8104,7 @@ Tarjeta de Experimento 14
 | :--- | :--- |
 | **ID** | Q08 |
 | **Question** | ¿De qué manera específica la disponibilidad de un historial de consumo y eventos anteriores impacta en el proceso de evaluación inicial que realizan los técnicos electricistas? |
-| **Measure** | Tiempo medio de diagnóstico (*Mean Time to Resolution* - MTTR) en minutos y puntuación de precisión técnica en casos simulados con y sin acceso al historial. |
+| **Measure** | Tiempo medio de evaluación inicial en minutos y puntuación de calidad de las conclusiones en casos simulados con y sin acceso al historial. |
 
 ---
 
@@ -8141,7 +8160,7 @@ Tarjeta de Experimento 14
 | **Question** | ¿Bajo qué circunstancias operativas o de diseño una alerta sobre el comportamiento eléctrico resulta contraproducente, innecesaria o genera preocupación injustificada? |
 | **Measure** | Porcentaje de usuarios que manifiestan ansiedad, confusión o desconfianza ante escenarios simulados de alertas por fluctuaciones menores o estacionales. |
 
-## 8.2.3. Conditions
+### 8.2.3. Conditions
 
 **EC-01**
 | Campo | Detalle |
@@ -8281,24 +8300,37 @@ Tarjeta de Experimento 14
 | **Condición experimental** | Los usuarios reciben alertas generadas por fluctuaciones menores o estacionales acompañadas de explicaciones sobre el clima o uso estacional. |
 | **Condición de control** | Los usuarios reciben las mismas alertas por fluctuaciones menores o estacionales presentadas de forma abrupta y sin ninguna contextualización explicativa. |
 
-### 8.2.4. Scale Calculations and Decisions.
-
-### 8.2.5. Scale Calculations and Decisions
+### 8.2.4. Scale Calculations and Decisions
 
 La siguiente matriz permitirá evaluar el cumplimiento de las hipótesis relacionadas con las funcionalidades propuestas para la extensión preventiva de ElectroLink. Para ello, se establece una escala de cuatro niveles: **Desfavorable, Aceptable, Ideal y Excelente**, tomando como referencia el valor mínimo y el valor ideal definido para cada experimento.
 
-El nivel **Ideal** representa el cumplimiento de la métrica objetivo establecida por el equipo. El nivel **Excelente** corresponde a un resultado que supera dicha meta en al menos un 25 %. El nivel **Aceptable** comprende los resultados iguales o superiores al promedio entre el valor mínimo y el valor ideal. Finalmente, el nivel **Desfavorable** corresponde a los resultados inferiores al umbral aceptable.
+El nivel **Ideal** comienza en la meta de cada métrica. El umbral **Excelente** equivale a la meta más un 25 %. Los límites de **Aceptable** y **Desfavorable** se indican en la matriz para cada experimento. Para decidir si una variante puede avanzar, se revisarán también sus métricas secundarias.
 
 Los valores establecidos representan criterios de decisión propuestos para la experimentación.
 
 | Scale Calculation | Decision | Desfavorable | Aceptable | Ideal | Excelente |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Creemos que** los gráficos comparativos permiten identificar variaciones relevantes en menos tiempo que una tabla convencional. **Sabremos que** esta funcionalidad aporta valor cuando reduzca el tiempo de identificación de variaciones. **Cuando** la reducción del tiempo sea igual o superior al 15 %, sin disminuir la precisión de identificación. | Incorporar gráficos comparativos en el historial de consumo eléctrico. | Reducción inferior al 7.5 %. | Reducción igual o superior al 7.5 % e inferior al 15 %. | Reducción igual o superior al 15 % e inferior al 18.75 %. | Reducción igual o superior al 18.75 %. |
-| **Creemos que** las alertas contextualizadas ayudan a los usuarios a comprender las variaciones relevantes y determinar cuándo requieren atención. **Sabremos que** esta funcionalidad aporta valor cuando los usuarios otorguen una valoración positiva a su utilidad. **Cuando** la puntuación promedio de utilidad sea igual o superior a 4 sobre 5. | Incorporar alertas contextualizadas con información comparativa y una acción sugerida. | Puntuación inferior a 3.5. | Puntuación igual o superior a 3.5 e inferior a 4. | Puntuación igual o superior a 4 e inferior a 5. | Puntuación igual a 5. |
-| **Creemos que** disponer de un historial estructurado de consumo y eventos anteriores facilita la evaluación inicial de los técnicos electricistas. **Sabremos que** esta funcionalidad aporta valor cuando reduzca el tiempo de evaluación sin disminuir la calidad de las conclusiones técnicas. **Cuando** la reducción del tiempo de evaluación inicial sea igual o superior al 25 %. | Incorporar un historial estructurado de consumo y eventos para consulta de los técnicos electricistas. | Reducción inferior al 12.5 %. | Reducción igual o superior al 12.5 % e inferior al 25 %. | Reducción igual o superior al 25 % e inferior al 31.25 %. | Reducción igual o superior al 31.25 %. |
-| **Creemos que** ofrecer un acceso directo desde una alerta hacia la solicitud de evaluación profesional incrementa la intención de los usuarios de solicitar asistencia especializada. **Sabremos que** esta funcionalidad aporta valor cuando los usuarios inicien el flujo de solicitud desde la alerta. **Cuando** la tasa de inicio del flujo sea igual o superior al 40 %. | Incorporar un acceso directo (CTA) para solicitar una evaluación profesional desde las alertas. | Tasa inferior al 30 %. | Tasa igual o superior al 30 % e inferior al 40 %. | Tasa igual o superior al 40 % e inferior al 50 %. | Tasa igual o superior al 50 %. |
+| **EC-01.** Reducción del tiempo medio para identificar una variación con gráficos. | Incorporar gráficos comparativos si se alcanza la meta y se mantiene la precisión. | < 7,5 % | ≥ 7,5 % y < 15 % | ≥ 15 % y < 18,75 % | ≥ 18,75 % |
+| **EC-05.** Valoración media de utilidad de la alerta contextualizada. | Incorporar alertas con contexto si superan al control, alcanzan la meta y mantienen la comprensión. | < 3,5/5 | ≥ 3,5/5 y < 4/5 | ≥ 4/5 y < 5/5 | 5/5 |
+| **EC-08.** Reducción del tiempo medio de evaluación técnica inicial. | Incorporar el historial si se alcanza la meta y se mantiene la calidad de la evaluación. | < 12,5 % | ≥ 12,5 % y < 25 % | ≥ 25 % y < 31,25 % | ≥ 31,25 % |
+| **EC-12.** Tasa de inicio de la solicitud en la variante con acceso directo. | Incorporar el acceso si se alcanza la meta, se supera la tasa del control y se mantiene la finalización. | < 30 % | ≥ 30 % y < 40 % | ≥ 40 % y < 50 % | ≥ 50 % |
 
 ### 8.2.5. Methods Selection
+
+**Método experimental y ejecución prevista**
+
+Para las cuatro preguntas prioritarias se propone un experimento controlado por tareas. Cada participante se asignará al azar a una sola variante de cada experimento. Los grupos recibirán los mismos datos ficticios, instrucciones y tiempo disponible. El análisis comparará las variantes dentro de cada plataforma y registrará el segmento del participante. Un piloto permitirá comprobar la claridad de las tareas, estimar la variabilidad y definir el tamaño de muestra antes de la ejecución confirmatoria.
+
+| Experimento | Método y condición de control | Evidencia para decidir |
+| :--- | :--- | :--- |
+| EC-01 | Tarea cronometrada para localizar una variación. El grupo experimental usa gráficos y el grupo de control usa una tabla con las mismas lecturas. | Tiempo hasta registrar la respuesta y acierto con una clave común. |
+| EC-05 | Evaluación de una alerta simulada. Ambos grupos ven la misma variación. La variante experimental agrega contexto y una acción sugerida. | Valoración de utilidad de 1 a 5 y respuesta a una pregunta de comprensión. |
+| EC-08 | Evaluación inicial de un caso técnico simulado con y sin historial estructurado. | Tiempo hasta entregar la evaluación y calidad de las conclusiones según una rúbrica común. |
+| EC-12 | Tarea de solicitud simulada a partir de una alerta. Ambos grupos conservan el acceso habitual a la solicitud. La variante experimental agrega un acceso directo desde la alerta. | Proporción de participantes que inicia la solicitud y proporción que completa el flujo simulado. |
+
+Las variantes y los datos ficticios se prepararán en ramas de trabajo y se integrarán en `develop`. Antes de convocar participantes, el equipo comprobará la asignación, los escenarios HTTP y los eventos en un entorno aislado. Las etapas de Jenkins documentadas en 7.1 se podrán ejecutar sobre la revisión candidata con un job de prueba. El job de liberación del AV2 monitorea `main`. La ejecución conservará el commit, la versión de la aplicación y la versión de los datos de prueba para relacionar los eventos con la variante entregada.
+
+**Selección de la herramienta de analítica**
 
 Para la ejecución y evaluación de los experimentos de ElectroLink, se analizaron diferentes herramientas de analítica digital capaces de recopilar información sobre el comportamiento de los usuarios y proporcionar evidencia cuantitativa para validar las hipótesis propuestas.
 
@@ -8331,17 +8363,16 @@ Por consiguiente, se selecciona **Matomo como herramienta propuesta para el segu
 
 ### 8.2.6. Data Analytics: Goals, KPIs and Metrics Selection
 
-Dada la elección de Matomo como herramienta de analítica digital, es necesario delimitar los objetivos y métricas que se esperan alcanzar durante los experimentos de ElectroLink. Estas métricas permitirán evaluar la utilidad de las funcionalidades propuestas para la gestión preventiva del consumo eléctrico y determinar si cumplen con las hipótesis establecidas.
+Las métricas primarias establecen la meta de cada experimento. Las métricas secundarias permiten comprobar efectos sobre la precisión, la comprensión o la finalización de las tareas.
 
-Las métricas seleccionadas son las siguientes:
+| Experimento | Objetivo analítico | KPI primario | Métricas secundarias |
+| :--- | :--- | :--- | :--- |
+| **EC-01. Gráficos comparativos** | Identificar variaciones de consumo más rápido con gráficos. | Reducción del tiempo medio de identificación ≥ 15 %. | Porcentaje de acierto y tareas sin respuesta. |
+| **EC-05. Alertas contextualizadas** | Medir la utilidad del contexto y de la acción sugerida. | Utilidad media ≥ 4/5 en la variante contextualizada y superior a la del control. | Porcentaje de comprensión correcta y evaluaciones sin respuesta. |
+| **EC-08. Historial técnico estructurado** | Agilizar la evaluación inicial con un historial de consumo y eventos. | Reducción del tiempo medio de evaluación inicial ≥ 25 %. | Puntuación de calidad de las conclusiones y evaluaciones incompletas. |
+| **EC-12. Solicitud de evaluación profesional** | Facilitar el inicio de una solicitud desde una alerta. | Tasa de inicio ≥ 40 % en la variante con acceso directo y superior a la del control. | Tasa de finalización entre solicitudes iniciadas y tasa de abandono. |
 
-- Tiempo medio de identificación de variaciones de consumo: se registrará el tiempo que necesitan los usuarios para identificar cambios relevantes en el consumo eléctrico mediante gráficos comparativos y tablas convencionales. De acuerdo con el experimento EC-01, se espera reducir este tiempo en al menos un 15 %, manteniendo la precisión de las respuestas.
-
-- Valoración de utilidad de las alertas contextualizadas: se recopilarán las valoraciones de los usuarios sobre la utilidad de las alertas que presentan variaciones de consumo, información contextual y acciones sugeridas. De acuerdo con el experimento EC-02, se espera obtener una puntuación promedio de al menos 4 sobre 5 en la escala de utilidad.
-
-- Tiempo medio de evaluación técnica inicial: se registrará el tiempo que necesitan los técnicos electricistas para evaluar un caso utilizando un historial estructurado de consumo y eventos anteriores, comparándolo con una evaluación sin dicho historial. De acuerdo con el experimento EC-03, se espera reducir el tiempo de evaluación inicial en al menos un 25 %, sin disminuir la calidad de las conclusiones técnicas.
-
-- Tasa de inicio de solicitudes de evaluación profesional: se registrará la proporción de usuarios que inician el flujo simulado de solicitud de evaluación profesional después de visualizar una alerta con acceso directo. De acuerdo con el experimento EC-04, se espera alcanzar una tasa de inicio igual o superior al 40 %.
+La reducción de tiempo se calculará como `(media del control − media de la variante) / media del control × 100`. La tasa de inicio usará intentos expuestos como denominador y la tasa de finalización usará solicitudes iniciadas. El análisis reportará el número de intentos válidos, incompletos y excluidos por variante.
 
 Con el propósito de comprobar la viabilidad técnica de Matomo como herramienta de recopilación de datos, se realizó una prueba inicial de integración con la Landing Page de ElectroLink, publicada mediante GitHub Pages.
 
@@ -8355,18 +8386,24 @@ La figura presenta el seguimiento individual de las interacciones realizadas dur
 
 La figura muestra el estado de procesamiento de los informes estadísticos durante la prueba técnica. Esta situación permite distinguir entre la recepción de eventos individuales y su posterior disponibilidad en los reportes agregados de Matomo. La ausencia temporal de información consolidada no impidió verificar la recepción del evento mediante el registro de visitas.
 
-### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+### 8.2.7. Web and Mobile Tracking Plan
 
-El objetivo analítico es determinar si las funcionalidades propuestas para la gestión preventiva del consumo eléctrico de ElectroLink producen resultados superiores a sus respectivas condiciones de control, utilizando los KPIs definidos para cada experimento.
+Angular y Flutter compartirán los nombres de eventos y la definición de cada métrica. En web se prevé usar el cliente JavaScript de Matomo. En móvil se propone un adaptador de Flutter que envíe el mismo esquema a través de la API HTTP de seguimiento. El alcance ejecutado en el AV2 corresponde a la prueba de la landing documentada en 8.2.6. [Cliente JavaScript de Matomo](https://developer.matomo.org/guides/tracking-javascript-guide) · [API de seguimiento de Matomo](https://developer.matomo.org/api-reference/tracking-api)
 
-Para ello, se establecen métricas primarias que permitirán evaluar el cumplimiento de las hipótesis y métricas secundarias (*Guardrails*) que permitirán identificar posibles efectos negativos o limitaciones de las funcionalidades evaluadas.
+Los eventos incluirán `experiment_id`, `variant` (`control` o `experimental`), `platform` (`web`, `android` o `ios`), `build_version` y un `attempt_id` aleatorio para unir los eventos de una tarea. Se enviarán datos ficticios a una propiedad de pruebas separada, con consentimiento de los participantes. El esquema excluye nombres, correos, tokens, direcciones, lecturas reales y respuestas de texto libre.
 
-| Hipótesis | Objetivo Analítico | KPI Primario (Métrica de Éxito) | Métricas Secundarias (Guardrails) |
-| :--- | :--- | :--- | :--- |
-| **EC-01: Gráficos comparativos** | Determinar si la representación gráfica del consumo eléctrico permite identificar variaciones relevantes en menos tiempo que una tabla convencional. | **Reducción porcentual del tiempo medio de identificación.** Meta: reducción ≥ 15 %. | Precisión en la identificación de variaciones; tasa de respuestas incorrectas. |
-| **EC-02: Alertas contextualizadas** | Determinar si las alertas acompañadas de información contextual y acciones sugeridas son percibidas como útiles por los usuarios. | **Puntuación promedio de utilidad percibida.** Meta: ≥ 4/5. | Precisión en la interpretación de alertas; proporción de interpretaciones incorrectas. |
-| **EC-03: Historial técnico estructurado** | Determinar si disponer de un historial de consumo y eventos anteriores reduce el tiempo necesario para realizar una evaluación técnica inicial. | **Reducción porcentual del tiempo medio de evaluación técnica inicial.** Meta: reducción ≥ 25 %. | Calidad de las conclusiones técnicas; tasa de evaluaciones incompletas o incorrectas. |
-| **EC-04: Solicitud de evaluación profesional** | Determinar si incorporar un acceso directo desde una alerta incrementa el inicio del flujo de solicitud de evaluación profesional. | **Tasa de inicio del flujo de solicitud.** Meta: ≥ 40 %. | Tasa de finalización del flujo; tasa de abandono durante la solicitud. |
+| Experimento | Evento | Disparador en web y móvil | Datos adicionales | Uso en la medición |
+| :--- | :--- | :--- | :--- | :--- |
+| Todos | `experiment_exposed` | La variante asignada se muestra por primera vez en el intento. | `case_id` del caso ficticio. | Número de intentos expuestos por variante. |
+| EC-01 | `variation_task_started` | El gráfico o la tabla está visible y comienza la tarea. | Ninguno. | Inicio de la medición de tiempo. |
+| EC-01 | `variation_answer_submitted` | El participante confirma su respuesta. | `elapsed_ms` y `answer_correct`. | Tiempo de identificación y porcentaje de acierto. |
+| EC-05 | `alert_feedback_submitted` | El participante envía la valoración y responde la pregunta de comprensión. | `usefulness_score` (1 a 5) y `understood_alert`. | Utilidad media y comprensión por variante. |
+| EC-08 | `assessment_started` | La pantalla del caso técnico está lista y comienza la evaluación. | Ninguno. | Inicio de la evaluación técnica. |
+| EC-08 | `assessment_submitted` | El participante entrega su evaluación inicial. | `elapsed_ms`. La puntuación de la rúbrica se registra por separado con el `attempt_id`. | Tiempo medio de evaluación y calidad de las conclusiones. |
+| EC-12 | `request_started` | Se abre el primer paso de la solicitud desde el acceso directo o la navegación habitual. | `entry_point` (`alert` o `standard_navigation`). | Tasa de inicio por variante y ruta de entrada. |
+| EC-12 | `request_completed` | La interfaz confirma la finalización del flujo simulado. | Ninguno. | Tasa de finalización y abandono entre solicitudes iniciadas. |
+
+El piloto comprobará en ambas variantes que Matomo reciba cada evento con su versión, plataforma e identificador de intento. El análisis contará una exposición y una finalización por intento. Los eventos duplicados por recargas o reintentos se consolidarán por `attempt_id` y nombre de evento. También se verificará que un intento incompleto carezca del evento de finalización y que los registros puedan exportarse agrupados por variante y plataforma.
 
 ## 8.3. Experimentation
 
@@ -8377,20 +8414,18 @@ Las siguientes historias de usuario describen las funcionalidades requeridas par
 | ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Experimento) |
 | :--- | :--- | :--- | :--- | :--- |
 | **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | **Escenario 1:** El usuario experimental visualiza gráficos comparativos de periodos seleccionados. **Escenario 2:** El sistema registra la respuesta y el tiempo de identificación. **Escenario 3:** El usuario de control visualiza datos equivalentes mediante una tabla convencional. | EC-01: Gráficos comparativos |
-| **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo. | **Escenario 1:** El sistema presenta la alerta con información contextual. **Escenario 2:** El usuario valora su utilidad en una escala de 1 a 5. **Escenario 3:** El sistema registra la respuesta utilizada para evaluar la comprensión. | EC-02: Alertas contextualizadas |
-| **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial de consumo y eventos anteriores, para facilitar mi evaluación técnica inicial. | **Escenario 1:** El técnico experimental consulta el historial estructurado. **Escenario 2:** El sistema registra el tiempo y las conclusiones de la evaluación. **Escenario 3:** El técnico de control evalúa un caso equivalente sin historial estructurado. | EC-03: Historial técnico estructurado |
-| **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional desde una alerta, para acceder rápidamente a la asistencia especializada. | **Escenario 1:** Se muestra el CTA en la variante experimental. **Escenario 2:** Se registra el inicio del flujo. **Escenario 3:** Se registra su finalización simulada. **Escenario 4:** La variante de control no muestra el CTA. | EC-04: Solicitud de evaluación profesional |
-
-### 8.3.2. To-Be Product Backlog
+| **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo. | **Escenario 1:** La variante experimental presenta la alerta con contexto y el control recibe la alerta genérica. **Escenario 2:** En ambas variantes el usuario valora la utilidad de 1 a 5 y responde una pregunta de comprensión. **Escenario 3:** El sistema registra la valoración y si la respuesta fue correcta. | EC-05. Alertas contextualizadas |
+| **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial de consumo y eventos anteriores, para facilitar mi evaluación técnica inicial. | **Escenario 1:** El técnico experimental consulta el historial estructurado. **Escenario 2:** El sistema registra el tiempo de evaluación y la rúbrica permite valorar sus conclusiones. **Escenario 3:** El técnico de control evalúa un caso equivalente sin historial estructurado. | EC-08. Historial técnico estructurado |
+| **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional desde una alerta, para acceder rápidamente a la asistencia especializada. | **Escenario 1:** La variante experimental ofrece un acceso directo en la alerta. **Escenario 2:** Ambas variantes conservan la navegación habitual y registran la ruta de entrada y el inicio del flujo. **Escenario 3:** El sistema registra la finalización simulada en ambas variantes. | EC-12. Solicitud de evaluación profesional |
 
 ### 8.3.2. To-Be Product Backlog
 
 | Prioridad | User Story ID | Título | Descripción | Estimación (SP) | Estado | Experimento |
 | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
 | 1 | **EXP-US-001** | Visualización comparativa del consumo eléctrico | Como propietario de un inmueble, quiero visualizar gráficos comparativos de mi consumo eléctrico entre diferentes periodos, para identificar variaciones relevantes de manera rápida. | 5 | To Do | EC-01 |
-| 2 | **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo y determinar si requieren atención. | 5 | To Do | EC-02 |
-| 3 | **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial estructurado de consumo y eventos anteriores de un inmueble, para facilitar mi evaluación técnica inicial. | 8 | To Do | EC-03 |
-| 4 | **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional directamente desde una alerta, para acceder rápidamente a la asistencia especializada. | 3 | To Do | EC-04 |
+| 2 | **EXP-US-002** | Consulta de alertas contextualizadas | Como propietario de un inmueble, quiero consultar alertas con información contextual y acciones sugeridas, para comprender las variaciones relevantes de mi consumo y determinar si requieren atención. | 5 | To Do | EC-05 |
+| 3 | **EXP-US-003** | Consulta del historial estructurado para evaluación técnica | Como técnico electricista, quiero consultar un historial estructurado de consumo y eventos anteriores de un inmueble, para facilitar mi evaluación técnica inicial. | 8 | To Do | EC-08 |
+| 4 | **EXP-US-004** | Solicitud de evaluación profesional desde una alerta | Como propietario de un inmueble, quiero iniciar una solicitud de evaluación profesional directamente desde una alerta, para acceder rápidamente a la asistencia especializada. | 3 | To Do | EC-12 |
 
 - **Criterios de priorización**
 
@@ -8403,6 +8438,36 @@ La organización del backlog responde a las siguientes consideraciones:
   - **EXP-US-003 – Consulta del historial estructurado para evaluación técnica:** se considera la tercera prioridad porque extiende el uso de los registros de consumo hacia los técnicos electricistas. Su implementación requiere organizar información histórica y presentarla de manera adecuada para apoyar las evaluaciones iniciales.
 
   - **EXP-US-004 – Solicitud de evaluación profesional desde una alerta:** se establece como cuarta prioridad debido a su relación funcional con las alertas contextualizadas. Su implementación permitirá evaluar si un acceso directo facilita el inicio de solicitudes de asistencia profesional.
+
+**Impact Map de los experimentos**
+
+**Objetivo.** Facilitar que propietarios, responsables de PYMES y técnicos detecten y atiendan variaciones del consumo eléctrico con información suficiente. El mapa aplica al alcance experimental la estructura de [Impact Mapping](#34-impact-mapping).
+
+| Actor | Cambio esperado | Entregable y evidencia | Prioridad |
+| :--- | :--- | :--- | :---: |
+| Propietario o responsable de PYME | Identifica una variación más rápido y conserva la precisión. | Gráficos comparativos. EXP-US-001, EC-01. | 1 |
+| Propietario o responsable de PYME | Entiende el aviso y valora la acción sugerida. | Alertas con contexto. EXP-US-002, EC-05. | 2 |
+| Técnico electricista | Completa su evaluación inicial en menos tiempo y mantiene la calidad de sus conclusiones. | Historial estructurado. EXP-US-003, EC-08. | 3 |
+| Propietario o responsable de PYME | Inicia una solicitud cuando el aviso requiere ayuda profesional. | Acceso directo desde la alerta. EXP-US-004, EC-12. | 4 |
+
+### 8.3.3. To-Be Sprint Backlog
+
+**Objetivo del primer sprint experimental.** Dejar listas las variantes y el seguimiento de EC-01 y EC-05 en web y móvil para un piloto con datos ficticios. Se seleccionan las dos primeras historias porque validan si el usuario detecta y comprende variaciones antes de ampliar el flujo hacia el diagnóstico y la contratación. Las tareas y estimaciones corresponden a la planificación del sprint.
+
+| Tarea | Historia | Engineering Task | Área | Horas estimadas |
+| :--- | :--- | :--- | :--- | ---: |
+| EXP-T01 | EXP-US-001 | Preparar lecturas simuladas, clave de respuestas y asignación estable a las variantes para el mismo intento. | Experimentación | 6 |
+| EXP-T02 | EXP-US-001 | Implementar en Angular las vistas de gráfico y tabla con los mismos datos. | Web | 6 |
+| EXP-T03 | EXP-US-001 | Implementar en Flutter las vistas de gráfico y tabla con los mismos datos. | Móvil | 8 |
+| EXP-T04 | EXP-US-001 | Integrar la exposición, el cronómetro y el registro de la respuesta en Matomo para web y móvil. | Analítica | 6 |
+| EXP-T05 | EXP-US-001 | Verificar las dos variantes y comprobar que el tiempo y la precisión se puedan calcular desde la exportación de prueba. | QA | 4 |
+| EXP-T06 | EXP-US-002 | Implementar en Angular las alertas genérica y contextualizada con el formulario de evaluación. | Web | 6 |
+| EXP-T07 | EXP-US-002 | Implementar en Flutter las dos variantes de alerta y el formulario de evaluación. | Móvil | 6 |
+| EXP-T08 | EXP-US-002 | Registrar en Matomo la exposición, la utilidad y el acierto de comprensión en ambas plataformas. | Analítica | 6 |
+| EXP-T09 | EXP-US-002 | Validar los eventos y casos incompletos con datos ficticios y guardar evidencia de ambas variantes. | QA | 4 |
+| | | **Total del sprint** | | **52** |
+
+**Criterio de cierre.** Las variantes deben funcionar con los mismos datos de prueba en web y móvil. Una sesión de comprobación por variante debe aparecer en Matomo con su plataforma y versión. El equipo guardará la exportación de prueba y el commit evaluado antes de iniciar el piloto. EXP-US-003 y EXP-US-004 quedan en el Product Backlog para un sprint posterior.
 
 # Conclusiones
 
@@ -8451,6 +8516,10 @@ Las referencias empleadas para sustentar la investigación, el diseño de la sol
 - Jenkins. (s. f.). *Pipeline syntax*. https://www.jenkins.io/doc/book/pipeline/syntax/
 
 - Material Design. (s. f.). *Material Design 3*. https://m3.material.io/
+
+- Matomo. (s. f.). *JavaScript tracking client*. https://developer.matomo.org/guides/tracking-javascript-guide
+
+- Matomo. (s. f.). *Tracking HTTP API*. https://developer.matomo.org/api-reference/tracking-api
 
 - Microsoft. (s. f.). *Playwright Library*. https://playwright.dev/docs/library
 
