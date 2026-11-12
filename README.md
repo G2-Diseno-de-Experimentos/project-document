@@ -213,8 +213,8 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
     <thead>
         <tr>
             <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 25%;">Criterio específico</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (AV1, TP, AV2, TB2, TF)</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (AV1, TP, AV2, TB2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 45%;">Acciones realizadas (AV1, TP, AV2, TF)</th>
+            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">Conclusiones (AV1, TP, AV2, TF)</th>
         </tr>
     </thead>
     <tbody>
@@ -233,7 +233,7 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                     - <strong>TP:</strong> Desarrolló las pruebas unitarias y de integración de Properties y Component Types, reemplazó el servidor HTTP simulado por pruebas contra el backend real, corrigió la eliminación de propiedades y consolidó la planificación del Sprint 2 y las evidencias de SDP en el informe.<br>
-                    - <strong>AV2:</strong> Verificó la versión de desarrollo con pruebas de regresión, pruebas de sistema y análisis estático. Registró tanto los resultados aprobados como los fallos de navegación y de visibilidad entre cuentas.<br>
+                    - <strong>AV2:</strong> Verificó ElectroLink con pruebas de regresión, integración y sistema, y revisó el código con Checkstyle y SpotBugs. Documentó tres casos de sistema aprobados y dos fallidos. En estos últimos, el enlace de registro redirigió a la página inicial y una cuenta pudo ver una propiedad ajena. Incorporó al informe las entrevistas de validación y la evaluación heurística. Configuró PostgreSQL 17 en filess.io para restablecer el backend en Render, comprobó el arranque y la carga de Swagger, y ocultó los valores de las variables de entorno en las capturas.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
@@ -268,7 +268,7 @@ El panel **Contributors** muestra los commits acumulados por integrante: Wuux1 (
                 <p style="font-size: 14px; margin: 0;">
                     - <strong>AV1:</strong> Se encargó del análisis competitivo y de las estrategias asociadas, formuló los Lean UX Problem Statements y Assumptions y apoyó tanto la gestión de entrevistas como el desarrollo del frontend.<br>
                     - <strong>TP:</strong> Aisló las pruebas en una base de datos local con usuarios y datos únicos y bloqueó las escrituras contra entornos remotos, para no alterar información de usuarios reales en producción (impacto social y económico).<br>
-                    - <strong>AV2:</strong> Utilizó cuentas sintéticas y PostgreSQL aislado para evaluar la visibilidad de propiedades. Priorizó limitar el acceso a datos de otros propietarios por su impacto en la privacidad y la confianza de los usuarios.<br>
+                    - <strong>AV2:</strong> Usó cuentas sintéticas y PostgreSQL aislado para comprobar que una segunda cuenta podía ver la propiedad de la primera. Priorizó verificar la titularidad en el backend antes de habilitar la gestión de propiedades con datos reales, por su efecto en la privacidad y la confianza de los propietarios. Al comprobar que el endpoint de filess.io rechazaba TLS, reservó esa base para la demostración con datos ficticios y planteó migrar a una conexión cifrada antes de incorporar datos reales.
                 </p>
                 <h4 style="margin-top: 20px; margin-bottom: 5px;">Juan Sung Jau Wang Chen</h4>
                 <p style="font-size: 14px; margin: 0;">
