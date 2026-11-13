@@ -7548,7 +7548,7 @@ Render despliega la API de ElectroLink desde la rama `main` del repositorio del 
 | **Backend RESTful API** | **Render** (*Web Service*, entorno Docker, plan gratuito) | Construye la imagen con el `Dockerfile` del repositorio y publica la API. | https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html |
 | **Front-end web** | **Netlify** | El despliegue web anterior está documentado en la [sección 5.2.3](#523-implemented-frontend-web-application-evidence). | https://expsoft-frontend.netlify.app |
 | **Landing Page** | **GitHub Pages** | Publica la página estática desde la rama configurada en *Settings → Pages*. | https://g2-diseno-de-experimentos.github.io/Landing-Page/ |
-| **Base de datos** | **PostgreSQL 17 en filess.io** | Base temporal conectada al backend para la demostración con datos ficticios. | — |
+| **Base de datos** | **PostgreSQL 18 en Neon** (AWS São Paulo) | Base de datos del backend desplegado en Render. La demostración usa datos ficticios. | [Neon](https://neon.com/) |
 | **Repositorio** | GitHub (organización `G2-Diseno-de-Experimentos`) | Origen del código que despliegan las plataformas. | — |
 
 **Prácticas aplicadas**
@@ -7581,7 +7581,7 @@ La captura de *Environment* muestra los nombres de las variables con sus valores
 | **Backend (Render)** | *Push* a `main` | Render clona el repositorio, construye la imagen con el `Dockerfile` (`mvn package -DskipTests`, y luego la imagen `eclipse-temurin:21-jre`), inicia el contenedor con las variables de entorno y publica la nueva versión. | URL pública y Swagger UI disponibles. |
 | **Front-end (Netlify)** | Cambios en el repositorio conectado | Netlify construye y publica la aplicación web. | La [sección 5.2.3](#523-implemented-frontend-web-application-evidence) muestra un despliegue anterior. La rama y el commit de la publicación actual quedan por verificar. |
 | **Landing Page (GitHub Pages)** | Cambios en la rama configurada en *Pages* | GitHub construye y publica el sitio estático. | La dirección de GitHub Pages responde. |
-| **Base de datos (PostgreSQL)** | Arranque del backend | Con `spring.jpa.hibernate.ddl-auto=update`, Hibernate crea o ajusta las tablas en el esquema `electrolink`, seleccionado mediante `currentSchema` en la conexión JDBC. | El backend completa el arranque con la configuración de la base de demostración. |
+| **Base de datos (Neon PostgreSQL)** | Arranque del backend | Hibernate usa `spring.jpa.hibernate.ddl-auto=update` para crear o ajustar las tablas en el esquema `public`. | Tras el primer despliegue con Neon, se verificaron 25 tablas y tres roles iniciales. |
 
 **Flujo completo hacia producción**
 
@@ -7595,9 +7595,9 @@ La captura de *Environment* muestra los nombres de las variables con sus valores
 - La construcción de la imagen en Render omite las pruebas (`-DskipTests`). Las pruebas unitarias se ejecutan en Jenkins sobre el mismo commit, pero en paralelo al despliegue y no antes. Un defecto que solo detecte Jenkins puede llegar a producción durante unos minutos, hasta que se revierta. Por eso la validación previa con Karate en `develop` es importante.
 - Un *push* a `main` activa el despliegue automático de Render en paralelo a Jenkins. Como mejora futura, se puede desactivar el despliegue automático de Render y llamar a su *Deploy Hook* desde una etapa de Jenkins posterior a *Approve Delivery*. Así la aprobación pasaría a controlar el despliegue.
 - `ddl-auto=update` es práctico en esta etapa, pero para un entorno más maduro convendría reemplazarlo por migraciones versionadas.
-- El endpoint de filess.io usado en la demostración rechaza TLS. La conexión usa `sslmode=prefer` y la base está reservada para datos ficticios.
+- El backend se conecta directamente a Neon mediante JDBC con TLS y validación del certificado y del nombre del servidor (`sslmode=verify-full`). Render suministra la URL, el usuario y la contraseña mediante variables de entorno. [Conexión segura a Neon](https://neon.com/docs/connect/connect-securely)
 
-El 11/11/2026, Render desplegó el commit `37cef46` tras una actualización de las variables de entorno. El despliegue quedó en estado **Live**.
+Las siguientes capturas registran el despliegue del 11/11/2026, que publicó el commit `37cef46` y quedó en estado **Live**.
 
 ![Render muestra el despliegue del commit 37cef46 en estado Live](assets/img/cap7/render-deploy-events.png)
 
@@ -7613,9 +7613,11 @@ El registro del servicio muestra el arranque de `ElectrolinkPlatformApplication`
 
 ![Registro de arranque de Spring Boot y Tomcat en Render](assets/img/cap7/render-deploy-logs.png)
 
-Swagger UI cargó la especificación OpenAPI de la URL pública y mostró los grupos de autenticación y calificaciones. La especificación publicada utiliza el título `Learning Platform API`.
+El 12/11/2026, el backend pasó de filess.io a una base vacía en Neon para la demostración. Render desplegó el commit [`396a129`](https://github.com/G2-Diseno-de-Experimentos/ElectroLink-Backend/commit/396a12935b13b48e6009b3933172347761c410b5) con las nuevas variables de entorno y reportó el estado [**Live**](https://dashboard.render.com/web/srv-dalpjbad0e5s7387d510/deploys/dep-dbr67tdg1s2s73fhqks0) después de comprobar la respuesta de `/v3/api-docs`.
 
-![Swagger UI del backend desplegado en Render con los endpoints cargados](assets/img/cap7/swagger-produccion.png)
+[Swagger UI en producción](https://electrolink-backend-9u9l.onrender.com/swagger-ui/index.html) muestra la especificación OpenAPI con el título **ElectroLink API**.
+
+![Swagger UI en producción con el título ElectroLink API y los grupos Authentication y Ratings](assets/img/cap7/swagger-produccion.png)
 
 ## 7.4. Continuous Monitoring
 
